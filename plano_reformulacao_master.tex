@@ -1,0 +1,168 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[brazilian]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{geometry}
+\geometry{top=2cm, bottom=2cm, left=2.5cm, right=2.5cm}
+\usepackage{booktabs}
+\usepackage{xcolor}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{hyperref}
+\usepackage{colortbl}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta, positioning, shapes.geometric, shadows}
+\usepackage[most]{tcolorbox}
+\newtcolorbox{important}{colback=red!5!white,colframe=red!75!black,title=IMPORTANTE}
+
+\title{\textbf{Guia de Reformulação: PPCs Técnico Integrado} \\ \large Informática e Administração --- Garopaba}
+\author{Comissão de Reformulação}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\section{Pipeline de Trabalho e Marcos Regulatórios}
+
+\begin{center}
+\begin{tikzpicture}[
+    node distance=1.1cm and 0.3cm,
+    stage/.style={rectangle, draw, thick, rounded corners, minimum width=2.4cm, minimum height=1.0cm, align=center, font=\scriptsize\bfseries, fill=white},
+    done/.style={stage, fill=green!10, draw=green!60!black},
+    active/.style={stage, fill=blue!10, draw=blue!60!black},
+    deadline/.style={stage, fill=orange!10, draw=orange!60!black},
+    arrow/.style={-{Stealth[scale=1.0]}, thick, gray!60}
+]
+
+% Nodes
+\node[done] (diag) {1. Diagnóstico \\ \tiny (Concluído)};
+\node[active, right=of diag] (ajustes) {2. Ajustes \\ \tiny (Maio/Junho)};
+\node[deadline, right=of ajustes] (depe) {Envio \\ DEPE};
+\node[deadline, right=of depe] (col) {Colegiado \\ Câmpus};
+\node[deadline, right=of col] (cepe) {Envio \\ CEPE};
+\node[deadline, right=of cepe] (aprov) {Aprovação \\ CEPE};
+
+% Arrows
+\draw[arrow] (diag) -- (ajustes);
+\draw[arrow] (ajustes) -- (depe);
+\draw[arrow] (depe) -- (col);
+\draw[arrow] (col) -- (cepe);
+\draw[arrow] (cepe) -- (aprov);
+
+% Dates
+\node[below=0.1cm of ajustes, font=\tiny\color{blue!60!black}] {EM ANDAMENTO};
+\node[above=0.1cm of depe, font=\tiny\bfseries] {29/06};
+\node[below=0.1cm of col, font=\tiny\bfseries] {03/07};
+\node[above=0.1cm of cepe, font=\tiny\bfseries] {10/07};
+\node[below=0.1cm of aprov, font=\tiny\bfseries] {06/08};
+
+\end{tikzpicture}
+\end{center}
+
+\section{Status Atual (Resolução 142/2025)}
+Ambos os cursos já possuem carga horária total e de formação geral compatíveis, mas necessitam de ajustes nos componentes de línguas estrangeiras (Inglês/Espanhol) para atingir as 120h mínimas.
+
+\begin{center}
+\small
+\begin{tabular}{lccc}
+\toprule
+\textbf{Curso} & \textbf{CH Total} & \textbf{CH Form. Geral} & \textbf{Ajustes Críticos} \\ \midrule
+Informática & 3.340h & 2.140h & Espanhol (+40h) \\
+Administração & 3.140h & 2.140h & Inglês/Espanhol (+40h) \\
+\rowcolor{gray!10} Lazer (Modelo) & 3.280h & 2.440h & Já Adequado \\ \bottomrule
+\end{tabular}
+\end{center}
+
+\section{Referência Institucional: PPC Técnico em Lazer}
+O novo PPC de Lazer (2025) serve como parâmetro para a unificação. Principais diferenças identificadas:
+
+\begin{itemize}
+    \item \textbf{Línguas Estrangeiras:} Lazer utiliza 200h (Inglês) e 200h (Espanhol), contra 80-120h em INF/ADM.
+    \item \textbf{Projeto Integrador:} Lazer possui 240h (dobro do atual em INF/ADM).
+    \item \textbf{Filo/Socio:} Lazer utiliza 160h para cada componente.
+    \item \textbf{Port/Mat:} Lazer unificou em 240h, permitindo fôlego para as outras áreas.
+\end{itemize}
+
+\subsection{Técnico em Informática: Proposta de Padronização}
+\begin{center}
+\scriptsize
+\begin{tabular}{lcccccc}
+\toprule
+\rowcolor{gray!20} \textbf{Componente} & \textbf{Atual} & \textbf{Modelo} & \textbf{A1} & \textbf{A2} & \textbf{A3} & \textbf{Observação} \\ \midrule
+\rowcolor{yellow!60!orange!30} \textbf{L. Portuguesa / Lit.} & \textbf{280} & \textbf{240} & \textbf{80} & \textbf{80} & \textbf{80} & \textbf{Reduzir 40h p/ unificar} \\
+\rowcolor{yellow!60!orange!30} \textbf{Matemática} & \textbf{280} & \textbf{240} & \textbf{80} & \textbf{80} & \textbf{80} & \textbf{Reduzir 40h p/ unificar} \\
+\rowcolor{yellow!60!orange!30} \textbf{Inglês} & \textbf{120} & \textbf{200} & \textbf{80} & \textbf{80} & \textbf{40} & \textbf{Aumentar 80h} \\
+\rowcolor{yellow!60!orange!30} \textbf{Espanhol} & \textbf{80} & \textbf{200} & \textbf{80} & \textbf{40} & \textbf{80} & \textbf{Aumentar 120h} \\
+\rowcolor{yellow!60!orange!30} \textbf{Filo / Socio} & \textbf{240} & \textbf{320} & \textbf{160} & \textbf{160} & \textbf{0} & \textbf{Aumentar 40h cada} \\
+\rowcolor{yellow!60!orange!30} \textbf{Projeto Integrador} & \textbf{120} & \textbf{240} & \textbf{80} & \textbf{80} & \textbf{80} & \textbf{Dobrar carga horária} \\
+Demais FG (Fis/Qui/etc) & 1020 & 1160 & - & - & - & Pequenos ajustes \\ \midrule
+\rowcolor{yellow!10} \textbf{Total Formação Geral} & \textbf{2.140} & \textbf{2.600} & \textbf{880} & \textbf{860} & \textbf{860} & \textbf{Impacto: +460h} \\
+\rowcolor{yellow!10} \textbf{Total Técnico} & \textbf{1.200} & \textbf{1.200} & \textbf{360} & \textbf{400} & \textbf{440} & \textbf{Manter} \\ \midrule
+\rowcolor{red!10} \textbf{TOTAL ESTIMADO} & \textbf{3.340} & \textbf{3.800} & \textbf{1.240} & \textbf{1.260} & \textbf{1.300} & \textbf{Necessário 4 anos?} \\ \bottomrule
+\end{tabular}
+\end{center}
+
+\subsection{Técnico em Administração: Proposta de Padronização}
+\begin{center}
+\scriptsize
+\begin{tabular}{lcccccc}
+\toprule
+\rowcolor{gray!20} \textbf{Componente} & \textbf{Atual} & \textbf{Modelo} & \textbf{A1} & \textbf{A2} & \textbf{A3} & \textbf{Observação} \\ \midrule
+L. Portuguesa / Lit. & 280 & 240 & 80 & 80 & 80 & Reduzir 40h p/ unificar \\
+Matemática & 280 & 240 & 80 & 80 & 80 & Reduzir 40h p/ unificar \\
+Inglês / Espanhol & 160 & 400 & 160 & 120 & 120 & \textbf{Aumentar 240h total} \\
+Filo / Socio & 240 & 320 & 160 & 160 & 0 & \textbf{Aumentar 40h cada} \\
+Projeto Integrador & 120 & 240 & 80 & 80 & 80 & \textbf{Dobrar carga horária} \\ \midrule
+\rowcolor{yellow!10} \textbf{Total Formação Geral} & \textbf{2.140} & \textbf{2.600} & \textbf{880} & \textbf{860} & \textbf{860} & \textbf{Impacto: +460h} \\
+\rowcolor{yellow!10} \textbf{Total Técnico} & \textbf{1.000} & \textbf{1.000} & \textbf{180} & \textbf{260} & \textbf{560} & \textbf{Manter} \\ \midrule
+\rowcolor{green!10} \textbf{TOTAL ESTIMADO} & \textbf{3.140} & \textbf{3.600} & \textbf{1.060} & \textbf{1.120} & \textbf{1.420} & \textbf{No limite (3 anos)} \\ \bottomrule
+\end{tabular}
+\end{center}
+
+\section{Prazos e Tramitação (Fluxo Oficial)}
+Conforme comunicado do DEPE, para viabilizar a oferta em \textbf{2027.1}, os marcos regulatórios são:
+
+\begin{itemize}
+    \item \textbf{Envio ao DEPE:} até 29/06
+    \item \textbf{Colegiado de Câmpus:} 03/07
+    \item \textbf{Envio ao CEPE:} até 10/07
+    \item \textbf{Reunião do CEPE:} 06 e 07/08
+\end{itemize}
+
+\begin{important}
+\textbf{Restrição de Alterações:} Dados como nome do curso, turno, duração e vagas não devem ser alterados agora (envio à DEING em julho). O foco deve ser estritamente em \textbf{cargas horárias e ementas}.
+\end{important}
+
+\section{Registro de Reuniões e Decisões}
+
+\subsection*{1ª Reunião da Comissão (07/05/2026)}
+\begin{itemize}
+    \item \textbf{Validação:} O pipeline e o comparativo com o PPC Lazer foram aprovados como base de trabalho.
+    \item \textbf{Padronização:} Decidido utilizar as ementas do PPC Lazer (ex: Inglês) para garantir compatibilidade entre os cursos do câmpus.
+    \item \textbf{Foco Técnico:} Prioridade em antecipar a carga horária prática técnica para os primeiros anos.
+    \item \textbf{Apoio:} A biblioteca do câmpus (SIBI) realizará a revisão das referências bibliográficas.
+\end{itemize}
+
+\section{Cronograma de Trabalho (Timeline)}
+
+\begin{itemize}
+    \item \textbf{Fase 1: Diagnóstico (Concluído)} --- Análise da Resolução 142 e das matrizes atuais.
+    \item \textbf{Fase 2: Ajustes Curriculares (Maio/Junho)}
+    \begin{itemize}
+        \item \textbf{Em andamento:} Planilha de Matriz (André/POCV) e Ementas Propedêuticas.
+        \item Reuniões das Áreas Técnicas (INF/ADM).
+        \item Revisão de Referências Bibliográficas (SIBI).
+    \end{itemize}
+    \item \textbf{Fase 3: Redação e Envio (Fim de Junho)} --- Finalização do texto para envio ao DEPE (29/06).
+    \item \textbf{Fase 4: Tramitação Superior (Julho/Agosto)} --- Aprovação no Colegiado e CEPE.
+\end{itemize}
+
+\section{Frentes de Trabalho e Decisões}
+\begin{description}
+    \item[Propedêutica:] Unificação de ementas visando a padronização entre cursos do câmpus.
+    \item[Integração:] Desejável prever integrações de conteúdo entre UCs da mesma fase.
+    \item[PI:] Definir se o formato será de oficinas, projetos semestrais ou anuais.
+\end{description}
+
+\end{document}

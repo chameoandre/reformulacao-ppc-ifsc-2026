@@ -1,0 +1,16 @@
+Componente,Lazer (Modelo),INF (Atual),ADM (Atual),A1 (Proposto),A2 (Proposto),A3 (Proposto),Observação
+Língua Portuguesa / Literatura,240,280,280,80,80,80,Reduzir 40h para padronizar
+Matemática,240,280,280,80,80,80,Reduzir 40h para padronizar
+Inglês,200,120,80,80,80,40,Aumentar para 200h (modelo Lazer)
+Espanhol,200,80,80,80,40,80,Aumentar para 200h (modelo Lazer)
+História,160,160,160,80,40,40,Padronizado
+Geografia,160,160,160,80,40,40,Padronizado
+Física,200,200,200,40,80,80,Padronizado
+Química,200,200,200,40,40,80,Padronizado
+Biologia,160,160,160,80,0,80,Padronizado
+Filosofia,160,120,120,80,80,0,Aumentar para 160h
+Sociologia,160,120,120,80,80,0,Aumentar para 160h
+Artes,120,140,140,80,0,40,Ajuste leve para 120h
+Educação Física,160,160,160,80,80,0,Padronizado
+Projeto Integrador,240,120,120,80,80,80,Dobrar carga horária (modelo Lazer)
+TOTAL FORMAÇÃO GERAL,2600,2140,2140,960,820,820,Impacto significativo na CH total

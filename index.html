@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reformulação PPC 2026 — IFSC Câmpus Garopaba</title>
+
+    <!-- Google Fonts & Font Awesome -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        :root {
+            --ifsc-green: #32a041;
+            --ifsc-dark-green: #1e6b29;
+            --ifsc-light-green: #eaf5eb;
+            --ifsc-red: #c81e1e;
+            --dark-bg: #0f172a;
+            --card-bg: #1e293b;
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --border-color: #334155;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Outfit', sans-serif;
+            background-color: var(--dark-bg);
+            color: var(--text-main);
+            line-height: 1.6;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--ifsc-dark-green), #0f3814);
+            padding: 2.5rem 1.5rem;
+            text-align: center;
+            border-bottom: 4px solid var(--ifsc-green);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+        }
+
+        .header-content {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .logo-title {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 0.8rem;
+        }
+
+        .logo-title i {
+            font-size: 2.5rem;
+            color: #4ade80;
+        }
+
+        h1 {
+            font-size: 2.2rem;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+        }
+
+        .subtitle {
+            font-size: 1.1rem;
+            color: #cbd5e1;
+            max-width: 800px;
+            margin: 0 auto 1.2rem auto;
+        }
+
+        .badge-container {
+            display: flex;
+            justify-content: center;
+            gap: 0.8rem;
+            flex-wrap: wrap;
+        }
+
+        .badge {
+            background: rgba(255, 255, 255, 0.12);
+            backdrop-filter: blur(5px);
+            padding: 0.4rem 1rem;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: #e2e8f0;
+        }
+
+        main {
+            max-width: 1100px;
+            margin: 3rem auto;
+            padding: 0 1.5rem;
+            flex: 1;
+        }
+
+        .grid-courses {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .course-card {
+            background: var(--card-bg);
+            border-radius: 16px;
+            border: 1px solid var(--border-color);
+            padding: 2rem;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .course-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--ifsc-green);
+            box-shadow: 0 12px 30px rgba(50, 160, 65, 0.15);
+        }
+
+        .course-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 6px;
+            background: var(--ifsc-green);
+        }
+
+        .course-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .course-icon {
+            width: 50px;
+            height: 50px;
+            background: rgba(50, 160, 65, 0.15);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #4ade80;
+            font-size: 1.5rem;
+        }
+
+        .course-title {
+            font-size: 1.4rem;
+            font-weight: 600;
+        }
+
+        .course-info {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            margin-bottom: 1.5rem;
+            flex: 1;
+        }
+
+        .info-item {
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .btn-group {
+            display: flex;
+            flex-direction: column;
+            gap: 0.8rem;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.6rem;
+            padding: 0.8rem 1.2rem;
+            border-radius: 10px;
+            font-size: 0.95rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.2s ease;
+            cursor: pointer;
+        }
+
+        .btn-primary {
+            background: var(--ifsc-green);
+            color: #ffffff;
+            border: none;
+        }
+
+        .btn-primary:hover {
+            background: var(--ifsc-dark-green);
+        }
+
+        .btn-secondary {
+            background: rgba(255, 255, 255, 0.05);
+            color: var(--text-main);
+            border: 1px solid var(--border-color);
+        }
+
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.1);
+            border-color: #64748b;
+        }
+
+        .section-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+        }
+
+        .section-title i {
+            color: var(--ifsc-green);
+        }
+
+        .doc-box {
+            background: var(--card-bg);
+            border-radius: 12px;
+            border: 1px solid var(--border-color);
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        footer {
+            background: #090d16;
+            padding: 2rem 1.5rem;
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            border-top: 1px solid var(--border-color);
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="header-content">
+            <div class="logo-title">
+                <i class="fa-solid fa-graduation-cap"></i>
+                <h1>Reformulação dos PPCs 2026</h1>
+            </div>
+            <p class="subtitle">Instituto Federal de Santa Catarina (IFSC) — Câmpus Garopaba<br>Projetos Pedagógicos dos Cursos Técnicos Integrados ao Ensino Médio</p>
+            <div class="badge-container">
+                <span class="badge"><i class="fa-solid fa-file-contract"></i> Resolução CONSUP/IFSC nº 142/2025</span>
+                <span class="badge"><i class="fa-solid fa-clock"></i> Carga Horária: 3.100h</span>
+                <span class="badge"><i class="fa-solid fa-building-columns"></i> Câmpus Garopaba</span>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="section-title">
+            <i class="fa-solid fa-book-bookmark"></i>
+            <h2>Cursos em Reformulação</h2>
+        </div>
+
+        <div class="grid-courses">
+            <!-- Card Administração -->
+            <div class="course-card">
+                <div class="course-header">
+                    <div class="course-icon">
+                        <i class="fa-solid fa-chart-line"></i>
+                    </div>
+                    <div class="course-title">Técnico em Administração</div>
+                </div>
+                <div class="course-info">
+                    <div class="info-item"><i class="fa-solid fa-layer-group"></i> <strong>Eixo:</strong> Gestão e Negócios</div>
+                    <div class="info-item"><i class="fa-solid fa-calendar-days"></i> <strong>Duração:</strong> 6 Semestres (3 Anos)</div>
+                    <div class="info-item"><i class="fa-solid fa-list-check"></i> <strong>Matriz:</strong> 32 Unidades Curriculares</div>
+                    <div class="info-item"><i class="fa-solid fa-circle-check" style="color: #4ade80;"></i> <strong>Status:</strong> Ementário Completo em Tabela</div>
+                </div>
+                <div class="btn-group">
+                    <a href="tecnico-administracao/documento-ppc-principal/main_ppc_administracao.pdf" target="_blank" class="btn btn-primary">
+                        <i class="fa-solid fa-file-pdf"></i> Visualizar PDF Principal
+                    </a>
+                    <a href="tecnico-administracao/AGENTS.md" target="_blank" class="btn btn-secondary">
+                        <i class="fa-solid fa-gears"></i> Diretrizes & Regras
+                    </a>
+                </div>
+            </div>
+
+            <!-- Card Informática -->
+            <div class="course-card">
+                <div class="course-header">
+                    <div class="course-icon">
+                        <i class="fa-solid fa-code"></i>
+                    </div>
+                    <div class="course-title">Técnico em Informática</div>
+                </div>
+                <div class="course-info">
+                    <div class="info-item"><i class="fa-solid fa-layer-group"></i> <strong>Eixo:</strong> Informação e Comunicação</div>
+                    <div class="info-item"><i class="fa-solid fa-calendar-days"></i> <strong>Duração:</strong> 6 Semestres (3 Anos)</div>
+                    <div class="info-item"><i class="fa-solid fa-list-check"></i> <strong>Matriz:</strong> 32 Unidades Curriculares</div>
+                    <div class="info-item"><i class="fa-solid fa-spinner" style="color: #facc15;"></i> <strong>Status:</strong> Aguardando Ementas</div>
+                </div>
+                <div class="btn-group">
+                    <a href="tecnico-informatica/documento-ppc-principal/main_ppc_informatica.pdf" target="_blank" class="btn btn-primary">
+                        <i class="fa-solid fa-file-pdf"></i> Visualizar PDF Principal
+                    </a>
+                    <a href="ESTRUTURA_E_EMENTAS.md" target="_blank" class="btn btn-secondary">
+                        <i class="fa-solid fa-circle-info"></i> Guia de Exportação
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="section-title">
+            <i class="fa-solid fa-folder-open"></i>
+            <h2>Documentação Compartilhada</h2>
+        </div>
+
+        <div class="doc-box">
+            <p style="margin-bottom: 1rem; color: #cbd5e1;">Este repositório armazena as versões de trabalho dos documentos de reformulação dos PPCs dos Cursos Técnicos Integrados do IFSC Câmpus Garopaba, compilados via TeX/Tectonic no padrão visual institucional.</p>
+            <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+                <a href="ESTRUTURA_E_EMENTAS.md" target="_blank" class="btn btn-secondary" style="font-size: 0.85rem;">
+                    <i class="fa-solid fa-file-lines"></i> ESTRUTURA_E_EMENTAS.md
+                </a>
+                <a href="modelos/latex-shared/ifsc-ppc.cls" target="_blank" class="btn btn-secondary" style="font-size: 0.85rem;">
+                    <i class="fa-solid fa-code"></i> Classe TeX (ifsc-ppc.cls)
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Instituto Federal de Santa Catarina (IFSC) — Câmpus Garopaba</p>
+        <p style="margin-top: 0.4rem; font-size: 0.8rem; color: #64748b;">Comissão de Reformulação dos Projetos Pedagógicos de Curso</p>
+    </footer>
+
+</body>
+</html>
