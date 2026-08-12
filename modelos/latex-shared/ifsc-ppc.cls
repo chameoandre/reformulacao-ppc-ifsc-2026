@@ -19,6 +19,7 @@
 \RequirePackage{enumitem}
 \RequirePackage{colortbl}
 \RequirePackage{multirow}
+\RequirePackage{xltabular}
 \RequirePackage{fontspec}
 \setmainfont{Trebuchet MS}
 \setsansfont{Trebuchet MS}
