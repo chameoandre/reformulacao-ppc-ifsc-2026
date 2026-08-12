@@ -30,6 +30,9 @@
 \definecolor{ifscreed}{RGB}{200, 30, 30}
 \definecolor{cinzaTabela}{RGB}{240, 240, 240}
 
+% --- Espaçamento de Tabelas (Padding de Linhas) ---
+\renewcommand{\arraystretch}{1.35}
+
 % --- Margens ---
 \geometry{
     top=4cm,

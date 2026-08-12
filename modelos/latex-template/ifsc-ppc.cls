@@ -24,6 +24,10 @@
 % --- Definição de Cores ---
 \definecolor{ifscgreen}{RGB}{50, 160, 65}
 \definecolor{ifsclightgreen}{RGB}{240, 250, 240}
+\definecolor{cinzaTabela}{RGB}{240, 240, 240}
+
+% --- Espaçamento de Tabelas (Padding de Linhas) ---
+\renewcommand{\arraystretch}{1.35}
 \definecolor{ifscreed}{RGB}{200, 30, 30}
 
 % --- Margens ---
