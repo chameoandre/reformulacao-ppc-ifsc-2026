@@ -1,349 +1,954 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reformulação PPC 2026 — IFSC Câmpus Garopaba</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard de Reformulação dos PPCs 2026 — IFSC Câmpus Garopaba</title>
 
-    <!-- Google Fonts & Font Awesome -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Google Fonts & Font Awesome & Bootstrap Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Fira+Code:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
-    <style>
-        :root {
-            --ifsc-green: #32a041;
-            --ifsc-dark-green: #1e6b29;
-            --ifsc-light-green: #eaf5eb;
-            --ifsc-red: #c81e1e;
-            --dark-bg: #0f172a;
-            --card-bg: #1e293b;
-            --text-main: #f8fafc;
-            --text-muted: #94a3b8;
-            --border-color: #334155;
-        }
+  <style>
+    :root {
+      --ifsc-green: #10b981;
+      --ifsc-dark-green: #059669;
+      --bg-dark: #090d16;
+      --bg-card: #131b2e;
+      --bg-card-hover: #1e293b;
+      --border-color: rgba(255, 255, 255, 0.12);
+      --text-main: #f8fafc;
+      --text-muted: #94a3b8;
+      --accent-blue: #38bdf8;
+      --accent-emerald: #10b981;
+      --accent-amber: #f59e0b;
+      --accent-purple: #a855f7;
+      --accent-rose: #f43f5e;
+      --radius-lg: 16px;
+      --radius-md: 10px;
+    }
 
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-        body {
-            font-family: 'Outfit', sans-serif;
-            background-color: var(--dark-bg);
-            color: var(--text-main);
-            line-height: 1.6;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-        }
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background-color: var(--bg-dark);
+      color: var(--text-main);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      line-height: 1.6;
+    }
 
-        header {
-            background: linear-gradient(135deg, var(--ifsc-dark-green), #0f3814);
-            padding: 2.5rem 1.5rem;
-            text-align: center;
-            border-bottom: 4px solid var(--ifsc-green);
-            box-shadow: 0 10px 25px rgba(0,0,0,0.3);
-        }
+    .font-outfit {
+      font-family: 'Outfit', sans-serif;
+    }
 
-        .header-content {
-            max-width: 1100px;
-            margin: 0 auto;
-        }
+    .font-code {
+      font-family: 'Fira Code', monospace;
+    }
 
-        .logo-title {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 1rem;
-            margin-bottom: 0.8rem;
-        }
+    /* HEADER */
+    header.app-header {
+      background: linear-gradient(135deg, #064e3b 0%, #090d16 100%);
+      border-bottom: 2px solid var(--border-color);
+      padding: 2rem 1.5rem;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    }
 
-        .logo-title i {
-            font-size: 2.5rem;
-            color: #4ade80;
-        }
+    .header-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+    }
 
-        h1 {
-            font-size: 2.2rem;
-            font-weight: 700;
-            letter-spacing: -0.5px;
-        }
+    .brand-area {
+      display: flex;
+      align-items: center;
+      gap: 1.2rem;
+    }
 
-        .subtitle {
-            font-size: 1.1rem;
-            color: #cbd5e1;
-            max-width: 800px;
-            margin: 0 auto 1.2rem auto;
-        }
+    .brand-logo-bg {
+      background: #ffffff;
+      padding: 6px 12px;
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
 
-        .badge-container {
-            display: flex;
-            justify-content: center;
-            gap: 0.8rem;
-            flex-wrap: wrap;
-        }
+    .brand-logo-bg img {
+      height: 46px;
+      object-fit: contain;
+    }
 
-        .badge {
-            background: rgba(255, 255, 255, 0.12);
-            backdrop-filter: blur(5px);
-            padding: 0.4rem 1rem;
-            border-radius: 50px;
-            font-size: 0.85rem;
-            font-weight: 500;
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            color: #e2e8f0;
-        }
+    .brand-titles h1 {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: #ffffff;
+      line-height: 1.2;
+    }
 
-        main {
-            max-width: 1100px;
-            margin: 3rem auto;
-            padding: 0 1.5rem;
-            flex: 1;
-        }
+    .brand-titles p {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      margin-top: 0.2rem;
+    }
 
-        .grid-courses {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 2rem;
-            margin-bottom: 3rem;
-        }
+    .header-badges {
+      display: flex;
+      gap: 0.8rem;
+      flex-wrap: wrap;
+    }
 
-        .course-card {
-            background: var(--card-bg);
-            border-radius: 16px;
-            border: 1px solid var(--border-color);
-            padding: 2rem;
-            transition: all 0.3s ease;
-            position: relative;
-            overflow: hidden;
-            display: flex;
-            flex-direction: column;
-        }
+    .badge-pill {
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid var(--border-color);
+      color: var(--text-main);
+      padding: 0.45rem 0.9rem;
+      border-radius: 50px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
 
-        .course-card:hover {
-            transform: translateY(-5px);
-            border-color: var(--ifsc-green);
-            box-shadow: 0 12px 30px rgba(50, 160, 65, 0.15);
-        }
+    .badge-pill-green {
+      background: rgba(16, 185, 129, 0.15);
+      border-color: rgba(16, 185, 129, 0.3);
+      color: var(--accent-emerald);
+    }
 
-        .course-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 6px;
-            background: var(--ifsc-green);
-        }
+    .badge-pill-blue {
+      background: rgba(56, 189, 248, 0.15);
+      border-color: rgba(56, 189, 248, 0.3);
+      color: var(--accent-blue);
+    }
 
-        .course-header {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-            margin-bottom: 1rem;
-        }
+    /* MAIN STAGE */
+    main.main-container {
+      max-width: 1200px;
+      margin: 2rem auto;
+      padding: 0 1.5rem;
+      width: 100%;
+      flex: 1;
+    }
 
-        .course-icon {
-            width: 50px;
-            height: 50px;
-            background: rgba(50, 160, 65, 0.15);
-            border-radius: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #4ade80;
-            font-size: 1.5rem;
-        }
+    /* KPI GRID */
+    .kpi-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1.2rem;
+      margin-bottom: 2rem;
+    }
 
-        .course-title {
-            font-size: 1.4rem;
-            font-weight: 600;
-        }
+    .kpi-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-lg);
+      padding: 1.3rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    }
 
-        .course-info {
-            color: var(--text-muted);
-            font-size: 0.95rem;
-            margin-bottom: 1.5rem;
-            flex: 1;
-        }
+    .kpi-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 4px;
+      height: 100%;
+    }
 
-        .info-item {
-            display: flex;
-            align-items: center;
-            gap: 0.6rem;
-            margin-bottom: 0.5rem;
-        }
+    .kpi-green::before { background: var(--accent-emerald); }
+    .kpi-blue::before { background: var(--accent-blue); }
+    .kpi-amber::before { background: var(--accent-amber); }
+    .kpi-purple::before { background: var(--accent-purple); }
 
-        .btn-group {
-            display: flex;
-            flex-direction: column;
-            gap: 0.8rem;
-        }
+    .kpi-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 0.8rem;
+    }
 
-        .btn {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            gap: 0.6rem;
-            padding: 0.8rem 1.2rem;
-            border-radius: 10px;
-            font-size: 0.95rem;
-            font-weight: 600;
-            text-decoration: none;
-            transition: all 0.2s ease;
-            cursor: pointer;
-        }
+    .kpi-title {
+      font-size: 0.82rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: var(--text-muted);
+    }
 
-        .btn-primary {
-            background: var(--ifsc-green);
-            color: #ffffff;
-            border: none;
-        }
+    .kpi-icon {
+      font-size: 1.4rem;
+    }
 
-        .btn-primary:hover {
-            background: var(--ifsc-dark-green);
-        }
+    .kpi-green .kpi-icon { color: var(--accent-emerald); }
+    .kpi-blue .kpi-icon { color: var(--accent-blue); }
+    .kpi-amber .kpi-icon { color: var(--accent-amber); }
+    .kpi-purple .kpi-icon { color: var(--accent-purple); }
 
-        .btn-secondary {
-            background: rgba(255, 255, 255, 0.05);
-            color: var(--text-main);
-            border: 1px solid var(--border-color);
-        }
+    .kpi-value {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.8rem;
+      font-weight: 800;
+      color: #ffffff;
+      line-height: 1.1;
+      margin-bottom: 0.3rem;
+    }
 
-        .btn-secondary:hover {
-            background: rgba(255, 255, 255, 0.1);
-            border-color: #64748b;
-        }
+    .kpi-desc {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
 
-        .section-title {
-            font-size: 1.5rem;
-            font-weight: 600;
-            margin-bottom: 1.5rem;
-            display: flex;
-            align-items: center;
-            gap: 0.8rem;
-        }
+    /* SECTION TABS */
+    .dashboard-tabs {
+      display: flex;
+      gap: 0.8rem;
+      border-bottom: 1px solid var(--border-color);
+      margin-bottom: 1.8rem;
+      overflow-x: auto;
+      padding-bottom: 0.5rem;
+    }
 
-        .section-title i {
-            color: var(--ifsc-green);
-        }
+    .tab-btn {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid var(--border-color);
+      color: var(--text-muted);
+      padding: 0.7rem 1.4rem;
+      border-radius: var(--radius-md);
+      font-family: 'Outfit', sans-serif;
+      font-weight: 600;
+      font-size: 0.95rem;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      transition: all 0.2s ease;
+      white-space: nowrap;
+    }
 
-        .doc-box {
-            background: var(--card-bg);
-            border-radius: 12px;
-            border: 1px solid var(--border-color);
-            padding: 1.5rem;
-            margin-bottom: 2rem;
-        }
+    .tab-btn:hover {
+      background: rgba(255, 255, 255, 0.1);
+      color: #ffffff;
+    }
 
-        footer {
-            background: #090d16;
-            padding: 2rem 1.5rem;
-            text-align: center;
-            color: var(--text-muted);
-            font-size: 0.9rem;
-            border-top: 1px solid var(--border-color);
-        }
-    </style>
+    .tab-btn.active {
+      background: var(--accent-emerald);
+      color: #ffffff;
+      border-color: var(--accent-emerald);
+      box-shadow: 0 4px 15px rgba(16, 185, 129, 0.3);
+    }
+
+    .tab-pane {
+      display: none;
+    }
+
+    .tab-pane.active {
+      display: block;
+    }
+
+    /* CARDS & PANELS */
+    .panel-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-lg);
+      padding: 1.8rem;
+      margin-bottom: 1.8rem;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    }
+
+    .panel-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1.2rem;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .panel-title {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: #ffffff;
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+
+    .panel-title i {
+      color: var(--accent-emerald);
+    }
+
+    /* WORKFLOW GRID */
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .step-item {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      padding: 1.2rem;
+      display: flex;
+      gap: 1rem;
+      align-items: flex-start;
+      margin-bottom: 1rem;
+      transition: all 0.2s ease;
+    }
+
+    .step-item:hover {
+      border-color: rgba(255, 255, 255, 0.25);
+      background: rgba(255, 255, 255, 0.05);
+    }
+
+    .step-icon {
+      width: 40px;
+      height: 40px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      flex-shrink: 0;
+    }
+
+    .step-done .step-icon {
+      background: rgba(16, 185, 129, 0.2);
+      color: var(--accent-emerald);
+      border: 1px solid rgba(16, 185, 129, 0.4);
+    }
+
+    .step-pending .step-icon {
+      background: rgba(245, 158, 11, 0.2);
+      color: var(--accent-amber);
+      border: 1px solid rgba(245, 158, 11, 0.4);
+    }
+
+    .step-content h4 {
+      font-size: 1rem;
+      font-weight: 700;
+      color: #ffffff;
+      margin-bottom: 0.3rem;
+    }
+
+    .step-content p {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      margin: 0;
+      line-height: 1.4;
+    }
+
+    /* CHECKLIST */
+    .checklist-box {
+      display: flex;
+      flex-direction: column;
+      gap: 0.8rem;
+    }
+
+    .checklist-item {
+      background: rgba(15, 23, 42, 0.6);
+      border: 1px solid var(--border-color);
+      border-radius: 10px;
+      padding: 0.9rem 1.2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      cursor: pointer;
+      user-select: none;
+      transition: all 0.2s ease;
+    }
+
+    .checklist-item:hover {
+      border-color: var(--accent-blue);
+      background: rgba(15, 23, 42, 0.9);
+    }
+
+    .checklist-item.checked {
+      border-color: var(--accent-emerald);
+      background: rgba(16, 185, 129, 0.08);
+    }
+
+    .checklist-left {
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+    }
+
+    .chk-icon {
+      font-size: 1.3rem;
+      color: var(--text-muted);
+      transition: all 0.2s ease;
+    }
+
+    .checklist-item.checked .chk-icon {
+      color: var(--accent-emerald);
+    }
+
+    .chk-text {
+      font-size: 0.92rem;
+      font-weight: 600;
+      color: #ffffff;
+    }
+
+    .checklist-item.checked .chk-text {
+      text-decoration: line-through;
+      color: var(--text-muted);
+    }
+
+    .chk-tag {
+      font-size: 0.75rem;
+      font-weight: 700;
+      padding: 0.25rem 0.6rem;
+      border-radius: 20px;
+      white-space: nowrap;
+    }
+
+    .tag-prio {
+      background: rgba(244, 63, 94, 0.2);
+      color: var(--accent-rose);
+      border: 1px solid rgba(244, 63, 94, 0.3);
+    }
+
+    .tag-normal {
+      background: rgba(56, 189, 248, 0.2);
+      color: var(--accent-blue);
+      border: 1px solid rgba(56, 189, 248, 0.3);
+    }
+
+    /* PROGRESS BAR CONTAINER */
+    .progress-bar-wrap {
+      background: rgba(255, 255, 255, 0.08);
+      height: 10px;
+      border-radius: 5px;
+      overflow: hidden;
+      margin: 1rem 0 1.5rem 0;
+    }
+
+    .progress-bar-fill {
+      height: 100%;
+      background: linear-gradient(90deg, var(--accent-emerald), var(--accent-blue));
+      width: 75%;
+      transition: width 0.4s ease;
+    }
+
+    /* ACTION BUTTONS */
+    .btn-action {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      padding: 0.75rem 1.4rem;
+      border-radius: var(--radius-md);
+      font-family: 'Outfit', sans-serif;
+      font-weight: 700;
+      font-size: 0.95rem;
+      text-decoration: none;
+      transition: all 0.2s ease;
+      cursor: pointer;
+      border: none;
+    }
+
+    .btn-emerald {
+      background: var(--accent-emerald);
+      color: #ffffff;
+    }
+
+    .btn-emerald:hover {
+      background: var(--ifsc-dark-green);
+      box-shadow: 0 4px 15px rgba(16, 185, 129, 0.4);
+    }
+
+    .btn-outline {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid var(--border-color);
+      color: var(--text-main);
+    }
+
+    .btn-outline:hover {
+      background: rgba(255, 255, 255, 0.12);
+      border-color: rgba(255, 255, 255, 0.3);
+    }
+
+    /* TABLE */
+    .custom-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.9rem;
+      margin-top: 1rem;
+    }
+
+    .custom-table th {
+      background: rgba(15, 23, 42, 0.8);
+      color: var(--accent-blue);
+      padding: 0.8rem 1rem;
+      text-align: left;
+      border-bottom: 1px solid var(--border-color);
+      font-weight: 700;
+    }
+
+    .custom-table td {
+      padding: 0.8rem 1rem;
+      border-bottom: 1px solid var(--border-color);
+      color: var(--text-main);
+    }
+
+    .custom-table tr:hover td {
+      background: rgba(255, 255, 255, 0.02);
+    }
+
+    /* FOOTER */
+    footer.app-footer {
+      background: #060911;
+      border-top: 1px solid var(--border-color);
+      padding: 1.8rem 1.5rem;
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 0.88rem;
+    }
+
+    @media (max-width: 768px) {
+      .header-container {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .grid-2 {
+        grid-template-columns: 1fr;
+      }
+      .kpi-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+  </style>
 </head>
+
 <body>
 
-    <header>
-        <div class="header-content">
-            <div class="logo-title">
-                <i class="fa-solid fa-graduation-cap"></i>
-                <h1>Reformulação dos PPCs 2026</h1>
-            </div>
-            <p class="subtitle">Instituto Federal de Santa Catarina (IFSC) — Câmpus Garopaba<br>Projetos Pedagógicos dos Cursos Técnicos Integrados ao Ensino Médio</p>
-            <div class="badge-container">
-                <span class="badge"><i class="fa-solid fa-file-contract"></i> Resolução CONSUP/IFSC nº 142/2025</span>
-                <span class="badge"><i class="fa-solid fa-clock"></i> Carga Horária: 3.100h</span>
-                <span class="badge"><i class="fa-solid fa-building-columns"></i> Câmpus Garopaba</span>
-            </div>
+  <!-- HEADER -->
+  <header class="app-header">
+    <div class="header-container">
+      <div class="brand-area">
+        <div class="brand-logo-bg">
+          <img src="figures/garopaba_horizontal_marca2015_PNG.png" alt="IFSC Garopaba">
         </div>
-    </header>
+        <div class="brand-titles">
+          <h1>Reformulação dos PPCs 2026</h1>
+          <p>Cursos Técnicos Integrados ao Ensino Médio — IFSC Câmpus Garopaba</p>
+        </div>
+      </div>
 
-    <main>
-        <div class="section-title">
-            <i class="fa-solid fa-book-bookmark"></i>
-            <h2>Cursos em Reformulação</h2>
+      <div class="header-badges">
+        <span class="badge-pill badge-pill-green">
+          <i class="bi bi-file-earmark-check-fill"></i> Resolução CONSUP/IFSC nº 142/2025
+        </span>
+        <span class="badge-pill badge-pill-blue">
+          <i class="bi bi-person-workspace"></i> Profa. Fabiana de Agapito (ADM)
+        </span>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN STAGE -->
+  <main class="main-container">
+
+    <!-- KPI CARDS -->
+    <div class="kpi-grid">
+      <div class="kpi-card kpi-green">
+        <div class="kpi-header">
+          <span class="kpi-title">CH Total de Administração</span>
+          <i class="bi bi-clock-history kpi-icon"></i>
+        </div>
+        <div class="kpi-value">3.260h</div>
+        <div class="kpi-desc">2.140h FG + 1.000h FT + 120h Politécnico</div>
+      </div>
+
+      <div class="kpi-card kpi-blue">
+        <div class="kpi-header">
+          <span class="kpi-title">Formação Geral (BNCC)</span>
+          <i class="bi bi-book-half kpi-icon"></i>
+        </div>
+        <div class="kpi-value">2.140h</div>
+        <div class="kpi-desc">Supera o piso legal de 2.100h (Art. 8º)</div>
+      </div>
+
+      <div class="kpi-card kpi-amber">
+        <div class="kpi-header">
+          <span class="kpi-title">Estágio Supervisionado</span>
+          <i class="bi bi-briefcase-fill kpi-icon"></i>
+        </div>
+        <div class="kpi-value">Não Obrig.</div>
+        <div class="kpi-desc">0h no cômputo da matriz mínima (Res. CNE 01/21)</div>
+      </div>
+
+      <div class="kpi-card kpi-purple">
+        <div class="kpi-header">
+          <span class="kpi-title">Status da Reformulação</span>
+          <i class="bi bi-pie-chart-fill kpi-icon"></i>
+        </div>
+        <div class="kpi-value">85%</div>
+        <div class="kpi-desc">Fase final de revisão e tramitação</div>
+      </div>
+    </div>
+
+    <!-- DASHBOARD TABS -->
+    <div class="dashboard-tabs">
+      <button class="tab-btn active" onclick="switchTab('tab-adm')">
+        <i class="bi bi-journal-check"></i> PPC Técnico em Administração
+      </button>
+      <button class="tab-btn" onclick="switchTab('tab-inf')">
+        <i class="bi bi-laptop"></i> PPC Técnico em Informática
+      </button>
+      <button class="tab-btn" onclick="switchTab('tab-matriz')">
+        <i class="bi bi-table"></i> Matriz Curricular & Comparativo
+      </button>
+      <button class="tab-btn" onclick="switchTab('tab-checklist')">
+        <i class="bi bi-check2-square"></i> Checklist de Etapas Pendentes
+      </button>
+    </div>
+
+    <!-- TAB 1: TÉCNICO EM ADMINISTRAÇÃO -->
+    <div id="tab-adm" class="tab-pane active">
+      <div class="panel-card">
+        <div class="panel-header">
+          <div class="panel-title">
+            <i class="bi bi-check-circle-fill"></i>
+            Status Atual: PPC Técnico em Administração (Garopaba)
+          </div>
+          <div style="display: flex; gap: 0.8rem;">
+            <a href="tecnico-administracao/documento-ppc-principal/main_ppc_administracao.pdf" target="_blank" class="btn-action btn-emerald">
+              <i class="bi bi-file-earmark-pdf-fill"></i> Abrir Documento PDF Oficial
+            </a>
+          </div>
         </div>
 
-        <div class="grid-courses">
-            <!-- Card Administração -->
-            <div class="course-card">
-                <div class="course-header">
-                    <div class="course-icon">
-                        <i class="fa-solid fa-chart-line"></i>
-                    </div>
-                    <div class="course-title">Técnico em Administração</div>
-                </div>
-                <div class="course-info">
-                    <div class="info-item"><i class="fa-solid fa-layer-group"></i> <strong>Eixo:</strong> Gestão e Negócios</div>
-                    <div class="info-item"><i class="fa-solid fa-calendar-days"></i> <strong>Duração:</strong> 6 Semestres (3 Anos)</div>
-                    <div class="info-item"><i class="fa-solid fa-list-check"></i> <strong>Matriz:</strong> 32 Unidades Curriculares</div>
-                    <div class="info-item"><i class="fa-solid fa-circle-check" style="color: #4ade80;"></i> <strong>Status:</strong> Ementário Completo em Tabela</div>
-                </div>
-                <div class="btn-group">
-                    <a href="tecnico-administracao/documento-ppc-principal/main_ppc_administracao.pdf" target="_blank" class="btn btn-primary">
-                        <i class="fa-solid fa-file-pdf"></i> Visualizar PDF Principal
-                    </a>
-                    <a href="tecnico-administracao/AGENTS.md" target="_blank" class="btn btn-secondary">
-                        <i class="fa-solid fa-gears"></i> Diretrizes & Regras
-                    </a>
-                </div>
+        <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 1.5rem;">
+          O Projeto Pedagógico do Curso Técnico em Administração Integrado ao Ensino Médio encontra-se <strong>totalmente compilado no padrão TeX institucional</strong>, atendendo a todos os requisitos normativos da Resolução CONSUP/IFSC nº 142/2025.
+        </p>
+
+        <div class="grid-2">
+          <!-- O que já foi realizado -->
+          <div>
+            <h3 style="color: var(--accent-emerald); font-size: 1.1rem; margin-bottom: 1rem; font-family: 'Outfit', sans-serif;">
+              <i class="bi bi-check-all me-1"></i> Etapas Concluídas & Entregues:
+            </h3>
+
+            <div class="step-item step-done">
+              <div class="step-icon"><i class="bi bi-calculator-fill"></i></div>
+              <div class="step-content">
+                <h4>Carga Horária & Sanção do Estágio</h4>
+                <p>Carga horária total fixada em <strong>3.260h</strong> (2.140h Formação Geral + 1.000h Formação Técnica + 120h Núcleo Politécnico). Estágio formalizado como <strong>não obrigatório (0h na matriz)</strong>.</p>
+              </div>
             </div>
 
-            <!-- Card Informática -->
-            <div class="course-card">
-                <div class="course-header">
-                    <div class="course-icon">
-                        <i class="fa-solid fa-code"></i>
-                    </div>
-                    <div class="course-title">Técnico em Informática</div>
-                </div>
-                <div class="course-info">
-                    <div class="info-item"><i class="fa-solid fa-layer-group"></i> <strong>Eixo:</strong> Informação e Comunicação</div>
-                    <div class="info-item"><i class="fa-solid fa-calendar-days"></i> <strong>Duração:</strong> 6 Semestres (3 Anos)</div>
-                    <div class="info-item"><i class="fa-solid fa-list-check"></i> <strong>Matriz:</strong> 32 Unidades Curriculares</div>
-                    <div class="info-item"><i class="fa-solid fa-spinner" style="color: #facc15;"></i> <strong>Status:</strong> Aguardando Ementas</div>
-                </div>
-                <div class="btn-group">
-                    <a href="tecnico-informatica/documento-ppc-principal/main_ppc_informatica.pdf" target="_blank" class="btn btn-primary">
-                        <i class="fa-solid fa-file-pdf"></i> Visualizar PDF Principal
-                    </a>
-                    <a href="ESTRUTURA_E_EMENTAS.md" target="_blank" class="btn btn-secondary">
-                        <i class="fa-solid fa-circle-info"></i> Guia de Exportação
-                    </a>
-                </div>
+            <div class="step-item step-done">
+              <div class="step-icon"><i class="bi bi-layout-three"></i></div>
+              <div class="step-content">
+                <h4>Matriz Curricular Dividida por Anos (28 UCs)</h4>
+                <p>Divisão em 3 matrizes anuais independentes (1º Ano: 1.040h | 2º Ano: 1.180h | 3º Ano: 1.040h) + 1 Quadro Síntese Geral, eliminando o estouro vertical de página.</p>
+              </div>
             </div>
-        </div>
 
-        <div class="section-title">
-            <i class="fa-solid fa-folder-open"></i>
-            <h2>Documentação Compartilhada</h2>
-        </div>
-
-        <div class="doc-box">
-            <p style="margin-bottom: 1rem; color: #cbd5e1;">Este repositório armazena as versões de trabalho dos documentos de reformulação dos PPCs dos Cursos Técnicos Integrados do IFSC Câmpus Garopaba, compilados via TeX/Tectonic no padrão visual institucional.</p>
-            <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
-                <a href="ESTRUTURA_E_EMENTAS.md" target="_blank" class="btn btn-secondary" style="font-size: 0.85rem;">
-                    <i class="fa-solid fa-file-lines"></i> ESTRUTURA_E_EMENTAS.md
-                </a>
-                <a href="modelos/latex-shared/ifsc-ppc.cls" target="_blank" class="btn btn-secondary" style="font-size: 0.85rem;">
-                    <i class="fa-solid fa-code"></i> Classe TeX (ifsc-ppc.cls)
-                </a>
+            <div class="step-item step-done">
+              <div class="step-icon"><i class="bi bi-person-badge-fill"></i></div>
+              <div class="step-content">
+                <h4>Dados de Responsáveis & Proponente</h4>
+                <p>Atualização formal do articulador/proponente para a <strong>Profa. Fabiana de Agapito</strong>, inclusão do placeholder da Chefia DEPE e ajuste para <code>Portaria Câmpus Garopaba nº 2026/XXX</code>.</p>
+              </div>
             </div>
-        </div>
-    </main>
 
-    <footer>
-        <p>&copy; 2026 Instituto Federal de Santa Catarina (IFSC) — Câmpus Garopaba</p>
-        <p style="margin-top: 0.4rem; font-size: 0.8rem; color: #64748b;">Comissão de Reformulação dos Projetos Pedagógicos de Curso</p>
-    </footer>
+            <div class="step-item step-done">
+              <div class="step-icon"><i class="bi bi-book"></i></div>
+              <div class="step-content">
+                <h4>Diretrizes de Acervos Digitais (SIBI)</h4>
+                <p>Adequação à portaria do GT de Acervos Digitais com citação explícita das plataformas virtuais <em>Minha Biblioteca (Pearson)</em> e <em>Target GEDWeb</em> no corpo do PPC.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Destaques Regulamentares -->
+          <div>
+            <h3 style="color: var(--accent-blue); font-size: 1.1rem; margin-bottom: 1rem; font-family: 'Outfit', sans-serif;">
+              <i class="bi bi-shield-lock-fill me-1"></i> Diretrizes Regulamentares Atendidas:
+            </h3>
+
+            <div style="background: rgba(15, 23, 42, 0.8); border: 1px solid var(--border-color); border-radius: 12px; padding: 1.2rem; display: flex; flex-direction: column; gap: 0.9rem;">
+              <div>
+                <strong style="color: var(--accent-emerald); font-size: 0.95rem;">• Formação Geral Básica (BNCC):</strong>
+                <p style="color: var(--text-muted); font-size: 0.88rem; margin: 0.2rem 0 0 0;">2.140h cobrindo as 4 áreas do conhecimento, incluindo Inglês (120h) e Espanhol (120h) obrigatórios.</p>
+              </div>
+              <div style="border-top: 1px dashed var(--border-color); padding-top: 0.8rem;">
+                <strong style="color: var(--accent-blue); font-size: 0.95rem;">• Formação Técnica Específica:</strong>
+                <p style="color: var(--text-muted); font-size: 0.88rem; margin: 0.2rem 0 0 0;">1.000h em alinhamento com o Catálogo Nacional de Cursos Técnicos (CNCT 4ª Edição) para a habilitação em Administração.</p>
+              </div>
+              <div style="border-top: 1px dashed var(--border-color); padding-top: 0.8rem;">
+                <strong style="color: var(--accent-purple); font-size: 0.95rem;">• Núcleo Politécnico Comum:</strong>
+                <p style="color: var(--text-muted); font-size: 0.88rem; margin: 0.2rem 0 0 0;">120h dedicadas às <em>Oficinas de Integração I, II e III</em> (40h por ano no 1º, 2º e 3º ano) para articulação interdisciplinar.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TAB 2: TÉCNICO EM INFORMÁTICA -->
+    <div id="tab-inf" class="tab-pane">
+      <div class="panel-card">
+        <div class="panel-header">
+          <div class="panel-title">
+            <i class="bi bi-laptop-fill"></i>
+            Status Atual: PPC Técnico em Informática (Garopaba)
+          </div>
+          <a href="ESTRUTURA_E_EMENTAS.md" target="_blank" class="btn-action btn-outline">
+            <i class="bi bi-file-earmark-code"></i> Ver Guia de Ementas
+          </a>
+        </div>
+
+        <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 1.5rem;">
+          O curso Técnico em Informática possui matriz pré-aprovada e carga horária alinhada. O trabalho atual concentra-se na conversão e descarregamento das ementas dos arquivos Google Drive (<code>.gdoc</code>) para arquivos Markdown/TeX locais.
+        </p>
+
+        <div class="grid-2">
+          <div class="step-item step-done">
+            <div class="step-icon"><i class="bi bi-check-circle-fill"></i></div>
+            <div class="step-content">
+              <h4>Diagnóstico de Carga Horária (3.340h)</h4>
+              <p>Formação Geral com 2.140h e Formação Técnica com 1.200h (CNCT). Necessário apenas adequar Língua Espanhola (+40h).</p>
+            </div>
+          </div>
+
+          <div class="step-item step-pending">
+            <div class="step-icon"><i class="bi bi-hourglass-split"></i></div>
+            <div class="step-content">
+              <h4>Exportação de Ementas Técnicas (.gdoc)</h4>
+              <p>Aguardando salvamento local das ementas técnicas de programação, redes e banco de dados na pasta <code>tecnico-informatica/ementas/</code>.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TAB 3: MATRIZ CURRICULAR & COMPARATIVO -->
+    <div id="tab-matriz" class="tab-pane">
+      <div class="panel-card">
+        <div class="panel-header">
+          <div class="panel-title">
+            <i class="bi bi-table"></i>
+            Síntese Comparativa da Matriz Curricular (Resolução 142/2025)
+          </div>
+        </div>
+
+        <div style="overflow-x: auto;">
+          <table class="custom-table">
+            <thead>
+              <tr>
+                <th>Bloco Curricular</th>
+                <th>Exigência Mínima (Res. 142)</th>
+                <th>Técnico em Administração</th>
+                <th>Técnico em Informática</th>
+                <th>Status de Conformidade</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Formação Geral (BNCC)</strong></td>
+                <td>2.100h</td>
+                <td><strong style="color: var(--accent-emerald);">2.140h</strong></td>
+                <td><strong style="color: var(--accent-emerald);">2.140h</strong></td>
+                <td><span class="chk-tag tag-normal">Conforme (&gt;2.100h)</span></td>
+              </tr>
+              <tr>
+                <td><strong>Formação Técnica Específica</strong></td>
+                <td>1.000h (ADM) / 1.200h (INF)</td>
+                <td><strong style="color: var(--accent-blue);">1.000h</strong></td>
+                <td><strong style="color: var(--accent-blue);">1.200h</strong></td>
+                <td><span class="chk-tag tag-normal">Conforme (CNCT 4ª ed)</span></td>
+              </tr>
+              <tr>
+                <td><strong>Núcleo Politécnico Comum</strong></td>
+                <td>120h</td>
+                <td><strong style="color: var(--accent-purple);">120h</strong> (Oficinas I, II, III)</td>
+                <td><strong style="color: var(--accent-purple);">120h</strong> (Projetos)</td>
+                <td><span class="chk-tag tag-normal">Conforme (Art. 7º)</span></td>
+              </tr>
+              <tr>
+                <td><strong>Estágio Curricular</strong></td>
+                <td>Não Obrigatório (0h)</td>
+                <td><strong style="color: var(--text-muted);">0h (Não Obrigatório)</strong></td>
+                <td><strong style="color: var(--text-muted);">0h (Não Obrigatório)</strong></td>
+                <td><span class="chk-tag tag-normal">Conforme (Res. CNE 01/21)</span></td>
+              </tr>
+              <tr>
+                <td><strong>CARGA HORÁRIA TOTAL</strong></td>
+                <td>3.100h (ADM) / 3.300h (INF)</td>
+                <td><strong style="color: var(--accent-emerald); font-size: 1.05rem;">3.260h</strong></td>
+                <td><strong style="color: var(--accent-emerald); font-size: 1.05rem;">3.340h</strong></td>
+                <td><span class="chk-tag tag-normal">Aprovado pelo NDE</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <!-- TAB 4: CHECKLIST DE ETAPAS PENDENTES -->
+    <div id="tab-checklist" class="tab-pane">
+      <div class="panel-card">
+        <div class="panel-header">
+          <div class="panel-title">
+            <i class="bi bi-list-check"></i>
+            Checklist de Etapas e Próximos Passos (Fluxo Oficial)
+          </div>
+          <div style="font-size: 0.9rem; color: var(--text-muted);">
+            Clique nos itens para alternar o status de conclusão
+          </div>
+        </div>
+
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
+          <span style="font-size: 0.9rem; font-weight: 700; color: #ffffff;">Progresso da Tramitação:</span>
+          <span id="chk-progress-text" style="font-size: 0.9rem; font-weight: 700; color: var(--accent-emerald);">4 de 7 concluídos (57%)</span>
+        </div>
+
+        <div class="progress-bar-wrap">
+          <div id="chk-progress-fill" class="progress-bar-fill" style="width: 57%;"></div>
+        </div>
+
+        <div class="checklist-box">
+          <div class="checklist-item checked" onclick="toggleChecklistItem(this)">
+            <div class="checklist-left">
+              <i class="bi bi-check-circle-fill chk-icon"></i>
+              <span class="chk-text">Sanção da Carga Horária e Inclusão das 120h do Núcleo Politécnico no TeX</span>
+            </div>
+            <span class="chk-tag tag-normal">Concluído</span>
+          </div>
+
+          <div class="checklist-item checked" onclick="toggleChecklistItem(this)">
+            <div class="checklist-left">
+              <i class="bi bi-check-circle-fill chk-icon"></i>
+              <span class="chk-text">Reestruturação da Matriz em 3 Tabelas Anuais para evitar estouro de página</span>
+            </div>
+            <span class="chk-tag tag-normal">Concluído</span>
+          </div>
+
+          <div class="checklist-item checked" onclick="toggleChecklistItem(this)">
+            <div class="checklist-left">
+              <i class="bi bi-check-circle-fill chk-icon"></i>
+              <span class="chk-text">Atualização da Proponente (Profa. Fabiana de Agapito) e Sanitize de Dados</span>
+            </div>
+            <span class="chk-tag tag-normal">Concluído</span>
+          </div>
+
+          <div class="checklist-item checked" onclick="toggleChecklistItem(this)">
+            <div class="checklist-left">
+              <i class="bi bi-check-circle-fill chk-icon"></i>
+              <span class="chk-text">Compilação TeX sem erros e Sincronização via Git Push no GitHub Pages</span>
+            </div>
+            <span class="chk-tag tag-normal">Concluído</span>
+          </div>
+
+          <div class="checklist-item" onclick="toggleChecklistItem(this)">
+            <div class="checklist-left">
+              <i class="bi bi-circle chk-icon"></i>
+              <span class="chk-text">Confirmação do Nome da Chefia DEPE Atual e Número Definitivo da Portaria Câmpus Garopaba</span>
+            </div>
+            <span class="chk-tag tag-prio">Pendente (DEPE)</span>
+          </div>
+
+          <div class="checklist-item" onclick="toggleChecklistItem(this)">
+            <div class="checklist-left">
+              <i class="bi bi-circle chk-icon"></i>
+              <span class="chk-text">Catalogação e Validação de Referências Bibliográficas Físicas e Digitais junto à Biblioteca (SIBI)</span>
+            </div>
+            <span class="chk-tag tag-normal">Pendente (Biblioteca)</span>
+          </div>
+
+          <div class="checklist-item" onclick="toggleChecklistItem(this)">
+            <div class="checklist-left">
+              <i class="bi bi-circle chk-icon"></i>
+              <span class="chk-text">Apreciação e Aprovação pelo Colegiado do Câmpus Garopaba (Prazo: 03/07/2026)</span>
+            </div>
+            <span class="chk-tag tag-prio">Prazo: 03/07</span>
+          </div>
+
+          <div class="checklist-item" onclick="toggleChecklistItem(this)">
+            <div class="checklist-left">
+              <i class="bi bi-circle chk-icon"></i>
+              <span class="chk-text">Envio Oficial do Processo ao DEPE / Reitoria (Prazo: 29/06/2026) e Tramitação no CEPE (06-07/08/2026)</span>
+            </div>
+            <span class="chk-tag tag-prio">Prazo: 29/06</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="app-footer">
+    <p>&copy; 2026 Instituto Federal de Santa Catarina (IFSC) — Câmpus Garopaba</p>
+    <p style="margin-top: 0.3rem; font-size: 0.8rem; color: #64748b;">
+      Comissão de Reformulação dos PPCs dos Cursos Técnicos Integrados ao Ensino Médio (Portaria 2026/XXX)
+    </p>
+  </footer>
+
+  <!-- JAVASCRIPT FOR INTERACTIVITY -->
+  <script>
+    function switchTab(tabId) {
+      document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+      document.querySelectorAll('.tab-pane').forEach(pane => pane.classList.remove('active'));
+
+      event.currentTarget.classList.add('active');
+      document.getElementById(tabId).classList.add('active');
+    }
+
+    function toggleChecklistItem(el) {
+      el.classList.toggle('checked');
+      const icon = el.querySelector('.chk-icon');
+      if (el.classList.contains('checked')) {
+        icon.className = 'bi bi-check-circle-fill chk-icon';
+      } else {
+        icon.className = 'bi bi-circle chk-icon';
+      }
+      updateChecklistProgress();
+    }
+
+    function updateChecklistProgress() {
+      const items = document.querySelectorAll('.checklist-item');
+      const checked = document.querySelectorAll('.checklist-item.checked');
+      const total = items.length;
+      const count = checked.length;
+      const percentage = Math.round((count / total) * 100);
+
+      document.getElementById('chk-progress-fill').style.width = `${percentage}%`;
+      document.getElementById('chk-progress-text').textContent = `${count} de ${total} concluídos (${percentage}%)`;
+    }
+  </script>
 
 </body>
+
 </html>
