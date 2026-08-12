@@ -18,6 +18,7 @@
 \RequirePackage{tabularx}
 \RequirePackage{enumitem}
 \RequirePackage{colortbl}
+\RequirePackage{multirow}
 \RequirePackage{fontspec}
 \setmainfont{Trebuchet MS}
 \setsansfont{Trebuchet MS}

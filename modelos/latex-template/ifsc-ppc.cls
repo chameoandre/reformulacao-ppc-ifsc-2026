@@ -14,6 +14,8 @@
 \RequirePackage{fancyhdr}
 \RequirePackage{tikz}
 \RequirePackage{tcolorbox}
+\RequirePackage{colortbl}
+\RequirePackage{multirow}
 \RequirePackage{fontspec}
 \setmainfont{Trebuchet MS}
 \setsansfont{Trebuchet MS}
