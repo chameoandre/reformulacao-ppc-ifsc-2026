@@ -40,8 +40,25 @@ All course assets must remain strictly organized in the following subdirectories
 
 ---
 
-## 4. Compilation & Verification Directives
+## 5. Diretrizes Oficiais para Bibliografias (SIBI/IFSC e Parecer de Biblioteca)
 
-- Always compile TeX files using `tectonic`:
-  `cd tecnico-administracao/documento-ppc-principal && tectonic main_ppc_administracao.tex`
-- Ensure PDF builds cleanly with 0 errors before presenting to the user.
+1. **Quantitativo Rigoroso por Unidade Curricular:**
+   - **Bibliografia Básica:** EXATAMENTE **2 títulos de livros** (nem 1, nem 3+).
+     - *Cursos Técnicos Integrados:* O livro didático do FNDE pode constar como um dos 2 títulos da Bibliografia Básica, devendo ser citado **exatamente como**: `Livro didático fornecido pelo Fundo Nacional de Desenvolvimento da Educação (FNDE).`
+   - **Bibliografia Complementar:** NO MÍNIMO **3 títulos de livros**.
+     - Artigos, leis, normas e teses podem ser citados, mas **NÃO contam** para o mínimo regulamentar de 3 livros.
+     - **Espaço Reservado (Placeholder):** Caso a UC não possua o quantitativo completo, incluir formalmente a indicação de reserva: `[Título pendente de indicação docente e validação pelo acervo da Biblioteca do Câmpus]`.
+
+2. **Vedações e Proibições:**
+   - **Proibido Manuais/Apostilas:** Apostilas, cartilhas e manuais internos da instituição **NÃO podem compor a bibliografia do PPC** (devem constar apenas no Plano de Ensino).
+   - **Sem Fusão de Listas:** Bibliografia Básica e Bibliografia Complementar devem ser mantidas como duas listas **separadas e identificadas**.
+
+3. **Padronização ABNT & Tipografia:**
+   - **Formato:** `SOBRENOME, Nome. \textbf{Título do Livro: subtítulo}. X. ed. Cidade: Editora, Ano.`
+   - **Destaque:** O título do livro deve ser formatado com **negrito** (`\textbf{...}`) em todas as referências para garantir padronização uniforme.
+   - **Ordenação Alfabética:** Todas as referências dentro de cada lista (Básica e Complementar) DEVEM estar rigorosamente em **ordem alfabética pelo sobrenome do primeiro autor**.
+
+4. **Exemplares Mínimos na Biblioteca (Parecer da Biblioteca):**
+   - **Livros Impressos:** Pelo menos 3 exemplares físicos na Biblioteca do Câmpus por título básico (ou conforme necessidade da coordenação) e 1 exemplar por título complementar.
+   - **Acervo Virtual IFSC (Minha Biblioteca/Pearson):** A biblioteca precisa disponibilizar ao menos 2 exemplares físicos do título básico e 1 exemplar físico do título complementar.
+
