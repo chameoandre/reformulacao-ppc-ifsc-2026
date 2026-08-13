@@ -107,10 +107,40 @@ A unidade curricular Arte 2 aprofunda o estudo das manifestações populares e t
 **Curso:** Técnico em Administração
 **Câmpus:** Garopaba
 **Bloco de Formação:** Formação Geral
-**Carga Horária Total:** 80 horas, se disponível no documento
+**Carga Horária Total:** 80 horas (20h Prática)
 **Ano/Semestre:** Ano 1, 1º e 2º semestre
 
-**[PENDENTE — aguardando preenchimento pelo docente responsável]**
+---
+
+### 1. Ementa (Resumo do Componente)
+Compreensão da cultura corporal do movimento em suas dimensões históricas, sociais, políticas e ambientais. Estudo do corpo como expressão cultural e de diversidade, manifestações esportivas, lutas, danças, práticas corporais alternativas e de aventura na natureza, além da análise crítica do papel do esporte na sociedade contemporânea.
+
+### 2. Objetivos de Aprendizagem & Competências
+- Compreender o corpo humano e o movimento como construções históricas, culturais, sociais e políticas.
+- Analisar a relação entre cultura corporal, mídia, padrões de beleza e cultura de consumo na sociedade contemporânea.
+- Vivenciar e refletir sobre práticas corporais diversas (danças populares e urbanas, lutas, esportes individuais e coletivos, jogos, brincadeiras e práticas de aventura na natureza).
+- Problematizar as desigualdades sociais, gênero, raça, diversidade, ética e doping no esporte e na sociedade.
+- Reconhecer a relação entre cultura corporal, preservação ambiental e práticas sustentáveis ao ar livre.
+
+### 3. Conteúdo Programático
+- O corpo como expressão cultural e social: construção histórica do movimento, corpo na mídia e cultura de consumo, diversidade (gênero, raça, classe, deficiência) e identidade.
+- Cultura corporal e suas relações sociais: danças populares e urbanas (história e diversidade), lutas e artes marciais (história, filosofia e valores), esportes coletivos e individuais (regras, táticas e valores), práticas corporais alternativas e de aventura (yoga, pilates, surf, skate, jogos e brincadeiras).
+- Esporte, competição e performance: relações de poder e desigualdade, doping e ética no esporte, saúde mental e desempenho esportivo, mídia e consumismo.
+- A cultura corporal e o meio ambiente: práticas corporais ao ar livre e em contato com a natureza, sustentabilidade nas práticas esportivas e impacto ambiental.
+- O esporte na sociedade capitalista e suas manifestações: gênese e desenvolvimento do esporte, técnica e tecnologia, introdução à economia política do esporte.
+
+### 4. Metodologia de Ensino e Avaliação
+Aulas com caráter reflexivo, pautadas na interação, no diálogo e na mediação entre professor e aluno, partindo da prática social como ponto de partida e de chegada no processo de apreensão do conhecimento. Aulas expositivas dialogadas; aulas práticas com vivências corporais; participação e organização de eventos/atividades esportivas e recreativas na natureza; estudos dirigidos; discussões em grupo. Atividades práticas realizadas no laboratório de cultura corporal do câmpus, em ambiente externo e com saídas técnicas na região. O processo avaliativo será contínuo, formativo e processual, contemplando diferentes instrumentos de reflexão e vivência prática.
+
+### 5. Bibliografia Básica e Complementar
+**Básica:**
+1. DICIONÁRIO crítico de educação física. 3. ed. rev. e ampl. Ijuí, RS: Ed. UNIJUÍ, 2014.
+2. BERNARDES, Luciano Andrade (org.). Atividades e esportes de aventura para profissionais de educação física. São Paulo: Phorte, 2013.
+
+**Complementar:**
+1. BRACHT, Valter. Sociologia crítica do esporte: uma introdução. 2. ed. Ijuí: Ed. da Unijuí, 2003.
+2. CAMARGO, Wagner Xavier de. Leituras de gênero e sexualidade nos esportes. São Carlos: EDUFSCAR, 2021.
+3. FOER, Franklin. Como o futebol explica o mundo: um olhar inesperado sobre a globalização. Rio de Janeiro: Jorge Zahar Editor, 2005.
 
 ---
 
@@ -118,10 +148,40 @@ A unidade curricular Arte 2 aprofunda o estudo das manifestações populares e t
 **Curso:** Técnico em Administração
 **Câmpus:** Garopaba
 **Bloco de Formação:** Formação Geral
-**Carga Horária Total:** 80 horas, se disponível no documento
+**Carga Horária Total:** 80 horas (20h Prática)
 **Ano/Semestre:** Ano 2, 3º e 4º semestre
 
-**[PENDENTE — aguardando preenchimento pelo docente responsável]**
+---
+
+### 1. Ementa (Resumo do Componente)
+Aprofundamento da cultura corporal do movimento articulado ao lazer, tempo livre, saúde, ergonomia no trabalho e inclusão social. Análise das políticas públicas de lazer, nutrição, prevenção de lesões, qualidade de vida do trabalhador, e combate a discriminações (gênero, raça, deficiência, LGBTQIA+) no esporte e na sociedade.
+
+### 2. Objetivos de Aprendizagem & Competências
+- Conceituar e discutir lazer, tempo livre e políticas públicas em suas transformações históricas e contemporâneas.
+- Relacionar atividade física, evidências científicas de saúde, nutrição, ergonomia e qualidade de vida no mundo do trabalho.
+- Compreender a prevenção e tratamento de lesões esportivas e cuidados corporais na vida cotidiana e profissional.
+- Promover a inclusão e o combate a preconceitos (racismo, capacitismo, machismo, LGBTQIAfobia) na cultura corporal e no esporte.
+- Aprofundar a vivência e a análise reflexiva de manifestações da cultura corporal (danças, lutas, esportes e práticas alternativas).
+
+### 3. Conteúdo Programático
+- Lazer e tempo livre: conceitos, histórico, transformações, políticas públicas, implicações sociais, turismo, lazer e tecnologia.
+- Saúde, corpo e movimento: atividade física e evidências científicas, alimentação e nutrição para o desempenho esportivo, lesões esportivas (prevenção e tratamento), saúde do trabalhador e ergonomia.
+- Cultura corporal e trabalho: relações históricas e contemporâneas entre trabalho e lazer, saúde do trabalhador e qualidade de vida.
+- Diversidade, gênero e inclusão: corpo, gênero e sexualidade na cultura corporal, esporte e pessoas com deficiência, racismo e discriminação no esporte, inclusão LGBTQIA+.
+- Cultura corporal e suas relações sociais: aprofundamento em danças populares e urbanas, lutas e artes marciais, esportes coletivos e individuais, práticas corporais alternativas e de aventura (yoga, pilates, surf, skate).
+
+### 4. Metodologia de Ensino e Avaliação
+Aulas com caráter reflexivo, pautadas na interação, no diálogo e na mediação entre professor e aluno, partindo da prática social como ponto de partida e de chegada no processo de apreensão do conhecimento. Aulas expositivas dialogadas; aulas práticas com vivências corporais; participação e organização de eventos/atividades esportivas e recreativas na natureza; estudos dirigidos; discussões em grupo. Atividades práticas realizadas no laboratório de cultura corporal do câmpus, em ambiente externo e com saídas técnicas na região. O processo avaliativo será contínuo, formativo e processual, contemplando diferentes instrumentos de reflexão e vivência prática.
+
+### 5. Bibliografia Básica e Complementar
+**Básica:**
+1. DICIONÁRIO crítico de educação física. 3. ed. rev. e ampl. Ijuí, RS: Ed. UNIJUÍ, 2014.
+2. BERNARDES, Luciano Andrade (org.). Atividades e esportes de aventura para profissionais de educação física. São Paulo: Phorte, 2013.
+
+**Complementar:**
+1. BRACHT, Valter. Sociologia crítica do esporte: uma introdução. 2. ed. Ijuí: Ed. da Unijuí, 2003.
+2. CAMARGO, Wagner Xavier de. Leituras de gênero e sexualidade nos esportes. São Carlos: EDUFSCAR, 2021.
+3. FOER, Franklin. Como o futebol explica o mundo: um olhar inesperado sobre a globalização. Rio de Janeiro: Jorge Zahar Editor, 2005.
 
 ---
 
