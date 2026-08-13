@@ -224,12 +224,13 @@
 
     /* SECTION TABS */
     .dashboard-tabs {
-      display: flex;
-      flex-wrap: wrap;
+      display: flex !important;
+      flex-wrap: wrap !important;
       gap: 0.8rem;
       border-bottom: 1px solid var(--border-color);
       margin-bottom: 1.8rem;
       padding-bottom: 0.8rem;
+      overflow-x: visible !important;
     }
 
     .tab-btn {
@@ -617,11 +618,11 @@
 
     <!-- DASHBOARD TABS -->
     <div class="dashboard-tabs">
-      <button class="tab-btn active" onclick="switchTab('tab-sumario-atualizacoes')">
-        <i class="bi bi-file-earmark-diff-fill"></i> Sumário de Atualizações
-      </button>
-      <button class="tab-btn" onclick="switchTab('tab-checklist')">
+      <button class="tab-btn active" onclick="switchTab('tab-checklist')">
         <i class="bi bi-check2-square"></i> Checklist de Etapas Pendentes
+      </button>
+      <button class="tab-btn" onclick="switchTab('tab-sumario-atualizacoes')">
+        <i class="bi bi-file-earmark-diff-fill"></i> Sumário de Atualizações
       </button>
       <button class="tab-btn" onclick="switchTab('tab-adm')">
         <i class="bi bi-journal-check"></i> PPC Técnico em Administração
@@ -850,7 +851,7 @@
     </div>
 
     <!-- TAB 4: CHECKLIST DE ETAPAS PENDENTES -->
-    <div id="tab-checklist" class="tab-pane">
+    <div id="tab-checklist" class="tab-pane active">
       <div class="panel-card">
         <div class="panel-header">
           <div class="panel-title">
@@ -949,7 +950,7 @@
     </div>
 
     <!-- TAB 5: SUMÁRIO DE ATUALIZAÇÕES DO PPC -->
-    <div id="tab-sumario-atualizacoes" class="tab-pane active">
+    <div id="tab-sumario-atualizacoes" class="tab-pane">
       <div class="panel-card">
         <div class="panel-header">
           <div class="panel-title">
