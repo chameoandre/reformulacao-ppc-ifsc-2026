@@ -225,11 +225,11 @@
     /* SECTION TABS */
     .dashboard-tabs {
       display: flex;
+      flex-wrap: wrap;
       gap: 0.8rem;
       border-bottom: 1px solid var(--border-color);
       margin-bottom: 1.8rem;
-      overflow-x: auto;
-      padding-bottom: 0.5rem;
+      padding-bottom: 0.8rem;
     }
 
     .tab-btn {
@@ -617,7 +617,13 @@
 
     <!-- DASHBOARD TABS -->
     <div class="dashboard-tabs">
-      <button class="tab-btn active" onclick="switchTab('tab-adm')">
+      <button class="tab-btn active" onclick="switchTab('tab-sumario-atualizacoes')">
+        <i class="bi bi-file-earmark-diff-fill"></i> Sumário de Atualizações
+      </button>
+      <button class="tab-btn" onclick="switchTab('tab-checklist')">
+        <i class="bi bi-check2-square"></i> Checklist de Etapas Pendentes
+      </button>
+      <button class="tab-btn" onclick="switchTab('tab-adm')">
         <i class="bi bi-journal-check"></i> PPC Técnico em Administração
       </button>
       <button class="tab-btn" onclick="switchTab('tab-inf')">
@@ -626,16 +632,10 @@
       <button class="tab-btn" onclick="switchTab('tab-matriz')">
         <i class="bi bi-table"></i> Matriz Curricular & Comparativo
       </button>
-      <button class="tab-btn" onclick="switchTab('tab-sumario-atualizacoes')">
-        <i class="bi bi-file-earmark-diff-fill"></i> Sumário de Atualizações
-      </button>
-      <button class="tab-btn" onclick="switchTab('tab-checklist')">
-        <i class="bi bi-check2-square"></i> Checklist de Etapas Pendentes
-      </button>
     </div>
 
     <!-- TAB 1: TÉCNICO EM ADMINISTRAÇÃO -->
-    <div id="tab-adm" class="tab-pane active">
+    <div id="tab-adm" class="tab-pane">
       <div class="panel-card">
         <div class="panel-header">
           <div class="panel-title">
@@ -949,7 +949,7 @@
     </div>
 
     <!-- TAB 5: SUMÁRIO DE ATUALIZAÇÕES DO PPC -->
-    <div id="tab-sumario-atualizacoes" class="tab-pane">
+    <div id="tab-sumario-atualizacoes" class="tab-pane active">
       <div class="panel-card">
         <div class="panel-header">
           <div class="panel-title">
