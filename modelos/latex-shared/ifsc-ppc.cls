@@ -31,6 +31,20 @@
 \definecolor{ifscreed}{RGB}{200, 30, 30}
 \definecolor{cinzaTabela}{RGB}{240, 240, 240}
 
+% --- Pacote de Hyperlinks e Navegação PDF ---
+\RequirePackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=ifscgreen,
+    filecolor=ifscgreen,
+    urlcolor=ifscgreen,
+    citecolor=ifscgreen,
+    pdfborder={0 0 0},
+    pdfpagemode=UseOutlines,
+    pdftitle={Projeto Pedagógico de Curso — IFSC Câmpus Garopaba},
+    pdfauthor={IFSC Câmpus Garopaba}
+}
+
 % --- Espaçamento de Tabelas (Padding de Linhas) ---
 \renewcommand{\arraystretch}{1.35}
 
