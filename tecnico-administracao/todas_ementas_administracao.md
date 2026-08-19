@@ -101,13 +101,55 @@ Aulas com caráter reflexivo, pautadas na interação, no diálogo e na mediaç�
 **Curso:** Técnico em Administração
 **Câmpus:** Garopaba
 **Bloco de Formação:** Formação Geral
-**Carga Horária Total:** 80 horas, se disponível no documento
+**Carga Horária Total:** 80 horas (Prática: não se aplica | EaD: não se aplica)
 **Ano/Semestre:** Ano 1, 1º e 2º semestre
-
-**[PENDENTE — aguardando preenchimento pelo docente responsável]**
 
 ---
 
+### 1. Ementa (Resumo do Componente)
+Estudo da língua inglesa como língua franca e instrumento de inserção social, cultural e científica. Desenvolvimento das quatro habilidades linguísticas (compreensão leitora, auditiva, produção escrita e oral) prioritariamente a partir de gêneros textuais autênticos. Estudo de estruturas morfossintáticas básicas, ampliação de vocabulário e regularidades da língua para interação em diferentes cenários cotidianos e profissionais.
+
+### 2. Objetivos de Aprendizagem & Competências
+- Compreender a língua inglesa como língua franca e idioma universal, entendendo sua função social como possibilidade de ampliar o acesso à informação e a bens científicos e culturais da humanidade;
+- Ampliar de modo autônomo o conhecimento da língua inglesa a partir de estratégias de aprendizagem e compreensão, utilizando ferramentas convencionais e digitais;
+- Posicionar-se como usuário ativo da língua inglesa em diferentes cenários, vivenciando práticas de fala, escuta, escrita e de leitura;
+- Produzir sentido a partir de elementos linguísticos e extralinguísticos de gêneros textuais (orais, escritos e/ou híbridos), prioritariamente utilizando textos autênticos;
+- Conhecer regularidades morfológicas e sintáticas da língua inglesa que auxiliem na compreensão de significados e na ampliação de vocabulário.
+
+### 3. Conteúdo Programático
+- Cumprimentos e informações pessoais;
+- Perguntas com Wh;
+- Artigos;
+- Substantivos (objetos, pessoas e lugares);
+- Expressões de tempo (horas, dias, meses);
+- Pronomes pessoais;
+- Pronomes demonstrativos;
+- Verbo To Be;
+- Números;
+- Profissões;
+- Verbos comuns;
+- Imperativo;
+- Presente simples;
+- Advérbios de frequência;
+- Presente contínuo;
+- Caracterização de objetos, pessoas e lugares;
+- Adjetivos (comparativos e superlativos);
+- Pronomes relativos.
+
+### 4. Metodologia de Ensino e Avaliação
+- **Metodologia:** Aulas expositivas dialogadas e contextualizadas, buscando aproximação com o cotidiano dos estudantes. A apresentação dos conteúdos trabalhados ocorrerá por meio da audição, conversação, leitura e produção de textos e/ou apresentações com recursos multimídia. Projetos/Atividades envolvendo gêneros textuais de natureza lúdica (como música e vídeo), informativa (como notícias e textos científicos), literárias (como poemas e obras) e/ou técnica e científica. Atividades que propiciem ao estudante a oportunidade de compartilhar conhecimento com os colegas.
+- **Avaliação:** Avaliação contínua e processual, acompanhando o desenvolvimento das quatro habilidades linguísticas (ouvir, falar, ler e escrever), por meio da participação em sala de aula, produções individuais e em equipe, exercícios práticos e apresentações.
+
+### 5. Bibliografia Básica e Complementar
+**Básica:**
+1. LIVRO didático fornecido pelo Fundo Nacional de Desenvolvimento da Educação (FNDE).
+2. DICIONÁRIO Escolar Longman Inglês-Português, Português-Inglês. Harlow: Pearson Longman, 2004.
+3. LATHAM-KOENIG, C. *English File: Intermediate Student's Book*. Oxford: Oxford University Press, 2018.
+
+**Complementar:**
+1. FRANCO, C. P. *English vibes for Brazilian learners: volume único*. 1. ed. São Paulo: FTD, 2020.
+2. MURPHY, Raymond. *Essential Grammar in Use*. 4th ed. Cambridge: Cambridge University Press, 2015.
+3. WHARTON, S. *500 tips for tesol: (teaching english to speakers of other languages)*. London: Kogan Page, 1999.
 ---
 
 # Unidade Curricular: Língua Portuguesa e Literatura — Ano 1
@@ -801,13 +843,52 @@ Aulas com caráter reflexivo, pautadas na interação, no diálogo e na mediaç�
 **Curso:** Técnico em Administração
 **Câmpus:** Garopaba
 **Bloco de Formação:** Formação Geral
-**Carga Horária Total:** 80 horas, se disponível no documento
+**Carga Horária Total:** 80 horas (Prática: não se aplica | EaD: não se aplica)
 **Ano/Semestre:** Ano 2, 3º e 4º semestre
-
-**[PENDENTE — aguardando preenchimento pelo docente responsável]**
 
 ---
 
+### 1. Ementa (Resumo do Componente)
+Aprofundamento da língua inglesa como língua franca e ferramenta de acesso à informação, tecnologia e cultura. Estudo dos tempos verbais do passado e futuro, conectores textuais, estruturas condicionais e verbos modais. Aplicação prática das habilidades linguísticas na análise de gêneros textuais complexos, ampliação de vocabulário e produção de sentido em diferentes contextos interpessoais e profissionais.
+
+### 2. Objetivos de Aprendizagem & Competências
+- Compreender a língua inglesa como língua franca e idioma universal, entendendo sua função social como possibilidade de ampliar o acesso à informação e a bens científicos e culturais da humanidade;
+- Ampliar de modo autônomo o conhecimento da língua inglesa a partir de estratégias de aprendizagem e compreensão, utilizando ferramentas convencionais e digitais;
+- Posicionar-se como usuário ativo da língua inglesa em diferentes cenários, vivenciando práticas de fala, escuta, escrita e de leitura;
+- Produzir sentido a partir de elementos linguísticos e extralinguísticos de gêneros textuais (orais, escritos e/ou híbridos), prioritariamente utilizando textos autênticos;
+- Conhecer regularidades morfológicas e sintáticas da língua inglesa que auxiliem na compreensão de significados e na ampliação de vocabulário.
+
+### 3. Conteúdo Programático
+- Eventos e fatos passados: passado simples, contínuo e presente perfeito;
+- Preposições de tempo e lugar;
+- Futuro Simples;
+- Futuro com Going to;
+- Conjunções (contraste, adição, conclusão, causa, finalidade);
+- Marcadores sequenciais;
+- Advérbios;
+- Formação de palavras;
+- Prefixos e sufixos;
+- Expressões idiomáticas;
+- Voz passiva;
+- Verbos frasais;
+- Gerúndio;
+- Verbos modais (can, should, must, would);
+- Condicionais.
+
+### 4. Metodologia de Ensino e Avaliação
+- **Metodologia:** Aulas expositivas dialogadas e contextualizadas, buscando aproximação com o cotidiano dos estudantes. A apresentação dos conteúdos trabalhados ocorrerá por meio da audição, conversação, leitura e produção de textos e/ou apresentações com recursos multimídia. Projetos/Atividades envolvendo gêneros textuais de natureza lúdica (como música e vídeo), informativa (como notícias e textos científicos), literárias (como poemas e obras) e/ou técnica e científica. Atividades que propiciem ao estudante a oportunidade de compartilhar conhecimento com os colegas.
+- **Avaliação:** Avaliação contínua e processual, acompanhando o desenvolvimento das quatro habilidades linguísticas (ouvir, falar, ler e escrever), por meio da participação em sala de aula, produções individuais e em equipe, exercícios práticos e apresentações.
+
+### 5. Bibliografia Básica e Complementar
+**Básica:**
+1. LIVRO didático fornecido pelo Fundo Nacional de Desenvolvimento da Educação (FNDE).
+2. DICIONÁRIO Escolar Longman Inglês-Português, Português-Inglês. Harlow: Pearson Longman, 2004.
+3. LATHAM-KOENIG, C. *English File: Intermediate Student's Book*. Oxford: Oxford University Press, 2018.
+
+**Complementar:**
+1. FRANCO, C. P. *English vibes for Brazilian learners: volume único*. 1. ed. São Paulo: FTD, 2020.
+2. MURPHY, Raymond. *Essential Grammar in Use*. 4th ed. Cambridge: Cambridge University Press, 2015.
+3. WHARTON, S. *500 tips for tesol: (teaching english to speakers of other languages)*. London: Kogan Page, 1999.
 ---
 
 # Unidade Curricular: Língua Portuguesa e Literatura — Ano 2
