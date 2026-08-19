@@ -211,10 +211,42 @@ Aulas com caráter reflexivo, pautadas na interação, no diálogo e na mediaç�
 **Curso:** Técnico em Administração
 **Câmpus:** Garopaba
 **Bloco de Formação:** Formação Geral
-**Carga Horária Total:** 80 horas, se disponível no documento
+**Carga Horária Total:** 80 horas (Prática: 10h | EaD: não há | Divisão de Turma: não há)
 **Ano/Semestre:** Ano 1, 1º e 2º semestre
 
-**[PENDENTE — aguardando preenchimento pelo docente responsável]**
+---
+
+### 1. Ementa (Resumo do Componente)
+Estudo da Língua Portuguesa como instrumento de inserção social, cidadania e trabalho. Conceitos de linguagem e variação linguística. Leitura, compreensão, análise e produção textual de diferentes gêneros. Fonética e fonologia. Introdução à Teoria Literária e historiografia literária do Trovadorismo ao Arcadismo, com destaque para a produção literária afro-brasileira e indígena. Aspectos históricos e sociolinguísticos do português brasileiro.
+
+### 2. Objetivos de Aprendizagem & Competências
+- Reconhecer a Língua Portuguesa como instrumento de inserção social indispensável ao pleno desenvolvimento do educando, visando seu preparo para o pleno exercício da cidadania e a qualificação para o trabalho;
+- Compreender a Língua Portuguesa a partir de seus diversos usos e situações comunicativas, entendendo-a como algo mutável no tempo e no espaço, dotada de historicidade;
+- Entender a literatura como arte representativa de questões humanas, sociais e históricas, dotada de características específicas (linguagem e forma);
+- Reconhecer a língua como elemento cultural perpassado por questões sociológicas e de constituição da identidade;
+- Conhecer as heranças afro-indígenas nos mais variados âmbitos do português brasileiro (fonética, semântica, morfossintaxe e léxico) e na literatura nacional.
+
+### 3. Conteúdo Programático
+- Conceitos de Linguagem;
+- Leitura, compreensão, análise e produção de textos de diferentes tipologias e gêneros;
+- Aspectos gramaticais da Língua Portuguesa: fonética e fonologia;
+- Introdução à Literatura: identificação do contexto e das características de movimentos literários (Trovadorismo ao Arcadismo);
+- Introdução a obras literárias produzidas por autores negros e indígenas brasileiros;
+- Introdução aos aspectos históricos do português brasileiro, bem como sua influência na formação da língua.
+
+### 4. Metodologia de Ensino e Avaliação
+- **Metodologia:** Aulas expositivas dialogadas; aulas de exercícios; apresentações em linguagem verbal por escrito ou em diálogos em sala de aula; discussões em grupo; estudos dirigidos; leitura e interpretação com recursos audiovisuais e multimídia; pesquisas conduzidas em laboratório de informática; seminários; trabalhos em laboratório e biblioteca para consulta a livros e acervos digitais; atividades individuais e em equipe; uso de jogos e objetos de aprendizagem.
+- **Avaliação:** Processo contínuo com avaliações qualitativas e quantitativas ao longo do semestre (trabalhos individuais e em grupo, apresentações orais, pesquisas, produções textuais e provas).
+
+### 5. Bibliografia Básica e Complementar
+**Básica:**
+1. BAGNO, Marcos. *Nada na língua é por acaso: por uma pedagogia da variação linguística*. 2. ed. São Paulo: Parábola Editorial, 2008. 238 p. (Educação linguística, 1). ISBN 9788588456624.
+2. CINTRA, Luís F. Lindley (Coautor). *Nova gramática do português contemporâneo*. 5. ed. Rio de Janeiro: Lexikon, 2008. 762 p.
+3. PRIETO, Heloisa (org.). *Antologia de contos indígenas de ensinamento: tempo de histórias*. São Paulo: Richmond Educação, 2021. 103 p. ISBN 9786557950104.
+
+**Complementar:**
+1. BAGNO, Marcos. *Preconceito linguístico*. 56. ed. rev. e ampl. São Paulo: Parábola Editorial, 2015. 350 p. (Parábola Breve, 6). ISBN 9788579340987.
+2. BAGNO, Marcos. *Gramática, pra que te quero?: os conhecimentos linguísticos nos livros didáticos de português*. Curitiba: Aymará, 2010. 319 p. ISBN 9788578416201.
 
 ---
 
@@ -222,10 +254,40 @@ Aulas com caráter reflexivo, pautadas na interação, no diálogo e na mediaç�
 **Curso:** Técnico em Administração
 **Câmpus:** Garopaba
 **Bloco de Formação:** Formação Geral
-**Carga Horária Total:** 80 horas, se disponível no documento
+**Carga Horária Total:** 80 horas (Prática: 10h | EaD: não há | Divisão de Turma: não há)
 **Ano/Semestre:** Ano 2, 3º e 4º semestre
 
-**[PENDENTE — aguardando preenchimento pelo docente responsável]**
+---
+
+### 1. Ementa (Resumo do Componente)
+Aprofundamento da leitura, interpretação e produção textual em gêneros variados. Estudos da gramática normativa com foco em morfologia e morfossintaxe. Historiografia literária brasileira do Romantismo ao Simbolismo. Análise de obras literárias de autores negros e indígenas inseridos nesses períodos. Estudo dos aspectos históricos e sociolinguísticos formadores do português do Brasil.
+
+### 2. Objetivos de Aprendizagem & Competências
+- Reconhecer a Língua Portuguesa como instrumento de inserção social indispensável ao desenvolvimento do educando, exercício da cidadania e qualificação para o trabalho;
+- Compreender a Língua Portuguesa a partir de seus usos e situações comunicativas como fenômeno histórico e mutável;
+- Entender a literatura como arte representativa de questões humanas, sociais e históricas com linguagem e forma próprias;
+- Reconhecer a língua como elemento cultural perpassado por questões sociológicas e de constituição da identidade;
+- Conhecer as heranças afro-indígenas nos âmbitos fonético, semântico, morfossintático e léxico, bem como na literatura nacional.
+
+### 3. Conteúdo Programático
+- Leitura, compreensão, análise e produção de textos de diferentes tipologias e gêneros;
+- Aspectos da gramática: morfologia e morfossintaxe;
+- Literatura brasileira: do Romantismo ao Simbolismo;
+- Estudo de obras literárias produzidas por autores negros e indígenas brasileiros presentes nos movimentos literários a serem estudados;
+- Estudo de aspectos históricos do português brasileiro, bem como sua influência na formação da língua.
+
+### 4. Metodologia de Ensino e Avaliação
+- **Metodologia:** Aulas expositivas dialogadas e práticas; aulas de exercícios; produções textuais individuais e em equipe; apresentações verbais e diálogos; discussões em grupos; estudos dirigidos; leitura guiada e interpretação de textos; pesquisas em laboratório de informática e biblioteca; seminários e recursos didáticos interativos.
+- **Avaliação:** Avaliações formativas e somativas continuadas (análises literárias, redações, pesquisas, seminários e testes formais).
+
+### 5. Bibliografia Básica e Complementar
+**Básica:**
+1. ASSIS, Machado de. *Memórias póstumas de Brás Cubas*. [S.l.]: Editora Sol, [20--?]. 243 p.
+2. SOUSA, Cruz e. *Broquéis, Faróis*. Jaraguá do Sul: Avenida, 2007. 219 p. ISBN 9788598610849.
+3. KRENAK, Ailton. *Ideias para adiar o fim do mundo*. 2. ed. 8. reimp. São Paulo: Companhia das Letras, 2020. 102 p. ISBN 9788535933581.
+
+**Complementar:**
+1. CEREJA, William Roberto; MAGALHÃES, Thereza Cochar. *Gramática: texto, reflexão e uso*. 3. ed. reform. São Paulo: Atual, 2008. 496 p. ISBN 9788535709988.
 
 ---
 
@@ -233,10 +295,44 @@ Aulas com caráter reflexivo, pautadas na interação, no diálogo e na mediaç�
 **Curso:** Técnico em Administração
 **Câmpus:** Garopaba
 **Bloco de Formação:** Formação Geral
-**Carga Horária Total:** 80 horas, se disponível no documento
+**Carga Horária Total:** 80 horas (Prática: 10h | EaD: não há | Divisão de Turma: não há)
 **Ano/Semestre:** Ano 3, 5º e 6º semestre
 
-**[PENDENTE — aguardando preenchimento pelo docente responsável]**
+---
+
+### 1. Ementa (Resumo do Componente)
+Estudo avançado da língua portuguesa com foco na sintaxe e na comunicação específica aplicada ao contexto técnico. Análise e produção textual de gêneros acadêmicos e profissionais. Historiografia literária: Pré-Modernismo, Modernismo e Literatura Contemporânea. Leitura crítica da literatura afro-brasileira, africana de língua portuguesa e indígena. Matrizes históricas e sociolinguísticas da formação do português brasileiro.
+
+### 2. Objetivos de Aprendizagem & Competências
+- Reconhecer a Língua Portuguesa como instrumento indispensável de cidadania e inserção profissional no mercado de trabalho;
+- Compreender os usos comunicativos da língua em sua perspectiva histórica, social e dinâmica;
+- Entender a literatura como expressão artística de dilemas humanos, históricos e sociais;
+- Desenvolver competência comunicativa verbal e escrita específica para o contexto da formação técnica;
+- Reconhecer a língua e a literatura como marcadores culturais, identitários e sociológicos;
+- Valorizar as contribuições e a produção estética afro-brasileira, africana e indígena na literatura e na cultura nacional.
+
+### 3. Conteúdo Programático
+- Leitura, compreensão, análise e produção de textos de diferentes tipologias e gêneros;
+- Aspectos gramaticais da Língua Portuguesa: sintaxe;
+- Literatura Brasileira: Pré-Modernismo, Modernismo e Literatura Contemporânea;
+- Estudo da cultura e literatura afro-brasileira, africana e indígena;
+- Estudo de obras literárias produzidas por autores negros e indígenas brasileiros presentes nos movimentos literários estudados;
+- Estudo de aspectos históricos do português brasileiro, bem como sua influência na formação da língua.
+
+### 4. Metodologia de Ensino e Avaliação
+- **Metodologia:** Aulas expositivas dialogadas; aulas de exercícios; redação e revisão de textos; apresentações em linguagem verbal e seminários; trabalhos de grupo; pesquisas em biblioteca física/digital e laboratórios; rodas de conversa; análise de filmes e obras literárias; jogos didáticos e objetos de aprendizagem.
+- **Avaliação:** Processo contínuo integrando avaliações qualitativas e quantitativas (produções textuais acadêmico-profissionais, seminários literários, testes de sintaxe e pesquisas relativas às literaturas afro-indígenas).
+
+### 5. Bibliografia Básica e Complementar
+**Básica:**
+1. BARBOSA, Francisco de Assis (org.). *Lima Barreto: melhores contos*. 8. ed. São Paulo: Global, 2002. 174 p. (Melhores contos). ISBN 8526000810.
+2. CHAVES, Rita (org.). *Contos africanos dos países de língua portuguesa*. São Paulo: Ática, 2021. 120 p. (Para gostar de ler, 44). ISBN 9786557670750.
+3. JESUS, Carolina Maria de. *Quarto de despejo: diário de uma favelada*. 10. ed. São Paulo: Ática, 2016. 199 p. ISBN 9788508171279.
+
+**Complementar:**
+1. BAGNO, Marcos. *Preconceito linguístico*. 56. ed. rev. e ampl. São Paulo: Parábola Editorial, 2015. 350 p. (Parábola Breve, 6). ISBN 9788579340987.
+2. CASTRO, Eduardo Viveiros de (prefaciador). *A queda do céu: palavras de um xamã yanomami*. São Paulo: Companhia das Letras, 2015. 729 p. ISBN 9788535926200.
+3. POLESSO, Natalia Borges. *Amora: contos*. São Paulo: Fundação Dorina Nowill para Cegos, 2018. 4 v. em braille.
 
 ---
 
