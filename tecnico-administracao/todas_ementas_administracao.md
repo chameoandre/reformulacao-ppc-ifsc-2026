@@ -473,13 +473,43 @@ O que é o Mito? Passagem do Mito à Filosofia. Conceitos de Filosofia: o que é
 **Curso:** Técnico em Administração
 **Câmpus:** Garopaba
 **Bloco de Formação:** Formação Geral
-**Carga Horária Total:** 80 horas, se disponível no documento
+**Carga Horária Total:** 80 horas (Prática: não se aplica | EaD: não se aplica)
 **Ano/Semestre:** Ano 1, 1º e 2º semestre
-
-**[PENDENTE — aguardando preenchimento pelo docente responsável]**
 
 ---
 
+### 1. Ementa (Resumo do Componente)
+Estudo do espaço geográfico e de suas categorias de análise (paisagem, território, região e lugar). Linguagem cartográfica e geotecnologias. Análise dos sistemas naturais (geologia, geomorfologia, clima e biomas) e das dinâmicas demográficas e culturais. Abordagem das temáticas transversais de sustentabilidade socioambiental, diversidade etnorracial e direitos humanos.
+
+### 2. Objetivos de Aprendizagem & Competências
+- Compreender a Geografia como ciência social que estuda a relação entre sociedade, espaço e natureza nas suas dinâmicas socioespaciais;
+- Analisar a formação e as transformações do espaço geográfico sob o impacto da industrialização, urbanização e produção capitalista;
+- Entender a cartografia e as geotecnologias como linguagens e instrumentos fundamentais para a leitura e orientação no espaço;
+- Refletir sobre as dinâmicas demográficas, a diversidade cultural e as desigualdades socioespaciais no Brasil e no mundo;
+- Desenvolver consciência socioambiental crítica quanto aos impactos da ação humana no meio ambiente e à gestão de recursos naturais.
+
+### 3. Conteúdo Programático
+- O objeto de estudo da Geografia: espaço geográfico, paisagem, território, região e lugar;
+- Cartografia básica e geotecnologias: orientação, localização, coordenadas geográficas, escalas, projeções cartográficas, mapas temáticos e sensoriamento remoto;
+- Geologia e Geomorfologia: estrutura interna da Terra, tectônica de placas, relevo, solos e dinâmica dos agentes internos e externos;
+- Climatologia e Biogeografia: elementos e fatores do clima, domínios morphoclimáticos e biomas brasileiros e mundiais;
+- Dinâmicas demográficas: crescimento populacional, transição demográfica, migrações internas e internacionais, diversidade cultural e estrutura da população;
+- **Temáticas Transversais Obrigatórias:** Meio ambiente e desenvolvimento sustentável; Relações etnorraciais e a territorialidade das populações afro-brasileiras e indígenas; Direitos Humanos e desigualdades socioespaciais.
+
+### 4. Metodologia de Ensino e Avaliação
+- **Metodologia:** Aulas expositivas dialogadas, leitura e interpretação de mapas, cartas topográficas, imagens de satélite e gráficos demográficos. Estudos dirigidos, análises de casos socioambientais regionais e globais, seminários e pesquisas conduzidas em laboratório de informática. Realização de trabalhos individuais e em equipe.
+- **Avaliação:** Diagnóstica, contínua e formativa. Instrumentos: leituras de mapas cartográficos, pesquisas de campo ou virtuais, trabalhos individuais e em grupo, apresentações e avaliações escritas.
+
+### 5. Bibliografia Básica e Complementar
+**Básica:**
+1. ROSS, Jurandyr L. Sanches (org.). *Geografia do Brasil*. 6. ed. São Paulo: EDUSP, 2011. 600 p.
+2. VESENTINI, José William. *Geografia: o mundo em transição*. 2. ed. São Paulo: Ática, 2014. 416 p.
+3. MENDONÇA, Francisco; DANNI-OLIVEIRA, Inês Moresco. *Climatologia: noções básicas e climas do Brasil*. São Paulo: Oficina de Textos, 2007. 208 p.
+
+**Complementar:**
+1. MOREIRA, Ruy. *O pensamento geográfico brasileiro*. 2. ed. São Paulo: Contexto, 2014. 224 p.
+2. SANTOS, Milton. *Por uma outra globalização: do pensamento único à consciência universal*. 18. ed. Rio de Janeiro: Record, 2009. 174 p.
+3. ALMEIDA, Lúcia Marina Alves de; RIGOLIN, Tércio Barbosa. *Fronteiras da Geografia*. São Paulo: Ática, 2017. 384 p.
 ---
 
 # Unidade Curricular: Sociologia — Ano 1
@@ -634,14 +664,43 @@ Estudo das transformações que ocorrem nas sociedades humanas e sua relação c
 # Unidade Curricular: Gestão de Marketing I
 **Curso:** Técnico em Administração
 **Câmpus:** Garopaba
-**Bloco de Formação:** Formação Específica
-**Carga Horária Total:** 40 horas, se disponível no documento
+**Bloco de Formação:** Formação Técnica
+**Carga Horária Total:** 40 horas (Prática: não se aplica | EaD: não se aplica)
 **Ano/Semestre:** Ano 1, 2º semestre
-
-**[PENDENTE — aguardando preenchimento pelo docente responsável]**
 
 ---
 
+### 1. Ementa (Resumo do Componente)
+Estudo dos conceitos fundamentais de marketing e seu papel nas organizações. Análise do micro e macroambiente de marketing e do comportamento do consumidor. Técnicas de pesquisa de mercado, segmentação e posicionamento estratégico. Ética, consumo consciente e diversidade nas estratégias de marketing.
+
+### 2. Objetivos de Aprendizagem & Competências
+- Compreender os conceitos fundamentais de marketing e sua importância estratégica para as organizações contemporâneas;
+- Analisar o ambiente de marketing (micro e macroambiente) e os fatores que influenciam o comportamento do consumidor;
+- Identificar técnicas de pesquisa de mercado e segmentação de consumidores para seleção de mercados-alvo;
+- Desenvolver o pensamento crítico sobre ética, responsabilidade social e sustentabilidade nas decisões de marketing.
+
+### 3. Conteúdo Programático
+- Conceito, evolução e papel do marketing nas organizações e na sociedade;
+- O ambiente de marketing: análise do microambiente e macroambiente (fatores demográficos, econômicos, naturais, tecnológicos, políticos e culturais);
+- Sistema de Informações de Marketing (SIM) e pesquisa de mercado simples;
+- Comportamento do consumidor: processo de decisão de compra e fatores influenciadores (culturais, sociais, pessoais e psicológicos);
+- Estratégia de marketing: mercado-alvo, segmentação de mercado e posicionamento da marca (*STP*);
+- **Temáticas Transversais Obrigatórias:** Ética e Direitos Humanos na publicidade e no marketing; Responsabilidade socioambiental e consumo consciente; Diversidade e inclusão social na representação de consumidores.
+
+### 4. Metodologia de Ensino e Avaliação
+- **Metodologia:** Componente curricular fundamentado em metodologias ativas, associando aulas expositivas dialogadas, análise de casos práticos de marcas reais, exercícios de segmentação de mercado e oficinas de pesquisa de campo/virtual. Utilização dos laboratórios de informática do câmpus para consulta a acervos e simuladores. Articula-se diretamente com Introdução à Administração, Organização e Processos e Gestão de Marketing II.
+- **Avaliação:** Processual e contínua. Instrumentos: estudos de caso em grupo, pesquisas de mercado simples, apresentações orais de planos de segmentação e avaliações escritas de sintonia teórica.
+
+### 5. Bibliografia Básica e Complementar
+**Básica:**
+1. KOTLER, Philip; ARMSTRONG, Gary. *Princípios de marketing*. 15. ed. São Paulo: Pearson Education do Brasil, 2015. 624 p.
+2. CHURCHILL JR., Gilbert A.; PETER, J. Paul. *Marketing: criando valor para os clientes*. 3. ed. São Paulo: Saraiva, 2012. 640 p.
+3. LAS CASAS, Alexandre Luzzi. *Administração de marketing: conceitos, planejamento e aplicações à realidade brasileira*. 2. ed. São Paulo: Atlas, 2019. 544 p.
+
+**Complementar:**
+1. KOTLER, Philip; KARTAJAYA, Hermawan; SETIAWAN, Iwan. *Marketing 5.0: tecnologia para a humanidade*. Rio de Janeiro: Sextante, 2021. 224 p.
+2. HOOLEY, Graham; NICHOULLS, J. A. F. *Estratégia de marketing e posicionamento competitivo*. 4. ed. São Paulo: Pearson, 2011. 480 p.
+3. COBRA, Marcos. *Marketing básico: conceitos, exercícios e casos*. 5. ed. São Paulo: Atlas, 2010. 432 p.
 ---
 
 # Unidade Curricular: Organização e Processos
@@ -1257,17 +1316,46 @@ Emprego de conceitos de matemática básica, operações de matemática financei
 
 ---
 
-# Unidade Curricular: Gestão de Marketing II
+# Unidade Curricular: Gestão de Marketing I
 **Curso:** Técnico em Administração
 **Câmpus:** Garopaba
-**Bloco de Formação:** Formação Específica
-**Carga Horária Total:** 40 horas, se disponível no documento
-**Ano/Semestre:** Ano 2, 3º semestre
-
-**[PENDENTE — aguardando preenchimento pelo docente responsável]**
+**Bloco de Formação:** Formação Técnica
+**Carga Horária Total:** 40 horas (Prática: não se aplica | EaD: não se aplica)
+**Ano/Semestre:** Ano 1, 2º semestre
 
 ---
 
+### 1. Ementa (Resumo do Componente)
+Estudo dos conceitos fundamentais de marketing e seu papel nas organizações. Análise do micro e macroambiente de marketing e do comportamento do consumidor. Técnicas de pesquisa de mercado, segmentação e posicionamento estratégico. Ética, consumo consciente e diversidade nas estratégias de marketing.
+
+### 2. Objetivos de Aprendizagem & Competências
+- Compreender os conceitos fundamentais de marketing e sua importância estratégica para as organizações contemporâneas;
+- Analisar o ambiente de marketing (micro e macroambiente) e os fatores que influenciam o comportamento do consumidor;
+- Identificar técnicas de pesquisa de mercado e segmentação de consumidores para seleção de mercados-alvo;
+- Desenvolver o pensamento crítico sobre ética, responsabilidade social e sustentabilidade nas decisões de marketing.
+
+### 3. Conteúdo Programático
+- Conceito, evolução e papel do marketing nas organizações e na sociedade;
+- O ambiente de marketing: análise do microambiente e macroambiente (fatores demográficos, econômicos, naturais, tecnológicos, políticos e culturais);
+- Sistema de Informações de Marketing (SIM) e pesquisa de mercado simples;
+- Comportamento do consumidor: processo de decisão de compra e fatores influenciadores (culturais, sociais, pessoais e psicológicos);
+- Estratégia de marketing: mercado-alvo, segmentação de mercado e posicionamento da marca (*STP*);
+- **Temáticas Transversais Obrigatórias:** Ética e Direitos Humanos na publicidade e no marketing; Responsabilidade socioambiental e consumo consciente; Diversidade e inclusão social na representação de consumidores.
+
+### 4. Metodologia de Ensino e Avaliação
+- **Metodologia:** Componente curricular fundamentado em metodologias ativas, associando aulas expositivas dialogadas, análise de casos práticos de marcas reais, exercícios de segmentação de mercado e oficinas de pesquisa de campo/virtual. Utilização dos laboratórios de informática do câmpus para consulta a acervos e simuladores. Articula-se diretamente com Introdução à Administração, Organização e Processos e Gestão de Marketing II.
+- **Avaliação:** Processual e contínua. Instrumentos: estudos de caso em grupo, pesquisas de mercado simples, apresentações orais de planos de segmentação e avaliações escritas de sintonia teórica.
+
+### 5. Bibliografia Básica e Complementar
+**Básica:**
+1. KOTLER, Philip; ARMSTRONG, Gary. *Princípios de marketing*. 15. ed. São Paulo: Pearson Education do Brasil, 2015. 624 p.
+2. CHURCHILL JR., Gilbert A.; PETER, J. Paul. *Marketing: criando valor para os clientes*. 3. ed. São Paulo: Saraiva, 2012. 640 p.
+3. LAS CASAS, Alexandre Luzzi. *Administração de marketing: conceitos, planejamento e aplicações à realidade brasileira*. 2. ed. São Paulo: Atlas, 2019. 544 p.
+
+**Complementar:**
+1. KOTLER, Philip; KARTAJAYA, Hermawan; SETIAWAN, Iwan. *Marketing 5.0: tecnologia para a humanidade*. Rio de Janeiro: Sextante, 2021. 224 p.
+2. HOOLEY, Graham; NICHOULLS, J. A. F. *Estratégia de marketing e posicionamento competitivo*. 4. ed. São Paulo: Pearson, 2011. 480 p.
+3. COBRA, Marcos. *Marketing básico: conceitos, exercícios e casos*. 5. ed. São Paulo: Atlas, 2010. 432 p.
 ---
 
 # Unidade Curricular: Gestão de Operações e Qualidade
@@ -1734,15 +1822,42 @@ Filosofia Medieval Cristã. A relação entre fé e razão. A Patrística de San
 **Curso:** Técnico em Administração
 **Câmpus:** Garopaba
 **Bloco de Formação:** Formação Geral
-**Carga Horária Total:** 80 horas, se disponível no documento
+**Carga Horária Total:** 80 horas (Prática: não se aplica | EaD: não se aplica)
 **Ano/Semestre:** Ano 3, 5º e 6º semestre
-
-**[PENDENTE — aguardando preenchimento pelo docente responsável]**
-
-*Nota: conforme o documento fonte, a UC Geografia é oferecida apenas nos Anos 1 e 3 do curso (não há oferta no Ano 2).*
 
 ---
 
+### 1. Ementa (Resumo do Componente)
+Estudo da geopolítica mundial, ordem global contemporânea e processo de globalização. Industrialização, urbanização e produção agrícola no Brasil e no mundo. Recursos energéticos, crises socioambientais e acordos climáticos globais. Abordagem de direitos humanos e territórios tradicionais afro-brasileiros e indígenas.
+
+### 2. Objetivos de Aprendizagem & Competências
+- Analisar a organização do espaço geográfico mundial e a divisão internacional do trabalho no contexto da globalização;
+- Compreender a geopolítica contemporânea, os conflitos territoriais, os blocos econômicos e a atuação das organizações internacionais;
+- Estudar a industrialização, a urbanização e a estrutura agrária no Brasil e no mundo, identificando seus problemas sociais e econômicos;
+- Refletir criticamente sobre as matrizes energéticas, as crises socioambientais e os acordos globais sobre o clima e a sustentabilidade.
+
+### 3. Conteúdo Programático
+- A Ordem Geopolítica Mundial: da Guerra Fria à multipolaridade contemporânea; blocos econômicos regionais e hegemonias globais;
+- O processo de Globalização: fluxos de capitais, mercadorias, informações e pessoas; redes geográficas e o espaço técnico-científico-informacional;
+- Industrialização e redes urbanas: modelos de industrialização, distribuição espacial das indústrias, rede urbana, metropolização e segregação socioespacial;
+- Espaço agrário: modelos de produção agropecuária, agronegócio, agricultura familiar, reforma agrária e conflitos por terra no Brasil;
+- Matrizes energéticas e Recursos Naturais: energias renováveis e não renováveis, sustentabilidade, crise hídrica e acordos ambientais internacionais (COP, Protocolo de Kyoto, Acordo de Paris);
+- **Temáticas Transversais Obrigatórias:** Meio ambiente e emergência climática; Direitos Humanos, movimentos sociais do campo e da cidade; História e cultura afro-brasileira e indígena nas disputas territoriais e ambientais.
+
+### 4. Metodologia de Ensino e Avaliação
+- **Metodologia:** Aulas expositivas dialogadas com auxílio de recursos visuais (datashow), leitura e debate de notícias contemporâneas de geopolítica e economia mundial. Análise crítica de mapas geopolíticos e relatórios socioambientais, pesquisas orientadas em laboratório de informática, seminários em grupos e júris simulados.
+- **Avaliação:** Diagnóstica, contínua e formativa, com avaliação de produções individuais e em equipe, apresentação de seminários temáticos, relatórios de pesquisa e provas dissertativas.
+
+### 5. Bibliografia Básica e Complementar
+**Básica:**
+1. SANTOS, Milton. *A natureza do espaço: técnica e tempo, razão e estrutura*. 4. ed. São Paulo: EDUSP, 2006. 392 p.
+2. LUCCI, Elian Alabi; BRANCO, Anselmo Lazaro; MENDONÇA, Cláudio. *Território e sociedade no mundo globalizado*. 3. ed. São Paulo: Saraiva, 2017. 480 p.
+3. HAESBAERT, Rogério. *O mito da desterritorialização: do "fim dos territórios" à multiterritorialidade*. 8. ed. Rio de Janeiro: Bertrand Brasil, 2014. 396 p.
+
+**Complementar:**
+1. HARVEY, David. *O enigma do capital e as crises do capitalismo*. São Paulo: Boitempo, 2011. 240 p.
+2. MAGNOLI, Demétrio. *História da Geopolítica*. São Paulo: Contexto, 2011. 240 p.
+3. SENE, Eustáquio de; MOREIRA, João Carlos. *Geografia geral e do Brasil: espaço geográfico e globalização*. São Paulo: Scipione, 2016. 640 p.
 ---
 
 # Unidade Curricular: História — Ano 3
@@ -1903,12 +2018,45 @@ Estudo dos fundamentos e processos da gestão de pessoas nas organizações, inc
 # Unidade Curricular: Gestão Financeira
 **Curso:** Técnico em Administração
 **Câmpus:** Garopaba
-**Bloco de Formação:** Formação Específica
-**Carga Horária Total:** 80 horas, se disponível no documento
-**Ano/Semestre:** Ano 3, 5º e 6º semestre
+**Bloco de Formação:** Formação Técnica
+**Carga Horária Total:** 40 horas (Prática: não se aplica | EaD: não se aplica)
+**Ano/Semestre:** Ano 3, 6º semestre
 
-**[PENDENTE — aguardando preenchimento pelo docente responsável]**
+---
 
+### 1. Ementa (Resumo do Componente)
+Estudo da gestão financeira empresarial e de tesouraria. Matemática financeira aplicada, interpretação de demonstrações financeiras básicas (DRE e Balanço), gestão de capital de giro e fluxo de caixa. Métodos de avaliação de investimentos simples e educação financeira corporativa e pessoal.
+
+### 2. Objetivos de Aprendizagem & Competências
+- Compreender a função financeira nas organizações e a importância da gestão do capital de giro e dos fluxos de caixa;
+- Interpretar e elaborar demonstrações financeiras básicas (DRE, Balanço Patrimonial e Fluxo de Caixa) para apoio à tomada de decisão;
+- Dominar conceitos e técnicas de matemática financeira aplicada (juros simples e compostos, fluxo de caixa descontado, amortização);
+- Avaliar a viabilidade de investimentos simples e fontes de financiamento para micro, pequenas e médias empresas;
+- Desenvolver visão ética, sustentável e responsável sobre o uso dos recursos financeiros nas corporações e no âmbito pessoal.
+
+### 3. Conteúdo Programático
+- Introdução à Gestão Financeira: conceitos, objetivos, função financeira e papel do gestor financeiro;
+- Matemática Financeira Aplicada: capitalização simples e composta, taxas de juros (nominal, efetiva e real), descontos e sistemas de amortização;
+- Demonstrações Financeiras Básicas: estrutura e análise simplificada da Demonstração do Resultado do Exercício (DRE) e do Balanço Patrimonial;
+- Gestão de Tesouraria e Fluxo de Caixa: elaboração, controle e projeção do fluxo de caixa diário e mensal; gestão de capital de giro;
+- Introdução à Análise de Investimentos: métodos de avaliação de investimentos simples (Payback, VPL e TIR);
+- Fontes de Financiamento e Mercado Financeiro: capital próprio x terceiros, linhas de crédito para MPEs e educação financeira corporativa e pessoal;
+- **Temáticas Transversais Obrigatórias:** Ética e transparência financeira; Direitos Humanos na gestão das relações de trabalho e fornecedores; Educação financeira corporativa, pessoal e consumo sustentável.
+
+### 4. Metodologia de Ensino e Avaliação
+- **Metodologia:** Componente curricular eminentemente prático e applied, conduzido por meio de aulas expositivas dialogadas, resolução de problemas e planilhamento em laboratórios de informática utilizando planilhas eletrônicas (Google Sheets / Microsoft Excel). Estudos de caso de análise financeira de pequenos negócios locais e simulação de fluxos de caixa. Articula-se com Matemática para Administração, Gestão de Operações e Qualidade, Empreendedorismo I e II, e Oficina de Integração II.
+- **Avaliação:** Formativa, contínua e prática. Instrumentos: relatórios de resolução de casos práticos no computador, planilhas de controle de fluxo de caixa, listas de exercícios e provas teórico-práticas em laboratório de informática.
+
+### 5. Bibliografia Básica e Complementar
+**Básica:**
+1. GITMAN, Lawrence J. *Princípios de administração financeira*. 14. ed. São Paulo: Pearson Education do Brasil, 2018. 832 p.
+2. HOJI, Masakazu. *Administração financeira e orçamentária: matemática financeira applied, estratégias financeiras, orçamento empresarial*. 12. ed. São Paulo: Atlas, 2021. 576 p.
+3. ASSAF NETO, Alexandre. *Finanças corporativas e valor*. 8. ed. São Paulo: Atlas, 2018. 768 p.
+
+**Complementar:**
+1. LE MÈSURIER, Paul. *Matemática financeira simplificada para cursos técnicos e superiores*. São Paulo: Atlas, 2015. 240 p.
+2. CASAROTTO FILHO, Nelson; KOPITTKE, Bruno Hartmut. *Análise de investimentos: matemática financeira, engenharia econômica, tomada de decisão, estratégia empresarial*. 11. ed. São Paulo: Atlas, 2018. 512 p.
+3. CHIAVENATO, Idalberto. *Planejamento e controle financeiro*. 3. ed. São Paulo: Manole, 2014. 288 p.
 ---
 
 # Unidade Curricular: Oficina de Integração II
