@@ -45,10 +45,10 @@ GOMBRICH, E. H. **A história da arte**. Tradução de Álvaro Cabral. 16. ed. R
 PROENÇA, G. **História da arte**. 17. ed. São Paulo: Ática, 2010.
 
 **Complementar:**
-AGRA, Lucio. **História da arte do século XX: idéias e movimentos**. 2. ed. rev. atual. São Paulo: Anhembi, 2004.
-CERTEAU, Michel de. **A invenção do cotidiano: artes de fazer**. Tradução de Ephraim Ferreira Alves. 16. ed. Petrópolis, RJ: Vozes, 2009.
-LARAIA, R. de B. **Cultura: um conceito antropológico**. 26. reimp. Rio de Janeiro: Jorge Zahar, 1986.
-SOUZA, Ana Lúcia Silva. **Letramentos de reexistência: poesia, grafite, música, dança: hip-hop**. São Paulo: Parábola Editorial, 2011.
+AGRA, Lucio. **História da arte do século XX**: idéias e movimentos. 2. ed. rev. atual. São Paulo: Anhembi, 2004.
+CERTEAU, Michel de. **A invenção do cotidiano**: artes de fazer. Tradução de Ephraim Ferreira Alves. 16. ed. Petrópolis, RJ: Vozes, 2009.
+LARAIA, R. de B. **Cultura**: um conceito antropológico. 26. reimp. Rio de Janeiro: Jorge Zahar, 1986.
+SOUZA, Ana Lúcia Silva. **Letramentos de reexistência**: poesia, grafite, música, dança: hip-hop. São Paulo: Parábola Editorial, 2011.
 
 ---
 
@@ -89,9 +89,9 @@ Aulas com caráter reflexivo, pautadas na interação, no diálogo e na mediaç�
 BERNARDES, Luciano Andrade (org.). **Atividades e esportes de aventura para profissionais de educação física**. São Paulo: Phorte, 2013.
 
 **Complementar:**
-BRACHT, Valter. **Sociologia crítica do esporte: uma introdução**. 2. ed. Ijuí: Ed. da Unijuí, 2003.
+BRACHT, Valter. **Sociologia crítica do esporte**: uma introdução. 2. ed. Ijuí: Ed. da Unijuí, 2003.
 CAMARGO, Wagner Xavier de. **Leituras de gênero e sexualidade nos esportes**. São Carlos: EDUFSCAR, 2021.
-FOER, Franklin. **Como o futebol explica o mundo: um olhar inesperado sobre a globalização**. Rio de Janeiro: Jorge Zahar Editor, 2005.
+FOER, Franklin. **Como o futebol explica o mundo**: um olhar inesperado sobre a globalização. Rio de Janeiro: Jorge Zahar Editor, 2005.
 
 ---
 
@@ -144,12 +144,12 @@ Estudo da língua inglesa como língua franca e instrumento de inserção social
 **Básica:**
 **LIVRO didático fornecido pelo Fundo Nacional de Desenvolvimento da Educação (FNDE).**
 **DICIONÁRIO Escolar Longman Inglês-Português, Português-Inglês**. Harlow: Pearson Longman, 2004.
-LATHAM-KOENIG, C. **English File: Intermediate Student's Book**. Oxford: Oxford University Press, 2018.
+LATHAM-KOENIG, C. **English File**: Intermediate Student's Book. Oxford: Oxford University Press, 2018.
 
 **Complementar:**
-FRANCO, C. P. **English vibes for Brazilian learners: volume único**. 1. ed. São Paulo: FTD, 2020.
+FRANCO, C. P. **English vibes for Brazilian learners**: volume único. 1. ed. São Paulo: FTD, 2020.
 MURPHY, Raymond. **Essential Grammar in Use**. 4th ed. Cambridge: Cambridge University Press, 2015.
-WHARTON, S. **500 tips for tesol: (teaching english to speakers of other languages)**. London: Kogan Page, 1999.
+WHARTON, S. **500 tips for tesol**: (teaching english to speakers of other languages). London: Kogan Page, 1999.
 ---
 
 # Unidade Curricular: Língua Portuguesa e Literatura — Ano 1
@@ -185,13 +185,13 @@ Estudo da Língua Portuguesa como instrumento de inserção social, cidadania e 
 
 ### 5. Bibliografia Básica e Complementar
 **Básica:**
-BAGNO, Marcos. **Nada na língua é por acaso: por uma pedagogia da variação linguística**. 2. ed. São Paulo: Parábola Editorial, 2008. 238 p. (Educação linguística, 1). ISBN 9788588456624.
+BAGNO, Marcos. **Nada na língua é por acaso**: por uma pedagogia da variação linguística. 2. ed. São Paulo: Parábola Editorial, 2008. 238 p. (Educação linguística, 1). ISBN 9788588456624.
 CINTRA, Luís F. Lindley (Coautor). **Nova gramática do português contemporâneo**. 5. ed. Rio de Janeiro: Lexikon, 2008. 762 p.
-PRIETO, Heloisa (org.). **Antologia de contos indígenas de ensinamento: tempo de histórias**. São Paulo: Richmond Educação, 2021. 103 p. ISBN 9786557950104.
+PRIETO, Heloisa (org.). **Antologia de contos indígenas de ensinamento**: tempo de histórias. São Paulo: Richmond Educação, 2021. 103 p. ISBN 9786557950104.
 
 **Complementar:**
 BAGNO, Marcos. **Preconceito linguístico**. 56. ed. rev. e ampl. São Paulo: Parábola Editorial, 2015. 350 p. (Parábola Breve, 6). ISBN 9788579340987.
-BAGNO, Marcos. **Gramática, pra que te quero?: os conhecimentos linguísticos nos livros didáticos de português**. Curitiba: Aymará, 2010. 319 p. ISBN 9788578416201.
+BAGNO, Marcos. **Gramática, pra que te quero?**: os conhecimentos linguísticos nos livros didáticos de português. Curitiba: Aymará, 2010. 319 p. ISBN 9788578416201.
 
 ---
 
@@ -226,13 +226,13 @@ Introdução à língua espanhola: fonética e pronúncia. Cumprimentos e aprese
 ### 5. Bibliografia Básica e Complementar
 **Básica:**
 FANJUL, Adrián (org.). **Gramática y práctica de español para brasileños**. 2. ed. São Paulo: Moderna, 2011.
-MORENO, Concha; TUTS, Martina. **Cinco estrellas: español para el turismo**. 2. ed. Madrid: SGEL, 2011.
+MORENO, Concha; TUTS, Martina. **Cinco estrellas**: español para el turismo. 2. ed. Madrid: SGEL, 2011.
 
 **Complementar:**
-GONZÁLEZ HERMOSO, Alfredo. **Conjugar: verbos de España y de América**. Madrid: Edelsa Grupo Didascalia, 2011.
+GONZÁLEZ HERMOSO, Alfredo. **Conjugar**: verbos de España y de América. Madrid: Edelsa Grupo Didascalia, 2011.
 HERMOSO, A. G. **Conjugar es fácil**. [s.l.]: EDELSA, 1997.
 PEREZ, Aquilino Sanches. **Diccionario básico de la lengua española**. [s.l.]: SGEL, 1987.
-BALLESTERO-ALVAREZ, M. E.; BALBÁS, M. S. **Minidicionário: espanhol-português, português-espanhol**. São Paulo: FTD, 2007.
+BALLESTERO-ALVAREZ, M. E.; BALBÁS, M. S. **Minidicionário**: espanhol-português, português-espanhol. São Paulo: FTD, 2007.
 
 ---
 
@@ -276,13 +276,13 @@ Biologia I aborda a origem e diversificação da vida, a célula como unidade es
 ### 5. Bibliografia Básica e Complementar
 **Básica:**
 JUNQUEIRA, Luiz Carlos Uchoa; CARNEIRO, José. **Biologia celular e molecular**. 9. ed. Rio de Janeiro: Guanabara Koogan, 2012.
-SADAVA, David et al. **Vida: a ciência da biologia: volume 1: célula e hereditariedade**. 8. ed. Porto Alegre: Artmed, 2009.
+SADAVA, David *et al.* **Vida**: a ciência da biologia: volume 1: célula e hereditariedade. 8. ed. Porto Alegre: Artmed, 2009.
 **Livro didático fornecido pelo Fundo Nacional de Desenvolvimento da Educação (FNDE)**.
 
 **Complementar:**
-BRUCE, Alberts et al. **Biologia molecular da célula**. 6. ed. Porto Alegre: Artmed, 2017.
+BRUCE, Alberts *et al.* **Biologia molecular da célula**. 6. ed. Porto Alegre: Artmed, 2017.
 CAMPBELL, Mary K.; FARRELL, Shawn O. **Bioquímica**. 2. ed. São Paulo: Cengage Learning, 2016.
-KIERSZENBAUM, Abraham L.; TRES, Laura L. **Histologia e biologia celular: uma introdução à patologia**. 3. ed. Rio de Janeiro: Elsevier, 2012.
+KIERSZENBAUM, Abraham L.; TRES, Laura L. **Histologia e biologia celular**: uma introdução à patologia. 3. ed. Rio de Janeiro: Elsevier, 2012.
 
 ---
 
@@ -326,9 +326,9 @@ HEWITT, Paul G. **Física conceitual**. 12. ed. Porto Alegre: Bookman, 2015.
 LUZ, Antônio Máximo Ribeiro da; ALVARENGA, Beatriz Gonçalves de. **Curso de física, volume 1**. 6. ed. rev. ampl. São Paulo: Scipione, 2006.
 
 **Complementar:**
-BARRETO FILHO, Benigno; SILVA, Cláudio Xavier da. **360º: física: aula por aula: volume único**. 3. ed. São Paulo: FTD, 2015.
-YAMAMOTO, Kazuhito; FUKE, Luiz Felipe. **Física para o ensino médio 1: mecânica**. 3. ed. São Paulo: Saraiva, 2013.
-KNIGHT, Randall D. **Física: uma abordagem estratégica: volume 1: mecânica newtoniana, gravitação, oscilações e ondas**. 2. ed. Porto Alegre: Bookman, 2009.
+BARRETO FILHO, Benigno; SILVA, Cláudio Xavier da. **360º**: física: aula por aula: volume único. 3. ed. São Paulo: FTD, 2015.
+YAMAMOTO, Kazuhito; FUKE, Luiz Felipe. **Física para o ensino médio 1**: mecânica. 3. ed. São Paulo: Saraiva, 2013.
+KNIGHT, Randall D. **Física**: uma abordagem estratégica: volume 1: mecânica newtoniana, gravitação, oscilações e ondas. 2. ed. Porto Alegre: Bookman, 2009.
 
 ---
 
@@ -360,13 +360,13 @@ Matemática 1 trabalha os fundamentos matemáticos (potenciação, radiciação,
 
 ### 5. Bibliografia Básica e Complementar
 **Básica:**
-BONJORNO, José Roberto; GIOVANNI JÚNIOR, José Ruy; GIOVANNI, José Ruy. **Matemática fundamental: uma nova abordagem: ensino médio: 1º ano**. 3. ed. São Paulo: FTD, 2013.
-DANTE, Luiz Roberto. **Projeto Múltiplo: matemática: ensino médio, 1º ano**. São Paulo: Ática, 2014.
-GIOVANNI, José Ruy et al. **360º matemática fundamental: uma nova abordagem: volume único**. 2. ed. São Paulo: FTD, 2015.
+BONJORNO, José Roberto; GIOVANNI JÚNIOR, José Ruy; GIOVANNI, José Ruy. **Matemática fundamental**: uma nova abordagem: ensino médio: 1º ano. 3. ed. São Paulo: FTD, 2013.
+DANTE, Luiz Roberto. **Projeto Múltiplo**: matemática: ensino médio, 1º ano. São Paulo: Ática, 2014.
+GIOVANNI, José Ruy *et al.* **360º matemática fundamental**: uma nova abordagem: volume único. 2. ed. São Paulo: FTD, 2015.
 
 **Complementar:**
-LIMA, E. L.; CARVALHO, Paulo Cesar P. **A Matemática do ensino médio: volume único**. 7. ed. Rio de Janeiro: SBM, 2016.
-PAIVA, Manoel. **Matemática: Paiva: 1º ano**. 2. ed. São Paulo: Moderna, 2013.
+LIMA, E. L.; CARVALHO, Paulo Cesar P. **A Matemática do ensino médio**: volume único. 7. ed. Rio de Janeiro: SBM, 2016.
+PAIVA, Manoel. **Matemática**: Paiva: 1º ano. 2. ed. São Paulo: Moderna, 2013.
 
 ---
 
@@ -412,15 +412,15 @@ Química — Ano 1 introduz a Química como ciência, as propriedades da matéri
 
 ### 5. Bibliografia Básica e Complementar
 **Básica:**
-CHANG, Raymond. **Química geral: conceitos essenciais**. 4. ed. Porto Alegre: AMGH, 2010.
-FELTRE, Ricardo. **Química 1: química geral**. 7. ed. São Paulo: Moderna, 2008.
-FRANCO, Dalton. **360º: química: cotidiano e transformações: volume único**. São Paulo: FTD, 2015.
-PERUZZO, Francisco Miragaia; CANTO, Eduardo Leite do. **Química na abordagem do cotidiano: volume único**. 3. ed. São Paulo: Moderna, 2007.
+CHANG, Raymond. **Química geral**: conceitos essenciais. 4. ed. Porto Alegre: AMGH, 2010.
+FELTRE, Ricardo. **Química 1**: química geral. 7. ed. São Paulo: Moderna, 2008.
+FRANCO, Dalton. **360º**: química: cotidiano e transformações: volume único. São Paulo: FTD, 2015.
+PERUZZO, Francisco Miragaia; CANTO, Eduardo Leite do. **Química na abordagem do cotidiano**: volume único. 3. ed. São Paulo: Moderna, 2007.
 
 **Complementar:**
-ATKINS, P. W.; JONES, Loretta. **Princípios de química: questionando a vida moderna e o meio ambiente**. 5. ed. Porto Alegre: Bookman, 2012.
+ATKINS, P. W.; JONES, Loretta. **Princípios de química**: questionando a vida moderna e o meio ambiente. 5. ed. Porto Alegre: Bookman, 2012.
 BRADY, James E.; HUMISTON, Gerard E. **Química geral**. 2. ed. Rio de Janeiro: LTC, 2011. v. 1.
-USBERCO, João; SALVADOR, Edgard. **Química: volume único**. 5. ed. reform. São Paulo: Saraiva, 2002.
+USBERCO, João; SALVADOR, Edgard. **Química**: volume único. 5. ed. reform. São Paulo: Saraiva, 2002.
 
 ---
 
@@ -457,12 +457,12 @@ O que é o Mito? Passagem do Mito à Filosofia. Conceitos de Filosofia: o que é
 
 ### 5. Bibliografia Básica e Complementar
 **Básica:**
-ARANHA, M. L. A.; MARTINS, M. H. P. **Filosofando: introdução à filosofia**. São Paulo: Moderna, 1993.
+ARANHA, M. L. A.; MARTINS, M. H. P. **Filosofando**: introdução à filosofia. São Paulo: Moderna, 1993.
 CHAUÍ, Marilena. **Convite à filosofia**. 13. ed. São Paulo: Ática, 2009.
 
 **Complementar:**
-GAARDER, Jostein. **O mundo de Sofia: romance da história da filosofia**. São Paulo: Seguinte, 2012.
-MARCONDES, Danilo. **Textos básicos de filosofia: dos pré-socráticos a Wittgenstein**. Rio de Janeiro: Jorge Zahar, 2000.
+GAARDER, Jostein. **O mundo de Sofia**: romance da história da filosofia. São Paulo: Seguinte, 2012.
+MARCONDES, Danilo. **Textos básicos de filosofia**: dos pré-socráticos a Wittgenstein. Rio de Janeiro: Jorge Zahar, 2000.
 
 ---
 
@@ -502,12 +502,12 @@ Estudo do espaço geográfico e de suas categorias de análise (paisagem, territ
 ### 5. Bibliografia Básica e Complementar
 **Básica:**
 ROSS, Jurandyr L. Sanches (org.). **Geografia do Brasil**. 6. ed. São Paulo: EDUSP, 2011. 600 p.
-VESENTINI, José William. **Geografia: o mundo em transição**. 2. ed. São Paulo: Ática, 2014. 416 p.
-MENDONÇA, Francisco; DANNI-OLIVEIRA, Inês Moresco. **Climatologia: noções básicas e climas do Brasil**. São Paulo: Oficina de Textos, 2007. 208 p.
+VESENTINI, José William. **Geografia**: o mundo em transição. 2. ed. São Paulo: Ática, 2014. 416 p.
+MENDONÇA, Francisco; DANNI-OLIVEIRA, Inês Moresco. **Climatologia**: noções básicas e climas do Brasil. São Paulo: Oficina de Textos, 2007. 208 p.
 
 **Complementar:**
 MOREIRA, Ruy. **O pensamento geográfico brasileiro**. 2. ed. São Paulo: Contexto, 2014. 224 p.
-SANTOS, Milton. **Por uma outra globalização: do pensamento único à consciência universal**. 18. ed. Rio de Janeiro: Record, 2009. 174 p.
+SANTOS, Milton. **Por uma outra globalização**: do pensamento único à consciência universal. 18. ed. Rio de Janeiro: Record, 2009. 174 p.
 ALMEIDA, Lúcia Marina Alves de; RIGOLIN, Tércio Barbosa. **Fronteiras da Geografia**. São Paulo: Ática, 2017. 384 p.
 ---
 
@@ -552,12 +552,12 @@ Sociologia — Ano 1 introduz as Ciências Sociais e o objeto de estudo da Socio
 ### 5. Bibliografia Básica e Complementar
 **Básica:**
 **Livro didático fornecido pelo Fundo Nacional de Desenvolvimento da Educação (FNDE)**.
-OLIVEIRA, Pérsio Santos de. **Introdução à Sociologia: Série Brasil**. São Paulo: Editora Ática, 2011.
+OLIVEIRA, Pérsio Santos de. **Introdução à Sociologia**: Série Brasil. São Paulo: Editora Ática, 2011.
 
 **Complementar:**
-COSTA, Maria Cristina. **Sociologia: introdução à ciência da sociedade**. 5. ed. São Paulo: Editora Moderna, 2016.
+COSTA, Maria Cristina. **Sociologia**: introdução à ciência da sociedade. 5. ed. São Paulo: Editora Moderna, 2016.
 OLIVEIRA, Luiz Fernandes de; COSTA, Ricardo Cesar Rocha da. **Sociologia para jovens do século XXI**. Rio de Janeiro: Imperial Novo Milênio, 2013.
-HELENA, Bomeny et al. **Tempos Modernos, tempos de sociologia**. 4. ed. São Paulo: Ed. do Brasil, 2016.
+HELENA, Bomeny *et al.* **Tempos Modernos, tempos de sociologia**. 4. ed. São Paulo: Ed. do Brasil, 2016.
 
 ---
 
@@ -600,12 +600,12 @@ Estudo do papel da Administração nas organizações e de sua evolução histó
 
 ### 5. Bibliografia Básica e Complementar
 **Básica:**
-DIAS, Reinaldo; ZAVAGLIA, Tércia; CASSAR, Maurício. **Introdução à administração: da competitividade à sustentabilidade**. 3. ed. rev. Campinas, SP: Alínea, 2013.
+DIAS, Reinaldo; ZAVAGLIA, Tércia; CASSAR, Maurício. **Introdução à administração**: da competitividade à sustentabilidade. 3. ed. rev. Campinas, SP: Alínea, 2013.
 MAXIMIANO, Antonio Cesar Amaru. **Introdução à administração**. 8. ed. rev. e ampl. São Paulo: Atlas, 2011.
 
 **Complementar:**
 CHIAVENATO, Idalberto. **Administração nos novos tempos**. 2. ed. rev. e atual. Rio de Janeiro: Elsevier, 2010.
-LACOMBE, Francisco José Masset; HEILBORN, Gilberto Luiz José. **Administração: princípios e tendências**. 3. ed. São Paulo: Saraiva, 2015.
+LACOMBE, Francisco José Masset; HEILBORN, Gilberto Luiz José. **Administração**: princípios e tendências. 3. ed. São Paulo: Saraiva, 2015.
 NASCIMENTO, Edson Ronaldo. **Gestão Pública**. São Paulo: Saraiva, 2010.
 
 ---
@@ -649,12 +649,12 @@ Estudo das transformações que ocorrem nas sociedades humanas e sua relação c
 ### 5. Bibliografia Básica e Complementar
 **Básica:**
 **Livro Didático fornecido pelo Fundo Nacional de Desenvolvimento da Educação (FNDE).**
-OLIVEIRA, Pérsio Santos de. **Introdução à Sociologia: Série Brasil**. São Paulo: Editora Ática, 2011.
+OLIVEIRA, Pérsio Santos de. **Introdução à Sociologia**: Série Brasil. São Paulo: Editora Ática, 2011.
 
 **Complementar:**
-COSTA, Maria Cristina. **Sociologia: introdução à ciência da sociedade**. 5. ed. São Paulo: Editora Moderna, 2016.
+COSTA, Maria Cristina. **Sociologia**: introdução à ciência da sociedade. 5. ed. São Paulo: Editora Moderna, 2016.
 OLIVEIRA, Luiz Fernandes de; COSTA, Ricardo Cesar Rocha da. **Sociologia para jovens do século XXI**. Rio de Janeiro: Imperial Novo Milênio, 2013.
-HELENA, Bomeny [et al.]. **Tempos Modernos, tempos de sociologia**. 4. ed. São Paulo: Ed. do Brasil, 2016.
+HELENA, Bomeny [**et al.**]. **Tempos Modernos, tempos de sociologia**. 4. ed. São Paulo: Ed. do Brasil, 2016.
 
 ---
 
@@ -693,13 +693,13 @@ Estudo dos conceitos fundamentais de marketing e seu papel nas organizações. A
 ### 5. Bibliografia Básica e Complementar
 **Básica:**
 KOTLER, Philip; ARMSTRONG, Gary. **Princípios de marketing**. 15. ed. São Paulo: Pearson Education do Brasil, 2015. 624 p.
-CHURCHILL JR., Gilbert A.; PETER, J. Paul. **Marketing: criando valor para os clientes**. 3. ed. São Paulo: Saraiva, 2012. 640 p.
-LAS CASAS, Alexandre Luzzi. **Administração de marketing: conceitos, planejamento e aplicações à realidade brasileira**. 2. ed. São Paulo: Atlas, 2019. 544 p.
+CHURCHILL JR., Gilbert A.; PETER, J. Paul. **Marketing**: criando valor para os clientes. 3. ed. São Paulo: Saraiva, 2012. 640 p.
+LAS CASAS, Alexandre Luzzi. **Administração de marketing**: conceitos, planejamento e aplicações à realidade brasileira. 2. ed. São Paulo: Atlas, 2019. 544 p.
 
 **Complementar:**
-KOTLER, Philip; KARTAJAYA, Hermawan; SETIAWAN, Iwan. **Marketing 5.0: tecnologia para a humanidade**. Rio de Janeiro: Sextante, 2021. 224 p.
+KOTLER, Philip; KARTAJAYA, Hermawan; SETIAWAN, Iwan. **Marketing 5.0**: tecnologia para a humanidade. Rio de Janeiro: Sextante, 2021. 224 p.
 HOOLEY, Graham; NICHOULLS, J. A. F. **Estratégia de marketing e posicionamento competitivo**. 4. ed. São Paulo: Pearson, 2011. 480 p.
-COBRA, Marcos. **Marketing básico: conceitos, exercícios e casos**. 5. ed. São Paulo: Atlas, 2010. 432 p.
+COBRA, Marcos. **Marketing básico**: conceitos, exercícios e casos. 5. ed. São Paulo: Atlas, 2010. 432 p.
 ---
 
 # Unidade Curricular: Organização e Processos
@@ -736,12 +736,12 @@ Análise das estruturas organizacionais e sua influência na organização do tr
 **Básica:**
 ARAÚJO, Luiz Cesar G. de. **Organização, sistemas e métodos**. São Paulo: Atlas, 2010.
 CRUZ, Tadeu. **Processos organizacionais e métodos**. 5. ed. São Paulo: Atlas, 2021.
-BERNARDI, Luiz Antonio. **Manual de empreendedorismo e gestão: fundamentos, estratégias e dinâmicas**. 2. ed. São Paulo: Atlas, 2012.
+BERNARDI, Luiz Antonio. **Manual de empreendedorismo e gestão**: fundamentos, estratégias e dinâmicas. 2. ed. São Paulo: Atlas, 2012.
 
 **Complementar:**
-CHIAVENATO, Idalberto. **Administração para não administradores: a gestão de negócios ao alcance de todos**. 2. ed. rev. e atual. Barueri: Manole, 2011.
-CINTRA, M.; CUNHA, M. **P. Rotinas administrativas**. São Paulo: KCM, 2008.
-FARIAS, Cláudio V. **S. (org.). Técnico em administração: gestão e negócios**. Porto Alegre: Bookman, 2013.
+CHIAVENATO, Idalberto. **Administração para não administradores**: a gestão de negócios ao alcance de todos. 2. ed. rev. e atual. Barueri: Manole, 2011.
+CINTRA, M.; CUNHA, M. P. **Rotinas administrativas**. São Paulo: KCM, 2008.
+FARIAS, Cláudio V. S. (org.). **Técnico em administração**: gestão e negócios. Porto Alegre: Bookman, 2013.
 
 ---
 
@@ -790,10 +790,10 @@ CAPRON, H. **L.; JOHNSON, J. A. Introdução à informática**. Tradução de Jo
 MANZANO, André Luiz N. **G.; MANZANO, Maria Izabel N. G. Estudo dirigido de informática básica**. 7. ed. atual., rev. e ampl. São Paulo: Érica, 2007.
 
 **Complementar:**
-CERT.BR. **Cartilha de Segurança para Internet: fascículos**. [S. l.]: CERT.br, [s. d.]. Disponível em: https://cartilha.cert.br/fasciculos/.
+CERT.BR. **Cartilha de Segurança para Internet**: fascículos. [S. l.]: CERT.br, [s. d.]. Disponível em: https://cartilha.cert.br/fasciculos/.
 JR., Edgard Bruno C. **Informática Aplicada às Áreas de Contabilidade, Administração e Economia**. 4. ed. Rio de Janeiro: Atlas, 2012. E-book. ISBN 9788522494651.
 LIBREOFFICE. **Guia do LibreOffice**. [s.l.]: The Document Foundation, 2025. Disponível em: https://books.libreoffice.org/pt-br/.
-MARTY, Nicolas. **Inteligência artificial - O futuro é agora: dialogar com a IA**. [S.l.]: Publicação independente, 2023. ISBN 9798857441145.
+MARTY, Nicolas. **Inteligência artificial - O futuro é agora**: dialogar com a IA. [S.l.]: Publicação independente, 2023. ISBN 9798857441145.
 OLIVEIRA, Rômulo Silva de; CARISSIMI, Alexandre da Silva; TOSCANI, Simão Sirineo. **Sistemas operacionais**. 4. ed. Porto Alegre: Bookman: Instituto de Informática da UFRGS, 2010.
 SILVA, Mário Gomes da. **Informática - Terminologia - Microsoft Windows 8 - Internet - Segurança - Microsoft Word 2013 - Microsoft Excel 2013 - Microsoft PowerPoint 2013 - Microsoft Access 2013**. Rio de Janeiro: Érica, 2013. E-book. ISBN 9788536519319.
 
@@ -846,9 +846,9 @@ PROENÇA, G. **História da arte**. 17. ed. São Paulo: Ática, 2010.
 
 **Complementar:**
 NILSON, Afonso. **Seis textos breves para estudantes de teatro**. Florianópolis: Letras Contemporâneas, 2017.
-MACHADO, Lúcia. **A modernidade no teatro: [ali e aqui]: reflexos estilhaçados**. Recife: Ed. do autor, 2009.
-PIMENTEL, Spency. **O índio que mora na nossa cabeça: sobre as dificuldades para entender os povos indígenas**. São Paulo: Prumo, 2012.
-SANT'ANNA, Márcia (org.). **Os sambas brasileiros: diversidade, apropriação e salvaguarda**. Brasília, DF: IPHAN, 2011.
+MACHADO, Lúcia. **A modernidade no teatro**: [ali e aqui]: reflexos estilhaçados. Recife: Ed. do autor, 2009.
+PIMENTEL, Spency. **O índio que mora na nossa cabeça**: sobre as dificuldades para entender os povos indígenas. São Paulo: Prumo, 2012.
+SANT'ANNA, Márcia (org.). **Os sambas brasileiros**: diversidade, apropriação e salvaguarda. Brasília, DF: IPHAN, 2011.
 
 ---
 
@@ -889,9 +889,9 @@ Aulas com caráter reflexivo, pautadas na interação, no diálogo e na mediaç�
 BERNARDES, Luciano Andrade (org.). **Atividades e esportes de aventura para profissionais de educação física**. São Paulo: Phorte, 2013.
 
 **Complementar:**
-BRACHT, Valter. **Sociologia crítica do esporte: uma introdução**. 2. ed. Ijuí: Ed. da Unijuí, 2003.
+BRACHT, Valter. **Sociologia crítica do esporte**: uma introdução. 2. ed. Ijuí: Ed. da Unijuí, 2003.
 CAMARGO, Wagner Xavier de. **Leituras de gênero e sexualidade nos esportes**. São Carlos: EDUFSCAR, 2021.
-FOER, Franklin. **Como o futebol explica o mundo: um olhar inesperado sobre a globalização**. Rio de Janeiro: Jorge Zahar Editor, 2005.
+FOER, Franklin. **Como o futebol explica o mundo**: um olhar inesperado sobre a globalização. Rio de Janeiro: Jorge Zahar Editor, 2005.
 
 ---
 
@@ -941,12 +941,12 @@ Aprofundamento da língua inglesa como língua franca e ferramenta de acesso à 
 **Básica:**
 **LIVRO didático fornecido pelo Fundo Nacional de Desenvolvimento da Educação (FNDE).**
 **DICIONÁRIO Escolar Longman Inglês-Português, Português-Inglês**. Harlow: Pearson Longman, 2004.
-LATHAM-KOENIG, C. **English File: Intermediate Student's Book**. Oxford: Oxford University Press, 2018.
+LATHAM-KOENIG, C. **English File**: Intermediate Student's Book. Oxford: Oxford University Press, 2018.
 
 **Complementar:**
-FRANCO, C. P. **English vibes for Brazilian learners: volume único**. 1. ed. São Paulo: FTD, 2020.
+FRANCO, C. P. **English vibes for Brazilian learners**: volume único. 1. ed. São Paulo: FTD, 2020.
 MURPHY, Raymond. **Essential Grammar in Use**. 4th ed. Cambridge: Cambridge University Press, 2015.
-WHARTON, S. **500 tips for tesol: (teaching english to speakers of other languages)**. London: Kogan Page, 1999.
+WHARTON, S. **500 tips for tesol**: (teaching english to speakers of other languages). London: Kogan Page, 1999.
 ---
 
 # Unidade Curricular: Língua Portuguesa e Literatura — Ano 2
@@ -986,7 +986,7 @@ SOUSA, Cruz e. **Broquéis, Faróis**. Jaraguá do Sul: Avenida, 2007. 219 p. IS
 KRENAK, Ailton. **Ideias para adiar o fim do mundo**. 2. ed. 8. reimp. São Paulo: Companhia das Letras, 2020. 102 p. ISBN 9788535933581.
 
 **Complementar:**
-CEREJA, William Roberto; MAGALHÃES, Thereza Cochar. **Gramática: texto, reflexão e uso**. 3. ed. reform. São Paulo: Atual, 2008. 496 p. ISBN 9788535709988.
+CEREJA, William Roberto; MAGALHÃES, Thereza Cochar. **Gramática**: texto, reflexão e uso. 3. ed. reform. São Paulo: Atual, 2008. 496 p. ISBN 9788535709988.
 
 ---
 
@@ -1022,11 +1022,11 @@ Revisão de estruturas gramaticais básicas. Tempos verbais no passado: pretéri
 ### 5. Bibliografia Básica e Complementar
 **Básica:**
 FANJUL, Adrián (org.). **Gramática y práctica de español para brasileños**. 2. ed. São Paulo: Moderna, 2011.
-MORENO, Concha; TUTS, Martina. **Cinco estrellas: español para el turismo**. 2. ed. Madrid: SGEL, 2011.
+MORENO, Concha; TUTS, Martina. **Cinco estrellas**: español para el turismo. 2. ed. Madrid: SGEL, 2011.
 
 **Complementar:**
-GONZÁLEZ HERMOSO, Alfredo. **Conjugar: verbos de España y de América**. Madrid: Edelsa Grupo Didascalia, 2011.
-COTO BAUTISTA, Vanessa; TURZA FERRÉ, Anna. **Tema a tema B1: español lengua extranjera: curso de conversación**. Madrid: Edelsa, 2011.
+GONZÁLEZ HERMOSO, Alfredo. **Conjugar**: verbos de España y de América. Madrid: Edelsa Grupo Didascalia, 2011.
+COTO BAUTISTA, Vanessa; TURZA FERRÉ, Anna. **Tema a tema B1**: español lengua extranjera: curso de conversación. Madrid: Edelsa, 2011.
 WILDNER, Ana Kaciara; OLIVEIRA, Leandra Cristina de; SOBOTTKA, Mary Anne Warken. **Espanhol para o turismo**. Florianópolis: Publicação do IFSC, 2014.
 
 ---
@@ -1072,9 +1072,9 @@ LUZ, Antônio Máximo Ribeiro da; ALVARENGA, Beatriz Gonçalves de. **Curso de f
 LUZ, Antônio Máximo Ribeiro da; ALVARENGA, Beatriz Gonçalves de. **Curso de física, volume 2**. 6. ed. rev. ampl. São Paulo: Scipione, 2006.
 
 **Complementar:**
-BARRETO FILHO, Benigno; SILVA, Cláudio Xavier da. **360º: física: aula por aula: volume único**. 3. ed. São Paulo: FTD, 2015.
-YAMAMOTO, Kazuhito; FUKE, Luiz Felipe. **Física para o ensino médio 2: termologia, óptica, ondulatória**. 3. ed. São Paulo: Saraiva, 2013.
-KNIGHT, Randall D. **Física: uma abordagem estratégica: volume 2: termodinâmica e óptica**. 2. ed. Porto Alegre: Bookman, 2009.
+BARRETO FILHO, Benigno; SILVA, Cláudio Xavier da. **360º**: física: aula por aula: volume único. 3. ed. São Paulo: FTD, 2015.
+YAMAMOTO, Kazuhito; FUKE, Luiz Felipe. **Física para o ensino médio 2**: termologia, óptica, ondulatória. 3. ed. São Paulo: Saraiva, 2013.
+KNIGHT, Randall D. **Física**: uma abordagem estratégica: volume 2: termodinâmica e óptica. 2. ed. Porto Alegre: Bookman, 2009.
 
 ---
 
@@ -1105,13 +1105,13 @@ Equação exponencial. Função exponencial (definição, propriedades, gráfico
 
 ### 5. Bibliografia Básica e Complementar
 **Básica:**
-BONJORNO, José Roberto; GIOVANNI JÚNIOR, José Ruy; GIOVANNI, José Ruy. **Matemática fundamental: uma nova abordagem: ensino médio: volume único**. 3. ed. São Paulo: FTD, 2013.
-DANTE, Luiz Roberto. **Projeto Múltiplo: matemática: ensino médio, 2º ano**. São Paulo: Ática, 2014.
-GIOVANNI, José Ruy et al. **360º matemática fundamental: uma nova abordagem: volume único**. 2. ed. São Paulo: FTD, 2015.
+BONJORNO, José Roberto; GIOVANNI JÚNIOR, José Ruy; GIOVANNI, José Ruy. **Matemática fundamental**: uma nova abordagem: ensino médio: volume único. 3. ed. São Paulo: FTD, 2013.
+DANTE, Luiz Roberto. **Projeto Múltiplo**: matemática: ensino médio, 2º ano. São Paulo: Ática, 2014.
+GIOVANNI, José Ruy *et al.* **360º matemática fundamental**: uma nova abordagem: volume único. 2. ed. São Paulo: FTD, 2015.
 
 **Complementar:**
-LIMA, E. L.; CARVALHO, Paulo Cesar P. **A Matemática do ensino médio: volume único**. 7. ed. Rio de Janeiro: SBM, 2016.
-PAIVA, Manoel. **Matemática: Paiva: 2º ano**. 2. ed. São Paulo: Moderna, 2013.
+LIMA, E. L.; CARVALHO, Paulo Cesar P. **A Matemática do ensino médio**: volume único. 7. ed. Rio de Janeiro: SBM, 2016.
+PAIVA, Manoel. **Matemática**: Paiva: 2º ano. 2. ed. São Paulo: Moderna, 2013.
 
 ---
 
@@ -1157,14 +1157,14 @@ Química — Ano 2 estuda as funções inorgânicas, reações químicas e balan
 
 ### 5. Bibliografia Básica e Complementar
 **Básica:**
-CHANG, Raymond. **Química geral: conceitos essenciais**. 4. ed. Porto Alegre: AMGH, 2010.
-ATKINS, P. W.; JONES, Loretta. **Princípios de química: questionando a vida moderna e o meio ambiente**. 5. ed. Porto Alegre: Bookman, 2012.
-PERUZZO, Francisco Miragaia; CANTO, Eduardo Leite do. **Química na abordagem do cotidiano: volume único**. 3. ed. São Paulo: Moderna, 2007.
+CHANG, Raymond. **Química geral**: conceitos essenciais. 4. ed. Porto Alegre: AMGH, 2010.
+ATKINS, P. W.; JONES, Loretta. **Princípios de química**: questionando a vida moderna e o meio ambiente. 5. ed. Porto Alegre: Bookman, 2012.
+PERUZZO, Francisco Miragaia; CANTO, Eduardo Leite do. **Química na abordagem do cotidiano**: volume único. 3. ed. São Paulo: Moderna, 2007.
 
 **Complementar:**
 BRADY, James E.; HUMISTON, Gerard E. **Química geral**. 2. ed. Rio de Janeiro: LTC, 2014. v. 2.
-FELTRE, Ricardo. **Química: físico-química, volume 2**. 7. ed. São Paulo: Moderna, 2008.
-FRANCO, Dalton. **360º: química: cotidiano e transformações: volume único**. São Paulo: FTD, 2015.
+FELTRE, Ricardo. **Química**: físico-química, volume 2. 7. ed. São Paulo: Moderna, 2008.
+FRANCO, Dalton. **360º**: química: cotidiano e transformações: volume único. São Paulo: FTD, 2015.
 
 ---
 
@@ -1205,17 +1205,17 @@ História I aborda a origem da humanidade na África, as migrações e diáspora
 
 ### 5. Bibliografia Básica e Complementar
 **Básica:**
-BOULOS JÚNIOR, Alfredo. **360º: história sociedade & cidadania**. São Paulo: FTD, 2015.
+BOULOS JÚNIOR, Alfredo. **360º**: história sociedade & cidadania. São Paulo: FTD, 2015.
 VICENTINO, Cláudio; DORIGO, Gianpaolo. **História geral e do Brasil**. São Paulo: Scipione, 2010.
 
 **Complementar:**
-CERTEAU, Michel de. **A invenção do cotidiano: artes de fazer**. Petrópolis, RJ: Vozes, 2009.
+CERTEAU, Michel de. **A invenção do cotidiano**: artes de fazer. Petrópolis, RJ: Vozes, 2009.
 RICKLEFS, Robert E. **A economia da natureza**. Rio de Janeiro: Guanabara Koogan, 2010.
-CAREGNATO, Célia Elizabete; BOMBASSARO, Luiz Carlos (org.). **Diversidade cultural: viver diferenças e enfrentar desigualdades na educação**. Erechim, RS: Novello & Carbonelli, 2013.
+CAREGNATO, Célia Elizabete; BOMBASSARO, Luiz Carlos (org.). **Diversidade cultural**: viver diferenças e enfrentar desigualdades na educação. Erechim, RS: Novello & Carbonelli, 2013.
 MIGNOLO, Walter. **Histórias Globais/projetos Locais**. Belo Horizonte: Editora UFMG, 2003.
 GALEANO, Eduardo. **As caras e as máscaras**. Porto Alegre: L&PM Editores, 2004.
-HOLLANDA, Heloísa Buarque de (org.). **Pensamento Feminista Hoje: perspectivas decoloniais**. Rio de Janeiro: Bazar do Tempo, 2020.
-SANTOS, Boaventura de Sousa; MARTINS, Bruno Sena (org.). **O pluriverso dos direitos humanos: a diversidade das lutas pela dignidade**. Belo Horizonte: Autêntica, 2019.
+HOLLANDA, Heloísa Buarque de (org.). **Pensamento Feminista Hoje**: perspectivas decoloniais. Rio de Janeiro: Bazar do Tempo, 2020.
+SANTOS, Boaventura de Sousa; MARTINS, Bruno Sena (org.). **O pluriverso dos direitos humanos**: a diversidade das lutas pela dignidade. Belo Horizonte: Autêntica, 2019.
 
 ---
 
@@ -1259,12 +1259,12 @@ Sociologia — Ano 2 aborda política e cidadania, os clássicos da política, o
 ### 5. Bibliografia Básica e Complementar
 **Básica:**
 **Livro didático fornecido pelo Fundo Nacional de Desenvolvimento da Educação (FNDE)**.
-OLIVEIRA, Pérsio Santos de. **Introdução à Sociologia: Série Brasil**. São Paulo: Editora Ática, 2011.
+OLIVEIRA, Pérsio Santos de. **Introdução à Sociologia**: Série Brasil. São Paulo: Editora Ática, 2011.
 
 **Complementar:**
-COSTA, Maria Cristina. **Sociologia: introdução à ciência da sociedade**. 5. ed. São Paulo: Editora Moderna, 2016.
+COSTA, Maria Cristina. **Sociologia**: introdução à ciência da sociedade. 5. ed. São Paulo: Editora Moderna, 2016.
 OLIVEIRA, Luiz Fernandes de; COSTA, Ricardo Cesar Rocha da. **Sociologia para jovens do século XXI**. Rio de Janeiro: Imperial Novo Milênio, 2013.
-HELENA, Bomeny et al. **Tempos Modernos, tempos de sociologia**. 4. ed. São Paulo: Ed. do Brasil, 2016.
+HELENA, Bomeny *et al.* **Tempos Modernos, tempos de sociologia**. 4. ed. São Paulo: Ed. do Brasil, 2016.
 
 ---
 
@@ -1302,14 +1302,14 @@ Emprego de conceitos de matemática básica, operações de matemática financei
 
 ### 5. Bibliografia Básica e Complementar
 **Básica:**
-CRESPO, A. **A. Estatística fácil**. 19. ed. São Paulo: Saraiva, 2009.
-DANTE, L. **R. Matemática contexto e aplicações**. 4. ed. São Paulo: Ática, 2011.
+CRESPO, A. A. **Estatística fácil**. 19. ed. São Paulo: Saraiva, 2009.
+DANTE, L. R. **Matemática contexto e aplicações**. 4. ed. São Paulo: Ática, 2011.
 
 **Complementar:**
-BARBETTA, P. **A. Estatística aplicada às ciências sociais**. Florianópolis: Edufsc, 2010.
+BARBETTA, P. A. **Estatística aplicada às ciências sociais**. Florianópolis: Edufsc, 2010.
 BRUNI, Adriano Leal; FAMÁ, Rubens. **Matemática financeira com HP 12C e Excel**. São Paulo: Atlas, 2008.
 BUENO, Fabrício. **Estatística para processos produtivos**. Florianópolis: Visual Books, 2010.
-BUENO, Fabrício. **Estaticópolis: um jeito novo de aprender Estatística**. São Paulo: Amazon, 2015.
+BUENO, Fabrício. **Estaticópolis**: um jeito novo de aprender Estatística. São Paulo: Amazon, 2015.
 
 ---
 
@@ -1348,13 +1348,13 @@ Estudo dos conceitos fundamentais de marketing e seu papel nas organizações. A
 ### 5. Bibliografia Básica e Complementar
 **Básica:**
 KOTLER, Philip; ARMSTRONG, Gary. **Princípios de marketing**. 15. ed. São Paulo: Pearson Education do Brasil, 2015. 624 p.
-CHURCHILL JR., Gilbert A.; PETER, J. Paul. **Marketing: criando valor para os clientes**. 3. ed. São Paulo: Saraiva, 2012. 640 p.
-LAS CASAS, Alexandre Luzzi. **Administração de marketing: conceitos, planejamento e aplicações à realidade brasileira**. 2. ed. São Paulo: Atlas, 2019. 544 p.
+CHURCHILL JR., Gilbert A.; PETER, J. Paul. **Marketing**: criando valor para os clientes. 3. ed. São Paulo: Saraiva, 2012. 640 p.
+LAS CASAS, Alexandre Luzzi. **Administração de marketing**: conceitos, planejamento e aplicações à realidade brasileira. 2. ed. São Paulo: Atlas, 2019. 544 p.
 
 **Complementar:**
-KOTLER, Philip; KARTAJAYA, Hermawan; SETIAWAN, Iwan. **Marketing 5.0: tecnologia para a humanidade**. Rio de Janeiro: Sextante, 2021. 224 p.
+KOTLER, Philip; KARTAJAYA, Hermawan; SETIAWAN, Iwan. **Marketing 5.0**: tecnologia para a humanidade. Rio de Janeiro: Sextante, 2021. 224 p.
 HOOLEY, Graham; NICHOULLS, J. A. F. **Estratégia de marketing e posicionamento competitivo**. 4. ed. São Paulo: Pearson, 2011. 480 p.
-COBRA, Marcos. **Marketing básico: conceitos, exercícios e casos**. 5. ed. São Paulo: Atlas, 2010. 432 p.
+COBRA, Marcos. **Marketing básico**: conceitos, exercícios e casos. 5. ed. São Paulo: Atlas, 2010. 432 p.
 ---
 
 # Unidade Curricular: Gestão de Operações e Qualidade
@@ -1391,19 +1391,19 @@ Estudo do planejamento, organização, execução e controle das operações rel
 
 ### 5. Bibliografia Básica e Complementar
 **Básica:**
-BALLOU, Ronald H. **Gerenciamento da cadeia de suprimentos: planejamento, organização e logística empresarial**. 4. ed. Porto Alegre: Bookman, 2001.
-CORRÊA, Carlos Alberto; CORRÊA, Henrique Luiz. **Administração de produção e operações: manufatura e serviços, uma abordagem estratégica**. São Paulo: Atlas, 2006.
-DIAS, Marco Aurélio P. **Administração de materiais: uma abordagem logística**. 5. ed. São Paulo: Atlas, 2010.
-GIANESI, Irineu G. **N.; CORRÊA, Henrique Luiz. Administração estratégica de serviços: operações para a satisfação do cliente**. São Paulo: Atlas, 2013.
-PALADINI, Edson P. **Gestão estratégica da qualidade: princípios, métodos e processos**. 2. ed. São Paulo: Atlas, 2009.
+BALLOU, Ronald H. **Gerenciamento da cadeia de suprimentos**: planejamento, organização e logística empresarial. 4. ed. Porto Alegre: Bookman, 2001.
+CORRÊA, Carlos Alberto; CORRÊA, Henrique Luiz. **Administração de produção e operações**: manufatura e serviços, uma abordagem estratégica. São Paulo: Atlas, 2006.
+DIAS, Marco Aurélio P. **Administração de materiais**: uma abordagem logística. 5. ed. São Paulo: Atlas, 2010.
+GIANESI, Irineu G. **N.; CORRÊA, Henrique Luiz. Administração estratégica de serviços**: operações para a satisfação do cliente. São Paulo: Atlas, 2013.
+PALADINI, Edson P. **Gestão estratégica da qualidade**: princípios, métodos e processos. 2. ed. São Paulo: Atlas, 2009.
 
 **Complementar:**
-ARBACHE, F. **S. et al. Gestão de logística, distribuição e trade marketing**. Rio de Janeiro: FGV, 2004.
-LEITE, Paulo Roberto. **Logística reversa: sustentabilidade e competitividade**. 3. ed. São Paulo: Saraiva, 2017.
+ARBACHE, F. S. *et al.* **Gestão de logística, distribuição e trade marketing**. Rio de Janeiro: FGV, 2004.
+LEITE, Paulo Roberto. **Logística reversa**: sustentabilidade e competitividade. 3. ed. São Paulo: Saraiva, 2017.
 MARTINS, Petrônio G.; LAUGENI, Fernando P. **Administração da produção**. São Paulo: Saraiva, 2006.
 MARSHALL JUNIOR, Isnard. **Gestão da qualidade**. 10. ed. Rio de Janeiro: Ed. da FGV, 2010.
 MOREIRA, Daniel Augusto. **Administração da produção e operações**. São Paulo: Cengage Learning, 2009.
-NOGUEIRA, José Francisco. **Gestão estratégica de serviços: teoria e prática**. São Paulo: Atlas, 2008.
+NOGUEIRA, José Francisco. **Gestão estratégica de serviços**: teoria e prática. São Paulo: Atlas, 2008.
 
 ---
 
@@ -1442,14 +1442,14 @@ Estudo dos conceitos fundamentais do empreendedorismo, perfil e comportamento em
 
 ### 5. Bibliografia Básica e Complementar
 **Básica:**
-DORNELAS, José Carlos Assis. **Empreendedorismo: transformando ideias em negócios**. 8. ed. São Paulo: Empreende / Atlas, 2021. 320 p.
-OSTERWALDER, Alexander; PIGNEUR, Yves. **Business Model Generation: inovação em modelos de negócios**. Rio de Janeiro: Alta Books, 2011. 288 p.
-CHIAVENATO, Idalberto. **Empreendedorismo: dando asas ao espírito empreendedor**. 4. ed. São Paulo: Manole, 2012. 312 p.
+DORNELAS, José Carlos Assis. **Empreendedorismo**: transformando ideias em negócios. 8. ed. São Paulo: Empreende / Atlas, 2021. 320 p.
+OSTERWALDER, Alexander; PIGNEUR, Yves. **Business Model Generation**: inovação em modelos de negócios. Rio de Janeiro: Alta Books, 2011. 288 p.
+CHIAVENATO, Idalberto. **Empreendedorismo**: dando asas ao espírito empreendedor. 4. ed. São Paulo: Manole, 2012. 312 p.
 
 **Complementar:**
-RIES, Eric. **A startup enxuta: como os empreendedores atuais utilizam a inovação contínua para criar empresas extremamente bem-sucedidas**. São Paulo: Levir, 2012. 272 p.
-BLANK, Steve; DORF, Bob. **Startups: manual do fundador**. Rio de Janeiro: Alta Books, 2014. 608 p.
-MARCONDES, Reynaldo Cavalheiro et al. **Planejamento e gestão de pequenos negócios**. São Paulo: Cengage Learning, 2017. 240 p.
+RIES, Eric. **A startup enxuta**: como os empreendedores atuais utilizam a inovação contínua para criar empresas extremamente bem-sucedidas. São Paulo: Levir, 2012. 272 p.
+BLANK, Steve; DORF, Bob. **Startups**: manual do fundador. Rio de Janeiro: Alta Books, 2014. 608 p.
+MARCONDES, Reynaldo Cavalheiro *et al.* **Planejamento e gestão de pequenos negócios**. São Paulo: Cengage Learning, 2017. 240 p.
 ---
 
 # Unidade Curricular: Responsabilidade Socioambiental e Sustentabilidade
@@ -1485,12 +1485,12 @@ Estudo dos principais fatores responsáveis pela degradação socioambiental, do
 ### 5. Bibliografia Básica e Complementar
 **Básica:**
 CORREA, Fabio Marar Silveira. **Responsabilidade social empresarial e a sustentabilidade ambiental**. São Paulo: Dialética, 2023.
-DIAS, Reinaldo. **Gestão ambiental: responsabilidade social e sustentabilidade**. 3. ed. São Paulo: Atlas, 2017.
+DIAS, Reinaldo. **Gestão ambiental**: responsabilidade social e sustentabilidade. 3. ed. São Paulo: Atlas, 2017.
 
 **Complementar:**
-ALIGLERI, Lilian; ALIGLERI, Luiz Antonio; KRUGLIANSKAS, Isak. **Gestão socioambiental: responsabilidade e sustentabilidade do negócio**. São Paulo: Atlas, 2009.
+ALIGLERI, Lilian; ALIGLERI, Luiz Antonio; KRUGLIANSKAS, Isak. **Gestão socioambiental**: responsabilidade e sustentabilidade do negócio. São Paulo: Atlas, 2009.
 COIMBRA, José de Ávila Aguiar (coord.). **Meio ambiente e consumismo**. São Paulo: Senac São Paulo, 2008. (Meio ambiente, 8).
-LEITE, Paulo Roberto. **Logística reversa: sustentabilidade e competitividade**. 3. ed. São Paulo: Saraiva, 2017.
+LEITE, Paulo Roberto. **Logística reversa**: sustentabilidade e competitividade. 3. ed. São Paulo: Saraiva, 2017.
 VEIGA, José Eli da. **Para entender o desenvolvimento sustentável**. São Paulo: Editora 34, 2015.
 
 
@@ -1534,14 +1534,14 @@ Oficina de Integração I é um componente curricular interdisciplinar que artic
 
 ### 5. Bibliografia Básica e Complementar
 **Básica:**
-FRIGOTTO, Gaudêncio; CIAVATTA, Maria; RAMOS, Marise Nogueira (org.). **Ensino médio integrado: concepção e contradições**. 3. ed. São Paulo: Cortez, 2012.
+FRIGOTTO, Gaudêncio; CIAVATTA, Maria; RAMOS, Marise Nogueira (org.). **Ensino médio integrado**: concepção e contradições. 3. ed. São Paulo: Cortez, 2012.
 GIL, Antonio Carlos. **Como elaborar projetos de pesquisa**. 6. ed. São Paulo: Atlas, 2017.
 MORIN, Edgar. **Os sete saberes necessários à educação do futuro**. 2. ed. rev. São Paulo: Cortez, 2011.
-SILVA, Adriano Larentes da (org.) et al. **O currículo integrado no cotidiano da sala de aula**. Florianópolis: Publicação do IFSC, 2016.
+SILVA, Adriano Larentes da (org.) *et al.* **O currículo integrado no cotidiano da sala de aula**. Florianópolis: Publicação do IFSC, 2016.
 
 **Complementar:**
-KEELLING, Ralph; BRANCO, Renato Henrique Ferreira. **Gestão de projetos: uma abordagem global**. 4. ed. São Paulo: Saraiva, 2019.
-MARCONI, Marina de Andrade; LAKATOS, Eva Maria. **Metodologia do trabalho científico: projetos de pesquisa, pesquisa bibliográfica, teses de doutorado, dissertações de mestrado, trabalhos de conclusão de curso**. 8. ed. São Paulo: Atlas, 2018.
+KEELLING, Ralph; BRANCO, Renato Henrique Ferreira. **Gestão de projetos**: uma abordagem global. 4. ed. São Paulo: Saraiva, 2019.
+MARCONI, Marina de Andrade; LAKATOS, Eva Maria. **Metodologia do trabalho científico**: projetos de pesquisa, pesquisa bibliográfica, teses de doutorado, dissertações de mestrado, trabalhos de conclusão de curso. 8. ed. São Paulo: Atlas, 2018.
 
 ---
 
@@ -1581,14 +1581,14 @@ Estudo avançado da língua portuguesa com foco na sintaxe e na comunicação es
 
 ### 5. Bibliografia Básica e Complementar
 **Básica:**
-BARBOSA, Francisco de Assis (org.). **Lima Barreto: melhores contos**. 8. ed. São Paulo: Global, 2002. 174 p. (Melhores contos). ISBN 8526000810.
+BARBOSA, Francisco de Assis (org.). **Lima Barreto**: melhores contos. 8. ed. São Paulo: Global, 2002. 174 p. (Melhores contos). ISBN 8526000810.
 CHAVES, Rita (org.). **Contos africanos dos países de língua portuguesa**. São Paulo: Ática, 2021. 120 p. (Para gostar de ler, 44). ISBN 9786557670750.
-JESUS, Carolina Maria de. **Quarto de despejo: diário de uma favelada**. 10. ed. São Paulo: Ática, 2016. 199 p. ISBN 9788508171279.
+JESUS, Carolina Maria de. **Quarto de despejo**: diário de uma favelada. 10. ed. São Paulo: Ática, 2016. 199 p. ISBN 9788508171279.
 
 **Complementar:**
 BAGNO, Marcos. **Preconceito linguístico**. 56. ed. rev. e ampl. São Paulo: Parábola Editorial, 2015. 350 p. (Parábola Breve, 6). ISBN 9788579340987.
-CASTRO, Eduardo Viveiros de (prefaciador). **A queda do céu: palavras de um xamã yanomami**. São Paulo: Companhia das Letras, 2015. 729 p. ISBN 9788535926200.
-POLESSO, Natalia Borges. **Amora: contos**. São Paulo: Fundação Dorina Nowill para Cegos, 2018. 4 v. em braille.
+CASTRO, Eduardo Viveiros de (prefaciador). **A queda do céu**: palavras de um xamã yanomami. São Paulo: Companhia das Letras, 2015. 729 p. ISBN 9788535926200.
+POLESSO, Natalia Borges. **Amora**: contos. São Paulo: Fundação Dorina Nowill para Cegos, 2018. 4 v. em braille.
 
 ---
 
@@ -1634,7 +1634,7 @@ REECE, Jane B. **Biologia de Campbell**. 10. ed. Porto Alegre: Artmed, 2015.
 **Livro didático fornecido pelo Fundo Nacional de Desenvolvimento da Educação (FNDE)**.
 
 **Complementar:**
-BEGON, Michael; TOWNSEND, Colin R.; HARPER, John L. **Ecologia: de indivíduos a ecossistemas**. 4. ed. Porto Alegre: Artmed, 2007.
+BEGON, Michael; TOWNSEND, Colin R.; HARPER, John L. **Ecologia**: de indivíduos a ecossistemas. 4. ed. Porto Alegre: Artmed, 2007.
 CASTRO, Peter; HUBER, Michael E. **Biologia marinha**. 8. ed. Porto Alegre: Artmed, 2012.
 DARWIN, Charles. **A origem das espécies e a seleção natural**. Tradução de Soraya Freitas. São Paulo: Madras, 2011.
 
@@ -1679,9 +1679,9 @@ HEWITT, Paul G. **Física conceitual**. 12. ed. Porto Alegre: Bookman, 2015.
 LUZ, Antônio Máximo Ribeiro da; ALVARENGA, Beatriz Gonçalves de. **Curso de física, volume 3**. 6. ed. rev. ampl. São Paulo: Scipione, 2006.
 
 **Complementar:**
-BARRETO FILHO, Benigno; SILVA, Cláudio Xavier da. **360º: física: aula por aula: volume único**. 3. ed. São Paulo: FTD, 2015.
-YAMAMOTO, Kazuhito; FUKE, Luiz Felipe. **Física para o ensino médio 3: eletricidade, física moderna**. 3. ed. São Paulo: Saraiva, 2013.
-KNIGHT, Randall D. **Física: uma abordagem estratégica: volume 3: eletricidade e magnetismo**. 2. ed. Porto Alegre: Bookman, 2009.
+BARRETO FILHO, Benigno; SILVA, Cláudio Xavier da. **360º**: física: aula por aula: volume único. 3. ed. São Paulo: FTD, 2015.
+YAMAMOTO, Kazuhito; FUKE, Luiz Felipe. **Física para o ensino médio 3**: eletricidade, física moderna. 3. ed. São Paulo: Saraiva, 2013.
+KNIGHT, Randall D. **Física**: uma abordagem estratégica: volume 3: eletricidade e magnetismo. 2. ed. Porto Alegre: Bookman, 2009.
 
 ---
 
@@ -1712,13 +1712,13 @@ Matrizes (definição, tipos, operações, matriz inversa e aplicações). Deter
 
 ### 5. Bibliografia Básica e Complementar
 **Básica:**
-BONJORNO, José Roberto; GIOVANNI JÚNIOR, José Ruy; GIOVANNI, José Ruy. **Matemática fundamental: uma nova abordagem: ensino médio: volume único**. 3. ed. São Paulo: FTD, 2013.
-DANTE, Luiz Roberto. **Projeto Múltiplo: matemática: ensino médio, 3º ano**. São Paulo: Ática, 2014.
-GIOVANNI, José Ruy et al. **360º matemática fundamental: uma nova abordagem: volume único**. 2. ed. São Paulo: FTD, 2015.
+BONJORNO, José Roberto; GIOVANNI JÚNIOR, José Ruy; GIOVANNI, José Ruy. **Matemática fundamental**: uma nova abordagem: ensino médio: volume único. 3. ed. São Paulo: FTD, 2013.
+DANTE, Luiz Roberto. **Projeto Múltiplo**: matemática: ensino médio, 3º ano. São Paulo: Ática, 2014.
+GIOVANNI, José Ruy *et al.* **360º matemática fundamental**: uma nova abordagem: volume único. 2. ed. São Paulo: FTD, 2015.
 
 **Complementar:**
 LIMA, E. L.; CARVALHO, Paulo Cesar P. **A Matemática do ensino médio**. 7. ed. Rio de Janeiro: SBM, 2016.
-PAIVA, Manoel. **Matemática: Paiva: 3º ano**. 2. ed. São Paulo: Moderna, 2013.
+PAIVA, Manoel. **Matemática**: Paiva: 3º ano. 2. ed. São Paulo: Moderna, 2013.
 
 ---
 
@@ -1758,14 +1758,14 @@ Química III aborda a Química Orgânica: as propriedades do átomo de carbono, 
 
 ### 5. Bibliografia Básica e Complementar
 **Básica:**
-ATKINS, P. W.; JONES, Loretta. **Princípios de química: questionando a vida moderna e o meio ambiente**. 5. ed. Porto Alegre: Bookman, 2012.
-MCMURRY, John. **Química orgânica: combo**. 3. ed. São Paulo: Cengage Learning, 2016.
+ATKINS, P. W.; JONES, Loretta. **Princípios de química**: questionando a vida moderna e o meio ambiente. 5. ed. Porto Alegre: Bookman, 2012.
+MCMURRY, John. **Química orgânica**: combo. 3. ed. São Paulo: Cengage Learning, 2016.
 **Livro didático fornecido pelo Fundo Nacional de Desenvolvimento da Educação (FNDE)**.
 
 **Complementar:**
-CHANG, Raymond. **Química geral: conceitos essenciais**. 4. ed. Porto Alegre: AMGH, 2010.
+CHANG, Raymond. **Química geral**: conceitos essenciais. 4. ed. Porto Alegre: AMGH, 2010.
 DALMAZ, Carla; CALCAGNOTTO, Maria Elisa (revisão técnica). **Bioquímica ilustrada**. 7. ed. Porto Alegre: Artmed, 2019.
-ZUBRICK, James W. **Manual de sobrevivência no laboratório de química orgânica: guia de técnicas para o aluno**. Rio de Janeiro: LTC, 2005.
+ZUBRICK, James W. **Manual de sobrevivência no laboratório de química orgânica**: guia de técnicas para o aluno. Rio de Janeiro: LTC, 2005.
 
 ---
 
@@ -1805,12 +1805,12 @@ Filosofia Medieval Cristã. A relação entre fé e razão. A Patrística de San
 
 ### 5. Bibliografia Básica e Complementar
 **Básica:**
-ARANHA, M. L. A.; MARTINS, M. H. P. **Filosofando: introdução à filosofia**. São Paulo: Moderna, 1993.
+ARANHA, M. L. A.; MARTINS, M. H. P. **Filosofando**: introdução à filosofia. São Paulo: Moderna, 1993.
 CHAUÍ, Marilena. **Convite à filosofia**. 13. ed. São Paulo: Ática, 2009.
 
 **Complementar:**
-GAARDER, Jostein. **O mundo de Sofia: romance da história da filosofia**. São Paulo: Seguinte, 2012.
-MARCONDES, Danilo. **Textos básicos de filosofia: dos pré-socráticos a Wittgenstein**. Rio de Janeiro: Jorge Zahar, 2000.
+GAARDER, Jostein. **O mundo de Sofia**: romance da história da filosofia. São Paulo: Seguinte, 2012.
+MARCONDES, Danilo. **Textos básicos de filosofia**: dos pré-socráticos a Wittgenstein. Rio de Janeiro: Jorge Zahar, 2000.
 
 ---
 
@@ -1848,14 +1848,14 @@ Estudo da geopolítica mundial, ordem global contemporânea e processo de global
 
 ### 5. Bibliografia Básica e Complementar
 **Básica:**
-SANTOS, Milton. **A natureza do espaço: técnica e tempo, razão e estrutura**. 4. ed. São Paulo: EDUSP, 2006. 392 p.
+SANTOS, Milton. **A natureza do espaço**: técnica e tempo, razão e estrutura. 4. ed. São Paulo: EDUSP, 2006. 392 p.
 LUCCI, Elian Alabi; BRANCO, Anselmo Lazaro; MENDONÇA, Cláudio. **Território e sociedade no mundo globalizado**. 3. ed. São Paulo: Saraiva, 2017. 480 p.
-HAESBAERT, Rogério. **O mito da desterritorialização: do "fim dos territórios" à multiterritorialidade**. 8. ed. Rio de Janeiro: Bertrand Brasil, 2014. 396 p.
+HAESBAERT, Rogério. **O mito da desterritorialização**: do "fim dos territórios" à multiterritorialidade. 8. ed. Rio de Janeiro: Bertrand Brasil, 2014. 396 p.
 
 **Complementar:**
 HARVEY, David. **O enigma do capital e as crises do capitalismo**. São Paulo: Boitempo, 2011. 240 p.
 MAGNOLI, Demétrio. **História da Geopolítica**. São Paulo: Contexto, 2011. 240 p.
-SENE, Eustáquio de; MOREIRA, João Carlos. **Geografia geral e do Brasil: espaço geográfico e globalização**. São Paulo: Scipione, 2016. 640 p.
+SENE, Eustáquio de; MOREIRA, João Carlos. **Geografia geral e do Brasil**: espaço geográfico e globalização. São Paulo: Scipione, 2016. 640 p.
 ---
 
 # Unidade Curricular: História — Ano 3
@@ -1898,23 +1898,23 @@ História II analisa os sistemas econômicos ao longo da história do Brasil, os
 
 ### 5. Bibliografia Básica e Complementar
 **Básica:**
-BOULOS JÚNIOR, Alfredo. **360º: história sociedade & cidadania**. São Paulo: FTD, 2015.
+BOULOS JÚNIOR, Alfredo. **360º**: história sociedade & cidadania. São Paulo: FTD, 2015.
 VICENTINO, Cláudio; DORIGO, Gianpaolo. **História geral e do Brasil**. São Paulo: Scipione, 2010.
 
 **Complementar:**
 BHABHA, Homi. **O local da cultura**. Belo Horizonte: Editora UFMG, 1999.
-CERTEAU, Michel de. **A invenção do cotidiano: artes de fazer**. Petrópolis, RJ: Vozes, 2009.
-CAREGNATO, Célia Elizabete; BOMBASSARO, Luiz Carlos (org.). **Diversidade cultural: viver diferenças e enfrentar desigualdades na educação**. Erechim, RS: Novello & Carbonelli, 2013.
+CERTEAU, Michel de. **A invenção do cotidiano**: artes de fazer. Petrópolis, RJ: Vozes, 2009.
+CAREGNATO, Célia Elizabete; BOMBASSARO, Luiz Carlos (org.). **Diversidade cultural**: viver diferenças e enfrentar desigualdades na educação. Erechim, RS: Novello & Carbonelli, 2013.
 GALEANO, Eduardo. **As caras e as máscaras**. Porto Alegre: L&PM Editores, 2004.
 HALL, Stuart. **A identidade cultural na pós-modernidade**. Rio de Janeiro: Lamparina, 2015.
-HALL, Stuart; WOODWARD, Kathryn. **Identidade e diferença: a perspectiva dos estudos culturais**. Rio de Janeiro: Vozes, 2014.
-HOBSBAWM, E. J. **Era dos extremos: o breve século XX: 1914-1991**. São Paulo: Companhia das Letras, 2005.
-HOLLANDA, Heloísa Buarque de (org.). **Pensamento Feminista Hoje: perspectivas decoloniais**. Rio de Janeiro: Bazar do Tempo, 2020.
+HALL, Stuart; WOODWARD, Kathryn. **Identidade e diferença**: a perspectiva dos estudos culturais. Rio de Janeiro: Vozes, 2014.
+HOBSBAWM, E. J. **Era dos extremos**: o breve século XX: 1914-1991. São Paulo: Companhia das Letras, 2005.
+HOLLANDA, Heloísa Buarque de (org.). **Pensamento Feminista Hoje**: perspectivas decoloniais. Rio de Janeiro: Bazar do Tempo, 2020.
 MIGNOLO, Walter. **Histórias Globais/projetos Locais**. Belo Horizonte: Editora UFMG, 2003.
-SANTOS, Boaventura de Sousa; MARTINS, Bruno Sena (org.). **O pluriverso dos direitos humanos: a diversidade das lutas pela dignidade**. Belo Horizonte: Autêntica, 2019.
-SOUZA, Laura Olivieri Carneiro de. **Quilombos: identidade e história**. Rio de Janeiro: Nova Fronteira, 2012.
+SANTOS, Boaventura de Sousa; MARTINS, Bruno Sena (org.). **O pluriverso dos direitos humanos**: a diversidade das lutas pela dignidade. Belo Horizonte: Autêntica, 2019.
+SOUZA, Laura Olivieri Carneiro de. **Quilombos**: identidade e história. Rio de Janeiro: Nova Fronteira, 2012.
 RICKLEFS, Robert E. **A economia da natureza**. Rio de Janeiro: Guanabara Koogan, 2010.
-WALSH, C. **Pedagogías decoloniales: prácticas insurgentes de resistir, (re)existir y (re)vivir. Tomo II**. Quito: Abya-Yala, 2017.
+WALSH, C. **Pedagogías decoloniales**: prácticas insurgentes de resistir, (re)existir y (re)vivir. Tomo II. Quito: Abya-Yala, 2017.
 
 ---
 
@@ -1953,14 +1953,14 @@ Estudo dos conceitos fundamentais do empreendedorismo, perfil e comportamento em
 
 ### 5. Bibliografia Básica e Complementar
 **Básica:**
-DORNELAS, José Carlos Assis. **Empreendedorismo: transformando ideias em negócios**. 8. ed. São Paulo: Empreende / Atlas, 2021. 320 p.
-OSTERWALDER, Alexander; PIGNEUR, Yves. **Business Model Generation: inovação em modelos de negócios**. Rio de Janeiro: Alta Books, 2011. 288 p.
-CHIAVENATO, Idalberto. **Empreendedorismo: dando asas ao espírito empreendedor**. 4. ed. São Paulo: Manole, 2012. 312 p.
+DORNELAS, José Carlos Assis. **Empreendedorismo**: transformando ideias em negócios. 8. ed. São Paulo: Empreende / Atlas, 2021. 320 p.
+OSTERWALDER, Alexander; PIGNEUR, Yves. **Business Model Generation**: inovação em modelos de negócios. Rio de Janeiro: Alta Books, 2011. 288 p.
+CHIAVENATO, Idalberto. **Empreendedorismo**: dando asas ao espírito empreendedor. 4. ed. São Paulo: Manole, 2012. 312 p.
 
 **Complementar:**
-RIES, Eric. **A startup enxuta: como os empreendedores atuais utilizam a inovação contínua para criar empresas extremamente bem-sucedidas**. São Paulo: Levir, 2012. 272 p.
-BLANK, Steve; DORF, Bob. **Startups: manual do fundador**. Rio de Janeiro: Alta Books, 2014. 608 p.
-MARCONDES, Reynaldo Cavalheiro et al. **Planejamento e gestão de pequenos negócios**. São Paulo: Cengage Learning, 2017. 240 p.
+RIES, Eric. **A startup enxuta**: como os empreendedores atuais utilizam a inovação contínua para criar empresas extremamente bem-sucedidas. São Paulo: Levir, 2012. 272 p.
+BLANK, Steve; DORF, Bob. **Startups**: manual do fundador. Rio de Janeiro: Alta Books, 2014. 608 p.
+MARCONDES, Reynaldo Cavalheiro *et al.* **Planejamento e gestão de pequenos negócios**. São Paulo: Cengage Learning, 2017. 240 p.
 ---
 
 # Unidade Curricular: Gestão de Pessoas e Relações no Trabalho
@@ -2001,12 +2001,12 @@ Estudo dos fundamentos e processos da gestão de pessoas nas organizações, inc
 
 ### 5. Bibliografia Básica e Complementar
 **Básica:**
-FIDELIS, Gilson José. **Gestão de pessoas: rotinas trabalhistas e dinâmicas do departamento de pessoal**. 6. ed. rev. atual. São Paulo: Érica, 2020.
+FIDELIS, Gilson José. **Gestão de pessoas**: rotinas trabalhistas e dinâmicas do departamento de pessoal. 6. ed. rev. atual. São Paulo: Érica, 2020.
 FONTOURA, Iara P.; SABATOVSKI, Emilio. **Consolidação das leis trabalhistas**. 6. ed. Curitiba: Juruá, 2010.
 
 **Complementar:**
-GIL, Antonio Carlos. **Gestão de pessoas: enfoque nos papéis profissionais**. São Paulo: Atlas, 2010.
-IPONTELO, Juliana F.; CRUZ, Lucineide A. **M. Gestão de pessoas: manual de rotinas trabalhistas**. 8. ed. rev. e ampl. Brasília, DF: Senac-DF, 2016.
+GIL, Antonio Carlos. **Gestão de pessoas**: enfoque nos papéis profissionais. São Paulo: Atlas, 2010.
+IPONTELO, Juliana F.; CRUZ, Lucineide A. M. **Gestão de pessoas**: manual de rotinas trabalhistas. 8. ed. rev. e ampl. Brasília, DF: Senac-DF, 2016.
 VERGARA, Sylvia Constant. **Gestão de pessoas**. 10. ed. São Paulo: Atlas, 2011.
 
 ---
@@ -2048,12 +2048,12 @@ Estudo da gestão financeira empresarial e de tesouraria. Matemática financeira
 ### 5. Bibliografia Básica e Complementar
 **Básica:**
 GITMAN, Lawrence J. **Princípios de administração financeira**. 14. ed. São Paulo: Pearson Education do Brasil, 2018. 832 p.
-HOJI, Masakazu. **Administração financeira e orçamentária: matemática financeira applied, estratégias financeiras, orçamento empresarial**. 12. ed. São Paulo: Atlas, 2021. 576 p.
+HOJI, Masakazu. **Administração financeira e orçamentária**: matemática financeira applied, estratégias financeiras, orçamento empresarial. 12. ed. São Paulo: Atlas, 2021. 576 p.
 ASSAF NETO, Alexandre. **Finanças corporativas e valor**. 8. ed. São Paulo: Atlas, 2018. 768 p.
 
 **Complementar:**
 LE MÈSURIER, Paul. **Matemática financeira simplificada para cursos técnicos e superiores**. São Paulo: Atlas, 2015. 240 p.
-CASAROTTO FILHO, Nelson; KOPITTKE, Bruno Hartmut. **Análise de investimentos: matemática financeira, engenharia econômica, tomada de decisão, estratégia empresarial**. 11. ed. São Paulo: Atlas, 2018. 512 p.
+CASAROTTO FILHO, Nelson; KOPITTKE, Bruno Hartmut. **Análise de investimentos**: matemática financeira, engenharia econômica, tomada de decisão, estratégia empresarial. 11. ed. São Paulo: Atlas, 2018. 512 p.
 CHIAVENATO, Idalberto. **Planejamento e controle financeiro**. 3. ed. São Paulo: Manole, 2014. 288 p.
 ---
 
@@ -2092,13 +2092,13 @@ Componente curricular interdisciplinar voltado à integração dos conhecimentos
 
 ### 5. Bibliografia Básica e Complementar
 **Básica:**
-FRIGOTTO, Gaudêncio; CIAVATTA, Maria; RAMOS, Marise Nogueira (org.). **Ensino médio integrado: concepção e contradições**. 3. ed. São Paulo: Cortez, 2012.
+FRIGOTTO, Gaudêncio; CIAVATTA, Maria; RAMOS, Marise Nogueira (org.). **Ensino médio integrado**: concepção e contradições. 3. ed. São Paulo: Cortez, 2012.
 GIL, Antonio Carlos. **Como elaborar projetos de pesquisa**. 6. ed. São Paulo: Atlas, 2017.
 MORIN, Edgar. **Os sete saberes necessários à educação do futuro**. Tradução de Catarina Eleonora F. da Silva, Jeanne Sawaya. 2. ed. rev. São Paulo: Cortez, 2011.
-SILVA, Adriano Larentes da (org.) et al. **O currículo integrado no cotidiano da sala de aula**. Florianópolis: Publicação do IFSC, 2016. Disponível em: https://www.ifsc.edu.br/livros-e-periodicos.
+SILVA, Adriano Larentes da (org.) *et al.* **O currículo integrado no cotidiano da sala de aula**. Florianópolis: Publicação do IFSC, 2016. Disponível em: https://www.ifsc.edu.br/livros-e-periodicos.
 
 **Complementar:**
-KEELLING, Ralph; BRANCO, Renato Henrique Ferreira. **Gestão de projetos: uma abordagem global**. Tradução de Cid Knipel Moreira. 4. ed. São Paulo: Saraiva, 2019.
-MARCONI, Marina de Andrade; LAKATOS, Eva Maria. **Metodologia do trabalho científico: projetos de pesquisa, pesquisa bibliográfica, teses de doutorado, dissertações de mestrado, trabalhos de conclusão de curso**. 8. ed. São Paulo: Atlas, 2018.
+KEELLING, Ralph; BRANCO, Renato Henrique Ferreira. **Gestão de projetos**: uma abordagem global. Tradução de Cid Knipel Moreira. 4. ed. São Paulo: Saraiva, 2019.
+MARCONI, Marina de Andrade; LAKATOS, Eva Maria. **Metodologia do trabalho científico**: projetos de pesquisa, pesquisa bibliográfica, teses de doutorado, dissertações de mestrado, trabalhos de conclusão de curso. 8. ed. São Paulo: Atlas, 2018.
 
 ---
