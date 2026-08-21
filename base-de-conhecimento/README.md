@@ -23,5 +23,8 @@ Este diretório centraliza o conhecimento técnico, diretrizes institucionais, p
    - Sincronização 1:1 entre os arquivos Markdown (`todas_ementas_*.md`) e LaTeX (`ementario_*.tex`).
    - Higiene de repositório, commits e deploy automatizado no GitHub Pages.
 
-4. [tabela_de_correcoes_ppc.md](file:///Users/chameoandre/Google-Drive-chameoandre/INSTITUTO-FEDERAL-SANTA-CATARINA/CURSOS/TECNICO/informatica-integrado/reformulacao-ppc-informatica-administracao-integrado/base-de-conhecimento/tabela_de_correcoes_ppc.md)
+4. [padrao-estrutura-secoes-modelo-oficial.md](file:///Users/chameoandre/Google-Drive-chameoandre/INSTITUTO-FEDERAL-SANTA-CATARINA/CURSOS/TECNICO/informatica-integrado/reformulacao-ppc-informatica-administracao-integrado/base-de-conhecimento/padrao-estrutura-secoes-modelo-oficial.md)
+   - Hierarquia oficial das 10 Seções Macro (I a X) e dos 30 Subitens Contínuos (1 a 30) do formulário de PPC do IFSC.
+
+5. [tabela_de_correcoes_ppc.md](file:///Users/chameoandre/Google-Drive-chameoandre/INSTITUTO-FEDERAL-SANTA-CATARINA/CURSOS/TECNICO/informatica-integrado/reformulacao-ppc-informatica-administracao-integrado/base-de-conhecimento/tabela_de_correcoes_ppc.md)
    - Registro e histórico de todas as revisões, auditorias e apontamentos da equipe e biblioteca, formatado no padrão oficial de acompanhamento.
