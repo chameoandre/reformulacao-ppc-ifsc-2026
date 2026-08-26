@@ -1,5 +1,20 @@
 \documentclass{../../modelos/latex-shared/ifsc-ppc}
 
+% -------------------------------------------------------------
+% CONTROLE DE DESTACAMENTO DE ALTERAÇÕES (REVISÃO EM AZUL)
+% -------------------------------------------------------------
+\newif\ifhighlightchanges
+\highlightchangestrue  % Altere para \highlightchangesfalse para gerar o documento final em preto
+
+\ifhighlightchanges
+  \newcommand{\revisao}[1]{\textcolor{blue}{#1}}
+  \newcommand{\revisacor}{\color{blue}}
+\else
+  \newcommand{\revisao}[1]{#1}
+  \newcommand{\revisacor}{}
+\fi
+
+
 \begin{document}
 
 % --- Capa ---
@@ -104,36 +119,131 @@ Conclusão do Ensino Fundamental (ou equivalente legalmente reconhecido).
 \end{itemize}
 
 \subsection{Justificativa da Oferta do Curso no Câmpus:}
-A região abrangida pelo Câmpus Garopaba apresenta vocação econômica fortemente vinculada ao comércio, turismo, prestação de serviços e desenvolvimento sustentável local. A oferta do Curso Técnico em Administração Integrado ao Ensino Médio visa capacitar jovens da comunidade para atuar na gestão eficiente, empreendedorismo socioambiental, logística, finanças e processos organizacionais de micro, pequenas e médias empresas regionais.
+A oferta do Curso Técnico Integrado em Administração no IFSC Câmpus Garopaba teve início em 2018, a partir da transição da modalidade concomitante para a modalidade integrada ao ensino médio no ano de 2016. Tal experiência contribui para a consolidação do seu corpo docente e infraestrutura adequada. Além disso, a oferta de curso segue prevista no Plano de Oferta de Cursos e Vagas (POCV), o que reforça o alinhamento ao planejamento institucional e às demandas regionais por formação profissional.
+
+Considerando uma análise contextual, a região de atuação do Instituto Federal de Santa Catarina Câmpus Garopaba abrange, além do município-sede, os municípios de Imbituba, Imaruí, Laguna e Pescaria Brava, totalizando um território com população estimada em 113.162 habitantes (Tabela \ref{tab:dados-regiao-garopaba}), conforme dados do censo de 2020 (IBGE, 2026). O Índice de Desenvolvimento Humano (IDH) da região apresenta variações significativas, oscilando entre 0,667 no município de Imaruí e 0,765 em Imbituba, evidenciando desigualdades socioeconômicas entre os municípios que compõem a área de abrangência do Câmpus.
+
+% --- TABELA: DADOS DA REGIÃO DE ABRANGÊNCIA ---
+\begin{table}[H]
+\centering
+\small
+\begin{tabularx}{\linewidth}{|X|c|c|}
+\hline
+\rowcolor{ifscgreen!20}
+\textbf{Município} & \textbf{População} & \textbf{IDH} \\ \hline
+Garopaba & 29.959 & 0,753 \\ \hline
+Imaruí & 11.881 & 0,667 \\ \hline
+Imbituba & 52.579 & 0,765 \\ \hline
+Laguna & -- & 0,752 \\ \hline
+Paulo Lopes & 9.063 & 0,716 \\ \hline
+Pescaria Brava & 10.190 & -- \\ \hline
+\rowcolor{cinzaTabela}
+\textbf{Total} & \textbf{113.162} & \textbf{--} \\ \hline
+\end{tabularx}
+\caption{Dados da região de abrangência do IFSC Câmpus Garopaba}
+\label{tab:dados-regiao-garopaba}
+\vspace{-0.2cm}
+\begin{flushleft}
+\footnotesize \textit{Fonte: Dados de IBGE (2026).}
+\end{flushleft}
+\end{table}
+
+Na matriz econômica desses municípios, conforme dados do Produto Interno Bruto do Município (PIBM) (IBGE, 2024), a economia regional é concentrada no setor de serviços, acompanhada por atividades industriais específicas e por setores tradicionais ligados à pesca e à agropecuária.
+
+O município de Imbituba é impulsionado principalmente pelo setor de serviços, que representa aproximadamente 68,9\% do valor adicionado municipal. A cidade possui infraestrutura logística e portuária, além de forte atuação nos segmentos de comércio, turismo e transporte. Em Garopaba, há um perfil econômico semelhante, com dependência do setor terciário, especialmente das atividades ligadas ao turismo, hospedagem, gastronomia, comércio e serviços sazonais. O município tem sua dinâmica econômica intensificada durante os períodos de alta temporada turística, o que amplia a geração de emprego e renda no comércio e nos serviços. Embora possua atividades pesqueiras tradicionais e pequenas produções agrícolas, estas possuem menor participação na composição do PIB municipal.
+
+A matriz econômica de Laguna é predominantemente composta pelo setor de serviços, responsável por aproximadamente 55,7\% do valor adicionado municipal, seguida pela administração pública (22,5\%), agropecuária (12,7\%) e indústria (9,1\%) (IBGE, 2024). O município destaca-se pelas atividades ligadas ao comércio, turismo, pesca artesanal e agricultura familiar.
+
+No município de Imaruí, distinguindo-se dos demais, o setor agropecuário tem participação relevante na economia (36,6\%), com destaque para atividades da agricultura familiar e da pesca para a economia local. O setor de serviços representa cerca de 29,3\% da economia do município, seguido pela administração pública (20,8\%) e pela indústria (13,3\%) (IBGE, 2024).
+
+Em Pescaria Brava, emancipado em 2013, tem uma economia baseada principalmente nos serviços e no setor público. O setor de serviços representa cerca de 38,3\% da economia local, enquanto a indústria corresponde a aproximadamente 9,2\% e a agropecuária a 4,7\% (IBGE, 2024).
+
+De forma geral, a análise regional demonstra que:
+\begin{itemize}
+    \item O setor de serviços constitui a principal base econômica dos municípios;
+    \item O turismo possui forte influência econômica em Garopaba, Imbituba e Laguna;
+    \item A pesca artesanal mantém relevância sociocultural e econômica em toda a região litorânea;
+    \item Os municípios de Imaruí e Pescaria Brava apresentam maior dependência das atividades primárias e da administração pública;
+    \item Existe demanda crescente por qualificação profissional voltada aos setores de comércio, turismo, logística, serviços e economia do mar.
+\end{itemize}
+
+A formação técnica em Administração caracteriza-se pela versatilidade das possibilidades de atuação profissional, preparando os estudantes para atuar em organizações públicas, privadas e do terceiro setor, contribuindo para o desenvolvimento de seus processos de gestão. Dessa forma, na região de atuação do Câmpus, essa formação técnica, além de representar para a população mais uma oportunidade de acesso ao ensino médio articulado à educação profissional, contribui para o fortalecimento das organizações locais, por meio da formação de profissionais qualificados para atuar em seus diferentes processos de gestão, favorecendo, consequentemente, o desenvolvimento econômico e social da região.
 
 \subsection{Público-alvo:}
 Estudantes egressos do Ensino Fundamental que buscam concluir a formação do Ensino Médio aliada a uma qualificação profissional técnica no eixo de Gestão e Negócios.
 
 \subsection{Objetivo do curso:}
 \subsubsection{Objetivo Geral:}
-Formar técnicos em Administração aptos a executar, analisar e propor melhorias em processos organizacionais, administrativos, financeiros, mercadológicos e de pessoas, comprometidos com a ética, sustentabilidade socioambiental e inovação.
+De maneira geral, o curso objetiva promover a formação integral dos estudantes, articulando os conhecimentos da formação geral à formação profissional técnica em Administração, preparando-os para a atuação no mundo do trabalho e para a continuidade dos estudos, bem como para o exercício da cidadania, o desenvolvimento da consciência crítica e da autonomia, contribuindo para a construção de uma sociedade mais ética, justa e igualitária.
 
 \subsubsection{Objetivos Específicos:}
+De modo específico, o curso intenciona:
 \begin{itemize}
-    \item Desenvolver competências técnicas e científicas para operacionalização de rotinas administrativas, contábeis e financeiras;
-    \item Capacitar para a aplicação de ferramentas de gestão da qualidade, marketing, empreendedorismo e logística;
-    \item Promover a visão crítica sobre o papel das organizações no desenvolvimento sustentável regional;
-    \item Integrar os conhecimentos das disciplinas da Formação Geral ao contexto prático profissional do Núcleo Politécnico e da Formação Técnica.
+    \item Possibilitar a compreensão do mundo e suas transformações históricas, geográficas, científicas, tecnológicas, sociais, culturais, políticas e econômicas, e o estabelecimento de relações com conhecimentos do cotidiano dos educandos;
+    \item Desenvolver conhecimentos e competências profissionais relacionados à Administração, possibilitando a atuação nos diferentes processos de gestão das organizações e contribuindo para o desenvolvimento econômico e social da região;
+    \item Fomentar a capacitação de profissionais como mecanismo de desenvolvimento das organizações da região nos diversos segmentos de atuação;
+    \item Qualificar e habilitar profissionais em Técnicos em Administração para acompanhar a evolução do conhecimento tecnológico e aplicar novos métodos e processos na prestação de bens e serviços dos diversos segmentos econômicos;
+    \item Incentivar a busca de soluções aos desafios e aos problemas da prática profissional, com cidadania e respeito aos princípios éticos e da sustentabilidade;
+    \item Integrar os conhecimentos da formação geral com a formação técnica, trabalhando a interdisciplinaridade e contribuindo para o processo de desenvolvimento dos educandos e da sociedade.
 \end{itemize}
 
 \subsection{Perfil profissional do egresso:}
-O Técnico em Administração egresso do IFSC Câmpus Garopaba executa operações administrativas relativas aos processos de gestão de pessoas, materiais e patrimônio, compras, vendas, finanças, custos e marketing. Domina ferramentas de informática aplicada à gestão, elabora relatórios e atua no suporte aos processos decisórios organizacionais com responsabilidade social e ambiental.
+Conforme o Catálogo Nacional de Cursos Técnicos (CNCT/MEC), o Técnico em Administração é um profissional habilitado para:
+\begin{itemize}
+    \item Executar operações administrativas de planejamento, pesquisas, análise e assessoria no que tange à gestão de pessoal, de materiais e produção, de serviços, gestão financeira, orçamentária e mercadológica;
+    \item Utilizar sistemas de informação e aplicar conceitos e modelos de gestão em funções administrativas, sejam operacionais, de coordenação, de chefia intermediária ou de direção superior, sob orientação;
+    \item Elaborar orçamentos, fluxos de caixa e demais demonstrativos financeiros;
+    \item Elaborar e expedir relatórios e documentos diversos;
+    \item Auxiliar na elaboração de pareceres e laudos para tomada de decisões.
+\end{itemize}
 
 \subsection{Outras características gerais do egresso:}
-O egresso caracteriza-se pela postura ética, capacidade de comunicação interpessoal e trabalho em equipe, autonomia intelectual, compromisso com a diversidade, inclusão social e cidadania ativa, atuando como agente transformador em seu contexto socioeconômico e ambiental regional.
+Considera-se que o Técnico em Administração, além da execução de atividades previstas no Catálogo Nacional de Cursos Técnicos, seja capaz de:
+\begin{itemize}
+    \item Ter a capacidade de inserir-se nas relações sociais e no mundo de trabalho, respeitando o meio ambiente, a diversidade de opiniões, de culturas, de gênero e de etnias, com responsabilidade, cooperação, ética, autonomia e proatividade, considerando o bem-estar coletivo;
+    \item Aplicar os conhecimentos científico-tecnológicos para explicar e analisar criticamente o funcionamento do mundo e dos processos históricos, sociais e econômicos, planejando, executando e avaliando ações de intervenção na realidade;
+    \item Ler, articular e interpretar símbolos e códigos em diferentes linguagens e representações, bem como conhecer as formas contemporâneas de linguagem, integrando os conhecimentos das várias ciências e outros campos do saber;
+    \item Auxiliar na tomada de decisões cotidianas organizacionais referentes aos processos de gestão de pessoal, financeiro, administrativo, de produção e mercadológico de modo responsável, ético e com pensamento crítico e voltado à sustentabilidade;
+    \item Estabelecer relações interpessoais e profissionais pautadas na ética, no respeito, na inclusão e na valorização da diversidade nos diferentes contextos de atuação;
+    \item Utilizar, com autonomia, tecnologias digitais de informação nas práticas profissionais, aplicando-as de forma responsável e dentro de padrões de integridade e segurança;
+    \item Organizar e controlar documentos e finanças, arquivos físicos e digitais e rotinas administrativas com atenção, precisão e sigilo, observando normas de proteção de dados e boas práticas de gestão documental e financeira;
+    \item Atuar em equipes multidisciplinares de forma proativa, colaborativa e respeitosa, respeitando a diversidade de profissionais, experiências e trajetórias de vida presentes no ambiente organizacional;
+    \item Compreender as características e a diversidade existente no mundo do trabalho, adaptando suas competências às demandas locais e contribuindo para o desenvolvimento socioeconômico da região.
+\end{itemize}
 
 \subsection{Áreas/campo de atuação do egresso:}
-Empresas públicas e privadas do comércio, indústria e serviços; organizações não governamentais (ONGs); cooperativas; startups e empreendimentos próprios; órgãos da administração pública direta e indireta.
+Conforme o Catálogo Nacional de Cursos Técnicos (CNCT/MEC), o Técnico em Administração poderá atuar em organizações dos setores industrial, comercial e de prestação de serviços, bem como em organizações do terceiro setor e órgãos da administração pública.
 
 % =========================================================
 \section{ESTRUTURA CURRICULAR DO CURSO}
 \subsection{Metodologia de desenvolvimento pedagógico do curso:}
-O curso orienta-se pelos princípios da integração curricular, articulando ciência, cultura, trabalho e tecnologia. As atividades pedagógicas incluem aulas expositivo-dialogadas, estudos de caso, atividades em laboratório de informática aplicada, pesquisas de campo, oficinas de integração e projetos integradores.
+A organização do trabalho pedagógico do Curso Técnico Integrado em Administração fundamenta-se nos princípios e nas diretrizes institucionais estabelecidos no Plano de Desenvolvimento Institucional (PDI) do IFSC, tendo como referência a Pedagogia Histórico-Crítica e a concepção de formação humana integral. Nessa perspectiva, compreende-se o estudante como sujeito histórico e social e o conhecimento como construção humana produzida nas relações sociais, culturais, científicas e produtivas. O processo educativo busca, assim, possibilitar a apropriação crítica dos conhecimentos historicamente produzidos e a compreensão da realidade em suas múltiplas dimensões, articulando formação geral e formação profissional.
+
+O desenvolvimento pedagógico do curso será orientado pela integração curricular e pela interdisciplinaridade, buscando superar a fragmentação dos conhecimentos e favorecer a articulação entre os componentes curriculares da formação geral e da formação técnica e profissional. Para tanto, serão estimuladas práticas pedagógicas que possibilitem estabelecer relações entre os conhecimentos científicos, tecnológicos, históricos, sociais e culturais e as situações concretas vivenciadas pelos estudantes e presentes no mundo do trabalho e na sociedade.
+
+As práticas educativas buscarão partir da problematização da realidade e dos conhecimentos prévios dos estudantes, promovendo processos de investigação, análise, reflexão, sistematização e aplicação dos conhecimentos. Serão utilizadas estratégias diversificadas de ensino e aprendizagem, de acordo com os objetivos e as especificidades dos componentes curriculares, tais como aulas dialogadas, estudos de caso, resolução de problemas, pesquisas, atividades experimentais, oficinas, visitas técnicas, atividades de campo, práticas em laboratório, projetos, seminários, produção de materiais e outras propostas que favoreçam a participação ativa dos estudantes e a articulação entre teoria e prática.
+
+As unidades curriculares Oficinas de Integração I e II, previstas para ocorrerem no segundo e terceiro anos, constituem-se componentes curriculares de natureza interdisciplinar destinados à articulação entre os conhecimentos da formação geral e a formação técnica desenvolvidos nas unidades curriculares do semestre e aqueles construídos ao longo do curso. As Oficinas de Integração serão organizadas em ciclos temáticos, entendidos como unidades de organização curricular que articulam diferentes componentes curriculares em torno de um mesmo foco investigativo, desenvolvido durante um período determinado. Os ciclos temáticos serão definidos coletivamente pela equipe docente, considerando os objetivos de aprendizagem das unidades curriculares estudadas, os desafios contemporâneos da Administração e as demandas das organizações, da comunidade e do território. Cada ciclo promoverá a integração entre componentes curriculares da formação técnica e da formação geral, favorecendo a compreensão dos fenômenos sob múltiplas perspectivas e a articulação entre teoria e prática.
+
+Os ciclos temáticos serão organizados em etapas, tendo como referência Silva (2016), estruturando-se em: problematização, instrumentalização, experimentação, orientação, sistematização, consolidação e socialização, conforme descrito nas respectivas unidades curriculares. As atividades serão desenvolvidas por meio de estratégias múltiplas, considerando aulas expositivas-dialogadas, análise documental, metodologias ativas (incluindo aprendizagem baseada em problemas, estudos de caso, investigação científica, oficinas, projetos, seminários, visitas técnicas, pesquisas de campo, rodas de conversa e laboratórios de aprendizagem). O componente contará com atuação integrada de docentes da formação profissional e da formação geral, fortalecendo a interdisciplinaridade e a indissociabilidade entre ensino, pesquisa e extensão.
+
+Os professores responsáveis pelas Oficinas de Integração, bem como de outros componentes curriculares integradores, deverão definir horário periódico de planejamento para organização dos ciclos, metodologias e atividades a serem desenvolvidos em cada oficina. Na execução das oficinas, os professores deverão orientar as atividades propostas priorizando o protagonismo dos estudantes no processo.
+
+A metodologia de ensino de cada componente curricular deverá levar em consideração a realidade do estudante e a construção do pensamento crítico e emancipatório, tendo a prática social como ponto de partida e ponto de chegada para o processo ensino-aprendizagem:
+\begin{quote}
+\small
+\textit{``[...] o método da pedagogia histórico-crítica indica que o ponto de partida, a prática social, é comum ao professor e aos alunos, mas há uma diferença essencial do ponto de vista pedagógico: o professor tem, ou deveria ter, uma compreensão sintética da prática social, ao passo que a compreensão dos alunos é sincrética. Por isso cabe ao professor prover os meios para que os alunos, no ponto de chegada, ascendam ao nível do professor, atingindo uma compreensão também sintética da realidade social em que vivem''} (SAVIANI, 2020, p. 278).
+\end{quote}
+
+Os esforços pedagógicos empreendidos no curso terão como horizonte a formação humana integral dos estudantes, e neste sentido, a omnilateralidade é requisito, tendo em vista que todas as dimensões constituintes do ser humano devem ser atendidas através dos processos pedagógicos produzidos pelo currículo e assim ocorra o desenvolvimento intelectual, psicossocial, corporal, afetivo, estético, cultural e lúdico.
+
+\revisao{Assim, a formação proposta pelo curso transcende a sala de aula e os conhecimentos do currículo, incentivando e promovendo a participação em atividades integradoras, projetos de extensão e ações formativas nas suas vertentes científicas, tecnológicas, culturais, artísticas, esportivas e de gestão.}
+
+As saídas de campo e as visitas técnicas são importantes ferramentas para a compreensão da realidade concreta em movimento, promovendo o diagnóstico, análise e intervenção na comunidade. As saídas de campo serão possíveis via veículo específico próprio do Câmpus para transporte de estudantes e servidores e/ou fretamento de transporte coletivo.
+
+A pesquisa como princípio pedagógico e o desenvolvimento da ciência no âmbito do curso servem como fundamento questionador e crítico perante o conhecimento e a realidade, de modo a potencializar o vínculo educação-sociedade com práticas que contemplem as demandas sociais, políticas, culturais, ambientais, econômicas, científicas e tecnológicas.
+
+Quanto à avaliação da execução do respectivo Projeto Pedagógico do Curso, ela ocorrerá seguindo as normativas institucionais nas quais há a previsão de avaliações periódicas realizadas nas reuniões de curso e reuniões de Conselho de Classe por meio do envolvimento da coordenação de curso, professores, coordenadoria pedagógica e estudantes.
 
 \subsection{Matriz curricular:}
 \subsubsection{Matriz Curricular Resumida (Distribuição por Blocos):}
@@ -210,8 +320,12 @@ Suporte por equipe multidisciplinar de Técnicos em Assuntos Educacionais, Assis
     \item BRASIL. \textbf{Lei nº 9.394, de 20 de dezembro de 1996}. Estabelece as diretrizes e bases da educação nacional.
     \item BRASIL. \textbf{Lei nº 11.892, de 29 de dezembro de 2008}. Cria a Rede Federal de Educação Profissional, Científica e Tecnológica.
     \item BRASIL. Conselho Nacional de Educação. \textbf{Resolução CNE/CP nº 1, de 5 de janeiro de 2021}. Diretrizes Curriculares Nacionais Gerais para a Educação Profissional e Tecnológica.
+    \item BRASIL. Ministério da Educação. \textbf{Catálogo Nacional de Cursos Técnicos (CNCT)}. 4. ed. Brasília: MEC/SETEC, 2024.
+    \item IBGE. Instituto Brasileiro de Geografia e Estatística. \textbf{Censo Demográfico e Produto Interno Bruto dos Municípios (PIBM)}. Rio de Janeiro: IBGE, 2024/2026.
     \item IFSC. \textbf{Resolução CONSUP/IFSC nº 142/2025}. Diretrizes para a organização dos cursos técnicos integrados ao ensino médio no IFSC.
     \item IFSC. \textbf{Regulamento Didático-Pedagógico (RDP)}. Aprovado pelo CONSUP/IFSC.
+    \item SAVIANI, Dermeval. \textbf{Pedagogia histórico-crítica, quadragésimo ano}: novas aproximações. Campinas: Autores Associados, 2020.
+    \item SILVA, E. \textbf{Metodologia de Ciclos Temáticos e Oficinas de Integração na Educação Profissional Técnica}. Florianópolis: IFSC, 2016.
 \end{itemize}
 
 % =========================================================
