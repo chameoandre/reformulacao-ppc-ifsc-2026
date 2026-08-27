@@ -1,4 +1,6 @@
-<!DOCTYPE html>
+# -*- coding: utf-8 -*-
+
+dashboard_html = """<!DOCTYPE html>
 <html lang="pt-BR">
 
 <head>
@@ -746,7 +748,7 @@
                 <td><strong>Seções Iniciais (Subitens 10-17)</strong><br><small style="color: var(--text-muted);">pp. 6–10, 106</small></td>
                 <td>Equipe Revisão</td>
                 <td>Textos conceituais e justificativas regionais não destacados em azul para a comissão.</td>
-                <td>Aplicação de <code>\revisao{...}</code> em 100% dos parágrafos, perfil do egresso, objetivos e metodologia de Ciclos Temáticos.</td>
+                <td>Aplicação de <code>\\revisao{...}</code> em 100% dos parágrafos, perfil do egresso, objetivos e metodologia de Ciclos Temáticos.</td>
                 <td style="text-align: center;"><span class="status-badge status-done">Concluído</span></td>
               </tr>
               <tr>
@@ -801,7 +803,7 @@
         <div class="panel-header">
           <div class="panel-title">
             <i class="bi bi-eye-fill"></i>
-            Mecanismo de Revisão e Controle Condicional (`\revisao{...}`)
+            Mecanismo de Revisão e Controle Condicional (`\\revisao{...}`)
           </div>
           <span class="badge-pill badge-pill-blue"><i class="bi bi-toggle-on"></i> Switch Ativo</span>
         </div>
@@ -816,17 +818,14 @@
               <i class="bi bi-code-square me-1"></i> Arquitetura no LaTeX (`main_ppc_*.tex`):
             </h4>
             <pre class="font-code" style="background: #060911; padding: 1rem; border-radius: 8px; font-size: 0.85rem; color: #38bdf8; overflow-x: auto;">
-
-ewif\ifhighlightchanges
+\newif\ifhighlightchanges
 \highlightchangestrue % Ativa azul
 
 \ifhighlightchanges
-  
-ewcommand{evisao}[1]{	extcolor{blue}{#1}}
+  \newcommand{\revisao}[1]{\textcolor{blue}{#1}}
 \else
-  
-ewcommand{evisao}[1]{#1}
-i</pre>
+  \newcommand{\revisao}[1]{#1}
+\fi</pre>
           </div>
 
           <div style="background: rgba(15, 23, 42, 0.8); border: 1px solid var(--border-color); border-radius: 12px; padding: 1.2rem;">
@@ -870,7 +869,7 @@ ewcommand{evisao}[1]{#1}
           <a href="base-de-conhecimento/mecanismo-revisao-destaque-azul.md" target="_blank" style="text-decoration: none;" class="panel-card">
             <div style="color: var(--accent-blue); font-size: 1.5rem; margin-bottom: 0.5rem;"><i class="bi bi-palette-fill"></i></div>
             <h4 style="color: #ffffff; font-family: 'Outfit', sans-serif; font-size: 1.05rem; margin-bottom: 0.3rem;">Macro de Revisão em Azul</h4>
-            <p style="color: var(--text-muted); font-size: 0.82rem;">Arquitetura da macro <code>\revisao{...}</code> e switch de alternância para publicação institucional.</p>
+            <p style="color: var(--text-muted); font-size: 0.82rem;">Arquitetura da macro <code>\\revisao{...}</code> e switch de alternância para publicação institucional.</p>
           </a>
 
           <a href="base-de-conhecimento/padrao-estrutura-secoes-modelo-oficial.md" target="_blank" style="text-decoration: none;" class="panel-card">
@@ -923,3 +922,9 @@ ewcommand{evisao}[1]{#1}
 
 </body>
 </html>
+"""
+
+with open('index.html', 'w', encoding='utf-8') as f:
+    f.write(dashboard_html)
+
+print("index.html atualizado com sucesso com todos os novos dados e métricas!")
