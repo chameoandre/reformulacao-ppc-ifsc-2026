@@ -1,6 +1,6 @@
 # Diretrizes Normativas ABNT NBR 6023 para Bibliografias dos PPCs
 
-Este documento estabelece as regras oficiais da Biblioteca do IFSC e da norma ABNT NBR 6023 aplicadas às seções de **Bibliografia Básica** e **Bibliografia Complementar** de todas as Unidades Curriculares do Ementário.
+Este documento estabelece as regras oficiais da Biblioteca do IFSC, as diretrizes do **Sistema de Bibliotecas do IFSC (SIBI)** e o alinhamento com a autoridade de catalogação da **Fundação Biblioteca Nacional (Sophia Web / FBN)** aplicadas às seções de **Bibliografia Básica** e **Bibliografia Complementar** de todas as Unidades Curriculares do Ementário.
 
 ---
 
@@ -18,15 +18,38 @@ Este documento estabelece as regras oficiais da Biblioteca do IFSC e da norma AB
 
 ---
 
-## 2. Iniciais de Autores e Autoria
+## 2. Nomes dos Autores por Extenso (Autoridade Sophia Web / FBN)
 
-- As iniciais de prenomes de autores ou abreviações (ex.: `M. P.`, `S.`, `A.`) pertencem ao elemento de autoria e **nunca** devem ser capturadas dentro da tag de negrito do título.
-- **Exemplo Incorreto:** `CINTRA, M.; CUNHA, M. \textbf{P. Rotinas administrativas}.`
-- **Exemplo Correto:** `CINTRA, M.; CUNHA, M. P. \textbf{Rotinas administrativas}.`
+Em conformidade com a NBR 6023 e as recomendações do SIBI/IFSC para evitar ambiguidades de autoria no acervo institucional:
+- **Padrão Obrigatório:** Grafar **todos os prenomes dos autores por extenso**, reservando as iniciais apenas para o nome do meio quando for a forma consagrada da edição.
+- **Conformidade com a Biblioteca Nacional:** As entradas de autoridade devem espelhar o catálogo do Sophia Web da Fundação Biblioteca Nacional.
+
+### 📋 Exemplos de Padronização por Extenso:
+| 🔴 Incorreto / Abreviado | 🟢 Correto (Por Extenso / FBN) | Obra |
+| :--- | :--- | :--- |
+| `PROENÇA, G.` | `PROENÇA, Graça.` | *História da arte* |
+| `GOMBRICH, E. H.` | `GOMBRICH, Ernst Hans.` | *A história da arte* |
+| `LARAIA, R. de B.` | `LARAIA, Roque de Barros.` | *Cultura: um conceito antropológico* |
+| `CINTRA, M.; CUNHA, M. P.` | `CINTRA, Maria; CUNHA, Maria Paula.` | *Rotinas administrativas* |
+| `HERMOSO, A. G.` | `GONZÁLEZ HERMOSO, Alfredo.` | *Conjugar es fácil* |
+| `DANTE, L. R.` | `DANTE, Luiz Roberto.` | *Matemática: contexto e aplicações* |
+| `DIAS, Marco Aurélio P.` | `DIAS, Marco Aurélio Pereira.` | *Administração de materiais* |
+| `PALADINI, Edson P.` | `PALADINI, Edson Pacheco.` | *Gestão estratégica da qualidade* |
+| `MARTINS, Petrônio G.; LAUGENI, Fernando P.` | `MARTINS, Petrônio Garcia; LAUGENI, Fernando Piero.` | *Administração da produção* |
+| `HOBSBAWM, E. J.` | `HOBSBAWM, Eric John.` | *Era dos extremos* |
+| `GITMAN, Lawrence J.` | `GITMAN, Lawrence Jeffrey.` | *Princípios de administração financeira* |
+| `SARMENTO, Melo, M.` | `SARMENTO, Marlon Melo.` | *Gestão financeira por fluxo de caixa* |
 
 ---
 
-## 3. Uso Restrito de Itálico (*et al.*)
+## 3. Integridade das Tags de Autoria
+- As tags de formatação (`\textbf{...}`) **nunca devem capturar prenomes, sobrenomes ou iniciais de coautores**.
+- **Exemplo Incorreto:** `MANZANO, André Luiz N. \textbf{G.; MANZANO, Maria Izabel N. G. Estudo dirigido...}`
+- **Exemplo Correto:** `MANZANO, André Luiz N. G.; MANZANO, Maria Izabel N. G. \textbf{Estudo dirigido de informática básica}...`
+
+---
+
+## 4. Uso Restrito de Itálico (*et al.*)
 
 - O itálico **não deve ser utilizado** para destacar títulos de livros (no padrão IFSC para PPCs, utiliza-se negrito como elemento de destaque único).
 - A locução latina **et al.** deve ser grafada obrigatoriamente em itálico:
@@ -35,7 +58,7 @@ Este documento estabelece as regras oficiais da Biblioteca do IFSC e da norma AB
 
 ---
 
-## 4. Obras com Entrada por Título (Sem Autor Declarado)
+## 5. Obras com Entrada por Título (Sem Autor Declarado)
 
 - Quando a autoria for anônima ou a obra for coletiva de referência (dicionários, atlas, guias institucionais sem autor específico):
   - A primeira palavra do título é grafada em **MAIÚSCULAS (Caixa Alta)**.
@@ -44,7 +67,7 @@ Este documento estabelece as regras oficiais da Biblioteca do IFSC e da norma AB
 
 ---
 
-## 5. Ausência de Numeração Manual nas Listas
+## 6. Ausência de Numeração Manual nas Listas
 
 - As referências não devem conter marcadores numéricos manuais (`1.`, `2.`, `3.`) nem marcadores de lista não ordenada (`-`) no documento final em LaTeX.
 - As entradas são ordenadas alfabeticamente pelo sobrenome do primeiro autor ou primeira palavra do título e separadas pelo comando `\newline`.
