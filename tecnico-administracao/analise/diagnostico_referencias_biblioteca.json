@@ -1,0 +1,2916 @@
+[
+  {
+    "tabela": 1,
+    "uc": "Artes — Ano 1",
+    "tipo": "Básica",
+    "texto": "3{|p{\\dimexpr\\linewidth-2\\tabcolsep-2\\arrayrulewidth\\relax|{GOMBRICH, Ernst Hans. \\textbf{A história da arte. Tradução de Álvaro Cabral. 16. ed. Rio de Janeiro: Livros Técnicos e Científicos, 1999. 688 p. ISBN 9788521611851.",
+    "issues": [],
+    "has_initials": false,
+    "author_initials": "",
+    "has_isbn": true
+  },
+  {
+    "tabela": 1,
+    "uc": "Artes — Ano 1",
+    "tipo": "Básica",
+    "texto": "PROENÇA, Graça. \\textbf{História da arte. 17. ed. São Paulo: Ática, 2010.",
+    "issues": [],
+    "has_initials": false,
+    "author_initials": "",
+    "has_isbn": false
+  },
+  {
+    "tabela": 1,
+    "uc": "Artes — Ano 1",
+    "tipo": "Complementar",
+    "texto": "3{|p{\\dimexpr\\linewidth-2\\tabcolsep-2\\arrayrulewidth\\relax|{AGRA, Lucio. \\textbf{História da arte do século XX: idéias e movimentos. 2. ed. rev. atual. São Paulo: Anhembi, 2004. 192 p. ISBN 8587370146.",
+    "issues": [],
+    "has_initials": false,
+    "author_initials": "",
+    "has_isbn": true
+  },
+  {
+    "tabela": 1,
+    "uc": "Artes — Ano 1",
+    "tipo": "Complementar",
+    "texto": "CERTEAU, Michel de. \\textbf{A invenção do cotidiano: artes de fazer. Tradução de Ephraim Ferreira Alves. 16. ed. Petrópolis, RJ: Vozes, 2009. 315 p. ISBN 9788532611482.",
+    "issues": [],
+    "has_initials": false,
+    "author_initials": "",
+    "has_isbn": true
+  },
+  {
+    "tabela": 1,
+    "uc": "Artes — Ano 1",
+    "tipo": "Complementar",
+    "texto": "LARAIA, Roque de Barros. \\textbf{Cultura: um conceito antropológico. 26. reimp. Rio de Janeiro: Jorge Zahar, 1986.",
+    "issues": [],
+    "has_initials": false,
+    "author_initials": "",
+    "has_isbn": false
+  },
+  {
+    "tabela": 1,
+    "uc": "Artes — Ano 1",
+    "tipo": "Complementar",
+    "texto": "SOUZA, Ana Lúcia Silva. \\textbf{Letramentos de reexistência: poesia, grafite, música, dança : hip-hop. São Paulo: Parábola Editorial, 2011. 171 p. ISBN 9788579340321.",
+    "issues": [],
+    "has_initials": false,
+    "author_initials": "",
+    "has_isbn": true
+  },
+  {
+    "tabela": 2,
+    "uc": "Educação Física — Ano 1",
+    "tipo": "Básica",
+    "texto": "3{|p{\\dimexpr\\linewidth-2\\tabcolsep-2\\arrayrulewidth\\relax|{\\textbf{DICIONÁRIO crítico de educação física. 3. ed. rev. e ampl. Ijuí, RS: Ed. UNIJUÍ, 2014.",
+    "issues": [],
+    "has_initials": false,
+    "author_initials": "",
+    "has_isbn": false
+  },
+  {
+    "tabela": 2,
+    "uc": "Educação Física — Ano 1",
+    "tipo": "Básica",
+    "texto": "BERNARDES, Luciano Andrade (org.). \\textbf{Atividades e esportes de aventura para profissionais de educação física. São Paulo: Phorte, 2013.",
+    "issues": [],
+    "has_initials": false,
+    "author_initials": "",
+    "has_isbn": false
+  },
+  {
+    "tabela": 2,
+    "uc": "Educação Física — Ano 1",
+    "tipo": "Complementar",
+    "texto": "3{|p{\\dimexpr\\linewidth-2\\tabcolsep-2\\arrayrulewidth\\relax|{BRACHT, Valter. \\textbf{Sociologia crítica do esporte: uma introdução. 2. ed. Ijuí: Ed. da Unijuí, 2003.",
+    "issues": [],
+    "has_initials": false,
+    "author_initials": "",
+    "has_isbn": false
+  },
+  {
+    "tabela": 2,
+    "uc": "Educação Física — Ano 1",
+    "tipo": "Complementar",
+    "texto": "CAMARGO, Wagner Xavier de. \\textbf{Leituras de gênero e sexualidade nos esportes. São Carlos: EDUFSCAR, 2021.",
+    "issues": [],
+    "has_initials": false,
+    "author_initials": "",
+    "has_isbn": false
+  },
+  {
+    "tabela": 2,
+    "uc": "Educação Física — Ano 1",
+    "tipo": "Complementar",
+    "texto": "FOER, Franklin. \\textbf{Como o futebol explica o mundo: um olhar inesperado sobre a globalização. Rio de Janeiro: Jorge Zahar Editor, 2005.",
+    "issues": [],
+    "has_initials": false,
+    "author_initials": "",
+    "has_isbn": false
+  },
+  {
+    "tabela": 3,
+    "uc": "Inglês — Ano 1",
+    "tipo": "Básica",
+    "texto": "3{|p{\\dimexpr\\linewidth-2\\tabcolsep-2\\arrayrulewidth\\relax|{Livro didático fornecido pelo Fundo Nacional de Desenvolvimento da Educação (FNDE).",
+    "issues": [
+      "Ano de publicação ausente",
+      "Local de publicação e editora ausentes (sem ':')"
+    ],
+    "has_initials": false,
+    "author_initials": "",
+    "has_isbn": false
+  },
+  {
+    "tabela": 3,
+    "uc": "Inglês — Ano 1",
+    "tipo": "Básica",
+    "texto": "\\textbf{DICIONÁRIO Escolar Longman Inglês-Português, Português-Inglês. Harlow: Pearson Longman, 2004.",
+    "issues": [],
+    "has_initials": false,
+    "author_initials": "",
+    "has_isbn": false
+  },
+  {
+    "tabela": 3,
+    "uc": "Inglês — Ano 1",
+    "tipo": "Básica",
+    "texto": "LATHAM-KOENIG, Christina. \\textbf{English File: Intermediate Student's Book. Oxford: Oxford University Press, 2018.",
+    "issues": [],
+    "has_initials": false,
+    "author_initials": "",
+    "has_isbn": false
+  },
+  {
+    "tabela": 3,
+    "uc": "Inglês — Ano 1",
+    "tipo": "Complementar",
+    "texto": "3{|p{\\dimexpr\\linewidth-2\\tabcolsep-2\\arrayrulewidth\\relax|{FRANCO, C. P. \\textbf{English vibes for Brazilian learners: volume único. 1. ed. São Paulo: FTD, 2020.",
+    "issues": [],
+    "has_initials": false,
+    "author_initials": "",
+    "has_isbn": false
+  },
+  {
+    "tabela": 3,
+    "uc": "Inglês — Ano 1",
+    "tipo": "Complementar",
+    "texto": "MURPHY, Raymond. \\textbf{Essential Grammar in Use. 4th ed. Cambridge: Cambridge University Press, 2015.",
+    "issues": [],
+    "has_initials": false,
+    "author_initials": "",
+    "has_isbn": false
+  },
+  {
+    "tabela": 3,
+    "uc": "Inglês — Ano 1",
+    "tipo": "Complementar",
+    "texto": "WHARTON, Sue. \\textbf{500 tips for tesol: (teaching english to speakers of other languages). London: Kogan Page, 1999.",
+    "issues": [],
+    "has_initials": false,
+    "author_initials": "",
+    "has_isbn": false
+  },
+  {
+    "tabela": 4,
+    "uc": "Língua Portuguesa e Literatura — Ano 1",
+    "tipo": "Básica",
+    "texto": "3{|p{\\dimexpr\\linewidth-2\\tabcolsep-2\\arrayrulewidth\\relax|{BAGNO, Marcos. \\textbf{Nada na língua é por acaso: por uma pedagogia da variação linguística. 2. ed. São Paulo: Parábola Editorial, 2008. 238 p. ISBN 9788588456624.",
+    "issues": [],
+    "has_initials": false,
+    "author_initials": "",
+    "has_isbn": true
+  },
+  {
+    "tabela": 4,
+    "uc": "Língua Portuguesa e Literatura — Ano 1",
+    "tipo": "Básica",
+    "texto": "CUNHA, Celso; CINTRA, Luís Filipe Lindley. \\textbf{Nova gramática do português contemporâneo. 5. ed. Rio de Janeiro: Lexikon, 2008. 762 p.",
+    "issues": [],
+    "has_initials": false,
+    "author_initials": "",
+    "has_isbn": false
+  },
+  {
+    "tabela": 4,
+    "uc": "Língua Portuguesa e Literatura — Ano 1",
+    "tipo": "Básica",
+    "texto": "PRIETO, Heloisa (org.). \\textbf{Antologia de contos indígenas de ensinamento: tempo de histórias. São Paulo: Richmond Educação, 2021. 103 p. ISBN 9786557950104.",
+    "issues": [],
+    "has_initials": false,
+    "author_initials": "",
+    "has_isbn": true
+  },
+  {
+    "tabela": 4,
+    "uc": "Língua Portuguesa e Literatura — Ano 1",
+    "tipo": "Complementar",
+    "texto": "3{|p{\\dimexpr\\linewidth-2\\tabcolsep-2\\arrayrulewidth\\relax|{BAGNO, Marcos. \\textbf{Preconceito linguístico. 56. ed. rev. e ampl. São Paulo: Parábola Editorial, 2015. 350 p. ISBN 9788579340987.",
+    "issues": [],
+    "has_initials": false,
+    "author_initials": "",
+    "has_isbn": true
+  },
+  {
+    "tabela": 4,
+    "uc": "Língua Portuguesa e Literatura — Ano 1",
+    "tipo": "Complementar",
+    "texto": "BAGNO, Marcos. \\textbf{Gramática, pra que te quero?: os conhecimentos linguísticos nos livros didáticos de português. Curitiba: Aymará, 2010. 319 p. Bibliografia: p. 313-319. ISBN 9788578416201.",
+    "issues": [],
+    "has_initials": false,
+    "author_initials": "",
+    "has_isbn": true
+  },
+  {
+    "tabela": 5,
+    "uc": "Espanhol — Ano 1",
+    "tipo": "Básica",
+    "texto": "3{|p{\\dimexpr\\linewidth-2\\tabcolsep-2\\arrayrulewidth\\relax|{FANJUL, Adrián (org.). \\textbf{Gramática y práctica de español para brasileños. 2. ed. São Paulo: Moderna, 2011. 287 p. ISBN 9788516074272.",
+    "issues": [],
+    "has_initials": false,
+    "author_initials": "",
+    "has_isbn": true
+  },
+  {
+    "tabela": 5,
+    "uc": "Espanhol — Ano 1",
+    "tipo": "Básica",
+    "texto": "MORENO, Concha; TUTS, Martina. \\textbf{Cinco estrellas: español para el turismo. 2. ed. Madrid: SGEL, 2011. 223 p. ISBN 9788497784849.",
+    "issues": [],
+    "has_initials": false,
+    "author_initials": "",
+    "has_isbn": true
+  },
+  {
+    "tabela": 5,
+    "uc": "Espanhol — Ano 1",
+    "tipo": "Complementar",
+    "texto": "3{|p{\\dimexpr\\linewidth-2\\tabcolsep-2\\arrayrulewidth\\relax|{BALLESTERO-ALVAREZ, M. E.; BALBÁS, M. S. \\textbf{Minidicionário: espanhol-português, português-espanhol. São Paulo: FTD, 2007.",
+    "issues": [],
+    "has_initials": false,
+    "author_initials": "",
+    "has_isbn": false
+  },
+  {
+    "tabela": 5,
+    "uc": "Espanhol — Ano 1",
+    "tipo": "Complementar",
+    "texto": "GONZÁLEZ HERMOSO, Alfredo. \\textbf{Conjugar: verbos de España y de América. Madrid: Edelsa Grupo Didascalia, 2011. 318 p. ISBN 9788477117186.",
+    "issues": [],
+    "has_initials": false,
+    "author_initials": "",
+    "has_isbn": true
+  },
+  {
+    "tabela": 5,
+    "uc": "Espanhol — Ano 1",
+    "tipo": "Complementar",
+    "texto": "GONZÁLEZ HERMOSO, Alfredo. \\textbf{Conjugar es fácil. Madrid: Edelsa, 1997.",
+    "issues": [],
+    "has_initials": false,
+    "author_initials": "",
+    "has_isbn": false
+  },
+  {
+    "tabela": 5,
+    "uc": "Espanhol — Ano 1",
+    "tipo": "Complementar",
+    "texto": "PEREZ, Aquilino Sanches. \\textbf{Diccionario básico de la lengua española. Madrid: SGEL, 1987.",
+    "issues": [],
+    "has_initials": false,
+    "author_initials": "",
+    "has_isbn": false
+  },
+  {
+    "tabela": 6,
+    "uc": "Biologia — Ano 1",
+    "tipo": "Básica",
+    "texto": "3{|p{\\dimexpr\\linewidth-2\\tabcolsep-2\\arrayrulewidth\\relax|{JUNQUEIRA, Luiz Carlos Uchoa; CARNEIRO, José. \\textbf{Biologia celular e molecular. 9. ed. Rio de Janeiro: Guanabara Koogan, 2012. 364 p. ISBN 9788527720786.",
+    "issues": [],
+    "has_initials": false,
+    "author_initials": "",
+    "has_isbn": true
+  },
+  {
+    "tabela": 6,
+    "uc": "Biologia — Ano 1",
+    "tipo": "Básica",
+    "texto": "Livro didático fornecido pelo Fundo Nacional de Desenvolvimento da Educação (FNDE).",
+    "issues": [
+      "Ano de publicação ausente",
+      "Local de publicação e editora ausentes (sem ':')"
+    ],
+    "has_initials": false,
+    "author_initials": "",
+    "has_isbn": false
+  },
+  {
+    "tabela": 6,
+    "uc": "Biologia — Ano 1",
+    "tipo": "Básica",
+    "texto": "SADAVA, David \\textit{et al. \\textbf{Vida: a ciência da biologia: volume 1: célula e hereditariedade. 8. ed. Porto Alegre: Artmed, 2009. 461 p. ISBN 9788536319216.",
+    "issues": [],
+    "has_initials": false,
+    "author_initials": "",
+    "has_isbn": true
+  },
+  {
+    "tabela": 6,
+    "uc": "Biologia — Ano 1",
+    "tipo": "Complementar",
+    "texto": "3{|p{\\dimexpr\\linewidth-2\\tabcolsep-2\\arrayrulewidth\\relax|{BRUCE, Alberts \\textit{et al. \\textbf{Biologia molecular da célula. 6. ed. Porto Alegre: Artmed, 2017. 1427 p. ISBN 9788582714225.",
+    "issues": [],
+    "has_initials": false,
+    "author_initials": "",
+    "has_isbn": true
+  },
+  {
+    "tabela": 6,
+    "uc": "Biologia — Ano 1",
+    "tipo": "Complementar",
+    "texto": "CAMPBELL, Mary K.; FARRELL, Shawn O. \\textbf{Bioquímica. 2. ed. São Paulo: Cengage Learning, 2016. 812 p. ISBN 9788522118700.",
+    "issues": [
+      "Prenome abreviado por inicial (Mary K.)"
+    ],
+    "has_initials": true,
+    "author_initials": "Mary K",
+    "has_isbn": true
+  },
+  {
+    "tabela": 6,
+    "uc": "Biologia — Ano 1",
+    "tipo": "Complementar",
+    "texto": "KIERSZENBAUM, Abraham L.; TRES, Laura L. \\textbf{Histologia e biologia celular: uma introdução à patologia. 3. ed. Rio de Janeiro: Elsevier, 2012. 699 p. ISBN 9788535247374.",
+    "issues": [
+      "Prenome abreviado por inicial (Abraham L.)"
+    ],
+    "has_initials": true,
+    "author_initials": "Abraham L",
+    "has_isbn": true
+  },
+  {
+    "tabela": 7,
+    "uc": "Física — Ano 1",
+    "tipo": "Básica",
+    "texto": "3{|p{\\dimexpr\\linewidth-2\\tabcolsep-2\\arrayrulewidth\\relax|{HEWITT, Paul G. \\textbf{Física conceitual. 12. ed. Porto Alegre: Bookman, 2015.",
+    "issues": [],
+    "has_initials": false,
+    "author_initials": "",
+    "has_isbn": false
+  },
+  {
+    "tabela": 7,
+    "uc": "Física — Ano 1",
+    "tipo": "Básica",
+    "texto": "Livro didático fornecido pelo Fundo Nacional de Desenvolvimento da Educação (FNDE).",
+    "issues": [
+      "Ano de publicação ausente",
+      "Local de publicação e editora ausentes (sem ':')"
+    ],
+    "has_initials": false,
+    "author_initials": "",
+    "has_isbn": false
+  },
+  {
+    "tabela": 7,
+    "uc": "Física — Ano 1",
+    "tipo": "Básica",
+    "texto": "LUZ, Antônio Máximo Ribeiro da; ALVARENGA, Beatriz Gonçalves de. \\textbf{Curso de física, volume 1. 6. ed. rev. ampl. São Paulo: Scipione, 2006.",
+    "issues": [],
+    "has_initials": false,
+    "author_initials": "",
+    "has_isbn": false
+  },
+  {
+    "tabela": 7,
+    "uc": "Física — Ano 1",
+    "tipo": "Complementar",
+    "texto": "3{|p{\\dimexpr\\linewidth-2\\tabcolsep-2\\arrayrulewidth\\relax|{BARRETO FILHO, Benigno; SILVA, Cláudio Xavier da. \\textbf{360º: física: aula por aula: volume único. 3. ed. São Paulo: FTD, 2015.",
+    "issues": [],
+    "has_initials": false,
+    "author_initials": "",
+    "has_isbn": false
+  },
+  {
+    "tabela": 7,
+    "uc": "Física — Ano 1",
+    "tipo": "Complementar",
+    "texto": "KNIGHT, Randall D. \\textbf{Física: uma abordagem estratégica: volume 1: mecânica newtoniana, gravitação, oscilações e ondas. Tradução de Trieste Freire Ricci. 2. ed. Porto Alegre: Bookman, 2009.",
+    "issues": [
+      "Prenome abreviado por inicial (Randall D.)"
+    ],
+    "has_initials": true,
+    "author_initials": "Randall D",
+    "has_isbn": false
+  },
+  {
+    "tabela": 7,
+    "uc": "Física — Ano 1",
+    "tipo": "Complementar",
+    "texto": "YAMAMOTO, Kazuhito; FUKE, Luiz Felipe. \\textbf{Física para o ensino médio 1: mecânica. 3. ed. São Paulo: Saraiva, 2013.",
+    "issues": [],
+    "has_initials": false,
+    "author_initials": "",
+    "has_isbn": false
+  },
+  {
+    "tabela": 8,
+    "uc": "Matemática — Ano 1",
+    "tipo": "Básica",
+    "texto": "3{|p{\\dimexpr\\linewidth-2\\tabcolsep-2\\arrayrulewidth\\relax|{BONJORNO, José Roberto; GIOVANNI JÚNIOR, José Ruy; GIOVANNI, José Ruy. \\textbf{Matemática fundamental: uma nova abordagem: ensino médio: 1° ano. 3. ed. São Paulo: FTD, 2013. 560 p.",
+    "issues": [],
+    "has_initials": false,
+    "author_initials": "",
+    "has_isbn": false
+  },
+  {
+    "tabela": 8,
+    "uc": "Matemática — Ano 1",
+    "tipo": "Básica",
+    "texto": "DANTE, Luiz Roberto. \\textbf{Projeto Múltiplo: matemática: ensino médio: 1° ano. São Paulo: Ática, 2014. 240 p.",
+    "issues": [],
+    "has_initials": false,
+    "author_initials": "",
+    "has_isbn": false
+  },
+  {
+    "tabela": 8,
+    "uc": "Matemática — Ano 1",
+    "tipo": "Básica",
+    "texto": "GIOVANNI, José Ruy; GIOVANNI JÚNIOR, José Ruy; BONJORNO, José Roberto; SOUZA, Paulo Roberto C. \\textbf{360º matemática fundamental: uma nova abordagem: parte I, II, III, volume único. 2. ed. São Paulo: FTD, 2015. 283 p.",
+    "issues": [
+      "Prenome abreviado por inicial (José Ruy; GIOVANNI JÚNIOR, José Ruy; BONJORNO, José Roberto; SOUZA, Paulo Roberto C.)"
+    ],
+    "has_initials": true,
+    "author_initials": "José Ruy; GIOVANNI JÚNIOR, José Ruy; BONJORNO, José Roberto; SOUZA, Paulo Roberto C",
+    "has_isbn": false
+  },
+  {
+    "tabela": 8,
+    "uc": "Matemática — Ano 1",
+    "tipo": "Complementar",
+    "texto": "3{|p{\\dimexpr\\linewidth-2\\tabcolsep-2\\arrayrulewidth\\relax|{LIMA, E. L.; CARVALHO, Paulo Cesar P. \\textbf{A Matemática do ensino médio: volume único. 7. ed. Rio de Janeiro: SBM, 2016. v. 2.",
+    "issues": [],
+    "has_initials": false,
+    "author_initials": "",
+    "has_isbn": false
+  },
+  {
+    "tabela": 8,
+    "uc": "Matemática — Ano 1",
+    "tipo": "Complementar",
+    "texto": "PAIVA, Manoel. \\textbf{Matemática: Paiva: 1º ano. 2. ed. São Paulo: Moderna, 2013. 304 p.",
+    "issues": [],
+    "has_initials": false,
+    "author_initials": "",
+    "has_isbn": false
+  },
+  {
+    "tabela": 9,
+    "uc": "Química — Ano 1",
+    "tipo": "Básica",
+    "texto": "3{|p{\\dimexpr\\linewidth-2\\tabcolsep-2\\arrayrulewidth\\relax|{CHANG, Raymond. \\textbf{Química geral: conceitos essenciais. Tradução de Maria José Ferreira Rebelo. 4. ed. Porto Alegre: AMGH, 2010. 778 p. ISBN 9788563308047.",
+    "issues": [],
+    "has_initials": false,
+    "author_initials": "",
+    "has_isbn": true
+  },
+  {
+    "tabela": 9,
+    "uc": "Química — Ano 1",
+    "tipo": "Básica",
+    "texto": "FELTRE, Ricardo. \\textbf{Química 1: química geral. Colaboração de Ricardo Arissa Feltre. 7. ed. São Paulo: Moderna, 2008. v. 1. 527 p. ISBN 9788516061111.",
+    "issues": [],
+    "has_initials": false,
+    "author_initials": "",
+    "has_isbn": true
+  },
+  {
+    "tabela": 9,
+    "uc": "Química — Ano 1",
+    "tipo": "Básica",
+    "texto": "FRANCO, Dalton. \\textbf{360º: química: cotidiano e transformações: volume único. São Paulo: FTD, 2015. 3 v. ISBN 9788596001113.",
+    "issues": [],
+    "has_initials": false,
+    "author_initials": "",
+    "has_isbn": true
+  },
+  {
+    "tabela": 9,
+    "uc": "Química — Ano 1",
+    "tipo": "Básica",
+    "texto": "PERUZZO, Francisco Miragaia; CANTO, Eduardo Leite do. \\textbf{Química na abordagem do cotidiano: volume único. 3. ed. São Paulo: Moderna, 2007. 760 p. ISBN 9788516056612.",
+    "issues": [],
+    "has_initials": false,
+    "author_initials": "",
+    "has_isbn": true
+  },
+  {
+    "tabela": 9,
+    "uc": "Química — Ano 1",
+    "tipo": "Complementar",
+    "texto": "3{|p{\\dimexpr\\linewidth-2\\tabcolsep-2\\arrayrulewidth\\relax|{ATKINS, Peter William; JONES, Loretta. \\textbf{Princípios de química: questionando a vida moderna e o meio ambiente. Tradução de Ricardo Bicca de Alencastro. 5. ed. Porto Alegre: Bookman, 2012. 922 p. ISBN 9788540700383.",
+    "issues": [],
+    "has_initials": false,
+    "author_initials": "",
+    "has_isbn": true
+  },
+  {
+    "tabela": 9,
+    "uc": "Química — Ano 1",
+    "tipo": "Complementar",
+    "texto": "BRADY, James E.; HUMISTON, Gerard E. \\textbf{Química geral. 2. ed. Rio de Janeiro: LTC, 2011. v. 1. 424 p. ISBN 9788521604488.",
+    "issues": [
+      "Prenome abreviado por inicial (James E.)"
+    ],
+    "has_initials": true,
+    "author_initials": "James E",
+    "has_isbn": true
+  },
+  {
+    "tabela": 9,
+    "uc": "Química — Ano 1",
+    "tipo": "Complementar",
+    "texto": "USBERCO, João; SALVADOR, Edgard. \\textbf{Química: volume único. 5. ed. reform. São Paulo: Saraiva, 2002. 672 p. ISBN 8502040278.",
+    "issues": [],
+    "has_initials": false,
+    "author_initials": "",
+    "has_isbn": true
+  },
+  {
+    "tabela": 10,
+    "uc": "Filosofia — Ano 1",
+    "tipo": "Básica",
+    "texto": "3{|p{\\dimexpr\\linewidth-2\\tabcolsep-2\\arrayrulewidth\\relax|{ARANHA, M. L. A.; MARTINS, M. H. P. \\textbf{Filosofando: introdução à filosofia. São Paulo: Moderna, 1993.",
+    "issues": [],
+    "has_initials": false,
+    "author_initials": "",
+    "has_isbn": false
+  },
+  {
+    "tabela": 10,
+    "uc": "Filosofia — Ano 1",
+    "tipo": "Básica",
+    "texto": "CHAUÍ, Marilena. \\textbf{Convite à filosofia. 13. ed. São Paulo: Ática, 2009.",
+    "issues": [],
+    "has_initials": false,
+    "author_initials": "",
+    "has_isbn": false
+  },
+  {
+    "tabela": 10,
+    "uc": "Filosofia — Ano 1",
+    "tipo": "Complementar",
+    "texto": "3{|p{\\dimexpr\\linewidth-2\\tabcolsep-2\\arrayrulewidth\\relax|{GAARDER, Jostein. \\textbf{O mundo de Sofia: romance da história da filosofia. São Paulo: Seguinte, 2012.",
+    "issues": [],
+    "has_initials": false,
+    "author_initials": "",
+    "has_isbn": false
+  },
+  {
+    "tabela": 10,
+    "uc": "Filosofia — Ano 1",
+    "tipo": "Complementar",
+    "texto": "MARCONDES, Danilo. \\textbf{Textos básicos de filosofia: dos pré-socráticos a Wittgenstein. Rio de Janeiro: Jorge Zahar, 2000.",
+    "issues": [],
+    "has_initials": false,
+    "author_initials": "",
+    "has_isbn": false
+  },
+  {
+    "tabela": 11,
+    "uc": "Geografia — Ano 1",
+    "tipo": "Básica",
+    "texto": "3{|p{\\dimexpr\\linewidth-2\\tabcolsep-2\\arrayrulewidth\\relax|{ROSS, Jurandyr L. Sanches (org.). \\textbf{Geografia do Brasil. 6. ed. São Paulo: EDUSP, 2011. 600 p.",
+    "issues": [],
+    "has_initials": false,
+    "author_initials": "",
+    "has_isbn": false
+  },
+  {
+    "tabela": 11,
+    "uc": "Geografia — Ano 1",
+    "tipo": "Básica",
+    "texto": "VESENTINI, José William. \\textbf{Geografia: o mundo em transição. 2. ed. São Paulo: Ática, 2014. 416 p.",
+    "issues": [],
+    "has_initials": false,
+    "author_initials": "",
+    "has_isbn": false
+  },
+  {
+    "tabela": 11,
+    "uc": "Geografia — Ano 1",
+    "tipo": "Básica",
+    "texto": "MENDONÇA, Francisco; DANNI-OLIVEIRA, Inês Moresco. \\textbf{Climatologia: noções básicas e climas do Brasil. São Paulo: Oficina de Textos, 2007. 208 p.",
+    "issues": [],
+    "has_initials": false,
+    "author_initials": "",
+    "has_isbn": false
+  },
+  {
+    "tabela": 11,
+    "uc": "Geografia — Ano 1",
+    "tipo": "Complementar",
+    "texto": "3{|p{\\dimexpr\\linewidth-2\\tabcolsep-2\\arrayrulewidth\\relax|{MOREIRA, Ruy. \\textbf{O pensamento geográfico brasileiro. 2. ed. São Paulo: Contexto, 2014. 224 p.",
+    "issues": [],
+    "has_initials": false,
+    "author_initials": "",
+    "has_isbn": false
+  },
+  {
+    "tabela": 11,
+    "uc": "Geografia — Ano 1",
+    "tipo": "Complementar",
+    "texto": "SANTOS, Milton. \\textbf{Por uma outra globalização: do pensamento único à consciência universal. 18. ed. Rio de Janeiro: Record, 2009. 174 p.",
+    "issues": [],
+    "has_initials": false,
+    "author_initials": "",
+    "has_isbn": false
+  },
+  {
+    "tabela": 11,
+    "uc": "Geografia — Ano 1",
+    "tipo": "Complementar",
+    "texto": "ALMEIDA, Lúcia Marina Alves de; RIGOLIN, Tércio Barbosa. \\textbf{Fronteiras da Geografia. São Paulo: Ática, 2017. 384 p.",
+    "issues": [],
+    "has_initials": false,
+    "author_initials": "",
+    "has_isbn": false
+  },
+  {
+    "tabela": 12,
+    "uc": "Sociologia — Ano 1",
+    "tipo": "Básica",
+    "texto": "3{|p{\\dimexpr\\linewidth-2\\tabcolsep-2\\arrayrulewidth\\relax|{Livro didático fornecido pelo Fundo Nacional de Desenvolvimento da Educação (FNDE).",
+    "issues": [
+      "Ano de publicação ausente",
+      "Local de publicação e editora ausentes (sem ':')"
+    ],
+    "has_initials": false,
+    "author_initials": "",
+    "has_isbn": false
+  },
+  {
+    "tabela": 12,
+    "uc": "Sociologia — Ano 1",
+    "tipo": "Básica",
+    "texto": "OLIVEIRA, Pérsio Santos de. \\textbf{Introdução à Sociologia: Série Brasil. São Paulo: Editora Ática, 2011.",
+    "issues": [],
+    "has_initials": false,
+    "author_initials": "",
+    "has_isbn": false
+  },
+  {
+    "tabela": 12,
+    "uc": "Sociologia — Ano 1",
+    "tipo": "Complementar",
+    "texto": "3{|p{\\dimexpr\\linewidth-2\\tabcolsep-2\\arrayrulewidth\\relax|{COSTA, Maria Cristina. \\textbf{Sociologia: introdução à ciência da sociedade. 5. ed. São Paulo: Editora Moderna, 2016.",
+    "issues": [],
+    "has_initials": false,
+    "author_initials": "",
+    "has_isbn": false
+  },
+  {
+    "tabela": 12,
+    "uc": "Sociologia — Ano 1",
+    "tipo": "Complementar",
+    "texto": "HELENA, Bomeny \\textit{et al. \\textbf{Tempos Modernos, tempos de sociologia. 4. ed. São Paulo: Ed. do Brasil, 2016.",
+    "issues": [],
+    "has_initials": false,
+    "author_initials": "",
+    "has_isbn": false
+  },
+  {
+    "tabela": 12,
+    "uc": "Sociologia — Ano 1",
+    "tipo": "Complementar",
+    "texto": "OLIVEIRA, Luiz Fernandes de; COSTA, Ricardo Cesar Rocha da. \\textbf{Sociologia para jovens do século XXI. Rio de Janeiro: Imperial Novo Milênio, 2013.",
+    "issues": [],
+    "has_initials": false,
+    "author_initials": "",
+    "has_isbn": false
+  },
+  {
+    "tabela": 13,
+    "uc": "Introdução à Administração",
+    "tipo": "Básica",
+    "texto": "3{|p{\\dimexpr\\linewidth-2\\tabcolsep-2\\arrayrulewidth\\relax|{DIAS, Reinaldo; ZAVAGLIA, Tércia; CASSAR, Maurício. \\textbf{Introdução à administração: da competitividade à sustentabilidade. 3. ed. rev. Campinas, SP: Alínea, 2013. 250 p. ISBN 9788575166659.",
+    "issues": [],
+    "has_initials": false,
+    "author_initials": "",
+    "has_isbn": true
+  },
+  {
+    "tabela": 13,
+    "uc": "Introdução à Administração",
+    "tipo": "Básica",
+    "texto": "MAXIMIANO, Antonio Cesar Amaru. \\textbf{Introdução à administração. 8. ed. rev. e ampl. São Paulo: Atlas, 2011. 419 p. ISBN 9788522462889.",
+    "issues": [],
+    "has_initials": false,
+    "author_initials": "",
+    "has_isbn": true
+  },
+  {
+    "tabela": 13,
+    "uc": "Introdução à Administração",
+    "tipo": "Complementar",
+    "texto": "3{|p{\\dimexpr\\linewidth-2\\tabcolsep-2\\arrayrulewidth\\relax|{CHIAVENATO, Idalberto. \\textbf{Administração nos novos tempos. 2. ed. rev. e atual. Rio de Janeiro: Elsevier, 2010. 610 p. ISBN 9788535237719.",
+    "issues": [],
+    "has_initials": false,
+    "author_initials": "",
+    "has_isbn": true
+  },
+  {
+    "tabela": 13,
+    "uc": "Introdução à Administração",
+    "tipo": "Complementar",
+    "texto": "LACOMBE, Francisco José Masset; HEILBORN, Gilberto Luiz José. \\textbf{Administração: princípios e tendências. 3. ed. São Paulo: Saraiva, 2015. 545 p. ISBN 9788502634480.",
+    "issues": [],
+    "has_initials": false,
+    "author_initials": "",
+    "has_isbn": true
+  },
+  {
+    "tabela": 13,
+    "uc": "Introdução à Administração",
+    "tipo": "Complementar",
+    "texto": "NASCIMENTO, Edson Ronaldo. \\textbf{Gestão Pública. São Paulo: Saraiva, 2010.",
+    "issues": [],
+    "has_initials": false,
+    "author_initials": "",
+    "has_isbn": false
+  },
+  {
+    "tabela": 14,
+    "uc": "Sociedade e Trabalho",
+    "tipo": "Básica",
+    "texto": "3{|p{\\dimexpr\\linewidth-2\\tabcolsep-2\\arrayrulewidth\\relax|{ANTUNES, Ricardo. \\textbf{Os sentidos do trabalho: ensaio sobre a afirmação e a negação do trabalho. 2. ed. São Paulo: Boitempo, 2009.",
+    "issues": [],
+    "has_initials": false,
+    "author_initials": "",
+    "has_isbn": false
+  },
+  {
+    "tabela": 14,
+    "uc": "Sociedade e Trabalho",
+    "tipo": "Básica",
+    "texto": "DE MASI, Domenico. \\textbf{O futuro do trabalho: fadiga e ócio na sociedade pós-industrial. 5. ed. Rio de Janeiro: José Olympio, 2001.",
+    "issues": [],
+    "has_initials": false,
+    "author_initials": "",
+    "has_isbn": false
+  },
+  {
+    "tabela": 14,
+    "uc": "Sociedade e Trabalho",
+    "tipo": "Básica",
+    "texto": "OLIVEIRA, Pérsio Santos de. \\textbf{Introdução à Sociologia: Série Brasil. São Paulo: Ática, 2011.",
+    "issues": [],
+    "has_initials": false,
+    "author_initials": "",
+    "has_isbn": false
+  },
+  {
+    "tabela": 14,
+    "uc": "Sociedade e Trabalho",
+    "tipo": "Complementar",
+    "texto": "3{|p{\\dimexpr\\linewidth-2\\tabcolsep-2\\arrayrulewidth\\relax|{GORZ, André. \\textbf{Metamorfoses do trabalho: crítica da razão econômica. São Paulo: Annablume, 2003.",
+    "issues": [],
+    "has_initials": false,
+    "author_initials": "",
+    "has_isbn": false
+  },
+  {
+    "tabela": 14,
+    "uc": "Sociedade e Trabalho",
+    "tipo": "Complementar",
+    "texto": "KONDER, Leandro. \\textbf{O futuro da filosofia da práxis. Rio de Janeiro: Paz e Terra, 1992.",
+    "issues": [],
+    "has_initials": false,
+    "author_initials": "",
+    "has_isbn": false
+  },
+  {
+    "tabela": 14,
+    "uc": "Sociedade e Trabalho",
+    "tipo": "Complementar",
+    "texto": "MARX, Karl. \\textbf{O capital: crítica da economia política: Livro I. São Paulo: Boitempo, 2013.",
+    "issues": [],
+    "has_initials": false,
+    "author_initials": "",
+    "has_isbn": false
+  },
+  {
+    "tabela": 15,
+    "uc": "Gestão de Marketing I",
+    "tipo": "Básica",
+    "texto": "3{|p{\\dimexpr\\linewidth-2\\tabcolsep-2\\arrayrulewidth\\relax|{KOTLER, Philip; KELLER, Kevin Lane. \\textbf{Administração de marketing. 12. ed. 5. reimp. São Paulo: Pearson Prentice Hall, 2010.",
+    "issues": [],
+    "has_initials": false,
+    "author_initials": "",
+    "has_isbn": false
+  },
+  {
+    "tabela": 15,
+    "uc": "Gestão de Marketing I",
+    "tipo": "Básica",
+    "texto": "LAS CASAS, Alexandre Luzzi. \\textbf{Marketing Digital. Rio de Janeiro: Atlas, 2021.",
+    "issues": [],
+    "has_initials": false,
+    "author_initials": "",
+    "has_isbn": false
+  },
+  {
+    "tabela": 15,
+    "uc": "Gestão de Marketing I",
+    "tipo": "Complementar",
+    "texto": "3{|p{\\dimexpr\\linewidth-2\\tabcolsep-2\\arrayrulewidth\\relax|{ARBACHE, Fernando Saba. \\textbf{Gestão de logística, distribuição e trade marketing. 4. ed. Rio de Janeiro: FGV Ed., 2011.",
+    "issues": [],
+    "has_initials": false,
+    "author_initials": "",
+    "has_isbn": false
+  },
+  {
+    "tabela": 15,
+    "uc": "Gestão de Marketing I",
+    "tipo": "Complementar",
+    "texto": "DANTAS, Edmundo Brandão. \\textbf{Atendimento ao público nas organizações: quando o marketing de serviços mostra a cara. 5. ed. Brasília, DF: Senac-DF, 2011.",
+    "issues": [],
+    "has_initials": false,
+    "author_initials": "",
+    "has_isbn": false
+  },
+  {
+    "tabela": 15,
+    "uc": "Gestão de Marketing I",
+    "tipo": "Complementar",
+    "texto": "KOTLER, Philip; ARMSTRONG, Gary. \\textbf{Princípios de marketing. Tradução de Sabrina Cairo. 15. ed. São Paulo: Pearson Education do Brasil, 2015.",
+    "issues": [],
+    "has_initials": false,
+    "author_initials": "",
+    "has_isbn": false
+  },
+  {
+    "tabela": 15,
+    "uc": "Gestão de Marketing I",
+    "tipo": "Complementar",
+    "texto": "LAS CASAS, Alexandre Luzzi. \\textbf{Marketing: conceitos, exercícios, casos. 9. ed. São Paulo: Atlas, 2017.",
+    "issues": [],
+    "has_initials": false,
+    "author_initials": "",
+    "has_isbn": false
+  },
+  {
+    "tabela": 16,
+    "uc": "Organização e Processos",
+    "tipo": "Básica",
+    "texto": "3{|p{\\dimexpr\\linewidth-2\\tabcolsep-2\\arrayrulewidth\\relax|{ARAÚJO, Luiz Cesar G. de. \\textbf{Organização, sistemas e métodos. São Paulo: Atlas, 2010.",
+    "issues": [],
+    "has_initials": false,
+    "author_initials": "",
+    "has_isbn": false
+  },
+  {
+    "tabela": 16,
+    "uc": "Organização e Processos",
+    "tipo": "Básica",
+    "texto": "CRUZ, Tadeu. \\textbf{Processos organizacionais e métodos. 5. ed. São Paulo: Atlas, 2021.",
+    "issues": [],
+    "has_initials": false,
+    "author_initials": "",
+    "has_isbn": false
+  },
+  {
+    "tabela": 16,
+    "uc": "Organização e Processos",
+    "tipo": "Básica",
+    "texto": "BERNARDI, Luiz Antonio. \\textbf{Manual de empreendedorismo e gestão: fundamentos, estratégias e dinâmicas. 2. ed. São Paulo: Atlas, 2012.",
+    "issues": [],
+    "has_initials": false,
+    "author_initials": "",
+    "has_isbn": false
+  },
+  {
+    "tabela": 16,
+    "uc": "Organização e Processos",
+    "tipo": "Complementar",
+    "texto": "3{|p{\\dimexpr\\linewidth-2\\tabcolsep-2\\arrayrulewidth\\relax|{CHIAVENATO, Idalberto. \\textbf{Administração para não administradores: a gestão de negócios ao alcance de todos. 2. ed. rev. e atual. Barueri: Manole, 2011.",
+    "issues": [],
+    "has_initials": false,
+    "author_initials": "",
+    "has_isbn": false
+  },
+  {
+    "tabela": 16,
+    "uc": "Organização e Processos",
+    "tipo": "Complementar",
+    "texto": "CINTRA, Maria; CUNHA, Maria Paula. \\textbf{Rotinas administrativas. São Paulo: KCM, 2008.",
+    "issues": [],
+    "has_initials": false,
+    "author_initials": "",
+    "has_isbn": false
+  },
+  {
+    "tabela": 16,
+    "uc": "Organização e Processos",
+    "tipo": "Complementar",
+    "texto": "FARIAS, Cláudio Vinícius Silva (org.). \\textbf{Técnico em administração: gestão e negócios. Porto Alegre: Bookman, 2013.",
+    "issues": [],
+    "has_initials": false,
+    "author_initials": "",
+    "has_isbn": false
+  },
+  {
+    "tabela": 17,
+    "uc": "Informática Aplicada",
+    "tipo": "Básica",
+    "texto": "3{|p{\\dimexpr\\linewidth-2\\tabcolsep-2\\arrayrulewidth\\relax|{CAPRON, H. \\textbf{L.; JOHNSON, J. A. Introdução à informática. Tradução de José Carlos Barbosa dos Santos. 8. ed. São Paulo: Pearson Prentice Hall, 2004.",
+    "issues": [],
+    "has_initials": false,
+    "author_initials": "",
+    "has_isbn": false
+  },
+  {
+    "tabela": 17,
+    "uc": "Informática Aplicada",
+    "tipo": "Básica",
+    "texto": "MANZANO, André Luiz N. G.; MANZANO, Maria Izabel N. G. \\textbf{Estudo dirigido de informática básica. 7. ed. atual., rev. e ampl. São Paulo: Érica, 2007.",
+    "issues": [
+      "Prenome abreviado por inicial (André Luiz N.)"
+    ],
+    "has_initials": true,
+    "author_initials": "André Luiz N",
+    "has_isbn": false
+  },
+  {
+    "tabela": 17,
+    "uc": "Informática Aplicada",
+    "tipo": "Complementar",
+    "texto": "3{|p{\\dimexpr\\linewidth-2\\tabcolsep-2\\arrayrulewidth\\relax|{CERT.BR. \\textbf{Cartilha de Segurança para Internet: fascículos. [S. l.]: CERT.br, [s. d.]. Disponível em: https://cartilha.cert.br/fasciculos/.",
+    "issues": [
+      "Ano de publicação ausente"
+    ],
+    "has_initials": false,
+    "author_initials": "",
+    "has_isbn": false
+  },
+  {
+    "tabela": 17,
+    "uc": "Informática Aplicada",
+    "tipo": "Complementar",
+    "texto": "CORNACHIONE JÚNIOR, Edgard Bruno. \\textbf{Informática aplicada às áreas de contabilidade, administração e economia. 4. ed. Rio de Janeiro: Atlas, 2012. E-book. ISBN 9788522494651.",
+    "issues": [],
+    "has_initials": false,
+    "author_initials": "",
+    "has_isbn": true
+  },
+  {
+    "tabela": 17,
+    "uc": "Informática Aplicada",
+    "tipo": "Complementar",
+    "texto": "LIBREOFFICE. \\textbf{Guia do LibreOffice. [s.l.]: The Document Foundation, 2025. Disponível em: https://books.libreoffice.org/pt-br/.",
+    "issues": [],
+    "has_initials": false,
+    "author_initials": "",
+    "has_isbn": false
+  },
+  {
+    "tabela": 17,
+    "uc": "Informática Aplicada",
+    "tipo": "Complementar",
+    "texto": "MARTY, Nicolas. \\textbf{Inteligência artificial - O futuro é agora: dialogar com a IA. [S.l.]: Publicação independente, 2023. ISBN 9798857441145.",
+    "issues": [],
+    "has_initials": false,
+    "author_initials": "",
+    "has_isbn": true
+  },
+  {
+    "tabela": 17,
+    "uc": "Informática Aplicada",
+    "tipo": "Complementar",
+    "texto": "OLIVEIRA, Rômulo Silva de; CARISSIMI, Alexandre da Silva; TOSCANI, Simão Sirineo. \\textbf{Sistemas operacionais. 4. ed. Porto Alegre: Bookman: Instituto de Informática da UFRGS, 2010.",
+    "issues": [],
+    "has_initials": false,
+    "author_initials": "",
+    "has_isbn": false
+  },
+  {
+    "tabela": 17,
+    "uc": "Informática Aplicada",
+    "tipo": "Complementar",
+    "texto": "SILVA, Mário Gomes da. \\textbf{Informática - Terminologia - Microsoft Windows 8 - Internet - Segurança - Microsoft Word 2013 - Microsoft Excel 2013 - Microsoft PowerPoint 2013 - Microsoft Access 2013. Rio de Janeiro: Érica, 2013. E-book. ISBN 9788536519319.",
+    "issues": [],
+    "has_initials": false,
+    "author_initials": "",
+    "has_isbn": true
+  },
+  {
+    "tabela": 18,
+    "uc": "Artes — Ano 2",
+    "tipo": "Básica",
+    "texto": "3{|p{\\dimexpr\\linewidth-2\\tabcolsep-2\\arrayrulewidth\\relax|{CONDURU, Roberto. \\textbf{Arte afro-brasileira. Belo Horizonte: C/Arte, 2007. 126 p. ISBN 9788576540472.",
+    "issues": [],
+    "has_initials": false,
+    "author_initials": "",
+    "has_isbn": true
+  },
+  {
+    "tabela": 18,
+    "uc": "Artes — Ano 2",
+    "tipo": "Básica",
+    "texto": "GOMBRICH, Ernst Hans. \\textbf{A história da arte. Tradução de Álvaro Cabral. 16. ed. Rio de Janeiro: Livros Técnicos e Científicos, 1999. 688 p. ISBN 9788521611851.",
+    "issues": [],
+    "has_initials": false,
+    "author_initials": "",
+    "has_isbn": true
+  },
+  {
+    "tabela": 18,
+    "uc": "Artes — Ano 2",
+    "tipo": "Básica",
+    "texto": "PROENÇA, Graça. \\textbf{História da arte. 17. ed. São Paulo: Ática, 2010.",
+    "issues": [],
+    "has_initials": false,
+    "author_initials": "",
+    "has_isbn": false
+  },
+  {
+    "tabela": 18,
+    "uc": "Artes — Ano 2",
+    "tipo": "Complementar",
+    "texto": "3{|p{\\dimexpr\\linewidth-2\\tabcolsep-2\\arrayrulewidth\\relax|{MACHADO, Lúcia. \\textbf{A modernidade no teatro: [ali e aqui]: reflexos estilhaçados. Recife: Ed. do autor, 2009. 450 p. ISBN 9788591007806.",
+    "issues": [],
+    "has_initials": false,
+    "author_initials": "",
+    "has_isbn": true
+  },
+  {
+    "tabela": 18,
+    "uc": "Artes — Ano 2",
+    "tipo": "Complementar",
+    "texto": "NILSON, Afonso. \\textbf{Seis textos breves para estudantes de teatro. Florianópolis: Letras Contemporâneas, 2017. 71 p. ISBN 9788594445001.",
+    "issues": [],
+    "has_initials": false,
+    "author_initials": "",
+    "has_isbn": true
+  },
+  {
+    "tabela": 18,
+    "uc": "Artes — Ano 2",
+    "tipo": "Complementar",
+    "texto": "PIMENTEL, Spency. \\textbf{O índio que mora na nossa cabeça: sobre as dificuldades para entender os povos indígenas. São Paulo: Prumo, 2012. 88 p. ISBN 9788579272486.",
+    "issues": [],
+    "has_initials": false,
+    "author_initials": "",
+    "has_isbn": true
+  },
+  {
+    "tabela": 18,
+    "uc": "Artes — Ano 2",
+    "tipo": "Complementar",
+    "texto": "SANT'ANNA, Márcia (org.). \\textbf{Os sambas brasileiros: diversidade, apropriação e salvaguarda. Brasília, DF: IPHAN, 2011. 144 p. ISBN 9788573341911.",
+    "issues": [],
+    "has_initials": false,
+    "author_initials": "",
+    "has_isbn": true
+  },
+  {
+    "tabela": 19,
+    "uc": "Educação Física — Ano 2",
+    "tipo": "Básica",
+    "texto": "3{|p{\\dimexpr\\linewidth-2\\tabcolsep-2\\arrayrulewidth\\relax|{\\textbf{DICIONÁRIO crítico de educação física. 3. ed. rev. e ampl. Ijuí, RS: Ed. UNIJUÍ, 2014.",
+    "issues": [],
+    "has_initials": false,
+    "author_initials": "",
+    "has_isbn": false
+  },
+  {
+    "tabela": 19,
+    "uc": "Educação Física — Ano 2",
+    "tipo": "Básica",
+    "texto": "BERNARDES, Luciano Andrade (org.). \\textbf{Atividades e esportes de aventura para profissionais de educação física. São Paulo: Phorte, 2013.",
+    "issues": [],
+    "has_initials": false,
+    "author_initials": "",
+    "has_isbn": false
+  },
+  {
+    "tabela": 19,
+    "uc": "Educação Física — Ano 2",
+    "tipo": "Complementar",
+    "texto": "3{|p{\\dimexpr\\linewidth-2\\tabcolsep-2\\arrayrulewidth\\relax|{BRACHT, Valter. \\textbf{Sociologia crítica do esporte: uma introdução. 2. ed. Ijuí: Ed. da Unijuí, 2003.",
+    "issues": [],
+    "has_initials": false,
+    "author_initials": "",
+    "has_isbn": false
+  },
+  {
+    "tabela": 19,
+    "uc": "Educação Física — Ano 2",
+    "tipo": "Complementar",
+    "texto": "CAMARGO, Wagner Xavier de. \\textbf{Leituras de gênero e sexualidade nos esportes. São Carlos: EDUFSCAR, 2021.",
+    "issues": [],
+    "has_initials": false,
+    "author_initials": "",
+    "has_isbn": false
+  },
+  {
+    "tabela": 19,
+    "uc": "Educação Física — Ano 2",
+    "tipo": "Complementar",
+    "texto": "FOER, Franklin. \\textbf{Como o futebol explica o mundo: um olhar inesperado sobre a globalização. Rio de Janeiro: Jorge Zahar Editor, 2005.",
+    "issues": [],
+    "has_initials": false,
+    "author_initials": "",
+    "has_isbn": false
+  },
+  {
+    "tabela": 20,
+    "uc": "Inglês — Ano 2",
+    "tipo": "Básica",
+    "texto": "3{|p{\\dimexpr\\linewidth-2\\tabcolsep-2\\arrayrulewidth\\relax|{Livro didático fornecido pelo Fundo Nacional de Desenvolvimento da Educação (FNDE).",
+    "issues": [
+      "Ano de publicação ausente",
+      "Local de publicação e editora ausentes (sem ':')"
+    ],
+    "has_initials": false,
+    "author_initials": "",
+    "has_isbn": false
+  },
+  {
+    "tabela": 20,
+    "uc": "Inglês — Ano 2",
+    "tipo": "Básica",
+    "texto": "\\textbf{DICIONÁRIO Escolar Longman Inglês-Português, Português-Inglês. Harlow: Pearson Longman, 2004.",
+    "issues": [],
+    "has_initials": false,
+    "author_initials": "",
+    "has_isbn": false
+  },
+  {
+    "tabela": 20,
+    "uc": "Inglês — Ano 2",
+    "tipo": "Básica",
+    "texto": "LATHAM-KOENIG, Christina. \\textbf{English File: Intermediate Student's Book. Oxford: Oxford University Press, 2018.",
+    "issues": [],
+    "has_initials": false,
+    "author_initials": "",
+    "has_isbn": false
+  },
+  {
+    "tabela": 20,
+    "uc": "Inglês — Ano 2",
+    "tipo": "Complementar",
+    "texto": "3{|p{\\dimexpr\\linewidth-2\\tabcolsep-2\\arrayrulewidth\\relax|{FRANCO, C. P. \\textbf{English vibes for Brazilian learners: volume único. 1. ed. São Paulo: FTD, 2020.",
+    "issues": [],
+    "has_initials": false,
+    "author_initials": "",
+    "has_isbn": false
+  },
+  {
+    "tabela": 20,
+    "uc": "Inglês — Ano 2",
+    "tipo": "Complementar",
+    "texto": "MURPHY, Raymond. \\textbf{Essential Grammar in Use. 4th ed. Cambridge: Cambridge University Press, 2015.",
+    "issues": [],
+    "has_initials": false,
+    "author_initials": "",
+    "has_isbn": false
+  },
+  {
+    "tabela": 20,
+    "uc": "Inglês — Ano 2",
+    "tipo": "Complementar",
+    "texto": "WHARTON, Sue. \\textbf{500 tips for tesol: (teaching english to speakers of other languages). London: Kogan Page, 1999.",
+    "issues": [],
+    "has_initials": false,
+    "author_initials": "",
+    "has_isbn": false
+  },
+  {
+    "tabela": 21,
+    "uc": "Língua Portuguesa e Literatura — Ano 2",
+    "tipo": "Básica",
+    "texto": "3{|p{\\dimexpr\\linewidth-2\\tabcolsep-2\\arrayrulewidth\\relax|{ASSIS, Machado de. \\textbf{Memórias póstumas de Brás Cubas. [S.l.]: Editora Sol, [20--?]. 243 p.",
+    "issues": [
+      "Ano de publicação ausente"
+    ],
+    "has_initials": false,
+    "author_initials": "",
+    "has_isbn": false
+  },
+  {
+    "tabela": 21,
+    "uc": "Língua Portuguesa e Literatura — Ano 2",
+    "tipo": "Básica",
+    "texto": "SOUSA, João da Cruz e. \\textbf{Broquéis, Faróis. Jaraguá do Sul: Avenida, 2007. 219 p. (Grandes obras da língua portuguesa). ISBN 9788598610849.",
+    "issues": [
+      "Prenome abreviado por inicial (João da Cruz e.)"
+    ],
+    "has_initials": true,
+    "author_initials": "João da Cruz e",
+    "has_isbn": true
+  },
+  {
+    "tabela": 21,
+    "uc": "Língua Portuguesa e Literatura — Ano 2",
+    "tipo": "Básica",
+    "texto": "KRENAK, Ailton. \\textbf{Ideias para adiar o fim do mundo. 2. ed. 8. reimp. São Paulo: Companhia das Letras, 2020. 102 p. ISBN 9788535933581.",
+    "issues": [],
+    "has_initials": false,
+    "author_initials": "",
+    "has_isbn": true
+  },
+  {
+    "tabela": 21,
+    "uc": "Língua Portuguesa e Literatura — Ano 2",
+    "tipo": "Complementar",
+    "texto": "3{|p{\\dimexpr\\linewidth-2\\tabcolsep-2\\arrayrulewidth\\relax|{CEREJA, William Roberto; MAGALHÃES, Thereza Cochar. \\textbf{Gramática: texto, reflexão e uso. 3. ed. reform. São Paulo: Atual, 2008. 496 p. ISBN 9788535709988.",
+    "issues": [],
+    "has_initials": false,
+    "author_initials": "",
+    "has_isbn": true
+  },
+  {
+    "tabela": 22,
+    "uc": "Espanhol — Ano 2",
+    "tipo": "Básica",
+    "texto": "3{|p{\\dimexpr\\linewidth-2\\tabcolsep-2\\arrayrulewidth\\relax|{FANJUL, Adrián (org.). \\textbf{Gramática y práctica de español para brasileños. 2. ed. São Paulo: Moderna, 2011. 287 p. ISBN 9788516074272.",
+    "issues": [],
+    "has_initials": false,
+    "author_initials": "",
+    "has_isbn": true
+  },
+  {
+    "tabela": 22,
+    "uc": "Espanhol — Ano 2",
+    "tipo": "Básica",
+    "texto": "MORENO, Concha; TUTS, Martina. \\textbf{Cinco estrellas: español para el turismo. 2. ed. Madrid: SGEL, 2011. 223 p. ISBN 9788497784849.",
+    "issues": [],
+    "has_initials": false,
+    "author_initials": "",
+    "has_isbn": true
+  },
+  {
+    "tabela": 22,
+    "uc": "Espanhol — Ano 2",
+    "tipo": "Complementar",
+    "texto": "3{|p{\\dimexpr\\linewidth-2\\tabcolsep-2\\arrayrulewidth\\relax|{COTO BAUTISTA, Vanessa; TURZA FERRÉ, Anna. \\textbf{Tema a tema B1: español lengua extranjera : curso de conversación. Madrid: Edelsa, 2011. 111 p. ISBN 9788477117209.",
+    "issues": [],
+    "has_initials": false,
+    "author_initials": "",
+    "has_isbn": true
+  },
+  {
+    "tabela": 22,
+    "uc": "Espanhol — Ano 2",
+    "tipo": "Complementar",
+    "texto": "GONZÁLEZ HERMOSO, Alfredo. \\textbf{Conjugar: verbos de España y de América. Madrid: Edelsa Grupo Didascalia, 2011. 318 p. ISBN 9788477117186.",
+    "issues": [],
+    "has_initials": false,
+    "author_initials": "",
+    "has_isbn": true
+  },
+  {
+    "tabela": 22,
+    "uc": "Espanhol — Ano 2",
+    "tipo": "Complementar",
+    "texto": "WILDNER, Ana Kaciara; OLIVEIRA, Leandra Cristina de; SOBOTTKA, Mary Anne Warken. \\textbf{Espanhol para o turismo. Florianópolis: Publicação do IFSC, 2014.",
+    "issues": [],
+    "has_initials": false,
+    "author_initials": "",
+    "has_isbn": false
+  },
+  {
+    "tabela": 23,
+    "uc": "Física — Ano 2",
+    "tipo": "Básica",
+    "texto": "3{|p{\\dimexpr\\linewidth-2\\tabcolsep-2\\arrayrulewidth\\relax|{\\textbf{Livro didático fornecido pelo Fundo Nacional de Desenvolvimento da Educação (FNDE).",
+    "issues": [
+      "Ano de publicação ausente",
+      "Local de publicação e editora ausentes (sem ':')"
+    ],
+    "has_initials": false,
+    "author_initials": "",
+    "has_isbn": false
+  },
+  {
+    "tabela": 23,
+    "uc": "Física — Ano 2",
+    "tipo": "Básica",
+    "texto": "HEWITT, Paul G. \\textbf{Física conceitual. 12. ed. Porto Alegre: Bookman, 2015.",
+    "issues": [
+      "Prenome abreviado por inicial (Paul G.)"
+    ],
+    "has_initials": true,
+    "author_initials": "Paul G",
+    "has_isbn": false
+  },
+  {
+    "tabela": 23,
+    "uc": "Física — Ano 2",
+    "tipo": "Básica",
+    "texto": "LUZ, Antônio Máximo Ribeiro da; ALVARENGA, Beatriz Gonçalves de. \\textbf{Curso de física, volume 1. 6. ed. rev. ampl. São Paulo: Scipione, 2006.",
+    "issues": [],
+    "has_initials": false,
+    "author_initials": "",
+    "has_isbn": false
+  },
+  {
+    "tabela": 23,
+    "uc": "Física — Ano 2",
+    "tipo": "Básica",
+    "texto": "LUZ, Antônio Máximo Ribeiro da; ALVARENGA, Beatriz Gonçalves de. \\textbf{Curso de física, volume 2. 6. ed. rev. ampl. São Paulo: Scipione, 2006.",
+    "issues": [],
+    "has_initials": false,
+    "author_initials": "",
+    "has_isbn": false
+  },
+  {
+    "tabela": 23,
+    "uc": "Física — Ano 2",
+    "tipo": "Complementar",
+    "texto": "3{|p{\\dimexpr\\linewidth-2\\tabcolsep-2\\arrayrulewidth\\relax|{BARRETO FILHO, Benigno; SILVA, Cláudio Xavier da. \\textbf{360º: física: aula por aula: volume único. 3. ed. São Paulo: FTD, 2015.",
+    "issues": [],
+    "has_initials": false,
+    "author_initials": "",
+    "has_isbn": false
+  },
+  {
+    "tabela": 23,
+    "uc": "Física — Ano 2",
+    "tipo": "Complementar",
+    "texto": "YAMAMOTO, Kazuhito; FUKE, Luiz Felipe. \\textbf{Física para o ensino médio 2: termologia, óptica, ondulatória. 3. ed. São Paulo: Saraiva, 2013.",
+    "issues": [],
+    "has_initials": false,
+    "author_initials": "",
+    "has_isbn": false
+  },
+  {
+    "tabela": 23,
+    "uc": "Física — Ano 2",
+    "tipo": "Complementar",
+    "texto": "KNIGHT, Randall D. \\textbf{Física: uma abordagem estratégica: volume 2: termodinâmica e óptica. 2. ed. Porto Alegre: Bookman, 2009.",
+    "issues": [
+      "Prenome abreviado por inicial (Randall D.)"
+    ],
+    "has_initials": true,
+    "author_initials": "Randall D",
+    "has_isbn": false
+  },
+  {
+    "tabela": 24,
+    "uc": "Matemática — Ano 2",
+    "tipo": "Básica",
+    "texto": "3{|p{\\dimexpr\\linewidth-2\\tabcolsep-2\\arrayrulewidth\\relax|{BONJORNO, José Roberto; GIOVANNI JÚNIOR, José Ruy; GIOVANNI, José Ruy. \\textbf{Matemática fundamental: uma nova abordagem: ensino médio: volume único. 3. ed. São Paulo: FTD, 2013.",
+    "issues": [],
+    "has_initials": false,
+    "author_initials": "",
+    "has_isbn": false
+  },
+  {
+    "tabela": 24,
+    "uc": "Matemática — Ano 2",
+    "tipo": "Básica",
+    "texto": "DANTE, Luiz Roberto. \\textbf{Projeto Múltiplo: matemática: ensino médio, 2º ano. São Paulo: Ática, 2014.",
+    "issues": [],
+    "has_initials": false,
+    "author_initials": "",
+    "has_isbn": false
+  },
+  {
+    "tabela": 24,
+    "uc": "Matemática — Ano 2",
+    "tipo": "Básica",
+    "texto": "GIOVANNI, José Ruy \\textit{et al. \\textbf{360º matemática fundamental: uma nova abordagem: volume único. 2. ed. São Paulo: FTD, 2015.",
+    "issues": [],
+    "has_initials": false,
+    "author_initials": "",
+    "has_isbn": false
+  },
+  {
+    "tabela": 24,
+    "uc": "Matemática — Ano 2",
+    "tipo": "Complementar",
+    "texto": "3{|p{\\dimexpr\\linewidth-2\\tabcolsep-2\\arrayrulewidth\\relax|{LIMA, E. L.; CARVALHO, Paulo Cesar P. \\textbf{A Matemática do ensino médio: volume único. 7. ed. Rio de Janeiro: SBM, 2016.",
+    "issues": [],
+    "has_initials": false,
+    "author_initials": "",
+    "has_isbn": false
+  },
+  {
+    "tabela": 24,
+    "uc": "Matemática — Ano 2",
+    "tipo": "Complementar",
+    "texto": "PAIVA, Manoel. \\textbf{Matemática: Paiva: 2º ano. 2. ed. São Paulo: Moderna, 2013.",
+    "issues": [],
+    "has_initials": false,
+    "author_initials": "",
+    "has_isbn": false
+  },
+  {
+    "tabela": 24,
+    "uc": "Matemática — Ano 2",
+    "tipo": "Complementar",
+    "texto": "LIMA, Elon Lages \\textit{et al. \\textbf{A matemática do ensino médio: volume 1. 10. ed. Rio de Janeiro: SBM, 2016. 240 p.",
+    "issues": [],
+    "has_initials": false,
+    "author_initials": "",
+    "has_isbn": false
+  },
+  {
+    "tabela": 25,
+    "uc": "Química — Ano 2",
+    "tipo": "Básica",
+    "texto": "3{|p{\\dimexpr\\linewidth-2\\tabcolsep-2\\arrayrulewidth\\relax|{CHANG, Raymond. \\textbf{Química geral: conceitos essenciais. 4. ed. Porto Alegre: AMGH, 2010.",
+    "issues": [],
+    "has_initials": false,
+    "author_initials": "",
+    "has_isbn": false
+  },
+  {
+    "tabela": 25,
+    "uc": "Química — Ano 2",
+    "tipo": "Básica",
+    "texto": "ATKINS, Peter William; JONES, Loretta. \\textbf{Princípios de química: questionando a vida moderna e o meio ambiente. 5. ed. Porto Alegre: Bookman, 2012.",
+    "issues": [],
+    "has_initials": false,
+    "author_initials": "",
+    "has_isbn": false
+  },
+  {
+    "tabela": 25,
+    "uc": "Química — Ano 2",
+    "tipo": "Básica",
+    "texto": "PERUZZO, Francisco Miragaia; CANTO, Eduardo Leite do. \\textbf{Química na abordagem do cotidiano: volume único. 3. ed. São Paulo: Moderna, 2007.",
+    "issues": [],
+    "has_initials": false,
+    "author_initials": "",
+    "has_isbn": false
+  },
+  {
+    "tabela": 25,
+    "uc": "Química — Ano 2",
+    "tipo": "Complementar",
+    "texto": "3{|p{\\dimexpr\\linewidth-2\\tabcolsep-2\\arrayrulewidth\\relax|{BRADY, James E.; HUMISTON, Gerard E. \\textbf{Química geral. 2. ed. Rio de Janeiro: LTC, 2014. v. 2.",
+    "issues": [],
+    "has_initials": false,
+    "author_initials": "",
+    "has_isbn": false
+  },
+  {
+    "tabela": 25,
+    "uc": "Química — Ano 2",
+    "tipo": "Complementar",
+    "texto": "FELTRE, Ricardo. \\textbf{Química: físico-química, volume 2. 7. ed. São Paulo: Moderna, 2008.",
+    "issues": [],
+    "has_initials": false,
+    "author_initials": "",
+    "has_isbn": false
+  },
+  {
+    "tabela": 25,
+    "uc": "Química — Ano 2",
+    "tipo": "Complementar",
+    "texto": "FRANCO, Dalton. \\textbf{360º: química: cotidiano e transformações: volume único. São Paulo: FTD, 2015.",
+    "issues": [],
+    "has_initials": false,
+    "author_initials": "",
+    "has_isbn": false
+  },
+  {
+    "tabela": 26,
+    "uc": "História — Ano 2",
+    "tipo": "Básica",
+    "texto": "3{|p{\\dimexpr\\linewidth-2\\tabcolsep-2\\arrayrulewidth\\relax|{BOULOS JÚNIOR, Alfredo. \\textbf{360º: história sociedade \\& cidadania. São Paulo: FTD, 2015.",
+    "issues": [],
+    "has_initials": false,
+    "author_initials": "",
+    "has_isbn": false
+  },
+  {
+    "tabela": 26,
+    "uc": "História — Ano 2",
+    "tipo": "Básica",
+    "texto": "VICENTINO, Cláudio; DORIGO, Gianpaolo. \\textbf{História geral e do Brasil. São Paulo: Scipione, 2010.",
+    "issues": [],
+    "has_initials": false,
+    "author_initials": "",
+    "has_isbn": false
+  },
+  {
+    "tabela": 26,
+    "uc": "História — Ano 2",
+    "tipo": "Complementar",
+    "texto": "3{|p{\\dimexpr\\linewidth-2\\tabcolsep-2\\arrayrulewidth\\relax|{CERTEAU, Michel de. \\textbf{A invenção do cotidiano: artes de fazer. Petrópolis, RJ: Vozes, 2009.",
+    "issues": [],
+    "has_initials": false,
+    "author_initials": "",
+    "has_isbn": false
+  },
+  {
+    "tabela": 26,
+    "uc": "História — Ano 2",
+    "tipo": "Complementar",
+    "texto": "RICKLEFS, Robert E. \\textbf{A economia da natureza. Rio de Janeiro: Guanabara Koogan, 2010.",
+    "issues": [
+      "Prenome abreviado por inicial (Robert E.)"
+    ],
+    "has_initials": true,
+    "author_initials": "Robert E",
+    "has_isbn": false
+  },
+  {
+    "tabela": 26,
+    "uc": "História — Ano 2",
+    "tipo": "Complementar",
+    "texto": "CAREGNATO, Célia Elizabete; BOMBASSARO, Luiz Carlos (org.). \\textbf{Diversidade cultural: viver diferenças e enfrentar desigualdades na educação. Erechim, RS: Novello \\& Carbonelli, 2013.",
+    "issues": [],
+    "has_initials": false,
+    "author_initials": "",
+    "has_isbn": false
+  },
+  {
+    "tabela": 26,
+    "uc": "História — Ano 2",
+    "tipo": "Complementar",
+    "texto": "MIGNOLO, Walter. \\textbf{Histórias Globais/projetos Locais. Belo Horizonte: Editora UFMG, 2003.",
+    "issues": [],
+    "has_initials": false,
+    "author_initials": "",
+    "has_isbn": false
+  },
+  {
+    "tabela": 26,
+    "uc": "História — Ano 2",
+    "tipo": "Complementar",
+    "texto": "GALEANO, Eduardo. \\textbf{As caras e as máscaras. Porto Alegre: L\\&PM Editores, 2004.",
+    "issues": [],
+    "has_initials": false,
+    "author_initials": "",
+    "has_isbn": false
+  },
+  {
+    "tabela": 26,
+    "uc": "História — Ano 2",
+    "tipo": "Complementar",
+    "texto": "HOLLANDA, Heloísa Buarque de (org.). \\textbf{Pensamento Feminista Hoje: perspectivas decoloniais. Rio de Janeiro: Bazar do Tempo, 2020.",
+    "issues": [],
+    "has_initials": false,
+    "author_initials": "",
+    "has_isbn": false
+  },
+  {
+    "tabela": 26,
+    "uc": "História — Ano 2",
+    "tipo": "Complementar",
+    "texto": "SANTOS, Boaventura de Sousa; MARTINS, Bruno Sena (org.). \\textbf{O pluriverso dos direitos humanos: a diversidade das lutas pela dignidade. Belo Horizonte: Autêntica, 2019.",
+    "issues": [],
+    "has_initials": false,
+    "author_initials": "",
+    "has_isbn": false
+  },
+  {
+    "tabela": 27,
+    "uc": "Sociologia — Ano 2",
+    "tipo": "Básica",
+    "texto": "3{|p{\\dimexpr\\linewidth-2\\tabcolsep-2\\arrayrulewidth\\relax|{\\textbf{Livro didático fornecido pelo Fundo Nacional de Desenvolvimento da Educação (FNDE).",
+    "issues": [
+      "Ano de publicação ausente",
+      "Local de publicação e editora ausentes (sem ':')"
+    ],
+    "has_initials": false,
+    "author_initials": "",
+    "has_isbn": false
+  },
+  {
+    "tabela": 27,
+    "uc": "Sociologia — Ano 2",
+    "tipo": "Básica",
+    "texto": "OLIVEIRA, Pérsio Santos de. \\textbf{Introdução à Sociologia: Série Brasil. São Paulo: Editora Ática, 2011.",
+    "issues": [],
+    "has_initials": false,
+    "author_initials": "",
+    "has_isbn": false
+  },
+  {
+    "tabela": 27,
+    "uc": "Sociologia — Ano 2",
+    "tipo": "Complementar",
+    "texto": "3{|p{\\dimexpr\\linewidth-2\\tabcolsep-2\\arrayrulewidth\\relax|{COSTA, Maria Cristina. \\textbf{Sociologia: introdução à ciência da sociedade. 5. ed. São Paulo: Editora Moderna, 2016.",
+    "issues": [],
+    "has_initials": false,
+    "author_initials": "",
+    "has_isbn": false
+  },
+  {
+    "tabela": 27,
+    "uc": "Sociologia — Ano 2",
+    "tipo": "Complementar",
+    "texto": "OLIVEIRA, Luiz Fernandes de; COSTA, Ricardo Cesar Rocha da. \\textbf{Sociologia para jovens do século XXI. Rio de Janeiro: Imperial Novo Milênio, 2013.",
+    "issues": [],
+    "has_initials": false,
+    "author_initials": "",
+    "has_isbn": false
+  },
+  {
+    "tabela": 27,
+    "uc": "Sociologia — Ano 2",
+    "tipo": "Complementar",
+    "texto": "HELENA, Bomeny \\textit{et al. \\textbf{Tempos Modernos, tempos de sociologia. 4. ed. São Paulo: Ed. do Brasil, 2016.",
+    "issues": [],
+    "has_initials": false,
+    "author_initials": "",
+    "has_isbn": false
+  },
+  {
+    "tabela": 28,
+    "uc": "Matemática para Administração",
+    "tipo": "Básica",
+    "texto": "3{|p{\\dimexpr\\linewidth-2\\tabcolsep-2\\arrayrulewidth\\relax|{CRESPO, A. A. \\textbf{Estatística fácil. 19. ed. São Paulo: Saraiva, 2009.",
+    "issues": [],
+    "has_initials": false,
+    "author_initials": "",
+    "has_isbn": false
+  },
+  {
+    "tabela": 28,
+    "uc": "Matemática para Administração",
+    "tipo": "Básica",
+    "texto": "DANTE, Luiz Roberto. \\textbf{Matemática: contexto e aplicações. 4. ed. São Paulo: Ática, 2011.",
+    "issues": [],
+    "has_initials": false,
+    "author_initials": "",
+    "has_isbn": false
+  },
+  {
+    "tabela": 28,
+    "uc": "Matemática para Administração",
+    "tipo": "Complementar",
+    "texto": "3{|p{\\dimexpr\\linewidth-2\\tabcolsep-2\\arrayrulewidth\\relax|{BARBETTA, P. A. \\textbf{Estatística aplicada às ciências sociais. Florianópolis: Edufsc, 2010.",
+    "issues": [],
+    "has_initials": false,
+    "author_initials": "",
+    "has_isbn": false
+  },
+  {
+    "tabela": 28,
+    "uc": "Matemática para Administração",
+    "tipo": "Complementar",
+    "texto": "BRUNI, Adriano Leal; FAMÁ, Rubens. \\textbf{Matemática financeira com HP 12C e Excel. São Paulo: Atlas, 2008.",
+    "issues": [],
+    "has_initials": false,
+    "author_initials": "",
+    "has_isbn": false
+  },
+  {
+    "tabela": 28,
+    "uc": "Matemática para Administração",
+    "tipo": "Complementar",
+    "texto": "BUENO, Fabrício. \\textbf{Estatística para processos produtivos. Florianópolis: Visual Books, 2010.",
+    "issues": [],
+    "has_initials": false,
+    "author_initials": "",
+    "has_isbn": false
+  },
+  {
+    "tabela": 28,
+    "uc": "Matemática para Administração",
+    "tipo": "Complementar",
+    "texto": "BUENO, Fabrício. \\textbf{Estaticópolis: um jeito novo de aprender Estatística. São Paulo: Amazon, 2015.",
+    "issues": [],
+    "has_initials": false,
+    "author_initials": "",
+    "has_isbn": false
+  },
+  {
+    "tabela": 29,
+    "uc": "Gestão de Marketing II",
+    "tipo": "Básica",
+    "texto": "3{|p{\\dimexpr\\linewidth-2\\tabcolsep-2\\arrayrulewidth\\relax|{LAS CASAS, Alexandre Luzzi. \\textbf{Marketing Digital. Rio de Janeiro: Atlas, 2021.",
+    "issues": [],
+    "has_initials": false,
+    "author_initials": "",
+    "has_isbn": false
+  },
+  {
+    "tabela": 29,
+    "uc": "Gestão de Marketing II",
+    "tipo": "Básica",
+    "texto": "MATTAR, Fauze Najib. \\textbf{Pesquisa de marketing. 4. ed. compacta 3. reimp. São Paulo: Atlas, 2007.",
+    "issues": [],
+    "has_initials": false,
+    "author_initials": "",
+    "has_isbn": false
+  },
+  {
+    "tabela": 29,
+    "uc": "Gestão de Marketing II",
+    "tipo": "Básica",
+    "texto": "VIRGILLITO, Salvatore Benito (coord.). \\textbf{Pesquisa de marketing: uma abordagem quantitativa e qualitativa. São Paulo: Saraiva, 2010.",
+    "issues": [],
+    "has_initials": false,
+    "author_initials": "",
+    "has_isbn": false
+  },
+  {
+    "tabela": 29,
+    "uc": "Gestão de Marketing II",
+    "tipo": "Complementar",
+    "texto": "3{|p{\\dimexpr\\linewidth-2\\tabcolsep-2\\arrayrulewidth\\relax|{ARBACHE, Fernando Saba. \\textbf{Gestão de logística, distribuição e trade marketing. 4. ed. Rio de Janeiro: FGV Ed., 2011.",
+    "issues": [],
+    "has_initials": false,
+    "author_initials": "",
+    "has_isbn": false
+  },
+  {
+    "tabela": 29,
+    "uc": "Gestão de Marketing II",
+    "tipo": "Complementar",
+    "texto": "DANTAS, Edmundo Brandão. \\textbf{Atendimento ao público nas organizações: quando o marketing de serviços mostra a cara. 5. ed. Brasília, DF: Senac-DF, 2011.",
+    "issues": [],
+    "has_initials": false,
+    "author_initials": "",
+    "has_isbn": false
+  },
+  {
+    "tabela": 29,
+    "uc": "Gestão de Marketing II",
+    "tipo": "Complementar",
+    "texto": "KOTLER, Philip; ARMSTRONG, Gary. \\textbf{Princípios de marketing. Tradução de Sabrina Cairo. 15. ed. São Paulo: Pearson Education do Brasil, 2015.",
+    "issues": [],
+    "has_initials": false,
+    "author_initials": "",
+    "has_isbn": false
+  },
+  {
+    "tabela": 29,
+    "uc": "Gestão de Marketing II",
+    "tipo": "Complementar",
+    "texto": "LAS CASAS, Alexandre Luzzi. \\textbf{Marketing: conceitos, exercícios, casos. 9. ed. São Paulo: Atlas, 2017.",
+    "issues": [],
+    "has_initials": false,
+    "author_initials": "",
+    "has_isbn": false
+  },
+  {
+    "tabela": 30,
+    "uc": "Gestão de Operações e Qualidade",
+    "tipo": "Básica",
+    "texto": "3{|p{\\dimexpr\\linewidth-2\\tabcolsep-2\\arrayrulewidth\\relax|{BALLOU, Ronald H. \\textbf{Gerenciamento da cadeia de suprimentos: planejamento, organização e logística empresarial. 4. ed. Porto Alegre: Bookman, 2001.",
+    "issues": [],
+    "has_initials": false,
+    "author_initials": "",
+    "has_isbn": false
+  },
+  {
+    "tabela": 30,
+    "uc": "Gestão de Operações e Qualidade",
+    "tipo": "Básica",
+    "texto": "CORRÊA, Carlos Alberto; CORRÊA, Henrique Luiz. \\textbf{Administração de produção e operações: manufatura e serviços, uma abordagem estratégica. São Paulo: Atlas, 2006.",
+    "issues": [],
+    "has_initials": false,
+    "author_initials": "",
+    "has_isbn": false
+  },
+  {
+    "tabela": 30,
+    "uc": "Gestão de Operações e Qualidade",
+    "tipo": "Básica",
+    "texto": "DIAS, Marco Aurélio Pereira. \\textbf{Administração de materiais: uma abordagem logística. 5. ed. São Paulo: Atlas, 2010.",
+    "issues": [],
+    "has_initials": false,
+    "author_initials": "",
+    "has_isbn": false
+  },
+  {
+    "tabela": 30,
+    "uc": "Gestão de Operações e Qualidade",
+    "tipo": "Básica",
+    "texto": "GIANESI, Irineu Gianesi Netto; CORRÊA, Henrique Luiz. \\textbf{Administração estratégica de serviços: operações para a satisfação do cliente. São Paulo: Atlas, 2013.",
+    "issues": [],
+    "has_initials": false,
+    "author_initials": "",
+    "has_isbn": false
+  },
+  {
+    "tabela": 30,
+    "uc": "Gestão de Operações e Qualidade",
+    "tipo": "Básica",
+    "texto": "PALADINI, Edson Pacheco. \\textbf{Gestão estratégica da qualidade: princípios, métodos e processos. 2. ed. São Paulo: Atlas, 2009.",
+    "issues": [],
+    "has_initials": false,
+    "author_initials": "",
+    "has_isbn": false
+  },
+  {
+    "tabela": 30,
+    "uc": "Gestão de Operações e Qualidade",
+    "tipo": "Complementar",
+    "texto": "3{|p{\\dimexpr\\linewidth-2\\tabcolsep-2\\arrayrulewidth\\relax|{ARBACHE, F. S. \\textit{et al. \\textbf{Gestão de logística, distribuição e trade marketing. Rio de Janeiro: FGV, 2004.",
+    "issues": [],
+    "has_initials": false,
+    "author_initials": "",
+    "has_isbn": false
+  },
+  {
+    "tabela": 30,
+    "uc": "Gestão de Operações e Qualidade",
+    "tipo": "Complementar",
+    "texto": "LEITE, Paulo Roberto. \\textbf{Logística reversa: sustentabilidade e competitividade. 3. ed. São Paulo: Saraiva, 2017.",
+    "issues": [],
+    "has_initials": false,
+    "author_initials": "",
+    "has_isbn": false
+  },
+  {
+    "tabela": 30,
+    "uc": "Gestão de Operações e Qualidade",
+    "tipo": "Complementar",
+    "texto": "MARTINS, Petrônio Garcia; LAUGENI, Fernando Piero. \\textbf{Administração da produção. São Paulo: Saraiva, 2006.",
+    "issues": [],
+    "has_initials": false,
+    "author_initials": "",
+    "has_isbn": false
+  },
+  {
+    "tabela": 30,
+    "uc": "Gestão de Operações e Qualidade",
+    "tipo": "Complementar",
+    "texto": "MARSHALL JUNIOR, Isnard. \\textbf{Gestão da qualidade. 10. ed. Rio de Janeiro: Ed. da FGV, 2010.",
+    "issues": [],
+    "has_initials": false,
+    "author_initials": "",
+    "has_isbn": false
+  },
+  {
+    "tabela": 30,
+    "uc": "Gestão de Operações e Qualidade",
+    "tipo": "Complementar",
+    "texto": "MOREIRA, Daniel Augusto. \\textbf{Administração da produção e operações. São Paulo: Cengage Learning, 2009.",
+    "issues": [],
+    "has_initials": false,
+    "author_initials": "",
+    "has_isbn": false
+  },
+  {
+    "tabela": 30,
+    "uc": "Gestão de Operações e Qualidade",
+    "tipo": "Complementar",
+    "texto": "NOGUEIRA, José Francisco. \\textbf{Gestão estratégica de serviços: teoria e prática. São Paulo: Atlas, 2008.",
+    "issues": [],
+    "has_initials": false,
+    "author_initials": "",
+    "has_isbn": false
+  },
+  {
+    "tabela": 31,
+    "uc": "Empreendedorismo I",
+    "tipo": "Básica",
+    "texto": "3{|p{\\dimexpr\\linewidth-2\\tabcolsep-2\\arrayrulewidth\\relax|{BESSANT, John; TIDD, Joe; COSTA, Francisco Araújo da. \\textbf{Inovação e empreendedorismo. 3. ed. Porto Alegre: Bookman, 2019.",
+    "issues": [],
+    "has_initials": false,
+    "author_initials": "",
+    "has_isbn": false
+  },
+  {
+    "tabela": 31,
+    "uc": "Empreendedorismo I",
+    "tipo": "Básica",
+    "texto": "DORNELAS, José Carlos Assis. \\textbf{Empreendedorismo: transformando idéias em negócios. 3. ed. rev. e atual. Rio de Janeiro: Elsevier, 2008.",
+    "issues": [],
+    "has_initials": false,
+    "author_initials": "",
+    "has_isbn": false
+  },
+  {
+    "tabela": 31,
+    "uc": "Empreendedorismo I",
+    "tipo": "Básica",
+    "texto": "DORNELAS, José Carlos Assis. \\textbf{Empreendedorismo corporativo: como ser empreendedor, inovar e se diferenciar na sua empresa. 2. ed. Rio de Janeiro: Elsevier, 2008.",
+    "issues": [],
+    "has_initials": false,
+    "author_initials": "",
+    "has_isbn": false
+  },
+  {
+    "tabela": 31,
+    "uc": "Empreendedorismo I",
+    "tipo": "Básica",
+    "texto": "HISRICH, Robert D.; PETERS, Michael P.; SHEPHERD, Dean A. \\textbf{Empreendedorismo. Tradução de Francisco Araújo da Costa. 9. ed. Porto Alegre: AMGH, 2014.",
+    "issues": [
+      "Prenome abreviado por inicial (Robert D.)"
+    ],
+    "has_initials": true,
+    "author_initials": "Robert D",
+    "has_isbn": false
+  },
+  {
+    "tabela": 31,
+    "uc": "Empreendedorismo I",
+    "tipo": "Básica",
+    "texto": "OLIVEIRA, Edson Marques. \\textbf{Empreendedorismo social: da teoria à prática, do sonho à realidade. Rio de Janeiro: Qualitymark, 2008.",
+    "issues": [],
+    "has_initials": false,
+    "author_initials": "",
+    "has_isbn": false
+  },
+  {
+    "tabela": 31,
+    "uc": "Empreendedorismo I",
+    "tipo": "Básica",
+    "texto": "SINGER, Paul \\textit{et al. \\textbf{Economia Solidária: introdução, história e experiência brasileira. São Paulo: Editora Unesp, 2023.",
+    "issues": [],
+    "has_initials": false,
+    "author_initials": "",
+    "has_isbn": false
+  },
+  {
+    "tabela": 31,
+    "uc": "Empreendedorismo I",
+    "tipo": "Básica",
+    "texto": "WEBERING, Susana Iglesias. \\textbf{Autogestão e Cooperação. Curitiba: Editora Appris, 2020.",
+    "issues": [],
+    "has_initials": false,
+    "author_initials": "",
+    "has_isbn": false
+  },
+  {
+    "tabela": 31,
+    "uc": "Empreendedorismo I",
+    "tipo": "Complementar",
+    "texto": "3{|p{\\dimexpr\\linewidth-2\\tabcolsep-2\\arrayrulewidth\\relax|{BERNARDI, Luiz Antônio. \\textbf{Manual de empreendedorismo e gestão: fundamentos, estratégias e dinâmicas. 2. ed. São Paulo: Atlas, 2012.",
+    "issues": [],
+    "has_initials": false,
+    "author_initials": "",
+    "has_isbn": false
+  },
+  {
+    "tabela": 31,
+    "uc": "Empreendedorismo I",
+    "tipo": "Complementar",
+    "texto": "OLIVEIRA, Djalma de Pinho Rebouças de. \\textbf{Empreendedorismo: vocação, capacitação e atuação direcionadas para o plano de negócios. São Paulo: Editora Atlas, 2014.",
+    "issues": [],
+    "has_initials": false,
+    "author_initials": "",
+    "has_isbn": false
+  },
+  {
+    "tabela": 32,
+    "uc": "Responsabilidade Socioambiental e Sustentabilidade",
+    "tipo": "Básica",
+    "texto": "3{|p{\\dimexpr\\linewidth-2\\tabcolsep-2\\arrayrulewidth\\relax|{CORREA, Fabio Marar Silveira. \\textbf{Responsabilidade social empresarial e a sustentabilidade ambiental. São Paulo: Dialética, 2023.",
+    "issues": [],
+    "has_initials": false,
+    "author_initials": "",
+    "has_isbn": false
+  },
+  {
+    "tabela": 32,
+    "uc": "Responsabilidade Socioambiental e Sustentabilidade",
+    "tipo": "Básica",
+    "texto": "DIAS, Reinaldo. \\textbf{Gestão ambiental: responsabilidade social e sustentabilidade. 3. ed. São Paulo: Atlas, 2017.",
+    "issues": [],
+    "has_initials": false,
+    "author_initials": "",
+    "has_isbn": false
+  },
+  {
+    "tabela": 32,
+    "uc": "Responsabilidade Socioambiental e Sustentabilidade",
+    "tipo": "Complementar",
+    "texto": "3{|p{\\dimexpr\\linewidth-2\\tabcolsep-2\\arrayrulewidth\\relax|{ALIGLERI, Lilian; ALIGLERI, Luiz Antonio; KRUGLIANSKAS, Isak. \\textbf{Gestão socioambiental: responsabilidade e sustentabilidade do negócio. São Paulo: Atlas, 2009.",
+    "issues": [],
+    "has_initials": false,
+    "author_initials": "",
+    "has_isbn": false
+  },
+  {
+    "tabela": 32,
+    "uc": "Responsabilidade Socioambiental e Sustentabilidade",
+    "tipo": "Complementar",
+    "texto": "COIMBRA, José de Ávila Aguiar (coord.). \\textbf{Meio ambiente e consumismo. São Paulo: Senac São Paulo, 2008. (Meio ambiente, 8).",
+    "issues": [],
+    "has_initials": false,
+    "author_initials": "",
+    "has_isbn": false
+  },
+  {
+    "tabela": 32,
+    "uc": "Responsabilidade Socioambiental e Sustentabilidade",
+    "tipo": "Complementar",
+    "texto": "LEITE, Paulo Roberto. \\textbf{Logística reversa: sustentabilidade e competitividade. 3. ed. São Paulo: Saraiva, 2017.",
+    "issues": [],
+    "has_initials": false,
+    "author_initials": "",
+    "has_isbn": false
+  },
+  {
+    "tabela": 32,
+    "uc": "Responsabilidade Socioambiental e Sustentabilidade",
+    "tipo": "Complementar",
+    "texto": "VEIGA, José Eli da. \\textbf{Para entender o desenvolvimento sustentável. São Paulo: Editora 34, 2015.",
+    "issues": [],
+    "has_initials": false,
+    "author_initials": "",
+    "has_isbn": false
+  },
+  {
+    "tabela": 33,
+    "uc": "Oficina de Integração I",
+    "tipo": "Básica",
+    "texto": "3{|p{\\dimexpr\\linewidth-2\\tabcolsep-2\\arrayrulewidth\\relax|{FRIGOTTO, Gaudêncio; CIAVATTA, Maria; RAMOS, Marise Nogueira (org.). \\textbf{Ensino médio integrado: concepção e contradições. 3. ed. São Paulo: Cortez, 2012.",
+    "issues": [],
+    "has_initials": false,
+    "author_initials": "",
+    "has_isbn": false
+  },
+  {
+    "tabela": 33,
+    "uc": "Oficina de Integração I",
+    "tipo": "Básica",
+    "texto": "GIL, Antonio Carlos. \\textbf{Como elaborar projetos de pesquisa. 6. ed. São Paulo: Atlas, 2017.",
+    "issues": [],
+    "has_initials": false,
+    "author_initials": "",
+    "has_isbn": false
+  },
+  {
+    "tabela": 33,
+    "uc": "Oficina de Integração I",
+    "tipo": "Básica",
+    "texto": "MORIN, Edgar. \\textbf{Os sete saberes necessários à educação do futuro. 2. ed. rev. São Paulo: Cortez, 2011.",
+    "issues": [],
+    "has_initials": false,
+    "author_initials": "",
+    "has_isbn": false
+  },
+  {
+    "tabela": 33,
+    "uc": "Oficina de Integração I",
+    "tipo": "Básica",
+    "texto": "SILVA, Adriano Larentes da (org.) \\textit{et al. \\textbf{O currículo integrado no cotidiano da sala de aula. Florianópolis: Publicação do IFSC, 2016.",
+    "issues": [],
+    "has_initials": false,
+    "author_initials": "",
+    "has_isbn": false
+  },
+  {
+    "tabela": 33,
+    "uc": "Oficina de Integração I",
+    "tipo": "Complementar",
+    "texto": "3{|p{\\dimexpr\\linewidth-2\\tabcolsep-2\\arrayrulewidth\\relax|{KEELLING, Ralph; BRANCO, Renato Henrique Ferreira. \\textbf{Gestão de projetos: uma abordagem global. 4. ed. São Paulo: Saraiva, 2019.",
+    "issues": [],
+    "has_initials": false,
+    "author_initials": "",
+    "has_isbn": false
+  },
+  {
+    "tabela": 33,
+    "uc": "Oficina de Integração I",
+    "tipo": "Complementar",
+    "texto": "MARCONI, Marina de Andrade; LAKATOS, Eva Maria. \\textbf{Metodologia do trabalho científico: projetos de pesquisa, pesquisa bibliográfica, teses de doutorado, dissertações de mestrado, trabalhos de conclusão de curso. 8. ed. São Paulo: Atlas, 2018.",
+    "issues": [],
+    "has_initials": false,
+    "author_initials": "",
+    "has_isbn": false
+  },
+  {
+    "tabela": 34,
+    "uc": "Língua Portuguesa e Literatura — Ano 3",
+    "tipo": "Básica",
+    "texto": "3{|p{\\dimexpr\\linewidth-2\\tabcolsep-2\\arrayrulewidth\\relax|{BARBOSA, Francisco de Assis (org.). \\textbf{Lima Barreto: melhores contos. 8. ed. São Paulo: Global, 2002. 174 p., 20,5 cm. (Melhores contos). ISBN 8526000810.",
+    "issues": [],
+    "has_initials": false,
+    "author_initials": "",
+    "has_isbn": true
+  },
+  {
+    "tabela": 34,
+    "uc": "Língua Portuguesa e Literatura — Ano 3",
+    "tipo": "Básica",
+    "texto": "CHAVES, Rita (org.). \\textbf{Contos africanos dos países de língua portuguesa. Ilustrações de Apo Fousek. São Paulo: Ática, 2021. 120 p., il. (Para gostar de ler, 44). ISBN 9786557670750.",
+    "issues": [],
+    "has_initials": false,
+    "author_initials": "",
+    "has_isbn": true
+  },
+  {
+    "tabela": 34,
+    "uc": "Língua Portuguesa e Literatura — Ano 3",
+    "tipo": "Básica",
+    "texto": "JESUS, Carolina Maria de. \\textbf{Quarto de despejo: diário de uma favelada. Ilustrações de Vinicius Rossignol Felipe. 10. ed. São Paulo: Ática, 2016. 199 p. ISBN 9788508171279.",
+    "issues": [],
+    "has_initials": false,
+    "author_initials": "",
+    "has_isbn": true
+  },
+  {
+    "tabela": 34,
+    "uc": "Língua Portuguesa e Literatura — Ano 3",
+    "tipo": "Complementar",
+    "texto": "3{|p{\\dimexpr\\linewidth-2\\tabcolsep-2\\arrayrulewidth\\relax|{BAGNO, Marcos. \\textbf{Preconceito linguístico. 56. ed. rev. e ampl. São Paulo: Parábola Editorial, 2015. 350 p. (Parábola Breve, 6). ISBN 9788579340987.",
+    "issues": [],
+    "has_initials": false,
+    "author_initials": "",
+    "has_isbn": true
+  },
+  {
+    "tabela": 34,
+    "uc": "Língua Portuguesa e Literatura — Ano 3",
+    "tipo": "Complementar",
+    "texto": "CASTRO, Eduardo Viveiros de (prefaciador). \\textbf{A queda do céu: palavras de um xamã yanomami. São Paulo: Companhia das Letras, 2015. 729 p., il. (algumas color.), 23 cm. ISBN 9788535926200.",
+    "issues": [],
+    "has_initials": false,
+    "author_initials": "",
+    "has_isbn": true
+  },
+  {
+    "tabela": 34,
+    "uc": "Língua Portuguesa e Literatura — Ano 3",
+    "tipo": "Complementar",
+    "texto": "POLESSO, Natalia Borges. \\textbf{Amora: contos. São Paulo: Fundação Dorina Nowill para Cegos, 2018. 4 v. em braille.",
+    "issues": [],
+    "has_initials": false,
+    "author_initials": "",
+    "has_isbn": false
+  },
+  {
+    "tabela": 35,
+    "uc": "Biologia — Ano 3",
+    "tipo": "Básica",
+    "texto": "3{|p{\\dimexpr\\linewidth-2\\tabcolsep-2\\arrayrulewidth\\relax|{GRIFFITHS, Anthony J. F. \\textbf{Introdução à genética. Tradução de Idilia Vanzellotti. 10. ed. Rio de Janeiro: Guanabara Koogan, 2013. 710 p. ISBN 9788527721912.",
+    "issues": [],
+    "has_initials": false,
+    "author_initials": "",
+    "has_isbn": true
+  },
+  {
+    "tabela": 35,
+    "uc": "Biologia — Ano 3",
+    "tipo": "Básica",
+    "texto": "Livro didático fornecido pelo Fundo Nacional de Desenvolvimento da Educação (FNDE).",
+    "issues": [
+      "Ano de publicação ausente",
+      "Local de publicação e editora ausentes (sem ':')"
+    ],
+    "has_initials": false,
+    "author_initials": "",
+    "has_isbn": false
+  },
+  {
+    "tabela": 35,
+    "uc": "Biologia — Ano 3",
+    "tipo": "Básica",
+    "texto": "REECE, Jane B. \\textbf{Biologia de Campbell. 10. ed. Porto Alegre: Artmed, 2015. 1442 p. ISBN 9788582712160.",
+    "issues": [
+      "Prenome abreviado por inicial (Jane B.)"
+    ],
+    "has_initials": true,
+    "author_initials": "Jane B",
+    "has_isbn": true
+  },
+  {
+    "tabela": 35,
+    "uc": "Biologia — Ano 3",
+    "tipo": "Complementar",
+    "texto": "3{|p{\\dimexpr\\linewidth-2\\tabcolsep-2\\arrayrulewidth\\relax|{BEGON, Michael; TOWNSEND, Colin R.; HARPER, John L. \\textbf{Ecologia: de indivíduos a ecossistemas. 4. ed. Porto Alegre: Artmed, 2007. 740 p. ISBN 9788536308845.",
+    "issues": [],
+    "has_initials": false,
+    "author_initials": "",
+    "has_isbn": true
+  },
+  {
+    "tabela": 35,
+    "uc": "Biologia — Ano 3",
+    "tipo": "Complementar",
+    "texto": "CASTRO, Peter; HUBER, Michael E. \\textbf{Biologia marinha. 8. ed. Porto Alegre: Artmed, 2012. 461 p. ISBN 9788580551020.",
+    "issues": [
+      "Prenome abreviado por inicial (Peter; HUBER, Michael E.)"
+    ],
+    "has_initials": true,
+    "author_initials": "Peter; HUBER, Michael E",
+    "has_isbn": true
+  },
+  {
+    "tabela": 35,
+    "uc": "Biologia — Ano 3",
+    "tipo": "Complementar",
+    "texto": "DARWIN, Charles. \\textbf{A origem das espécies e a seleção natural. Tradução de Soraya Freitas. São Paulo: Madras, 2011. 462 p. ISBN 9788537006573.",
+    "issues": [],
+    "has_initials": false,
+    "author_initials": "",
+    "has_isbn": true
+  },
+  {
+    "tabela": 36,
+    "uc": "Física — Ano 3",
+    "tipo": "Básica",
+    "texto": "3{|p{\\dimexpr\\linewidth-2\\tabcolsep-2\\arrayrulewidth\\relax|{\\textbf{Livro didático fornecido pelo Fundo Nacional de Desenvolvimento da Educação (FNDE).",
+    "issues": [
+      "Ano de publicação ausente",
+      "Local de publicação e editora ausentes (sem ':')"
+    ],
+    "has_initials": false,
+    "author_initials": "",
+    "has_isbn": false
+  },
+  {
+    "tabela": 36,
+    "uc": "Física — Ano 3",
+    "tipo": "Básica",
+    "texto": "HEWITT, Paul G. \\textbf{Física conceitual. 12. ed. Porto Alegre: Bookman, 2015.",
+    "issues": [
+      "Prenome abreviado por inicial (Paul G.)"
+    ],
+    "has_initials": true,
+    "author_initials": "Paul G",
+    "has_isbn": false
+  },
+  {
+    "tabela": 36,
+    "uc": "Física — Ano 3",
+    "tipo": "Básica",
+    "texto": "LUZ, Antônio Máximo Ribeiro da; ALVARENGA, Beatriz Gonçalves de. \\textbf{Curso de física, volume 3. 6. ed. rev. ampl. São Paulo: Scipione, 2006.",
+    "issues": [],
+    "has_initials": false,
+    "author_initials": "",
+    "has_isbn": false
+  },
+  {
+    "tabela": 36,
+    "uc": "Física — Ano 3",
+    "tipo": "Complementar",
+    "texto": "3{|p{\\dimexpr\\linewidth-2\\tabcolsep-2\\arrayrulewidth\\relax|{BARRETO FILHO, Benigno; SILVA, Cláudio Xavier da. \\textbf{360º: física: aula por aula: volume único. 3. ed. São Paulo: FTD, 2015.",
+    "issues": [],
+    "has_initials": false,
+    "author_initials": "",
+    "has_isbn": false
+  },
+  {
+    "tabela": 36,
+    "uc": "Física — Ano 3",
+    "tipo": "Complementar",
+    "texto": "YAMAMOTO, Kazuhito; FUKE, Luiz Felipe. \\textbf{Física para o ensino médio 3: eletricidade, física moderna. 3. ed. São Paulo: Saraiva, 2013.",
+    "issues": [],
+    "has_initials": false,
+    "author_initials": "",
+    "has_isbn": false
+  },
+  {
+    "tabela": 36,
+    "uc": "Física — Ano 3",
+    "tipo": "Complementar",
+    "texto": "KNIGHT, Randall D. \\textbf{Física: uma abordagem estratégica: volume 3: eletricidade e magnetismo. 2. ed. Porto Alegre: Bookman, 2009.",
+    "issues": [
+      "Prenome abreviado por inicial (Randall D.)"
+    ],
+    "has_initials": true,
+    "author_initials": "Randall D",
+    "has_isbn": false
+  },
+  {
+    "tabela": 37,
+    "uc": "Matemática — Ano 3",
+    "tipo": "Básica",
+    "texto": "3{|p{\\dimexpr\\linewidth-2\\tabcolsep-2\\arrayrulewidth\\relax|{BONJORNO, José Roberto; GIOVANNI JÚNIOR, José Ruy; GIOVANNI, José Ruy. \\textbf{Matemática fundamental: uma nova abordagem: ensino médio: volume único. 3. ed. São Paulo: FTD, 2013.",
+    "issues": [],
+    "has_initials": false,
+    "author_initials": "",
+    "has_isbn": false
+  },
+  {
+    "tabela": 37,
+    "uc": "Matemática — Ano 3",
+    "tipo": "Básica",
+    "texto": "DANTE, Luiz Roberto. \\textbf{Projeto Múltiplo: matemática: ensino médio, 3º ano. São Paulo: Ática, 2014.",
+    "issues": [],
+    "has_initials": false,
+    "author_initials": "",
+    "has_isbn": false
+  },
+  {
+    "tabela": 37,
+    "uc": "Matemática — Ano 3",
+    "tipo": "Básica",
+    "texto": "GIOVANNI, José Ruy \\textit{et al. \\textbf{360º matemática fundamental: uma nova abordagem: volume único. 2. ed. São Paulo: FTD, 2015.",
+    "issues": [],
+    "has_initials": false,
+    "author_initials": "",
+    "has_isbn": false
+  },
+  {
+    "tabela": 37,
+    "uc": "Matemática — Ano 3",
+    "tipo": "Complementar",
+    "texto": "3{|p{\\dimexpr\\linewidth-2\\tabcolsep-2\\arrayrulewidth\\relax|{LIMA, E. L.; CARVALHO, Paulo Cesar P. \\textbf{A Matemática do ensino médio. 7. ed. Rio de Janeiro: SBM, 2016.",
+    "issues": [],
+    "has_initials": false,
+    "author_initials": "",
+    "has_isbn": false
+  },
+  {
+    "tabela": 37,
+    "uc": "Matemática — Ano 3",
+    "tipo": "Complementar",
+    "texto": "PAIVA, Manoel. \\textbf{Matemática: Paiva: 3º ano. 2. ed. São Paulo: Moderna, 2013.",
+    "issues": [],
+    "has_initials": false,
+    "author_initials": "",
+    "has_isbn": false
+  },
+  {
+    "tabela": 37,
+    "uc": "Matemática — Ano 3",
+    "tipo": "Complementar",
+    "texto": "LIMA, Elon Lages \\textit{et al. \\textbf{A matemática do ensino médio: volume 1. 10. ed. Rio de Janeiro: SBM, 2016. 240 p.",
+    "issues": [],
+    "has_initials": false,
+    "author_initials": "",
+    "has_isbn": false
+  },
+  {
+    "tabela": 38,
+    "uc": "Química — Ano 3",
+    "tipo": "Básica",
+    "texto": "3{|p{\\dimexpr\\linewidth-2\\tabcolsep-2\\arrayrulewidth\\relax|{ATKINS, Peter William; JONES, Loretta. \\textbf{Princípios de química: questionando a vida moderna e o meio ambiente. 5. ed. Porto Alegre: Bookman, 2012.",
+    "issues": [],
+    "has_initials": false,
+    "author_initials": "",
+    "has_isbn": false
+  },
+  {
+    "tabela": 38,
+    "uc": "Química — Ano 3",
+    "tipo": "Básica",
+    "texto": "MCMURRY, John. \\textbf{Química orgânica: combo. 3. ed. São Paulo: Cengage Learning, 2016.",
+    "issues": [],
+    "has_initials": false,
+    "author_initials": "",
+    "has_isbn": false
+  },
+  {
+    "tabela": 38,
+    "uc": "Química — Ano 3",
+    "tipo": "Básica",
+    "texto": "\\textbf{Livro didático fornecido pelo Fundo Nacional de Desenvolvimento da Educação (FNDE).",
+    "issues": [
+      "Ano de publicação ausente",
+      "Local de publicação e editora ausentes (sem ':')"
+    ],
+    "has_initials": false,
+    "author_initials": "",
+    "has_isbn": false
+  },
+  {
+    "tabela": 38,
+    "uc": "Química — Ano 3",
+    "tipo": "Complementar",
+    "texto": "3{|p{\\dimexpr\\linewidth-2\\tabcolsep-2\\arrayrulewidth\\relax|{CHANG, Raymond. \\textbf{Química geral: conceitos essenciais. 4. ed. Porto Alegre: AMGH, 2010.",
+    "issues": [],
+    "has_initials": false,
+    "author_initials": "",
+    "has_isbn": false
+  },
+  {
+    "tabela": 38,
+    "uc": "Química — Ano 3",
+    "tipo": "Complementar",
+    "texto": "DALMAZ, Carla; CALCAGNOTTO, Maria Elisa (revisão técnica). \\textbf{Bioquímica ilustrada. 7. ed. Porto Alegre: Artmed, 2019.",
+    "issues": [],
+    "has_initials": false,
+    "author_initials": "",
+    "has_isbn": false
+  },
+  {
+    "tabela": 38,
+    "uc": "Química — Ano 3",
+    "tipo": "Complementar",
+    "texto": "ZUBRICK, James W. \\textbf{Manual de sobrevivência no laboratório de química orgânica: guia de técnicas para o aluno. Rio de Janeiro: LTC, 2005.",
+    "issues": [
+      "Prenome abreviado por inicial (James W.)"
+    ],
+    "has_initials": true,
+    "author_initials": "James W",
+    "has_isbn": false
+  },
+  {
+    "tabela": 39,
+    "uc": "Filosofia — Ano 3",
+    "tipo": "Básica",
+    "texto": "3{|p{\\dimexpr\\linewidth-2\\tabcolsep-2\\arrayrulewidth\\relax|{ARANHA, M. L. A.; MARTINS, M. H. P. \\textbf{Filosofando: introdução à filosofia. São Paulo: Moderna, 1993.",
+    "issues": [],
+    "has_initials": false,
+    "author_initials": "",
+    "has_isbn": false
+  },
+  {
+    "tabela": 39,
+    "uc": "Filosofia — Ano 3",
+    "tipo": "Básica",
+    "texto": "CHAUÍ, Marilena. \\textbf{Convite à filosofia. 13. ed. São Paulo: Ática, 2009.",
+    "issues": [],
+    "has_initials": false,
+    "author_initials": "",
+    "has_isbn": false
+  },
+  {
+    "tabela": 39,
+    "uc": "Filosofia — Ano 3",
+    "tipo": "Complementar",
+    "texto": "3{|p{\\dimexpr\\linewidth-2\\tabcolsep-2\\arrayrulewidth\\relax|{GAARDER, Jostein. \\textbf{O mundo de Sofia: romance da história da filosofia. São Paulo: Seguinte, 2012.",
+    "issues": [],
+    "has_initials": false,
+    "author_initials": "",
+    "has_isbn": false
+  },
+  {
+    "tabela": 39,
+    "uc": "Filosofia — Ano 3",
+    "tipo": "Complementar",
+    "texto": "MARCONDES, Danilo. \\textbf{Textos básicos de filosofia: dos pré-socráticos a Wittgenstein. Rio de Janeiro: Jorge Zahar, 2000.",
+    "issues": [],
+    "has_initials": false,
+    "author_initials": "",
+    "has_isbn": false
+  },
+  {
+    "tabela": 40,
+    "uc": "Geografia — Ano 3",
+    "tipo": "Básica",
+    "texto": "3{|p{\\dimexpr\\linewidth-2\\tabcolsep-2\\arrayrulewidth\\relax|{SANTOS, Milton. \\textbf{A natureza do espaço: técnica e tempo, razão e estrutura. 4. ed. São Paulo: EDUSP, 2006. 392 p.",
+    "issues": [],
+    "has_initials": false,
+    "author_initials": "",
+    "has_isbn": false
+  },
+  {
+    "tabela": 40,
+    "uc": "Geografia — Ano 3",
+    "tipo": "Básica",
+    "texto": "LUCCI, Elian Alabi; BRANCO, Anselmo Lazaro; MENDONÇA, Cláudio. \\textbf{Território e sociedade no mundo globalizado. 3. ed. São Paulo: Saraiva, 2017. 480 p.",
+    "issues": [],
+    "has_initials": false,
+    "author_initials": "",
+    "has_isbn": false
+  },
+  {
+    "tabela": 40,
+    "uc": "Geografia — Ano 3",
+    "tipo": "Básica",
+    "texto": "HAESBAERT, Rogério. \\textbf{O mito da desterritorialização: do \"fim dos territórios\" à multiterritorialidade. 8. ed. Rio de Janeiro: Bertrand Brasil, 2014. 396 p.",
+    "issues": [],
+    "has_initials": false,
+    "author_initials": "",
+    "has_isbn": false
+  },
+  {
+    "tabela": 40,
+    "uc": "Geografia — Ano 3",
+    "tipo": "Complementar",
+    "texto": "3{|p{\\dimexpr\\linewidth-2\\tabcolsep-2\\arrayrulewidth\\relax|{HARVEY, David. \\textbf{O enigma do capital e as crises do capitalismo. São Paulo: Boitempo, 2011. 240 p.",
+    "issues": [],
+    "has_initials": false,
+    "author_initials": "",
+    "has_isbn": false
+  },
+  {
+    "tabela": 40,
+    "uc": "Geografia — Ano 3",
+    "tipo": "Complementar",
+    "texto": "MAGNOLI, Demétrio. \\textbf{História da Geopolítica. São Paulo: Contexto, 2011. 240 p.",
+    "issues": [],
+    "has_initials": false,
+    "author_initials": "",
+    "has_isbn": false
+  },
+  {
+    "tabela": 40,
+    "uc": "Geografia — Ano 3",
+    "tipo": "Complementar",
+    "texto": "SENE, Eustáquio de; MOREIRA, João Carlos. \\textbf{Geografia geral e do Brasil: espaço geográfico e globalização. São Paulo: Scipione, 2016. 640 p.",
+    "issues": [],
+    "has_initials": false,
+    "author_initials": "",
+    "has_isbn": false
+  },
+  {
+    "tabela": 41,
+    "uc": "História — Ano 3",
+    "tipo": "Básica",
+    "texto": "3{|p{\\dimexpr\\linewidth-2\\tabcolsep-2\\arrayrulewidth\\relax|{BOULOS JÚNIOR, Alfredo. \\textbf{360º: história sociedade \\& cidadania. São Paulo: FTD, 2015.",
+    "issues": [],
+    "has_initials": false,
+    "author_initials": "",
+    "has_isbn": false
+  },
+  {
+    "tabela": 41,
+    "uc": "História — Ano 3",
+    "tipo": "Básica",
+    "texto": "VICENTINO, Cláudio; DORIGO, Gianpaolo. \\textbf{História geral e do Brasil. São Paulo: Scipione, 2010.",
+    "issues": [],
+    "has_initials": false,
+    "author_initials": "",
+    "has_isbn": false
+  },
+  {
+    "tabela": 41,
+    "uc": "História — Ano 3",
+    "tipo": "Complementar",
+    "texto": "3{|p{\\dimexpr\\linewidth-2\\tabcolsep-2\\arrayrulewidth\\relax|{BHABHA, Homi. \\textbf{O local da cultura. Belo Horizonte: Editora UFMG, 1999.",
+    "issues": [],
+    "has_initials": false,
+    "author_initials": "",
+    "has_isbn": false
+  },
+  {
+    "tabela": 41,
+    "uc": "História — Ano 3",
+    "tipo": "Complementar",
+    "texto": "CERTEAU, Michel de. \\textbf{A invenção do cotidiano: artes de fazer. Petrópolis, RJ: Vozes, 2009.",
+    "issues": [],
+    "has_initials": false,
+    "author_initials": "",
+    "has_isbn": false
+  },
+  {
+    "tabela": 41,
+    "uc": "História — Ano 3",
+    "tipo": "Complementar",
+    "texto": "CAREGNATO, Célia Elizabete; BOMBASSARO, Luiz Carlos (org.). \\textbf{Diversidade cultural: viver diferenças e enfrentar desigualdades na educação. Erechim, RS: Novello \\& Carbonelli, 2013.",
+    "issues": [],
+    "has_initials": false,
+    "author_initials": "",
+    "has_isbn": false
+  },
+  {
+    "tabela": 41,
+    "uc": "História — Ano 3",
+    "tipo": "Complementar",
+    "texto": "GALEANO, Eduardo. \\textbf{As caras e as máscaras. Porto Alegre: L\\&PM Editores, 2004.",
+    "issues": [],
+    "has_initials": false,
+    "author_initials": "",
+    "has_isbn": false
+  },
+  {
+    "tabela": 41,
+    "uc": "História — Ano 3",
+    "tipo": "Complementar",
+    "texto": "HALL, Stuart. \\textbf{A identidade cultural na pós-modernidade. Rio de Janeiro: Lamparina, 2015.",
+    "issues": [],
+    "has_initials": false,
+    "author_initials": "",
+    "has_isbn": false
+  },
+  {
+    "tabela": 41,
+    "uc": "História — Ano 3",
+    "tipo": "Complementar",
+    "texto": "HALL, Stuart; WOODWARD, Kathryn. \\textbf{Identidade e diferença: a perspectiva dos estudos culturais. Rio de Janeiro: Vozes, 2014.",
+    "issues": [],
+    "has_initials": false,
+    "author_initials": "",
+    "has_isbn": false
+  },
+  {
+    "tabela": 41,
+    "uc": "História — Ano 3",
+    "tipo": "Complementar",
+    "texto": "HOBSBAWM, Eric John. \\textbf{Era dos extremos: o breve século XX: 1914-1991. São Paulo: Companhia das Letras, 2005.",
+    "issues": [],
+    "has_initials": false,
+    "author_initials": "",
+    "has_isbn": false
+  },
+  {
+    "tabela": 41,
+    "uc": "História — Ano 3",
+    "tipo": "Complementar",
+    "texto": "HOLLANDA, Heloísa Buarque de (org.). \\textbf{Pensamento Feminista Hoje: perspectivas decoloniais. Rio de Janeiro: Bazar do Tempo, 2020.",
+    "issues": [],
+    "has_initials": false,
+    "author_initials": "",
+    "has_isbn": false
+  },
+  {
+    "tabela": 41,
+    "uc": "História — Ano 3",
+    "tipo": "Complementar",
+    "texto": "MIGNOLO, Walter. \\textbf{Histórias Globais/projetos Locais. Belo Horizonte: Editora UFMG, 2003.",
+    "issues": [],
+    "has_initials": false,
+    "author_initials": "",
+    "has_isbn": false
+  },
+  {
+    "tabela": 41,
+    "uc": "História — Ano 3",
+    "tipo": "Complementar",
+    "texto": "SANTOS, Boaventura de Sousa; MARTINS, Bruno Sena (org.). \\textbf{O pluriverso dos direitos humanos: a diversidade das lutas pela dignidade. Belo Horizonte: Autêntica, 2019.",
+    "issues": [],
+    "has_initials": false,
+    "author_initials": "",
+    "has_isbn": false
+  },
+  {
+    "tabela": 41,
+    "uc": "História — Ano 3",
+    "tipo": "Complementar",
+    "texto": "SOUZA, Laura Olivieri Carneiro de. \\textbf{Quilombos: identidade e história. Rio de Janeiro: Nova Fronteira, 2012.",
+    "issues": [],
+    "has_initials": false,
+    "author_initials": "",
+    "has_isbn": false
+  },
+  {
+    "tabela": 41,
+    "uc": "História — Ano 3",
+    "tipo": "Complementar",
+    "texto": "RICKLEFS, Robert E. \\textbf{A economia da natureza. Rio de Janeiro: Guanabara Koogan, 2010.",
+    "issues": [
+      "Prenome abreviado por inicial (Robert E.)"
+    ],
+    "has_initials": true,
+    "author_initials": "Robert E",
+    "has_isbn": false
+  },
+  {
+    "tabela": 41,
+    "uc": "História — Ano 3",
+    "tipo": "Complementar",
+    "texto": "WALSH, Catherine. \\textbf{Pedagogías decoloniales: prácticas insurgentes de resistir, (re)existir y (re)vivir. Tomo II. Quito: Abya-Yala, 2017.",
+    "issues": [],
+    "has_initials": false,
+    "author_initials": "",
+    "has_isbn": false
+  },
+  {
+    "tabela": 42,
+    "uc": "Empreendedorismo II",
+    "tipo": "Básica",
+    "texto": "3{|p{\\dimexpr\\linewidth-2\\tabcolsep-2\\arrayrulewidth\\relax|{BESSANT, John; TIDD, Joe; COSTA, Francisco Araújo da. \\textbf{Inovação e empreendedorismo. 3. ed. Porto Alegre: Bookman, 2019.",
+    "issues": [],
+    "has_initials": false,
+    "author_initials": "",
+    "has_isbn": false
+  },
+  {
+    "tabela": 42,
+    "uc": "Empreendedorismo II",
+    "tipo": "Básica",
+    "texto": "DORNELAS, José Carlos Assis. \\textbf{Empreendedorismo corporativo: como ser empreendedor, inovar e se diferenciar na sua empresa. 2. ed. Rio de Janeiro: Elsevier, 2008.",
+    "issues": [],
+    "has_initials": false,
+    "author_initials": "",
+    "has_isbn": false
+  },
+  {
+    "tabela": 42,
+    "uc": "Empreendedorismo II",
+    "tipo": "Básica",
+    "texto": "DORNELAS, José Carlos Assis. \\textbf{Empreendedorismo: transformando idéias em negócios. 3. ed. rev. e atual. Rio de Janeiro: Elsevier, 2008.",
+    "issues": [],
+    "has_initials": false,
+    "author_initials": "",
+    "has_isbn": false
+  },
+  {
+    "tabela": 42,
+    "uc": "Empreendedorismo II",
+    "tipo": "Básica",
+    "texto": "HISRICH, Robert D.; PETERS, Michael P.; SHEPHERD, Dean A. \\textbf{Empreendedorismo. Tradução de Francisco Araujo da Costa. 9. ed. Porto Alegre: AMGH, 2014.",
+    "issues": [
+      "Prenome abreviado por inicial (Robert D.)"
+    ],
+    "has_initials": true,
+    "author_initials": "Robert D",
+    "has_isbn": false
+  },
+  {
+    "tabela": 42,
+    "uc": "Empreendedorismo II",
+    "tipo": "Básica",
+    "texto": "OLIVEIRA, Edson Marques. \\textbf{Empreendedorismo social: da teoria à prática, do sonho à realidade. Rio de Janeiro: Qualitymark, 2008.",
+    "issues": [],
+    "has_initials": false,
+    "author_initials": "",
+    "has_isbn": false
+  },
+  {
+    "tabela": 42,
+    "uc": "Empreendedorismo II",
+    "tipo": "Complementar",
+    "texto": "3{|p{\\dimexpr\\linewidth-2\\tabcolsep-2\\arrayrulewidth\\relax|{BERNARDI, Luiz Antonio. \\textbf{Manual de empreendedorismo e gestão: fundamentos, estratégias e dinâmicas. 2. ed. São Paulo: Atlas, 2012.",
+    "issues": [],
+    "has_initials": false,
+    "author_initials": "",
+    "has_isbn": false
+  },
+  {
+    "tabela": 42,
+    "uc": "Empreendedorismo II",
+    "tipo": "Complementar",
+    "texto": "DORNELAS, José Carlos Assis. \\textbf{Empreendedorismo corporativo: como ser empreendedor, inovar e se diferenciar na sua empresa. 2. ed. Rio de Janeiro: Elsevier, 2008.",
+    "issues": [],
+    "has_initials": false,
+    "author_initials": "",
+    "has_isbn": false
+  },
+  {
+    "tabela": 42,
+    "uc": "Empreendedorismo II",
+    "tipo": "Complementar",
+    "texto": "OLIVEIRA, Djalma de Pinho Rebouças de. \\textbf{Empreendedorismo: vocação, capacitação e atuação direcionadas para o plano de negócios. São Paulo: Atlas, 2014.",
+    "issues": [],
+    "has_initials": false,
+    "author_initials": "",
+    "has_isbn": false
+  },
+  {
+    "tabela": 42,
+    "uc": "Empreendedorismo II",
+    "tipo": "Complementar",
+    "texto": "OSTERWALDER, Alexander; PIGNEUR, Yves. \\textbf{Business model generation = inovação em modelos de negócios: um manual para visionários, inovadores e revolucionários. Rio de Janeiro: Alta Books, 2011.",
+    "issues": [],
+    "has_initials": false,
+    "author_initials": "",
+    "has_isbn": false
+  },
+  {
+    "tabela": 43,
+    "uc": "Gestão de Pessoas e Relações no Trabalho",
+    "tipo": "Básica",
+    "texto": "3{|p{\\dimexpr\\linewidth-2\\tabcolsep-2\\arrayrulewidth\\relax|{FIDELIS, Gilson José. \\textbf{Gestão de pessoas: rotinas trabalhistas e dinâmicas do departamento de pessoal. 6. ed. rev. atual. São Paulo: Érica, 2020.",
+    "issues": [],
+    "has_initials": false,
+    "author_initials": "",
+    "has_isbn": false
+  },
+  {
+    "tabela": 43,
+    "uc": "Gestão de Pessoas e Relações no Trabalho",
+    "tipo": "Básica",
+    "texto": "FONTOURA, Iara P.; SABATOVSKI, Emilio. \\textbf{Consolidação das leis trabalhistas. 6. ed. Curitiba: Juruá, 2010.",
+    "issues": [
+      "Prenome abreviado por inicial (Iara P.)"
+    ],
+    "has_initials": true,
+    "author_initials": "Iara P",
+    "has_isbn": false
+  },
+  {
+    "tabela": 43,
+    "uc": "Gestão de Pessoas e Relações no Trabalho",
+    "tipo": "Complementar",
+    "texto": "3{|p{\\dimexpr\\linewidth-2\\tabcolsep-2\\arrayrulewidth\\relax|{GIL, Antonio Carlos. \\textbf{Gestão de pessoas: enfoque nos papéis profissionais. São Paulo: Atlas, 2010.",
+    "issues": [],
+    "has_initials": false,
+    "author_initials": "",
+    "has_isbn": false
+  },
+  {
+    "tabela": 43,
+    "uc": "Gestão de Pessoas e Relações no Trabalho",
+    "tipo": "Complementar",
+    "texto": "PONTELO, Juliana França; CRUZ, Lucineide A. M. \\textbf{Gestão de pessoas: manual de rotinas trabalhistas. 8. ed. rev. e ampl. Brasília, DF: Senac-DF, 2016.",
+    "issues": [
+      "Prenome abreviado por inicial (Juliana França; CRUZ, Lucineide A.)"
+    ],
+    "has_initials": true,
+    "author_initials": "Juliana França; CRUZ, Lucineide A",
+    "has_isbn": false
+  },
+  {
+    "tabela": 43,
+    "uc": "Gestão de Pessoas e Relações no Trabalho",
+    "tipo": "Complementar",
+    "texto": "VERGARA, Sylvia Constant. \\textbf{Gestão de pessoas. 10. ed. São Paulo: Atlas, 2011.",
+    "issues": [],
+    "has_initials": false,
+    "author_initials": "",
+    "has_isbn": false
+  },
+  {
+    "tabela": 44,
+    "uc": "Gestão Financeira",
+    "tipo": "Básica",
+    "texto": "3{|p{\\dimexpr\\linewidth-2\\tabcolsep-2\\arrayrulewidth\\relax|{ASSAF NETO, Alexandre; LIMA, Fabiano Guasti. \\textbf{Curso de administração financeira. 2. ed. São Paulo: Atlas, 2011.",
+    "issues": [],
+    "has_initials": false,
+    "author_initials": "",
+    "has_isbn": false
+  },
+  {
+    "tabela": 44,
+    "uc": "Gestão Financeira",
+    "tipo": "Básica",
+    "texto": "SARMENTO, Marlon Melo. \\textbf{Gestão financeira por fluxo de caixa: a evolução das finanças para empresas. Rio de Janeiro: Editora Alta Books, 2024.",
+    "issues": [],
+    "has_initials": false,
+    "author_initials": "",
+    "has_isbn": false
+  },
+  {
+    "tabela": 44,
+    "uc": "Gestão Financeira",
+    "tipo": "Complementar",
+    "texto": "3{|p{\\dimexpr\\linewidth-2\\tabcolsep-2\\arrayrulewidth\\relax|{FARIAS, Cláudio Vinícius Silva (org.). \\textbf{Técnico em administração: gestão e negócios. Porto Alegre: Bookman, 2013.",
+    "issues": [],
+    "has_initials": false,
+    "author_initials": "",
+    "has_isbn": false
+  },
+  {
+    "tabela": 44,
+    "uc": "Gestão Financeira",
+    "tipo": "Complementar",
+    "texto": "GITMAN, Lawrence Jeffrey. \\textbf{Princípios de administração financeira. 12. ed. São Paulo: Pearson, 2010.",
+    "issues": [],
+    "has_initials": false,
+    "author_initials": "",
+    "has_isbn": false
+  },
+  {
+    "tabela": 44,
+    "uc": "Gestão Financeira",
+    "tipo": "Complementar",
+    "texto": "SOUSA, Antônio de. \\textbf{Gerência financeira para micro e pequenas empresas: um manual simplificado. Rio de Janeiro: Elsevier/Sebrae, 2007.",
+    "issues": [],
+    "has_initials": false,
+    "author_initials": "",
+    "has_isbn": false
+  },
+  {
+    "tabela": 45,
+    "uc": "Oficina de Integração II",
+    "tipo": "Básica",
+    "texto": "3{|p{\\dimexpr\\linewidth-2\\tabcolsep-2\\arrayrulewidth\\relax|{FRIGOTTO, Gaudêncio; CIAVATTA, Maria; RAMOS, Marise Nogueira (org.). \\textbf{Ensino médio integrado: concepção e contradições. 3. ed. São Paulo: Cortez, 2012.",
+    "issues": [],
+    "has_initials": false,
+    "author_initials": "",
+    "has_isbn": false
+  },
+  {
+    "tabela": 45,
+    "uc": "Oficina de Integração II",
+    "tipo": "Básica",
+    "texto": "GIL, Antonio Carlos. \\textbf{Como elaborar projetos de pesquisa. 6. ed. São Paulo: Atlas, 2017.",
+    "issues": [],
+    "has_initials": false,
+    "author_initials": "",
+    "has_isbn": false
+  },
+  {
+    "tabela": 45,
+    "uc": "Oficina de Integração II",
+    "tipo": "Básica",
+    "texto": "MORIN, Edgar. \\textbf{Os sete saberes necessários à educação do futuro. Tradução de Catarina Eleonora F. da Silva, Jeanne Sawaya. 2. ed. rev. São Paulo: Cortez, 2011.",
+    "issues": [],
+    "has_initials": false,
+    "author_initials": "",
+    "has_isbn": false
+  },
+  {
+    "tabela": 45,
+    "uc": "Oficina de Integração II",
+    "tipo": "Básica",
+    "texto": "SILVA, Adriano Larentes da (org.) \\textit{et al. \\textbf{O currículo integrado no cotidiano da sala de aula. Florianópolis: Publicação do IFSC, 2016. Disponível em: https://www.ifsc.edu.br/livros-e-periodicos.",
+    "issues": [],
+    "has_initials": false,
+    "author_initials": "",
+    "has_isbn": false
+  },
+  {
+    "tabela": 45,
+    "uc": "Oficina de Integração II",
+    "tipo": "Complementar",
+    "texto": "3{|p{\\dimexpr\\linewidth-2\\tabcolsep-2\\arrayrulewidth\\relax|{KEELLING, Ralph; BRANCO, Renato Henrique Ferreira. \\textbf{Gestão de projetos: uma abordagem global. Tradução de Cid Knipel Moreira. 4. ed. São Paulo: Saraiva, 2019.",
+    "issues": [],
+    "has_initials": false,
+    "author_initials": "",
+    "has_isbn": false
+  },
+  {
+    "tabela": 45,
+    "uc": "Oficina de Integração II",
+    "tipo": "Complementar",
+    "texto": "MARCONI, Marina de Andrade; LAKATOS, Eva Maria. \\textbf{Metodologia do trabalho científico: projetos de pesquisa, pesquisa bibliográfica, teses de doutorado, dissertações de mestrado, trabalhos de conclusão de curso. 8. ed. São Paulo: Atlas, 2018.",
+    "issues": [],
+    "has_initials": false,
+    "author_initials": "",
+    "has_isbn": false
+  },
+  {
+    "tabela": 45,
+    "uc": "Oficina de Integração II",
+    "tipo": "Complementar",
+    "texto": "LIMA, Elon Lages \\textit{et al. \\textbf{A matemática do ensino médio: volume 1. 10. ed. Rio de Janeiro: SBM, 2016. 240 p.",
+    "issues": [],
+    "has_initials": false,
+    "author_initials": "",
+    "has_isbn": false
+  }
+]
