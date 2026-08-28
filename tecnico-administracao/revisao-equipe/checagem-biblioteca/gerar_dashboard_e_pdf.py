@@ -780,8 +780,8 @@ def generate_interactive_html(df_all, df_resumo, df_uc, all_library_items, uc_di
         <div>
           <strong style="color:#ffffff; font-size:0.95rem; font-family:'Outfit', sans-serif;">Critérios Oficiais de Quantitativos Mínimos da Biblioteca (IFSC):</strong>
           <p style="font-size:0.82rem; color:var(--text-muted); margin-top:2px;">
-            • <strong>Bibliografia Básica:</strong> Mínimo 2 títulos de livros $\rightarrow$ <strong>ao menos 3 exemplares físicos</strong> de cada título no acervo do câmpus (ou PNLD).<br>
-            • <strong>Bibliografia Complementar:</strong> Mínimo 3 títulos de livros $\rightarrow$ <strong>ao menos 1 exemplar físico</strong> de cada título no acervo do câmpus.
+            • <strong>Bibliografia Básica:</strong> Mínimo 2 títulos de livros &rarr; <strong>ao menos 3 exemplares físicos</strong> de cada título no acervo do câmpus (ou PNLD).<br>
+            • <strong>Bibliografia Complementar:</strong> Mínimo 3 títulos de livros &rarr; <strong>ao menos 1 exemplar físico</strong> de cada título no acervo do câmpus.
           </p>
         </div>
       </div>
@@ -980,12 +980,12 @@ def generate_interactive_html(df_all, df_resumo, df_uc, all_library_items, uc_di
                 <tr style="background:rgba(244,63,94,0.08);">
                   <td><strong style="color:#fb7185;">DEMANDA DE COMPRAS: Bibliografia BÁSICA</strong></td>
                   <td><strong style="color:#fb7185;">+{total_deficit_basica} exemplares físicos</strong></td>
-                  <td>Meta: $\ge$ 3 exemplares por título básico</td>
+                  <td>Meta: &ge; 3 exemplares por título básico</td>
                 </tr>
                 <tr style="background:rgba(245,158,11,0.08);">
                   <td><strong style="color:#fbbf24;">DEMANDA DE COMPRAS: Bibliografia COMPLEMENTAR</strong></td>
                   <td><strong style="color:#fbbf24;">+{total_deficit_comp} exemplares físicos</strong></td>
-                  <td>Meta: $\ge$ 1 exemplar por título complementar</td>
+                  <td>Meta: &ge; 1 exemplar por título complementar</td>
                 </tr>
                 <tr style="background:rgba(16,185,129,0.12);">
                   <td><strong style="color:#34d399; font-size:0.95rem;">TOTAL GERAL DE COMPRAS PARA O CÂMPUS GAROPABA</strong></td>
@@ -1279,7 +1279,7 @@ def generate_interactive_html(df_all, df_resumo, df_uc, all_library_items, uc_di
             <strong style="color:#fbbf24; display:block; margin-bottom:0.2rem;"><i class="bi bi-stack me-1"></i> Título Básico com Acervo Reduzido (&lt; 3 Exs.):</strong>
             <ul class="diag-missing-list" style="color:#f1f5f9;">
               ${{u.b_low_copies.map(b => `
-                <li>• <strong>${{b.Titulo_Obra}}</strong> (Possui ${{b.Exemplares_Disponiveis}} ex. $\rightarrow$ <span style="color:#fbbf24; font-weight:700;">Comprar +${{b.Deficit_Exemplares_Compra}} ex.</span>)</li>
+                <li>• <strong>${{b.Titulo_Obra}}</strong> (Possui ${{b.Exemplares_Disponiveis}} ex. &rarr; <span style="color:#fbbf24; font-weight:700;">Comprar +${{b.Deficit_Exemplares_Compra}} ex.</span>)</li>
               `).join('')}}
             </ul>
           </div>
