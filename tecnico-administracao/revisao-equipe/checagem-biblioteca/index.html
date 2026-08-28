@@ -583,46 +583,48 @@
         <i class="bi bi-shield-check text-emerald" style="font-size:1.8rem;"></i>
         <div>
           <strong style="color:#ffffff; font-size:0.95rem; font-family:'Outfit', sans-serif;">Critérios Oficiais de Quantitativos Mínimos da Biblioteca (IFSC):</strong>
-          <p style="font-size:0.82rem; color:var(--text-muted); margin-top:2px;">
-            • <strong>Bibliografia Básica:</strong> Mínimo 2 títulos de livros &rarr; <strong>ao menos 3 exemplares físicos</strong> de cada título no acervo do câmpus (ou PNLD).<br>
-            • <strong>Bibliografia Complementar:</strong> Mínimo 3 títulos de livros &rarr; <strong>ao menos 1 exemplar físico</strong> de cada título no acervo do câmpus.
+          <p style="font-size:0.82rem; color:var(--text-muted); margin-top:2px; line-height:1.7;">
+            • <a href="#secao-compras-basica" onclick="scrollToSection('secao-compras-basica'); return false;" style="color:#34d399; font-weight:700; text-decoration:underline; cursor:pointer;">Bibliografia Básica: Mínimo 2 títulos &rarr; ao menos 3 exemplares físicos no acervo (Clique para ver as 163 cópias a comprar)</a>.<br>
+            • <a href="#secao-compras-comp" onclick="scrollToSection('secao-compras-comp'); return false;" style="color:#fbbf24; font-weight:700; text-decoration:underline; cursor:pointer;">Bibliografia Complementar: Mínimo 3 títulos &rarr; ao menos 1 exemplar físico no acervo (Clique para ver as 55 cópias a comprar)</a>.
           </p>
         </div>
       </div>
       <div style="text-align:right;">
-        <span class="normative-badge">
-          <i class="bi bi-cart-check-fill"></i> Demanda Total de Compras: <strong>+218 exemplares</strong>
-        </span>
+        <a href="#secao-compras-basica" onclick="scrollToSection('secao-compras-basica'); return false;" style="text-decoration:none;">
+          <span class="normative-badge" style="cursor:pointer;" title="Clique para ver o relatório completo de compras">
+            <i class="bi bi-cart-check-fill"></i> Demanda Total de Compras: <strong>+218 exemplares</strong> <i class="bi bi-arrow-right-circle-fill ms-1"></i>
+          </span>
+        </a>
       </div>
     </div>
 
     <!-- KPI CARDS FOCADOS EM QUANTITATIVOS NORMATIVOS -->
     <div class="kpi-grid">
-      <div class="kpi-card kpi-rose" onclick="filterDiagBy('CRITICA_BASICA')">
+      <div class="kpi-card kpi-rose" onclick="scrollToSection('secao-compras-basica')" title="Clique para ver a lista de compras da Básica">
         <div class="kpi-header">
           <span class="kpi-title">Compras Básica (&lt; 3 Exs.)</span>
           <i class="bi bi-cart-plus-fill kpi-icon"></i>
         </div>
         <div class="kpi-value">+163 Exs.</div>
-        <div class="kpi-desc">Exemplares a adquirir para atingir a meta de 3 cópias por título básico</div>
+        <div class="kpi-desc">Exemplares a adquirir para atingir a meta de 3 cópias por título básico (Clique para ver)</div>
       </div>
 
-      <div class="kpi-card kpi-amber" onclick="filterDiagBy('ATENCAO_COMPLEMENTAR')">
+      <div class="kpi-card kpi-amber" onclick="scrollToSection('secao-compras-comp')" title="Clique para ver a lista de compras da Complementar">
         <div class="kpi-header">
           <span class="kpi-title">Compras Complementar (&lt; 1 Ex.)</span>
           <i class="bi bi-journal-plus kpi-icon"></i>
         </div>
         <div class="kpi-value">+55 Exs.</div>
-        <div class="kpi-desc">Exemplares a adquirir para suprir 1 cópia dos títulos ausentes</div>
+        <div class="kpi-desc">Exemplares a adquirir para suprir 1 cópia dos títulos ausentes (Clique para ver)</div>
       </div>
 
-      <div class="kpi-card kpi-blue" onclick="filterDiagBy('ATENCAO_EDICAO')">
+      <div class="kpi-card kpi-blue" onclick="scrollToSection('secao-variacoes-edicao')" title="Clique para ver as variações de edição">
         <div class="kpi-header">
           <span class="kpi-title">Variação de Edição / Ano</span>
           <i class="bi bi-arrow-repeat kpi-icon"></i>
         </div>
         <div class="kpi-value">1 UCs</div>
-        <div class="kpi-desc">Obras existem no acervo; requer atualização do texto do PPC</div>
+        <div class="kpi-desc">Obras existem no acervo; requer atualização do texto do PPC (Clique para ver)</div>
       </div>
 
       <div class="kpi-card kpi-emerald" onclick="filterDiagBy('CONFORME_100')">
@@ -732,11 +734,17 @@
           <h3 style="font-family:'Outfit', sans-serif; font-size:1.15rem; color:var(--accent-emerald); margin-bottom:0.6rem;">
             <i class="bi bi-1-circle-fill me-1"></i> 1. Premissas Normativas Institucionais (IFSC)
           </h3>
-          <div style="background:rgba(15,23,42,0.6); border:1px solid var(--border-color); border-radius:10px; padding:1rem; font-size:0.88rem; line-height:1.6;">
+          <div style="background:rgba(15,23,42,0.6); border:1px solid var(--border-color); border-radius:10px; padding:1rem; font-size:0.88rem; line-height:1.7;">
             <p>Em consonância com as normas de regulação e avaliação de cursos do IFSC, a auditoria aplicou os seguintes critérios de quantitativos mínimos:</p>
             <ul style="margin-top:0.5rem; padding-left:1.2rem; color:#f1f5f9;">
-              <li><strong>Bibliografia Básica:</strong> Mínimo de <strong>2 títulos de livros</strong> por Unidade Curricular, devendo o acervo do câmpus disponibilizar <strong>ao menos 3 exemplares físicos de cada título</strong> (ou livro PNLD com 1 exemplar por estudante).</li>
-              <li><strong>Bibliografia Complementar:</strong> Mínimo de <strong>3 títulos de livros</strong> por Unidade Curricular, devendo o acervo do câmpus disponibilizar <strong>ao menos 1 exemplar físico de cada título</strong>.</li>
+              <li style="margin-bottom:0.4rem;">
+                <strong>Bibliografia Básica:</strong> Mínimo de <strong>2 títulos de livros</strong> por Unidade Curricular, devendo o acervo do câmpus disponibilizar <strong>ao menos 3 exemplares físicos de cada título</strong> (ou livro PNLD com 1 exemplar por estudante).
+                <a href="#secao-compras-basica" onclick="scrollToSection('secao-compras-basica'); return false;" style="color:#fb7185; margin-left:8px; font-weight:700; text-decoration:underline;">&rarr; Ver relação de obras a adquirir (+163 ex.)</a>
+              </li>
+              <li>
+                <strong>Bibliografia Complementar:</strong> Mínimo de <strong>3 títulos de livros</strong> por Unidade Curricular, devendo o acervo do câmpus disponibilizar <strong>ao menos 1 exemplar físico de cada título</strong>.
+                <a href="#secao-compras-comp" onclick="scrollToSection('secao-compras-comp'); return false;" style="color:#fbbf24; margin-left:8px; font-weight:700; text-decoration:underline;">&rarr; Ver relação de obras a adquirir (+55 ex.)</a>
+              </li>
             </ul>
           </div>
         </div>
@@ -781,15 +789,39 @@
                   <td><strong>103 títulos</strong></td>
                   <td><span class="badge badge-var">68,7% Atendidos</span></td>
                 </tr>
-                <tr style="background:rgba(244,63,94,0.12); cursor:pointer; transition:all 0.2s;" onclick="scrollToSection('secao-compras-basica')" onmouseover="this.style.background='rgba(244,63,94,0.2)'" onmouseout="this.style.background='rgba(244,63,94,0.12)'" title="Clique para ir direto à lista de compras da Bibliografia Básica">
-                  <td><strong style="color:#fb7185;"><i class="bi bi-box-arrow-in-down-right me-1"></i> DEMANDA DE COMPRAS: Bibliografia BÁSICA</strong></td>
-                  <td><strong style="color:#fb7185; font-size:0.95rem;">+163 exemplares físicos</strong></td>
-                  <td>Meta: &ge; 3 exemplares por título básico <span class="badge badge-nao" style="margin-left:8px; cursor:pointer;"><i class="bi bi-arrow-down-circle-fill"></i> Ver Listagem Completa</span></td>
+                <tr style="background:rgba(244,63,94,0.12); cursor:pointer; transition:all 0.2s;" onclick="scrollToSection('secao-compras-basica')" onmouseover="this.style.background='rgba(244,63,94,0.22)'" onmouseout="this.style.background='rgba(244,63,94,0.12)'" title="Clique para ir direto à lista de compras da Bibliografia Básica">
+                  <td>
+                    <a href="#secao-compras-basica" onclick="scrollToSection('secao-compras-basica'); return false;" style="color:#fb7185; text-decoration:underline; font-weight:800; font-size:0.92rem; display:inline-flex; align-items:center; gap:0.4rem;">
+                      <i class="bi bi-box-arrow-in-down-right"></i> DEMANDA DE COMPRAS: Bibliografia BÁSICA
+                    </a>
+                  </td>
+                  <td>
+                    <a href="#secao-compras-basica" onclick="scrollToSection('secao-compras-basica'); return false;" style="color:#fb7185; text-decoration:none; font-weight:800; font-size:1.05rem;">
+                      +163 exemplares físicos
+                    </a>
+                  </td>
+                  <td>
+                    <a href="#secao-compras-basica" onclick="scrollToSection('secao-compras-basica'); return false;" style="color:var(--text-main); text-decoration:none; display:inline-flex; align-items:center; gap:0.5rem;">
+                      Meta: &ge; 3 exemplares por título básico <span class="badge badge-nao"><i class="bi bi-arrow-down-circle-fill"></i> Ver Lista Completa</span>
+                    </a>
+                  </td>
                 </tr>
-                <tr style="background:rgba(245,158,11,0.12); cursor:pointer; transition:all 0.2s;" onclick="scrollToSection('secao-compras-comp')" onmouseover="this.style.background='rgba(245,158,11,0.2)'" onmouseout="this.style.background='rgba(245,158,11,0.12)'" title="Clique para ir direto à lista de compras da Bibliografia Complementar">
-                  <td><strong style="color:#fbbf24;"><i class="bi bi-box-arrow-in-down-right me-1"></i> DEMANDA DE COMPRAS: Bibliografia COMPLEMENTAR</strong></td>
-                  <td><strong style="color:#fbbf24; font-size:0.95rem;">+55 exemplares físicos</strong></td>
-                  <td>Meta: &ge; 1 exemplar por título complementar <span class="badge badge-var" style="margin-left:8px; cursor:pointer;"><i class="bi bi-arrow-down-circle-fill"></i> Ver Listagem Completa</span></td>
+                <tr style="background:rgba(245,158,11,0.12); cursor:pointer; transition:all 0.2s;" onclick="scrollToSection('secao-compras-comp')" onmouseover="this.style.background='rgba(245,158,11,0.22)'" onmouseout="this.style.background='rgba(245,158,11,0.12)'" title="Clique para ir direto à lista de compras da Bibliografia Complementar">
+                  <td>
+                    <a href="#secao-compras-comp" onclick="scrollToSection('secao-compras-comp'); return false;" style="color:#fbbf24; text-decoration:underline; font-weight:800; font-size:0.92rem; display:inline-flex; align-items:center; gap:0.4rem;">
+                      <i class="bi bi-box-arrow-in-down-right"></i> DEMANDA DE COMPRAS: Bibliografia COMPLEMENTAR
+                    </a>
+                  </td>
+                  <td>
+                    <a href="#secao-compras-comp" onclick="scrollToSection('secao-compras-comp'); return false;" style="color:#fbbf24; text-decoration:none; font-weight:800; font-size:1.05rem;">
+                      +55 exemplares físicos
+                    </a>
+                  </td>
+                  <td>
+                    <a href="#secao-compras-comp" onclick="scrollToSection('secao-compras-comp'); return false;" style="color:var(--text-main); text-decoration:none; display:inline-flex; align-items:center; gap:0.5rem;">
+                      Meta: &ge; 1 exemplar por título complementar <span class="badge badge-var"><i class="bi bi-arrow-down-circle-fill"></i> Ver Lista Completa</span>
+                    </a>
+                  </td>
                 </tr>
                 <tr style="background:rgba(16,185,129,0.12);">
                   <td><strong style="color:#34d399; font-size:0.95rem;">TOTAL GERAL DE COMPRAS PARA O CÂMPUS GAROPABA</strong></td>
@@ -1060,7 +1092,7 @@
 
     let activeTabId = 'tab-diagnostico';
 
-    function switchTab(tabId) {
+    function switchTab(tabId, shouldScroll = true) {
       activeTabId = tabId;
       document.querySelectorAll('.tab-pane').forEach(el => el.classList.remove('active'));
       document.querySelectorAll('.tab-btn').forEach(el => el.classList.remove('active'));
@@ -1074,19 +1106,25 @@
       if (tabId === 'tab-catalogo') {
         renderCatalogo(catalogData);
       }
-      window.scrollTo({ top: 320, behavior: 'smooth' });
+      if (shouldScroll) {
+        window.scrollTo({ top: 320, behavior: 'smooth' });
+      }
     }
 
     function scrollToSection(sectionId) {
-      switchTab('tab-sumario');
+      switchTab('tab-sumario', false);
       setTimeout(() => {
         const el = document.getElementById(sectionId);
         if (el) {
           el.scrollIntoView({ behavior: 'smooth', block: 'start' });
-          el.style.boxShadow = '0 0 0 2px var(--accent-emerald)';
-          setTimeout(() => { el.style.boxShadow = 'none'; }, 2000);
+          el.style.boxShadow = '0 0 0 3px var(--accent-emerald)';
+          el.style.background = 'rgba(16, 185, 129, 0.06)';
+          setTimeout(() => { 
+            el.style.boxShadow = 'none'; 
+            el.style.background = 'transparent';
+          }, 2500);
         }
-      }, 100);
+      }, 50);
     }
 
     function filterDiagBy(statusCode) {
