@@ -1,9 +1,9 @@
-# Relatório Técnico: Auditoria de Bibliografia do PPC Técnico em Administração Integrado
+# Relatório Técnico: Auditoria de Bibliografia e Exemplares Físicos (PPC vs. Sistema Sophia)
 
 **Câmpus:** Garopaba — IFSC  
 **Ano do PPC:** 2026  
 **Data da Auditoria:** 28 de Agosto de 2026  
-**Base de Dados do Acervo:** Catálogo do Sistema Sophia (`Acervo ABNT.XLS` — 3.206 registros)  
+**Base de Dados do Acervo:** Catálogo do Sistema Sophia (`Acervo e exemplares.XLS` — 3.003 títulos e 4.962 exemplares)  
 **Fonte de Ementas:** `todas_ementas_administracao.md` e `main_ppc_administracao.tex` (45 Unidades Curriculares)  
 
 ---
@@ -12,13 +12,8 @@
 
 A auditoria foi realizada por meio de processamento computacional estruturado:
 1. **Normalização e Extração de Metadados:** Cada referência bibliográfica do PPC foi decomposta em autor principal, título da obra, subtítulo, edição, ano de publicação e código ISBN.
-2. **Indexação Multidimensional do Acervo Sophia:** Indexação dos 3.206 registros do Sophia por ISBN, sobrenome de autores, radicais de títulos e busca fonético-ortográfica.
-3. **Cruzamento e Classificação com Rigor de Autoria:** Cada uma das 274 referências do PPC foi classificada em uma das 5 categorias:
-   - **Existe no Acervo (Confirmado):** Título e autor idênticos disponíveis na biblioteca.
-   - **Existe no Acervo (Variação de Edição/Ano):** Título do mesmo autor disponível, porém com edição ou ano diferente do citado.
-   - **Material PNLD/FNDE:** Livros didáticos da Formação Geral distribuídos pelo MEC/FNDE.
-   - **Não Existe no Acervo (Autor com outras obras):** Obra específica não catalogada, embora o autor possua outros títulos.
-   - **Não Existe no Acervo (Totalmente Ausente):** Título e autor não encontrados na biblioteca física.
+2. **Indexação Multidimensional do Acervo Sophia:** Indexação dos 3.003 registros do Sophia por ISBN, sobrenome de autores, radicais de títulos e quantitativo de exemplares físicos.
+3. **Cruzamento e Classificação com Rigor de Autoria:** Cada uma das 274 referências do PPC foi classificada e vinculada à quantidade de exemplares disponíveis.
 
 ---
 
@@ -26,26 +21,27 @@ A auditoria foi realizada por meio de processamento computacional estruturado:
 
 ### 2.1 Visão Geral
 
-| Métrica                                                            | Valor   |
-|:-------------------------------------------------------------------|:--------|
-| Total de Unidades Curriculares (UCs) no PPC                        | 45      |
-| Total de Referências Bibliográficas Analisadas                     | 274     |
-| • Bibliografia Básica (Total de Obras)                             | 124     |
-| • Bibliografia Complementar (Total de Obras)                       | 150     |
-| Total de Obras EXISTENTES na Biblioteca (Físico / PNLD)            | 171     |
-| • Existentes na Bibliografia Básica                                | 82      |
-| • Existentes na Bibliografia Complementar                          | 89      |
-| • Existentes - Mesma Edição / Equivalente                          | 134     |
-| • Existentes - Variação de Edição/Ano no Acervo                    | 26      |
-| • Material Didático PNLD/FNDE                                      | 11      |
-| Total de Obras NÃO EXISTENTES no Acervo Físico                     | 103     |
-| • Ausentes na Bibliografia Básica (Prioridade Alta para Aquisição) | 42      |
-| • Ausentes na Bibliografia Complementar                            | 61      |
-| • Ausentes (Porém com outros títulos do mesmo autor no acervo)     | 65      |
-| • Totalmente Ausentes da Biblioteca                                | 38      |
-| Índice de Cobertura Geral do Acervo (%)                            | 62.4%   |
-| Índice de Cobertura da Bibliografia Básica (%)                     | 66.1%   |
-| Índice de Cobertura da Bibliografia Complementar (%)               | 59.3%   |
+| Métrica                                                                           | Valor                  |
+|:----------------------------------------------------------------------------------|:-----------------------|
+| Total de Unidades Curriculares (UCs) no PPC                                       | 45                     |
+| Total de Referências Bibliográficas Analisadas                                    | 274                    |
+| • Bibliografia Básica (Total de Obras)                                            | 124                    |
+| • Bibliografia Complementar (Total de Obras)                                      | 150                    |
+| Total de Obras EXISTENTES na Biblioteca (Físico / PNLD)                           | 171                    |
+| • Existentes na Bibliografia Básica                                               | 82                     |
+| • Existentes na Bibliografia Complementar                                         | 89                     |
+| • Existentes - Mesma Edição / Equivalente                                         | 134                    |
+| • Existentes - Variação de Edição/Ano no Acervo                                   | 26                     |
+| • Material Didático PNLD/FNDE                                                     | 11                     |
+| Total de Obras NÃO EXISTENTES no Acervo Físico                                    | 103                    |
+| • Ausentes na Bibliografia Básica (Prioridade Alta para Aquisição)                | 42                     |
+| • Ausentes na Bibliografia Complementar                                           | 61                     |
+| • Ausentes (Porém com outros títulos do mesmo autor no acervo)                    | 65                     |
+| • Totalmente Ausentes da Biblioteca                                               | 38                     |
+| Total de Exemplares Físicos Disponíveis no Câmpus Garopaba (para as obras do PPC) | 481 exemplares físicos |
+| Índice de Cobertura Geral do Acervo (%)                                           | 62.4%                  |
+| Índice de Cobertura da Bibliografia Básica (%)                                    | 66.1%                  |
+| Índice de Cobertura da Bibliografia Complementar (%)                              | 59.3%                  |
 
 ---
 
@@ -106,9 +102,7 @@ A auditoria foi realizada por meio de processamento computacional estruturado:
 1. **Conformidade Geral:** A biblioteca atende expressivamente as necessidades do curso, com **66.1% de cobertura na Bibliografia Básica** e **62.4% de cobertura global**.
 2. **Ações para a Biblioteca (David):**
    - Avaliar a disponibilidade dos 42 títulos básicos ausentes nas plataformas digitais conveniadas (*Minha Biblioteca/Pearson*).
-   - Priorizar a aquisição dos títulos da área técnica de Administração (como Churchill Jr. - Marketing, Hoji - Gestão Financeira, Assaf Neto - Finanças Corporativas).
-3. **Ações para a Comissão do PPC:**
-   - Validar as 26 obras com variação de edição/ano, atualizando o PPC para a edição física já disponível no acervo.
+   - Priorizar a aquisição dos títulos da área técnica de Administração.
 
 ---
 *Relatório gerado automaticamente pela equipe de reformulação do PPC — IFSC Garopaba.*

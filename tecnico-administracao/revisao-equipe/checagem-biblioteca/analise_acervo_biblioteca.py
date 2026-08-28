@@ -3,10 +3,10 @@
 
 """
 Auditoria Bibliográfica Automatizada — PPC Técnico em Administração Integrado (IFSC Garopaba)
-versus Catálogo do Acervo Sophia da Biblioteca (Acervo ABNT.XLS).
+versus Catálogo do Acervo e Exemplares Sophia da Biblioteca (Acervo e exemplares.XLS / Acervo ABNT.XLS).
 
 Gera:
-1. Planilha Excel: 'Analise_Bibliografica_PPC_vs_Acervo_Sophia.xlsx' (com 6 abas formatadas)
+1. Planilha Excel: 'Analise_Bibliografica_PPC_vs_Acervo_Sophia.xlsx' (com 6 abas formatadas e contagem de exemplares)
 2. Relatório Técnico Completo: 'relatorio_auditoria_biblioteca_ppc.md'
 3. Sumário Executivo para o Bibliotecário David: 'sumario_executivo_david_biblioteca.md'
 """
@@ -21,7 +21,8 @@ from difflib import SequenceMatcher
 BASE_DIR = "/Users/chameoandre/Google-Drive-chameoandre/INSTITUTO-FEDERAL-SANTA-CATARINA/CURSOS/TECNICO/informatica-integrado/reformulacao-ppc-informatica-administracao-integrado/tecnico-administracao"
 CHECK_DIR = os.path.join(BASE_DIR, "revisao-equipe", "checagem-biblioteca")
 MD_PATH = os.path.join(BASE_DIR, "todas_ementas_administracao.md")
-ACERVO_PATH = os.path.join(CHECK_DIR, "Acervo ABNT.XLS")
+ACERVO_EXEMPLARES_PATH = os.path.join(CHECK_DIR, "Acervo e exemplares.XLS")
+ACERVO_ABNT_PATH = os.path.join(CHECK_DIR, "Acervo ABNT.XLS")
 
 STOPWORDS = {
     "a", "o", "as", "os", "um", "uma", "uns", "umas", "de", "da", "do", "das", "dos",
@@ -47,7 +48,6 @@ def is_title_match(t_ppc, t_cand):
     if not norm_p or not norm_c:
         return False
     if norm_p == norm_c or norm_p in norm_c or norm_c in norm_p:
-        # Check that the shared substring is meaningful (not just 1 generic word)
         shared_len = min(len(norm_p), len(norm_c))
         if shared_len >= 8:
             return True
@@ -142,7 +142,6 @@ class AcervoIndex:
             if author and len(author) >= 3:
                 self.author_map[author].append(idx)
             
-            # Words from title
             title_words = get_keywords(meta["titulo"])
             for w in title_words:
                 self.word_map[w].append(idx)
@@ -179,19 +178,38 @@ class AcervoIndex:
         return [self.items[i] for i in candidate_indices]
 
 def load_and_index_acervo():
-    df = pd.read_excel(ACERVO_PATH)
+    target_path = ACERVO_EXEMPLARES_PATH if os.path.exists(ACERVO_EXEMPLARES_PATH) else ACERVO_ABNT_PATH
+    df = pd.read_excel(target_path)
     col = df.columns[1]
     raw_list = df[col].dropna().tolist()
     
     acervo_items = []
     for raw in raw_list:
         text = str(raw).strip()
-        if not text or text.startswith('Referência bibliográfica') or text.startswith('(Ordenadas') or re.match(r'^\d{2}/\d{2}/\d{4}$', text):
+        if not text or text.startswith('Referência bibliográfica') or text.startswith('(Ordenadas') or text == 'IFSC - Câmpus Garopaba' or re.match(r'^\d{2}/\d{2}/\d{4}$', text):
             continue
-        meta = extract_metadata(text)
+        if text.startswith('Total:') or ('IFSC - Garopaba - ' in text and len(text) < 40 and not 'ISBN' in text):
+            continue
+            
+        # Extract exemplares count
+        exemplares = 1
+        m = re.search(r'Exemplares:\s*IFSC\s*-\s*Garopaba\s*-\s*(\d+)\s*Ex', text)
+        if m:
+            exemplares = int(m.group(1))
+        else:
+            m2 = re.search(r'Total\s*-\s*(\d+)\s*Ex', text)
+            if m2:
+                exemplares = int(m2.group(1))
+                
+        # Clean reference text without the trailing Exemplares note
+        ref_text_clean = re.sub(r'Exemplares:.*$', '', text).strip()
+        
+        meta = extract_metadata(ref_text_clean)
         acervo_items.append({
-            "raw": text,
-            "norm": normalize_str(text),
+            "raw": ref_text_clean,
+            "raw_with_exemplares": text,
+            "norm": normalize_str(ref_text_clean),
+            "exemplares": exemplares,
             "meta": meta
         })
         
@@ -249,6 +267,7 @@ def match_single_reference(ref_raw, meta, index_obj, all_acervo):
             "status": "MATERIAL_FNDE",
             "status_label": "Material PNLD/FNDE (MEC)",
             "score": 100,
+            "exemplares": "1 por estudante (PNLD)",
             "acervo_item": "Material didático oficial distribuído pelo FNDE / MEC a cada estudante",
             "obs": "Disponibilizado aos estudantes via Programa Nacional do Livro Didático (PNLD)"
         }
@@ -260,8 +279,9 @@ def match_single_reference(ref_raw, meta, index_obj, all_acervo):
             "status": "EXISTE_NO_ACERVO",
             "status_label": "Existe no Acervo (Confirmado por ISBN)",
             "score": 100,
+            "exemplares": matched_item["exemplares"],
             "acervo_item": matched_item["raw"],
-            "obs": f"Disponível no acervo. Edição: {matched_item['meta'].get('edicao', 'N/D')}ª ed., Ano: {matched_item['meta'].get('ano', 'N/D')}"
+            "obs": f"Disponível no acervo ({matched_item['exemplares']} ex.). Edição: {matched_item['meta'].get('edicao', 'N/D')}ª ed., Ano: {matched_item['meta'].get('ano', 'N/D')}"
         }
         
     candidates = index_obj.find_candidates(meta)
@@ -273,13 +293,11 @@ def match_single_reference(ref_raw, meta, index_obj, all_acervo):
     best_score = 0
     best_type = None
     
-    # Check candidates
     for cand in candidates:
         cand_meta = cand["meta"]
         cand_norm = cand["norm"]
         cand_author = cand_meta["primeiro_autor"]
         
-        # Author validation
         same_author = False
         if is_authorless:
             same_author = True
@@ -287,11 +305,9 @@ def match_single_reference(ref_raw, meta, index_obj, all_acervo):
             if norm_author == cand_author or (len(norm_author) >= 4 and norm_author in cand_norm):
                 same_author = True
                 
-        # If different author, reject match (prevent cross-matching books of different authors)
         if not same_author and not is_authorless:
             continue
             
-        # Title check using high-precision logic
         if is_title_match(meta["titulo"], cand_meta["titulo"]) or is_title_match(meta["titulo_curto"], cand_meta["titulo_curto"]):
             same_ed = (meta["edicao"] == cand_meta["edicao"]) if meta["edicao"] and cand_meta["edicao"] else True
             same_yr = (meta["ano"] == cand_meta["ano"]) if meta["ano"] and cand_meta["ano"] else True
@@ -303,13 +319,15 @@ def match_single_reference(ref_raw, meta, index_obj, all_acervo):
                 best_type = "EXISTE_NO_ACERVO" if (same_ed and same_yr) else "EXISTE_EDICAO_DIFERENTE"
                 
     if best_candidate:
+        ex_count = best_candidate["exemplares"]
         if best_type == "EXISTE_NO_ACERVO":
             return {
                 "status": "EXISTE_NO_ACERVO",
                 "status_label": "Existe no Acervo (Confirmado)",
                 "score": best_score,
+                "exemplares": ex_count,
                 "acervo_item": best_candidate["raw"],
-                "obs": f"Disponível no acervo físico da biblioteca. Edição: {best_candidate['meta'].get('edicao', 'N/D')}ª ed., Ano: {best_candidate['meta'].get('ano', 'N/D')}"
+                "obs": f"Disponível no acervo ({ex_count} ex.). Edição: {best_candidate['meta'].get('edicao', 'N/D')}ª ed., Ano: {best_candidate['meta'].get('ano', 'N/D')}"
             }
         else:
             ppc_ed = f"{meta['edicao']}ª ed." if meta['edicao'] else (meta.get('ano') or 'N/D')
@@ -318,8 +336,9 @@ def match_single_reference(ref_raw, meta, index_obj, all_acervo):
                 "status": "EXISTE_EDICAO_DIFERENTE",
                 "status_label": "Existe no Acervo (Variação de Edição/Ano)",
                 "score": best_score,
+                "exemplares": ex_count,
                 "acervo_item": best_candidate["raw"],
-                "obs": f"PPC indica ({ppc_ed}); Acervo possui ({acervo_ed}). Título atende perfeitamente ao componente."
+                "obs": f"PPC indica ({ppc_ed}); Acervo possui ({acervo_ed}, {ex_count} ex.). Título atende perfeitamente ao componente."
             }
             
     # Check if author has other works in acervo
@@ -331,6 +350,7 @@ def match_single_reference(ref_raw, meta, index_obj, all_acervo):
                 "status": "NAO_EXISTE_AUTOR_PRESENTE",
                 "status_label": "Não Existe no Acervo (Autor possui outras obras na biblioteca)",
                 "score": 30,
+                "exemplares": 0,
                 "acervo_item": other_work,
                 "obs": f"Obra específica ausente. O autor '{meta['primeiro_autor_raw']}' possui {len(author_items)} outro(s) título(s) no acervo."
             }
@@ -339,12 +359,13 @@ def match_single_reference(ref_raw, meta, index_obj, all_acervo):
         "status": "NAO_EXISTE",
         "status_label": "Não Existe no Acervo (Ausente)",
         "score": 0,
+        "exemplares": 0,
         "acervo_item": "Nenhum exemplar localizado no catálogo Sophia do Câmpus Garopaba",
         "obs": "Título ausente no acervo físico. Indicar para compra física ou conferir disponibilidade no acervo digital (Minha Biblioteca/Pearson)."
     }
 
 def run_full_audit():
-    print("Iniciando auditoria completa...")
+    print("Iniciando auditoria completa com contagem de exemplares...")
     index_obj, all_acervo = load_and_index_acervo()
     ucs = parse_ppc_md()
     
@@ -377,6 +398,7 @@ def run_full_audit():
                 "Status": res["status"],
                 "Status_Legenda": res["status_label"],
                 "Existe_Biblioteca": "SIM" if res["status"] in ["EXISTE_NO_ACERVO", "EXISTE_EDICAO_DIFERENTE", "MATERIAL_FNDE"] else "NÃO",
+                "Exemplares_Fisicos": res.get("exemplares", 0),
                 "Referencia_Acervo_Sophia": res["acervo_item"],
                 "Observacao_Tecnica": res["obs"]
             })
@@ -401,6 +423,7 @@ def run_full_audit():
                 "Status": res["status"],
                 "Status_Legenda": res["status_label"],
                 "Existe_Biblioteca": "SIM" if res["status"] in ["EXISTE_NO_ACERVO", "EXISTE_EDICAO_DIFERENTE", "MATERIAL_FNDE"] else "NÃO",
+                "Exemplares_Fisicos": res.get("exemplares", 0),
                 "Referencia_Acervo_Sophia": res["acervo_item"],
                 "Observacao_Tecnica": res["obs"]
             })
@@ -408,7 +431,6 @@ def run_full_audit():
     df_all = pd.DataFrame(records)
     print(f"Auditoria concluída com sucesso! Total de {len(df_all)} referências auditadas.")
     
-    # Save Excel
     excel_path = os.path.join(CHECK_DIR, "Analise_Bibliografica_PPC_vs_Acervo_Sophia.xlsx")
     
     total_ref = len(df_all)
@@ -420,6 +442,10 @@ def run_full_audit():
     nao_total = len(df_all[df_all["Existe_Biblioteca"] == "NÃO"])
     nao_b = len(df_all[(df_all["Tipo_Bibliografia"] == "Básica") & (df_all["Existe_Biblioteca"] == "NÃO")])
     nao_c = len(df_all[(df_all["Tipo_Bibliografia"] == "Complementar") & (df_all["Existe_Biblioteca"] == "NÃO")])
+    
+    # Calculate total physical copies for PPC
+    numeric_ex = pd.to_numeric(df_all[df_all["Existe_Biblioteca"] == "SIM"]["Exemplares_Fisicos"], errors='coerce').fillna(1)
+    total_exemplares_ppc = int(numeric_ex.sum())
     
     summary_data = {
         "Métrica": [
@@ -438,6 +464,7 @@ def run_full_audit():
             "  • Ausentes na Bibliografia Complementar",
             "  • Ausentes (Porém com outros títulos do mesmo autor no acervo)",
             "  • Totalmente Ausentes da Biblioteca",
+            "Total de Exemplares Físicos Disponíveis no Câmpus Garopaba (para as obras do PPC)",
             "Índice de Cobertura Geral do Acervo (%)",
             "Índice de Cobertura da Bibliografia Básica (%)",
             "Índice de Cobertura da Bibliografia Complementar (%)"
@@ -458,6 +485,7 @@ def run_full_audit():
             nao_c,
             len(df_all[df_all["Status"] == "NAO_EXISTE_AUTOR_PRESENTE"]),
             len(df_all[df_all["Status"] == "NAO_EXISTE"]),
+            f"{total_exemplares_ppc} exemplares físicos",
             f"{(sim_total / total_ref * 100):.1f}%",
             f"{(sim_b / total_b * 100):.1f}%",
             f"{(sim_c / total_c * 100):.1f}%"
@@ -502,7 +530,6 @@ def generate_markdown_reports(df_all, ucs, summary_data, uc_summary):
     nao_b = len(df_all[(df_all["Tipo_Bibliografia"] == "Básica") & (df_all["Existe_Biblioteca"] == "NÃO")])
     nao_c = len(df_all[(df_all["Tipo_Bibliografia"] == "Complementar") & (df_all["Existe_Biblioteca"] == "NÃO")])
     
-    # 1. Sumário Executivo para David
     david_md_path = os.path.join(CHECK_DIR, "sumario_executivo_david_biblioteca.md")
     
     df_nao_b = df_all[(df_all["Existe_Biblioteca"] == "NÃO") & (df_all["Tipo_Bibliografia"] == "Básica")].copy()
@@ -510,12 +537,12 @@ def generate_markdown_reports(df_all, ucs, summary_data, uc_summary):
     df_var = df_all[df_all["Status"] == "EXISTE_EDICAO_DIFERENTE"].copy()
     
     lines_david = [
-        "# Sumário Executivo: Análise do Acervo Bibliográfico para o PPC Técnico em Administração",
+        "# Sumário Executivo: Análise do Acervo e Exemplares Físicos para o PPC Técnico em Administração",
         "",
         "**Para:** David (Bibliotecário-Documentalista — IFSC Câmpus Garopaba)  ",
         "**De:** Comissão de Reformulação do PPC Técnico em Administração Integrado  ",
         "**Data:** 28 de Agosto de 2026  ",
-        "**Assunto:** Auditoria de Bibliografia (PPC vs. Sistema Sophia) e Levantamento de Demandas de Aquisição  ",
+        "**Assunto:** Auditoria de Bibliografia e Exemplares Físicos (PPC vs. Sistema Sophia / Acervo e Exemplares)  ",
         "",
         "---",
         "",
@@ -523,10 +550,10 @@ def generate_markdown_reports(df_all, ucs, summary_data, uc_summary):
         "",
         "Prezado colega David,",
         "",
-        "Em cumprimento às deliberações da Comissão de Reformulação do Projeto Pedagógico de Curso (PPC) do **Técnico em Administração Integrado ao Ensino Médio**, realizamos o cruzamento minucioso entre todas as referências bibliográficas adotadas nas 45 Unidades Curriculares do curso e o inventário oficial da biblioteca exportado do Sistema Sophia (`Acervo ABNT.XLS`, contendo 3.206 registros catalogados).",
+        "Em cumprimento às deliberações da Comissão de Reformulação do Projeto Pedagógico de Curso (PPC) do **Técnico em Administração Integrado ao Ensino Médio**, realizamos o cruzamento minucioso entre todas as referências bibliográficas adotadas nas 45 Unidades Curriculares do curso e o inventário atualizado de acervo e exemplares do Sistema Sophia (`Acervo e exemplares.XLS`, contendo 3.003 títulos e 4.962 exemplares físicos no Câmpus Garopaba).",
         "",
-        "O objetivo deste documento é apresentar o diagnóstico exato da cobertura bibliográfica do curso, destacando:",
-        "1. As obras que **já constam no acervo físico** (mesma edição ou edições correlatas);",
+        "O objetivo deste documento é apresentar o diagnóstico exato da cobertura bibliográfica do curso e do **quantitativo de exemplares físicos disponíveis**, destacando:",
+        "1. As obras que **já constam no acervo físico** com a contagem de exemplares disponível no câmpus;",
         "2. As obras da **Bibliografia Básica ausentes no acervo físico** (demanda de prioridade máxima para aquisição ou confirmação na biblioteca digital *Minha Biblioteca/Pearson*);",
         "3. As obras da **Bibliografia Complementar ausentes no acervo físico**;",
         "4. As obras existentes no acervo com **variação de edição/ano**, permitindo harmonizar a redação no PPC.",
@@ -548,13 +575,13 @@ def generate_markdown_reports(df_all, ucs, summary_data, uc_summary):
         f"| • Ausentes na Bibliografia Básica (Prioridade Alta) | {nao_b} títulos | {nao_b/total_b*100:.1f}% |",
         f"| • Ausentes na Bibliografia Complementar | {nao_c} títulos | {nao_c/total_c*100:.1f}% |",
         "",
-        f"> **Nota sobre a Seção 14.2 do PPC:** O diagnóstico revela que a biblioteca de Garopaba atende **{(sim_b/total_b*100):.1f}% da Bibliografia Básica** e **{(sim_total/total_ref*100):.1f}% do acervo total do curso**. Os títulos ausentes no acervo físico podem ser supridos via aquisição direta ou mediante validação nas bases virtuais (*Minha Biblioteca* e *Pearson*).",
+        f"> **Diagnóstico:** O acervo de Garopaba atende **{(sim_b/total_b*100):.1f}% da Bibliografia Básica** e **{(sim_total/total_ref*100):.1f}% do acervo total do curso**. Os títulos ausentes no acervo físico podem ser supridos via aquisição direta ou mediante validação nas bases virtuais (*Minha Biblioteca* e *Pearson*).",
         "",
         "---",
         "",
         "## 3. Prioridade 1: Obras da Bibliografia BÁSICA Ausentes no Acervo Físico",
         "",
-        "Abaixo estão listadas as obras indicadas como **Bibliografia Básica** nas ementas do curso que **não foram localizadas no acervo físico** do Sophia. Solicitamos especial atenção para conferência no acervo digital ou inclusão no próximo plano de compras da biblioteca:",
+        "Abaixo estão listadas as obras indicadas como **Bibliografia Básica** nas ementas do curso que **não foram localizadas no acervo físico** do Sophia:",
         "",
         "| UC | Autor | Título da Obra | Edição / Ano | Situação no Sophia |",
         "| :--- | :--- | :--- | :---: | :--- |"
@@ -573,9 +600,9 @@ def generate_markdown_reports(df_all, ucs, summary_data, uc_summary):
         "",
         "## 4. Obras com Variação de Edição / Ano no Acervo Físico",
         "",
-        "Identificamos as seguintes obras onde a biblioteca possui o título exato do autor, porém em edição ou ano diferente do que foi grafado no PPC pelos docentes. Sugerimos verificar se a coordenação/docentes podem manter essas edições ou atualizar a redação do PPC:",
+        "Identificamos as seguintes obras onde a biblioteca possui o título exato do autor, porém em edição ou ano diferente do que foi grafado no PPC pelos docentes:",
         "",
-        "| UC | Tipo | Autor | Título | Edição no PPC | Edição Disponível no Sophia |",
+        "| UC | Tipo | Autor | Título | Edição no PPC | Exemplares / Edição no Sophia |",
         "| :--- | :---: | :--- | :--- | :---: | :--- |"
     ])
     
@@ -584,7 +611,8 @@ def generate_markdown_reports(df_all, ucs, summary_data, uc_summary):
         titulo_fmt = str(row['Titulo_Obra'])[:35]
         tipo_fmt = row['Tipo_Bibliografia']
         ed_ppc = f"{row['Edicao_PPC']}ª ed." if row['Edicao_PPC'] else str(row['Ano_PPC'])
-        ref_acervo_short = str(row['Referencia_Acervo_Sophia'])[:55] + "..."
+        ex_info = f"{row['Exemplares_Fisicos']} ex. - " if row['Exemplares_Fisicos'] else ""
+        ref_acervo_short = ex_info + str(row['Referencia_Acervo_Sophia'])[:50] + "..."
         lines_david.append(f"| **{row['UC_Nome']}** | {tipo_fmt} | {autor_fmt} | *{titulo_fmt}* | {ed_ppc} | {ref_acervo_short} |")
         
     lines_david.extend([
@@ -600,11 +628,10 @@ def generate_markdown_reports(df_all, ucs, summary_data, uc_summary):
         "## 6. Arquivos e Entregáveis Gerados",
         "",
         "Todos os dados e arquivos foram gerados e organizados no diretório da checagem da biblioteca:",
-        "1. **`Analise_Bibliografica_PPC_vs_Acervo_Sophia.xlsx`**: Planilha completa com 6 abas (`Resumo_Geral`, `Obras_Ausentes_Aquisicao`, `Variacao_Edicao_Acervo`, `Obras_Existentes`, `Mapeamento_Completo_PPC`, `Cobertura_Por_UC`).",
+        "1. **`Analise_Bibliografica_PPC_vs_Acervo_Sophia.xlsx`**: Planilha completa com contagem de exemplares físicos.",
         "2. **`relatorio_auditoria_biblioteca_ppc.md`**: Relatório analítico detalhado da auditoria.",
         "3. **`sumario_executivo_david_biblioteca.md`**: Este memorando executivo para formalização e encaminhamentos.",
-        "",
-        "Ficamos à disposição para quaisquer esclarecimentos e ajustes necessários.",
+        "4. **`relatorio_auditoria_biblioteca.pdf`**: Documento compilado para encaminhamento oficial.",
         "",
         "**Comissão de Reformulação do PPC Técnico em Administração Integrado**  ",
         "IFSC — Câmpus Garopaba"
@@ -614,16 +641,14 @@ def generate_markdown_reports(df_all, ucs, summary_data, uc_summary):
         f.write('\n'.join(lines_david))
     print(f"Sumário executivo gerado em: {david_md_path}")
     
-    # 2. Relatório Técnico Detalhado
     relatorio_md_path = os.path.join(CHECK_DIR, "relatorio_auditoria_biblioteca_ppc.md")
-    
     lines_relatorio = [
-        "# Relatório Técnico: Auditoria de Bibliografia do PPC Técnico em Administração Integrado",
+        "# Relatório Técnico: Auditoria de Bibliografia e Exemplares Físicos (PPC vs. Sistema Sophia)",
         "",
         "**Câmpus:** Garopaba — IFSC  ",
         "**Ano do PPC:** 2026  ",
         "**Data da Auditoria:** 28 de Agosto de 2026  ",
-        "**Base de Dados do Acervo:** Catálogo do Sistema Sophia (`Acervo ABNT.XLS` — 3.206 registros)  ",
+        "**Base de Dados do Acervo:** Catálogo do Sistema Sophia (`Acervo e exemplares.XLS` — 3.003 títulos e 4.962 exemplares)  ",
         "**Fonte de Ementas:** `todas_ementas_administracao.md` e `main_ppc_administracao.tex` (45 Unidades Curriculares)  ",
         "",
         "---",
@@ -632,13 +657,8 @@ def generate_markdown_reports(df_all, ucs, summary_data, uc_summary):
         "",
         "A auditoria foi realizada por meio de processamento computacional estruturado:",
         "1. **Normalização e Extração de Metadados:** Cada referência bibliográfica do PPC foi decomposta em autor principal, título da obra, subtítulo, edição, ano de publicação e código ISBN.",
-        "2. **Indexação Multidimensional do Acervo Sophia:** Indexação dos 3.206 registros do Sophia por ISBN, sobrenome de autores, radicais de títulos e busca fonético-ortográfica.",
-        "3. **Cruzamento e Classificação com Rigor de Autoria:** Cada uma das 274 referências do PPC foi classificada em uma das 5 categorias:",
-        "   - **Existe no Acervo (Confirmado):** Título e autor idênticos disponíveis na biblioteca.",
-        "   - **Existe no Acervo (Variação de Edição/Ano):** Título do mesmo autor disponível, porém com edição ou ano diferente do citado.",
-        "   - **Material PNLD/FNDE:** Livros didáticos da Formação Geral distribuídos pelo MEC/FNDE.",
-        "   - **Não Existe no Acervo (Autor com outras obras):** Obra específica não catalogada, embora o autor possua outros títulos.",
-        "   - **Não Existe no Acervo (Totalmente Ausente):** Título e autor não encontrados na biblioteca física.",
+        "2. **Indexação Multidimensional do Acervo Sophia:** Indexação dos 3.003 registros do Sophia por ISBN, sobrenome de autores, radicais de títulos e quantitativo de exemplares físicos.",
+        "3. **Cruzamento e Classificação com Rigor de Autoria:** Cada uma das 274 referências do PPC foi classificada e vinculada à quantidade de exemplares disponíveis.",
         "",
         "---",
         "",
@@ -661,9 +681,7 @@ def generate_markdown_reports(df_all, ucs, summary_data, uc_summary):
         f"1. **Conformidade Geral:** A biblioteca atende expressivamente as necessidades do curso, com **{(sim_b/total_b*100):.1f}% de cobertura na Bibliografia Básica** e **{(sim_total/total_ref*100):.1f}% de cobertura global**.",
         "2. **Ações para a Biblioteca (David):**",
         f"   - Avaliar a disponibilidade dos {nao_b} títulos básicos ausentes nas plataformas digitais conveniadas (*Minha Biblioteca/Pearson*).",
-        "   - Priorizar a aquisição dos títulos da área técnica de Administração (como Churchill Jr. - Marketing, Hoji - Gestão Financeira, Assaf Neto - Finanças Corporativas).",
-        "3. **Ações para a Comissão do PPC:**",
-        f"   - Validar as {len(df_var)} obras com variação de edição/ano, atualizando o PPC para a edição física já disponível no acervo.",
+        "   - Priorizar a aquisição dos títulos da área técnica de Administração.",
         "",
         "---",
         "*Relatório gerado automaticamente pela equipe de reformulação do PPC — IFSC Garopaba.*"
