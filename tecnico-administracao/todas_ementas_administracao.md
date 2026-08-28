@@ -670,36 +670,36 @@ HELENA, Bomeny [**et al.**]. **Tempos Modernos, tempos de sociologia**. 4. ed. S
 ---
 
 ### 1. Ementa (Resumo do Componente)
-Estudo dos conceitos fundamentais de marketing e seu papel nas organizações. Análise do micro e macroambiente de marketing e do comportamento do consumidor. Técnicas de pesquisa de mercado, segmentação e posicionamento estratégico. Ética, consumo consciente e diversidade nas estratégias de marketing.
+Compreensão dos fundamentos do marketing e sua contribuição para a criação, comunicação e entrega de valor nas organizações. Análise das relações entre organizações, mercado e consumidores. Estudo do ambiente de marketing, comportamento do consumidor, segmentação de mercado e composto de marketing (4Ps e abordagens contemporâneas).
 
 ### 2. Objetivos de Aprendizagem & Competências
-- Compreender os conceitos fundamentais de marketing e sua importância estratégica para as organizações contemporâneas;
-- Analisar o ambiente de marketing (micro e macroambiente) e os fatores que influenciam o comportamento do consumidor;
-- Identificar técnicas de pesquisa de mercado e segmentação de consumidores para seleção de mercados-alvo;
-- Desenvolver o pensamento crítico sobre ética, responsabilidade social e sustentabilidade nas decisões de marketing.
+- Compreender os fundamentos do marketing e sua contribuição para a criação, comunicação e entrega de valor, reconhecendo as relações entre organizações, mercado e consumidores;
+- Identificar características do mercado e dos consumidores que influenciam as decisões de marketing das organizações;
+- Aplicar conceitos e ferramentas básicas de marketing nas decisões relacionadas ao composto de marketing, considerando a perspectiva da organização e do consumidor.
 
 ### 3. Conteúdo Programático
-- Conceito, evolução e papel do marketing nas organizações e na sociedade;
-- O ambiente de marketing: análise do microambiente e macroambiente (fatores demográficos, econômicos, naturais, tecnológicos, políticos e culturais);
-- Sistema de Informações de Marketing (SIM) e pesquisa de mercado simples;
-- Comportamento do consumidor: processo de decisão de compra e fatores influenciadores (culturais, sociais, pessoais e psicológicos);
-- Estratégia de marketing: mercado-alvo, segmentação de mercado e posicionamento da marca (*STP*);
-- **Temáticas Transversais Obrigatórias:** Ética e Direitos Humanos na publicidade e no marketing; Responsabilidade socioambiental e consumo consciente; Diversidade e inclusão social na representação de consumidores.
+- Conceito e papel do marketing;
+- Necessidades, desejo, demanda e criação de valor;
+- Ambiente de marketing;
+- Comportamento do consumidor e processo de decisão de compra;
+- Segmentação do mercado;
+- Composto de marketing e sua evolução: 4Ps e abordagens contemporâneas orientadas ao cliente;
+- **Temáticas Transversais Obrigatórias:** Ética e Direitos Humanos na comunicação mercadológica; Consumo consciente e sustentabilidade socioambiental; Diversidade e inclusão social na representação dos públicos.
 
 ### 4. Metodologia de Ensino e Avaliação
-- **Metodologia:** Componente curricular fundamentado em metodologias ativas, associando aulas expositivas dialogadas, análise de casos práticos de marcas reais, exercícios de segmentação de mercado e oficinas de pesquisa de campo/virtual. Utilização dos laboratórios de informática do câmpus para consulta a acervos e simuladores. Articula-se diretamente com Introdução à Administração, Organização e Processos e Gestão de Marketing II.
-- **Avaliação:** Processual e contínua. Instrumentos: estudos de caso em grupo, pesquisas de mercado simples, apresentações orais de planos de segmentação e avaliações escritas de sintonia teórica.
+- **Metodologia:** Metodologias ativas articulando fundamentos conceituais a situações práticas e contextualizadas. Desenvolvimento de estudos de caso, resolução de problemas, análise de marcas e comportamento do consumidor em laboratórios de informática e espaços multidisciplinares.
+- **Avaliação:** Diagnóstica, processual e formativa com estudos de caso, relatórios aplicados, produções gráficas e digitais, autoavaliação e avaliação por pares.
 
 ### 5. Bibliografia Básica e Complementar
 **Básica:**
-KOTLER, Philip; ARMSTRONG, Gary. **Princípios de marketing**. 15. ed. São Paulo: Pearson Education do Brasil, 2015. 624 p.
-CHURCHILL JR., Gilbert A.; PETER, J. Paul. **Marketing**: criando valor para os clientes. 3. ed. São Paulo: Saraiva, 2012. 640 p.
-LAS CASAS, Alexandre Luzzi. **Administração de marketing**: conceitos, planejamento e aplicações à realidade brasileira. 2. ed. São Paulo: Atlas, 2019. 544 p.
+KOTLER, Philip; KELLER, Kevin Lane. **Administração de marketing**. 12. ed. 5. reimp. São Paulo: Pearson Prentice Hall, 2010.
+LAS CASAS, Alexandre Luzzi. **Marketing Digital**. Rio de Janeiro: Atlas, 2021.
 
 **Complementar:**
-KOTLER, Philip; KARTAJAYA, Hermawan; SETIAWAN, Iwan. **Marketing 5.0**: tecnologia para a humanidade. Rio de Janeiro: Sextante, 2021. 224 p.
-HOOLEY, Graham; NICHOULLS, J. A. F. **Estratégia de marketing e posicionamento competitivo**. 4. ed. São Paulo: Pearson, 2011. 480 p.
-COBRA, Marcos. **Marketing básico**: conceitos, exercícios e casos. 5. ed. São Paulo: Atlas, 2010. 432 p.
+ARBACHE, Fernando Saba. **Gestão de logística, distribuição e trade marketing**. 4. ed. Rio de Janeiro: FGV Ed., 2011.
+DANTAS, Edmundo Brandão. **Atendimento ao público nas organizações**: quando o marketing de serviços mostra a cara. 5. ed. Brasília, DF: Senac-DF, 2011.
+KOTLER, Philip; ARMSTRONG, Gary. **Princípios de marketing**. 15. ed. São Paulo: Pearson Education do Brasil, 2015.
+LAS CASAS, Alexandre Luzzi. **Marketing**: conceitos, exercícios, casos. 9. ed. São Paulo: Atlas, 2017.
 ---
 
 # Unidade Curricular: Organização e Processos
@@ -1315,46 +1315,45 @@ BUENO, Fabrício. **Estaticópolis**: um jeito novo de aprender Estatística. S�
 
 ---
 
-# Unidade Curricular: Gestão de Marketing I
+# Unidade Curricular: Gestão de Marketing II
 **Curso:** Técnico em Administração
 **Câmpus:** Garopaba
 **Bloco de Formação:** Formação Técnica
 **Carga Horária Total:** 40 horas (Prática: não se aplica | EaD: não se aplica)
-**Ano/Semestre:** Ano 1, 2º semestre
+**Ano/Semestre:** Ano 2, 3º semestre
 
 ---
 
 ### 1. Ementa (Resumo do Componente)
-Estudo dos conceitos fundamentais de marketing e seu papel nas organizações. Análise do micro e macroambiente de marketing e do comportamento do consumidor. Técnicas de pesquisa de mercado, segmentação e posicionamento estratégico. Ética, consumo consciente e diversidade nas estratégias de marketing.
+Compreensão dos fundamentos do planejamento e das estratégias de marketing. Importância da pesquisa e das informações de mercado para a tomada de decisões. Análise de práticas de posicionamento, marca, comunicação integrada, vendas, atendimento e relacionamento com clientes. Aplicação do marketing digital e tecnologias emergentes.
 
 ### 2. Objetivos de Aprendizagem & Competências
-- Compreender os conceitos fundamentais de marketing e sua importância estratégica para as organizações contemporâneas;
-- Analisar o ambiente de marketing (micro e macroambiente) e os fatores que influenciam o comportamento do consumidor;
-- Identificar técnicas de pesquisa de mercado e segmentação de consumidores para seleção de mercados-alvo;
-- Desenvolver o pensamento crítico sobre ética, responsabilidade social e sustentabilidade nas decisões de marketing.
+- Compreender os fundamentos do planejamento e das estratégias de marketing, reconhecendo a importância da pesquisa e das informações de mercado para a tomada de decisões;
+- Analisar práticas de posicionamento, marca, comunicação, vendas e relacionamento com clientes em diferentes contextos organizacionais;
+- Compreender as práticas de marketing digital e sua aplicação na comunicação e no relacionamento com os clientes.
 
 ### 3. Conteúdo Programático
-- Conceito, evolução e papel do marketing nas organizações e na sociedade;
-- O ambiente de marketing: análise do microambiente e macroambiente (fatores demográficos, econômicos, naturais, tecnológicos, políticos e culturais);
-- Sistema de Informações de Marketing (SIM) e pesquisa de mercado simples;
-- Comportamento do consumidor: processo de decisão de compra e fatores influenciadores (culturais, sociais, pessoais e psicológicos);
-- Estratégia de marketing: mercado-alvo, segmentação de mercado e posicionamento da marca (*STP*);
-- **Temáticas Transversais Obrigatórias:** Ética e Direitos Humanos na publicidade e no marketing; Responsabilidade socioambiental e consumo consciente; Diversidade e inclusão social na representação de consumidores.
+- Fundamentos do planejamento e das estratégias de marketing;
+- Pesquisa de marketing: etapas, coleta e análise básica de dados;
+- Posicionamento, marca e experiência do cliente;
+- Comunicação de marketing: comunicação integrada, marketing digital, mídias sociais e conteúdo;
+- Vendas, atendimento e relacionamento com o cliente;
+- Tecnologias e indicadores aplicados ao marketing: métricas básicas, dados e inteligência artificial;
+- **Temáticas Transversais Obrigatórias:** Ética e transparência nas mídias digitais e redes sociais; Proteção de dados e privacidade do consumidor; Diversidade, respeito e inclusão na comunicação de vendas.
 
 ### 4. Metodologia de Ensino e Avaliação
-- **Metodologia:** Componente curricular fundamentado em metodologias ativas, associando aulas expositivas dialogadas, análise de casos práticos de marcas reais, exercícios de segmentação de mercado e oficinas de pesquisa de campo/virtual. Utilização dos laboratórios de informática do câmpus para consulta a acervos e simuladores. Articula-se diretamente com Introdução à Administração, Organização e Processos e Gestão de Marketing II.
-- **Avaliação:** Processual e contínua. Instrumentos: estudos de caso em grupo, pesquisas de mercado simples, apresentações orais de planos de segmentação e avaliações escritas de sintonia teórica.
+- **Metodologia:** Metodologias ativas com estudos de caso, resolução de problemas, pesquisas de marketing, análise de marcas, oficinas práticas de comunicação e mídias digitais em laboratórios de informática.
+- **Avaliação:** Diagnóstica, processual e formativa com pesquisas de mercado, planos de comunicação digital, produções gráficas/digitais e relatórios práticos.
 
 ### 5. Bibliografia Básica e Complementar
 **Básica:**
-KOTLER, Philip; ARMSTRONG, Gary. **Princípios de marketing**. 15. ed. São Paulo: Pearson Education do Brasil, 2015. 624 p.
-CHURCHILL JR., Gilbert A.; PETER, J. Paul. **Marketing**: criando valor para os clientes. 3. ed. São Paulo: Saraiva, 2012. 640 p.
-LAS CASAS, Alexandre Luzzi. **Administração de marketing**: conceitos, planejamento e aplicações à realidade brasileira. 2. ed. São Paulo: Atlas, 2019. 544 p.
+LAS CASAS, Alexandre Luzzi. **Marketing Digital**. Rio de Janeiro: Atlas, 2021.
+MATTAR, Fauze Najib. **Pesquisa de marketing**. 4. ed. compacta 3. reimp. São Paulo: Atlas, 2007.
 
 **Complementar:**
-KOTLER, Philip; KARTAJAYA, Hermawan; SETIAWAN, Iwan. **Marketing 5.0**: tecnologia para a humanidade. Rio de Janeiro: Sextante, 2021. 224 p.
-HOOLEY, Graham; NICHOULLS, J. A. F. **Estratégia de marketing e posicionamento competitivo**. 4. ed. São Paulo: Pearson, 2011. 480 p.
-COBRA, Marcos. **Marketing básico**: conceitos, exercícios e casos. 5. ed. São Paulo: Atlas, 2010. 432 p.
+ARBACHE, Fernando Saba. **Gestão de logística, distribuição e trade marketing**. 4. ed. Rio de Janeiro: FGV Ed., 2011.
+DANTAS, Edmundo Brandão. **Atendimento ao público nas organizações**: quando o marketing de serviços mostra a cara. 5. ed. Brasília, DF: Senac-DF, 2011.
+LAS CASAS, Alexandre Luzzi. **Marketing**: conceitos, exercícios, casos. 9. ed. São Paulo: Atlas, 2017.
 ---
 
 # Unidade Curricular: Gestão de Operações e Qualidade
@@ -2017,44 +2016,42 @@ VERGARA, Sylvia Constant. **Gestão de pessoas**. 10. ed. São Paulo: Atlas, 201
 **Curso:** Técnico em Administração
 **Câmpus:** Garopaba
 **Bloco de Formação:** Formação Técnica
-**Carga Horária Total:** 40 horas (Prática: não se aplica | EaD: não se aplica)
-**Ano/Semestre:** Ano 3, 6º semestre
+**Carga Horária Total:** 80 horas (Prática: não se aplica | EaD: não se aplica)
+**Ano/Semestre:** Ano 3, 5º e 6º semestre
 
 ---
 
 ### 1. Ementa (Resumo do Componente)
-Estudo da gestão financeira empresarial e de tesouraria. Matemática financeira aplicada, interpretação de demonstrações financeiras básicas (DRE e Balanço), gestão de capital de giro e fluxo de caixa. Métodos de avaliação de investimentos simples e educação financeira corporativa e pessoal.
+Estudo dos principais conceitos relacionados às rotinas financeiras e organização de informações para gestão de micro e pequenos empreendimentos. Controles financeiros básicos, apuração de custos, formação de preços, fluxo de caixa, capital de giro e análise de demonstrativos financeiros.
 
 ### 2. Objetivos de Aprendizagem & Competências
-- Compreender a função financeira nas organizações e a importância da gestão do capital de giro e dos fluxos de caixa;
-- Interpretar e elaborar demonstrações financeiras básicas (DRE, Balanço Patrimonial e Fluxo de Caixa) para apoio à tomada de decisão;
-- Dominar conceitos e técnicas de matemática financeira aplicada (juros simples e compostos, fluxo de caixa descontado, amortização);
-- Avaliar a viabilidade de investimentos simples e fontes de financiamento para micro, pequenas e médias empresas;
-- Desenvolver visão ética, sustentável e responsável sobre o uso dos recursos financeiros nas corporações e no âmbito pessoal.
+- Conhecer os principais conceitos relacionados às rotinas financeiras;
+- Organizar informações financeiras para gestão de empreendimentos de micro e pequeno porte;
+- Elaborar controles e demonstrativos financeiros para tomada de decisão gerencial;
+- Aplicar conceitos de custos e fluxo de caixa na sustentabilidade dos negócios.
 
 ### 3. Conteúdo Programático
-- Introdução à Gestão Financeira: conceitos, objetivos, função financeira e papel do gestor financeiro;
-- Matemática Financeira Aplicada: capitalização simples e composta, taxas de juros (nominal, efetiva e real), descontos e sistemas de amortização;
-- Demonstrações Financeiras Básicas: estrutura e análise simplificada da Demonstração do Resultado do Exercício (DRE) e do Balanço Patrimonial;
-- Gestão de Tesouraria e Fluxo de Caixa: elaboração, controle e projeção do fluxo de caixa diário e mensal; gestão de capital de giro;
-- Introdução à Análise de Investimentos: métodos de avaliação de investimentos simples (Payback, VPL e TIR);
-- Fontes de Financiamento e Mercado Financeiro: capital próprio x terceiros, linhas de crédito para MPEs e educação financeira corporativa e pessoal;
-- **Temáticas Transversais Obrigatórias:** Ética e transparência financeira; Direitos Humanos na gestão das relações de trabalho e fornecedores; Educação financeira corporativa, pessoal e consumo sustentável.
+- Controles financeiros básicos: contas a pagar, contas a receber, caixa, movimentação bancária;
+- Tipos de Custos (fixos, variáveis, diretos e indiretos);
+- Formação de preços de venda e ponto de equilíbrio;
+- Fluxo de caixa e planejamento financeiro;
+- Gestão de capital de giro;
+- Demonstrações financeiras básicas e suas análises;
+- **Temáticas Transversais Obrigatórias:** Ética e transparência na gestão financeira; Responsabilidade socioambiental e sustentabilidade econômica dos empreendimentos; Direitos Humanos e relações justas com clientes e fornecedores.
 
 ### 4. Metodologia de Ensino e Avaliação
-- **Metodologia:** Componente curricular eminentemente prático e applied, conduzido por meio de aulas expositivas dialogadas, resolução de problemas e planilhamento em laboratórios de informática utilizando planilhas eletrônicas (Google Sheets / Microsoft Excel). Estudos de caso de análise financeira de pequenos negócios locais e simulação de fluxos de caixa. Articula-se com Matemática para Administração, Gestão de Operações e Qualidade, Empreendedorismo I e II, e Oficina de Integração II.
-- **Avaliação:** Formativa, contínua e prática. Instrumentos: relatórios de resolução de casos práticos no computador, planilhas de controle de fluxo de caixa, listas de exercícios e provas teórico-práticas em laboratório de informática.
+- **Metodologia:** Aulas expositivas dialogadas e metodologias ativas com exercícios práticos, estudos de caso e simulações com planilhas eletrônicas em laboratório de informática.
+- **Avaliação:** Diagnóstica, formativa e processual acompanhando exercícios práticos, controles de fluxo de caixa planilhados e análises de casos empresariais.
 
 ### 5. Bibliografia Básica e Complementar
 **Básica:**
-GITMAN, Lawrence J. **Princípios de administração financeira**. 14. ed. São Paulo: Pearson Education do Brasil, 2018. 832 p.
-HOJI, Masakazu. **Administração financeira e orçamentária**: matemática financeira applied, estratégias financeiras, orçamento empresarial. 12. ed. São Paulo: Atlas, 2021. 576 p.
-ASSAF NETO, Alexandre. **Finanças corporativas e valor**. 8. ed. São Paulo: Atlas, 2018. 768 p.
+ASSAF NETO, Alexandre; LIMA, Fabiano Guasti. **Curso de administração financeira**. 2. ed. São Paulo: Atlas, 2011.
+SARMENTO, Melo, M. **Gestão financeira por fluxo de caixa**: a evolução das finanças para empresas. Rio de Janeiro: Alta Books, 2024.
 
 **Complementar:**
-LE MÈSURIER, Paul. **Matemática financeira simplificada para cursos técnicos e superiores**. São Paulo: Atlas, 2015. 240 p.
-CASAROTTO FILHO, Nelson; KOPITTKE, Bruno Hartmut. **Análise de investimentos**: matemática financeira, engenharia econômica, tomada de decisão, estratégia empresarial. 11. ed. São Paulo: Atlas, 2018. 512 p.
-CHIAVENATO, Idalberto. **Planejamento e controle financeiro**. 3. ed. São Paulo: Manole, 2014. 288 p.
+FARIAS, Cláudio V. S. (org.). **Técnico em administração**: gestão e negócios. Porto Alegre: Bookman, 2013.
+GITMAN, Lawrence J. **Princípios de administração financeira**. São Paulo: Pearson, 2010.
+SOUSA, Antônio de. **Gerência financeira para micro e pequenas empresas**: um manual simplificado. Rio de Janeiro: Elsevier/Sebrae, 2007.
 ---
 
 # Unidade Curricular: Oficina de Integração II

@@ -2,13 +2,12 @@
 # -*- coding: utf-8 -*-
 
 """
-Auditoria Bibliográfica Automatizada — PPC Técnico em Administração Integrado (IFSC Garopaba)
-versus Catálogo do Acervo e Exemplares Sophia da Biblioteca (Acervo e exemplares.XLS / Acervo ABNT.XLS).
+Auditoria Bibliográfica & Análise Normativa de Quantitativos de Acervo
+PPC Técnico em Administração Integrado (IFSC Garopaba) vs. Catálogo Sophia (Acervo e exemplares.XLS).
 
-Gera:
-1. Planilha Excel: 'Analise_Bibliografica_PPC_vs_Acervo_Sophia.xlsx' (com 6 abas formatadas e contagem de exemplares)
-2. Relatório Técnico Completo: 'relatorio_auditoria_biblioteca_ppc.md'
-3. Sumário Executivo para o Bibliotecário David: 'sumario_executivo_david_biblioteca.md'
+Premissa Normativa Institucional do IFSC:
+1. Bibliografia Básica: Mínimo de 2 títulos por UC; cada título deve dispor de ao menos 3 exemplares físicos no acervo do câmpus (ou livro PNLD).
+2. Bibliografia Complementar: Mínimo de 3 títulos por UC; cada título deve dispor de ao menos 1 exemplar físico no acervo do câmpus.
 """
 
 import os
@@ -149,11 +148,9 @@ class AcervoIndex:
     def find_candidates(self, meta):
         candidate_indices = set()
         
-        # ISBN
         if meta["isbn"] and meta["isbn"] in self.isbn_map:
             candidate_indices.add(self.isbn_map[meta["isbn"]])
             
-        # Author
         author = meta["primeiro_autor"]
         if author and not meta["is_authorless"]:
             if author in self.author_map:
@@ -163,7 +160,6 @@ class AcervoIndex:
                     if len(author) >= 4 and (author in a_key or a_key in author):
                         candidate_indices.update(idxs)
                     
-        # Title words
         words = get_keywords(meta["titulo_curto"])
         if words:
             word_counts = defaultdict(int)
@@ -191,7 +187,6 @@ def load_and_index_acervo():
         if text.startswith('Total:') or ('IFSC - Garopaba - ' in text and len(text) < 40 and not 'ISBN' in text):
             continue
             
-        # Extract exemplares count
         exemplares = 1
         m = re.search(r'Exemplares:\s*IFSC\s*-\s*Garopaba\s*-\s*(\d+)\s*Ex', text)
         if m:
@@ -201,9 +196,7 @@ def load_and_index_acervo():
             if m2:
                 exemplares = int(m2.group(1))
                 
-        # Clean reference text without the trailing Exemplares note
         ref_text_clean = re.sub(r'Exemplares:.*$', '', text).strip()
-        
         meta = extract_metadata(ref_text_clean)
         acervo_items.append({
             "raw": ref_text_clean,
@@ -261,13 +254,20 @@ def parse_ppc_md():
         })
     return ucs
 
-def match_single_reference(ref_raw, meta, index_obj, all_acervo):
+def match_single_reference(ref_raw, meta, index_obj, all_acervo, tipo_ref):
+    # Meta Normativa do IFSC
+    meta_exemplares = 3 if tipo_ref == "Básica" else 1
+
     if meta.get("is_generic"):
         return {
             "status": "MATERIAL_FNDE",
             "status_label": "Material PNLD/FNDE (MEC)",
             "score": 100,
-            "exemplares": "1 por estudante (PNLD)",
+            "exemplares": 1,
+            "exemplares_label": "PNLD (1/Aluno)",
+            "meta_exemplares": meta_exemplares,
+            "deficit_exemplares": 0,
+            "status_normativo": "CONFORME (PNLD)",
             "acervo_item": "Material didático oficial distribuído pelo FNDE / MEC a cada estudante",
             "obs": "Disponibilizado aos estudantes via Programa Nacional do Livro Didático (PNLD)"
         }
@@ -275,13 +275,21 @@ def match_single_reference(ref_raw, meta, index_obj, all_acervo):
     # 1. Exact ISBN Match
     if meta["isbn"] and meta["isbn"] in index_obj.isbn_map:
         matched_item = index_obj.items[index_obj.isbn_map[meta["isbn"]]]
+        ex_count = matched_item["exemplares"]
+        deficit = max(0, meta_exemplares - ex_count)
+        status_norm = "CONFORME" if deficit == 0 else f"DÉFICIT DE {deficit} EX."
+        
         return {
             "status": "EXISTE_NO_ACERVO",
             "status_label": "Existe no Acervo (Confirmado por ISBN)",
             "score": 100,
-            "exemplares": matched_item["exemplares"],
+            "exemplares": ex_count,
+            "exemplares_label": f"{ex_count} ex.",
+            "meta_exemplares": meta_exemplares,
+            "deficit_exemplares": deficit,
+            "status_normativo": status_norm,
             "acervo_item": matched_item["raw"],
-            "obs": f"Disponível no acervo ({matched_item['exemplares']} ex.). Edição: {matched_item['meta'].get('edicao', 'N/D')}ª ed., Ano: {matched_item['meta'].get('ano', 'N/D')}"
+            "obs": f"Disponível no acervo ({ex_count} ex.). Meta normativa: {meta_exemplares} ex. Faltam comprar: {deficit} ex."
         }
         
     candidates = index_obj.find_candidates(meta)
@@ -320,14 +328,21 @@ def match_single_reference(ref_raw, meta, index_obj, all_acervo):
                 
     if best_candidate:
         ex_count = best_candidate["exemplares"]
+        deficit = max(0, meta_exemplares - ex_count)
+        status_norm = "CONFORME" if deficit == 0 else f"DÉFICIT DE {deficit} EX."
+
         if best_type == "EXISTE_NO_ACERVO":
             return {
                 "status": "EXISTE_NO_ACERVO",
                 "status_label": "Existe no Acervo (Confirmado)",
                 "score": best_score,
                 "exemplares": ex_count,
+                "exemplares_label": f"{ex_count} ex.",
+                "meta_exemplares": meta_exemplares,
+                "deficit_exemplares": deficit,
+                "status_normativo": status_norm,
                 "acervo_item": best_candidate["raw"],
-                "obs": f"Disponível no acervo ({ex_count} ex.). Edição: {best_candidate['meta'].get('edicao', 'N/D')}ª ed., Ano: {best_candidate['meta'].get('ano', 'N/D')}"
+                "obs": f"Disponível no acervo ({ex_count} ex.). Meta normativa: {meta_exemplares} ex. Faltam comprar: {deficit} ex."
             }
         else:
             ppc_ed = f"{meta['edicao']}ª ed." if meta['edicao'] else (meta.get('ano') or 'N/D')
@@ -337,8 +352,12 @@ def match_single_reference(ref_raw, meta, index_obj, all_acervo):
                 "status_label": "Existe no Acervo (Variação de Edição/Ano)",
                 "score": best_score,
                 "exemplares": ex_count,
+                "exemplares_label": f"{ex_count} ex.",
+                "meta_exemplares": meta_exemplares,
+                "deficit_exemplares": deficit,
+                "status_normativo": f"{status_norm} (Variação)",
                 "acervo_item": best_candidate["raw"],
-                "obs": f"PPC indica ({ppc_ed}); Acervo possui ({acervo_ed}, {ex_count} ex.). Título atende perfeitamente ao componente."
+                "obs": f"PPC indica ({ppc_ed}); Acervo possui ({acervo_ed}, {ex_count} ex.). Meta: {meta_exemplares} ex. Faltam: {deficit} ex."
             }
             
     # Check if author has other works in acervo
@@ -351,8 +370,12 @@ def match_single_reference(ref_raw, meta, index_obj, all_acervo):
                 "status_label": "Não Existe no Acervo (Autor possui outras obras na biblioteca)",
                 "score": 30,
                 "exemplares": 0,
+                "exemplares_label": "0 ex.",
+                "meta_exemplares": meta_exemplares,
+                "deficit_exemplares": meta_exemplares,
+                "status_normativo": f"AUSENTE (Déficit de {meta_exemplares} ex.)",
                 "acervo_item": other_work,
-                "obs": f"Obra específica ausente. O autor '{meta['primeiro_autor_raw']}' possui {len(author_items)} outro(s) título(s) no acervo."
+                "obs": f"Obra ausente. Meta: {meta_exemplares} ex. Faltam comprar: {meta_exemplares} ex."
             }
         
     return {
@@ -360,12 +383,16 @@ def match_single_reference(ref_raw, meta, index_obj, all_acervo):
         "status_label": "Não Existe no Acervo (Ausente)",
         "score": 0,
         "exemplares": 0,
+        "exemplares_label": "0 ex.",
+        "meta_exemplares": meta_exemplares,
+        "deficit_exemplares": meta_exemplares,
+        "status_normativo": f"AUSENTE (Déficit de {meta_exemplares} ex.)",
         "acervo_item": "Nenhum exemplar localizado no catálogo Sophia do Câmpus Garopaba",
-        "obs": "Título ausente no acervo físico. Indicar para compra física ou conferir disponibilidade no acervo digital (Minha Biblioteca/Pearson)."
+        "obs": f"Obra ausente no catálogo. Meta normativa: {meta_exemplares} ex. Faltam comprar: {meta_exemplares} ex."
     }
 
 def run_full_audit():
-    print("Iniciando auditoria completa com contagem de exemplares...")
+    print("Iniciando auditoria completa com regras normativas de quantitativos...")
     index_obj, all_acervo = load_and_index_acervo()
     ucs = parse_ppc_md()
     
@@ -381,7 +408,7 @@ def run_full_audit():
         # Basica
         for idx, ref in enumerate(uc["basica"], 1):
             meta = extract_metadata(ref)
-            res = match_single_reference(ref, meta, index_obj, all_acervo)
+            res = match_single_reference(ref, meta, index_obj, all_acervo, "Básica")
             records.append({
                 "UC_ID": uc_id,
                 "UC_Nome": uc_nome,
@@ -398,7 +425,11 @@ def run_full_audit():
                 "Status": res["status"],
                 "Status_Legenda": res["status_label"],
                 "Existe_Biblioteca": "SIM" if res["status"] in ["EXISTE_NO_ACERVO", "EXISTE_EDICAO_DIFERENTE", "MATERIAL_FNDE"] else "NÃO",
-                "Exemplares_Fisicos": res.get("exemplares", 0),
+                "Exemplares_Disponiveis": res["exemplares"],
+                "Exemplares_Label": res["exemplares_label"],
+                "Meta_Normativa_Exemplares": res["meta_exemplares"],
+                "Deficit_Exemplares_Compra": res["deficit_exemplares"],
+                "Status_Normativo": res["status_normativo"],
                 "Referencia_Acervo_Sophia": res["acervo_item"],
                 "Observacao_Tecnica": res["obs"]
             })
@@ -406,7 +437,7 @@ def run_full_audit():
         # Complementar
         for idx, ref in enumerate(uc["complementar"], 1):
             meta = extract_metadata(ref)
-            res = match_single_reference(ref, meta, index_obj, all_acervo)
+            res = match_single_reference(ref, meta, index_obj, all_acervo, "Complementar")
             records.append({
                 "UC_ID": uc_id,
                 "UC_Nome": uc_nome,
@@ -423,7 +454,11 @@ def run_full_audit():
                 "Status": res["status"],
                 "Status_Legenda": res["status_label"],
                 "Existe_Biblioteca": "SIM" if res["status"] in ["EXISTE_NO_ACERVO", "EXISTE_EDICAO_DIFERENTE", "MATERIAL_FNDE"] else "NÃO",
-                "Exemplares_Fisicos": res.get("exemplares", 0),
+                "Exemplares_Disponiveis": res["exemplares"],
+                "Exemplares_Label": res["exemplares_label"],
+                "Meta_Normativa_Exemplares": res["meta_exemplares"],
+                "Deficit_Exemplares_Compra": res["deficit_exemplares"],
+                "Status_Normativo": res["status_normativo"],
                 "Referencia_Acervo_Sophia": res["acervo_item"],
                 "Observacao_Tecnica": res["obs"]
             })
@@ -443,31 +478,30 @@ def run_full_audit():
     nao_b = len(df_all[(df_all["Tipo_Bibliografia"] == "Básica") & (df_all["Existe_Biblioteca"] == "NÃO")])
     nao_c = len(df_all[(df_all["Tipo_Bibliografia"] == "Complementar") & (df_all["Existe_Biblioteca"] == "NÃO")])
     
-    # Calculate total physical copies for PPC
-    numeric_ex = pd.to_numeric(df_all[df_all["Existe_Biblioteca"] == "SIM"]["Exemplares_Fisicos"], errors='coerce').fillna(1)
-    total_exemplares_ppc = int(numeric_ex.sum())
+    # Calculate Total Physical Exemplars & Deficit
+    total_exemplares_disponiveis = df_all["Exemplares_Disponiveis"].sum()
+    total_deficit_basica = df_all[df_all["Tipo_Bibliografia"] == "Básica"]["Deficit_Exemplares_Compra"].sum()
+    total_deficit_comp = df_all[df_all["Tipo_Bibliografia"] == "Complementar"]["Deficit_Exemplares_Compra"].sum()
+    total_deficit_geral = total_deficit_basica + total_deficit_comp
     
     summary_data = {
-        "Métrica": [
+        "Métrica / Indicador Normativo": [
             "Total de Unidades Curriculares (UCs) no PPC",
             "Total de Referências Bibliográficas Analisadas",
-            "  • Bibliografia Básica (Total de Obras)",
-            "  • Bibliografia Complementar (Total de Obras)",
-            "Total de Obras EXISTENTES na Biblioteca (Físico / PNLD)",
-            "  • Existentes na Bibliografia Básica",
-            "  • Existentes na Bibliografia Complementar",
-            "  • Existentes - Mesma Edição / Equivalente",
-            "  • Existentes - Variação de Edição/Ano no Acervo",
-            "  • Material Didático PNLD/FNDE",
-            "Total de Obras NÃO EXISTENTES no Acervo Físico",
-            "  • Ausentes na Bibliografia Básica (Prioridade Alta para Aquisição)",
-            "  • Ausentes na Bibliografia Complementar",
-            "  • Ausentes (Porém com outros títulos do mesmo autor no acervo)",
-            "  • Totalmente Ausentes da Biblioteca",
-            "Total de Exemplares Físicos Disponíveis no Câmpus Garopaba (para as obras do PPC)",
-            "Índice de Cobertura Geral do Acervo (%)",
-            "Índice de Cobertura da Bibliografia Básica (%)",
-            "Índice de Cobertura da Bibliografia Complementar (%)"
+            "  • Títulos de Bibliografia Básica (Norma: Mínimo 2 por UC)",
+            "  • Títulos de Bibliografia Complementar (Norma: Mínimo 3 por UC)",
+            "Total de Títulos EXISTENTES na Biblioteca (Físico / PNLD)",
+            "  • Cobertura de Títulos na Bibliografia Básica (%)",
+            "  • Cobertura de Títulos na Bibliografia Complementar (%)",
+            "  • Cobertura Global de Títulos do Curso (%)",
+            "PREMISSA NORMATIVA DE QUANTITATIVOS FÍSICOS (IFSC)",
+            "  • Meta Básica: ao menos 3 exemplares físicos por título",
+            "  • Meta Complementar: ao menos 1 exemplar físico por título",
+            "Total de Exemplares Físicos Atualmente Disponíveis para o Curso",
+            "DEMANDA TOTAL DE EXEMPLARES FÍSICOS PARA AQUISIÇÃO",
+            "  • Cópias Físicas a Adquirir para a Bibliografia BÁSICA (Meta >= 3 ex.)",
+            "  • Cópias Físicas a Adquirir para a Bibliografia COMPLEMENTAR (Meta >= 1 ex.)",
+            "  • TOTAL GERAL DE EXEMPLARES FÍSICOS A COMPRAR"
         ],
         "Valor": [
             len(ucs),
@@ -475,20 +509,17 @@ def run_full_audit():
             total_b,
             total_c,
             sim_total,
-            sim_b,
-            sim_c,
-            len(df_all[df_all["Status"] == "EXISTE_NO_ACERVO"]),
-            len(df_all[df_all["Status"] == "EXISTE_EDICAO_DIFERENTE"]),
-            len(df_all[df_all["Status"] == "MATERIAL_FNDE"]),
-            nao_total,
-            nao_b,
-            nao_c,
-            len(df_all[df_all["Status"] == "NAO_EXISTE_AUTOR_PRESENTE"]),
-            len(df_all[df_all["Status"] == "NAO_EXISTE"]),
-            f"{total_exemplares_ppc} exemplares físicos",
-            f"{(sim_total / total_ref * 100):.1f}%",
-            f"{(sim_b / total_b * 100):.1f}%",
-            f"{(sim_c / total_c * 100):.1f}%"
+            f"{(sim_b / total_b * 100):.1f}% ({sim_b} de {total_b} títulos)",
+            f"{(sim_c / total_c * 100):.1f}% ({sim_c} de {total_c} títulos)",
+            f"{(sim_total / total_ref * 100):.1f}% ({sim_total} de {total_ref} títulos)",
+            "—",
+            "3 exemplares / título básico",
+            "1 exemplar / título complementar",
+            f"{total_exemplares_disponiveis} exemplares físicos",
+            "—",
+            f"{total_deficit_basica} exemplares físicos",
+            f"{total_deficit_comp} exemplares físicos",
+            f"{total_deficit_geral} exemplares físicos para 100% de conformidade"
         ]
     }
     
@@ -497,11 +528,14 @@ def run_full_audit():
         Basica_Total=('Tipo_Bibliografia', lambda x: (x == 'Básica').sum()),
         Basica_Existente=('Existe_Biblioteca', lambda x: ((df_all.loc[x.index, 'Tipo_Bibliografia'] == 'Básica') & (x == 'SIM')).sum()),
         Basica_Ausente=('Existe_Biblioteca', lambda x: ((df_all.loc[x.index, 'Tipo_Bibliografia'] == 'Básica') & (x == 'NÃO')).sum()),
+        Basica_Deficit_Exemplares=('Deficit_Exemplares_Compra', lambda x: df_all.loc[x.index[df_all.loc[x.index, 'Tipo_Bibliografia'] == 'Básica'], 'Deficit_Exemplares_Compra'].sum()),
         Comp_Total=('Tipo_Bibliografia', lambda x: (x == 'Complementar').sum()),
         Comp_Existente=('Existe_Biblioteca', lambda x: ((df_all.loc[x.index, 'Tipo_Bibliografia'] == 'Complementar') & (x == 'SIM')).sum()),
         Comp_Ausente=('Existe_Biblioteca', lambda x: ((df_all.loc[x.index, 'Tipo_Bibliografia'] == 'Complementar') & (x == 'NÃO')).sum()),
+        Comp_Deficit_Exemplares=('Deficit_Exemplares_Compra', lambda x: df_all.loc[x.index[df_all.loc[x.index, 'Tipo_Bibliografia'] == 'Complementar'], 'Deficit_Exemplares_Compra'].sum()),
         Total_Existente=('Existe_Biblioteca', lambda x: (x == 'SIM').sum()),
-        Total_Ausente=('Existe_Biblioteca', lambda x: (x == 'NÃO').sum())
+        Total_Ausente=('Existe_Biblioteca', lambda x: (x == 'NÃO').sum()),
+        Total_Deficit_Exemplares=('Deficit_Exemplares_Compra', 'sum')
     ).reset_index()
     uc_summary["Cobertura_Perc"] = (uc_summary["Total_Existente"] / uc_summary["Total_Ref"] * 100).round(1).astype(str) + "%"
     
@@ -520,89 +554,66 @@ def run_full_audit():
     return df_all, ucs, summary_data, uc_summary
 
 def generate_markdown_reports(df_all, ucs, summary_data, uc_summary):
-    total_ref = len(df_all)
-    total_b = len(df_all[df_all["Tipo_Bibliografia"] == "Básica"])
-    total_c = len(df_all[df_all["Tipo_Bibliografia"] == "Complementar"])
-    sim_total = len(df_all[df_all["Existe_Biblioteca"] == "SIM"])
-    sim_b = len(df_all[(df_all["Tipo_Bibliografia"] == "Básica") & (df_all["Existe_Biblioteca"] == "SIM")])
-    sim_c = len(df_all[(df_all["Tipo_Bibliografia"] == "Complementar") & (df_all["Existe_Biblioteca"] == "SIM")])
-    nao_total = len(df_all[df_all["Existe_Biblioteca"] == "NÃO"])
-    nao_b = len(df_all[(df_all["Tipo_Bibliografia"] == "Básica") & (df_all["Existe_Biblioteca"] == "NÃO")])
-    nao_c = len(df_all[(df_all["Tipo_Bibliografia"] == "Complementar") & (df_all["Existe_Biblioteca"] == "NÃO")])
-    
     david_md_path = os.path.join(CHECK_DIR, "sumario_executivo_david_biblioteca.md")
+    relatorio_md_path = os.path.join(CHECK_DIR, "relatorio_auditoria_biblioteca_ppc.md")
+    
+    total_deficit_basica = df_all[df_all["Tipo_Bibliografia"] == "Básica"]["Deficit_Exemplares_Compra"].sum()
+    total_deficit_comp = df_all[df_all["Tipo_Bibliografia"] == "Complementar"]["Deficit_Exemplares_Compra"].sum()
+    total_deficit_geral = total_deficit_basica + total_deficit_comp
     
     df_nao_b = df_all[(df_all["Existe_Biblioteca"] == "NÃO") & (df_all["Tipo_Bibliografia"] == "Básica")].copy()
-    df_nao_c = df_all[(df_all["Existe_Biblioteca"] == "NÃO") & (df_all["Tipo_Bibliografia"] == "Complementar")].copy()
     df_var = df_all[df_all["Status"] == "EXISTE_EDICAO_DIFERENTE"].copy()
     
     lines_david = [
-        "# Sumário Executivo: Análise do Acervo e Exemplares Físicos para o PPC Técnico em Administração",
+        "# Sumário Executivo: Auditoria Normativa de Acervo e Quantitativos de Exemplares Físicos",
         "",
         "**Para:** David (Bibliotecário-Documentalista — IFSC Câmpus Garopaba)  ",
         "**De:** Comissão de Reformulação do PPC Técnico em Administração Integrado  ",
         "**Data:** 28 de Agosto de 2026  ",
-        "**Assunto:** Auditoria de Bibliografia e Exemplares Físicos (PPC vs. Sistema Sophia / Acervo e Exemplares)  ",
+        "**Assunto:** Análise Normativa de Acervo (Mínimo de 3 ex. Básica e 1 ex. Complementar)  ",
         "",
         "---",
         "",
-        "## 1. Apresentação e Objetivo",
+        "## 1. Premissas Normativas da Análise (IFSC)",
         "",
-        "Prezado colega David,",
-        "",
-        "Em cumprimento às deliberações da Comissão de Reformulação do Projeto Pedagógico de Curso (PPC) do **Técnico em Administração Integrado ao Ensino Médio**, realizamos o cruzamento minucioso entre todas as referências bibliográficas adotadas nas 45 Unidades Curriculares do curso e o inventário atualizado de acervo e exemplares do Sistema Sophia (`Acervo e exemplares.XLS`, contendo 3.003 títulos e 4.962 exemplares físicos no Câmpus Garopaba).",
-        "",
-        "O objetivo deste documento é apresentar o diagnóstico exato da cobertura bibliográfica do curso e do **quantitativo de exemplares físicos disponíveis**, destacando:",
-        "1. As obras que **já constam no acervo físico** com a contagem de exemplares disponível no câmpus;",
-        "2. As obras da **Bibliografia Básica ausentes no acervo físico** (demanda de prioridade máxima para aquisição ou confirmação na biblioteca digital *Minha Biblioteca/Pearson*);",
-        "3. As obras da **Bibliografia Complementar ausentes no acervo físico**;",
-        "4. As obras existentes no acervo com **variação de edição/ano**, permitindo harmonizar a redação no PPC.",
+        "Em consonância com as normas de regulação e avaliação de cursos do IFSC, a auditoria aplicou os seguintes critérios de quantitativos mínimos:",
+        "1. **Bibliografia Básica:** Mínimo de **2 títulos de livros** por Unidade Curricular, devendo o acervo do câmpus disponibilizar **ao menos 3 exemplares físicos de cada título** (ou livro PNLD com 1 exemplar por estudante).",
+        "2. **Bibliografia Complementar:** Mínimo de **3 títulos de livros** por Unidade Curricular, devendo o acervo do câmpus disponibilizar **ao menos 1 exemplar físico de cada título**.",
         "",
         "---",
         "",
-        "## 2. Síntese Quantitativa e Indicadores de Cobertura",
+        "## 2. Síntese Quantitativa e Demanda de Aquisição",
         "",
-        "| Indicador / Métrica | Quantidade | Percentual (%) |",
-        "| :--- | :---: | :---: |",
-        f"| **Total de Unidades Curriculares (UCs) Auditadas** | **{len(ucs)} UCs** | 100% |",
-        f"| **Total Geral de Referências no PPC** | **{total_ref} títulos** | 100% |",
-        f"| • Referências de Bibliografia Básica | {total_b} títulos | {total_b/total_ref*100:.1f}% |",
-        f"| • Referências de Bibliografia Complementar | {total_c} títulos | {total_c/total_ref*100:.1f}% |",
-        f"| **Obras EXISTENTES na Biblioteca (Físico / PNLD)** | **{sim_total} títulos** | **{sim_total/total_ref*100:.1f}%** |",
-        f"| • Cobertura na Bibliografia Básica | {sim_b} títulos | **{sim_b/total_b*100:.1f}%** |",
-        f"| • Cobertura na Bibliografia Complementar | {sim_c} títulos | **{sim_c/total_c*100:.1f}%** |",
-        f"| **Obras NÃO EXISTENTES no Acervo Físico** | **{nao_total} títulos** | **{nao_total/total_ref*100:.1f}%** |",
-        f"| • Ausentes na Bibliografia Básica (Prioridade Alta) | {nao_b} títulos | {nao_b/total_b*100:.1f}% |",
-        f"| • Ausentes na Bibliografia Complementar | {nao_c} títulos | {nao_c/total_c*100:.1f}% |",
-        "",
-        f"> **Diagnóstico:** O acervo de Garopaba atende **{(sim_b/total_b*100):.1f}% da Bibliografia Básica** e **{(sim_total/total_ref*100):.1f}% do acervo total do curso**. Os títulos ausentes no acervo físico podem ser supridos via aquisição direta ou mediante validação nas bases virtuais (*Minha Biblioteca* e *Pearson*).",
+        pd.DataFrame(summary_data).to_markdown(index=False),
         "",
         "---",
         "",
-        "## 3. Prioridade 1: Obras da Bibliografia BÁSICA Ausentes no Acervo Físico",
+        f"### 🎯 Demanda Consolidada de Compras para o Câmpus Garopaba:",
+        f"- **Bibliografia Básica:** Aquisição de **{total_deficit_basica} exemplares físicos** (para suprir os títulos ausentes com 3 cópias e complementar títulos com acervo reduzido de 1 ou 2 cópias).",
+        f"- **Bibliografia Complementar:** Aquisição de **{total_deficit_comp} exemplares físicos** (1 cópia de cada título ausente).",
+        f"- **Total Geral de Compras:** **{total_deficit_geral} exemplares físicos** para atingir 100% de conformidade normativa no câmpus.",
         "",
-        "Abaixo estão listadas as obras indicadas como **Bibliografia Básica** nas ementas do curso que **não foram localizadas no acervo físico** do Sophia:",
+        "---",
         "",
-        "| UC | Autor | Título da Obra | Edição / Ano | Situação no Sophia |",
-        "| :--- | :--- | :--- | :---: | :--- |"
+        "## 3. Relação Prioritária: Bibliografia BÁSICA (Demanda de 3 Exemplares por Título)",
+        "",
+        "| Unidade Curricular | Autor | Título da Obra | Edição / Ano | Exemplares no Sophia | Déficit de Compras |",
+        "| :--- | :--- | :--- | :---: | :---: | :---: |"
     ]
     
     for _, row in df_nao_b.iterrows():
         autor_fmt = str(row['Autor_Principal'])[:35] if pd.notna(row['Autor_Principal']) else 'Sem Autor / Institucional'
-        titulo_fmt = str(row['Titulo_Obra'])[:50]
+        titulo_fmt = str(row['Titulo_Obra'])[:45]
         ed_fmt = f"{row['Edicao_PPC']}ª ed., {row['Ano_PPC']}" if row['Edicao_PPC'] else str(row['Ano_PPC'])
-        obs_fmt = "Autor possui outras obras" if row['Status'] == 'NAO_EXISTE_AUTOR_PRESENTE' else "Ausente no Acervo"
-        lines_david.append(f"| **{row['UC_Nome']}** | {autor_fmt} | *{titulo_fmt}* | {ed_fmt} | {obs_fmt} |")
+        lines_david.append(f"| **{row['UC_Nome']}** | {autor_fmt} | *{titulo_fmt}* | {ed_fmt} | 0 ex. | **+3 ex. (Básica)** |")
         
     lines_david.extend([
         "",
         "---",
         "",
-        "## 4. Obras com Variação de Edição / Ano no Acervo Físico",
+        "## 4. Obras com Variação de Edição/Ano Disponíveis no Sophia",
         "",
-        "Identificamos as seguintes obras onde a biblioteca possui o título exato do autor, porém em edição ou ano diferente do que foi grafado no PPC pelos docentes:",
-        "",
-        "| UC | Tipo | Autor | Título | Edição no PPC | Exemplares / Edição no Sophia |",
+        "| Unidade Curricular | Tipo | Autor | Título | Edição PPC | Edição & Exemplares no Sophia |",
         "| :--- | :---: | :--- | :--- | :---: | :--- |"
     ])
     
@@ -611,27 +622,13 @@ def generate_markdown_reports(df_all, ucs, summary_data, uc_summary):
         titulo_fmt = str(row['Titulo_Obra'])[:35]
         tipo_fmt = row['Tipo_Bibliografia']
         ed_ppc = f"{row['Edicao_PPC']}ª ed." if row['Edicao_PPC'] else str(row['Ano_PPC'])
-        ex_info = f"{row['Exemplares_Fisicos']} ex. - " if row['Exemplares_Fisicos'] else ""
+        ex_info = f"{row['Exemplares_Disponiveis']} ex. - " if row['Exemplares_Disponiveis'] else ""
         ref_acervo_short = ex_info + str(row['Referencia_Acervo_Sophia'])[:50] + "..."
         lines_david.append(f"| **{row['UC_Nome']}** | {tipo_fmt} | {autor_fmt} | *{titulo_fmt}* | {ed_ppc} | {ref_acervo_short} |")
         
     lines_david.extend([
         "",
         "---",
-        "",
-        "## 5. Prioridade 2: Obras da Bibliografia COMPLEMENTAR Ausentes no Acervo Físico",
-        "",
-        f"Totalizam **{nao_c} títulos**. A relação completa e detalhada está disponível na aba `Obras_Ausentes_Aquisicao` da planilha anexa `Analise_Bibliografica_PPC_vs_Acervo_Sophia.xlsx`.",
-        "",
-        "---",
-        "",
-        "## 6. Arquivos e Entregáveis Gerados",
-        "",
-        "Todos os dados e arquivos foram gerados e organizados no diretório da checagem da biblioteca:",
-        "1. **`Analise_Bibliografica_PPC_vs_Acervo_Sophia.xlsx`**: Planilha completa com contagem de exemplares físicos.",
-        "2. **`relatorio_auditoria_biblioteca_ppc.md`**: Relatório analítico detalhado da auditoria.",
-        "3. **`sumario_executivo_david_biblioteca.md`**: Este memorando executivo para formalização e encaminhamentos.",
-        "4. **`relatorio_auditoria_biblioteca.pdf`**: Documento compilado para encaminhamento oficial.",
         "",
         "**Comissão de Reformulação do PPC Técnico em Administração Integrado**  ",
         "IFSC — Câmpus Garopaba"
@@ -640,61 +637,11 @@ def generate_markdown_reports(df_all, ucs, summary_data, uc_summary):
     with open(david_md_path, 'w', encoding='utf-8') as f:
         f.write('\n'.join(lines_david))
     print(f"Sumário executivo gerado em: {david_md_path}")
-    
-    relatorio_md_path = os.path.join(CHECK_DIR, "relatorio_auditoria_biblioteca_ppc.md")
-    lines_relatorio = [
-        "# Relatório Técnico: Auditoria de Bibliografia e Exemplares Físicos (PPC vs. Sistema Sophia)",
-        "",
-        "**Câmpus:** Garopaba — IFSC  ",
-        "**Ano do PPC:** 2026  ",
-        "**Data da Auditoria:** 28 de Agosto de 2026  ",
-        "**Base de Dados do Acervo:** Catálogo do Sistema Sophia (`Acervo e exemplares.XLS` — 3.003 títulos e 4.962 exemplares)  ",
-        "**Fonte de Ementas:** `todas_ementas_administracao.md` e `main_ppc_administracao.tex` (45 Unidades Curriculares)  ",
-        "",
-        "---",
-        "",
-        "## 1. Metodologia de Análise",
-        "",
-        "A auditoria foi realizada por meio de processamento computacional estruturado:",
-        "1. **Normalização e Extração de Metadados:** Cada referência bibliográfica do PPC foi decomposta em autor principal, título da obra, subtítulo, edição, ano de publicação e código ISBN.",
-        "2. **Indexação Multidimensional do Acervo Sophia:** Indexação dos 3.003 registros do Sophia por ISBN, sobrenome de autores, radicais de títulos e quantitativo de exemplares físicos.",
-        "3. **Cruzamento e Classificação com Rigor de Autoria:** Cada uma das 274 referências do PPC foi classificada e vinculada à quantidade de exemplares disponíveis.",
-        "",
-        "---",
-        "",
-        "## 2. Resultados Consolidados",
-        "",
-        "### 2.1 Visão Geral",
-        "",
-        pd.DataFrame(summary_data).to_markdown(index=False),
-        "",
-        "---",
-        "",
-        "### 2.2 Cobertura por Unidade Curricular",
-        "",
-        uc_summary[['UC_Nome', 'Ano_Semestre', 'Total_Ref', 'Basica_Total', 'Basica_Existente', 'Basica_Ausente', 'Comp_Total', 'Comp_Existente', 'Comp_Ausente', 'Cobertura_Perc']].to_markdown(index=False),
-        "",
-        "---",
-        "",
-        "## 3. Conclusões e Recomendações",
-        "",
-        f"1. **Conformidade Geral:** A biblioteca atende expressivamente as necessidades do curso, com **{(sim_b/total_b*100):.1f}% de cobertura na Bibliografia Básica** e **{(sim_total/total_ref*100):.1f}% de cobertura global**.",
-        "2. **Ações para a Biblioteca (David):**",
-        f"   - Avaliar a disponibilidade dos {nao_b} títulos básicos ausentes nas plataformas digitais conveniadas (*Minha Biblioteca/Pearson*).",
-        "   - Priorizar a aquisição dos títulos da área técnica de Administração.",
-        "",
-        "---",
-        "*Relatório gerado automaticamente pela equipe de reformulação do PPC — IFSC Garopaba.*"
-    ]
-    
-    with open(relatorio_md_path, 'w', encoding='utf-8') as f:
-        f.write('\n'.join(lines_relatorio))
-    print(f"Relatório técnico gerado em: {relatorio_md_path}")
 
 def run_all():
     df_all, ucs, summary_data, uc_summary = run_full_audit()
     generate_markdown_reports(df_all, ucs, summary_data, uc_summary)
-    print("Processo de auditoria concluído com sucesso!")
+    print("Processo de auditoria normativa concluído com sucesso!")
 
 if __name__ == "__main__":
     run_all()

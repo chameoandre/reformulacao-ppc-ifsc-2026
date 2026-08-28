@@ -4,7 +4,9 @@
 """
 Gerador da Página Web Interativa (Dashboard) e do Documento PDF Estilizado em LaTeX
 para a Auditoria do Acervo Bibliográfico do PPC Técnico em Administração (IFSC Garopaba).
-Inclui Painel Diagnóstico de Conformidade e Pendências por Ementa/UC.
+Aplica a Regra Normativa do IFSC:
+- Bibliografia Básica: Mínimo de 2 títulos com ao menos 3 exemplares físicos no acervo do câmpus.
+- Bibliografia Complementar: Mínimo de 3 títulos com ao menos 1 exemplar físico no acervo do câmpus.
 """
 
 import os
@@ -51,45 +53,53 @@ def load_data():
         semestre = group['Ano_Semestre'].iloc[0]
         bloco = group['Bloco_Formacao'].iloc[0]
         
-        b_total = len(group[group['Tipo_Bibliografia'] == 'Básica'])
-        b_sim = len(group[(group['Tipo_Bibliografia'] == 'Básica') & (group['Existe_Biblioteca'] == 'SIM')])
-        b_nao = len(group[(group['Tipo_Bibliografia'] == 'Básica') & (group['Existe_Biblioteca'] == 'NÃO')])
+        b_group = group[group['Tipo_Bibliografia'] == 'Básica']
+        c_group = group[group['Tipo_Bibliografia'] == 'Complementar']
         
-        c_total = len(group[group['Tipo_Bibliografia'] == 'Complementar'])
-        c_sim = len(group[(group['Tipo_Bibliografia'] == 'Complementar') & (group['Existe_Biblioteca'] == 'SIM')])
-        c_nao = len(group[(group['Tipo_Bibliografia'] == 'Complementar') & (group['Existe_Biblioteca'] == 'NÃO')])
+        b_total = len(b_group)
+        b_sim = len(b_group[b_group['Existe_Biblioteca'] == 'SIM'])
+        b_nao = len(b_group[b_group['Existe_Biblioteca'] == 'NÃO'])
+        b_deficit = pd.to_numeric(b_group['Deficit_Exemplares_Compra'], errors='coerce').fillna(0).astype(int).sum()
         
+        c_total = len(c_group)
+        c_sim = len(c_group[c_group['Existe_Biblioteca'] == 'SIM'])
+        c_nao = len(c_group[c_group['Existe_Biblioteca'] == 'NÃO'])
+        c_deficit = pd.to_numeric(c_group['Deficit_Exemplares_Compra'], errors='coerce').fillna(0).astype(int).sum()
+        
+        total_deficit = b_deficit + c_deficit
         var_ed = len(group[group['Status'] == 'EXISTE_EDICAO_DIFERENTE'])
         
         # Missing books details
-        b_missing_books = group[(group['Tipo_Bibliografia'] == 'Básica') & (group['Existe_Biblioteca'] == 'NÃO')][['Titulo_Obra', 'Autor_Principal', 'Edicao_PPC', 'Ano_PPC']].to_dict(orient='records')
-        c_missing_books = group[(group['Tipo_Bibliografia'] == 'Complementar') & (group['Existe_Biblioteca'] == 'NÃO')][['Titulo_Obra', 'Autor_Principal', 'Edicao_PPC', 'Ano_PPC']].to_dict(orient='records')
-        var_books = group[group['Status'] == 'EXISTE_EDICAO_DIFERENTE'][['Titulo_Obra', 'Autor_Principal', 'Edicao_PPC', 'Ano_PPC', 'Referencia_Acervo_Sophia']].to_dict(orient='records')
+        b_missing_books = b_group[b_group['Existe_Biblioteca'] == 'NÃO'][['Titulo_Obra', 'Autor_Principal', 'Edicao_PPC', 'Ano_PPC']].to_dict(orient='records')
+        c_missing_books = c_group[c_group['Existe_Biblioteca'] == 'NÃO'][['Titulo_Obra', 'Autor_Principal', 'Edicao_PPC', 'Ano_PPC']].to_dict(orient='records')
         
-        if b_nao > 0:
+        # Books needing extra physical copies
+        b_low_copies = b_group[(b_group['Existe_Biblioteca'] == 'SIM') & (pd.to_numeric(b_group['Deficit_Exemplares_Compra'], errors='coerce') > 0)][['Titulo_Obra', 'Autor_Principal', 'Exemplares_Disponiveis', 'Deficit_Exemplares_Compra']].to_dict(orient='records')
+        
+        if b_nao > 0 or b_deficit > 0:
             status_code = 'CRITICA_BASICA'
             status_badge = 'badge-nao'
-            status_label = 'Crítica: Falta Bibliografia Básica'
+            status_label = f'Crítica: Déficit na Básica (+{b_deficit} ex.)'
             status_icon = 'bi-exclamation-octagon-fill'
-            acao_sugerida = f"Comprar ou validar {b_nao} obra(s) básica(s) na Minha Biblioteca/Pearson."
-        elif c_nao > 0:
+            acao_sugerida = f"Aquisição/validação de {b_deficit} exemplar(es) para atingir a meta de 3 cópias por título básico."
+        elif c_nao > 0 or c_deficit > 0:
             status_code = 'ATENCAO_COMPLEMENTAR'
             status_badge = 'badge-var'
-            status_label = 'Atenção: Falta Complementar'
+            status_label = f'Atenção: Falta Complementar (+{c_deficit} ex.)'
             status_icon = 'bi-exclamation-triangle-fill'
-            acao_sugerida = f"Básica 100% atendida. Suprir {c_nao} obra(s) complementar(es)."
+            acao_sugerida = f"Básica regularizada (>= 3 ex.). Adquirir {c_deficit} exemplar(es) da bibliografia complementar."
         elif var_ed > 0:
             status_code = 'ATENCAO_EDICAO'
             status_badge = 'badge-fnde'
-            status_label = 'Básica Atendida c/ Variação de Edição'
+            status_label = 'Quantitativo Atendido c/ Variação'
             status_icon = 'bi-arrow-repeat'
-            acao_sugerida = f"Todas existem no acervo. Harmonizar {var_ed} edição(ões) no texto do PPC."
+            acao_sugerida = f"Exemplares atendidos no câmpus. Harmonizar {var_ed} edição(ões) no texto do PPC."
         else:
             status_code = 'CONFORME_100'
             status_badge = 'badge-sim'
-            status_label = '100% Conforme no Acervo'
+            status_label = '100% Conforme Normativo'
             status_icon = 'bi-check-circle-fill'
-            acao_sugerida = "Ementa totalmente regularizada no acervo do câmpus."
+            acao_sugerida = "Ementa 100% conforme: >= 2 títulos básicos (>= 3 ex.) e >= 3 títulos complementares (>= 1 ex.)."
             
         total_ref = len(group)
         sim_total = b_sim + c_sim
@@ -104,9 +114,12 @@ def load_data():
             'b_total': b_total,
             'b_sim': b_sim,
             'b_nao': b_nao,
+            'b_deficit': b_deficit,
             'c_total': c_total,
             'c_sim': c_sim,
             'c_nao': c_nao,
+            'c_deficit': c_deficit,
+            'total_deficit': total_deficit,
             'var_ed': var_ed,
             'total_ref': total_ref,
             'sim_total': sim_total,
@@ -119,7 +132,7 @@ def load_data():
             'acao_sugerida': acao_sugerida,
             'b_missing_books': b_missing_books,
             'c_missing_books': c_missing_books,
-            'var_books': var_books
+            'b_low_copies': b_low_copies
         })
         
     # Load all 3003 library items with copy counts
@@ -158,10 +171,15 @@ def load_data():
     return df_all, df_resumo, df_uc, all_library_items, uc_diagnostics
 
 def generate_interactive_html(df_all, df_resumo, df_uc, all_library_items, uc_diagnostics):
+    def json_serial(obj):
+        if hasattr(obj, 'item'):
+            return obj.item()
+        return str(obj)
+
     records = df_all.to_dict(orient='records')
-    json_data = json.dumps(records, ensure_ascii=False)
-    json_diag_data = json.dumps(uc_diagnostics, ensure_ascii=False)
-    json_catalog_data = json.dumps(all_library_items, ensure_ascii=False)
+    json_data = json.dumps(records, ensure_ascii=False, default=json_serial)
+    json_diag_data = json.dumps(uc_diagnostics, ensure_ascii=False, default=json_serial)
+    json_catalog_data = json.dumps(all_library_items, ensure_ascii=False, default=json_serial)
     
     total_exemplares_lib = sum(x['exemplares'] for x in all_library_items)
     
@@ -172,12 +190,16 @@ def generate_interactive_html(df_all, df_resumo, df_uc, all_library_items, uc_di
     count_conformes = len([u for u in uc_diagnostics if u['status_code'] == 'CONFORME_100'])
     count_com_problema = count_criticas + count_atencao_comp + count_atencao_var
     
+    total_deficit_geral = sum(u['total_deficit'] for u in uc_diagnostics)
+    total_deficit_basica = sum(u['b_deficit'] for u in uc_diagnostics)
+    total_deficit_comp = sum(u['c_deficit'] for u in uc_diagnostics)
+    
     html_content = f"""<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Diagnóstico de Ementas & Auditoria Bibliográfica — PPC Técnico em Administração (IFSC Garopaba)</title>
+  <title>Auditoria Normativa de Acervo & Exemplares — PPC Técnico em Administração (IFSC Garopaba)</title>
 
   <!-- Google Fonts & Bootstrap Icons -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -261,14 +283,14 @@ def generate_interactive_html(df_all, df_resumo, df_uc, all_library_items, uc_di
 
     .brand-titles h1 {{
       font-family: 'Outfit', sans-serif;
-      font-size: 1.6rem;
+      font-size: 1.55rem;
       font-weight: 700;
       color: #ffffff;
       line-height: 1.2;
     }}
 
     .brand-titles p {{
-      font-size: 0.88rem;
+      font-size: 0.85rem;
       color: var(--text-muted);
       margin-top: 0.2rem;
     }}
@@ -320,6 +342,31 @@ def generate_interactive_html(df_all, df_resumo, df_uc, all_library_items, uc_di
       padding: 0 1.5rem;
       width: 100%;
       flex: 1;
+    }}
+
+    /* NORMATIVE BANNER */
+    .normative-banner {{
+      background: rgba(16, 185, 129, 0.08);
+      border: 1px solid rgba(16, 185, 129, 0.3);
+      border-radius: var(--radius-lg);
+      padding: 1.1rem 1.4rem;
+      margin-bottom: 1.8rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }}
+    .normative-badge {{
+      background: rgba(16, 185, 129, 0.2);
+      color: var(--accent-emerald);
+      padding: 0.4rem 0.8rem;
+      border-radius: 6px;
+      font-weight: 700;
+      font-size: 0.85rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
     }}
 
     /* KPI GRID */
@@ -701,8 +748,8 @@ def generate_interactive_html(df_all, df_resumo, df_uc, all_library_items, uc_di
           <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Instituto_Federal_de_Santa_Catarina_-_Marca_2015.svg/1200px-Instituto_Federal_de_Santa_Catarina_-_Marca_2015.svg.png" alt="IFSC Logo">
         </div>
         <div class="brand-titles">
-          <h1>Diagnóstico de Ementas & Auditoria do Acervo — PPC Técnico em Administração</h1>
-          <p>Visão Executiva de Conformidade e Pendências Bibliográficas nas 45 Ementas do Curso • IFSC Garopaba</p>
+          <h1>Auditoria Normativa de Acervo & Exemplares — PPC Técnico em Administração</h1>
+          <p>Aplicação da Regra Institucional: Mínimo de 3 Exs. na Básica e 1 Ex. na Complementar • IFSC Garopaba</p>
         </div>
       </div>
 
@@ -723,24 +770,43 @@ def generate_interactive_html(df_all, df_resumo, df_uc, all_library_items, uc_di
   <!-- MAIN -->
   <main class="main-container">
 
-    <!-- KPI CARDS FOCADOS EM EMENTAS -->
+    <!-- NORMATIVE BANNER -->
+    <div class="normative-banner">
+      <div style="display:flex; align-items:center; gap:0.9rem;">
+        <i class="bi bi-shield-check text-emerald" style="font-size:1.8rem;"></i>
+        <div>
+          <strong style="color:#ffffff; font-size:0.95rem; font-family:'Outfit', sans-serif;">Critérios Oficiais de Quantitativos Mínimos da Biblioteca (IFSC):</strong>
+          <p style="font-size:0.82rem; color:var(--text-muted); margin-top:2px;">
+            • <strong>Bibliografia Básica:</strong> Mínimo 2 títulos de livros $\rightarrow$ <strong>ao menos 3 exemplares físicos</strong> de cada título no acervo do câmpus (ou PNLD).<br>
+            • <strong>Bibliografia Complementar:</strong> Mínimo 3 títulos de livros $\rightarrow$ <strong>ao menos 1 exemplar físico</strong> de cada título no acervo do câmpus.
+          </p>
+        </div>
+      </div>
+      <div style="text-align:right;">
+        <span class="normative-badge">
+          <i class="bi bi-cart-check-fill"></i> Demanda Total de Compras: <strong>+{total_deficit_geral} exemplares</strong>
+        </span>
+      </div>
+    </div>
+
+    <!-- KPI CARDS FOCADOS EM QUANTITATIVOS NORMATIVOS -->
     <div class="kpi-grid">
       <div class="kpi-card kpi-rose" onclick="filterDiagBy('CRITICA_BASICA')">
         <div class="kpi-header">
-          <span class="kpi-title">Ementas Críticas (Falta Básica)</span>
-          <i class="bi bi-exclamation-octagon-fill kpi-icon"></i>
+          <span class="kpi-title">Compras Básica (&lt; 3 Exs.)</span>
+          <i class="bi bi-cart-plus-fill kpi-icon"></i>
         </div>
-        <div class="kpi-value">{count_criticas} UCs</div>
-        <div class="kpi-desc">Ementas com 1 ou mais obras básicas ausentes no acervo físico</div>
+        <div class="kpi-value">+{total_deficit_basica} Exs.</div>
+        <div class="kpi-desc">Exemplares a adquirir para atingir a meta de 3 cópias por título básico</div>
       </div>
 
       <div class="kpi-card kpi-amber" onclick="filterDiagBy('ATENCAO_COMPLEMENTAR')">
         <div class="kpi-header">
-          <span class="kpi-title">Falta na Complementar</span>
-          <i class="bi bi-exclamation-triangle-fill kpi-icon"></i>
+          <span class="kpi-title">Compras Complementar (&lt; 1 Ex.)</span>
+          <i class="bi bi-journal-plus kpi-icon"></i>
         </div>
-        <div class="kpi-value">{count_atencao_comp} UCs</div>
-        <div class="kpi-desc">Básica 100% atendida; pendência apenas na complementar</div>
+        <div class="kpi-value">+{total_deficit_comp} Exs.</div>
+        <div class="kpi-desc">Exemplares a adquirir para suprir 1 cópia dos títulos ausentes</div>
       </div>
 
       <div class="kpi-card kpi-blue" onclick="filterDiagBy('ATENCAO_EDICAO')">
@@ -777,19 +843,19 @@ def generate_interactive_html(df_all, df_resumo, df_uc, all_library_items, uc_di
         <i class="bi bi-kanban-fill"></i> Diagnóstico das 45 Ementas <span class="badge badge-nao" style="margin-left:4px;">{count_com_problema} com Pendência</span>
       </button>
       <button class="tab-btn" onclick="switchTab('tab-ausentes')">
-        <i class="bi bi-cart-dash-fill"></i> Obras Ausentes para Compra <span id="count-ausentes" class="badge badge-nao" style="margin-left:4px;">74</span>
+        <i class="bi bi-cart-dash-fill"></i> Títulos Ausentes para Aquisição <span id="count-ausentes" class="badge badge-nao" style="margin-left:4px;">{len(df_all[df_all['Existe_Biblioteca'] == 'NÃO'])}</span>
       </button>
       <button class="tab-btn" onclick="switchTab('tab-variacoes')">
-        <i class="bi bi-arrow-left-right"></i> Variações de Edição / Ano <span id="count-variacoes" class="badge badge-var" style="margin-left:4px;">24</span>
+        <i class="bi bi-arrow-left-right"></i> Variações de Edição / Ano <span id="count-variacoes" class="badge badge-var" style="margin-left:4px;">{len(df_all[df_all['Status'] == 'EXISTE_EDICAO_DIFERENTE'])}</span>
       </button>
       <button class="tab-btn" onclick="switchTab('tab-existentes')">
-        <i class="bi bi-check-circle-fill"></i> Acervo Confirmado (Sophia) <span id="count-existentes" class="badge badge-sim" style="margin-left:4px;">200</span>
+        <i class="bi bi-check-circle-fill"></i> Acervo Confirmado (Sophia) <span id="count-existentes" class="badge badge-sim" style="margin-left:4px;">{len(df_all[df_all['Existe_Biblioteca'] == 'SIM'])}</span>
       </button>
       <button class="tab-btn" onclick="switchTab('tab-ucs')">
         <i class="bi bi-folder2-open"></i> Auditoria por UC (Accordion)
       </button>
       <button class="tab-btn" onclick="switchTab('tab-todas')">
-        <i class="bi bi-list-columns-reverse"></i> Mapeamento Geral (274 Obras)
+        <i class="bi bi-list-columns-reverse"></i> Mapeamento Geral (272 Obras)
       </button>
       <button class="tab-btn" onclick="switchTab('tab-catalogo')">
         <i class="bi bi-bookshelf"></i> Catálogo Sophia (3.003 Obras & Exemplares)
@@ -800,17 +866,17 @@ def generate_interactive_html(df_all, df_resumo, df_uc, all_library_items, uc_di
     <div class="filter-bar">
       <div class="search-input-wrapper">
         <i class="bi bi-search"></i>
-        <input type="text" id="searchInput" class="search-input" placeholder="Pesquisar por unidade curricular, livro ausente, autor ou palavra-chave..." oninput="applyFilters()">
+        <input type="text" id="searchInput" class="search-input" placeholder="Pesquisar por unidade curricular, livro, autor, ISBN ou palavra-chave..." oninput="applyFilters()">
       </div>
 
       <div style="display: flex; gap: 0.8rem; flex-wrap: wrap;">
         <select id="filterStatusEmenta" class="select-filter" onchange="applyFilters()">
           <option value="ALL">Status da Ementa: Todas as 45 UCs</option>
           <option value="COM_PROBLEMA">🚨 Todas as Ementas com Alguma Pendência ({count_com_problema} UCs)</option>
-          <option value="CRITICA_BASICA">🔴 Críticas: Falta Bibliografia Básica ({count_criticas} UCs)</option>
-          <option value="ATENCAO_COMPLEMENTAR">🟡 Atenção: Falta Bibliografia Complementar ({count_atencao_comp} UCs)</option>
-          <option value="ATENCAO_EDICAO">🔵 Atenção: Variação de Edição/Ano ({count_atencao_var} UCs)</option>
-          <option value="CONFORME_100">🟢 100% Conformes / Regulares ({count_conformes} UCs)</option>
+          <option value="CRITICA_BASICA">🔴 Críticas: Déficit na Básica ({count_criticas} UCs)</option>
+          <option value="ATENCAO_COMPLEMENTAR">🟡 Atenção: Falta na Complementar ({count_atencao_comp} UCs)</option>
+          <option value="ATENCAO_EDICAO">🔵 Atenção: Variação de Edição ({count_atencao_var} UCs)</option>
+          <option value="CONFORME_100">🟢 100% Conformes Normativos ({count_conformes} UCs)</option>
         </select>
 
         <select id="filterBloco" class="select-filter" onchange="applyFilters()">
@@ -825,21 +891,21 @@ def generate_interactive_html(df_all, df_resumo, df_uc, all_library_items, uc_di
       </div>
     </div>
 
-    <!-- TAB 0: DIAGNÓSTICO DE EMENTAS (NOVA ABA CENTRAL) -->
+    <!-- TAB 0: DIAGNÓSTICO DE EMENTAS -->
     <div id="tab-diagnostico" class="tab-pane active">
       <div style="background:var(--bg-card); border:1px solid var(--border-color); border-radius:var(--radius-lg); padding:1.2rem; margin-bottom:1.5rem;">
         <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:1rem;">
           <div>
             <h3 style="font-family:'Outfit', sans-serif; font-size:1.15rem; color:var(--accent-emerald); margin-bottom:0.2rem;">
-              <i class="bi bi-kanban-fill me-1"></i> Painel Diagnóstico de Conformidade das Ementas
+              <i class="bi bi-kanban-fill me-1"></i> Painel Diagnóstico de Conformidade Normativa das 45 Ementas
             </h3>
             <p style="font-size:0.85rem; color:var(--text-muted);">
-              Mapeamento de quais componentes curriculares possuem pendências de acervo físico e quais exigem aquisição de bibliografia básica.
+              Mapeamento de conformidade com a premissa de <strong>3 exemplares por título básico</strong> e <strong>1 por título complementar</strong>.
             </p>
           </div>
           <div style="display:flex; gap:0.5rem; flex-wrap:wrap;" id="filterButtonsContainer">
             <button class="btn-action btn-outline" style="font-size:0.78rem; padding:0.4rem 0.8rem;" onclick="setDiagFilter('ALL')">Todas (45)</button>
-            <button class="btn-action btn-outline" style="font-size:0.78rem; padding:0.4rem 0.8rem; color:#fb7185; border-color:rgba(244,63,94,0.4);" onclick="setDiagFilter('CRITICA_BASICA')">🔴 Falta Básica ({count_criticas})</button>
+            <button class="btn-action btn-outline" style="font-size:0.78rem; padding:0.4rem 0.8rem; color:#fb7185; border-color:rgba(244,63,94,0.4);" onclick="setDiagFilter('CRITICA_BASICA')">🔴 Déficit Básica ({count_criticas})</button>
             <button class="btn-action btn-outline" style="font-size:0.78rem; padding:0.4rem 0.8rem; color:#fbbf24; border-color:rgba(245,158,11,0.4);" onclick="setDiagFilter('ATENCAO_COMPLEMENTAR')">🟡 Falta Complementar ({count_atencao_comp})</button>
             <button class="btn-action btn-outline" style="font-size:0.78rem; padding:0.4rem 0.8rem; color:#34d399; border-color:rgba(16,185,129,0.4);" onclick="setDiagFilter('CONFORME_100')">🟢 100% Conformes ({count_conformes})</button>
           </div>
@@ -857,12 +923,12 @@ def generate_interactive_html(df_all, df_resumo, df_uc, all_library_items, uc_di
         <table class="custom-table" id="tableAusentes">
           <thead>
             <tr>
-              <th style="width: 20%;">Unidade Curricular</th>
+              <th style="width: 18%;">Unidade Curricular</th>
               <th style="width: 10%;">Tipo</th>
               <th style="width: 25%;">Título da Obra</th>
-              <th style="width: 20%;">Autor Principal</th>
-              <th style="width: 10%;">Edição / Ano</th>
-              <th style="width: 15%;">Situação no Acervo Sophia</th>
+              <th style="width: 18%;">Autor Principal</th>
+              <th style="width: 12%;">Meta Normativa</th>
+              <th style="width: 17%;">Demanda de Compra</th>
             </tr>
           </thead>
           <tbody id="tbodyAusentes">
@@ -901,9 +967,9 @@ def generate_interactive_html(df_all, df_resumo, df_uc, all_library_items, uc_di
               <th style="width: 18%;">Unidade Curricular</th>
               <th style="width: 8%;">Tipo</th>
               <th style="width: 26%;">Título da Obra</th>
-              <th style="width: 18%;">Autor Principal</th>
-              <th style="width: 12%;">Exemplares</th>
-              <th style="width: 18%;">Status de Disponibilidade</th>
+              <th style="width: 16%;">Autor Principal</th>
+              <th style="width: 14%;">Exemplares vs Meta</th>
+              <th style="width: 18%;">Situação no Acervo</th>
             </tr>
           </thead>
           <tbody id="tbodyExistentes">
@@ -926,13 +992,13 @@ def generate_interactive_html(df_all, df_resumo, df_uc, all_library_items, uc_di
         <table class="custom-table" id="tableTodas">
           <thead>
             <tr>
-              <th style="width: 18%;">Unidade Curricular</th>
+              <th style="width: 16%;">Unidade Curricular</th>
               <th style="width: 8%;">Tipo</th>
               <th style="width: 24%;">Título da Obra</th>
               <th style="width: 16%;">Autor Principal</th>
               <th style="width: 10%;">Exemplares</th>
-              <th style="width: 10%;">Existe?</th>
-              <th style="width: 14%;">Observação Técnica</th>
+              <th style="width: 12%;">Meta / Déficit</th>
+              <th style="width: 14%;">Observação</th>
             </tr>
           </thead>
           <tbody id="tbodyTodas">
@@ -1034,10 +1100,21 @@ def generate_interactive_html(df_all, df_resumo, df_uc, all_library_items, uc_di
 
         const missingBasicHtml = u.b_missing_books && u.b_missing_books.length > 0 ? `
           <div class="diag-missing-box">
-            <strong><i class="bi bi-cart-plus-fill me-1"></i> Faltam ${{u.b_nao}} Obra(s) na Bibliografia Básica:</strong>
+            <strong><i class="bi bi-cart-plus-fill me-1"></i> Faltam ${{u.b_nao}} Obra(s) na Básica (Déficit de ${{u.b_deficit}} ex.):</strong>
             <ul class="diag-missing-list">
               ${{u.b_missing_books.map(b => `
-                <li>• <strong>${{b.Titulo_Obra}}</strong> (${{b.Autor_Principal || 'Institucional'}} ${{b.Edicao_PPC ? b.Edicao_PPC + 'ª ed.' : ''}} ${{b.Ano_PPC || ''}})</li>
+                <li>• <strong>${{b.Titulo_Obra}}</strong> (${{b.Autor_Principal || 'Institucional'}} ${{b.Edicao_PPC ? b.Edicao_PPC + 'ª ed.' : ''}} ${{b.Ano_PPC || ''}}) <span class="badge badge-nao" style="font-size:0.7rem; padding:0.15rem 0.4rem;">+3 ex.</span></li>
+              `).join('')}}
+            </ul>
+          </div>
+        ` : '';
+
+        const lowCopiesHtml = u.b_low_copies && u.b_low_copies.length > 0 ? `
+          <div style="background:rgba(245,158,11,0.08); border:1px dashed rgba(245,158,11,0.3); border-radius:8px; padding:0.6rem; margin-bottom:0.8rem; font-size:0.78rem;">
+            <strong style="color:#fbbf24; display:block; margin-bottom:0.2rem;"><i class="bi bi-stack me-1"></i> Título Básico com Acervo Reduzido (&lt; 3 Exs.):</strong>
+            <ul class="diag-missing-list" style="color:#f1f5f9;">
+              ${{u.b_low_copies.map(b => `
+                <li>• <strong>${{b.Titulo_Obra}}</strong> (Possui ${{b.Exemplares_Disponiveis}} ex. $\rightarrow$ <span style="color:#fbbf24; font-weight:700;">Comprar +${{b.Deficit_Exemplares_Compra}} ex.</span>)</li>
               `).join('')}}
             </ul>
           </div>
@@ -1045,7 +1122,7 @@ def generate_interactive_html(df_all, df_resumo, df_uc, all_library_items, uc_di
 
         const missingCompHtml = u.c_missing_books && u.c_missing_books.length > 0 ? `
           <div style="background:rgba(245,158,11,0.08); border:1px dashed rgba(245,158,11,0.3); border-radius:8px; padding:0.6rem; margin-bottom:0.8rem; font-size:0.78rem;">
-            <strong style="color:#fbbf24; display:block; margin-bottom:0.2rem;"><i class="bi bi-journal-x me-1"></i> Faltam ${{u.c_nao}} Obra(s) na Complementar:</strong>
+            <strong style="color:#fbbf24; display:block; margin-bottom:0.2rem;"><i class="bi bi-journal-x me-1"></i> Faltam ${{u.c_nao}} Obra(s) na Complementar (+${{u.c_deficit}} ex.):</strong>
             <ul class="diag-missing-list" style="color:var(--text-muted);">
               ${{u.c_missing_books.slice(0, 2).map(b => `
                 <li>• ${{b.Titulo_Obra}} (${{b.Autor_Principal || 'Institucional'}})</li>
@@ -1072,15 +1149,16 @@ def generate_interactive_html(df_all, df_resumo, df_uc, all_library_items, uc_di
               <div class="diag-stats-row">
                 <div>
                   <span style="color:var(--text-muted); display:block; font-size:0.72rem; text-transform:uppercase;">Títulos Básicos:</span> 
-                  <strong style="color:${{u.b_nao === 0 ? '#34d399' : '#fb7185'}}; font-size:0.92rem;">${{u.b_sim}} de ${{u.b_total}} obras (${{u.pct_basica}}%)</strong>
+                  <strong style="color:${{u.b_nao === 0 ? '#34d399' : '#fb7185'}}; font-size:0.92rem;">${{u.b_sim}} de ${{u.b_total}} títulos (${{u.pct_basica}}%)</strong>
                 </div>
                 <div>
-                  <span style="color:var(--text-muted); display:block; font-size:0.72rem; text-transform:uppercase;">Total da Ementa:</span> 
-                  <strong style="color:${{u.pct_cobertura >= 75 ? '#34d399' : (u.pct_cobertura >= 50 ? '#fbbf24' : '#fb7185')}}; font-size:0.92rem;">${{u.sim_total}} de ${{u.total_ref}} obras (${{u.pct_cobertura}}%)</strong>
+                  <span style="color:var(--text-muted); display:block; font-size:0.72rem; text-transform:uppercase;">Demanda de Compras:</span> 
+                  <strong style="color:${{u.total_deficit === 0 ? '#34d399' : '#fb7185'}}; font-size:0.92rem;">${{u.total_deficit === 0 ? 'Conforme (0 ex.)' : '+' + u.total_deficit + ' exemplares'}}</strong>
                 </div>
               </div>
 
               ${{missingBasicHtml}}
+              ${{lowCopiesHtml}}
               ${{missingCompHtml}}
             </div>
 
@@ -1095,7 +1173,6 @@ def generate_interactive_html(df_all, df_resumo, df_uc, all_library_items, uc_di
 
     function renderCatalogo(data) {{
       const query = document.getElementById('searchInput').value.toLowerCase();
-      
       let filtered = data;
       if (query) {{
         filtered = filtered.filter(item => item.ref.toLowerCase().includes(query));
@@ -1123,13 +1200,11 @@ def generate_interactive_html(df_all, df_resumo, df_uc, all_library_items, uc_di
     }}
 
     function renderTables(data, filteredDiag) {{
-      // 0. Diagnostic Cards
       renderDiagnosticCards(filteredDiag);
 
       // 1. Ausentes
       const tbodyAusentes = document.getElementById('tbodyAusentes');
       const ausentes = data.filter(d => d.Existe_Biblioteca === 'NÃO');
-      document.getElementById('count-ausentes').innerText = ausentes.length;
 
       tbodyAusentes.innerHTML = ausentes.map(d => `
         <tr>
@@ -1137,12 +1212,11 @@ def generate_interactive_html(df_all, df_resumo, df_uc, all_library_items, uc_di
           <td><span class="badge ${{d.Tipo_Bibliografia === 'Básica' ? 'badge-basica' : 'badge-comp'}}">${{d.Tipo_Bibliografia}}</span></td>
           <td><strong>${{d.Titulo_Obra}}</strong></td>
           <td>${{d.Autor_Principal || 'Institucional'}}</td>
-          <td>${{d.Edicao_PPC ? d.Edicao_PPC + 'ª ed.' : ''}} ${{d.Ano_PPC || ''}}</td>
+          <td><span class="badge badge-var">${{d.Meta_Normativa_Exemplares}} ex. recomendados</span></td>
           <td>
-            <span class="badge ${{d.Status === 'NAO_EXISTE_AUTOR_PRESENTE' ? 'badge-autor' : 'badge-nao'}}">
-              ${{d.Status === 'NAO_EXISTE_AUTOR_PRESENTE' ? '<i class="bi bi-person-check"></i> Autor no Acervo' : '<i class="bi bi-x-circle"></i> Ausente'}}
+            <span class="badge badge-nao">
+              <i class="bi bi-cart-plus"></i> Comprar +${{d.Deficit_Exemplares_Compra}} ex.
             </span>
-            <div style="font-size:0.75rem; color:var(--text-muted); margin-top:3px;">${{d.Observacao_Tecnica}}</div>
           </td>
         </tr>
       `).join('');
@@ -1150,7 +1224,6 @@ def generate_interactive_html(df_all, df_resumo, df_uc, all_library_items, uc_di
       // 2. Variações
       const tbodyVariacoes = document.getElementById('tbodyVariacoes');
       const variacoes = data.filter(d => d.Status === 'EXISTE_EDICAO_DIFERENTE');
-      document.getElementById('count-variacoes').innerText = variacoes.length;
 
       tbodyVariacoes.innerHTML = variacoes.map(d => `
         <tr>
@@ -1160,10 +1233,10 @@ def generate_interactive_html(df_all, df_resumo, df_uc, all_library_items, uc_di
           <td><span class="badge badge-var">${{d.Edicao_PPC ? d.Edicao_PPC + 'ª ed.' : ''}} ${{d.Ano_PPC || ''}}</span></td>
           <td>
             <div style="display:flex; align-items:center; gap:0.5rem; margin-bottom:4px;">
-              <span class="badge badge-sim"><i class="bi bi-stack"></i> ${{d.Exemplares_Fisicos || 1}} ex. no Câmpus</span>
+              <span class="badge badge-sim"><i class="bi bi-stack"></i> ${{d.Exemplares_Disponiveis || 1}} ex. no Câmpus</span>
+              <span class="badge ${{d.Deficit_Exemplares_Compra === 0 ? 'badge-sim' : 'badge-var'}}">${{d.Deficit_Exemplares_Compra === 0 ? 'Meta Atendida' : 'Faltam +' + d.Deficit_Exemplares_Compra + ' ex.'}}</span>
             </div>
             <div style="font-size:0.82rem; line-height:1.4;">${{d.Referencia_Acervo_Sophia}}</div>
-            <div style="font-size:0.75rem; color:#34d399; margin-top:3px;"><i class="bi bi-info-circle"></i> ${{d.Observacao_Tecnica}}</div>
           </td>
         </tr>
       `).join('');
@@ -1171,13 +1244,12 @@ def generate_interactive_html(df_all, df_resumo, df_uc, all_library_items, uc_di
       // 3. Existentes
       const tbodyExistentes = document.getElementById('tbodyExistentes');
       const existentes = data.filter(d => d.Existe_Biblioteca === 'SIM');
-      document.getElementById('count-existentes').innerText = existentes.length;
 
       tbodyExistentes.innerHTML = existentes.map(d => {{
-        const exCount = d.Exemplares_Fisicos;
+        const exCount = d.Exemplares_Disponiveis;
         const exBadge = d.Status === 'MATERIAL_FNDE' 
           ? '<span class="badge badge-fnde"><i class="bi bi-person-fill"></i> PNLD (1/Aluno)</span>'
-          : `<span class="badge badge-sim"><i class="bi bi-stack"></i> ${{exCount || 1}} ${{exCount > 1 ? 'Exs.' : 'Ex.'}} Físicos</span>`;
+          : `<span class="badge badge-sim"><i class="bi bi-stack"></i> ${{exCount || 1}} ${{exCount > 1 ? 'Exs.' : 'Ex.'}} (Meta: ${{d.Meta_Normativa_Exemplares}})</span>`;
 
         return `
           <tr>
@@ -1187,8 +1259,8 @@ def generate_interactive_html(df_all, df_resumo, df_uc, all_library_items, uc_di
             <td>${{d.Autor_Principal}}</td>
             <td>${{exBadge}}</td>
             <td>
-              <span class="badge ${{d.Status === 'EXISTE_NO_ACERVO' ? 'badge-sim' : (d.Status === 'MATERIAL_FNDE' ? 'badge-fnde' : 'badge-var')}}">
-                <i class="bi bi-check2-circle"></i> ${{d.Status_Legenda}}
+              <span class="badge ${{d.Deficit_Exemplares_Compra === 0 ? 'badge-sim' : 'badge-var'}}">
+                ${{d.Status_Normativo}}
               </span>
             </td>
           </tr>
@@ -1198,7 +1270,7 @@ def generate_interactive_html(df_all, df_resumo, df_uc, all_library_items, uc_di
       // 4. Todas
       const tbodyTodas = document.getElementById('tbodyTodas');
       tbodyTodas.innerHTML = data.map(d => {{
-        const exCount = d.Exemplares_Fisicos;
+        const exCount = d.Exemplares_Disponiveis;
         const exBadge = d.Existe_Biblioteca === 'SIM'
           ? (d.Status === 'MATERIAL_FNDE' ? '<span class="badge badge-fnde">PNLD</span>' : `<span class="badge badge-sim"><i class="bi bi-stack"></i> ${{exCount || 1}} ex.</span>`)
           : '<span class="badge badge-nao">0 ex.</span>';
@@ -1211,8 +1283,8 @@ def generate_interactive_html(df_all, df_resumo, df_uc, all_library_items, uc_di
             <td>${{d.Autor_Principal}}</td>
             <td>${{exBadge}}</td>
             <td>
-              <span class="badge ${{d.Existe_Biblioteca === 'SIM' ? 'badge-sim' : 'badge-nao'}}">
-                ${{d.Existe_Biblioteca === 'SIM' ? '<i class="bi bi-check-lg"></i> SIM' : '<i class="bi bi-x-lg"></i> NÃO'}}
+              <span class="badge ${{d.Deficit_Exemplares_Compra === 0 ? 'badge-sim' : 'badge-nao'}}">
+                ${{d.Deficit_Exemplares_Compra === 0 ? 'Conforme' : 'Déficit +' + d.Deficit_Exemplares_Compra + ' ex.'}}
               </span>
             </td>
             <td><small style="color:var(--text-muted)">${{d.Observacao_Tecnica}}</small></td>
@@ -1222,8 +1294,6 @@ def generate_interactive_html(df_all, df_resumo, df_uc, all_library_items, uc_di
 
       // 5. UCs Accordion
       renderUCAccordion(data);
-      
-      // 6. Catalogo
       renderCatalogo(catalogData);
     }}
 
@@ -1269,8 +1339,8 @@ def generate_interactive_html(df_all, df_resumo, df_uc, all_library_items, uc_di
                   <tr>
                     <th>Tipo</th>
                     <th>Título & Autor</th>
-                    <th>Exemplares</th>
-                    <th>Situação no Sophia</th>
+                    <th>Exemplares vs Meta</th>
+                    <th>Situação Normativa</th>
                     <th>Observação</th>
                   </tr>
                 </thead>
@@ -1281,12 +1351,12 @@ def generate_interactive_html(df_all, df_resumo, df_uc, all_library_items, uc_di
                       <td><strong>${{r.Titulo_Obra}}</strong><br><small style="color:var(--text-muted)">${{r.Autor_Principal}}</small></td>
                       <td>
                         <span class="badge ${{r.Existe_Biblioteca === 'SIM' ? 'badge-sim' : 'badge-nao'}}">
-                          ${{r.Status === 'MATERIAL_FNDE' ? 'PNLD' : (r.Exemplares_Fisicos ? r.Exemplares_Fisicos + ' ex.' : '0 ex.')}}
+                          ${{r.Status === 'MATERIAL_FNDE' ? 'PNLD' : (r.Exemplares_Disponiveis + ' de ' + r.Meta_Normativa_Exemplares + ' ex.')}}
                         </span>
                       </td>
                       <td>
-                        <span class="badge ${{r.Existe_Biblioteca === 'SIM' ? 'badge-sim' : 'badge-nao'}}">
-                          ${{r.Status_Legenda}}
+                        <span class="badge ${{r.Deficit_Exemplares_Compra === 0 ? 'badge-sim' : 'badge-nao'}}">
+                          ${{r.Status_Normativo}}
                         </span>
                       </td>
                       <td><small style="color:var(--text-muted)">${{r.Observacao_Tecnica}}</small></td>
@@ -1460,7 +1530,7 @@ def generate_latex_pdf_report(df_all, df_resumo, df_uc):
     {\normalsize CÂMPUS GAROPABA}\\[2pt]
     {\small DEPARTAMENTO DE ENSINO, PESQUISA E EXTENSÃO (DEPE)}\\[10pt]
     
-    {\LARGE \textbf{\textcolor{ifscgreen}{Relatório Técnico de Auditoria do Acervo Bibliográfico}}}\\[4pt]
+    {\LARGE \textbf{\textcolor{ifscgreen}{Relatório Técnico de Auditoria Normativa do Acervo}}}\\[4pt]
     {\large \textbf{Projeto Pedagógico de Curso -- Técnico em Administração Integrado (PPC 2026)}}\\[6pt]
     {\small \textbf{Destinatário:} Bibliotecário David / Equipe da Biblioteca \quad \textbullet{} \quad \textbf{Data:} 28 de Agosto de 2026}
 \end{center}
@@ -1469,10 +1539,14 @@ def generate_latex_pdf_report(df_all, df_resumo, df_uc):
 \hrule height 1.2pt \relax
 \vspace{0.3cm}
 
-\section{Apresentação e Metodologia}
-O presente relatório consolida a auditoria bibliográfica realizada pela Comissão de Reformulação do PPC do Curso Técnico em Administração Integrado ao Ensino Médio do IFSC Câmpus Garopaba. Foi realizado o cruzamento exaustivo entre todas as \textbf{274 referências bibliográficas} adotadas nas 45 Unidades Curriculares do curso e o catálogo do sistema Sophia (\textbf{3.003 títulos e 4.962 exemplares físicos} da Biblioteca do Câmpus Garopaba).
+\section{Premissas Normativas da Auditoria}
+O presente relatório consolida a auditoria bibliográfica do PPC Técnico em Administração Integrado do IFSC Câmpus Garopaba aplicando a premissa de quantitativos mínimos do IFSC:
+\begin{itemize}[leftmargin=*,noitemsep]
+    \item \textbf{Bibliografia Básica:} Mínimo de 2 títulos por UC, devendo o acervo do câmpus disponibilizar \textbf{ao menos 3 exemplares físicos de cada título} (ou livro didático PNLD/FNDE).
+    \item \textbf{Bibliografia Complementar:} Mínimo de 3 títulos por UC, devendo o acervo do câmpus disponibilizar \textbf{ao menos 1 exemplar físico de cada título}.
+\end{itemize}
 
-\section{Indicadores Gerais de Cobertura}
+\section{Indicadores Gerais de Cobertura e Demanda de Aquisição}
 
 \begin{table}[H]
 \centering
@@ -1480,40 +1554,42 @@ O presente relatório consolida a auditoria bibliográfica realizada pela Comiss
 \begin{tabularx}{\linewidth}{|X|c|c|}
 \hline
 \rowcolor{ifscgreen}
-\textcolor{white}{\textbf{Indicador / Métrica}} & \textcolor{white}{\textbf{Quantidade}} & \textcolor{white}{\textbf{Percentual}} \\ \hline
+\textcolor{white}{\textbf{Indicador / Métrica Normativa}} & \textcolor{white}{\textbf{Quantidade}} & \textcolor{white}{\textbf{Percentual / Meta}} \\ \hline
 \rowcolor{cinzaClaro}
 Total de Unidades Curriculares (UCs) Auditadas & 45 UCs & 100,0\% \\ \hline
-Total Geral de Referências no PPC & 274 obras & 100,0\% \\ \hline
+Total Geral de Títulos no PPC & 272 títulos & 100,0\% \\ \hline
 \rowcolor{cinzaClaro}
-• Bibliografia Básica (Total de Títulos) & 124 obras & 45,3\% \\ \hline
-• Bibliografia Complementar (Total de Títulos) & 150 obras & 54,7\% \\ \hline
+• Títulos de Bibliografia Básica (Meta: $\ge$ 2 por UC) & 122 títulos & 44,9\% \\ \hline
+• Títulos de Bibliografia Complementar (Meta: $\ge$ 3 por UC) & 150 títulos & 55,1\% \\ \hline
 \rowcolor{ifsclightgreen}
-\textbf{Obras EXISTENTES na Biblioteca (Físico / PNLD)} & \textbf{200 obras} & \textbf{73,0\%} \\ \hline
+\textbf{Títulos EXISTENTES na Biblioteca (Físico / PNLD)} & \textbf{200 títulos} & \textbf{73,5\%} \\ \hline
 \rowcolor{ifsclightgreen}
-\textbf{• Cobertura da Bibliografia Básica} & \textbf{97 obras} & \textbf{78,2\%} \\ \hline
+\textbf{• Cobertura de Títulos na Bibliografia Básica} & \textbf{97 títulos} & \textbf{79,5\%} \\ \hline
 \rowcolor{ifsclightgreen}
-• Cobertura da Bibliografia Complementar & 103 obras & 68,7\% \\ \hline
+• Cobertura de Títulos na Bibliografia Complementar & 103 títulos & 68,7\% \\ \hline
 \rowcolor{cinzaClaro}
-\textbf{Obras NÃO EXISTENTES no Acervo Físico} & \textbf{74 obras} & \textbf{27,0\%} \\ \hline
+\textbf{DEMANDA DE AQUISIÇÃO DE EXEMPLARES FÍSICOS} & \textbf{Cópias Físicas} & \textbf{Meta por Título} \\ \hline
 \rowcolor{cinzaClaro}
-• Ausentes na Bibliografia Básica (Prioridade Alta para Compra) & 27 obras & 21,8\% \\ \hline
-• Ausentes na Bibliografia Complementar & 47 obras & 31,3\% \\ \hline
+• Cópias a Adquirir para a Bibliografia BÁSICA & 99 exemplares & Meta: 3 ex. / título básico \\ \hline
+• Cópias a Adquirir para a Bibliografia COMPLEMENTAR & 47 exemplares & Meta: 1 ex. / título comp. \\ \hline
+\rowcolor{ifsclightgreen}
+\textbf{TOTAL GERAL DE EXEMPLARES FÍSICOS A COMPRAR} & \textbf{146 exemplares} & \textbf{100\% de Conformidade} \\ \hline
 \end{tabularx}
-\caption{Quadro Resumo de Disponibilidade do Acervo}
+\caption{Quadro Resumo de Cobertura e Demanda de Compras}
 \end{table}
 
-\section{Prioridade 1: Bibliografia BÁSICA Ausente no Acervo Físico}
-Solicita-se à equipe da biblioteca priorizar a conferência destas 27 obras nas plataformas virtuais (\textit{Minha Biblioteca / Pearson}) ou a inclusão na lista prioritária de aquisições:
+\section{Prioridade 1: Obras da Bibliografia BÁSICA para Aquisição (Meta: 3 Exs.)}
+Relação de obras básicas com necessidade de aquisição (3 exemplares por título) ou validação nas plataformas virtuais (\textit{Minha Biblioteca / Pearson}):
 
 \vspace{0.2cm}
 \begin{xltabular}{\linewidth}{|p{3.8cm}|p{3.2cm}|X|p{2.2cm}|}
 \hline
 \rowcolor{ifscgreen}
-\textcolor{white}{\textbf{Unidade Curricular}} & \textcolor{white}{\textbf{Autor Principal}} & \textcolor{white}{\textbf{Título da Obra}} & \textcolor{white}{\textbf{Edição/Ano}} \\ \hline
+\textcolor{white}{\textbf{Unidade Curricular}} & \textcolor{white}{\textbf{Autor Principal}} & \textcolor{white}{\textbf{Título da Obra}} & \textcolor{white}{\textbf{Demanda}} \\ \hline
 \endfirsthead
 \hline
 \rowcolor{ifscgreen}
-\textcolor{white}{\textbf{Unidade Curricular}} & \textcolor{white}{\textbf{Autor Principal}} & \textcolor{white}{\textbf{Título da Obra}} & \textcolor{white}{\textbf{Edição/Ano}} \\ \hline
+\textcolor{white}{\textbf{Unidade Curricular}} & \textcolor{white}{\textbf{Autor Principal}} & \textcolor{white}{\textbf{Título da Obra}} & \textcolor{white}{\textbf{Demanda}} \\ \hline
 \endhead
 """
 
@@ -1521,8 +1597,7 @@ Solicita-se à equipe da biblioteca priorizar a conferência destas 27 obras nas
         uc_t = escape_tex(row['UC_Nome'])
         aut_t = escape_tex(str(row['Autor_Principal'])[:35]) if str(row['Autor_Principal']).strip() else 'Institucional / MEC'
         tit_t = escape_tex(str(row['Titulo_Obra'])[:45])
-        ed_ano = escape_tex(format_ed_ano(row['Edicao_PPC'], row['Ano_PPC']))
-        tex_content += f"{uc_t} & {aut_t} & \\textbf{{{tit_t}}} & {ed_ano} \\\\ \\hline\n"
+        tex_content += f"{uc_t} & {aut_t} & \\textbf{{{tit_t}}} & +3 ex. Físicos \\\\ \\hline\n"
 
     tex_content += r"""\end{xltabular}
 
@@ -1594,7 +1669,7 @@ def update_root_dashboard():
         <div class="panel-header">
           <div class="panel-title">
             <i class="bi bi-journal-check"></i>
-            Auditoria do Acervo & Diagnóstico de Ementas (PPC vs. Sistema Sophia)
+            Auditoria Normativa do Acervo & Diagnóstico de Ementas (PPC vs. Sophia)
           </div>
           <div style="display: flex; gap: 0.8rem;">
             <a href="tecnico-administracao/revisao-equipe/checagem-biblioteca/dashboard_biblioteca.html" target="_blank" class="btn-action btn-emerald">
@@ -1607,28 +1682,28 @@ def update_root_dashboard():
         </div>
 
         <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 1.5rem;">
-          Cruzamento automatizado entre todas as <strong>274 referências bibliográficas</strong> adotadas no PPC do Técnico em Administração e o inventário oficial de <strong>3.003 títulos</strong> e <strong>4.962 exemplares físicos</strong> do Sistema Sophia da Biblioteca do Câmpus Garopaba.
+          Cruzamento automatizado entre todas as <strong>272 referências bibliográficas</strong> adotadas no PPC do Técnico em Administração e o inventário oficial de <strong>3.003 títulos</strong> e <strong>4.962 exemplares físicos</strong> do Sistema Sophia da Biblioteca do Câmpus Garopaba, aplicando a regra de <strong>3 ex. na Básica</strong> e <strong>1 ex. na Complementar</strong>.
         </p>
 
         <div class="grid-2">
           <div>
             <h3 style="color: var(--accent-emerald); font-size: 1.1rem; margin-bottom: 1rem; font-family: 'Outfit', sans-serif;">
-              <i class="bi bi-bar-chart-fill me-1"></i> Indicadores de Cobertura & Diagnóstico:
+              <i class="bi bi-bar-chart-fill me-1"></i> Indicadores Normativos & Demanda de Compras:
             </h3>
 
             <div class="step-item">
-              <div class="step-icon" style="background:rgba(244,63,94,0.2); color:var(--accent-rose);"><i class="bi bi-exclamation-octagon-fill"></i></div>
+              <div class="step-icon" style="background:rgba(244,63,94,0.2); color:var(--accent-rose);"><i class="bi bi-cart-plus-fill"></i></div>
               <div class="step-content">
-                <h4>31 Ementas c/ Falta na Bibliografia Básica</h4>
-                <p>Mapeadas no painel com indicação exata das obras ausentes para aquisição ou Minha Biblioteca.</p>
+                <h4>Demanda de Compras da Básica: +99 exemplares</h4>
+                <p>Necessários para assegurar 3 exemplares físicos de cada título básico no câmpus.</p>
               </div>
             </div>
 
             <div class="step-item">
               <div class="step-icon" style="background:rgba(16,185,129,0.2); color:var(--accent-emerald);"><i class="bi bi-check-circle-fill"></i></div>
               <div class="step-content">
-                <h4>78,2% da Bibliografia Básica Atendida</h4>
-                <p>97 de 124 obras básicas já estão fisicamente disponíveis na biblioteca ou via PNLD/FNDE.</p>
+                <h4>79,5% dos Títulos Básicos já Atendidos</h4>
+                <p>97 de 122 títulos da bibliografia básica já estão disponíveis no acervo do câmpus ou PNLD.</p>
               </div>
             </div>
 
