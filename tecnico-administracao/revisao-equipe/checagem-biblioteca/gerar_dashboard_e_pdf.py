@@ -4,7 +4,7 @@
 """
 Gerador da Página Web Interativa (Dashboard) e do Documento PDF Estilizado em LaTeX
 para a Auditoria do Acervo Bibliográfico do PPC Técnico em Administração (IFSC Garopaba).
-Inclui Catálogo Geral das 3.003 Obras e seus respectivos Exemplares Físicos no Sophia.
+Inclui Painel Diagnóstico de Conformidade e Pendências por Ementa/UC.
 """
 
 import os
@@ -44,6 +44,84 @@ def load_data():
     for col in df_all.columns:
         df_all[col] = df_all[col].apply(clean_val)
         
+    # Build UC Diagnostic Summaries
+    uc_diagnostics = []
+    for uc_id, group in df_all.groupby('UC_ID'):
+        uc_nome = group['UC_Nome'].iloc[0]
+        semestre = group['Ano_Semestre'].iloc[0]
+        bloco = group['Bloco_Formacao'].iloc[0]
+        
+        b_total = len(group[group['Tipo_Bibliografia'] == 'Básica'])
+        b_sim = len(group[(group['Tipo_Bibliografia'] == 'Básica') & (group['Existe_Biblioteca'] == 'SIM')])
+        b_nao = len(group[(group['Tipo_Bibliografia'] == 'Básica') & (group['Existe_Biblioteca'] == 'NÃO')])
+        
+        c_total = len(group[group['Tipo_Bibliografia'] == 'Complementar'])
+        c_sim = len(group[(group['Tipo_Bibliografia'] == 'Complementar') & (group['Existe_Biblioteca'] == 'SIM')])
+        c_nao = len(group[(group['Tipo_Bibliografia'] == 'Complementar') & (group['Existe_Biblioteca'] == 'NÃO')])
+        
+        var_ed = len(group[group['Status'] == 'EXISTE_EDICAO_DIFERENTE'])
+        
+        # Missing books details
+        b_missing_books = group[(group['Tipo_Bibliografia'] == 'Básica') & (group['Existe_Biblioteca'] == 'NÃO')][['Titulo_Obra', 'Autor_Principal', 'Edicao_PPC', 'Ano_PPC']].to_dict(orient='records')
+        c_missing_books = group[(group['Tipo_Bibliografia'] == 'Complementar') & (group['Existe_Biblioteca'] == 'NÃO')][['Titulo_Obra', 'Autor_Principal', 'Edicao_PPC', 'Ano_PPC']].to_dict(orient='records')
+        var_books = group[group['Status'] == 'EXISTE_EDICAO_DIFERENTE'][['Titulo_Obra', 'Autor_Principal', 'Edicao_PPC', 'Ano_PPC', 'Referencia_Acervo_Sophia']].to_dict(orient='records')
+        
+        if b_nao > 0:
+            status_code = 'CRITICA_BASICA'
+            status_badge = 'badge-nao'
+            status_label = 'Crítica: Falta Bibliografia Básica'
+            status_icon = 'bi-exclamation-octagon-fill'
+            acao_sugerida = f"Comprar ou validar {b_nao} obra(s) básica(s) na Minha Biblioteca/Pearson."
+        elif c_nao > 0:
+            status_code = 'ATENCAO_COMPLEMENTAR'
+            status_badge = 'badge-var'
+            status_label = 'Atenção: Falta Complementar'
+            status_icon = 'bi-exclamation-triangle-fill'
+            acao_sugerida = f"Básica 100% atendida. Suprir {c_nao} obra(s) complementar(es)."
+        elif var_ed > 0:
+            status_code = 'ATENCAO_EDICAO'
+            status_badge = 'badge-fnde'
+            status_label = 'Básica Atendida c/ Variação de Edição'
+            status_icon = 'bi-arrow-repeat'
+            acao_sugerida = f"Todas existem no acervo. Harmonizar {var_ed} edição(ões) no texto do PPC."
+        else:
+            status_code = 'CONFORME_100'
+            status_badge = 'badge-sim'
+            status_label = '100% Conforme no Acervo'
+            status_icon = 'bi-check-circle-fill'
+            acao_sugerida = "Ementa totalmente regularizada no acervo do câmpus."
+            
+        total_ref = len(group)
+        sim_total = b_sim + c_sim
+        pct_cobertura = round((sim_total / total_ref) * 100) if total_ref > 0 else 0
+        pct_basica = round((b_sim / b_total) * 100) if b_total > 0 else 100
+
+        uc_diagnostics.append({
+            'uc_id': int(uc_id),
+            'uc_nome': uc_nome,
+            'semestre': semestre,
+            'bloco': bloco,
+            'b_total': b_total,
+            'b_sim': b_sim,
+            'b_nao': b_nao,
+            'c_total': c_total,
+            'c_sim': c_sim,
+            'c_nao': c_nao,
+            'var_ed': var_ed,
+            'total_ref': total_ref,
+            'sim_total': sim_total,
+            'pct_cobertura': pct_cobertura,
+            'pct_basica': pct_basica,
+            'status_code': status_code,
+            'status_badge': status_badge,
+            'status_label': status_label,
+            'status_icon': status_icon,
+            'acao_sugerida': acao_sugerida,
+            'b_missing_books': b_missing_books,
+            'c_missing_books': c_missing_books,
+            'var_books': var_books
+        })
+        
     # Load all 3003 library items with copy counts
     df_raw_lib = pd.read_excel(ACERVO_EXEMPLARES_PATH)
     col1 = df_raw_lib[df_raw_lib.columns[1]].dropna().tolist()
@@ -68,8 +146,6 @@ def load_data():
                 ex_count = int(m2.group(1))
                 
         ref_clean = re.sub(r'Exemplares:.*$', '', cleaned).strip()
-        
-        # Check if used in PPC
         is_ppc = any(k in ref_clean.lower() for k in ppc_titles_norm if len(k) > 6)
         
         all_library_items.append({
@@ -79,28 +155,29 @@ def load_data():
             'is_ppc': is_ppc
         })
         
-    return df_all, df_resumo, df_uc, all_library_items
+    return df_all, df_resumo, df_uc, all_library_items, uc_diagnostics
 
-def generate_interactive_html(df_all, df_resumo, df_uc, all_library_items):
+def generate_interactive_html(df_all, df_resumo, df_uc, all_library_items, uc_diagnostics):
     records = df_all.to_dict(orient='records')
-    uc_records = df_uc.to_dict(orient='records')
-    for r in uc_records:
-        for k, v in r.items():
-            if pd.isna(v):
-                r[k] = ""
-                
     json_data = json.dumps(records, ensure_ascii=False)
-    json_uc_data = json.dumps(uc_records, ensure_ascii=False)
+    json_diag_data = json.dumps(uc_diagnostics, ensure_ascii=False)
     json_catalog_data = json.dumps(all_library_items, ensure_ascii=False)
     
     total_exemplares_lib = sum(x['exemplares'] for x in all_library_items)
+    
+    # Calculate counts of UC statuses
+    count_criticas = len([u for u in uc_diagnostics if u['status_code'] == 'CRITICA_BASICA'])
+    count_atencao_comp = len([u for u in uc_diagnostics if u['status_code'] == 'ATENCAO_COMPLEMENTAR'])
+    count_atencao_var = len([u for u in uc_diagnostics if u['status_code'] == 'ATENCAO_EDICAO'])
+    count_conformes = len([u for u in uc_diagnostics if u['status_code'] == 'CONFORME_100'])
+    count_com_problema = count_criticas + count_atencao_comp + count_atencao_var
     
     html_content = f"""<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Auditoria Bibliográfica & Exemplares — PPC Técnico em Administração (IFSC Garopaba)</title>
+  <title>Diagnóstico de Ementas & Auditoria Bibliográfica — PPC Técnico em Administração (IFSC Garopaba)</title>
 
   <!-- Google Fonts & Bootstrap Icons -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -262,6 +339,7 @@ def generate_interactive_html(df_all, df_resumo, df_uc, all_library_items):
       flex-direction: column;
       justify-content: space-between;
       transition: transform 0.2s ease, border-color 0.2s ease;
+      cursor: pointer;
     }}
     .kpi-card:hover {{
       transform: translateY(-3px);
@@ -297,18 +375,6 @@ def generate_interactive_html(df_all, df_resumo, df_uc, all_library_items):
       color: var(--text-muted);
     }}
 
-    .kpi-emerald {{ border-top: 4px solid var(--accent-emerald); }}
-    .kpi-emerald .kpi-value {{ color: var(--accent-emerald); }}
-    .kpi-emerald .kpi-icon {{ color: var(--accent-emerald); }}
-
-    .kpi-blue {{ border-top: 4px solid var(--accent-blue); }}
-    .kpi-blue .kpi-value {{ color: var(--accent-blue); }}
-    .kpi-blue .kpi-icon {{ color: var(--accent-blue); }}
-
-    .kpi-purple {{ border-top: 4px solid var(--accent-purple); }}
-    .kpi-purple .kpi-value {{ color: var(--accent-purple); }}
-    .kpi-purple .kpi-icon {{ color: var(--accent-purple); }}
-
     .kpi-rose {{ border-top: 4px solid var(--accent-rose); }}
     .kpi-rose .kpi-value {{ color: var(--accent-rose); }}
     .kpi-rose .kpi-icon {{ color: var(--accent-rose); }}
@@ -316,6 +382,18 @@ def generate_interactive_html(df_all, df_resumo, df_uc, all_library_items):
     .kpi-amber {{ border-top: 4px solid var(--accent-amber); }}
     .kpi-amber .kpi-value {{ color: var(--accent-amber); }}
     .kpi-amber .kpi-icon {{ color: var(--accent-amber); }}
+
+    .kpi-blue {{ border-top: 4px solid var(--accent-blue); }}
+    .kpi-blue .kpi-value {{ color: var(--accent-blue); }}
+    .kpi-blue .kpi-icon {{ color: var(--accent-blue); }}
+
+    .kpi-emerald {{ border-top: 4px solid var(--accent-emerald); }}
+    .kpi-emerald .kpi-value {{ color: var(--accent-emerald); }}
+    .kpi-emerald .kpi-icon {{ color: var(--accent-emerald); }}
+
+    .kpi-purple {{ border-top: 4px solid var(--accent-purple); }}
+    .kpi-purple .kpi-value {{ color: var(--accent-purple); }}
+    .kpi-purple .kpi-icon {{ color: var(--accent-purple); }}
 
     /* TABS */
     .dashboard-tabs {{
@@ -408,6 +486,99 @@ def generate_interactive_html(df_all, df_resumo, df_uc, all_library_items):
       font-size: 0.88rem;
       outline: none;
       cursor: pointer;
+    }}
+
+    /* DIAGNOSTIC CARDS */
+    .diag-grid {{
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+      gap: 1.2rem;
+      margin-bottom: 1.5rem;
+    }}
+
+    .diag-card {{
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-lg);
+      padding: 1.3rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: all 0.2s ease;
+    }}
+    .diag-card:hover {{
+      transform: translateY(-2px);
+      border-color: rgba(255, 255, 255, 0.3);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+    }}
+
+    .diag-card-critica {{ border-left: 5px solid var(--accent-rose); }}
+    .diag-card-atencao {{ border-left: 5px solid var(--accent-amber); }}
+    .diag-card-edicao {{ border-left: 5px solid var(--accent-blue); }}
+    .diag-card-conforme {{ border-left: 5px solid var(--accent-emerald); }}
+
+    .diag-card-header {{
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 0.8rem;
+      gap: 0.5rem;
+    }}
+    .diag-uc-title {{
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: #ffffff;
+      line-height: 1.3;
+    }}
+    .diag-uc-meta {{
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      margin-top: 0.2rem;
+    }}
+
+    .diag-stats-row {{
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.6rem;
+      background: rgba(15, 23, 42, 0.6);
+      padding: 0.7rem;
+      border-radius: 8px;
+      margin-bottom: 0.8rem;
+      font-size: 0.8rem;
+    }}
+
+    .diag-missing-box {{
+      background: rgba(244, 63, 94, 0.08);
+      border: 1px dashed rgba(244, 63, 94, 0.3);
+      border-radius: 8px;
+      padding: 0.7rem;
+      margin-bottom: 0.8rem;
+      font-size: 0.8rem;
+    }}
+    .diag-missing-box strong {{
+      color: #fb7185;
+      display: block;
+      margin-bottom: 0.3rem;
+    }}
+    .diag-missing-list {{
+      list-style: none;
+      padding-left: 0;
+    }}
+    .diag-missing-list li {{
+      margin-bottom: 0.25rem;
+      line-height: 1.35;
+      color: #f1f5f9;
+    }}
+
+    .diag-action-box {{
+      font-size: 0.8rem;
+      color: #94a3b8;
+      border-top: 1px solid var(--border-color);
+      padding-top: 0.6rem;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
     }}
 
     /* TABLES */
@@ -530,8 +701,8 @@ def generate_interactive_html(df_all, df_resumo, df_uc, all_library_items):
           <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Instituto_Federal_de_Santa_Catarina_-_Marca_2015.svg/1200px-Instituto_Federal_de_Santa_Catarina_-_Marca_2015.svg.png" alt="IFSC Logo">
         </div>
         <div class="brand-titles">
-          <h1>Auditoria do Acervo & Exemplares — PPC Técnico em Administração</h1>
-          <p>Cruzamento de 274 Referências do PPC vs. Catálogo Sophia (3.003 Títulos • {total_exemplares_lib} Exemplares Físicos em Garopaba)</p>
+          <h1>Diagnóstico de Ementas & Auditoria do Acervo — PPC Técnico em Administração</h1>
+          <p>Visão Executiva de Conformidade e Pendências Bibliográficas nas 45 Ementas do Curso • IFSC Garopaba</p>
         </div>
       </div>
 
@@ -552,58 +723,61 @@ def generate_interactive_html(df_all, df_resumo, df_uc, all_library_items):
   <!-- MAIN -->
   <main class="main-container">
 
-    <!-- KPI CARDS -->
+    <!-- KPI CARDS FOCADOS EM EMENTAS -->
     <div class="kpi-grid">
-      <div class="kpi-card kpi-emerald">
+      <div class="kpi-card kpi-rose" onclick="filterDiagBy('CRITICA_BASICA')">
         <div class="kpi-header">
-          <span class="kpi-title">Cobertura Geral PPC</span>
-          <i class="bi bi-pie-chart-fill kpi-icon"></i>
+          <span class="kpi-title">Ementas Críticas (Falta Básica)</span>
+          <i class="bi bi-exclamation-octagon-fill kpi-icon"></i>
         </div>
-        <div class="kpi-value">73,0%</div>
-        <div class="kpi-desc">200 de 274 referências presentes no acervo físico ou PNLD</div>
+        <div class="kpi-value">{count_criticas} UCs</div>
+        <div class="kpi-desc">Ementas com 1 ou mais obras básicas ausentes no acervo físico</div>
       </div>
 
-      <div class="kpi-card kpi-blue">
+      <div class="kpi-card kpi-amber" onclick="filterDiagBy('ATENCAO_COMPLEMENTAR')">
         <div class="kpi-header">
-          <span class="kpi-title">Bibliografia Básica</span>
-          <i class="bi bi-book-fill kpi-icon"></i>
+          <span class="kpi-title">Falta na Complementar</span>
+          <i class="bi bi-exclamation-triangle-fill kpi-icon"></i>
         </div>
-        <div class="kpi-value">78,2%</div>
-        <div class="kpi-desc">97 de 124 obras básicas já disponíveis na biblioteca</div>
+        <div class="kpi-value">{count_atencao_comp} UCs</div>
+        <div class="kpi-desc">Básica 100% atendida; pendência apenas na complementar</div>
       </div>
 
-      <div class="kpi-card kpi-purple">
+      <div class="kpi-card kpi-blue" onclick="filterDiagBy('ATENCAO_EDICAO')">
+        <div class="kpi-header">
+          <span class="kpi-title">Variação de Edição / Ano</span>
+          <i class="bi bi-arrow-repeat kpi-icon"></i>
+        </div>
+        <div class="kpi-value">{count_atencao_var} UCs</div>
+        <div class="kpi-desc">Obras existem no acervo; requer atualização do texto do PPC</div>
+      </div>
+
+      <div class="kpi-card kpi-emerald" onclick="filterDiagBy('CONFORME_100')">
+        <div class="kpi-header">
+          <span class="kpi-title">100% Conformes no Acervo</span>
+          <i class="bi bi-check-circle-fill kpi-icon"></i>
+        </div>
+        <div class="kpi-value">{count_conformes} UCs</div>
+        <div class="kpi-desc">Ementas com acervo físico plenamente regularizado</div>
+      </div>
+
+      <div class="kpi-card kpi-purple" onclick="switchTab('tab-catalogo')">
         <div class="kpi-header">
           <span class="kpi-title">Exemplares no Câmpus</span>
           <i class="bi bi-stack kpi-icon"></i>
         </div>
         <div class="kpi-value">{total_exemplares_lib} Exs.</div>
-        <div class="kpi-desc">Total de cópias físicas em Garopaba em 3.003 títulos</div>
-      </div>
-
-      <div class="kpi-card kpi-rose">
-        <div class="kpi-header">
-          <span class="kpi-title">Demanda Básica (Compras)</span>
-          <i class="bi bi-cart-plus-fill kpi-icon"></i>
-        </div>
-        <div class="kpi-value">27 Obras</div>
-        <div class="kpi-desc">Títulos básicos ausentes para compra física ou Minha Biblioteca</div>
-      </div>
-
-      <div class="kpi-card kpi-amber">
-        <div class="kpi-header">
-          <span class="kpi-title">Variação de Edição</span>
-          <i class="bi bi-arrow-repeat kpi-icon"></i>
-        </div>
-        <div class="kpi-value">24 Obras</div>
-        <div class="kpi-desc">Edição diferente disponível no acervo físico</div>
+        <div class="kpi-desc">Total de cópias físicas em 3.003 títulos no Sophia Garopaba</div>
       </div>
     </div>
 
     <!-- TABS -->
     <div class="dashboard-tabs">
-      <button class="tab-btn active" onclick="switchTab('tab-ausentes')">
-        <i class="bi bi-cart-dash-fill"></i> Obras Ausentes (Demanda de Aquisição) <span id="count-ausentes" class="badge badge-nao" style="margin-left:4px;">74</span>
+      <button class="tab-btn active" onclick="switchTab('tab-diagnostico')">
+        <i class="bi bi-kanban-fill"></i> Diagnóstico das 45 Ementas <span class="badge badge-nao" style="margin-left:4px;">{count_com_problema} com Pendência</span>
+      </button>
+      <button class="tab-btn" onclick="switchTab('tab-ausentes')">
+        <i class="bi bi-cart-dash-fill"></i> Obras Ausentes para Compra <span id="count-ausentes" class="badge badge-nao" style="margin-left:4px;">74</span>
       </button>
       <button class="tab-btn" onclick="switchTab('tab-variacoes')">
         <i class="bi bi-arrow-left-right"></i> Variações de Edição / Ano <span id="count-variacoes" class="badge badge-var" style="margin-left:4px;">24</span>
@@ -612,13 +786,13 @@ def generate_interactive_html(df_all, df_resumo, df_uc, all_library_items):
         <i class="bi bi-check-circle-fill"></i> Acervo Confirmado (Sophia) <span id="count-existentes" class="badge badge-sim" style="margin-left:4px;">200</span>
       </button>
       <button class="tab-btn" onclick="switchTab('tab-ucs')">
-        <i class="bi bi-folder2-open"></i> Auditoria por Unidade Curricular (45 UCs)
+        <i class="bi bi-folder2-open"></i> Auditoria por UC (Accordion)
       </button>
       <button class="tab-btn" onclick="switchTab('tab-todas')">
-        <i class="bi bi-list-columns-reverse"></i> Mapeamento Completo (274 Referências)
+        <i class="bi bi-list-columns-reverse"></i> Mapeamento Geral (274 Obras)
       </button>
       <button class="tab-btn" onclick="switchTab('tab-catalogo')">
-        <i class="bi bi-bookshelf"></i> Catálogo Geral Sophia (3.003 Obras & Exemplares)
+        <i class="bi bi-bookshelf"></i> Catálogo Sophia (3.003 Obras & Exemplares)
       </button>
     </div>
 
@@ -626,21 +800,17 @@ def generate_interactive_html(df_all, df_resumo, df_uc, all_library_items):
     <div class="filter-bar">
       <div class="search-input-wrapper">
         <i class="bi bi-search"></i>
-        <input type="text" id="searchInput" class="search-input" placeholder="Pesquisar por título, autor, unidade curricular, ISBN ou palavra-chave..." oninput="applyFilters()">
+        <input type="text" id="searchInput" class="search-input" placeholder="Pesquisar por unidade curricular, livro ausente, autor ou palavra-chave..." oninput="applyFilters()">
       </div>
 
       <div style="display: flex; gap: 0.8rem; flex-wrap: wrap;">
-        <select id="filterTipo" class="select-filter" onchange="applyFilters()">
-          <option value="ALL">Todos os Tipos (Básica e Complementar)</option>
-          <option value="Básica">Apenas Bibliografia Básica</option>
-          <option value="Complementar">Apenas Bibliografia Complementar</option>
-        </select>
-
-        <select id="filterExemplares" class="select-filter" onchange="applyFilters()">
-          <option value="ALL">Quantitativo de Exemplares: Todos</option>
-          <option value="1">1 Exemplar Físico</option>
-          <option value="2">2 Exemplares Físicos</option>
-          <option value="3+">3 ou mais Exemplares (Básica Recomendada)</option>
+        <select id="filterStatusEmenta" class="select-filter" onchange="applyFilters()">
+          <option value="ALL">Status da Ementa: Todas as 45 UCs</option>
+          <option value="COM_PROBLEMA">🚨 Todas as Ementas com Alguma Pendência ({count_com_problema} UCs)</option>
+          <option value="CRITICA_BASICA">🔴 Críticas: Falta Bibliografia Básica ({count_criticas} UCs)</option>
+          <option value="ATENCAO_COMPLEMENTAR">🟡 Atenção: Falta Bibliografia Complementar ({count_atencao_comp} UCs)</option>
+          <option value="ATENCAO_EDICAO">🔵 Atenção: Variação de Edição/Ano ({count_atencao_var} UCs)</option>
+          <option value="CONFORME_100">🟢 100% Conformes / Regulares ({count_conformes} UCs)</option>
         </select>
 
         <select id="filterBloco" class="select-filter" onchange="applyFilters()">
@@ -655,8 +825,34 @@ def generate_interactive_html(df_all, df_resumo, df_uc, all_library_items):
       </div>
     </div>
 
+    <!-- TAB 0: DIAGNÓSTICO DE EMENTAS (NOVA ABA CENTRAL) -->
+    <div id="tab-diagnostico" class="tab-pane active">
+      <div style="background:var(--bg-card); border:1px solid var(--border-color); border-radius:var(--radius-lg); padding:1.2rem; margin-bottom:1.5rem;">
+        <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:1rem;">
+          <div>
+            <h3 style="font-family:'Outfit', sans-serif; font-size:1.15rem; color:var(--accent-emerald); margin-bottom:0.2rem;">
+              <i class="bi bi-kanban-fill me-1"></i> Painel Diagnóstico de Conformidade das Ementas
+            </h3>
+            <p style="font-size:0.85rem; color:var(--text-muted);">
+              Mapeamento de quais componentes curriculares possuem pendências de acervo físico e quais exigem aquisição de bibliografia básica.
+            </p>
+          </div>
+          <div style="display:flex; gap:0.5rem; flex-wrap:wrap;" id="filterButtonsContainer">
+            <button class="btn-action btn-outline" style="font-size:0.78rem; padding:0.4rem 0.8rem;" onclick="setDiagFilter('ALL')">Todas (45)</button>
+            <button class="btn-action btn-outline" style="font-size:0.78rem; padding:0.4rem 0.8rem; color:#fb7185; border-color:rgba(244,63,94,0.4);" onclick="setDiagFilter('CRITICA_BASICA')">🔴 Falta Básica ({count_criticas})</button>
+            <button class="btn-action btn-outline" style="font-size:0.78rem; padding:0.4rem 0.8rem; color:#fbbf24; border-color:rgba(245,158,11,0.4);" onclick="setDiagFilter('ATENCAO_COMPLEMENTAR')">🟡 Falta Complementar ({count_atencao_comp})</button>
+            <button class="btn-action btn-outline" style="font-size:0.78rem; padding:0.4rem 0.8rem; color:#34d399; border-color:rgba(16,185,129,0.4);" onclick="setDiagFilter('CONFORME_100')">🟢 100% Conformes ({count_conformes})</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="diag-grid" id="diagCardsGrid">
+        <!-- Dynamic JS -->
+      </div>
+    </div>
+
     <!-- TAB 1: OBRAS AUSENTES -->
-    <div id="tab-ausentes" class="tab-pane active">
+    <div id="tab-ausentes" class="tab-pane">
       <div class="table-container">
         <table class="custom-table" id="tableAusentes">
           <thead>
@@ -793,10 +989,10 @@ def generate_interactive_html(df_all, df_resumo, df_uc, all_library_items):
   <!-- SCRIPT DE DADOS E INTERATIVIDADE -->
   <script>
     const allData = {json_data};
-    const ucData = {json_uc_data};
+    const diagData = {json_diag_data};
     const catalogData = {json_catalog_data};
 
-    let activeTabId = 'tab-ausentes';
+    let activeTabId = 'tab-diagnostico';
 
     function switchTab(tabId) {{
       activeTabId = tabId;
@@ -811,26 +1007,103 @@ def generate_interactive_html(df_all, df_resumo, df_uc, all_library_items):
       }}
     }}
 
+    function filterDiagBy(statusCode) {{
+      switchTab('tab-diagnostico');
+      document.getElementById('filterStatusEmenta').value = statusCode;
+      applyFilters();
+    }}
+
+    function setDiagFilter(statusCode) {{
+      document.getElementById('filterStatusEmenta').value = statusCode;
+      applyFilters();
+    }}
+
+    function renderDiagnosticCards(data) {{
+      const container = document.getElementById('diagCardsGrid');
+      
+      if (data.length === 0) {{
+        container.innerHTML = '<p style="grid-column: 1/-1; text-align:center; padding:3rem; color:var(--text-muted); font-size:1.05rem;">Nenhuma ementa encontrada para os filtros selecionados.</p>';
+        return;
+      }}
+
+      container.innerHTML = data.map(u => {{
+        let cardClass = 'diag-card-conforme';
+        if (u.status_code === 'CRITICA_BASICA') cardClass = 'diag-card-critica';
+        else if (u.status_code === 'ATENCAO_COMPLEMENTAR') cardClass = 'diag-card-atencao';
+        else if (u.status_code === 'ATENCAO_EDICAO') cardClass = 'diag-card-edicao';
+
+        const missingBasicHtml = u.b_missing_books && u.b_missing_books.length > 0 ? `
+          <div class="diag-missing-box">
+            <strong><i class="bi bi-cart-plus-fill me-1"></i> Faltam ${{u.b_nao}} Obra(s) na Bibliografia Básica:</strong>
+            <ul class="diag-missing-list">
+              ${{u.b_missing_books.map(b => `
+                <li>• <strong>${{b.Titulo_Obra}}</strong> (${{b.Autor_Principal || 'Institucional'}} ${{b.Edicao_PPC ? b.Edicao_PPC + 'ª ed.' : ''}} ${{b.Ano_PPC || ''}})</li>
+              `).join('')}}
+            </ul>
+          </div>
+        ` : '';
+
+        const missingCompHtml = u.c_missing_books && u.c_missing_books.length > 0 ? `
+          <div style="background:rgba(245,158,11,0.08); border:1px dashed rgba(245,158,11,0.3); border-radius:8px; padding:0.6rem; margin-bottom:0.8rem; font-size:0.78rem;">
+            <strong style="color:#fbbf24; display:block; margin-bottom:0.2rem;"><i class="bi bi-journal-x me-1"></i> Faltam ${{u.c_nao}} Obra(s) na Complementar:</strong>
+            <ul class="diag-missing-list" style="color:var(--text-muted);">
+              ${{u.c_missing_books.slice(0, 2).map(b => `
+                <li>• ${{b.Titulo_Obra}} (${{b.Autor_Principal || 'Institucional'}})</li>
+              `).join('')}}
+              ${{u.c_missing_books.length > 2 ? `<li style="font-style:italic;">+ mais ${{u.c_missing_books.length - 2}} obra(s)...</li>` : ''}}
+            </ul>
+          </div>
+        ` : '';
+
+        return `
+          <div class="diag-card ${{cardClass}}">
+            <div>
+              <div class="diag-card-header">
+                <div>
+                  <span class="badge badge-basica font-code" style="margin-bottom:4px;">UC ${{u.uc_id}}</span>
+                  <div class="diag-uc-title">${{u.uc_nome}}</div>
+                  <div class="diag-uc-meta">${{u.bloco}} • ${{u.semestre}}</div>
+                </div>
+                <span class="badge ${{u.status_badge}}">
+                  <i class="bi ${{u.status_icon}}"></i> ${{u.status_label}}
+                </span>
+              </div>
+
+              <div class="diag-stats-row">
+                <div>
+                  <span style="color:var(--text-muted);">Básica:</span> 
+                  <strong style="color:${{u.b_nao === 0 ? '#34d399' : '#fb7185'}}">${{u.b_sim}}/${{u.b_total}} (${{u.pct_basica}}%)</strong>
+                </div>
+                <div>
+                  <span style="color:var(--text-muted);">Total Acervo:</span> 
+                  <strong style="color:${{u.pct_cobertura >= 75 ? '#34d399' : (u.pct_cobertura >= 50 ? '#fbbf24' : '#fb7185')}}">${{u.sim_total}}/${{u.total_ref}} (${{u.pct_cobertura}}%)</strong>
+                </div>
+              </div>
+
+              ${{missingBasicHtml}}
+              ${{missingCompHtml}}
+            </div>
+
+            <div class="diag-action-box">
+              <i class="bi bi-lightbulb-fill text-amber"></i>
+              <span><strong>Ação:</strong> ${{u.acao_sugerida}}</span>
+            </div>
+          </div>
+        `;
+      }}).join('');
+    }}
+
     function renderCatalogo(data) {{
       const query = document.getElementById('searchInput').value.toLowerCase();
-      const exFilter = document.getElementById('filterExemplares').value;
       
       let filtered = data;
       if (query) {{
         filtered = filtered.filter(item => item.ref.toLowerCase().includes(query));
       }}
-      if (exFilter === '1') {{
-        filtered = filtered.filter(item => item.exemplares === 1);
-      }} else if (exFilter === '2') {{
-        filtered = filtered.filter(item => item.exemplares === 2);
-      }} else if (exFilter === '3+') {{
-        filtered = filtered.filter(item => item.exemplares >= 3);
-      }}
 
       document.getElementById('badge-total-catalogo').innerText = `${{filtered.length}} Obras Encontradas`;
 
       const tbody = document.getElementById('tbodyCatalogo');
-      // Limit to 200 items in display for fast rendering, or render all
       const displayItems = filtered.slice(0, 250);
 
       tbody.innerHTML = displayItems.map(item => `
@@ -849,7 +1122,10 @@ def generate_interactive_html(df_all, df_resumo, df_uc, all_library_items):
       `).join('') + (filtered.length > 250 ? `<tr><td colspan="4" style="text-align:center; padding:1.2rem; color:var(--text-muted); font-weight:600;">Exibindo os primeiros 250 resultados de ${{filtered.length}} obras. Refine a pesquisa para filtrar títulos específicos.</td></tr>` : '');
     }}
 
-    function renderTables(data) {{
+    function renderTables(data, filteredDiag) {{
+      // 0. Diagnostic Cards
+      renderDiagnosticCards(filteredDiag);
+
       // 1. Ausentes
       const tbodyAusentes = document.getElementById('tbodyAusentes');
       const ausentes = data.filter(d => d.Existe_Biblioteca === 'NÃO');
@@ -954,8 +1230,8 @@ def generate_interactive_html(df_all, df_resumo, df_uc, all_library_items):
     function renderUCAccordion(filteredData) {{
       const container = document.getElementById('accordionUCs');
       
-      const html = ucData.map(uc => {{
-        const ucRefs = filteredData.filter(d => d.UC_ID === uc.UC_ID);
+      const html = diagData.map(uc => {{
+        const ucRefs = filteredData.filter(d => d.UC_ID === uc.uc_id);
         if (ucRefs.length === 0) return '';
         
         const simCount = ucRefs.filter(d => d.Existe_Biblioteca === 'SIM').length;
@@ -963,13 +1239,13 @@ def generate_interactive_html(df_all, df_resumo, df_uc, all_library_items):
         const pct = Math.round((simCount / totalCount) * 100);
 
         return `
-          <div class="uc-card" id="uc-card-${{uc.UC_ID}}">
-            <div class="uc-card-header" onclick="toggleUC(${{uc.UC_ID}})">
+          <div class="uc-card" id="uc-card-${{uc.uc_id}}">
+            <div class="uc-card-header" onclick="toggleUC(${{uc.uc_id}})">
               <div style="display:flex; align-items:center; gap:0.8rem;">
-                <span class="badge badge-basica font-code">UC ${{uc.UC_ID}}</span>
+                <span class="badge badge-basica font-code">UC ${{uc.uc_id}}</span>
                 <div>
-                  <strong style="font-size:1rem; color:#ffffff;">${{uc.UC_Nome}}</strong>
-                  <div style="font-size:0.8rem; color:var(--text-muted);">${{uc.Bloco_Formacao}} • ${{uc.Ano_Semestre}}</div>
+                  <strong style="font-size:1rem; color:#ffffff;">${{uc.uc_nome}}</strong>
+                  <div style="font-size:0.8rem; color:var(--text-muted);">${{uc.bloco}} • ${{uc.semestre}}</div>
                 </div>
               </div>
 
@@ -983,11 +1259,11 @@ def generate_interactive_html(df_all, df_resumo, df_uc, all_library_items):
                     <div class="progress-bar-fill" style="width: ${{pct}}%; background:${{pct >= 75 ? '#10b981' : (pct >= 50 ? '#f59e0b' : '#f43f5e')}}"></div>
                   </div>
                 </div>
-                <i class="bi bi-chevron-down" id="uc-icon-${{uc.UC_ID}}"></i>
+                <i class="bi bi-chevron-down" id="uc-icon-${{uc.uc_id}}"></i>
               </div>
             </div>
 
-            <div class="uc-card-body" id="uc-body-${{uc.UC_ID}}">
+            <div class="uc-card-body" id="uc-body-${{uc.uc_id}}">
               <table class="custom-table" style="font-size:0.84rem;">
                 <thead>
                   <tr>
@@ -1039,47 +1315,55 @@ def generate_interactive_html(df_all, df_resumo, df_uc, all_library_items):
 
     function applyFilters() {{
       const query = document.getElementById('searchInput').value.toLowerCase();
-      const tipo = document.getElementById('filterTipo').value;
+      const statusEmenta = document.getElementById('filterStatusEmenta').value;
       const bloco = document.getElementById('filterBloco').value;
-      const exFilter = document.getElementById('filterExemplares').value;
 
-      const filtered = allData.filter(d => {{
+      // Filter Diagnostic UCs
+      const filteredDiag = diagData.filter(u => {{
+        const matchQuery = !query || 
+          u.uc_nome.toLowerCase().includes(query) ||
+          u.bloco.toLowerCase().includes(query) ||
+          (u.b_missing_books && u.b_missing_books.some(b => b.Titulo_Obra.toLowerCase().includes(query))) ||
+          (u.c_missing_books && u.c_missing_books.some(b => b.Titulo_Obra.toLowerCase().includes(query)));
+
+        let matchStatus = true;
+        if (statusEmenta === 'COM_PROBLEMA') {{
+          matchStatus = u.status_code !== 'CONFORME_100';
+        }} else if (statusEmenta !== 'ALL') {{
+          matchStatus = u.status_code === statusEmenta;
+        }}
+
+        const matchBloco = (bloco === 'ALL') || (u.bloco && u.bloco.includes(bloco));
+
+        return matchQuery && matchStatus && matchBloco;
+      }});
+
+      // Filter All References
+      const filteredAll = allData.filter(d => {{
         const matchQuery = !query || 
           (d.Titulo_Obra && d.Titulo_Obra.toLowerCase().includes(query)) ||
           (d.Autor_Principal && d.Autor_Principal.toLowerCase().includes(query)) ||
           (d.UC_Nome && d.UC_Nome.toLowerCase().includes(query)) ||
           (d.Referencia_PPC && d.Referencia_PPC.toLowerCase().includes(query));
 
-        const matchTipo = (tipo === 'ALL') || (d.Tipo_Bibliografia === tipo);
         const matchBloco = (bloco === 'ALL') || (d.Bloco_Formacao && d.Bloco_Formacao.includes(bloco));
 
-        let matchEx = true;
-        const exNum = parseInt(d.Exemplares_Fisicos) || 0;
-        if (exFilter === '1') {{
-          matchEx = exNum === 1;
-        }} else if (exFilter === '2') {{
-          matchEx = exNum === 2;
-        }} else if (exFilter === '3+') {{
-          matchEx = exNum >= 3 || d.Status === 'MATERIAL_FNDE';
-        }}
-
-        return matchQuery && matchTipo && matchBloco && matchEx;
+        return matchQuery && matchBloco;
       }});
 
-      renderTables(filtered);
+      renderTables(filteredAll, filteredDiag);
     }}
 
     function resetFilters() {{
       document.getElementById('searchInput').value = '';
-      document.getElementById('filterTipo').value = 'ALL';
+      document.getElementById('filterStatusEmenta').value = 'ALL';
       document.getElementById('filterBloco').value = 'ALL';
-      document.getElementById('filterExemplares').value = 'ALL';
-      renderTables(allData);
+      renderTables(allData, diagData);
     }}
 
     // Initial render
     document.addEventListener('DOMContentLoaded', () => {{
-      renderTables(allData);
+      renderTables(allData, diagData);
     }});
   </script>
 
@@ -1310,11 +1594,11 @@ def update_root_dashboard():
         <div class="panel-header">
           <div class="panel-title">
             <i class="bi bi-journal-check"></i>
-            Auditoria do Acervo & Exemplares Físicos (PPC vs. Sistema Sophia)
+            Auditoria do Acervo & Diagnóstico de Ementas (PPC vs. Sistema Sophia)
           </div>
           <div style="display: flex; gap: 0.8rem;">
             <a href="tecnico-administracao/revisao-equipe/checagem-biblioteca/dashboard_biblioteca.html" target="_blank" class="btn-action btn-emerald">
-              <i class="bi bi-window-fullscreen"></i> Abrir Dashboard Interativo da Biblioteca
+              <i class="bi bi-window-fullscreen"></i> Abrir Painel Diagnóstico de Ementas
             </a>
             <a href="tecnico-administracao/revisao-equipe/checagem-biblioteca/relatorio_auditoria_biblioteca.pdf" target="_blank" class="btn-action btn-outline">
               <i class="bi bi-file-earmark-pdf-fill"></i> Baixar Relatório PDF (David)
@@ -1329,8 +1613,16 @@ def update_root_dashboard():
         <div class="grid-2">
           <div>
             <h3 style="color: var(--accent-emerald); font-size: 1.1rem; margin-bottom: 1rem; font-family: 'Outfit', sans-serif;">
-              <i class="bi bi-bar-chart-fill me-1"></i> Indicadores de Cobertura do Acervo:
+              <i class="bi bi-bar-chart-fill me-1"></i> Indicadores de Cobertura & Diagnóstico:
             </h3>
+
+            <div class="step-item">
+              <div class="step-icon" style="background:rgba(244,63,94,0.2); color:var(--accent-rose);"><i class="bi bi-exclamation-octagon-fill"></i></div>
+              <div class="step-content">
+                <h4>31 Ementas c/ Falta na Bibliografia Básica</h4>
+                <p>Mapeadas no painel com indicação exata das obras ausentes para aquisição ou Minha Biblioteca.</p>
+              </div>
+            </div>
 
             <div class="step-item">
               <div class="step-icon" style="background:rgba(16,185,129,0.2); color:var(--accent-emerald);"><i class="bi bi-check-circle-fill"></i></div>
@@ -1347,14 +1639,6 @@ def update_root_dashboard():
                 <p>Catálogo completo de 3.003 títulos consultável no painel com contagem de cópias por obra.</p>
               </div>
             </div>
-
-            <div class="step-item">
-              <div class="step-icon" style="background:rgba(244,63,94,0.2); color:var(--accent-rose);"><i class="bi bi-cart-plus-fill"></i></div>
-              <div class="step-content">
-                <h4>27 Obras Básicas Mapeadas para Aquisição</h4>
-                <p>Lista prioritária gerada para conferência nas plataformas virtuais (Minha Biblioteca/Pearson) e compra.</p>
-              </div>
-            </div>
           </div>
 
           <div>
@@ -1364,7 +1648,7 @@ def update_root_dashboard():
 
             <div style="background: rgba(15, 23, 42, 0.8); border: 1px solid var(--border-color); border-radius: 12px; padding: 1.2rem; display: flex; flex-direction: column; gap: 0.8rem;">
               <a href="tecnico-administracao/revisao-equipe/checagem-biblioteca/dashboard_biblioteca.html" target="_blank" style="color:var(--accent-emerald); text-decoration:none; font-weight:600; display:flex; align-items:center; gap:0.5rem;">
-                <i class="bi bi-box-arrow-up-right"></i> Painel Interativo da Biblioteca (com Catálogo Geral de 3.003 Obras)
+                <i class="bi bi-box-arrow-up-right"></i> Painel Diagnóstico de Ementas & Acervo da Biblioteca
               </a>
               <a href="tecnico-administracao/revisao-equipe/checagem-biblioteca/relatorio_auditoria_biblioteca.pdf" target="_blank" style="color:var(--accent-blue); text-decoration:none; font-weight:600; display:flex; align-items:center; gap:0.5rem;">
                 <i class="bi bi-file-earmark-pdf"></i> Relatório Oficial de Auditoria em PDF (Formatado em LaTeX)
@@ -1388,8 +1672,8 @@ def update_root_dashboard():
         print("Root index.html atualizado com a nova Tab da Biblioteca!")
 
 def main():
-    df_all, df_resumo, df_uc, all_library_items = load_data()
-    generate_interactive_html(df_all, df_resumo, df_uc, all_library_items)
+    df_all, df_resumo, df_uc, all_library_items, uc_diagnostics = load_data()
+    generate_interactive_html(df_all, df_resumo, df_uc, all_library_items, uc_diagnostics)
     generate_latex_pdf_report(df_all, df_resumo, df_uc)
     update_root_dashboard()
     print("Todas as tarefas concluídas com sucesso!")
