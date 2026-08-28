@@ -2,9 +2,11 @@
 # -*- coding: utf-8 -*-
 
 """
-Gerador Fiel do Ementário do PPC em Formato Word (.docx):
+Gerador Fiel do Ementário do PPC em Formato Word (.docx) com Sumário Clicável e Navegação Rápida:
+Compatível 100% com Microsoft Word, LibreOffice e Google Docs (incluindo painel lateral de estrutura).
+
 Recorte literal da Seção de Ementas da Estrutura Curricular do PPC Técnico em Administração (IFSC Garopaba).
-Lê diretamente de 'ementario_adm.tex' e produz o documento Word com a exata estrutura e formatação do PPC.
+Lê diretamente de 'ementario_adm.tex'.
 """
 
 import os
@@ -26,10 +28,12 @@ DOCX_OUTPUT_PATH = os.path.join(CHECK_DIR, "Ementario_Completo_PPC_Tecnico_Admin
 COLOR_IFSC_GREEN = RGBColor(16, 140, 80)      # #108C50
 COLOR_DARK = RGBColor(15, 23, 42)             # #0F172A
 COLOR_MUTED = RGBColor(100, 116, 139)         # #64748B
+COLOR_BLUE = RGBColor(2, 132, 199)            # #0284C7
 HEX_IFSC_GREEN = "108C50"
 HEX_LIGHT_GREEN = "EBF8F0"
 HEX_LIGHT_GRAY = "F1F5F9"
 HEX_BORDER = "CBD5E1"
+HEX_BLUE = "0284C7"
 
 def set_cell_background(cell, hex_color):
     tcPr = cell._tc.get_or_add_tcPr()
@@ -60,6 +64,51 @@ def set_table_borders(table, color="CBD5E1", sz="4", val="single"):
     )
     tblPr.append(borders)
 
+def add_bookmark(paragraph, bookmark_id, bookmark_name):
+    p = paragraph._p
+    bm_start = OxmlElement('w:bookmarkStart')
+    bm_start.set(qn('w:id'), str(bookmark_id))
+    bm_start.set(qn('w:name'), bookmark_name)
+    bm_end = OxmlElement('w:bookmarkEnd')
+    bm_end.set(qn('w:id'), str(bookmark_id))
+    p.append(bm_start)
+    p.append(bm_end)
+
+def add_internal_hyperlink(paragraph, anchor_name, text, color=HEX_BLUE, bold=True, size=9.0):
+    p = paragraph._p
+    hyperlink = OxmlElement('w:hyperlink')
+    hyperlink.set(qn('w:anchor'), anchor_name)
+    hyperlink.set(qn('w:history'), '1')
+    
+    new_run = OxmlElement('w:r')
+    rPr = OxmlElement('w:rPr')
+    
+    if color:
+        c = OxmlElement('w:color')
+        c.set(qn('w:val'), color)
+        rPr.append(c)
+        
+    u = OxmlElement('w:u')
+    u.set(qn('w:val'), 'single')
+    rPr.append(u)
+    
+    if bold:
+        b = OxmlElement('w:b')
+        rPr.append(b)
+        
+    if size:
+        sz = OxmlElement('w:sz')
+        sz.set(qn('w:val'), str(int(size * 2)))
+        rPr.append(sz)
+        
+    new_run.append(rPr)
+    text_node = OxmlElement('w:t')
+    text_node.text = text
+    new_run.append(text_node)
+    
+    hyperlink.append(new_run)
+    p.append(hyperlink)
+
 def clean_tex(text):
     if not text: return ""
     text = re.sub(r'\\revisao\{([^}]*)\}', r'\1', text)
@@ -74,14 +123,12 @@ def clean_tex(text):
     return text.strip()
 
 def add_formatted_text(paragraph, text, default_size=9.5, default_color=COLOR_DARK):
-    # Splits by **bold**
     tokens = re.split(r'(\*\*[^*]+\*\*)', text)
     for token in tokens:
         if token.startswith('**') and token.endswith('**'):
             run = paragraph.add_run(token[2:-2])
             run.font.bold = True
         else:
-            # check for *italic*
             it_tokens = re.split(r'(\*[^*]+\*)', token)
             for it_t in it_tokens:
                 if it_t.startswith('*') and it_t.endswith('*'):
@@ -98,7 +145,6 @@ def parse_tex_tables():
     with open(TEX_PATH, "r", encoding="utf-8") as f:
         content = f.read()
 
-    # Split ementas tables
     parts = content.split(r'\begin{xltabular}{\linewidth}{|X|p{2.5cm}|p{2.5cm}|}')
     intro_part = parts[0]
     
@@ -106,7 +152,6 @@ def parse_tex_tables():
     for tab in parts[1:]:
         tab_clean = tab.split(r'\end{xltabular}')[0].strip()
         
-        # 1. Parse header: UC, Semestre, CH EaD, CH Total
         uc_match = re.search(r'\\textbf\{\\large\s*([^}]+)\}', tab_clean)
         if not uc_match:
             uc_match = re.search(r'\\textbf\{([^}]+)\}\s*\}\s*&\s*\\multicolumn', tab_clean)
@@ -122,8 +167,7 @@ def parse_tex_tables():
         tot_match = re.search(r'CH Total\*:\}\}\s*\\\\\s*\\cline\{2-3\}\s*&\s*[^\&]+\&\s*\\textbf\{([^}]+)\}', tab_clean)
         ch_total = tot_match.group(1).strip() if tot_match else ""
         
-        # Extract sections: Objetivos, Conteúdos, Estratégias, Básica, Complementar
-        def extract_sec(title, next_title=None):
+        def extract_sec(title):
             pattern = rf'\\textbf\{{{title}\:\}}\}}\s*\\\\\s*\\hline\s*\\multicolumn\{{3\}}\{{\|p\{{[^}}]+\}}\|\}}{{\s*(.*?)\s*}}\s*\\\\\s*\\hline'
             m = re.search(pattern, tab_clean, re.DOTALL)
             if m:
@@ -131,7 +175,6 @@ def parse_tex_tables():
             return ""
 
         raw_obj = extract_sec('Objetivos')
-        # Parse itemize items
         obj_items = []
         if r'\begin{itemize}' in raw_obj:
             items_raw = raw_obj.split(r'\item')
@@ -168,17 +211,17 @@ def parse_tex_tables():
     return intro_part, uc_tables
 
 def generate_literal_ppc_docx():
-    print(f"Gerando Recorte Literal do Ementário do PPC em: {DOCX_OUTPUT_PATH}")
+    print(f"Gerando Documento Word (.docx) com Sumário Clicável e Compatibilidade Google Docs em:\n{DOCX_OUTPUT_PATH}")
     intro_part, uc_tables = parse_tex_tables()
     
     doc = Document()
     
     # Set Standard A4 Margins
     for section in doc.sections:
-        section.top_margin = Inches(0.8)
-        section.bottom_margin = Inches(0.8)
-        section.left_margin = Inches(0.8)
-        section.right_margin = Inches(0.8)
+        section.top_margin = Inches(0.75)
+        section.bottom_margin = Inches(0.75)
+        section.left_margin = Inches(0.75)
+        section.right_margin = Inches(0.75)
         
     # Styles
     style_normal = doc.styles['Normal']
@@ -196,7 +239,7 @@ def generate_literal_ppc_docx():
     
     r_h2 = p_head.add_run("PROJETO PEDAGÓGICO DE CURSO (PPC 2026)\nTÉCNICO INTEGRADO EM ADMINISTRAÇÃO\n")
     r_h2.font.bold = True
-    r_h2.font.size = Pt(13)
+    r_h2.font.size = Pt(13.5)
     r_h2.font.color.rgb = COLOR_DARK
     
     r_h3 = p_head.add_run("Seção da Estrutura Curricular & Ementário das 45 Unidades Curriculares\n")
@@ -204,9 +247,78 @@ def generate_literal_ppc_docx():
     r_h3.font.size = Pt(10.5)
     r_h3.font.color.rgb = COLOR_MUTED
 
-    p_div = doc.add_paragraph()
-    p_div.paragraph_format.space_after = Pt(12)
+    # Bookmark no início do Sumário Geral
+    p_sum_title = doc.add_paragraph()
+    p_sum_title.paragraph_format.space_before = Pt(8)
+    p_sum_title.paragraph_format.space_after = Pt(4)
+    add_bookmark(p_sum_title, 100, "sumario_geral")
     
+    r_st = p_sum_title.add_run("📑 SUMÁRIO GERAL CLICÁVEL — NAVEGAÇÃO RÁPIDA PELAS 45 EMENTAS")
+    r_st.font.bold = True
+    r_st.font.size = Pt(11)
+    r_st.font.color.rgb = COLOR_IFSC_GREEN
+
+    p_sum_desc = doc.add_paragraph()
+    p_sum_desc.paragraph_format.space_after = Pt(8)
+    r_sd = p_sum_desc.add_run("Clique sobre qualquer Unidade Curricular abaixo para navegar instantaneamente até a sua ementa e bibliografia completa:")
+    r_sd.font.italic = True
+    r_sd.font.size = Pt(8.5)
+    r_sd.font.color.rgb = COLOR_MUTED
+
+    # Tabela de Sumário em 3 Colunas/Grid
+    tbl_toc = doc.add_table(rows=18, cols=3)
+    tbl_toc.alignment = WD_TABLE_ALIGNMENT.CENTER
+    set_table_borders(tbl_toc, color=HEX_BORDER)
+    
+    col_headers_toc = ["1º ANO (Semestres 1 e 2)", "2º ANO (Semestres 3 e 4)", "3º ANO (Semestres 5 e 6)"]
+    w_toc_col = Inches(2.26)
+    
+    for c_i in range(3):
+        c = tbl_toc.cell(0, c_i)
+        c.width = w_toc_col
+        set_cell_background(c, HEX_LIGHT_GREEN)
+        set_cell_margins(c, top=70, bottom=70, left=80, right=80)
+        p = c.paragraphs[0]
+        p.alignment = WD_ALIGN_PARAGRAPH.CENTER
+        r = p.add_run(col_headers_toc[c_i])
+        r.font.bold = True
+        r.font.size = Pt(8.5)
+        r.font.color.rgb = COLOR_IFSC_GREEN
+
+    # Preenchimento das 17 linhas do TOC
+    for r_idx in range(1, 18):
+        # Col 0: UCs 1 a 17 (1º Ano)
+        uc_idx_1 = r_idx # 1 to 17
+        c0 = tbl_toc.cell(r_idx, 0)
+        c0.width = w_toc_col
+        set_cell_margins(c0, top=35, bottom=35, left=60, right=60)
+        if uc_idx_1 <= 17 and uc_idx_1 <= len(uc_tables):
+            uc_item = uc_tables[uc_idx_1 - 1]
+            p0 = c0.paragraphs[0]
+            add_internal_hyperlink(p0, f"uc_{uc_idx_1}", f"{uc_idx_1:02d}. {uc_item['uc_nome']}", color=HEX_BLUE, bold=False, size=8.0)
+            
+        # Col 1: UCs 18 a 33 (2º Ano)
+        uc_idx_2 = 17 + r_idx # 18 to 33
+        c1 = tbl_toc.cell(r_idx, 1)
+        c1.width = w_toc_col
+        set_cell_margins(c1, top=35, bottom=35, left=60, right=60)
+        if uc_idx_2 <= 33 and uc_idx_2 <= len(uc_tables):
+            uc_item = uc_tables[uc_idx_2 - 1]
+            p1 = c1.paragraphs[0]
+            add_internal_hyperlink(p1, f"uc_{uc_idx_2}", f"{uc_idx_2:02d}. {uc_item['uc_nome']}", color=HEX_BLUE, bold=False, size=8.0)
+            
+        # Col 2: UCs 34 a 45 (3º Ano)
+        uc_idx_3 = 33 + r_idx # 34 to 45
+        c2 = tbl_toc.cell(r_idx, 2)
+        c2.width = w_toc_col
+        set_cell_margins(c2, top=35, bottom=35, left=60, right=60)
+        if uc_idx_3 <= 45 and uc_idx_3 <= len(uc_tables):
+            uc_item = uc_tables[uc_idx_3 - 1]
+            p2 = c2.paragraphs[0]
+            add_internal_hyperlink(p2, f"uc_{uc_idx_3}", f"{uc_idx_3:02d}. {uc_item['uc_nome']}", color=HEX_BLUE, bold=False, size=8.0)
+
+    doc.add_page_break()
+
     # 1. Matrizes Curriculares Anuais
     p_sec1 = doc.add_paragraph()
     r_s1 = p_sec1.add_run("Matriz Curricular Detalhada por Anos e Blocos:")
@@ -215,7 +327,6 @@ def generate_literal_ppc_docx():
     r_s1.font.color.rgb = COLOR_IFSC_GREEN
     p_sec1.paragraph_format.space_after = Pt(8)
 
-    # Função auxiliar para tabela de matriz curricular
     def add_matriz_table(ano_titulo, rows_data, subtotal_text, subtotal_val):
         tbl = doc.add_table(rows=len(rows_data) + 3, cols=4)
         tbl.alignment = WD_TABLE_ALIGNMENT.CENTER
@@ -357,6 +468,17 @@ def generate_literal_ppc_docx():
 
     # Render each of the 45 UC tables exactly as defined in the PPC LaTeX format
     for idx, uc in enumerate(uc_tables, 1):
+        # Heading with Bookmark for Google Docs outline & Word navigation
+        p_uc_title = doc.add_paragraph()
+        p_uc_title.paragraph_format.space_before = Pt(6)
+        p_uc_title.paragraph_format.space_after = Pt(3)
+        add_bookmark(p_uc_title, 200 + idx, f"uc_{idx}")
+        
+        r_t_h = p_uc_title.add_run(f"UC {idx:02d} — {uc['uc_nome']}")
+        r_t_h.font.bold = True
+        r_t_h.font.size = Pt(11)
+        r_t_h.font.color.rgb = COLOR_IFSC_GREEN
+        
         # Table with 3 columns (matching |X|p{2.5cm}|p{2.5cm}|)
         tbl_uc = doc.add_table(rows=8, cols=3)
         tbl_uc.alignment = WD_TABLE_ALIGNMENT.CENTER
@@ -366,7 +488,7 @@ def generate_literal_ppc_docx():
         w_col1 = Inches(1.3)
         w_col2 = Inches(1.3)
         
-        # Row 0: Header top (Unidade Curricular merged vertically in TeX; in Word we structure clean cells)
+        # Row 0: Header top
         c_uc = tbl_uc.cell(0, 0)
         c_uc.width = w_col0
         set_cell_background(c_uc, HEX_LIGHT_GREEN)
@@ -500,22 +622,23 @@ def generate_literal_ppc_docx():
                 p_c.paragraph_format.space_after = Pt(4)
                 add_formatted_text(p_c, bc_item.strip(), default_size=9)
                 
-        # Row 7: Empty divider row (or remove it)
+        # Row 7: Navegação de Retorno ao Sumário
         c_r7 = tbl_uc.cell(7, 0)
         c_r7.merge(tbl_uc.cell(7, 2))
-        set_cell_margins(c_r7, top=20, bottom=20, left=90, right=90)
+        set_cell_margins(c_r7, top=30, bottom=30, left=90, right=90)
         set_cell_background(c_r7, HEX_LIGHT_GRAY)
         p_end = c_r7.paragraphs[0]
         p_end.alignment = WD_ALIGN_PARAGRAPH.RIGHT
-        p_end.add_run(f"PPC Técnico em Administração (IFSC Garopaba) • UC {idx:02d}").font.size = Pt(7.5)
-        p_end.runs[0].font.color.rgb = COLOR_MUTED
+        add_internal_hyperlink(p_end, "sumario_geral", "🔝 Voltar ao Sumário Geral", color=HEX_BLUE, bold=True, size=8.0)
+        p_end.add_run(f"   |   PPC Técnico em Administração (IFSC Garopaba) • UC {idx:02d}").font.size = Pt(7.5)
+        p_end.runs[-1].font.color.rgb = COLOR_MUTED
 
         # Page break after each UC (except the last one)
         if idx < len(uc_tables):
             doc.add_page_break()
 
     doc.save(DOCX_OUTPUT_PATH)
-    print(f"Documento Word (.docx) gerado com sucesso em:\n{DOCX_OUTPUT_PATH}")
+    print(f"Documento Word (.docx) com Sumário Clicável gerado com sucesso em:\n{DOCX_OUTPUT_PATH}")
 
 if __name__ == "__main__":
     generate_literal_ppc_docx()
