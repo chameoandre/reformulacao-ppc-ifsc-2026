@@ -472,9 +472,12 @@
         </div>
       </div>
       <div class="header-badges">
+        <a href="tecnico-administracao/revisao-equipe/checagem-biblioteca/dashboard_biblioteca.html" target="_blank" class="badge-pill badge-pill-green" style="text-decoration:none; cursor:pointer;">
+          <i class="bi bi-window-fullscreen"></i> Painel da Biblioteca
+        </a>
         <span class="badge-pill badge-pill-green"><i class="bi bi-patch-check-fill"></i> Res. CONSUP 142/2025</span>
         <span class="badge-pill badge-pill-blue"><i class="bi bi-palette-fill"></i> Revisão em Azul Ativa</span>
-        <span class="badge-pill badge-pill-purple"><i class="bi bi-book-half"></i> Sophia Web / FBN</span>
+        <span class="badge-pill badge-pill-purple" style="cursor:pointer;" onclick="showTab('tab-biblioteca')"><i class="bi bi-book-half"></i> Sophia (78,2% Básica)</span>
       </div>
     </div>
   </header>
@@ -502,13 +505,13 @@
         <div class="kpi-desc">100% estruturadas em xltabular com fidelidade literal</div>
       </div>
 
-      <div class="kpi-card kpi-purple">
+      <div class="kpi-card kpi-purple" style="cursor: pointer;" onclick="showTab('tab-biblioteca')" title="Clique para abrir a aba da Biblioteca">
         <div class="kpi-header">
           <span class="kpi-title">Acervo Bibliográfico</span>
           <i class="bi bi-journal-bookmark-fill kpi-icon"></i>
         </div>
-        <div class="kpi-value">284 Obras</div>
-        <div class="kpi-desc">100% padronizadas com autores por extenso (Sophia/FBN)</div>
+        <div class="kpi-value">274 Obras</div>
+        <div class="kpi-desc">73,0% disponíveis no acervo • 78,2% Básica <i class="bi bi-arrow-right-short"></i></div>
       </div>
 
       <div class="kpi-card kpi-amber">
@@ -527,6 +530,7 @@
       <button class="tab-btn" onclick="showTab('tab-matriz')"><i class="bi bi-table"></i> Matriz Curricular (3.080h)</button>
       <button class="tab-btn" onclick="showTab('tab-checklist')"><i class="bi bi-list-check"></i> Checklist & Auditoria (28 Itens)</button>
       <button class="tab-btn" onclick="showTab('tab-revisao')"><i class="bi bi-eye-fill"></i> Sistema de Revisão em Azul</button>
+      <button class="tab-btn" onclick="showTab('tab-biblioteca')"><i class="bi bi-book-half"></i> Auditoria de Biblioteca (Sophia)</button>
       <button class="tab-btn" onclick="showTab('tab-base')"><i class="bi bi-folder-fill"></i> Base de Conhecimento</button>
     </div>
 
@@ -850,6 +854,84 @@ evisao}[1]{#1}
               <li>✅ <strong>Bibliografias NBR 6023:</strong> Todas as obras com nomes completos expandidos via Sophia/FBN.</li>
               <li>✅ <strong>Discente & Avaliação:</strong> PEDi, NAE/AEE, PAEVS e recuperação paralela (Art. 98).</li>
             </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    
+    <!-- TAB 6: AUDITORIA DE BIBLIOTECA (SOPHIA) -->
+    <div id="tab-biblioteca" class="tab-pane">
+      <div class="panel-card">
+        <div class="panel-header">
+          <div class="panel-title">
+            <i class="bi bi-journal-check"></i>
+            Auditoria do Acervo Bibliográfico (PPC vs. Sistema Sophia)
+          </div>
+          <div style="display: flex; gap: 0.8rem;">
+            <a href="tecnico-administracao/revisao-equipe/checagem-biblioteca/dashboard_biblioteca.html" target="_blank" class="btn-action btn-emerald">
+              <i class="bi bi-window-fullscreen"></i> Abrir Dashboard Interativo da Biblioteca
+            </a>
+            <a href="tecnico-administracao/revisao-equipe/checagem-biblioteca/relatorio_auditoria_biblioteca.pdf" target="_blank" class="btn-action btn-outline">
+              <i class="bi bi-file-earmark-pdf-fill"></i> Baixar Relatório PDF (David)
+            </a>
+          </div>
+        </div>
+
+        <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 1.5rem;">
+          Cruzamento automatizado entre todas as <strong>274 referências bibliográficas</strong> adotadas no PPC do Técnico em Administração e o inventário oficial de <strong>3.206 obras</strong> do Sistema Sophia da Biblioteca do Câmpus Garopaba.
+        </p>
+
+        <div class="grid-2">
+          <div>
+            <h3 style="color: var(--accent-emerald); font-size: 1.1rem; margin-bottom: 1rem; font-family: 'Outfit', sans-serif;">
+              <i class="bi bi-bar-chart-fill me-1"></i> Indicadores de Cobertura do Acervo:
+            </h3>
+
+            <div class="step-item">
+              <div class="step-icon" style="background:rgba(16,185,129,0.2); color:var(--accent-emerald);"><i class="bi bi-check-circle-fill"></i></div>
+              <div class="step-content">
+                <h4>78,2% da Bibliografia Básica Atendida</h4>
+                <p>97 de 124 obras básicas já estão fisicamente disponíveis na biblioteca ou via PNLD/FNDE.</p>
+              </div>
+            </div>
+
+            <div class="step-item">
+              <div class="step-icon" style="background:rgba(56,189,248,0.2); color:var(--accent-blue);"><i class="bi bi-pie-chart-fill"></i></div>
+              <div class="step-content">
+                <h4>73,0% de Cobertura Global do Curso</h4>
+                <p>200 títulos disponíveis no acervo para suporte imediato às aulas das 45 Unidades Curriculares.</p>
+              </div>
+            </div>
+
+            <div class="step-item">
+              <div class="step-icon" style="background:rgba(244,63,94,0.2); color:var(--accent-rose);"><i class="bi bi-cart-plus-fill"></i></div>
+              <div class="step-content">
+                <h4>27 Obras Básicas Mapeadas para Aquisição</h4>
+                <p>Lista prioritária gerada para conferência nas plataformas virtuais (Minha Biblioteca/Pearson) e compra.</p>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <h3 style="color: var(--accent-blue); font-size: 1.1rem; margin-bottom: 1rem; font-family: 'Outfit', sans-serif;">
+              <i class="bi bi-file-earmark-spreadsheet-fill me-1"></i> Documentos & Artefatos Disponíveis:
+            </h3>
+
+            <div style="background: rgba(15, 23, 42, 0.8); border: 1px solid var(--border-color); border-radius: 12px; padding: 1.2rem; display: flex; flex-direction: column; gap: 0.8rem;">
+              <a href="tecnico-administracao/revisao-equipe/checagem-biblioteca/dashboard_biblioteca.html" target="_blank" style="color:var(--accent-emerald); text-decoration:none; font-weight:600; display:flex; align-items:center; gap:0.5rem;">
+                <i class="bi bi-box-arrow-up-right"></i> Painel Interativo da Biblioteca com Filtros Dinâmicos
+              </a>
+              <a href="tecnico-administracao/revisao-equipe/checagem-biblioteca/relatorio_auditoria_biblioteca.pdf" target="_blank" style="color:var(--accent-blue); text-decoration:none; font-weight:600; display:flex; align-items:center; gap:0.5rem;">
+                <i class="bi bi-file-earmark-pdf"></i> Relatório Oficial de Auditoria em PDF (Formatado em LaTeX)
+              </a>
+              <a href="tecnico-administracao/revisao-equipe/checagem-biblioteca/Analise_Bibliografica_PPC_vs_Acervo_Sophia.xlsx" download style="color:var(--accent-amber); text-decoration:none; font-weight:600; display:flex; align-items:center; gap:0.5rem;">
+                <i class="bi bi-file-earmark-excel"></i> Planilha Consolidada de Auditoria (.xlsx com 6 abas)
+              </a>
+              <a href="tecnico-administracao/revisao-equipe/checagem-biblioteca/sumario_executivo_david_biblioteca.md" target="_blank" style="color:var(--text-main); text-decoration:none; font-size:0.9rem; display:flex; align-items:center; gap:0.5rem;">
+                <i class="bi bi-envelope-paper-fill"></i> Memorando Executivo para o Bibliotecário David (.md)
+              </a>
+            </div>
           </div>
         </div>
       </div>
