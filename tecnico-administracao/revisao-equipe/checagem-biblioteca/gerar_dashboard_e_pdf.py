@@ -325,6 +325,19 @@ def generate_interactive_html(df_all, df_resumo, df_uc, all_library_items, uc_di
       box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
     }}
 
+    .btn-blue {{
+      background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%);
+      color: #ffffff !important;
+      border: 1px solid rgba(56, 189, 248, 0.5);
+      font-weight: 700;
+      box-shadow: 0 4px 14px rgba(2, 132, 199, 0.4);
+    }}
+    .btn-blue:hover {{
+      background: linear-gradient(135deg, #0369a1 0%, #075985 100%);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(2, 132, 199, 0.6);
+    }}
+
     .btn-outline {{
       background: rgba(255, 255, 255, 0.06);
       border-color: var(--border-color);
@@ -755,16 +768,16 @@ def generate_interactive_html(df_all, df_resumo, df_uc, all_library_items, uc_di
 
       <div class="header-actions">
         <button class="btn-action btn-emerald" onclick="switchTab('tab-sumario')">
-          <i class="bi bi-envelope-paper-fill"></i> Ver Sumário Executivo (David)
+          <i class="bi bi-envelope-paper-fill"></i> Sumário Executivo (David)
         </button>
-        <a href="Ementario_Completo_PPC_Tecnico_Administracao_Revisao_Biblioteca.docx" download class="btn-action btn-outline">
-          <i class="bi bi-file-earmark-word-fill" style="color:#38bdf8;"></i> Baixar Ementário (.docx)
+        <a href="Ementario_Completo_PPC_Tecnico_Administracao_Revisao_Biblioteca.docx" download class="btn-action btn-blue">
+          <i class="bi bi-file-earmark-word-fill"></i> Baixar Ementário (.docx)
         </a>
         <a href="relatorio_auditoria_biblioteca.pdf" target="_blank" class="btn-action btn-outline">
-          <i class="bi bi-file-earmark-pdf-fill"></i> Relatório PDF Oficial
+          <i class="bi bi-file-earmark-pdf-fill" style="color:#fb7185;"></i> Relatório PDF
         </a>
         <a href="Analise_Bibliografica_PPC_vs_Acervo_Sophia.xlsx" download class="btn-action btn-outline">
-          <i class="bi bi-file-earmark-excel-fill text-emerald"></i> Planilha Excel (.xlsx)
+          <i class="bi bi-file-earmark-excel-fill" style="color:#34d399;"></i> Planilha (.xlsx)
         </a>
         <a href="../../../index.html" class="btn-action btn-outline">
           <i class="bi bi-arrow-left"></i> Painel Geral do PPC
@@ -919,14 +932,14 @@ def generate_interactive_html(df_all, df_resumo, df_uc, all_library_items, uc_di
             </div>
           </div>
           <div style="display:flex; gap:0.6rem; flex-wrap:wrap;">
-            <a href="Ementario_Completo_PPC_Tecnico_Administracao_Revisao_Biblioteca.docx" download class="btn-action btn-emerald">
+            <a href="Ementario_Completo_PPC_Tecnico_Administracao_Revisao_Biblioteca.docx" download class="btn-action btn-blue">
               <i class="bi bi-file-earmark-word-fill"></i> Baixar Ementário Editável (.docx)
             </a>
             <button class="btn-action btn-outline" onclick="window.print()">
               <i class="bi bi-printer-fill"></i> Imprimir / Salvar PDF
             </button>
             <a href="relatorio_auditoria_biblioteca.pdf" target="_blank" class="btn-action btn-outline">
-              <i class="bi bi-file-earmark-pdf-fill"></i> Baixar Relatório LaTeX (.pdf)
+              <i class="bi bi-file-earmark-pdf-fill" style="color:#fb7185;"></i> Baixar Relatório LaTeX (.pdf)
             </a>
           </div>
         </div>
