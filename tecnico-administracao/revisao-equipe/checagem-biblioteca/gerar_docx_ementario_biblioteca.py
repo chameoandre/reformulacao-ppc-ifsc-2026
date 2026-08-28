@@ -2,47 +2,41 @@
 # -*- coding: utf-8 -*-
 
 """
-Gerador de Documento Word (.docx) Editável para a Biblioteca:
-Ementário Completo das 45 Unidades Curriculares do PPC Técnico em Administração Integrado (IFSC Garopaba).
-
-Inclui campos de anotações, conferência de exemplares físicos do Sophia e sugestão de harmonização.
+Gerador Fiel do Ementário do PPC em Formato Word (.docx):
+Recorte literal da Seção de Ementas da Estrutura Curricular do PPC Técnico em Administração (IFSC Garopaba).
+Lê diretamente de 'ementario_adm.tex' e produz o documento Word com a exata estrutura e formatação do PPC.
 """
 
 import os
 import re
-import pandas as pd
 import docx
 from docx import Document
 from docx.shared import Inches, Pt, RGBColor
 from docx.enum.text import WD_ALIGN_PARAGRAPH
-from docx.enum.table import WD_TABLE_ALIGNMENT, WD_ALIGN_VERTICAL
+from docx.enum.table import WD_TABLE_ALIGNMENT
 from docx.oxml import OxmlElement, parse_xml
 from docx.oxml.ns import nsdecls, qn
 
 BASE_DIR = "/Users/chameoandre/Google-Drive-chameoandre/INSTITUTO-FEDERAL-SANTA-CATARINA/CURSOS/TECNICO/informatica-integrado/reformulacao-ppc-informatica-administracao-integrado/tecnico-administracao"
+TEX_PATH = os.path.join(BASE_DIR, "documento-ppc-principal", "ementario_adm.tex")
 CHECK_DIR = os.path.join(BASE_DIR, "revisao-equipe", "checagem-biblioteca")
-MD_PATH = os.path.join(BASE_DIR, "todas_ementas_administracao.md")
-EXCEL_PATH = os.path.join(CHECK_DIR, "Analise_Bibliografica_PPC_vs_Acervo_Sophia.xlsx")
 DOCX_OUTPUT_PATH = os.path.join(CHECK_DIR, "Ementario_Completo_PPC_Tecnico_Administracao_Revisao_Biblioteca.docx")
 
-# Colors
+# Colors matching IFSC PPC
 COLOR_IFSC_GREEN = RGBColor(16, 140, 80)      # #108C50
 COLOR_DARK = RGBColor(15, 23, 42)             # #0F172A
 COLOR_MUTED = RGBColor(100, 116, 139)         # #64748B
-COLOR_RED = RGBColor(220, 38, 38)             # #DC2626
 HEX_IFSC_GREEN = "108C50"
 HEX_LIGHT_GREEN = "EBF8F0"
-HEX_LIGHT_GRAY = "F8FAFC"
+HEX_LIGHT_GRAY = "F1F5F9"
 HEX_BORDER = "CBD5E1"
-HEX_ROSE_BG = "FFF1F2"
-HEX_AMBER_BG = "FFFBEB"
 
 def set_cell_background(cell, hex_color):
     tcPr = cell._tc.get_or_add_tcPr()
     shd = parse_xml(f'<w:shd {nsdecls("w")} w:fill="{hex_color}"/>')
     tcPr.append(shd)
 
-def set_cell_margins(cell, top=100, bottom=100, left=150, right=150):
+def set_cell_margins(cell, top=100, bottom=100, left=140, right=140):
     tcPr = cell._tc.get_or_add_tcPr()
     tcMar = OxmlElement('w:tcMar')
     for m, val in [('top', top), ('bottom', bottom), ('left', left), ('right', right)]:
@@ -66,83 +60,120 @@ def set_table_borders(table, color="CBD5E1", sz="4", val="single"):
     )
     tblPr.append(borders)
 
-def load_audit_data():
-    if os.path.exists(EXCEL_PATH):
-        df_all = pd.read_excel(EXCEL_PATH, sheet_name="Mapeamento_Completo_PPC")
-        return df_all
-    return None
+def clean_tex(text):
+    if not text: return ""
+    text = re.sub(r'\\revisao\{([^}]*)\}', r'\1', text)
+    text = re.sub(r'\\textcolor\{[^}]*\}\{([^}]*)\}', r'\1', text)
+    text = text.replace(r'\textbf{', '**').replace('}', '**')
+    text = text.replace(r'\textit{', '*').replace('}', '*')
+    text = text.replace(r'\large', '').replace(r'\small', '').replace(r'\normalsize', '')
+    text = text.replace(r'\newline', '\n').replace(r'\\[3pt]', '\n').replace(r'\\', '\n')
+    text = text.replace(r'\vspace{2pt}', '').replace(r'\vspace{0.2cm}', '')
+    text = text.replace(r'\&', '&').replace(r'\%', '%').replace(r'\$', '$').replace(r'\_', '_')
+    text = text.replace('--', '—')
+    return text.strip()
 
-def parse_markdown_ementas():
-    with open(MD_PATH, 'r', encoding='utf-8') as f:
+def add_formatted_text(paragraph, text, default_size=9.5, default_color=COLOR_DARK):
+    # Splits by **bold**
+    tokens = re.split(r'(\*\*[^*]+\*\*)', text)
+    for token in tokens:
+        if token.startswith('**') and token.endswith('**'):
+            run = paragraph.add_run(token[2:-2])
+            run.font.bold = True
+        else:
+            # check for *italic*
+            it_tokens = re.split(r'(\*[^*]+\*)', token)
+            for it_t in it_tokens:
+                if it_t.startswith('*') and it_t.endswith('*'):
+                    run = paragraph.add_run(it_t[1:-1])
+                    run.font.italic = True
+                else:
+                    run = paragraph.add_run(it_t)
+        if len(paragraph.runs) > 0:
+            paragraph.runs[-1].font.size = Pt(default_size)
+            if default_color:
+                paragraph.runs[-1].font.color.rgb = default_color
+
+def parse_tex_tables():
+    with open(TEX_PATH, "r", encoding="utf-8") as f:
         content = f.read()
-        
-    sections = content.split('# Unidade Curricular: ')
-    ucs = []
+
+    # Split ementas tables
+    parts = content.split(r'\begin{xltabular}{\linewidth}{|X|p{2.5cm}|p{2.5cm}|}')
+    intro_part = parts[0]
     
-    for idx, sec in enumerate(sections[1:], 1):
-        lines = sec.strip().split('\n')
-        title = lines[0].strip()
+    uc_tables = []
+    for tab in parts[1:]:
+        tab_clean = tab.split(r'\end{xltabular}')[0].strip()
         
-        sem = "Não especificado"
-        bloco = "Formação Geral"
-        ch = ""
-        for l in lines:
-            if l.startswith('**Ano/Semestre:**'):
-                sem = l.replace('**Ano/Semestre:**', '').strip()
-            elif l.startswith('**Bloco de Formação:**'):
-                bloco = l.replace('**Bloco de Formação:**', '').strip()
-            elif l.startswith('**Carga Horária Total:**'):
-                ch = l.replace('**Carga Horária Total:**', '').strip()
-                
-        def get_section_text(sec_text, title_start, title_end=None):
-            if title_start not in sec_text:
-                return ""
-            part = sec_text.split(title_start)[1]
-            if title_end and title_end in part:
-                part = part.split(title_end)[0]
-            return part.strip()
-            
-        ementa_resumo = get_section_text(sec, '### 1. Ementa (Resumo do Componente)', '### 2.')
-        objetivos = get_section_text(sec, '### 2. Objetivos de Aprendizagem & Competências', '### 3.')
-        conteudos = get_section_text(sec, '### 3. Conteúdo Programático', '### 4.')
-        metodologia = get_section_text(sec, '### 4. Metodologia de Ensino e Avaliação', '### 5.')
+        # 1. Parse header: UC, Semestre, CH EaD, CH Total
+        uc_match = re.search(r'\\textbf\{\\large\s*([^}]+)\}', tab_clean)
+        if not uc_match:
+            uc_match = re.search(r'\\textbf\{([^}]+)\}\s*\}\s*&\s*\\multicolumn', tab_clean)
+        uc_nome = uc_match.group(1).strip() if uc_match else "Unidade Curricular"
+        uc_nome = clean_tex(uc_nome).replace('**', '').strip()
         
-        bb_part = ''
-        bc_part = ''
-        if '**Básica:**' in sec:
-            after_b = sec.split('**Básica:**')[1]
-            if '**Complementar:**' in after_b:
-                bb_part = after_b.split('**Complementar:**')[0].strip()
-                bc_part = after_b.split('**Complementar:**')[1].split('---')[0].strip()
-            else:
-                bb_part = after_b.split('---')[0].strip()
-                
-        bb_items = [i.strip() for i in bb_part.split('\n') if i.strip() and not i.strip().startswith('---')]
-        bc_items = [i.strip() for i in bc_part.split('\n') if i.strip() and not i.strip().startswith('---')]
+        sem_match = re.search(r'\\textbf\{Semestre:\}\}\s*\\textbf\{([^}]+)\}', tab_clean)
+        semestre = sem_match.group(1).strip() if sem_match else ""
         
-        ucs.append({
-            "id": idx,
-            "uc_nome": title,
-            "semestre": sem,
-            "bloco": bloco,
-            "ch": ch,
-            "ementa_resumo": ementa_resumo,
-            "objetivos": objetivos,
-            "conteudos": conteudos,
-            "metodologia": metodologia,
+        ead_match = re.search(r'CH EaD\*:\}\}\s*\\\\\s*\\cline\{2-3\}\s*&\s*\\textbf\{([^}]+)\}', tab_clean)
+        ch_ead = ead_match.group(1).strip() if ead_match else "00 h"
+        
+        tot_match = re.search(r'CH Total\*:\}\}\s*\\\\\s*\\cline\{2-3\}\s*&\s*[^\&]+\&\s*\\textbf\{([^}]+)\}', tab_clean)
+        ch_total = tot_match.group(1).strip() if tot_match else ""
+        
+        # Extract sections: Objetivos, Conteúdos, Estratégias, Básica, Complementar
+        def extract_sec(title, next_title=None):
+            pattern = rf'\\textbf\{{{title}\:\}}\}}\s*\\\\\s*\\hline\s*\\multicolumn\{{3\}}\{{\|p\{{[^}}]+\}}\|\}}{{\s*(.*?)\s*}}\s*\\\\\s*\\hline'
+            m = re.search(pattern, tab_clean, re.DOTALL)
+            if m:
+                return m.group(1).strip()
+            return ""
+
+        raw_obj = extract_sec('Objetivos')
+        # Parse itemize items
+        obj_items = []
+        if r'\begin{itemize}' in raw_obj:
+            items_raw = raw_obj.split(r'\item')
+            for it in items_raw[1:]:
+                it_c = clean_tex(it.replace(r'\end{itemize}', '')).replace('\n', ' ').strip()
+                if it_c: obj_items.append(it_c)
+        else:
+            obj_items = [clean_tex(raw_obj)]
+
+        raw_cont = extract_sec('Conteúdos')
+        cont_clean = clean_tex(raw_cont)
+
+        raw_estr = extract_sec('Estratégias de Ensino e Aprendizagem')
+        estr_clean = clean_tex(raw_estr)
+
+        raw_bb = extract_sec('Bibliografia Básica')
+        bb_items = [clean_tex(b).strip() for b in raw_bb.split(r'\newline') if clean_tex(b).strip()]
+
+        raw_bc = extract_sec('Bibliografia Complementar')
+        bc_items = [clean_tex(c).strip() for c in raw_bc.split(r'\newline') if clean_tex(c).strip()]
+
+        uc_tables.append({
+            "uc_nome": uc_nome,
+            "semestre": semestre,
+            "ch_ead": ch_ead,
+            "ch_total": ch_total,
+            "objetivos": obj_items,
+            "conteudos": cont_clean,
+            "estrategias": estr_clean,
             "basica": bb_items,
             "complementar": bc_items
         })
-    return ucs
+        
+    return intro_part, uc_tables
 
-def create_ementario_docx():
-    print("Gerando Documento Word (.docx) Editável com todas as Ementas do PPC...")
-    ucs = parse_markdown_ementas()
-    df_audit = load_audit_data()
+def generate_literal_ppc_docx():
+    print(f"Gerando Recorte Literal do Ementário do PPC em: {DOCX_OUTPUT_PATH}")
+    intro_part, uc_tables = parse_tex_tables()
     
     doc = Document()
     
-    # Page Setup (A4 Margins)
+    # Set Standard A4 Margins
     for section in doc.sections:
         section.top_margin = Inches(0.8)
         section.bottom_margin = Inches(0.8)
@@ -152,286 +183,339 @@ def create_ementario_docx():
     # Styles
     style_normal = doc.styles['Normal']
     style_normal.font.name = 'Arial'
-    style_normal.font.size = Pt(10)
+    style_normal.font.size = Pt(9.5)
     style_normal.font.color.rgb = COLOR_DARK
-    
-    # Header Institucional
-    p_inst = doc.add_paragraph()
-    p_inst.alignment = WD_ALIGN_PARAGRAPH.CENTER
-    r_inst = p_inst.add_run("INSTITUTO FEDERAL DE SANTA CATARINA — CÂMPUS GAROPABA\nDEPARTAMENTO DE ENSINO, PESQUISA E EXTENSÃO (DEPE)")
-    r_inst.font.bold = True
-    r_inst.font.size = Pt(11)
-    r_inst.font.color.rgb = COLOR_IFSC_GREEN
-    
-    p_title = doc.add_paragraph()
-    p_title.alignment = WD_ALIGN_PARAGRAPH.CENTER
-    r_title = p_title.add_run("PROJETO PEDAGÓGICO DE CURSO (PPC 2026)\nTÉCNICO INTEGRADO EM ADMINISTRAÇÃO\n")
-    r_title.font.bold = True
-    r_title.font.size = Pt(14)
-    r_title.font.color.rgb = COLOR_DARK
-    
-    r_sub = p_title.add_run("Ementário Completo das 45 Unidades Curriculares\nDocumento de Trabalho & Revisão da Biblioteca (Sistema Sophia)")
-    r_sub.font.bold = True
-    r_sub.font.size = Pt(11)
-    r_sub.font.color.rgb = COLOR_MUTED
-    
-    # Box de Instruções para o David e Equipe da Biblioteca
-    p_box = doc.add_paragraph()
-    p_box.paragraph_format.space_before = Pt(10)
-    p_box.paragraph_format.space_after = Pt(15)
-    
-    tbl_inst = doc.add_table(rows=1, cols=1)
-    tbl_inst.alignment = WD_TABLE_ALIGNMENT.CENTER
-    cell_inst = tbl_inst.cell(0, 0)
-    cell_inst.width = Inches(6.8)
-    set_cell_background(cell_inst, HEX_LIGHT_GREEN)
-    set_cell_margins(cell_inst, top=140, bottom=140, left=180, right=180)
-    set_table_borders(tbl_inst, color=HEX_IFSC_GREEN, sz="8")
-    
-    p_c_inst = cell_inst.paragraphs[0]
-    r_ci_1 = p_c_inst.add_run("📋 ORIENTAÇÕES E PREMISSAS NORMATIVAS PARA A BIBLIOTECA (IFSC):\n")
-    r_ci_1.font.bold = True
-    r_ci_1.font.size = Pt(10.5)
-    r_ci_1.font.color.rgb = COLOR_IFSC_GREEN
-    
-    r_ci_2 = p_c_inst.add_run(
-        "1. Bibliografia Básica: Mínimo de 2 títulos de livros por UC. O acervo do câmpus deve dispor de ao menos 3 exemplares físicos de cada título (ou livro didático do PNLD/FNDE, computado como 1/aluno).\n"
-        "2. Bibliografia Complementar: Mínimo de 3 títulos de livros por UC. O acervo do câmpus deve dispor de ao menos 1 exemplar físico de cada título.\n"
-        "3. Como utilizar este arquivo: Este documento editável contém a estrutura curricular completa do curso com todas as 45 ementas. A equipe da biblioteca pode anotar na coluna 'Anotações da Biblioteca' o status real no Sophia, sugerir substituição de títulos sem exemplares ou harmonizar edições existentes."
-    )
-    r_ci_2.font.size = Pt(9.5)
-    
-    doc.add_page_break()
-    
-    # Render all 45 UCs
-    for uc in ucs:
-        uc_id = uc["id"]
-        uc_nome = uc["uc_nome"]
-        semestre = uc["semestre"]
-        bloco = uc["bloco"]
-        ch = uc["ch"]
-        
-        # Heading UC
-        p_uc_h = doc.add_paragraph()
-        p_uc_h.paragraph_format.space_before = Pt(14)
-        p_uc_h.paragraph_format.space_after = Pt(4)
-        r_uch = p_uc_h.add_run(f"UC {uc_id:02d} — {uc_nome}")
-        r_uch.font.bold = True
-        r_uch.font.size = Pt(12.5)
-        r_uch.font.color.rgb = COLOR_IFSC_GREEN
-        
-        # Meta table
-        tbl_meta = doc.add_table(rows=2, cols=3)
-        tbl_meta.alignment = WD_TABLE_ALIGNMENT.CENTER
-        set_table_borders(tbl_meta, color=HEX_BORDER)
-        
-        headers = ["Bloco de Formação", "Ano / Semestre", "Carga Horária Total"]
-        vals = [bloco, semestre, ch or "40 horas"]
-        
-        for c_idx in range(3):
-            c_head = tbl_meta.cell(0, c_idx)
-            set_cell_background(c_head, HEX_LIGHT_GRAY)
-            set_cell_margins(c_head, top=60, bottom=60, left=100, right=100)
-            p_h = c_head.paragraphs[0]
-            p_h.alignment = WD_ALIGN_PARAGRAPH.CENTER
-            r_h = p_h.add_run(headers[c_idx])
-            r_h.font.bold = True
-            r_h.font.size = Pt(8.5)
-            r_h.font.color.rgb = COLOR_MUTED
-            
-            c_val = tbl_meta.cell(1, c_idx)
-            set_cell_margins(c_val, top=60, bottom=60, left=100, right=100)
-            p_v = c_val.paragraphs[0]
-            p_v.alignment = WD_ALIGN_PARAGRAPH.CENTER
-            r_v = p_v.add_run(vals[c_idx])
-            r_v.font.bold = True
-            r_v.font.size = Pt(9.5)
-            
-        # 1. Ementa Resumo
-        if uc["ementa_resumo"]:
-            p_e_title = doc.add_paragraph()
-            p_e_title.paragraph_format.space_before = Pt(8)
-            p_e_title.paragraph_format.space_after = Pt(2)
-            r_et = p_e_title.add_run("1. Ementa (Resumo do Componente):")
-            r_et.font.bold = True
-            r_et.font.size = Pt(9.5)
-            r_et.font.color.rgb = COLOR_DARK
-            
-            p_e_body = doc.add_paragraph(uc["ementa_resumo"])
-            p_e_body.paragraph_format.space_after = Pt(6)
-            p_e_body.runs[0].font.size = Pt(9.5)
-            
-        # 2. Objetivos
-        if uc["objetivos"]:
-            p_o_title = doc.add_paragraph()
-            p_o_title.paragraph_format.space_before = Pt(4)
-            p_o_title.paragraph_format.space_after = Pt(2)
-            r_ot = p_o_title.add_run("2. Objetivos de Aprendizagem & Competências:")
-            r_ot.font.bold = True
-            r_ot.font.size = Pt(9.5)
-            
-            p_o_body = doc.add_paragraph(uc["objetivos"])
-            p_o_body.paragraph_format.space_after = Pt(6)
-            p_o_body.runs[0].font.size = Pt(9)
-            
-        # 3. Conteúdo Programático
-        if uc["conteudos"]:
-            p_c_title = doc.add_paragraph()
-            p_c_title.paragraph_format.space_before = Pt(4)
-            p_c_title.paragraph_format.space_after = Pt(2)
-            r_ct = p_c_title.add_run("3. Conteúdo Programático:")
-            r_ct.font.bold = True
-            r_ct.font.size = Pt(9.5)
-            
-            p_c_body = doc.add_paragraph(uc["conteudos"])
-            p_c_body.paragraph_format.space_after = Pt(6)
-            p_c_body.runs[0].font.size = Pt(9)
 
-        # 4. Bibliografia Básica (Tabela com campo para Biblioteca)
-        p_bb_title = doc.add_paragraph()
-        p_bb_title.paragraph_format.space_before = Pt(8)
-        p_bb_title.paragraph_format.space_after = Pt(3)
-        r_bbt = p_bb_title.add_run("4. Bibliografia BÁSICA (Norma: Mínimo 2 títulos — Meta: ≥ 3 exemplares no Câmpus):")
-        r_bbt.font.bold = True
-        r_bbt.font.size = Pt(9.5)
-        r_bbt.font.color.rgb = COLOR_IFSC_GREEN
-        
-        tbl_bb = doc.add_table(rows=1 + max(1, len(uc["basica"])), cols=3)
-        tbl_bb.alignment = WD_TABLE_ALIGNMENT.CENTER
-        set_table_borders(tbl_bb, color=HEX_BORDER)
-        
-        tbl_bb.cell(0, 0).width = Inches(3.8)
-        tbl_bb.cell(0, 1).width = Inches(1.3)
-        tbl_bb.cell(0, 2).width = Inches(1.7)
-        
-        bb_headers = ["Obra Adotada no PPC (ABNT NBR 6023)", "Situação Sophia", "Anotações da Biblioteca"]
-        for c_idx in range(3):
-            c_h = tbl_bb.cell(0, c_idx)
-            set_cell_background(c_h, HEX_LIGHT_GREEN)
-            set_cell_margins(c_h, top=60, bottom=60, left=80, right=80)
-            p = c_h.paragraphs[0]
-            r = p.add_run(bb_headers[c_idx])
-            r.font.bold = True
-            r.font.size = Pt(8.5)
-            r.font.color.rgb = COLOR_IFSC_GREEN
-            
-        for r_idx, b_ref in enumerate(uc["basica"], 1):
-            row_cell_ref = tbl_bb.cell(r_idx, 0)
-            row_cell_status = tbl_bb.cell(r_idx, 1)
-            row_cell_notes = tbl_bb.cell(r_idx, 2)
-            
-            set_cell_margins(row_cell_ref, top=50, bottom=50, left=80, right=80)
-            set_cell_margins(row_cell_status, top=50, bottom=50, left=80, right=80)
-            set_cell_margins(row_cell_notes, top=50, bottom=50, left=80, right=80)
-            
-            p_ref = row_cell_ref.paragraphs[0]
-            r_ref = p_ref.add_run(b_ref.replace("**", ""))
-            r_ref.font.size = Pt(8.5)
-            
-            # Match status from audit dataframe if present
-            status_text = "Conferir Sophia"
-            status_bg = HEX_LIGHT_GRAY
-            if df_audit is not None:
-                match_df = df_audit[(df_audit["UC_ID"] == uc_id) & (df_audit["Tipo_Bibliografia"] == "Básica") & (df_audit["Ordem_UC"] == r_idx)]
-                if not match_df.empty:
-                    m_row = match_df.iloc[0]
-                    ex_d = m_row["Exemplares_Disponiveis"]
-                    def_c = m_row["Deficit_Exemplares_Compra"]
-                    if m_row["Status"] == "MATERIAL_FNDE":
-                        status_text = "PNLD (1/Aluno)"
-                        status_bg = HEX_LIGHT_GREEN
-                    elif m_row["Existe_Biblioteca"] == "SIM":
-                        if def_c == 0:
-                            status_text = f"Disponível ({ex_d} ex.)"
-                            status_bg = HEX_LIGHT_GREEN
-                        else:
-                            status_text = f"Possui {ex_d} ex. (Faltam +{def_c})"
-                            status_bg = HEX_AMBER_BG
-                    else:
-                        status_text = "Ausente (+3 ex.)"
-                        status_bg = HEX_ROSE_BG
-                        
-            set_cell_background(row_cell_status, status_bg)
-            p_stat = row_cell_status.paragraphs[0]
-            r_stat = p_stat.add_run(status_text)
-            r_stat.font.bold = True
-            r_stat.font.size = Pt(8)
-            
-            p_note = row_cell_notes.paragraphs[0]
-            p_note.add_run("[ ] OK  [ ] Substituir  [ ] Comprar")
-            p_note.runs[0].font.size = Pt(7.5)
-            p_note.runs[0].font.color.rgb = COLOR_MUTED
+    # Cabeçalho Oficial do PPC
+    p_head = doc.add_paragraph()
+    p_head.alignment = WD_ALIGN_PARAGRAPH.CENTER
+    r_h1 = p_head.add_run("INSTITUTO FEDERAL DE SANTA CATARINA — CÂMPUS GAROPABA\n")
+    r_h1.font.bold = True
+    r_h1.font.size = Pt(11)
+    r_h1.font.color.rgb = COLOR_IFSC_GREEN
+    
+    r_h2 = p_head.add_run("PROJETO PEDAGÓGICO DE CURSO (PPC 2026)\nTÉCNICO INTEGRADO EM ADMINISTRAÇÃO\n")
+    r_h2.font.bold = True
+    r_h2.font.size = Pt(13)
+    r_h2.font.color.rgb = COLOR_DARK
+    
+    r_h3 = p_head.add_run("Seção da Estrutura Curricular & Ementário das 45 Unidades Curriculares\n")
+    r_h3.font.bold = True
+    r_h3.font.size = Pt(10.5)
+    r_h3.font.color.rgb = COLOR_MUTED
 
-        # 5. Bibliografia Complementar (Tabela com campo para Biblioteca)
-        p_bc_title = doc.add_paragraph()
-        p_bc_title.paragraph_format.space_before = Pt(8)
-        p_bc_title.paragraph_format.space_after = Pt(3)
-        r_bct = p_bc_title.add_run("5. Bibliografia COMPLEMENTAR (Norma: Mínimo 3 títulos — Meta: ≥ 1 exemplar no Câmpus):")
-        r_bct.font.bold = True
-        r_bct.font.size = Pt(9.5)
-        r_bct.font.color.rgb = COLOR_DARK
+    p_div = doc.add_paragraph()
+    p_div.paragraph_format.space_after = Pt(12)
+    
+    # 1. Matrizes Curriculares Anuais
+    p_sec1 = doc.add_paragraph()
+    r_s1 = p_sec1.add_run("Matriz Curricular Detalhada por Anos e Blocos:")
+    r_s1.font.bold = True
+    r_s1.font.size = Pt(11.5)
+    r_s1.font.color.rgb = COLOR_IFSC_GREEN
+    p_sec1.paragraph_format.space_after = Pt(8)
+
+    # Função auxiliar para tabela de matriz curricular
+    def add_matriz_table(ano_titulo, rows_data, subtotal_text, subtotal_val):
+        tbl = doc.add_table(rows=len(rows_data) + 3, cols=4)
+        tbl.alignment = WD_TABLE_ALIGNMENT.CENTER
+        set_table_borders(tbl, color=HEX_BORDER)
         
-        tbl_bc = doc.add_table(rows=1 + max(1, len(uc["complementar"])), cols=3)
-        tbl_bc.alignment = WD_TABLE_ALIGNMENT.CENTER
-        set_table_borders(tbl_bc, color=HEX_BORDER)
+        # Header Row 1: Banner
+        cell_top = tbl.cell(0, 0)
+        cell_top.merge(tbl.cell(0, 3))
+        set_cell_background(cell_top, HEX_LIGHT_GREEN)
+        set_cell_margins(cell_top, top=80, bottom=80, left=100, right=100)
+        p = cell_top.paragraphs[0]
+        p.alignment = WD_ALIGN_PARAGRAPH.CENTER
+        r = p.add_run(ano_titulo)
+        r.font.bold = True
+        r.font.size = Pt(10)
+        r.font.color.rgb = COLOR_IFSC_GREEN
         
-        tbl_bc.cell(0, 0).width = Inches(3.8)
-        tbl_bc.cell(0, 1).width = Inches(1.3)
-        tbl_bc.cell(0, 2).width = Inches(1.7)
-        
-        bc_headers = ["Obra Adotada no PPC (ABNT NBR 6023)", "Situação Sophia", "Anotações da Biblioteca"]
-        for c_idx in range(3):
-            c_h = tbl_bc.cell(0, c_idx)
+        # Header Row 2: Columns
+        col_headers = ["Ano", "Unidade Curricular (UC)", "Bloco Curricular", "CH (h)"]
+        col_widths = [Inches(1.1), Inches(3.2), Inches(1.8), Inches(0.9)]
+        for c_i in range(4):
+            c_h = tbl.cell(1, c_i)
+            c_h.width = col_widths[c_i]
             set_cell_background(c_h, HEX_LIGHT_GRAY)
             set_cell_margins(c_h, top=60, bottom=60, left=80, right=80)
             p = c_h.paragraphs[0]
-            r = p.add_run(bc_headers[c_idx])
+            r = p.add_run(col_headers[c_i])
             r.font.bold = True
             r.font.size = Pt(8.5)
-            r.font.color.rgb = COLOR_DARK
+            r.font.color.rgb = COLOR_MUTED
             
-        for r_idx, c_ref in enumerate(uc["complementar"], 1):
-            row_cell_ref = tbl_bc.cell(r_idx, 0)
-            row_cell_status = tbl_bc.cell(r_idx, 1)
-            row_cell_notes = tbl_bc.cell(r_idx, 2)
-            
-            set_cell_margins(row_cell_ref, top=50, bottom=50, left=80, right=80)
-            set_cell_margins(row_cell_status, top=50, bottom=50, left=80, right=80)
-            set_cell_margins(row_cell_notes, top=50, bottom=50, left=80, right=80)
-            
-            p_ref = row_cell_ref.paragraphs[0]
-            r_ref = p_ref.add_run(c_ref.replace("**", ""))
-            r_ref.font.size = Pt(8.5)
-            
-            status_text = "Conferir Sophia"
-            status_bg = HEX_LIGHT_GRAY
-            if df_audit is not None:
-                match_df = df_audit[(df_audit["UC_ID"] == uc_id) & (df_audit["Tipo_Bibliografia"] == "Complementar") & (df_audit["Ordem_UC"] == r_idx)]
-                if not match_df.empty:
-                    m_row = match_df.iloc[0]
-                    ex_d = m_row["Exemplares_Disponiveis"]
-                    if m_row["Existe_Biblioteca"] == "SIM":
-                        status_text = f"Disponível ({ex_d} ex.)"
-                        status_bg = HEX_LIGHT_GREEN
-                    else:
-                        status_text = "Ausente (+1 ex.)"
-                        status_bg = HEX_AMBER_BG
-                        
-            set_cell_background(row_cell_status, status_bg)
-            p_stat = row_cell_status.paragraphs[0]
-            r_stat = p_stat.add_run(status_text)
-            r_stat.font.bold = True
-            r_stat.font.size = Pt(8)
-            
-            p_note = row_cell_notes.paragraphs[0]
-            p_note.add_run("[ ] OK  [ ] Sugerir Edição")
-            p_note.runs[0].font.size = Pt(7.5)
-            p_note.runs[0].font.color.rgb = COLOR_MUTED
-            
-        doc.add_page_break()
+        for r_i, row in enumerate(rows_data, 2):
+            for c_i in range(4):
+                c = tbl.cell(r_i, c_i)
+                c.width = col_widths[c_i]
+                set_cell_margins(c, top=45, bottom=45, left=80, right=80)
+                p = c.paragraphs[0]
+                r = p.add_run(row[c_i])
+                r.font.size = Pt(8.5)
+                if c_i in (0, 3):
+                    p.alignment = WD_ALIGN_PARAGRAPH.CENTER
+                    
+        # Subtotal row
+        r_sub = len(rows_data) + 2
+        c_sub_label = tbl.cell(r_sub, 0)
+        c_sub_label.merge(tbl.cell(r_sub, 2))
+        set_cell_background(c_sub_label, HEX_LIGHT_GRAY)
+        set_cell_margins(c_sub_label, top=60, bottom=60, left=80, right=80)
+        p_sl = c_sub_label.paragraphs[0]
+        p_sl.alignment = WD_ALIGN_PARAGRAPH.RIGHT
+        r_sl = p_sl.add_run(subtotal_text)
+        r_sl.font.bold = True
+        r_sl.font.size = Pt(8.5)
         
+        c_sub_val = tbl.cell(r_sub, 3)
+        set_cell_background(c_sub_val, HEX_LIGHT_GRAY)
+        set_cell_margins(c_sub_val, top=60, bottom=60, left=80, right=80)
+        p_sv = c_sub_val.paragraphs[0]
+        p_sv.alignment = WD_ALIGN_PARAGRAPH.CENTER
+        r_sv = p_sv.add_run(subtotal_val)
+        r_sv.font.bold = True
+        r_sv.font.size = Pt(8.5)
+
+    # 1º Ano
+    matriz_1 = [
+        ["1º Ano", "Artes — Ano 1", "Formação Geral", "80 h"],
+        ["1º Ano", "Educação Física — Ano 1", "Formação Geral", "80 h"],
+        ["1º Ano", "Inglês — Ano 1", "Formação Geral", "80 h"],
+        ["1º Ano", "Língua Portuguesa e Literatura — Ano 1", "Formação Geral", "80 h"],
+        ["1º Ano", "Espanhol — Ano 1", "Formação Geral", "80 h"],
+        ["1º Ano", "Biologia — Ano 1", "Formação Geral", "80 h"],
+        ["1º Ano", "Física — Ano 1", "Formação Geral", "40 h"],
+        ["1º Ano", "Matemática — Ano 1", "Formação Geral", "80 h"],
+        ["1º Ano", "Química — Ano 1", "Formação Geral", "40 h"],
+        ["1º Ano", "Filosofia — Ano 1", "Formação Geral", "80 h"],
+        ["1º Ano", "Geografia — Ano 1", "Formação Geral", "80 h"],
+        ["1º Ano", "Sociologia — Ano 1", "Formação Geral", "80 h"],
+        ["1º Ano", "Introdução à Administração", "Formação Técnica", "80 h"],
+        ["1º Ano", "Sociedade e Trabalho", "Formação Técnica", "40 h"],
+        ["1º Ano", "Gestão de Marketing I", "Formação Técnica", "40 h"],
+        ["1º Ano", "Organização e Processos", "Formação Técnica", "40 h"],
+        ["1º Ano", "Informática Aplicada", "Formação Técnica", "40 h"]
+    ]
+    add_matriz_table("1º ANO LETIVO (SEMESTRES 1 E 2)", matriz_1, "Subtotal 1º Ano (880h FG + 240h FT):", "1.120 h")
+    
+    p_sp1 = doc.add_paragraph()
+    p_sp1.paragraph_format.space_before = Pt(10)
+
+    # 2º Ano
+    matriz_2 = [
+        ["2º Ano", "Artes — Ano 2", "Formação Geral", "80 h"],
+        ["2º Ano", "Educação Física — Ano 2", "Formação Geral", "80 h"],
+        ["2º Ano", "Inglês — Ano 2", "Formação Geral", "80 h"],
+        ["2º Ano", "Língua Portuguesa e Literatura — Ano 2", "Formação Geral", "80 h"],
+        ["2º Ano", "Espanhol — Ano 2", "Formação Geral", "80 h"],
+        ["2º Ano", "Física — Ano 2", "Formação Geral", "80 h"],
+        ["2º Ano", "Matemática — Ano 2", "Formação Geral", "80 h"],
+        ["2º Ano", "Química — Ano 2", "Formação Geral", "80 h"],
+        ["2º Ano", "História — Ano 2", "Formação Geral", "80 h"],
+        ["2º Ano", "Sociologia — Ano 2", "Formação Geral", "80 h"],
+        ["2º Ano", "Matemática para Administração", "Formação Técnica", "40 h"],
+        ["2º Ano", "Gestão de Marketing II", "Formação Técnica", "40 h"],
+        ["2º Ano", "Gestão de Operações e Qualidade", "Formação Técnica", "80 h"],
+        ["2º Ano", "Empreendedorismo I", "Formação Técnica", "40 h"],
+        ["2º Ano", "Responsabilidade Socioambiental e Sustentabilidade", "Formação Técnica", "40 h"],
+        ["2º Ano", "Oficina de Integração I", "Núcleo Politécnico", "80 h"]
+    ]
+    add_matriz_table("2º ANO LETIVO (SEMESTRES 3 E 4)", matriz_2, "Subtotal 2º Ano (800h FG + 240h FT + 80h NP):", "1.120 h")
+
+    p_sp2 = doc.add_paragraph()
+    p_sp2.paragraph_format.space_before = Pt(10)
+
+    # 3º Ano
+    matriz_3 = [
+        ["3º Ano", "Língua Portuguesa e Literatura — Ano 3", "Formação Geral", "80 h"],
+        ["3º Ano", "Biologia — Ano 3", "Formação Geral", "80 h"],
+        ["3º Ano", "Física — Ano 3", "Formação Geral", "80 h"],
+        ["3º Ano", "Matemática — Ano 3", "Formação Geral", "80 h"],
+        ["3º Ano", "Química — Ano 3", "Formação Geral", "40 h"],
+        ["3º Ano", "Filosofia — Ano 3", "Formação Geral", "80 h"],
+        ["3º Ano", "Geografia — Ano 3", "Formação Geral", "80 h"],
+        ["3º Ano", "História — Ano 3", "Formação Geral", "80 h"],
+        ["3º Ano", "Empreendedorismo II", "Formação Técnica", "40 h"],
+        ["3º Ano", "Gestão de Pessoas e Relações no Trabalho", "Formação Técnica", "80 h"],
+        ["3º Ano", "Gestão Financeira", "Formação Técnica", "80 h"],
+        ["3º Ano", "Oficina de Integração II", "Núcleo Politécnico", "80 h"]
+    ]
+    add_matriz_table("3º ANO LETIVO (SEMESTRES 5 E 6)", matriz_3, "Subtotal 3º Ano (600h FG + 200h FT + 80h NP):", "960 h")
+
+    doc.add_page_break()
+
+    # 2. Seção do Ementário das 45 Unidades Curriculares
+    p_sec2 = doc.add_paragraph()
+    r_s2 = p_sec2.add_run("Ementário das Unidades Curriculares (Formato Visual Oficial em Tabela)")
+    r_s2.font.bold = True
+    r_s2.font.size = Pt(12.5)
+    r_s2.font.color.rgb = COLOR_IFSC_GREEN
+    p_sec2.paragraph_format.space_after = Pt(12)
+
+    # Render each of the 45 UC tables exactly as defined in the PPC LaTeX format
+    for idx, uc in enumerate(uc_tables, 1):
+        # Table with 3 columns (matching |X|p{2.5cm}|p{2.5cm}|)
+        tbl_uc = doc.add_table(rows=8, cols=3)
+        tbl_uc.alignment = WD_TABLE_ALIGNMENT.CENTER
+        set_table_borders(tbl_uc, color=HEX_BORDER)
+        
+        w_col0 = Inches(4.2)
+        w_col1 = Inches(1.3)
+        w_col2 = Inches(1.3)
+        
+        # Row 0: Header top (Unidade Curricular merged vertically in TeX; in Word we structure clean cells)
+        c_uc = tbl_uc.cell(0, 0)
+        c_uc.width = w_col0
+        set_cell_background(c_uc, HEX_LIGHT_GREEN)
+        set_cell_margins(c_uc, top=70, bottom=70, left=90, right=90)
+        p_u = c_uc.paragraphs[0]
+        r_u_tag = p_u.add_run("Unidade Curricular:\n")
+        r_u_tag.font.bold = True
+        r_u_tag.font.size = Pt(8.5)
+        r_u_tag.font.color.rgb = COLOR_IFSC_GREEN
+        r_u_name = p_u.add_run(uc["uc_nome"])
+        r_u_name.font.bold = True
+        r_u_name.font.size = Pt(11)
+        r_u_name.font.color.rgb = COLOR_DARK
+        
+        c_sem = tbl_uc.cell(0, 1)
+        c_sem.merge(tbl_uc.cell(0, 2))
+        set_cell_margins(c_sem, top=70, bottom=70, left=90, right=90)
+        p_s = c_sem.paragraphs[0]
+        r_s_tag = p_s.add_run("Semestre: ")
+        r_s_tag.font.bold = True
+        r_s_tag.font.size = Pt(8.5)
+        r_s_tag.font.color.rgb = COLOR_IFSC_GREEN
+        r_s_val = p_s.add_run(uc["semestre"])
+        r_s_val.font.bold = True
+        r_s_val.font.size = Pt(9.5)
+
+        # Row 1: CH EaD e CH Total
+        c_r1_0 = tbl_uc.cell(1, 0)
+        set_cell_margins(c_r1_0, top=40, bottom=40, left=90, right=90)
+        p_r1_0 = c_r1_0.paragraphs[0]
+        p_r1_0.add_run("Componente Curricular da Matriz Oficial").font.size = Pt(8)
+        p_r1_0.runs[0].font.color.rgb = COLOR_MUTED
+        
+        c_ead = tbl_uc.cell(1, 1)
+        set_cell_margins(c_ead, top=40, bottom=40, left=90, right=90)
+        p_ead = c_ead.paragraphs[0]
+        p_ead.add_run("CH EaD*: ").font.bold = True
+        p_ead.runs[0].font.color.rgb = COLOR_IFSC_GREEN
+        p_ead.runs[0].font.size = Pt(8.5)
+        p_ead.add_run(uc["ch_ead"]).font.bold = True
+        p_ead.runs[1].font.size = Pt(9)
+        
+        c_tot = tbl_uc.cell(1, 2)
+        set_cell_margins(c_tot, top=40, bottom=40, left=90, right=90)
+        p_tot = c_tot.paragraphs[0]
+        p_tot.add_run("CH Total*: ").font.bold = True
+        p_tot.runs[0].font.color.rgb = COLOR_IFSC_GREEN
+        p_tot.runs[0].font.size = Pt(8.5)
+        p_tot.add_run(uc["ch_total"]).font.bold = True
+        p_tot.runs[1].font.size = Pt(9)
+
+        # Row 2: Objetivos
+        c_obj = tbl_uc.cell(2, 0)
+        c_obj.merge(tbl_uc.cell(2, 2))
+        set_cell_margins(c_obj, top=70, bottom=70, left=90, right=90)
+        p_obj_h = c_obj.paragraphs[0]
+        r_oh = p_obj_h.add_run("Objetivos:\n")
+        r_oh.font.bold = True
+        r_oh.font.size = Pt(9)
+        r_oh.font.color.rgb = COLOR_IFSC_GREEN
+        
+        for obj_it in uc["objetivos"]:
+            p_it = c_obj.add_paragraph()
+            p_it.paragraph_format.left_indent = Inches(0.2)
+            p_it.paragraph_format.space_after = Pt(2)
+            p_it.add_run("• ")
+            add_formatted_text(p_it, obj_it, default_size=9)
+
+        # Row 3: Conteúdos
+        c_cont = tbl_uc.cell(3, 0)
+        c_cont.merge(tbl_uc.cell(3, 2))
+        set_cell_margins(c_cont, top=70, bottom=70, left=90, right=90)
+        p_cont_h = c_cont.paragraphs[0]
+        r_ch = p_cont_h.add_run("Conteúdos:\n")
+        r_ch.font.bold = True
+        r_ch.font.size = Pt(9)
+        r_ch.font.color.rgb = COLOR_IFSC_GREEN
+        
+        for cont_line in uc["conteudos"].split('\n'):
+            if cont_line.strip():
+                p_c = c_cont.add_paragraph()
+                p_c.paragraph_format.space_after = Pt(3)
+                add_formatted_text(p_c, cont_line.strip(), default_size=9)
+
+        # Row 4: Estratégias de Ensino e Aprendizagem
+        c_estr = tbl_uc.cell(4, 0)
+        c_estr.merge(tbl_uc.cell(4, 2))
+        set_cell_margins(c_estr, top=70, bottom=70, left=90, right=90)
+        p_estr_h = c_estr.paragraphs[0]
+        r_eh = p_estr_h.add_run("Estratégias de Ensino e Aprendizagem:\n")
+        r_eh.font.bold = True
+        r_eh.font.size = Pt(9)
+        r_eh.font.color.rgb = COLOR_IFSC_GREEN
+        
+        for estr_line in uc["estrategias"].split('\n'):
+            if estr_line.strip():
+                p_e = c_estr.add_paragraph()
+                p_e.paragraph_format.space_after = Pt(3)
+                add_formatted_text(p_e, estr_line.strip(), default_size=9)
+
+        # Row 5: Bibliografia Básica
+        c_bb = tbl_uc.cell(5, 0)
+        c_bb.merge(tbl_uc.cell(5, 2))
+        set_cell_margins(c_bb, top=70, bottom=70, left=90, right=90)
+        set_cell_background(c_bb, HEX_LIGHT_GREEN)
+        p_bb_h = c_bb.paragraphs[0]
+        r_bbh = p_bb_h.add_run("Bibliografia Básica:\n")
+        r_bbh.font.bold = True
+        r_bbh.font.size = Pt(9)
+        r_bbh.font.color.rgb = COLOR_IFSC_GREEN
+        
+        for bb_item in uc["basica"]:
+            if bb_item.strip():
+                p_b = c_bb.add_paragraph()
+                p_b.paragraph_format.space_after = Pt(4)
+                add_formatted_text(p_b, bb_item.strip(), default_size=9)
+
+        # Row 6: Bibliografia Complementar
+        c_bc = tbl_uc.cell(6, 0)
+        c_bc.merge(tbl_uc.cell(6, 2))
+        set_cell_margins(c_bc, top=70, bottom=70, left=90, right=90)
+        p_bc_h = c_bc.paragraphs[0]
+        r_bch = p_bc_h.add_run("Bibliografia Complementar:\n")
+        r_bch.font.bold = True
+        r_bch.font.size = Pt(9)
+        r_bch.font.color.rgb = COLOR_IFSC_GREEN
+        
+        for bc_item in uc["complementar"]:
+            if bc_item.strip():
+                p_c = c_bc.add_paragraph()
+                p_c.paragraph_format.space_after = Pt(4)
+                add_formatted_text(p_c, bc_item.strip(), default_size=9)
+                
+        # Row 7: Empty divider row (or remove it)
+        c_r7 = tbl_uc.cell(7, 0)
+        c_r7.merge(tbl_uc.cell(7, 2))
+        set_cell_margins(c_r7, top=20, bottom=20, left=90, right=90)
+        set_cell_background(c_r7, HEX_LIGHT_GRAY)
+        p_end = c_r7.paragraphs[0]
+        p_end.alignment = WD_ALIGN_PARAGRAPH.RIGHT
+        p_end.add_run(f"PPC Técnico em Administração (IFSC Garopaba) • UC {idx:02d}").font.size = Pt(7.5)
+        p_end.runs[0].font.color.rgb = COLOR_MUTED
+
+        # Page break after each UC (except the last one)
+        if idx < len(uc_tables):
+            doc.add_page_break()
+
     doc.save(DOCX_OUTPUT_PATH)
-    print(f"Documento Word (.docx) editável gerado com sucesso em:\n{DOCX_OUTPUT_PATH}")
+    print(f"Documento Word (.docx) gerado com sucesso em:\n{DOCX_OUTPUT_PATH}")
 
 if __name__ == "__main__":
-    create_ementario_docx()
+    generate_literal_ppc_docx()
