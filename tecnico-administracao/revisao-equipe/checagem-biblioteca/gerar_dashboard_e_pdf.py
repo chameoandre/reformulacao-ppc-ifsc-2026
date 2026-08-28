@@ -4,6 +4,7 @@
 """
 Gerador da Página Web Interativa (Dashboard) e do Documento PDF Estilizado em LaTeX
 para a Auditoria do Acervo Bibliográfico do PPC Técnico em Administração (IFSC Garopaba).
+Inclui Catálogo Geral das 3.003 Obras e seus respectivos Exemplares Físicos no Sophia.
 """
 
 import os
@@ -15,6 +16,7 @@ import pandas as pd
 BASE_DIR = "/Users/chameoandre/Google-Drive-chameoandre/INSTITUTO-FEDERAL-SANTA-CATARINA/CURSOS/TECNICO/informatica-integrado/reformulacao-ppc-informatica-administracao-integrado/tecnico-administracao"
 CHECK_DIR = os.path.join(BASE_DIR, "revisao-equipe", "checagem-biblioteca")
 EXCEL_PATH = os.path.join(CHECK_DIR, "Analise_Bibliografica_PPC_vs_Acervo_Sophia.xlsx")
+ACERVO_EXEMPLARES_PATH = os.path.join(CHECK_DIR, "Acervo e exemplares.XLS")
 ROOT_INDEX_PATH = "/Users/chameoandre/Google-Drive-chameoandre/INSTITUTO-FEDERAL-SANTA-CATARINA/CURSOS/TECNICO/informatica-integrado/reformulacao-ppc-informatica-administracao-integrado/index.html"
 
 def clean_val(val):
@@ -25,6 +27,14 @@ def clean_val(val):
         s = s[:-2]
     return s
 
+def clean_entry(text):
+    t = str(text).strip()
+    if not t or t.startswith('Referência bibliográfica') or t.startswith('(Ordenadas') or t == 'IFSC - Câmpus Garopaba' or re.match(r'^\d{2}/\d{2}/\d{4}$', t):
+        return None
+    if t.startswith('Total:') or ('IFSC - Garopaba - ' in t and len(t) < 40 and not 'ISBN' in t):
+        return None
+    return t
+
 def load_data():
     df_all = pd.read_excel(EXCEL_PATH, sheet_name='Mapeamento_Completo_PPC')
     df_resumo = pd.read_excel(EXCEL_PATH, sheet_name='Resumo_Geral')
@@ -34,9 +44,44 @@ def load_data():
     for col in df_all.columns:
         df_all[col] = df_all[col].apply(clean_val)
         
-    return df_all, df_resumo, df_uc
+    # Load all 3003 library items with copy counts
+    df_raw_lib = pd.read_excel(ACERVO_EXEMPLARES_PATH)
+    col1 = df_raw_lib[df_raw_lib.columns[1]].dropna().tolist()
+    
+    ppc_titles_norm = set()
+    for _, row in df_all.iterrows():
+        t = str(row['Titulo_Obra']).lower()
+        if t: ppc_titles_norm.add(t[:25])
 
-def generate_interactive_html(df_all, df_resumo, df_uc):
+    all_library_items = []
+    for idx, entry in enumerate(col1, 1):
+        cleaned = clean_entry(entry)
+        if not cleaned: continue
+        
+        ex_count = 1
+        m = re.search(r'Exemplares:\s*IFSC\s*-\s*Garopaba\s*-\s*(\d+)\s*Ex', cleaned)
+        if m:
+            ex_count = int(m.group(1))
+        else:
+            m2 = re.search(r'Total\s*-\s*(\d+)\s*Ex', cleaned)
+            if m2:
+                ex_count = int(m2.group(1))
+                
+        ref_clean = re.sub(r'Exemplares:.*$', '', cleaned).strip()
+        
+        # Check if used in PPC
+        is_ppc = any(k in ref_clean.lower() for k in ppc_titles_norm if len(k) > 6)
+        
+        all_library_items.append({
+            'id': idx,
+            'ref': ref_clean,
+            'exemplares': ex_count,
+            'is_ppc': is_ppc
+        })
+        
+    return df_all, df_resumo, df_uc, all_library_items
+
+def generate_interactive_html(df_all, df_resumo, df_uc, all_library_items):
     records = df_all.to_dict(orient='records')
     uc_records = df_uc.to_dict(orient='records')
     for r in uc_records:
@@ -46,13 +91,16 @@ def generate_interactive_html(df_all, df_resumo, df_uc):
                 
     json_data = json.dumps(records, ensure_ascii=False)
     json_uc_data = json.dumps(uc_records, ensure_ascii=False)
+    json_catalog_data = json.dumps(all_library_items, ensure_ascii=False)
+    
+    total_exemplares_lib = sum(x['exemplares'] for x in all_library_items)
     
     html_content = f"""<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Auditoria Bibliográfica — PPC Técnico em Administração (IFSC Garopaba)</title>
+  <title>Auditoria Bibliográfica & Exemplares — PPC Técnico em Administração (IFSC Garopaba)</title>
 
   <!-- Google Fonts & Bootstrap Icons -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -104,7 +152,7 @@ def generate_interactive_html(df_all, df_resumo, df_uc):
     }}
 
     .header-container {{
-      max-width: 1380px;
+      max-width: 1420px;
       margin: 0 auto;
       display: flex;
       align-items: center;
@@ -190,7 +238,7 @@ def generate_interactive_html(df_all, df_resumo, df_uc):
 
     /* MAIN CONTAINER */
     main.main-container {{
-      max-width: 1380px;
+      max-width: 1420px;
       margin: 1.5rem auto;
       padding: 0 1.5rem;
       width: 100%;
@@ -200,8 +248,8 @@ def generate_interactive_html(df_all, df_resumo, df_uc):
     /* KPI GRID */
     .kpi-grid {{
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 1.2rem;
+      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+      gap: 1.1rem;
       margin-bottom: 2rem;
     }}
 
@@ -209,7 +257,7 @@ def generate_interactive_html(df_all, df_resumo, df_uc):
       background: var(--bg-card);
       border: 1px solid var(--border-color);
       border-radius: var(--radius-lg);
-      padding: 1.4rem;
+      padding: 1.3rem;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
@@ -227,25 +275,25 @@ def generate_interactive_html(df_all, df_resumo, df_uc):
       margin-bottom: 0.5rem;
     }}
     .kpi-title {{
-      font-size: 0.85rem;
+      font-size: 0.82rem;
       font-weight: 600;
       color: var(--text-muted);
       text-transform: uppercase;
       letter-spacing: 0.5px;
     }}
     .kpi-icon {{
-      font-size: 1.3rem;
+      font-size: 1.25rem;
       opacity: 0.9;
     }}
     .kpi-value {{
       font-family: 'Outfit', sans-serif;
-      font-size: 2.1rem;
+      font-size: 2rem;
       font-weight: 800;
       line-height: 1.1;
       margin-bottom: 0.3rem;
     }}
     .kpi-desc {{
-      font-size: 0.8rem;
+      font-size: 0.78rem;
       color: var(--text-muted);
     }}
 
@@ -284,14 +332,14 @@ def generate_interactive_html(df_all, df_resumo, df_uc):
       border: none;
       color: var(--text-muted);
       font-family: 'Outfit', sans-serif;
-      font-size: 0.95rem;
+      font-size: 0.92rem;
       font-weight: 600;
-      padding: 0.75rem 1.2rem;
+      padding: 0.75rem 1.1rem;
       border-radius: 8px;
       cursor: pointer;
       display: inline-flex;
       align-items: center;
-      gap: 0.5rem;
+      gap: 0.45rem;
       transition: all 0.2s ease;
       white-space: nowrap;
     }}
@@ -382,13 +430,13 @@ def generate_interactive_html(df_all, df_resumo, df_uc):
       color: #94a3b8;
       font-weight: 700;
       text-transform: uppercase;
-      font-size: 0.76rem;
+      font-size: 0.75rem;
       letter-spacing: 0.6px;
       padding: 1rem 1.2rem;
       border-bottom: 2px solid var(--border-color);
     }}
     table.custom-table td {{
-      padding: 0.9rem 1.2rem;
+      padding: 0.85rem 1.2rem;
       border-bottom: 1px solid rgba(255, 255, 255, 0.06);
       vertical-align: middle;
     }}
@@ -415,6 +463,7 @@ def generate_interactive_html(df_all, df_resumo, df_uc):
 
     .badge-basica {{ background: rgba(56, 189, 248, 0.15); color: #38bdf8; }}
     .badge-comp {{ background: rgba(148, 163, 184, 0.15); color: #cbd5e1; }}
+    .badge-ppc-tag {{ background: rgba(16, 185, 129, 0.2); color: #34d399; border: 1px solid rgba(16, 185, 129, 0.4); font-weight: 800; }}
 
     /* PROGRESS BAR */
     .progress-bar-bg {{
@@ -481,8 +530,8 @@ def generate_interactive_html(df_all, df_resumo, df_uc):
           <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Instituto_Federal_de_Santa_Catarina_-_Marca_2015.svg/1200px-Instituto_Federal_de_Santa_Catarina_-_Marca_2015.svg.png" alt="IFSC Logo">
         </div>
         <div class="brand-titles">
-          <h1>Auditoria do Acervo Bibliográfico — PPC Técnico em Administração</h1>
-          <p>Cruzamento de 274 Referências do PPC 2026 vs. Catálogo Sophia (3.206 Obras) • IFSC Câmpus Garopaba</p>
+          <h1>Auditoria do Acervo & Exemplares — PPC Técnico em Administração</h1>
+          <p>Cruzamento de 274 Referências do PPC vs. Catálogo Sophia (3.003 Títulos • {total_exemplares_lib} Exemplares Físicos em Garopaba)</p>
         </div>
       </div>
 
@@ -507,7 +556,7 @@ def generate_interactive_html(df_all, df_resumo, df_uc):
     <div class="kpi-grid">
       <div class="kpi-card kpi-emerald">
         <div class="kpi-header">
-          <span class="kpi-title">Cobertura Geral</span>
+          <span class="kpi-title">Cobertura Geral PPC</span>
           <i class="bi bi-pie-chart-fill kpi-icon"></i>
         </div>
         <div class="kpi-value">73,0%</div>
@@ -525,11 +574,11 @@ def generate_interactive_html(df_all, df_resumo, df_uc):
 
       <div class="kpi-card kpi-purple">
         <div class="kpi-header">
-          <span class="kpi-title">Bibliografia Complementar</span>
-          <i class="bi bi-journal-text kpi-icon"></i>
+          <span class="kpi-title">Exemplares no Câmpus</span>
+          <i class="bi bi-stack kpi-icon"></i>
         </div>
-        <div class="kpi-value">68,7%</div>
-        <div class="kpi-desc">103 de 150 obras complementares no catálogo</div>
+        <div class="kpi-value">{total_exemplares_lib} Exs.</div>
+        <div class="kpi-desc">Total de cópias físicas em Garopaba em 3.003 títulos</div>
       </div>
 
       <div class="kpi-card kpi-rose">
@@ -547,7 +596,7 @@ def generate_interactive_html(df_all, df_resumo, df_uc):
           <i class="bi bi-arrow-repeat kpi-icon"></i>
         </div>
         <div class="kpi-value">24 Obras</div>
-        <div class="kpi-desc">Edição diferente disponível (oportunidade de harmonização)</div>
+        <div class="kpi-desc">Edição diferente disponível no acervo físico</div>
       </div>
     </div>
 
@@ -568,13 +617,16 @@ def generate_interactive_html(df_all, df_resumo, df_uc):
       <button class="tab-btn" onclick="switchTab('tab-todas')">
         <i class="bi bi-list-columns-reverse"></i> Mapeamento Completo (274 Referências)
       </button>
+      <button class="tab-btn" onclick="switchTab('tab-catalogo')">
+        <i class="bi bi-bookshelf"></i> Catálogo Geral Sophia (3.003 Obras & Exemplares)
+      </button>
     </div>
 
     <!-- FILTER BAR -->
     <div class="filter-bar">
       <div class="search-input-wrapper">
         <i class="bi bi-search"></i>
-        <input type="text" id="searchInput" class="search-input" placeholder="Pesquisar por título do livro, autor, unidade curricular ou ISBN..." oninput="applyFilters()">
+        <input type="text" id="searchInput" class="search-input" placeholder="Pesquisar por título, autor, unidade curricular, ISBN ou palavra-chave..." oninput="applyFilters()">
       </div>
 
       <div style="display: flex; gap: 0.8rem; flex-wrap: wrap;">
@@ -582,6 +634,13 @@ def generate_interactive_html(df_all, df_resumo, df_uc):
           <option value="ALL">Todos os Tipos (Básica e Complementar)</option>
           <option value="Básica">Apenas Bibliografia Básica</option>
           <option value="Complementar">Apenas Bibliografia Complementar</option>
+        </select>
+
+        <select id="filterExemplares" class="select-filter" onchange="applyFilters()">
+          <option value="ALL">Quantitativo de Exemplares: Todos</option>
+          <option value="1">1 Exemplar Físico</option>
+          <option value="2">2 Exemplares Físicos</option>
+          <option value="3+">3 ou mais Exemplares (Básica Recomendada)</option>
         </select>
 
         <select id="filterBloco" class="select-filter" onchange="applyFilters()">
@@ -627,7 +686,7 @@ def generate_interactive_html(df_all, df_resumo, df_uc):
               <th style="width: 10%;">Tipo</th>
               <th style="width: 22%;">Título & Autor</th>
               <th style="width: 12%;">Edição no PPC</th>
-              <th style="width: 38%;">Edição Disponível no Sophia (Câmpus Garopaba)</th>
+              <th style="width: 38%;">Edição & Exemplares no Sophia (Garopaba)</th>
             </tr>
           </thead>
           <tbody id="tbodyVariacoes">
@@ -687,6 +746,41 @@ def generate_interactive_html(df_all, df_resumo, df_uc):
       </div>
     </div>
 
+    <!-- TAB 6: CATÁLOGO GERAL SOPHIA -->
+    <div id="tab-catalogo" class="tab-pane">
+      <div style="background:var(--bg-card); border:1px solid var(--border-color); border-radius:var(--radius-lg); padding:1.2rem; margin-bottom:1.5rem;">
+        <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:1rem;">
+          <div>
+            <h3 style="font-family:'Outfit', sans-serif; font-size:1.15rem; color:var(--accent-blue); margin-bottom:0.2rem;">
+              <i class="bi bi-bookshelf me-1"></i> Catálogo Completo do Câmpus Garopaba (Sistema Sophia)
+            </h3>
+            <p style="font-size:0.85rem; color:var(--text-muted);">
+              Inventário total de <strong>3.003 títulos</strong> e <strong>{total_exemplares_lib} exemplares físicos</strong> catalogados no acervo.
+            </p>
+          </div>
+          <div style="display:flex; gap:0.6rem; align-items:center;">
+            <span class="badge badge-sim" id="badge-total-catalogo">3003 Obras Listadas</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="table-container">
+        <table class="custom-table" id="tableCatalogo">
+          <thead>
+            <tr>
+              <th style="width: 8%;">ID</th>
+              <th style="width: 62%;">Referência Bibliográfica Completa (ABNT NBR 6023)</th>
+              <th style="width: 15%;">Exemplares no Câmpus</th>
+              <th style="width: 15%;">Vínculo com PPC</th>
+            </tr>
+          </thead>
+          <tbody id="tbodyCatalogo">
+            <!-- Dynamic JS -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+
   </main>
 
   <!-- FOOTER -->
@@ -700,13 +794,59 @@ def generate_interactive_html(df_all, df_resumo, df_uc):
   <script>
     const allData = {json_data};
     const ucData = {json_uc_data};
+    const catalogData = {json_catalog_data};
+
+    let activeTabId = 'tab-ausentes';
 
     function switchTab(tabId) {{
+      activeTabId = tabId;
       document.querySelectorAll('.tab-pane').forEach(el => el.classList.remove('active'));
       document.querySelectorAll('.tab-btn').forEach(el => el.classList.remove('active'));
       
       document.getElementById(tabId).classList.add('active');
       event.currentTarget.classList.add('active');
+      
+      if (tabId === 'tab-catalogo') {{
+        renderCatalogo(catalogData);
+      }}
+    }}
+
+    function renderCatalogo(data) {{
+      const query = document.getElementById('searchInput').value.toLowerCase();
+      const exFilter = document.getElementById('filterExemplares').value;
+      
+      let filtered = data;
+      if (query) {{
+        filtered = filtered.filter(item => item.ref.toLowerCase().includes(query));
+      }}
+      if (exFilter === '1') {{
+        filtered = filtered.filter(item => item.exemplares === 1);
+      }} else if (exFilter === '2') {{
+        filtered = filtered.filter(item => item.exemplares === 2);
+      }} else if (exFilter === '3+') {{
+        filtered = filtered.filter(item => item.exemplares >= 3);
+      }}
+
+      document.getElementById('badge-total-catalogo').innerText = `${{filtered.length}} Obras Encontradas`;
+
+      const tbody = document.getElementById('tbodyCatalogo');
+      // Limit to 200 items in display for fast rendering, or render all
+      const displayItems = filtered.slice(0, 250);
+
+      tbody.innerHTML = displayItems.map(item => `
+        <tr>
+          <td><span class="badge font-code" style="background:rgba(255,255,255,0.06);">${{item.id}}</span></td>
+          <td style="font-size:0.86rem; line-height:1.45;">${{item.ref}}</td>
+          <td>
+            <span class="badge ${{item.exemplares >= 3 ? 'badge-sim' : (item.exemplares === 2 ? 'badge-var' : 'badge-fnde')}}">
+              <i class="bi bi-stack"></i> ${{item.exemplares}} ${{item.exemplares > 1 ? 'Exemplares' : 'Exemplar'}}
+            </span>
+          </td>
+          <td>
+            ${{item.is_ppc ? '<span class="badge badge-ppc-tag"><i class="bi bi-bookmark-check-fill"></i> No PPC ADM</span>' : '<span style="color:var(--text-muted); font-size:0.75rem;">Geral Acervo</span>'}}
+          </td>
+        </tr>
+      `).join('') + (filtered.length > 250 ? `<tr><td colspan="4" style="text-align:center; padding:1.2rem; color:var(--text-muted); font-weight:600;">Exibindo os primeiros 250 resultados de ${{filtered.length}} obras. Refine a pesquisa para filtrar títulos específicos.</td></tr>` : '');
     }}
 
     function renderTables(data) {{
@@ -806,6 +946,9 @@ def generate_interactive_html(df_all, df_resumo, df_uc):
 
       // 5. UCs Accordion
       renderUCAccordion(data);
+      
+      // 6. Catalogo
+      renderCatalogo(catalogData);
     }}
 
     function renderUCAccordion(filteredData) {{
@@ -898,6 +1041,7 @@ def generate_interactive_html(df_all, df_resumo, df_uc):
       const query = document.getElementById('searchInput').value.toLowerCase();
       const tipo = document.getElementById('filterTipo').value;
       const bloco = document.getElementById('filterBloco').value;
+      const exFilter = document.getElementById('filterExemplares').value;
 
       const filtered = allData.filter(d => {{
         const matchQuery = !query || 
@@ -909,7 +1053,17 @@ def generate_interactive_html(df_all, df_resumo, df_uc):
         const matchTipo = (tipo === 'ALL') || (d.Tipo_Bibliografia === tipo);
         const matchBloco = (bloco === 'ALL') || (d.Bloco_Formacao && d.Bloco_Formacao.includes(bloco));
 
-        return matchQuery && matchTipo && matchBloco;
+        let matchEx = true;
+        const exNum = parseInt(d.Exemplares_Fisicos) || 0;
+        if (exFilter === '1') {{
+          matchEx = exNum === 1;
+        }} else if (exFilter === '2') {{
+          matchEx = exNum === 2;
+        }} else if (exFilter === '3+') {{
+          matchEx = exNum >= 3 || d.Status === 'MATERIAL_FNDE';
+        }}
+
+        return matchQuery && matchTipo && matchBloco && matchEx;
       }});
 
       renderTables(filtered);
@@ -919,6 +1073,7 @@ def generate_interactive_html(df_all, df_resumo, df_uc):
       document.getElementById('searchInput').value = '';
       document.getElementById('filterTipo').value = 'ALL';
       document.getElementById('filterBloco').value = 'ALL';
+      document.getElementById('filterExemplares').value = 'ALL';
       renderTables(allData);
     }}
 
@@ -1031,7 +1186,7 @@ def generate_latex_pdf_report(df_all, df_resumo, df_uc):
 \vspace{0.3cm}
 
 \section{Apresentação e Metodologia}
-O presente relatório consolida a auditoria bibliográfica realizada pela Comissão de Reformulação do PPC do Curso Técnico em Administração Integrado ao Ensino Médio do IFSC Câmpus Garopaba. Foi realizado o cruzamento exaustivo entre todas as \textbf{274 referências bibliográficas} adotadas nas 45 Unidades Curriculares do curso e o catálogo do sistema Sophia (\textbf{3.206 títulos catalogados} da Biblioteca do Câmpus Garopaba).
+O presente relatório consolida a auditoria bibliográfica realizada pela Comissão de Reformulação do PPC do Curso Técnico em Administração Integrado ao Ensino Médio do IFSC Câmpus Garopaba. Foi realizado o cruzamento exaustivo entre todas as \textbf{274 referências bibliográficas} adotadas nas 45 Unidades Curriculares do curso e o catálogo do sistema Sophia (\textbf{3.003 títulos e 4.962 exemplares físicos} da Biblioteca do Câmpus Garopaba).
 
 \section{Indicadores Gerais de Cobertura}
 
@@ -1155,7 +1310,7 @@ def update_root_dashboard():
         <div class="panel-header">
           <div class="panel-title">
             <i class="bi bi-journal-check"></i>
-            Auditoria do Acervo Bibliográfico (PPC vs. Sistema Sophia)
+            Auditoria do Acervo & Exemplares Físicos (PPC vs. Sistema Sophia)
           </div>
           <div style="display: flex; gap: 0.8rem;">
             <a href="tecnico-administracao/revisao-equipe/checagem-biblioteca/dashboard_biblioteca.html" target="_blank" class="btn-action btn-emerald">
@@ -1168,7 +1323,7 @@ def update_root_dashboard():
         </div>
 
         <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 1.5rem;">
-          Cruzamento automatizado entre todas as <strong>274 referências bibliográficas</strong> adotadas no PPC do Técnico em Administração e o inventário oficial de <strong>3.206 obras</strong> do Sistema Sophia da Biblioteca do Câmpus Garopaba.
+          Cruzamento automatizado entre todas as <strong>274 referências bibliográficas</strong> adotadas no PPC do Técnico em Administração e o inventário oficial de <strong>3.003 títulos</strong> e <strong>4.962 exemplares físicos</strong> do Sistema Sophia da Biblioteca do Câmpus Garopaba.
         </p>
 
         <div class="grid-2">
@@ -1188,8 +1343,8 @@ def update_root_dashboard():
             <div class="step-item">
               <div class="step-icon" style="background:rgba(56,189,248,0.2); color:var(--accent-blue);"><i class="bi bi-pie-chart-fill"></i></div>
               <div class="step-content">
-                <h4>73,0% de Cobertura Global do Curso</h4>
-                <p>200 títulos disponíveis no acervo para suporte imediato às aulas das 45 Unidades Curriculares.</p>
+                <h4>4.962 Exemplares Físicos no Câmpus Garopaba</h4>
+                <p>Catálogo completo de 3.003 títulos consultável no painel com contagem de cópias por obra.</p>
               </div>
             </div>
 
@@ -1209,13 +1364,13 @@ def update_root_dashboard():
 
             <div style="background: rgba(15, 23, 42, 0.8); border: 1px solid var(--border-color); border-radius: 12px; padding: 1.2rem; display: flex; flex-direction: column; gap: 0.8rem;">
               <a href="tecnico-administracao/revisao-equipe/checagem-biblioteca/dashboard_biblioteca.html" target="_blank" style="color:var(--accent-emerald); text-decoration:none; font-weight:600; display:flex; align-items:center; gap:0.5rem;">
-                <i class="bi bi-box-arrow-up-right"></i> Painel Interativo da Biblioteca com Filtros Dinâmicos
+                <i class="bi bi-box-arrow-up-right"></i> Painel Interativo da Biblioteca (com Catálogo Geral de 3.003 Obras)
               </a>
               <a href="tecnico-administracao/revisao-equipe/checagem-biblioteca/relatorio_auditoria_biblioteca.pdf" target="_blank" style="color:var(--accent-blue); text-decoration:none; font-weight:600; display:flex; align-items:center; gap:0.5rem;">
                 <i class="bi bi-file-earmark-pdf"></i> Relatório Oficial de Auditoria em PDF (Formatado em LaTeX)
               </a>
               <a href="tecnico-administracao/revisao-equipe/checagem-biblioteca/Analise_Bibliografica_PPC_vs_Acervo_Sophia.xlsx" download style="color:var(--accent-amber); text-decoration:none; font-weight:600; display:flex; align-items:center; gap:0.5rem;">
-                <i class="bi bi-file-earmark-excel"></i> Planilha Consolidada de Auditoria (.xlsx com 6 abas)
+                <i class="bi bi-file-earmark-excel"></i> Planilha Consolidada de Auditoria com Contagem de Exemplares (.xlsx)
               </a>
               <a href="tecnico-administracao/revisao-equipe/checagem-biblioteca/sumario_executivo_david_biblioteca.md" target="_blank" style="color:var(--text-main); text-decoration:none; font-size:0.9rem; display:flex; align-items:center; gap:0.5rem;">
                 <i class="bi bi-envelope-paper-fill"></i> Memorando Executivo para o Bibliotecário David (.md)
@@ -1233,8 +1388,8 @@ def update_root_dashboard():
         print("Root index.html atualizado com a nova Tab da Biblioteca!")
 
 def main():
-    df_all, df_resumo, df_uc = load_data()
-    generate_interactive_html(df_all, df_resumo, df_uc)
+    df_all, df_resumo, df_uc, all_library_items = load_data()
+    generate_interactive_html(df_all, df_resumo, df_uc, all_library_items)
     generate_latex_pdf_report(df_all, df_resumo, df_uc)
     update_root_dashboard()
     print("Todas as tarefas concluídas com sucesso!")
