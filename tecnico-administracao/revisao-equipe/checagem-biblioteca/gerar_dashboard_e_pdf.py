@@ -754,11 +754,14 @@ def generate_interactive_html(df_all, df_resumo, df_uc, all_library_items, uc_di
       </div>
 
       <div class="header-actions">
-        <a href="relatorio_auditoria_biblioteca.pdf" target="_blank" class="btn-action btn-emerald">
-          <i class="bi bi-file-earmark-pdf-fill"></i> Baixar Relatório PDF Oficial
+        <button class="btn-action btn-emerald" onclick="switchTab('tab-sumario')">
+          <i class="bi bi-envelope-paper-fill"></i> Ver Sumário Executivo (David)
+        </button>
+        <a href="relatorio_auditoria_biblioteca.pdf" target="_blank" class="btn-action btn-outline">
+          <i class="bi bi-file-earmark-pdf-fill"></i> Relatório PDF Oficial
         </a>
         <a href="Analise_Bibliografica_PPC_vs_Acervo_Sophia.xlsx" download class="btn-action btn-outline">
-          <i class="bi bi-file-earmark-excel-fill text-emerald"></i> Baixar Planilha Excel (.xlsx)
+          <i class="bi bi-file-earmark-excel-fill text-emerald"></i> Planilha Excel (.xlsx)
         </a>
         <a href="../../../index.html" class="btn-action btn-outline">
           <i class="bi bi-arrow-left"></i> Painel Geral do PPC
@@ -839,6 +842,9 @@ def generate_interactive_html(df_all, df_resumo, df_uc, all_library_items, uc_di
 
     <!-- TABS -->
     <div class="dashboard-tabs">
+      <button class="tab-btn" onclick="switchTab('tab-sumario')">
+        <i class="bi bi-envelope-paper-fill"></i> 📑 Sumário Executivo (David)
+      </button>
       <button class="tab-btn active" onclick="switchTab('tab-diagnostico')">
         <i class="bi bi-kanban-fill"></i> Diagnóstico das 45 Ementas <span class="badge badge-nao" style="margin-left:4px;">{count_com_problema} com Pendência</span>
       </button>
@@ -888,6 +894,161 @@ def generate_interactive_html(df_all, df_resumo, df_uc, all_library_items, uc_di
         <button class="btn-action btn-outline" onclick="resetFilters()">
           <i class="bi bi-arrow-counterclockwise"></i> Limpar Filtros
         </button>
+      </div>
+    </div>
+
+    <!-- TAB EXCLUSIVA: SUMÁRIO EXECUTIVO PARA O DAVID -->
+    <div id="tab-sumario" class="tab-pane">
+      <div style="background:var(--bg-card); border:1px solid var(--border-color); border-radius:var(--radius-lg); padding:2rem; margin-bottom:1.5rem;">
+        
+        <!-- Header do Memorando -->
+        <div style="border-bottom:2px solid var(--border-color); padding-bottom:1.5rem; margin-bottom:1.5rem; display:flex; justify-content:space-between; align-items:flex-start; flex-wrap:wrap; gap:1rem;">
+          <div>
+            <span class="badge badge-sim" style="font-size:0.8rem; margin-bottom:0.5rem;"><i class="bi bi-file-earmark-text-fill"></i> Memorando Técnico Oficial</span>
+            <h2 style="font-family:'Outfit', sans-serif; font-size:1.45rem; color:#ffffff; margin-top:0.3rem;">Sumário Executivo: Auditoria Normativa de Acervo & Quantitativos de Exemplares</h2>
+            <div style="margin-top:0.8rem; font-size:0.88rem; color:var(--text-muted); line-height:1.7;">
+              <strong>Para:</strong> David (Bibliotecário-Documentalista — IFSC Câmpus Garopaba)<br>
+              <strong>De:</strong> Comissão de Reformulação do PPC Técnico em Administração Integrado<br>
+              <strong>Data:</strong> 28 de Agosto de 2026<br>
+              <strong>Assunto:</strong> Diagnóstico de Cobertura do Catálogo Sophia e Demanda de Aquisição de Exemplares Físicos
+            </div>
+          </div>
+          <div style="display:flex; gap:0.6rem;">
+            <button class="btn-action btn-emerald" onclick="window.print()">
+              <i class="bi bi-printer-fill"></i> Imprimir / Salvar PDF
+            </button>
+            <a href="relatorio_auditoria_biblioteca.pdf" target="_blank" class="btn-action btn-outline">
+              <i class="bi bi-file-earmark-pdf-fill"></i> Baixar Relatório LaTeX (.pdf)
+            </a>
+          </div>
+        </div>
+
+        <!-- Seção 1: Premissas Normativas -->
+        <div style="margin-bottom:1.8rem;">
+          <h3 style="font-family:'Outfit', sans-serif; font-size:1.15rem; color:var(--accent-emerald); margin-bottom:0.6rem;">
+            <i class="bi bi-1-circle-fill me-1"></i> 1. Premissas Normativas Institucionais (IFSC)
+          </h3>
+          <div style="background:rgba(15,23,42,0.6); border:1px solid var(--border-color); border-radius:10px; padding:1rem; font-size:0.88rem; line-height:1.6;">
+            <p>Em consonância com as normas de regulação e avaliação de cursos do IFSC, a auditoria aplicou os seguintes critérios de quantitativos mínimos:</p>
+            <ul style="margin-top:0.5rem; padding-left:1.2rem; color:#f1f5f9;">
+              <li><strong>Bibliografia Básica:</strong> Mínimo de <strong>2 títulos de livros</strong> por Unidade Curricular, devendo o acervo do câmpus disponibilizar <strong>ao menos 3 exemplares físicos de cada título</strong> (ou livro PNLD com 1 exemplar por estudante).</li>
+              <li><strong>Bibliografia Complementar:</strong> Mínimo de <strong>3 títulos de livros</strong> por Unidade Curricular, devendo o acervo do câmpus disponibilizar <strong>ao menos 1 exemplar físico de cada título</strong>.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Seção 2: Síntese de Indicadores & Demanda de Compras -->
+        <div style="margin-bottom:1.8rem;">
+          <h3 style="font-family:'Outfit', sans-serif; font-size:1.15rem; color:var(--accent-emerald); margin-bottom:0.6rem;">
+            <i class="bi bi-2-circle-fill me-1"></i> 2. Síntese Geral de Cobertura e Demanda de Aquisição
+          </h3>
+          <div class="table-container" style="margin-bottom:1rem;">
+            <table class="custom-table">
+              <thead>
+                <tr>
+                  <th>Indicador / Métrica Normativa</th>
+                  <th>Quantitativo Mapeado</th>
+                  <th>Percentual / Meta Institucional</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Total de Unidades Curriculares (UCs) Auditadas</td>
+                  <td><strong>45 UCs</strong></td>
+                  <td><span class="badge badge-sim">100% da Matriz</span></td>
+                </tr>
+                <tr>
+                  <td>Total Geral de Títulos Bibliográficos no PPC</td>
+                  <td><strong>272 títulos</strong></td>
+                  <td>122 Básicos + 150 Complementares</td>
+                </tr>
+                <tr>
+                  <td>Títulos EXISTENTES no Sophia de Garopaba (Físico / PNLD)</td>
+                  <td><strong>200 títulos</strong></td>
+                  <td><span class="badge badge-sim">73,5% de Cobertura</span></td>
+                </tr>
+                <tr>
+                  <td>• Cobertura de Títulos na Bibliografia Básica</td>
+                  <td><strong>97 títulos</strong></td>
+                  <td><span class="badge badge-sim">79,5% Atendidos</span></td>
+                </tr>
+                <tr>
+                  <td>• Cobertura de Títulos na Bibliografia Complementar</td>
+                  <td><strong>103 títulos</strong></td>
+                  <td><span class="badge badge-var">68,7% Atendidos</span></td>
+                </tr>
+                <tr style="background:rgba(244,63,94,0.08);">
+                  <td><strong style="color:#fb7185;">DEMANDA DE COMPRAS: Bibliografia BÁSICA</strong></td>
+                  <td><strong style="color:#fb7185;">+{total_deficit_basica} exemplares físicos</strong></td>
+                  <td>Meta: $\ge$ 3 exemplares por título básico</td>
+                </tr>
+                <tr style="background:rgba(245,158,11,0.08);">
+                  <td><strong style="color:#fbbf24;">DEMANDA DE COMPRAS: Bibliografia COMPLEMENTAR</strong></td>
+                  <td><strong style="color:#fbbf24;">+{total_deficit_comp} exemplares físicos</strong></td>
+                  <td>Meta: $\ge$ 1 exemplar por título complementar</td>
+                </tr>
+                <tr style="background:rgba(16,185,129,0.12);">
+                  <td><strong style="color:#34d399; font-size:0.95rem;">TOTAL GERAL DE COMPRAS PARA O CÂMPUS GAROPABA</strong></td>
+                  <td><strong style="color:#34d399; font-size:1.05rem;">+{total_deficit_geral} exemplares físicos</strong></td>
+                  <td><span class="badge badge-sim">100% de Conformidade Normativa</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Seção 3: Relação Prioritária de Compras da Básica -->
+        <div style="margin-bottom:1.8rem;">
+          <h3 style="font-family:'Outfit', sans-serif; font-size:1.15rem; color:#fb7185; margin-bottom:0.6rem;">
+            <i class="bi bi-cart-plus-fill me-1"></i> 3. Prioridade 1: Relação de Obras da Bibliografia BÁSICA para Aquisição (Meta: 3 Exs.)
+          </h3>
+          <p style="font-size:0.84rem; color:var(--text-muted); margin-bottom:0.6rem;">
+            Estas são as obras da Bibliografia Básica que exigem compra de 3 exemplares físicos ou verificação de licenças digitais na plataforma <em>Minha Biblioteca / Pearson</em>:
+          </p>
+          <div class="table-container">
+            <table class="custom-table" style="font-size:0.84rem;">
+              <thead>
+                <tr>
+                  <th>Unidade Curricular</th>
+                  <th>Autor Principal</th>
+                  <th>Título da Obra</th>
+                  <th>Edição / Ano</th>
+                  <th>Demanda</th>
+                </tr>
+              </thead>
+              <tbody id="tbodySumarioBasica">
+                <!-- Dynamic JS -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Seção 4: Obras com Variação de Edição -->
+        <div style="margin-bottom:1rem;">
+          <h3 style="font-family:'Outfit', sans-serif; font-size:1.15rem; color:var(--accent-blue); margin-bottom:0.6rem;">
+            <i class="bi bi-arrow-repeat me-1"></i> 4. Obras com Variação de Edição/Ano Disponíveis no Sophia
+          </h3>
+          <p style="font-size:0.84rem; color:var(--text-muted); margin-bottom:0.6rem;">
+            A biblioteca possui <strong>24 títulos físicos</strong> no acervo, porém em edição ou ano distinto da citação no PPC. A comissão docente pode harmonizar a redação do PPC:
+          </p>
+          <div class="table-container">
+            <table class="custom-table" style="font-size:0.84rem;">
+              <thead>
+                <tr>
+                  <th>Unidade Curricular</th>
+                  <th>Tipo</th>
+                  <th>Título & Autor</th>
+                  <th>Edição PPC</th>
+                  <th>Edição & Exemplares no Sophia (Garopaba)</th>
+                </tr>
+              </thead>
+              <tbody id="tbodySumarioVariacoes">
+                <!-- Dynamic JS -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+
       </div>
     </div>
 
@@ -1065,12 +1226,16 @@ def generate_interactive_html(df_all, df_resumo, df_uc, all_library_items, uc_di
       document.querySelectorAll('.tab-pane').forEach(el => el.classList.remove('active'));
       document.querySelectorAll('.tab-btn').forEach(el => el.classList.remove('active'));
       
-      document.getElementById(tabId).classList.add('active');
-      event.currentTarget.classList.add('active');
+      const targetPane = document.getElementById(tabId);
+      if (targetPane) targetPane.classList.add('active');
+
+      const targetBtn = document.querySelector(`.tab-btn[onclick*="${{tabId}}"]`);
+      if (targetBtn) targetBtn.classList.add('active');
       
       if (tabId === 'tab-catalogo') {{
         renderCatalogo(catalogData);
       }}
+      window.scrollTo({{ top: 320, behavior: 'smooth' }});
     }}
 
     function filterDiagBy(statusCode) {{
@@ -1201,6 +1366,40 @@ def generate_interactive_html(df_all, df_resumo, df_uc, all_library_items, uc_di
 
     function renderTables(data, filteredDiag) {{
       renderDiagnosticCards(filteredDiag);
+
+      // 0. Sumário Executivo Tables
+      const tbodySumarioBasica = document.getElementById('tbodySumarioBasica');
+      if (tbodySumarioBasica) {{
+        const ausentesBasica = data.filter(d => d.Tipo_Bibliografia === 'Básica' && d.Existe_Biblioteca === 'NÃO');
+        tbodySumarioBasica.innerHTML = ausentesBasica.map(d => `
+          <tr>
+            <td><strong>${{d.UC_Nome}}</strong></td>
+            <td>${{d.Autor_Principal || 'Institucional'}}</td>
+            <td><strong>${{d.Titulo_Obra}}</strong></td>
+            <td><span class="badge badge-var">${{d.Edicao_PPC ? d.Edicao_PPC + 'ª ed.' : ''}} ${{d.Ano_PPC || ''}}</span></td>
+            <td><span class="badge badge-nao"><i class="bi bi-cart-plus-fill"></i> +3 ex. Físicos</span></td>
+          </tr>
+        `).join('');
+      }}
+
+      const tbodySumarioVariacoes = document.getElementById('tbodySumarioVariacoes');
+      if (tbodySumarioVariacoes) {{
+        const variacoes = data.filter(d => d.Status === 'EXISTE_EDICAO_DIFERENTE');
+        tbodySumarioVariacoes.innerHTML = variacoes.map(d => `
+          <tr>
+            <td><strong>${{d.UC_Nome}}</strong></td>
+            <td><span class="badge ${{d.Tipo_Bibliografia === 'Básica' ? 'badge-basica' : 'badge-comp'}}">${{d.Tipo_Bibliografia}}</span></td>
+            <td><strong>${{d.Titulo_Obra}}</strong><br><small style="color:var(--text-muted)">${{d.Autor_Principal}}</small></td>
+            <td><span class="badge badge-var">${{d.Edicao_PPC ? d.Edicao_PPC + 'ª ed.' : ''}} ${{d.Ano_PPC || ''}}</span></td>
+            <td>
+              <div style="font-size:0.82rem; line-height:1.4;">
+                <span class="badge badge-sim" style="margin-bottom:2px;"><i class="bi bi-stack"></i> ${{d.Exemplares_Disponiveis || 1}} ex. no Sophia</span><br>
+                ${{d.Referencia_Acervo_Sophia}}
+              </div>
+            </td>
+          </tr>
+        `).join('');
+      }}
 
       // 1. Ausentes
       const tbodyAusentes = document.getElementById('tbodyAusentes');
