@@ -977,15 +977,15 @@ def generate_interactive_html(df_all, df_resumo, df_uc, all_library_items, uc_di
                   <td><strong>103 títulos</strong></td>
                   <td><span class="badge badge-var">68,7% Atendidos</span></td>
                 </tr>
-                <tr style="background:rgba(244,63,94,0.08);">
-                  <td><strong style="color:#fb7185;">DEMANDA DE COMPRAS: Bibliografia BÁSICA</strong></td>
-                  <td><strong style="color:#fb7185;">+{total_deficit_basica} exemplares físicos</strong></td>
-                  <td>Meta: &ge; 3 exemplares por título básico</td>
+                <tr style="background:rgba(244,63,94,0.12); cursor:pointer; transition:all 0.2s;" onclick="scrollToSection('secao-compras-basica')" onmouseover="this.style.background='rgba(244,63,94,0.2)'" onmouseout="this.style.background='rgba(244,63,94,0.12)'" title="Clique para ir direto à lista de compras da Bibliografia Básica">
+                  <td><strong style="color:#fb7185;"><i class="bi bi-box-arrow-in-down-right me-1"></i> DEMANDA DE COMPRAS: Bibliografia BÁSICA</strong></td>
+                  <td><strong style="color:#fb7185; font-size:0.95rem;">+{total_deficit_basica} exemplares físicos</strong></td>
+                  <td>Meta: &ge; 3 exemplares por título básico <span class="badge badge-nao" style="margin-left:8px; cursor:pointer;"><i class="bi bi-arrow-down-circle-fill"></i> Ver Listagem Completa</span></td>
                 </tr>
-                <tr style="background:rgba(245,158,11,0.08);">
-                  <td><strong style="color:#fbbf24;">DEMANDA DE COMPRAS: Bibliografia COMPLEMENTAR</strong></td>
-                  <td><strong style="color:#fbbf24;">+{total_deficit_comp} exemplares físicos</strong></td>
-                  <td>Meta: &ge; 1 exemplar por título complementar</td>
+                <tr style="background:rgba(245,158,11,0.12); cursor:pointer; transition:all 0.2s;" onclick="scrollToSection('secao-compras-comp')" onmouseover="this.style.background='rgba(245,158,11,0.2)'" onmouseout="this.style.background='rgba(245,158,11,0.12)'" title="Clique para ir direto à lista de compras da Bibliografia Complementar">
+                  <td><strong style="color:#fbbf24;"><i class="bi bi-box-arrow-in-down-right me-1"></i> DEMANDA DE COMPRAS: Bibliografia COMPLEMENTAR</strong></td>
+                  <td><strong style="color:#fbbf24; font-size:0.95rem;">+{total_deficit_comp} exemplares físicos</strong></td>
+                  <td>Meta: &ge; 1 exemplar por título complementar <span class="badge badge-var" style="margin-left:8px; cursor:pointer;"><i class="bi bi-arrow-down-circle-fill"></i> Ver Listagem Completa</span></td>
                 </tr>
                 <tr style="background:rgba(16,185,129,0.12);">
                   <td><strong style="color:#34d399; font-size:0.95rem;">TOTAL GERAL DE COMPRAS PARA O CÂMPUS GAROPABA</strong></td>
@@ -998,10 +998,13 @@ def generate_interactive_html(df_all, df_resumo, df_uc, all_library_items, uc_di
         </div>
 
         <!-- Seção 3: Relação Prioritária de Compras da Básica -->
-        <div style="margin-bottom:1.8rem;">
-          <h3 style="font-family:'Outfit', sans-serif; font-size:1.15rem; color:#fb7185; margin-bottom:0.6rem;">
-            <i class="bi bi-cart-plus-fill me-1"></i> 3. Prioridade 1: Relação de Obras da Bibliografia BÁSICA para Aquisição (Meta: 3 Exs.)
-          </h3>
+        <div id="secao-compras-basica" style="margin-bottom:2rem; scroll-margin-top:20px; transition:all 0.3s; border-radius:12px; padding:0.5rem;">
+          <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; margin-bottom:0.6rem;">
+            <h3 style="font-family:'Outfit', sans-serif; font-size:1.15rem; color:#fb7185;">
+              <i class="bi bi-cart-plus-fill me-1"></i> 3. Prioridade 1: Relação de Obras da Bibliografia BÁSICA para Aquisição (Meta: 3 Exs.)
+            </h3>
+            <span class="badge badge-nao">+{total_deficit_basica} Exemplares Necessários</span>
+          </div>
           <p style="font-size:0.84rem; color:var(--text-muted); margin-bottom:0.6rem;">
             Estas são as obras da Bibliografia Básica que exigem compra de 3 exemplares físicos ou verificação de licenças digitais na plataforma <em>Minha Biblioteca / Pearson</em>:
           </p>
@@ -1023,11 +1026,43 @@ def generate_interactive_html(df_all, df_resumo, df_uc, all_library_items, uc_di
           </div>
         </div>
 
-        <!-- Seção 4: Obras com Variação de Edição -->
-        <div style="margin-bottom:1rem;">
-          <h3 style="font-family:'Outfit', sans-serif; font-size:1.15rem; color:var(--accent-blue); margin-bottom:0.6rem;">
-            <i class="bi bi-arrow-repeat me-1"></i> 4. Obras com Variação de Edição/Ano Disponíveis no Sophia
-          </h3>
+        <!-- Seção 4: Relação de Compras da Complementar -->
+        <div id="secao-compras-comp" style="margin-bottom:2rem; scroll-margin-top:20px; transition:all 0.3s; border-radius:12px; padding:0.5rem;">
+          <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; margin-bottom:0.6rem;">
+            <h3 style="font-family:'Outfit', sans-serif; font-size:1.15rem; color:#fbbf24;">
+              <i class="bi bi-journal-plus me-1"></i> 4. Prioridade 2: Relação de Obras da Bibliografia COMPLEMENTAR para Aquisição (Meta: 1 Ex.)
+            </h3>
+            <span class="badge badge-var">+{total_deficit_comp} Exemplares Necessários</span>
+          </div>
+          <p style="font-size:0.84rem; color:var(--text-muted); margin-bottom:0.6rem;">
+            Estas são as obras da Bibliografia Complementar que demandam a disponibilização de ao menos 1 exemplar físico no acervo do câmpus:
+          </p>
+          <div class="table-container">
+            <table class="custom-table" style="font-size:0.84rem;">
+              <thead>
+                <tr>
+                  <th>Unidade Curricular</th>
+                  <th>Autor Principal</th>
+                  <th>Título da Obra</th>
+                  <th>Edição / Ano</th>
+                  <th>Demanda</th>
+                </tr>
+              </thead>
+              <tbody id="tbodySumarioComp">
+                <!-- Dynamic JS -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Seção 5: Obras com Variação de Edição -->
+        <div id="secao-variacoes-edicao" style="margin-bottom:1rem; scroll-margin-top:20px; border-radius:12px; padding:0.5rem;">
+          <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; margin-bottom:0.6rem;">
+            <h3 style="font-family:'Outfit', sans-serif; font-size:1.15rem; color:var(--accent-blue);">
+              <i class="bi bi-arrow-repeat me-1"></i> 5. Obras com Variação de Edição/Ano Disponíveis no Sophia
+            </h3>
+            <span class="badge badge-fnde">24 Obras no Acervo</span>
+          </div>
           <p style="font-size:0.84rem; color:var(--text-muted); margin-bottom:0.6rem;">
             A biblioteca possui <strong>24 títulos físicos</strong> no acervo, porém em edição ou ano distinto da citação no PPC. A comissão docente pode harmonizar a redação do PPC:
           </p>
@@ -1238,6 +1273,18 @@ def generate_interactive_html(df_all, df_resumo, df_uc, all_library_items, uc_di
       window.scrollTo({{ top: 320, behavior: 'smooth' }});
     }}
 
+    function scrollToSection(sectionId) {{
+      switchTab('tab-sumario');
+      setTimeout(() => {{
+        const el = document.getElementById(sectionId);
+        if (el) {{
+          el.scrollIntoView({{ behavior: 'smooth', block: 'start' }});
+          el.style.boxShadow = '0 0 0 2px var(--accent-emerald)';
+          setTimeout(() => {{ el.style.boxShadow = 'none'; }}, 2000);
+        }}
+      }}, 100);
+    }}
+
     function filterDiagBy(statusCode) {{
       switchTab('tab-diagnostico');
       document.getElementById('filterStatusEmenta').value = statusCode;
@@ -1378,6 +1425,20 @@ def generate_interactive_html(df_all, df_resumo, df_uc, all_library_items, uc_di
             <td><strong>${{d.Titulo_Obra}}</strong></td>
             <td><span class="badge badge-var">${{d.Edicao_PPC ? d.Edicao_PPC + 'ª ed.' : ''}} ${{d.Ano_PPC || ''}}</span></td>
             <td><span class="badge badge-nao"><i class="bi bi-cart-plus-fill"></i> +3 ex. Físicos</span></td>
+          </tr>
+        `).join('');
+      }}
+
+      const tbodySumarioComp = document.getElementById('tbodySumarioComp');
+      if (tbodySumarioComp) {{
+        const ausentesComp = data.filter(d => d.Tipo_Bibliografia === 'Complementar' && d.Existe_Biblioteca === 'NÃO');
+        tbodySumarioComp.innerHTML = ausentesComp.map(d => `
+          <tr>
+            <td><strong>${{d.UC_Nome}}</strong></td>
+            <td>${{d.Autor_Principal || 'Institucional'}}</td>
+            <td><strong>${{d.Titulo_Obra}}</strong></td>
+            <td><span class="badge badge-var">${{d.Edicao_PPC ? d.Edicao_PPC + 'ª ed.' : ''}} ${{d.Ano_PPC || ''}}</span></td>
+            <td><span class="badge badge-var"><i class="bi bi-journal-plus"></i> +1 ex. Físico</span></td>
           </tr>
         `).join('');
       }}
@@ -1654,6 +1715,7 @@ def generate_latex_pdf_report(df_all, df_resumo, df_uc):
     tex_path = os.path.join(CHECK_DIR, "relatorio_auditoria_biblioteca.tex")
     
     df_nao_b = df_all[(df_all["Existe_Biblioteca"] == "NÃO") & (df_all["Tipo_Bibliografia"] == "Básica")].copy()
+    df_nao_c = df_all[(df_all["Existe_Biblioteca"] == "NÃO") & (df_all["Tipo_Bibliografia"] == "Complementar")].copy()
     df_var = df_all[df_all["Status"] == "EXISTE_EDICAO_DIFERENTE"].copy()
     
     def escape_tex(text):
@@ -1769,8 +1831,8 @@ Total Geral de Títulos no PPC & 272 títulos & 100,0\% \\ \hline
 \rowcolor{cinzaClaro}
 \textbf{DEMANDA DE AQUISIÇÃO DE EXEMPLARES FÍSICOS} & \textbf{Cópias Físicas} & \textbf{Meta por Título} \\ \hline
 \rowcolor{cinzaClaro}
-• Cópias a Adquirir para a Bibliografia BÁSICA & 99 exemplares & Meta: 3 ex. / título básico \\ \hline
-• Cópias a Adquirir para a Bibliografia COMPLEMENTAR & 47 exemplares & Meta: 1 ex. / título comp. \\ \hline
+• Cópias a Adquirir para a Bibliografia BÁSICA & 99 exemplares & Meta: $\ge$ 3 ex. / título básico \\ \hline
+• Cópias a Adquirir para a Bibliografia COMPLEMENTAR & 47 exemplares & Meta: $\ge$ 1 ex. / título comp. \\ \hline
 \rowcolor{ifsclightgreen}
 \textbf{TOTAL GERAL DE EXEMPLARES FÍSICOS A COMPRAR} & \textbf{146 exemplares} & \textbf{100\% de Conformidade} \\ \hline
 \end{tabularx}
@@ -1797,6 +1859,30 @@ Relação de obras básicas com necessidade de aquisição (3 exemplares por tí
         aut_t = escape_tex(str(row['Autor_Principal'])[:35]) if str(row['Autor_Principal']).strip() else 'Institucional / MEC'
         tit_t = escape_tex(str(row['Titulo_Obra'])[:45])
         tex_content += f"{uc_t} & {aut_t} & \\textbf{{{tit_t}}} & +3 ex. Físicos \\\\ \\hline\n"
+
+    tex_content += r"""\end{xltabular}
+
+\newpage
+\section{Prioridade 2: Obras da Bibliografia COMPLEMENTAR para Aquisição (Meta: 1 Ex.)}
+Relação de obras da Bibliografia Complementar ausentes no acervo que demandam aquisição de ao menos 1 exemplar físico no câmpus:
+
+\vspace{0.2cm}
+\begin{xltabular}{\linewidth}{|p{3.8cm}|p{3.2cm}|X|p{2.2cm}|}
+\hline
+\rowcolor{ifscgreen}
+\textcolor{white}{\textbf{Unidade Curricular}} & \textcolor{white}{\textbf{Autor Principal}} & \textcolor{white}{\textbf{Título da Obra}} & \textcolor{white}{\textbf{Demanda}} \\ \hline
+\endfirsthead
+\hline
+\rowcolor{ifscgreen}
+\textcolor{white}{\textbf{Unidade Curricular}} & \textcolor{white}{\textbf{Autor Principal}} & \textcolor{white}{\textbf{Título da Obra}} & \textcolor{white}{\textbf{Demanda}} \\ \hline
+\endhead
+"""
+
+    for _, row in df_nao_c.iterrows():
+        uc_t = escape_tex(row['UC_Nome'])
+        aut_t = escape_tex(str(row['Autor_Principal'])[:35]) if str(row['Autor_Principal']).strip() else 'Institucional / MEC'
+        tit_t = escape_tex(str(row['Titulo_Obra'])[:45])
+        tex_content += f"{uc_t} & {aut_t} & \\textbf{{{tit_t}}} & +1 ex. Físico \\\\ \\hline\n"
 
     tex_content += r"""\end{xltabular}
 
