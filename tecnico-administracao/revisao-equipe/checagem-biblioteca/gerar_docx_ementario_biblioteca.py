@@ -109,18 +109,23 @@ def add_internal_hyperlink(paragraph, anchor_name, text, color=HEX_BLUE, bold=Tr
     hyperlink.append(new_run)
     p.append(hyperlink)
 
-def clean_tex(text):
-    if not text: return ""
-    text = re.sub(r'\\revisao\{([^}]*)\}', r'\1', text)
-    text = re.sub(r'\\textcolor\{[^}]*\}\{([^}]*)\}', r'\1', text)
-    text = text.replace(r'\textbf{', '**').replace('}', '**')
-    text = text.replace(r'\textit{', '*').replace('}', '*')
-    text = text.replace(r'\large', '').replace(r'\small', '').replace(r'\normalsize', '')
-    text = text.replace(r'\newline', '\n').replace(r'\\[3pt]', '\n').replace(r'\\', '\n')
-    text = text.replace(r'\vspace{2pt}', '').replace(r'\vspace{0.2cm}', '')
-    text = text.replace(r'\&', '&').replace(r'\%', '%').replace(r'\$', '$').replace(r'\_', '_')
-    text = text.replace('--', '—')
-    return text.strip()
+def clean_tex_val(t):
+    if not t: return ''
+    # Remove TeX table markup leftovers
+    t = re.sub(r'\\dimexpr.*?\}\|\}\{\s*', '', t)
+    t = re.sub(r'\\dimexpr.*?\}\s*', '', t)
+    t = re.sub(r'^.*?\}\|\}\{\s*', '', t)
+    t = re.sub(r'^\|p\{[^}]*\}\|\}\{\s*', '', t)
+    t = re.sub(r'\\revisao\{([^}]*)\}', r'\1', t)
+    t = re.sub(r'\\textcolor\{[^}]*\}\{([^}]*)\}', r'\1', t)
+    t = re.sub(r'\\textbf\{([^}]*)\}', r'**\1**', t)
+    t = re.sub(r'\\textit\{([^}]*)\}', r'*\1*', t)
+    t = t.replace(r'\large', '').replace(r'\small', '').replace(r'\normalsize', '')
+    t = t.replace(r'\newline', '\n').replace(r'\\[3pt]', '\n').replace('\\\\', '\n')
+    t = t.replace(r'\vspace{2pt}', '').replace(r'\vspace{0.2cm}', '')
+    t = t.replace(r'\&', '&').replace(r'\%', '%').replace(r'\$', '$').replace(r'\_', '_')
+    t = t.replace('--', '—')
+    return t.strip()
 
 def add_formatted_text(paragraph, text, default_size=9.5, default_color=COLOR_DARK):
     tokens = re.split(r'(\*\*[^*]+\*\*)', text)
@@ -141,78 +146,111 @@ def add_formatted_text(paragraph, text, default_size=9.5, default_color=COLOR_DA
             if default_color:
                 paragraph.runs[-1].font.color.rgb = default_color
 
-def parse_tex_tables():
+def parse_single_table(tab_text):
+    uc_nome = 'UC'
+    if 'Unidade Curricular:' in tab_text:
+        after_uc = tab_text.split('Unidade Curricular:')[1]
+        if r'\large' in after_uc:
+            uc_part = after_uc.split(r'\large')[1].split('}')[0]
+            uc_nome = clean_tex_val(uc_part).replace('**', '').strip()
+        elif r'\textbf{' in after_uc:
+            uc_part = after_uc.split(r'\textbf{')[1].split('}')[0]
+            uc_nome = clean_tex_val(uc_part).replace('**', '').strip()
+
+    semestre = ''
+    if 'Semestre:' in tab_text:
+        sem_part = tab_text.split('Semestre:')[1].split(r'\cline{2-3}')[0]
+        if r'\textbf{' in sem_part:
+            semestre = sem_part.split(r'\textbf{')[1].split('}')[0].strip()
+        else:
+            semestre = clean_tex_val(sem_part).replace('**', '').strip()
+
+    ch_ead = '00 h'
+    if 'CH EaD*:' in tab_text:
+        ead_part = tab_text.split('CH EaD*:')[1].split(r'\cline{2-3}')[0]
+        if r'\textbf{' in ead_part:
+            ch_ead = ead_part.split(r'\textbf{')[1].split('}')[0].strip()
+
+    ch_total = '80 h'
+    if 'CH Total*:' in tab_text:
+        tot_part = tab_text.split('CH Total*:')[1].split(r'\endfirsthead')[0]
+        if r'\textbf{' in tot_part:
+            ch_total = tot_part.split(r'\textbf{')[-1].split('}')[0].strip()
+
+    sections = {}
+    keywords = [
+        ('Objetivos:', 'Conteúdos:'),
+        ('Conteúdos:', 'Estratégias de Ensino e Aprendizagem:'),
+        ('Estratégias de Ensino e Aprendizagem:', 'Bibliografia Básica:'),
+        ('Bibliografia Básica:', 'Bibliografia Complementar:'),
+        ('Bibliografia Complementar:', r'\end{xltabular}')
+    ]
+
+    for kw_start, kw_end in keywords:
+        if kw_start in tab_text:
+            pos_start = tab_text.find(kw_start) + len(kw_start)
+            pos_cell_start = tab_text.find(r'\multicolumn{3}', pos_start)
+            if pos_cell_start != -1:
+                pos_brace = tab_text.find('{', pos_cell_start + 15)
+                pos_content_start = tab_text.find('{', pos_brace + 1) + 1
+                if kw_end in tab_text[pos_content_start:]:
+                    pos_end = tab_text.find(kw_end, pos_content_start)
+                    pos_cell_end = tab_text.rfind(r'\multicolumn', pos_content_start, pos_end)
+                    if pos_cell_end == -1: pos_cell_end = pos_end
+                    raw = tab_text[pos_content_start:pos_cell_end]
+                else:
+                    pos_end = tab_text.find(r'\end{xltabular}', pos_content_start)
+                    if pos_end == -1: pos_end = len(tab_text)
+                    raw = tab_text[pos_content_start:pos_end]
+                    
+                raw = raw.strip()
+                if raw.endswith(r'\hline'): raw = raw[:-6].strip()
+                if raw.endswith('\\\\'): raw = raw[:-2].strip()
+                if raw.endswith('}'): raw = raw[:-1].strip()
+                sections[kw_start] = clean_tex_val(raw)
+            else:
+                sections[kw_start] = ''
+        else:
+            sections[kw_start] = ''
+
+    raw_obj = sections.get('Objetivos:', '')
+    obj_items = []
+    if r'\begin{itemize}' in raw_obj or r'\item' in raw_obj:
+        for it in raw_obj.split(r'\item')[1:]:
+            it_c = clean_tex_val(it.replace(r'\end{itemize}', '')).replace('\n', ' ').strip()
+            if it_c: obj_items.append(it_c)
+    else:
+        c = clean_tex_val(raw_obj)
+        if c: obj_items.append(c)
+
+    raw_cont = sections.get('Conteúdos:', '')
+    raw_estr = sections.get('Estratégias de Ensino e Aprendizagem:', '')
+    
+    raw_bb = sections.get('Bibliografia Básica:', '')
+    bb_items = [b.strip() for b in raw_bb.split('\n') if b.strip()]
+
+    raw_bc = sections.get('Bibliografia Complementar:', '')
+    bc_items = [c.strip() for c in raw_bc.split('\n') if c.strip()]
+
+    return {
+        'uc_nome': uc_nome,
+        'semestre': semestre,
+        'ch_ead': ch_ead,
+        'ch_total': ch_total,
+        'objetivos': obj_items,
+        'conteudos': raw_cont,
+        'estrategias': raw_estr,
+        'basica': bb_items,
+        'complementar': bc_items
+    }
+
+def generate_literal_ppc_docx():
+    print(f"Gerando Documento Word (.docx) Completo e Fiel em:\n{DOCX_OUTPUT_PATH}")
     with open(TEX_PATH, "r", encoding="utf-8") as f:
         content = f.read()
 
-    parts = content.split(r'\begin{xltabular}{\linewidth}{|X|p{2.5cm}|p{2.5cm}|}')
-    intro_part = parts[0]
-    
-    uc_tables = []
-    for tab in parts[1:]:
-        tab_clean = tab.split(r'\end{xltabular}')[0].strip()
-        
-        uc_match = re.search(r'\\textbf\{\\large\s*([^}]+)\}', tab_clean)
-        if not uc_match:
-            uc_match = re.search(r'\\textbf\{([^}]+)\}\s*\}\s*&\s*\\multicolumn', tab_clean)
-        uc_nome = uc_match.group(1).strip() if uc_match else "Unidade Curricular"
-        uc_nome = clean_tex(uc_nome).replace('**', '').strip()
-        
-        sem_match = re.search(r'\\textbf\{Semestre:\}\}\s*\\textbf\{([^}]+)\}', tab_clean)
-        semestre = sem_match.group(1).strip() if sem_match else ""
-        
-        ead_match = re.search(r'CH EaD\*:\}\}\s*\\\\\s*\\cline\{2-3\}\s*&\s*\\textbf\{([^}]+)\}', tab_clean)
-        ch_ead = ead_match.group(1).strip() if ead_match else "00 h"
-        
-        tot_match = re.search(r'CH Total\*:\}\}\s*\\\\\s*\\cline\{2-3\}\s*&\s*[^\&]+\&\s*\\textbf\{([^}]+)\}', tab_clean)
-        ch_total = tot_match.group(1).strip() if tot_match else ""
-        
-        def extract_sec(title):
-            pattern = rf'\\textbf\{{{title}\:\}}\}}\s*\\\\\s*\\hline\s*\\multicolumn\{{3\}}\{{\|p\{{[^}}]+\}}\|\}}{{\s*(.*?)\s*}}\s*\\\\\s*\\hline'
-            m = re.search(pattern, tab_clean, re.DOTALL)
-            if m:
-                return m.group(1).strip()
-            return ""
-
-        raw_obj = extract_sec('Objetivos')
-        obj_items = []
-        if r'\begin{itemize}' in raw_obj:
-            items_raw = raw_obj.split(r'\item')
-            for it in items_raw[1:]:
-                it_c = clean_tex(it.replace(r'\end{itemize}', '')).replace('\n', ' ').strip()
-                if it_c: obj_items.append(it_c)
-        else:
-            obj_items = [clean_tex(raw_obj)]
-
-        raw_cont = extract_sec('Conteúdos')
-        cont_clean = clean_tex(raw_cont)
-
-        raw_estr = extract_sec('Estratégias de Ensino e Aprendizagem')
-        estr_clean = clean_tex(raw_estr)
-
-        raw_bb = extract_sec('Bibliografia Básica')
-        bb_items = [clean_tex(b).strip() for b in raw_bb.split(r'\newline') if clean_tex(b).strip()]
-
-        raw_bc = extract_sec('Bibliografia Complementar')
-        bc_items = [clean_tex(c).strip() for c in raw_bc.split(r'\newline') if clean_tex(c).strip()]
-
-        uc_tables.append({
-            "uc_nome": uc_nome,
-            "semestre": semestre,
-            "ch_ead": ch_ead,
-            "ch_total": ch_total,
-            "objetivos": obj_items,
-            "conteudos": cont_clean,
-            "estrategias": estr_clean,
-            "basica": bb_items,
-            "complementar": bc_items
-        })
-        
-    return intro_part, uc_tables
-
-def generate_literal_ppc_docx():
-    print(f"Gerando Documento Word (.docx) com Sumário Clicável e Compatibilidade Google Docs em:\n{DOCX_OUTPUT_PATH}")
-    intro_part, uc_tables = parse_tex_tables()
+    tables_raw = content.split(r'\begin{xltabular}{\linewidth}{|X|p{2.5cm}|p{2.5cm}|}')
+    uc_tables = [parse_single_table(t) for t in tables_raw[1:]]
     
     doc = Document()
     
@@ -285,10 +323,9 @@ def generate_literal_ppc_docx():
         r.font.size = Pt(8.5)
         r.font.color.rgb = COLOR_IFSC_GREEN
 
-    # Preenchimento das 17 linhas do TOC
     for r_idx in range(1, 18):
         # Col 0: UCs 1 a 17 (1º Ano)
-        uc_idx_1 = r_idx # 1 to 17
+        uc_idx_1 = r_idx
         c0 = tbl_toc.cell(r_idx, 0)
         c0.width = w_toc_col
         set_cell_margins(c0, top=35, bottom=35, left=60, right=60)
@@ -298,7 +335,7 @@ def generate_literal_ppc_docx():
             add_internal_hyperlink(p0, f"uc_{uc_idx_1}", f"{uc_idx_1:02d}. {uc_item['uc_nome']}", color=HEX_BLUE, bold=False, size=8.0)
             
         # Col 1: UCs 18 a 33 (2º Ano)
-        uc_idx_2 = 17 + r_idx # 18 to 33
+        uc_idx_2 = 17 + r_idx
         c1 = tbl_toc.cell(r_idx, 1)
         c1.width = w_toc_col
         set_cell_margins(c1, top=35, bottom=35, left=60, right=60)
@@ -308,7 +345,7 @@ def generate_literal_ppc_docx():
             add_internal_hyperlink(p1, f"uc_{uc_idx_2}", f"{uc_idx_2:02d}. {uc_item['uc_nome']}", color=HEX_BLUE, bold=False, size=8.0)
             
         # Col 2: UCs 34 a 45 (3º Ano)
-        uc_idx_3 = 33 + r_idx # 34 to 45
+        uc_idx_3 = 33 + r_idx
         c2 = tbl_toc.cell(r_idx, 2)
         c2.width = w_toc_col
         set_cell_margins(c2, top=35, bottom=35, left=60, right=60)
@@ -332,7 +369,6 @@ def generate_literal_ppc_docx():
         tbl.alignment = WD_TABLE_ALIGNMENT.CENTER
         set_table_borders(tbl, color=HEX_BORDER)
         
-        # Header Row 1: Banner
         cell_top = tbl.cell(0, 0)
         cell_top.merge(tbl.cell(0, 3))
         set_cell_background(cell_top, HEX_LIGHT_GREEN)
@@ -344,7 +380,6 @@ def generate_literal_ppc_docx():
         r.font.size = Pt(10)
         r.font.color.rgb = COLOR_IFSC_GREEN
         
-        # Header Row 2: Columns
         col_headers = ["Ano", "Unidade Curricular (UC)", "Bloco Curricular", "CH (h)"]
         col_widths = [Inches(1.1), Inches(3.2), Inches(1.8), Inches(0.9)]
         for c_i in range(4):
@@ -369,7 +404,6 @@ def generate_literal_ppc_docx():
                 if c_i in (0, 3):
                     p.alignment = WD_ALIGN_PARAGRAPH.CENTER
                     
-        # Subtotal row
         r_sub = len(rows_data) + 2
         c_sub_label = tbl.cell(r_sub, 0)
         c_sub_label.merge(tbl.cell(r_sub, 2))
@@ -466,7 +500,6 @@ def generate_literal_ppc_docx():
     r_s2.font.color.rgb = COLOR_IFSC_GREEN
     p_sec2.paragraph_format.space_after = Pt(12)
 
-    # Render each of the 45 UC tables exactly as defined in the PPC LaTeX format
     for idx, uc in enumerate(uc_tables, 1):
         # Heading with Bookmark for Google Docs outline & Word navigation
         p_uc_title = doc.add_paragraph()
@@ -633,12 +666,11 @@ def generate_literal_ppc_docx():
         p_end.add_run(f"   |   PPC Técnico em Administração (IFSC Garopaba) • UC {idx:02d}").font.size = Pt(7.5)
         p_end.runs[-1].font.color.rgb = COLOR_MUTED
 
-        # Page break after each UC (except the last one)
         if idx < len(uc_tables):
             doc.add_page_break()
 
     doc.save(DOCX_OUTPUT_PATH)
-    print(f"Documento Word (.docx) com Sumário Clicável gerado com sucesso em:\n{DOCX_OUTPUT_PATH}")
+    print(f"Documento Word (.docx) gerado e salvo com sucesso em:\n{DOCX_OUTPUT_PATH}")
 
 if __name__ == "__main__":
     generate_literal_ppc_docx()
