@@ -1919,47 +1919,46 @@ WALSH, C. **Pedagogías decoloniales**: prácticas insurgentes de resistir, (re)
 
 ---
 
-# Unidade Curricular: Empreendedorismo I
+# Unidade Curricular: Empreendedorismo II
 **Curso:** Técnico em Administração
 **Câmpus:** Garopaba
 **Bloco de Formação:** Formação Técnica
 **Carga Horária Total:** 40 horas (Prática: não se aplica | EaD: não se aplica)
-**Ano/Semestre:** Ano 2, 4º semestre
+**Ano/Semestre:** Ano 3, 5º semestre
 
 ---
 
 ### 1. Ementa (Resumo do Componente)
-Estudo dos conceitos fundamentais do empreendedorismo, perfil e comportamento empreendedor nas organizações e na sociedade. Identificação, ideação e validação de oportunidades de mercado. Aplicação do pensamento de design (*Design Thinking*) e ferramentas visuais de modelagem de negócios (*Business Model Canvas*). Abordagem das temáticas transversais obrigatórias (ética, direitos humanos, diversidade e sustentabilidade socioambiental no empreendedorismo).
+Estudo avançado do plano de negócios e gestão de novos empreendimentos. Validação de mercado, planejamento operacional, estratégico e financeiro para abertura e consolidação de negócios. Inovação, propriedade intelectual, sustentabilidade empresarial e ecossistemas de inovação.
 
 ### 2. Objetivos de Aprendizagem & Competências
-- Compreender os conceitos fundamentais de empreendedorismo, perfil e comportamento empreendedor nas organizações e na sociedade;
-- Identificar e avaliar oportunidades de mercado e ideias de negócios com visão crítica, criativa e sustentável;
-- Desenvolver modelos de negócios inovadores por meio de ferramentas visuais como o *Business Model Canvas*;
-- Aplicar metodologias ativas e o pensamento de design (*Design Thinking*) na resolução de problemas organizacionais e sociais;
-- Compreender a responsabilidade socioambiental, a ética, a diversidade cultural e os direitos humanos na atividade empresarial.
+- Elaborar e estruturar um Plano de Negócios completo e consistente para novos empreendimentos;
+- Desenvolver estratégias de validação de mercado, precificação e canais de distribuição;
+- Compreender aspectos legais, societários, tributários e de propriedade intelectual aplicados a startups e MPEs;
+- Integrar a responsabilidade socioambiental, a ética e o desenvolvimento regional nas propostas de negócios.
 
 ### 3. Conteúdo Programático
-- Conceito, história e evolução do empreendedorismo; perfil, atitudes e características do comportamento empreendedor;
-- Identificação, ideação e validação de oportunidades de mercado e de negócios;
-- Criatividade, inovação e pensamento de design (*Design Thinking*);
-- Modelagem de Negócios: *Business Model Canvas* (Proposta de Valor, Segmentos de Clientes, Canais, Relacionamento, Fontes de Receita, Recursos Principais, Atividades-Chave, Parcerias Principais e Estrutura de Custos);
-- Introdução à análise simples de viabilidade mercadológica, técnica e financeira;
-- **Temáticas Transversais Obrigatórias:** Relações etnorraciais, história e cultura afro-brasileira e indígena na atividade econômica; Ética, Direitos Humanos e inclusão no trabalho; Sustentabilidade, meio ambiente e responsabilidade social corporativa; Prevenção às formas de violência, saúde e segurança do trabalho.
+- Do Modelo ao Plano de Negócios: estrutura, objetivos e componentes do Plano de Negócios;
+- Análise de Mercado: clientes, concorrentes, fornecedores e estratégias de posicionamento;
+- Plano de Marketing e Vendas para novos empreendimentos;
+- Plano Operacional: layout, capacidade produtiva, processos e equipe necessária;
+- Plano Financeiro Integrado: investimentos fixos, capital de giro, fluxo de caixa e ponto de equilíbrio;
+- Ecossistemas de Empreendedorismo e Inovação: incubadoras, aceleradoras, captação de recursos e *pitch decks*;
+- **Temáticas Transversais Obrigatórias:** Ética e transparência empresarial; Direitos Humanos e relações justas de trabalho; Sustentabilidade socioambiental e economia circular.
 
 ### 4. Metodologia de Ensino e Avaliação
-- **Metodologia:** Componente curricular desenvolvido por meio de metodologias ativas, com ênfase na Aprendizagem Baseada em Projetos (PBL), oficinas práticas de ideação, dinâmicas de validação e prototipação de modelos de negócios (*Business Model Canvas*), estudos de caso e apresentações de propostas em formato *pitch*. As atividades práticas de criação e modelagem utilizam os laboratórios de informática do câmpus e o Laboratório de Inovação, Empreendedorismo e Desenvolvimento Sustentável (LINEDS). Articula-se diretamente com Introdução à Administração, Gestão de Marketing I e II, Organização e Processos, Responsabilidade Socioambiental e Sustentabilidade, e Oficina de Integração I.
-- **Avaliação:** Diagnóstica, contínua e formativa, acompanhando a evolução dos estudantes no desenvolvimento das propostas de empreendimentos. Instrumentos: elaboração e apresentação do *Business Model Canvas*, apresentações orais em equipe (*pitches*), relatórios de projetos de ideação, listas de exercícios práticos e autoavaliação.
+- **Metodologia:** Metodologia de Aprendizagem Baseada em Projetos (PBL), desenvolvimento prático do Plano de Negócios em equipe, oficinas de validação, uso de laboratórios de informática e LINEDS. Articula-se com Gestão Financeira, Gestão de Pessoas, Gestão de Operações e Oficina de Integração II.
+- **Avaliação:** Formativa e processual por meio de entregas parciais do Plano de Negócios, apresentações orais em formato *pitch*, relatórios técnicos e autoavaliação.
 
 ### 5. Bibliografia Básica e Complementar
 **Básica:**
-DORNELAS, José Carlos Assis. **Empreendedorismo**: transformando ideias em negócios. 8. ed. São Paulo: Empreende / Atlas, 2021. 320 p.
-OSTERWALDER, Alexander; PIGNEUR, Yves. **Business Model Generation**: inovação em modelos de negócios. Rio de Janeiro: Alta Books, 2011. 288 p.
-CHIAVENATO, Idalberto. **Empreendedorismo**: dando asas ao espírito empreendedor. 4. ed. São Paulo: Manole, 2012. 312 p.
+DORNELAS, José Carlos Assis. **Plano de negócios**: seu guia definitivo para criar negócios de sucesso. 3. ed. São Paulo: Atlas, 2019. 288 p.
+CHIAVENATO, Idalberto. **Empreendedorismo**: dando asas ao espírito empreendedor. 4. ed. São Paulo: Manole, 2012. 320 p.
 
 **Complementar:**
-RIES, Eric. **A startup enxuta**: como os empreendedores atuais utilizam a inovação contínua para criar empresas extremamente bem-sucedidas. São Paulo: Levir, 2012. 272 p.
-BLANK, Steve; DORF, Bob. **Startups**: manual do fundador. Rio de Janeiro: Alta Books, 2014. 608 p.
-MARCONDES, Reynaldo Cavalheiro *et al.* **Planejamento e gestão de pequenos negócios**. São Paulo: Cengage Learning, 2017. 240 p.
+RIES, Eric. **A startup enxuta**: como os empreendedores atuais utilizam a inovação contínua para criar empresas extremamente bem-sucedidas. São Paulo: Leya, 2012. 272 p.
+BLANK, Steve; DORF, Bob. **Startup**: manual do empreendedor. Rio de Janeiro: Alta Books, 2014. 608 p.
+MARCONDES, Orlando *et al.* **Planejamento e gestão de pequenos negócios**. São Paulo: Saraiva, 2013. 248 p.
 ---
 
 # Unidade Curricular: Gestão de Pessoas e Relações no Trabalho
