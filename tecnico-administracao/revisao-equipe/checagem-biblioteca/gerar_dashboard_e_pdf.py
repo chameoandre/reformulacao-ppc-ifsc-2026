@@ -643,11 +643,12 @@ def generate_interactive_html(df_all, df_resumo, df_uc):
         <table class="custom-table" id="tableExistentes">
           <thead>
             <tr>
-              <th style="width: 20%;">Unidade Curricular</th>
-              <th style="width: 10%;">Tipo</th>
-              <th style="width: 30%;">Título da Obra</th>
-              <th style="width: 20%;">Autor Principal</th>
-              <th style="width: 20%;">Status de Disponibilidade</th>
+              <th style="width: 18%;">Unidade Curricular</th>
+              <th style="width: 8%;">Tipo</th>
+              <th style="width: 26%;">Título da Obra</th>
+              <th style="width: 18%;">Autor Principal</th>
+              <th style="width: 12%;">Exemplares</th>
+              <th style="width: 18%;">Status de Disponibilidade</th>
             </tr>
           </thead>
           <tbody id="tbodyExistentes">
@@ -672,10 +673,11 @@ def generate_interactive_html(df_all, df_resumo, df_uc):
             <tr>
               <th style="width: 18%;">Unidade Curricular</th>
               <th style="width: 8%;">Tipo</th>
-              <th style="width: 25%;">Título da Obra</th>
-              <th style="width: 18%;">Autor Principal</th>
-              <th style="width: 12%;">Existe na Biblioteca?</th>
-              <th style="width: 19%;">Observação Técnica</th>
+              <th style="width: 24%;">Título da Obra</th>
+              <th style="width: 16%;">Autor Principal</th>
+              <th style="width: 10%;">Exemplares</th>
+              <th style="width: 10%;">Existe?</th>
+              <th style="width: 14%;">Observação Técnica</th>
             </tr>
           </thead>
           <tbody id="tbodyTodas">
@@ -741,6 +743,9 @@ def generate_interactive_html(df_all, df_resumo, df_uc):
           <td><strong>${{d.Titulo_Obra}}</strong><br><small style="color:var(--text-muted)">${{d.Autor_Principal}}</small></td>
           <td><span class="badge badge-var">${{d.Edicao_PPC ? d.Edicao_PPC + 'ª ed.' : ''}} ${{d.Ano_PPC || ''}}</span></td>
           <td>
+            <div style="display:flex; align-items:center; gap:0.5rem; margin-bottom:4px;">
+              <span class="badge badge-sim"><i class="bi bi-stack"></i> ${{d.Exemplares_Fisicos || 1}} ex. no Câmpus</span>
+            </div>
             <div style="font-size:0.82rem; line-height:1.4;">${{d.Referencia_Acervo_Sophia}}</div>
             <div style="font-size:0.75rem; color:#34d399; margin-top:3px;"><i class="bi bi-info-circle"></i> ${{d.Observacao_Tecnica}}</div>
           </td>
@@ -752,36 +757,52 @@ def generate_interactive_html(df_all, df_resumo, df_uc):
       const existentes = data.filter(d => d.Existe_Biblioteca === 'SIM');
       document.getElementById('count-existentes').innerText = existentes.length;
 
-      tbodyExistentes.innerHTML = existentes.map(d => `
-        <tr>
-          <td><strong>${{d.UC_Nome}}</strong></td>
-          <td><span class="badge ${{d.Tipo_Bibliografia === 'Básica' ? 'badge-basica' : 'badge-comp'}}">${{d.Tipo_Bibliografia}}</span></td>
-          <td><strong>${{d.Titulo_Obra}}</strong></td>
-          <td>${{d.Autor_Principal}}</td>
-          <td>
-            <span class="badge ${{d.Status === 'EXISTE_NO_ACERVO' ? 'badge-sim' : (d.Status === 'MATERIAL_FNDE' ? 'badge-fnde' : 'badge-var')}}">
-              <i class="bi bi-check2-circle"></i> ${{d.Status_Legenda}}
-            </span>
-          </td>
-        </tr>
-      `).join('');
+      tbodyExistentes.innerHTML = existentes.map(d => {{
+        const exCount = d.Exemplares_Fisicos;
+        const exBadge = d.Status === 'MATERIAL_FNDE' 
+          ? '<span class="badge badge-fnde"><i class="bi bi-person-fill"></i> PNLD (1/Aluno)</span>'
+          : `<span class="badge badge-sim"><i class="bi bi-stack"></i> ${{exCount || 1}} ${{exCount > 1 ? 'Exs.' : 'Ex.'}} Físicos</span>`;
+
+        return `
+          <tr>
+            <td><strong>${{d.UC_Nome}}</strong></td>
+            <td><span class="badge ${{d.Tipo_Bibliografia === 'Básica' ? 'badge-basica' : 'badge-comp'}}">${{d.Tipo_Bibliografia}}</span></td>
+            <td><strong>${{d.Titulo_Obra}}</strong></td>
+            <td>${{d.Autor_Principal}}</td>
+            <td>${{exBadge}}</td>
+            <td>
+              <span class="badge ${{d.Status === 'EXISTE_NO_ACERVO' ? 'badge-sim' : (d.Status === 'MATERIAL_FNDE' ? 'badge-fnde' : 'badge-var')}}">
+                <i class="bi bi-check2-circle"></i> ${{d.Status_Legenda}}
+              </span>
+            </td>
+          </tr>
+        `;
+      }}).join('');
 
       // 4. Todas
       const tbodyTodas = document.getElementById('tbodyTodas');
-      tbodyTodas.innerHTML = data.map(d => `
-        <tr>
-          <td><strong>${{d.UC_Nome}}</strong></td>
-          <td><span class="badge ${{d.Tipo_Bibliografia === 'Básica' ? 'badge-basica' : 'badge-comp'}}">${{d.Tipo_Bibliografia}}</span></td>
-          <td><strong>${{d.Titulo_Obra}}</strong></td>
-          <td>${{d.Autor_Principal}}</td>
-          <td>
-            <span class="badge ${{d.Existe_Biblioteca === 'SIM' ? 'badge-sim' : 'badge-nao'}}">
-              ${{d.Existe_Biblioteca === 'SIM' ? '<i class="bi bi-check-lg"></i> SIM' : '<i class="bi bi-x-lg"></i> NÃO'}}
-            </span>
-          </td>
-          <td><small style="color:var(--text-muted)">${{d.Observacao_Tecnica}}</small></td>
-        </tr>
-      `).join('');
+      tbodyTodas.innerHTML = data.map(d => {{
+        const exCount = d.Exemplares_Fisicos;
+        const exBadge = d.Existe_Biblioteca === 'SIM'
+          ? (d.Status === 'MATERIAL_FNDE' ? '<span class="badge badge-fnde">PNLD</span>' : `<span class="badge badge-sim"><i class="bi bi-stack"></i> ${{exCount || 1}} ex.</span>`)
+          : '<span class="badge badge-nao">0 ex.</span>';
+
+        return `
+          <tr>
+            <td><strong>${{d.UC_Nome}}</strong></td>
+            <td><span class="badge ${{d.Tipo_Bibliografia === 'Básica' ? 'badge-basica' : 'badge-comp'}}">${{d.Tipo_Bibliografia}}</span></td>
+            <td><strong>${{d.Titulo_Obra}}</strong></td>
+            <td>${{d.Autor_Principal}}</td>
+            <td>${{exBadge}}</td>
+            <td>
+              <span class="badge ${{d.Existe_Biblioteca === 'SIM' ? 'badge-sim' : 'badge-nao'}}">
+                ${{d.Existe_Biblioteca === 'SIM' ? '<i class="bi bi-check-lg"></i> SIM' : '<i class="bi bi-x-lg"></i> NÃO'}}
+              </span>
+            </td>
+            <td><small style="color:var(--text-muted)">${{d.Observacao_Tecnica}}</small></td>
+          </tr>
+        `;
+      }}).join('');
 
       // 5. UCs Accordion
       renderUCAccordion(data);
@@ -829,6 +850,7 @@ def generate_interactive_html(df_all, df_resumo, df_uc):
                   <tr>
                     <th>Tipo</th>
                     <th>Título & Autor</th>
+                    <th>Exemplares</th>
                     <th>Situação no Sophia</th>
                     <th>Observação</th>
                   </tr>
@@ -838,6 +860,11 @@ def generate_interactive_html(df_all, df_resumo, df_uc):
                     <tr>
                       <td><span class="badge ${{r.Tipo_Bibliografia === 'Básica' ? 'badge-basica' : 'badge-comp'}}">${{r.Tipo_Bibliografia}}</span></td>
                       <td><strong>${{r.Titulo_Obra}}</strong><br><small style="color:var(--text-muted)">${{r.Autor_Principal}}</small></td>
+                      <td>
+                        <span class="badge ${{r.Existe_Biblioteca === 'SIM' ? 'badge-sim' : 'badge-nao'}}">
+                          ${{r.Status === 'MATERIAL_FNDE' ? 'PNLD' : (r.Exemplares_Fisicos ? r.Exemplares_Fisicos + ' ex.' : '0 ex.')}}
+                        </span>
+                      </td>
                       <td>
                         <span class="badge ${{r.Existe_Biblioteca === 'SIM' ? 'badge-sim' : 'badge-nao'}}">
                           ${{r.Status_Legenda}}
