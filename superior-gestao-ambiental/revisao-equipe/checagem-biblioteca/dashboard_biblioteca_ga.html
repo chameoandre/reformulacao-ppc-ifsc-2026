@@ -539,15 +539,15 @@
         <div>
           <strong style="color:#ffffff; font-size:0.95rem; font-family:'Outfit', sans-serif;">Critérios Oficiais de Quantitativos Mínimos da Biblioteca (IFSC):</strong>
           <p style="font-size:0.82rem; color:var(--text-muted); margin-top:2px; line-height:1.7;">
-            • <a href="#secao-compras-basica" onclick="scrollToSection('secao-compras-basica'); return false;" style="color:#34d399; font-weight:700; text-decoration:underline; cursor:pointer;">Bibliografia Básica: Mínimo 2 títulos &rarr; ao menos 3 exemplares físicos no acervo (Clique para ver as +109 cópias a comprar)</a>.<br>
-            • <a href="#secao-compras-comp" onclick="scrollToSection('secao-compras-comp'); return false;" style="color:#fbbf24; font-weight:700; text-decoration:underline; cursor:pointer;">Bibliografia Complementar: Mínimo 3 títulos &rarr; ao menos 1 exemplar físico no acervo (Clique para ver as +50 cópias a comprar)</a>.
+            • <a href="#secao-compras-basica" onclick="scrollToSection('secao-compras-basica'); return false;" style="color:#34d399; font-weight:700; text-decoration:underline; cursor:pointer;">Bibliografia Básica: Mínimo 2 títulos &rarr; ao menos 3 exemplares físicos no acervo (Clique para ver as +100 cópias a comprar)</a>.<br>
+            • <a href="#secao-compras-comp" onclick="scrollToSection('secao-compras-comp'); return false;" style="color:#fbbf24; font-weight:700; text-decoration:underline; cursor:pointer;">Bibliografia Complementar: Mínimo 3 títulos &rarr; ao menos 1 exemplar físico no acervo (Clique para ver as +46 cópias a comprar)</a>.
           </p>
         </div>
       </div>
       <div style="text-align:right;">
         <a href="#secao-compras-basica" onclick="scrollToSection('secao-compras-basica'); return false;" style="text-decoration:none;">
           <span class="normative-badge" style="cursor:pointer;" title="Clique para ver o relatório completo de compras">
-            <i class="bi bi-cart-check-fill"></i> Demanda Total de Compras: <strong>+159 exemplares</strong> <i class="bi bi-arrow-right-circle-fill ms-1"></i>
+            <i class="bi bi-cart-check-fill"></i> Demanda Total de Compras: <strong>+146 exemplares</strong> <i class="bi bi-arrow-right-circle-fill ms-1"></i>
           </span>
         </a>
       </div>
@@ -560,7 +560,7 @@
           <span class="kpi-title">Compras Básica (&lt; 3 Exs.)</span>
           <i class="bi bi-cart-plus-fill kpi-icon"></i>
         </div>
-        <div class="kpi-value">+109 Exs.</div>
+        <div class="kpi-value">+100 Exs.</div>
         <div class="kpi-desc">Exemplares a adquirir para suprir 3 cópias por título básico (Clique para ver)</div>
       </div>
 
@@ -569,7 +569,7 @@
           <span class="kpi-title">Compras Complementar (&lt; 1 Ex.)</span>
           <i class="bi bi-journal-plus kpi-icon"></i>
         </div>
-        <div class="kpi-value">+50 Exs.</div>
+        <div class="kpi-value">+46 Exs.</div>
         <div class="kpi-desc">Exemplares a adquirir para suprir 1 cópia dos títulos ausentes (Clique para ver)</div>
       </div>
 
@@ -610,13 +610,13 @@
         <i class="bi bi-kanban-fill"></i> Diagnóstico das 33 Ementas <span class="badge badge-nao" style="margin-left:4px;">30 com Pendência</span>
       </button>
       <button class="tab-btn" onclick="switchTab('tab-ausentes')">
-        <i class="bi bi-cart-dash-fill"></i> Títulos Ausentes para Aquisição <span id="count-ausentes" class="badge badge-nao" style="margin-left:4px;">73</span>
+        <i class="bi bi-cart-dash-fill"></i> Títulos Ausentes para Aquisição <span id="count-ausentes" class="badge badge-nao" style="margin-left:4px;">66</span>
       </button>
       <button class="tab-btn" onclick="switchTab('tab-variacoes')">
-        <i class="bi bi-arrow-left-right"></i> Variações de Edição / Ano <span id="count-variacoes" class="badge badge-var" style="margin-left:4px;">22</span>
+        <i class="bi bi-arrow-left-right"></i> Variações de Edição / Ano <span id="count-variacoes" class="badge badge-var" style="margin-left:4px;">25</span>
       </button>
       <button class="tab-btn" onclick="switchTab('tab-existentes')">
-        <i class="bi bi-check-circle-fill"></i> Acervo Confirmado (Sophia) <span id="count-existentes" class="badge badge-sim" style="margin-left:4px;">131</span>
+        <i class="bi bi-check-circle-fill"></i> Acervo Confirmado (Sophia) <span id="count-existentes" class="badge badge-sim" style="margin-left:4px;">138</span>
       </button>
       <button class="tab-btn" onclick="switchTab('tab-ucs')">
         <i class="bi bi-folder2-open"></i> Auditoria por UC (Accordion)
@@ -640,8 +640,8 @@
         <select id="filterStatusEmenta" class="select-filter" onchange="applyFilters()">
           <option value="ALL">Status da Ementa: Todas as 33 UCs</option>
           <option value="COM_PROBLEMA">🚨 Todas as Ementas com Alguma Pendência (30 UCs)</option>
-          <option value="CRITICA_BASICA">🔴 Críticas: Déficit na Básica (28 UCs)</option>
-          <option value="ATENCAO_COMPLEMENTAR">🟡 Atenção: Falta na Complementar (2 UCs)</option>
+          <option value="CRITICA_BASICA">🔴 Críticas: Déficit na Básica (27 UCs)</option>
+          <option value="ATENCAO_COMPLEMENTAR">🟡 Atenção: Falta na Complementar (3 UCs)</option>
           <option value="ATENCAO_EDICAO">🔵 Atenção: Variação de Edição (0 UCs)</option>
           <option value="CONFORME_100">🟢 100% Conformes Normativos (3 UCs)</option>
         </select>
@@ -719,32 +719,32 @@
               </tr>
               <tr>
                 <td><strong>Títulos com Acervo Físico Confirmado</strong></td>
-                <td><span class="badge badge-sim">131 títulos (64.2%)</span></td>
+                <td><span class="badge badge-sim">138 títulos (67.6%)</span></td>
                 <td>Obras localizadas no Sophia Garopaba</td>
               </tr>
               <tr>
                 <td><strong>Títulos Ausentes no Acervo</strong></td>
-                <td><span class="badge badge-nao">73 títulos (35.8%)</span></td>
+                <td><span class="badge badge-nao">66 títulos (32.4%)</span></td>
                 <td>Demanda direta para processo de aquisição</td>
               </tr>
               <tr>
                 <td><strong>Obras com Variação de Edição / Ano</strong></td>
-                <td><span class="badge badge-var">22 títulos</span></td>
+                <td><span class="badge badge-var">25 títulos</span></td>
                 <td>Acervo possui edição anterior/posterior à citada no PPC</td>
               </tr>
               <tr style="background:rgba(244,63,94,0.06);">
                 <td><strong><a href="#secao-compras-basica" onclick="scrollToSection('secao-compras-basica'); return false;" style="color:#e11d48; text-decoration:underline; font-weight:700;">DEMANDA DE COMPRAS: Bibliografia BÁSICA</a></strong></td>
-                <td><strong style="color:#e11d48; font-size:1.1rem;">+109 exemplares físicos</strong></td>
+                <td><strong style="color:#e11d48; font-size:1.1rem;">+100 exemplares físicos</strong></td>
                 <td>Meta: &ge; 3 exemplares por título básico (Clique para ver listagem)</td>
               </tr>
               <tr style="background:rgba(245,158,11,0.06);">
                 <td><strong><a href="#secao-compras-comp" onclick="scrollToSection('secao-compras-comp'); return false;" style="color:#d97706; text-decoration:underline; font-weight:700;">DEMANDA DE COMPRAS: Bibliografia COMPLEMENTAR</a></strong></td>
-                <td><strong style="color:#d97706; font-size:1.1rem;">+50 exemplares físicos</strong></td>
+                <td><strong style="color:#d97706; font-size:1.1rem;">+46 exemplares físicos</strong></td>
                 <td>Meta: &ge; 1 exemplar por título complementar (Clique para ver listagem)</td>
               </tr>
               <tr style="background:rgba(5,150,105,0.08);">
                 <td><strong>DEMANDA TOTAL CONSOLIDADA DE AQUISIÇÃO</strong></td>
-                <td><strong style="color:#059669; font-size:1.2rem;">+159 EXEMPLARES</strong></td>
+                <td><strong style="color:#059669; font-size:1.2rem;">+146 EXEMPLARES</strong></td>
                 <td>Total de cópias físicas para regularização normativa 100%</td>
               </tr>
             </tbody>
@@ -828,8 +828,8 @@
               <td>60h</td>
               <td><span class="badge badge-nao">🔴 Crítica: Déficit de 2 ex. na Básica</span></td>
               <td>2/2 obras <strong style='color:#e11d48;'>(+2 ex.)</strong></td>
-              <td>2/4 obras <strong style='color:#d97706;'>(+2 ex.)</strong></td>
-              <td><span class='badge badge-nao'>+4 ex.</span></td>
+              <td>4/4 obras <span style='color:#059669; font-weight:700;'>OK</span></td>
+              <td><span class='badge badge-nao'>+2 ex.</span></td>
               <td><button class="btn-action btn-outline" style="padding:2px 8px; font-size:0.75rem;" onclick="openUcAccordion(5)"><i class="bi bi-eye"></i> Detalhes</button></td>
             </tr>
             <tr class="diag-row" data-status="CRITICA_BASICA" data-sem="1">
@@ -838,8 +838,8 @@
               <td>60h</td>
               <td><span class="badge badge-nao">🔴 Crítica: Déficit de 2 ex. na Básica</span></td>
               <td>2/2 obras <strong style='color:#e11d48;'>(+2 ex.)</strong></td>
-              <td>2/3 obras <strong style='color:#d97706;'>(+1 ex.)</strong></td>
-              <td><span class='badge badge-nao'>+3 ex.</span></td>
+              <td>3/3 obras <span style='color:#059669; font-weight:700;'>OK</span></td>
+              <td><span class='badge badge-nao'>+2 ex.</span></td>
               <td><button class="btn-action btn-outline" style="padding:2px 8px; font-size:0.75rem;" onclick="openUcAccordion(6)"><i class="bi bi-eye"></i> Detalhes</button></td>
             </tr>
             <tr class="diag-row" data-status="CRITICA_BASICA" data-sem="1">
@@ -972,14 +972,14 @@
               <td><span class='badge badge-nao'>+8 ex.</span></td>
               <td><button class="btn-action btn-outline" style="padding:2px 8px; font-size:0.75rem;" onclick="openUcAccordion(19)"><i class="bi bi-eye"></i> Detalhes</button></td>
             </tr>
-            <tr class="diag-row" data-status="CRITICA_BASICA" data-sem="3">
+            <tr class="diag-row" data-status="ATENCAO_COMPLEMENTAR" data-sem="3">
               <td style="font-weight:700; color:var(--text-muted);">3º</td>
               <td><strong style="color:var(--text-heading);">TOPOGRAFIA APLICADA AO GEORREFERENCIAMENTO</strong></td>
               <td>60h</td>
-              <td><span class="badge badge-nao">🔴 Crítica: Déficit de 3 ex. na Básica</span></td>
-              <td>1/2 obras <strong style='color:#e11d48;'>(+3 ex.)</strong></td>
+              <td><span class="badge badge-var">🟡 Atenção: Falta 3 ex. na Complementar</span></td>
+              <td>2/2 obras <span style='color:#059669; font-weight:700;'>OK</span></td>
               <td>2/5 obras <strong style='color:#d97706;'>(+3 ex.)</strong></td>
-              <td><span class='badge badge-nao'>+6 ex.</span></td>
+              <td><span class='badge badge-nao'>+3 ex.</span></td>
               <td><button class="btn-action btn-outline" style="padding:2px 8px; font-size:0.75rem;" onclick="openUcAccordion(20)"><i class="bi bi-eye"></i> Detalhes</button></td>
             </tr>
             <tr class="diag-row" data-status="CRITICA_BASICA" data-sem="4">
@@ -996,20 +996,20 @@
               <td style="font-weight:700; color:var(--text-muted);">4º</td>
               <td><strong style="color:var(--text-heading);">ATIVIDADES DE EXTENSÃO</strong></td>
               <td>60h</td>
-              <td><span class="badge badge-var">🟡 Atenção: Falta 2 ex. na Complementar</span></td>
+              <td><span class="badge badge-var">🟡 Atenção: Falta 1 ex. na Complementar</span></td>
               <td>2/2 obras <span style='color:#059669; font-weight:700;'>OK</span></td>
-              <td>3/5 obras <strong style='color:#d97706;'>(+2 ex.)</strong></td>
-              <td><span class='badge badge-nao'>+2 ex.</span></td>
+              <td>4/5 obras <strong style='color:#d97706;'>(+1 ex.)</strong></td>
+              <td><span class='badge badge-nao'>+1 ex.</span></td>
               <td><button class="btn-action btn-outline" style="padding:2px 8px; font-size:0.75rem;" onclick="openUcAccordion(22)"><i class="bi bi-eye"></i> Detalhes</button></td>
             </tr>
             <tr class="diag-row" data-status="CRITICA_BASICA" data-sem="4">
               <td style="font-weight:700; color:var(--text-muted);">4º</td>
               <td><strong style="color:var(--text-heading);">FERRAMENTAS DE GESTÃO AMBIENTAL</strong></td>
               <td>60h</td>
-              <td><span class="badge badge-nao">🔴 Crítica: Déficit de 3 ex. na Básica</span></td>
-              <td>1/2 obras <strong style='color:#e11d48;'>(+3 ex.)</strong></td>
+              <td><span class="badge badge-nao">🔴 Crítica: Déficit de 1 ex. na Básica</span></td>
+              <td>2/2 obras <strong style='color:#e11d48;'>(+1 ex.)</strong></td>
               <td>2/4 obras <strong style='color:#d97706;'>(+2 ex.)</strong></td>
-              <td><span class='badge badge-nao'>+5 ex.</span></td>
+              <td><span class='badge badge-nao'>+3 ex.</span></td>
               <td><button class="btn-action btn-outline" style="padding:2px 8px; font-size:0.75rem;" onclick="openUcAccordion(23)"><i class="bi bi-eye"></i> Detalhes</button></td>
             </tr>
             <tr class="diag-row" data-status="CRITICA_BASICA" data-sem="4">
@@ -1026,10 +1026,10 @@
               <td style="font-weight:700; color:var(--text-muted);">4º</td>
               <td><strong style="color:var(--text-heading);">PROJETO DE TRABALHO DE CONCLUSÃO DE CURSO</strong></td>
               <td>60h</td>
-              <td><span class="badge badge-nao">🔴 Crítica: Déficit de 6 ex. na Básica</span></td>
-              <td>1/3 obras <strong style='color:#e11d48;'>(+6 ex.)</strong></td>
+              <td><span class="badge badge-nao">🔴 Crítica: Déficit de 3 ex. na Básica</span></td>
+              <td>2/3 obras <strong style='color:#e11d48;'>(+3 ex.)</strong></td>
               <td>0/5 obras <strong style='color:#d97706;'>(+5 ex.)</strong></td>
-              <td><span class='badge badge-nao'>+11 ex.</span></td>
+              <td><span class='badge badge-nao'>+8 ex.</span></td>
               <td><button class="btn-action btn-outline" style="padding:2px 8px; font-size:0.75rem;" onclick="openUcAccordion(25)"><i class="bi bi-eye"></i> Detalhes</button></td>
             </tr>
             <tr class="diag-row" data-status="CRITICA_BASICA" data-sem="4">
@@ -1076,10 +1076,10 @@
               <td style="font-weight:700; color:var(--text-muted);">1º</td>
               <td><strong style="color:var(--text-heading);">PLANEJAMENTO E GESTÃO DO TURISMO RESPONSÁVEL</strong></td>
               <td>60h</td>
-              <td><span class="badge badge-nao">🔴 Crítica: Déficit de 4 ex. na Básica</span></td>
-              <td>3/3 obras <strong style='color:#e11d48;'>(+4 ex.)</strong></td>
+              <td><span class="badge badge-nao">🔴 Crítica: Déficit de 3 ex. na Básica</span></td>
+              <td>3/3 obras <strong style='color:#e11d48;'>(+3 ex.)</strong></td>
               <td>3/3 obras <span style='color:#059669; font-weight:700;'>OK</span></td>
-              <td><span class='badge badge-nao'>+4 ex.</span></td>
+              <td><span class='badge badge-nao'>+3 ex.</span></td>
               <td><button class="btn-action btn-outline" style="padding:2px 8px; font-size:0.75rem;" onclick="openUcAccordion(30)"><i class="bi bi-eye"></i> Detalhes</button></td>
             </tr>
             <tr class="diag-row" data-status="CRITICA_BASICA" data-sem="5">
@@ -1120,7 +1120,7 @@
       <div id="secao-compras-basica" style="margin-top:2.5rem; margin-bottom:2rem;">
         <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:1rem; border-bottom:2px solid var(--accent-rose); padding-bottom:0.6rem;">
           <h2 style="font-family:'Outfit', sans-serif; font-size:1.3rem; color:var(--text-heading);">
-            <i class="bi bi-cart-plus-fill" style="color:var(--accent-rose);"></i> Lista Prioritária de Compras: Bibliografia BÁSICA (+109 Exemplares)
+            <i class="bi bi-cart-plus-fill" style="color:var(--accent-rose);"></i> Lista Prioritária de Compras: Bibliografia BÁSICA (+100 Exemplares)
           </h2>
           <span class="badge badge-nao" style="font-size:0.85rem;">Meta: &ge; 3 exemplares físicos por título</span>
         </div>
@@ -1354,14 +1354,6 @@
                 <td><span class="badge badge-nao" style="font-size:0.85rem;">+3 exemplares</span></td>
               </tr>
               <tr>
-                <td>3º</td>
-                <td><strong style="color:var(--text-heading);">TOPOGRAFIA APLICADA AO GEORREFERENCIAMENTO</strong></td>
-                <td>Fundamentos de topografia</td>
-                <td>SARAIVA, Sérgio; TULER, Marcelo</td>
-                <td>0 ex. (Título Ausente no Acervo Físico (Demanda de Compra: 3 exemplar(es)))</td>
-                <td><span class="badge badge-nao" style="font-size:0.85rem;">+3 exemplares</span></td>
-              </tr>
-              <tr>
                 <td>4º</td>
                 <td><strong style="color:var(--text-heading);">AGROECOLOGIA APLICADA</strong></td>
                 <td>Agroecologia: bases científicas para uma agricultura sustentável</td>
@@ -1398,8 +1390,8 @@
                 <td><strong style="color:var(--text-heading);">FERRAMENTAS DE GESTÃO AMBIENTAL</strong></td>
                 <td>Ferramentas de gestão ambiental: competitividade e sustentabilidade</td>
                 <td>PIMENTA, Handson Cláudio Dias; GOUVINHAS, Reidson Pereira</td>
-                <td>0 ex. (Título Ausente no Acervo Físico (Demanda de Compra: 3 exemplar(es)))</td>
-                <td><span class="badge badge-nao" style="font-size:0.85rem;">+3 exemplares</span></td>
+                <td>2 ex. (Disponível no Acervo (2 ex.), porém diverge (PPC: ano 2007 vs. Acervo: 2ª ed. 2011))</td>
+                <td><span class="badge badge-nao" style="font-size:0.85rem;">+1 exemplares</span></td>
               </tr>
               <tr>
                 <td>4º</td>
@@ -1414,14 +1406,6 @@
                 <td><strong style="color:var(--text-heading);">LEGISLAÇÃO AMBIENTAL</strong></td>
                 <td>Legislação Ambiental Comentada</td>
                 <td>TRENNEPOHL, Curt; TRENNEPOHL, Natascha; Terence</td>
-                <td>0 ex. (Título Ausente no Acervo Físico (Demanda de Compra: 3 exemplar(es)))</td>
-                <td><span class="badge badge-nao" style="font-size:0.85rem;">+3 exemplares</span></td>
-              </tr>
-              <tr>
-                <td>4º</td>
-                <td><strong style="color:var(--text-heading);">PROJETO DE TRABALHO DE CONCLUSÃO DE CURSO</strong></td>
-                <td>Fundamentos de metodologia científica</td>
-                <td>LAKATOS, Eva Maria; MARCONI, Marina de Andrade</td>
                 <td>0 ex. (Título Ausente no Acervo Físico (Demanda de Compra: 3 exemplar(es)))</td>
                 <td><span class="badge badge-nao" style="font-size:0.85rem;">+3 exemplares</span></td>
               </tr>
@@ -1478,8 +1462,8 @@
                 <td><strong style="color:var(--text-heading);">PLANEJAMENTO E GESTÃO DO TURISMO RESPONSÁVEL</strong></td>
                 <td>São Paulo: Roca, 2005</td>
                 <td>DESENVOLVIMENTO sustentável do turismo: uma compilação de boas práticas</td>
-                <td>1 ex. (Disponível no Acervo com 1 exemplar(es) físico(s))</td>
-                <td><span class="badge badge-nao" style="font-size:0.85rem;">+2 exemplares</span></td>
+                <td>2 ex. (Disponível no Acervo (2 ex.), porém diverge (PPC: ano 2005 vs. Acervo: ano 2007))</td>
+                <td><span class="badge badge-nao" style="font-size:0.85rem;">+1 exemplares</span></td>
               </tr>
               <tr>
                 <td>1º</td>
@@ -1538,7 +1522,7 @@
       <div id="secao-compras-comp" style="margin-top:2.5rem; margin-bottom:2rem;">
         <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:1rem; border-bottom:2px solid var(--accent-amber); padding-bottom:0.6rem;">
           <h2 style="font-family:'Outfit', sans-serif; font-size:1.3rem; color:var(--text-heading);">
-            <i class="bi bi-journal-plus" style="color:var(--accent-amber);"></i> Lista de Compras: Bibliografia COMPLEMENTAR (+50 Exemplares)
+            <i class="bi bi-journal-plus" style="color:var(--accent-amber);"></i> Lista de Compras: Bibliografia COMPLEMENTAR (+46 Exemplares)
           </h2>
           <span class="badge badge-var" style="font-size:0.85rem;">Meta: &ge; 1 exemplar físico por título</span>
         </div>
@@ -1640,30 +1624,6 @@
                 <td><strong style="color:var(--text-heading);">HISTÓRIA AMBIENTAL</strong></td>
                 <td>Lucro: uma história ambiental</td>
                 <td>STOLL, Mark</td>
-                <td>0 ex. (Título Ausente no Acervo Físico (Demanda de Compra: 1 exemplar(es)))</td>
-                <td><span class="badge badge-var" style="font-size:0.85rem;">+1 exemplar</span></td>
-              </tr>
-              <tr>
-                <td>1º</td>
-                <td><strong style="color:var(--text-heading);">LINGUAGEM E COMUNICAÇÃO I</strong></td>
-                <td>Resenha</td>
-                <td>LOUSADA, Eliane; ABREU-TARDELLI, Lília Santos</td>
-                <td>0 ex. (Título Ausente no Acervo Físico (Demanda de Compra: 1 exemplar(es)))</td>
-                <td><span class="badge badge-var" style="font-size:0.85rem;">+1 exemplar</span></td>
-              </tr>
-              <tr>
-                <td>1º</td>
-                <td><strong style="color:var(--text-heading);">LINGUAGEM E COMUNICAÇÃO I</strong></td>
-                <td>Resumo</td>
-                <td>LOUSADA, Eliane; ABREU-TARDELLI, Lília Santos</td>
-                <td>0 ex. (Título Ausente no Acervo Físico (Demanda de Compra: 1 exemplar(es)))</td>
-                <td><span class="badge badge-var" style="font-size:0.85rem;">+1 exemplar</span></td>
-              </tr>
-              <tr>
-                <td>1º</td>
-                <td><strong style="color:var(--text-heading);">METODOLOGIA DE PESQUISA</strong></td>
-                <td>Trabalhos de pesquisa: diários de leitura para a revisão bibliográfica</td>
-                <td>LOUSADA, Eliane; ABREU-TARDELLI, Lília Santos (Org.)</td>
                 <td>0 ex. (Título Ausente no Acervo Físico (Demanda de Compra: 1 exemplar(es)))</td>
                 <td><span class="badge badge-var" style="font-size:0.85rem;">+1 exemplar</span></td>
               </tr>
@@ -1853,14 +1813,6 @@
               </tr>
               <tr>
                 <td>4º</td>
-                <td><strong style="color:var(--text-heading);">ATIVIDADES DE EXTENSÃO</strong></td>
-                <td>Educação &amp; atualidade brasileira</td>
-                <td>FREIRE, Paulo</td>
-                <td>0 ex. (Título Ausente no Acervo Físico (Demanda de Compra: 1 exemplar(es)))</td>
-                <td><span class="badge badge-var" style="font-size:0.85rem;">+1 exemplar</span></td>
-              </tr>
-              <tr>
-                <td>4º</td>
                 <td><strong style="color:var(--text-heading);">FERRAMENTAS DE GESTÃO AMBIENTAL</strong></td>
                 <td>Indicadores de desempenho dos Sistemas de Gestão Ambiental (SGA): uma pesquisa teórica</td>
                 <td>CAMPOS, L. M. S.; MELO, D. A</td>
@@ -1964,7 +1916,7 @@
       <div id="secao-variacoes-edicao" style="margin-top:2.5rem; margin-bottom:2rem;">
         <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:1rem; border-bottom:2px solid var(--accent-blue); padding-bottom:0.6rem;">
           <h2 style="font-family:'Outfit', sans-serif; font-size:1.3rem; color:var(--text-heading);">
-            <i class="bi bi-arrow-repeat" style="color:var(--accent-blue);"></i> Obras com Variação de Edição / Ano no Acervo (22 Obras)
+            <i class="bi bi-arrow-repeat" style="color:var(--accent-blue);"></i> Obras com Variação de Edição / Ano no Acervo (25 Obras)
           </h2>
           <span class="badge badge-sim" style="font-size:0.85rem;">Disponíveis no Sophia &rarr; Atualizar texto do PPC</span>
         </div>
@@ -2121,6 +2073,14 @@
                 <td>4º</td>
                 <td><strong style="color:var(--text-heading);">ATIVIDADES DE EXTENSÃO</strong></td>
                 <td><span class="badge badge-comp">COMPLEMENTAR</span></td>
+                <td>______. Educação &amp; atualidade brasileira, São Paulo: Cortez, 2001.</td>
+                <td><span style="color:var(--accent-blue); font-weight:600;">Disponível no Acervo (2 ex.), porém diverge (PPC: ano 2001 vs. Acervo: 3ª ed. 2003)</span></td>
+                <td><span class="badge badge-sim">2 ex.</span></td>
+              </tr>
+              <tr>
+                <td>4º</td>
+                <td><strong style="color:var(--text-heading);">ATIVIDADES DE EXTENSÃO</strong></td>
+                <td><span class="badge badge-comp">COMPLEMENTAR</span></td>
                 <td>______. Pedagogia da autonomia. 31. ed. São Paulo: Paz e Terra, 2005.</td>
                 <td><span style="color:var(--accent-blue); font-weight:600;">Disponível no Acervo (1 ex.), porém diverge (PPC: 31ª ed. 2005 vs. Acervo: 49ª ed. 2014)</span></td>
                 <td><span class="badge badge-sim">1 ex.</span></td>
@@ -2134,12 +2094,28 @@
                 <td><span class="badge badge-sim">3 ex.</span></td>
               </tr>
               <tr>
+                <td>4º</td>
+                <td><strong style="color:var(--text-heading);">FERRAMENTAS DE GESTÃO AMBIENTAL</strong></td>
+                <td><span class="badge badge-basica">BÁSICA</span></td>
+                <td>PIMENTA, Handson Cláudio Dias; GOUVINHAS, Reidson Pereira. Ferramentas de gestão ambiental: competitividade e sustentabilidade. Natal: Ed. do CEFET-RN, 2007. Disponível em: &lt;https://moodle.ifsc.edu.br/mod/resource/view.php?id=84470&gt;. Acesso em: 28 ago. 2018.</td>
+                <td><span style="color:var(--accent-blue); font-weight:600;">Disponível no Acervo (2 ex.), porém diverge (PPC: ano 2007 vs. Acervo: 2ª ed. 2011)</span></td>
+                <td><span class="badge badge-sim">2 ex.</span></td>
+              </tr>
+              <tr>
                 <td>5º</td>
                 <td><strong style="color:var(--text-heading);">LICENCIAMENTO AMBIENTAL</strong></td>
                 <td><span class="badge badge-comp">COMPLEMENTAR</span></td>
                 <td>BRASIL. Tribunal de Contas da União. Cartilha de licenciamento ambiental. Brasília, DF, 2004. Disponível em: &lt;https://moodle.ifsc.edu.br/mod/resource/view.php?id=84576&gt;. Acesso em: 28 ago. 2018. CONSELHO NACIONAL DO MEIO AMBIENTE. Legislação ambiental federal. Disponível em &lt;http://www2.mma.gov.br/port/conama/legi.cfm&gt;. Acesso em: 28 ago. 2018.</td>
                 <td><span style="color:var(--accent-blue); font-weight:600;">Disponível no Acervo (1 ex.), porém diverge (PPC: ano 2004 vs. Acervo: ano 2014)</span></td>
                 <td><span class="badge badge-sim">1 ex.</span></td>
+              </tr>
+              <tr>
+                <td>1º</td>
+                <td><strong style="color:var(--text-heading);">PLANEJAMENTO E GESTÃO DO TURISMO RESPONSÁVEL</strong></td>
+                <td><span class="badge badge-basica">BÁSICA</span></td>
+                <td>DESENVOLVIMENTO sustentável do turismo: uma compilação de boas práticas. São Paulo: Roca, 2005. 175 p. ISBN 8572415734.</td>
+                <td><span style="color:var(--accent-blue); font-weight:600;">Disponível no Acervo (2 ex.), porém diverge (PPC: ano 2005 vs. Acervo: ano 2007)</span></td>
+                <td><span class="badge badge-sim">2 ex.</span></td>
               </tr>
               <tr>
                 <td>5º</td>
@@ -2311,33 +2287,6 @@
               <td><span class="badge badge-comp">COMPLEMENTAR</span></td>
               <td>Lucro: uma história ambiental</td>
               <td>STOLL, Mark</td>
-              <td><code>—</code></td>
-              <td><span class="badge badge-nao">+1 ex.</span></td>
-            </tr>
-            <tr>
-              <td>1º</td>
-              <td><strong style="color:var(--text-heading);">LINGUAGEM E COMUNICAÇÃO I</strong></td>
-              <td><span class="badge badge-comp">COMPLEMENTAR</span></td>
-              <td>Resenha</td>
-              <td>LOUSADA, Eliane; ABREU-TARDELLI, Lília Santos</td>
-              <td><code>—</code></td>
-              <td><span class="badge badge-nao">+1 ex.</span></td>
-            </tr>
-            <tr>
-              <td>1º</td>
-              <td><strong style="color:var(--text-heading);">LINGUAGEM E COMUNICAÇÃO I</strong></td>
-              <td><span class="badge badge-comp">COMPLEMENTAR</span></td>
-              <td>Resumo</td>
-              <td>LOUSADA, Eliane; ABREU-TARDELLI, Lília Santos</td>
-              <td><code>—</code></td>
-              <td><span class="badge badge-nao">+1 ex.</span></td>
-            </tr>
-            <tr>
-              <td>1º</td>
-              <td><strong style="color:var(--text-heading);">METODOLOGIA DE PESQUISA</strong></td>
-              <td><span class="badge badge-comp">COMPLEMENTAR</span></td>
-              <td>Trabalhos de pesquisa: diários de leitura para a revisão bibliográfica</td>
-              <td>LOUSADA, Eliane; ABREU-TARDELLI, Lília Santos (Org.)</td>
               <td><code>—</code></td>
               <td><span class="badge badge-nao">+1 ex.</span></td>
             </tr>
@@ -2515,15 +2464,6 @@
             <tr>
               <td>3º</td>
               <td><strong style="color:var(--text-heading);">TOPOGRAFIA APLICADA AO GEORREFERENCIAMENTO</strong></td>
-              <td><span class="badge badge-basica">BÁSICA</span></td>
-              <td>Fundamentos de topografia</td>
-              <td>SARAIVA, Sérgio; TULER, Marcelo</td>
-              <td><code>—</code></td>
-              <td><span class="badge badge-nao">+3 ex.</span></td>
-            </tr>
-            <tr>
-              <td>3º</td>
-              <td><strong style="color:var(--text-heading);">TOPOGRAFIA APLICADA AO GEORREFERENCIAMENTO</strong></td>
               <td><span class="badge badge-comp">COMPLEMENTAR</span></td>
               <td>Ministério do Desenvolvimento Agrário</td>
               <td>BRASIL</td>
@@ -2640,24 +2580,6 @@
             </tr>
             <tr>
               <td>4º</td>
-              <td><strong style="color:var(--text-heading);">ATIVIDADES DE EXTENSÃO</strong></td>
-              <td><span class="badge badge-comp">COMPLEMENTAR</span></td>
-              <td>Educação &amp; atualidade brasileira</td>
-              <td>FREIRE, Paulo</td>
-              <td><code>—</code></td>
-              <td><span class="badge badge-nao">+1 ex.</span></td>
-            </tr>
-            <tr>
-              <td>4º</td>
-              <td><strong style="color:var(--text-heading);">FERRAMENTAS DE GESTÃO AMBIENTAL</strong></td>
-              <td><span class="badge badge-basica">BÁSICA</span></td>
-              <td>Ferramentas de gestão ambiental: competitividade e sustentabilidade</td>
-              <td>PIMENTA, Handson Cláudio Dias; GOUVINHAS, Reidson Pereira</td>
-              <td><code>—</code></td>
-              <td><span class="badge badge-nao">+3 ex.</span></td>
-            </tr>
-            <tr>
-              <td>4º</td>
               <td><strong style="color:var(--text-heading);">FERRAMENTAS DE GESTÃO AMBIENTAL</strong></td>
               <td><span class="badge badge-comp">COMPLEMENTAR</span></td>
               <td>Indicadores de desempenho dos Sistemas de Gestão Ambiental (SGA): uma pesquisa teórica</td>
@@ -2680,15 +2602,6 @@
               <td><span class="badge badge-basica">BÁSICA</span></td>
               <td>Legislação Ambiental Comentada</td>
               <td>TRENNEPOHL, Curt; TRENNEPOHL, Natascha; Terence</td>
-              <td><code>—</code></td>
-              <td><span class="badge badge-nao">+3 ex.</span></td>
-            </tr>
-            <tr>
-              <td>4º</td>
-              <td><strong style="color:var(--text-heading);">PROJETO DE TRABALHO DE CONCLUSÃO DE CURSO</strong></td>
-              <td><span class="badge badge-basica">BÁSICA</span></td>
-              <td>Fundamentos de metodologia científica</td>
-              <td>LAKATOS, Eva Maria; MARCONI, Marina de Andrade</td>
               <td><code>—</code></td>
               <td><span class="badge badge-nao">+3 ex.</span></td>
             </tr>
@@ -2996,6 +2909,14 @@
               <td>4º</td>
               <td><strong>ATIVIDADES DE EXTENSÃO</strong></td>
               <td><span class="badge badge-comp">COMPLEMENTAR</span></td>
+              <td>______. Educação &amp; atualidade brasileira, São Paulo: Cortez, 2001.</td>
+              <td><span style="color:#38bdf8;">Disponível no Acervo (2 ex.), porém diverge (PPC: ano 2001 vs. Acervo: 3ª ed. 2003)</span></td>
+              <td><span class="badge badge-sim">2 ex.</span></td>
+            </tr>
+            <tr>
+              <td>4º</td>
+              <td><strong>ATIVIDADES DE EXTENSÃO</strong></td>
+              <td><span class="badge badge-comp">COMPLEMENTAR</span></td>
               <td>______. Pedagogia da autonomia. 31. ed. São Paulo: Paz e Terra, 2005.</td>
               <td><span style="color:#38bdf8;">Disponível no Acervo (1 ex.), porém diverge (PPC: 31ª ed. 2005 vs. Acervo: 49ª ed. 2014)</span></td>
               <td><span class="badge badge-sim">1 ex.</span></td>
@@ -3009,12 +2930,28 @@
               <td><span class="badge badge-sim">3 ex.</span></td>
             </tr>
             <tr>
+              <td>4º</td>
+              <td><strong>FERRAMENTAS DE GESTÃO AMBIENTAL</strong></td>
+              <td><span class="badge badge-basica">BÁSICA</span></td>
+              <td>PIMENTA, Handson Cláudio Dias; GOUVINHAS, Reidson Pereira. Ferramentas de gestão ambiental: competitividade e sustentabilidade. Natal: Ed. do CEFET-RN, 2007. Disponível em: &lt;https://moodle.ifsc.edu.br/mod/resource/view.php?id=84470&gt;. Acesso em: 28 ago. 2018.</td>
+              <td><span style="color:#38bdf8;">Disponível no Acervo (2 ex.), porém diverge (PPC: ano 2007 vs. Acervo: 2ª ed. 2011)</span></td>
+              <td><span class="badge badge-sim">2 ex.</span></td>
+            </tr>
+            <tr>
               <td>5º</td>
               <td><strong>LICENCIAMENTO AMBIENTAL</strong></td>
               <td><span class="badge badge-comp">COMPLEMENTAR</span></td>
               <td>BRASIL. Tribunal de Contas da União. Cartilha de licenciamento ambiental. Brasília, DF, 2004. Disponível em: &lt;https://moodle.ifsc.edu.br/mod/resource/view.php?id=84576&gt;. Acesso em: 28 ago. 2018. CONSELHO NACIONAL DO MEIO AMBIENTE. Legislação ambiental federal. Disponível em &lt;http://www2.mma.gov.br/port/conama/legi.cfm&gt;. Acesso em: 28 ago. 2018.</td>
               <td><span style="color:#38bdf8;">Disponível no Acervo (1 ex.), porém diverge (PPC: ano 2004 vs. Acervo: ano 2014)</span></td>
               <td><span class="badge badge-sim">1 ex.</span></td>
+            </tr>
+            <tr>
+              <td>1º</td>
+              <td><strong>PLANEJAMENTO E GESTÃO DO TURISMO RESPONSÁVEL</strong></td>
+              <td><span class="badge badge-basica">BÁSICA</span></td>
+              <td>DESENVOLVIMENTO sustentável do turismo: uma compilação de boas práticas. São Paulo: Roca, 2005. 175 p. ISBN 8572415734.</td>
+              <td><span style="color:#38bdf8;">Disponível no Acervo (2 ex.), porém diverge (PPC: ano 2005 vs. Acervo: ano 2007)</span></td>
+              <td><span class="badge badge-sim">2 ex.</span></td>
             </tr>
             <tr>
               <td>5º</td>
@@ -3232,6 +3169,22 @@
               <td>1º</td>
               <td><strong>LINGUAGEM E COMUNICAÇÃO I</strong></td>
               <td><span class="badge badge-comp">COMPLEMENTAR</span></td>
+              <td>Resenha</td>
+              <td><strong style="color:#34d399;">Resenha</strong> (MACHADO, Anna Rachel (coord.))</td>
+              <td><span class="badge badge-sim">4 ex.</span></td>
+            </tr>
+            <tr>
+              <td>1º</td>
+              <td><strong>LINGUAGEM E COMUNICAÇÃO I</strong></td>
+              <td><span class="badge badge-comp">COMPLEMENTAR</span></td>
+              <td>Resumo</td>
+              <td><strong style="color:#34d399;">Resumo</strong> (MACHADO, Anna Rachel (coord.))</td>
+              <td><span class="badge badge-sim">4 ex.</span></td>
+            </tr>
+            <tr>
+              <td>1º</td>
+              <td><strong>LINGUAGEM E COMUNICAÇÃO I</strong></td>
+              <td><span class="badge badge-comp">COMPLEMENTAR</span></td>
               <td>Artigos científicos: como redigir, publicar e avaliar</td>
               <td><strong style="color:#34d399;">Artigos científicos: como redigir, publicar e avaliar</strong> (PEREIRA, Maurício Gomes)</td>
               <td><span class="badge badge-sim">10 ex.</span></td>
@@ -3259,6 +3212,14 @@
               <td>Discurso do método</td>
               <td><strong style="color:#34d399;">Discurso do método</strong> (DESCARTES, René; GILSON, Étienne)</td>
               <td><span class="badge badge-sim">2 ex.</span></td>
+            </tr>
+            <tr>
+              <td>1º</td>
+              <td><strong>METODOLOGIA DE PESQUISA</strong></td>
+              <td><span class="badge badge-comp">COMPLEMENTAR</span></td>
+              <td>Trabalhos de pesquisa: diários de leitura para a revisão bibliográfica</td>
+              <td><strong style="color:#34d399;">Trabalhos de pesquisa: diários de leitura para a revisão bibliográfica</strong> (MACHADO, Anna Rachel (coord.); LOUSADA, Eliane Gouvêa; ABREU-TARDELLI, Lília Santos (org.))</td>
+              <td><span class="badge badge-sim">1 ex.</span></td>
             </tr>
             <tr>
               <td>1º</td>
@@ -3743,6 +3704,14 @@
             <tr>
               <td>3º</td>
               <td><strong>TOPOGRAFIA APLICADA AO GEORREFERENCIAMENTO</strong></td>
+              <td><span class="badge badge-basica">BÁSICA</span></td>
+              <td>Fundamentos de topografia</td>
+              <td><strong style="color:#34d399;">Fundamentos de topografia</strong> (TULER, Marcelo; SARAIVA, Sérgio)</td>
+              <td><span class="badge badge-sim">8 ex.</span></td>
+            </tr>
+            <tr>
+              <td>3º</td>
+              <td><strong>TOPOGRAFIA APLICADA AO GEORREFERENCIAMENTO</strong></td>
               <td><span class="badge badge-comp">COMPLEMENTAR</span></td>
               <td>Sistemas e ciência da informação geográfica</td>
               <td><strong style="color:#34d399;">Sistemas e ciência da informação geográfica</strong> (LONGLEY, Paul A)</td>
@@ -3792,6 +3761,14 @@
               <td>4º</td>
               <td><strong>ATIVIDADES DE EXTENSÃO</strong></td>
               <td><span class="badge badge-comp">COMPLEMENTAR</span></td>
+              <td>Educação &amp; atualidade brasileira</td>
+              <td><strong style="color:#34d399;">Educação &amp; atualidade brasileira</strong> (ROMÃO, José Eustáquio (org.))</td>
+              <td><span class="badge badge-sim">2 ex.</span></td>
+            </tr>
+            <tr>
+              <td>4º</td>
+              <td><strong>ATIVIDADES DE EXTENSÃO</strong></td>
+              <td><span class="badge badge-comp">COMPLEMENTAR</span></td>
               <td>Pedagogia da autonomia</td>
               <td><strong style="color:#34d399;">Pedagogia da autonomia: saberes necessários à prática educativa</strong> (FREIRE, Paulo)</td>
               <td><span class="badge badge-sim">1 ex.</span></td>
@@ -3811,6 +3788,14 @@
               <td>Sistema de gestão ambiental: manual prático para implementação de SGA e certificação ISO 14.001/2004</td>
               <td><strong style="color:#34d399;">Sistema de gestão ambiental: manual prático para implementação de SGA e certificação ISO 14.001/2004</strong> (ASSUMPÇÃO, Luiz Fernando Joly)</td>
               <td><span class="badge badge-sim">5 ex.</span></td>
+            </tr>
+            <tr>
+              <td>4º</td>
+              <td><strong>FERRAMENTAS DE GESTÃO AMBIENTAL</strong></td>
+              <td><span class="badge badge-basica">BÁSICA</span></td>
+              <td>Ferramentas de gestão ambiental: competitividade e sustentabilidade</td>
+              <td><strong style="color:#34d399;">Gestão ambiental: responsabilidade social e sustentabilidade</strong> (DIAS, Reinaldo)</td>
+              <td><span class="badge badge-sim">2 ex.</span></td>
             </tr>
             <tr>
               <td>4º</td>
@@ -3867,6 +3852,14 @@
               <td>Como elaborar projetos de pesquisa</td>
               <td><strong style="color:#34d399;">Como elaborar projetos de pesquisa</strong> (GIL, Antonio Carlos)</td>
               <td><span class="badge badge-sim">8 ex.</span></td>
+            </tr>
+            <tr>
+              <td>4º</td>
+              <td><strong>PROJETO DE TRABALHO DE CONCLUSÃO DE CURSO</strong></td>
+              <td><span class="badge badge-basica">BÁSICA</span></td>
+              <td>Fundamentos de metodologia científica</td>
+              <td><strong style="color:#34d399;">Fundamentos de metodologia científica</strong> (MARCONI, Marina de Andrade; LAKATOS, Eva Maria)</td>
+              <td><span class="badge badge-sim">6 ex.</span></td>
             </tr>
             <tr>
               <td>4º</td>
@@ -3985,8 +3978,8 @@
               <td><strong>PLANEJAMENTO E GESTÃO DO TURISMO RESPONSÁVEL</strong></td>
               <td><span class="badge badge-basica">BÁSICA</span></td>
               <td>São Paulo: Roca, 2005</td>
-              <td><strong style="color:#34d399;">São Paulo: Videolar S</strong> (O CORONEL e o lobisomem)</td>
-              <td><span class="badge badge-sim">1 ex.</span></td>
+              <td><strong style="color:#34d399;">São Paulo: SEBRAE, 2007</strong> (BOAS vendas!: como vender mais e melhor no varejo)</td>
+              <td><span class="badge badge-sim">2 ex.</span></td>
             </tr>
             <tr>
               <td>1º</td>
@@ -4482,7 +4475,7 @@
             <span class="badge badge-nao">🔴 Crítica: Déficit de 2 ex. na Básica</span>
           </div>
           <div style="display:flex; align-items:center; gap:0.75rem;">
-            <span class="badge badge-nao">Déficit: +4 ex.</span>
+            <span class="badge badge-nao">Déficit: +2 ex.</span>
             <i class="bi bi-chevron-down uc-chevron" style="transition:transform 0.2s ease;"></i>
           </div>
         </div>
@@ -4511,7 +4504,7 @@
             </div>
             <div>
               <h4 style="color:var(--text-muted); font-size:0.9rem; margin-bottom:0.6rem; text-transform:uppercase; letter-spacing:0.05em; font-weight:700;">
-                <i class="bi bi-journal-text"></i> Bibliografia Complementar (2/4 no acervo)
+                <i class="bi bi-journal-text"></i> Bibliografia Complementar (4/4 no acervo)
               </h4>
               <ul style="list-style:none; display:flex; flex-direction:column; gap:0.6rem;">
                 <li style="background:var(--bg-hover); border:1px solid var(--border-color); border-radius:6px; padding:0.6rem 0.8rem;">
@@ -4524,15 +4517,15 @@
                 <li style="background:var(--bg-hover); border:1px solid var(--border-color); border-radius:6px; padding:0.6rem 0.8rem;">
                   <div style="font-size:0.82rem; margin-bottom:0.3rem; color:var(--text-main);">LOUSADA, Eliane; ABREU-TARDELLI, Lília Santos. Resenha. São Paulo: Parábola, 2004.</div>
                   <div style="display:flex; justify-content:space-between; align-items:center; font-size:0.75rem;">
-                    <span class="badge badge-nao">Título Ausente no Acervo Físico (Demanda de Compra: 1 exemplar(es))</span>
-                    <strong style='color:#d97706;'>+ 1 ex. a comprar</strong>
+                    <span class="badge badge-sim">Disponível no Acervo com 4 exemplar(es) físico(s)</span>
+                    <span style='color:#059669; font-weight:700;'>Meta atendida</span>
                   </div>
                 </li>
                 <li style="background:var(--bg-hover); border:1px solid var(--border-color); border-radius:6px; padding:0.6rem 0.8rem;">
                   <div style="font-size:0.82rem; margin-bottom:0.3rem; color:var(--text-main);">______. Resumo. 7. ed. São Paulo: Parábola, 2004.</div>
                   <div style="display:flex; justify-content:space-between; align-items:center; font-size:0.75rem;">
-                    <span class="badge badge-nao">Título Ausente no Acervo Físico (Demanda de Compra: 1 exemplar(es))</span>
-                    <strong style='color:#d97706;'>+ 1 ex. a comprar</strong>
+                    <span class="badge badge-sim">Disponível no Acervo com 4 exemplar(es) físico(s)</span>
+                    <span style='color:#059669; font-weight:700;'>Meta atendida</span>
                   </div>
                 </li>
                 <li style="background:var(--bg-hover); border:1px solid var(--border-color); border-radius:6px; padding:0.6rem 0.8rem;">
@@ -4556,7 +4549,7 @@
             <span class="badge badge-nao">🔴 Crítica: Déficit de 2 ex. na Básica</span>
           </div>
           <div style="display:flex; align-items:center; gap:0.75rem;">
-            <span class="badge badge-nao">Déficit: +3 ex.</span>
+            <span class="badge badge-nao">Déficit: +2 ex.</span>
             <i class="bi bi-chevron-down uc-chevron" style="transition:transform 0.2s ease;"></i>
           </div>
         </div>
@@ -4585,7 +4578,7 @@
             </div>
             <div>
               <h4 style="color:var(--text-muted); font-size:0.9rem; margin-bottom:0.6rem; text-transform:uppercase; letter-spacing:0.05em; font-weight:700;">
-                <i class="bi bi-journal-text"></i> Bibliografia Complementar (2/3 no acervo)
+                <i class="bi bi-journal-text"></i> Bibliografia Complementar (3/3 no acervo)
               </h4>
               <ul style="list-style:none; display:flex; flex-direction:column; gap:0.6rem;">
                 <li style="background:var(--bg-hover); border:1px solid var(--border-color); border-radius:6px; padding:0.6rem 0.8rem;">
@@ -4598,8 +4591,8 @@
                 <li style="background:var(--bg-hover); border:1px solid var(--border-color); border-radius:6px; padding:0.6rem 0.8rem;">
                   <div style="font-size:0.82rem; margin-bottom:0.3rem; color:var(--text-main);">LOUSADA, Eliane; ABREU-TARDELLI, Lília Santos (Org.). Trabalhos de pesquisa: diários de leitura para a revisão bibliográfica. São Paulo: Parábola Editorial, 2007. (Leitura e produção de textos técnicos e acadêmicos, 4).</div>
                   <div style="display:flex; justify-content:space-between; align-items:center; font-size:0.75rem;">
-                    <span class="badge badge-nao">Título Ausente no Acervo Físico (Demanda de Compra: 1 exemplar(es))</span>
-                    <strong style='color:#d97706;'>+ 1 ex. a comprar</strong>
+                    <span class="badge badge-sim">Disponível no Acervo com 1 exemplar(es) físico(s)</span>
+                    <span style='color:#059669; font-weight:700;'>Meta atendida</span>
                   </div>
                 </li>
                 <li style="background:var(--bg-hover); border:1px solid var(--border-color); border-radius:6px; padding:0.6rem 0.8rem;">
@@ -5575,10 +5568,10 @@
             <span class="badge badge-comp">Semestre 3º</span>
             <strong style="color:var(--text-heading); font-size:1.02rem;">TOPOGRAFIA APLICADA AO GEORREFERENCIAMENTO</strong>
             <span style="font-size:0.8rem; color:var(--text-muted);">(60h)</span>
-            <span class="badge badge-nao">🔴 Crítica: Déficit de 3 ex. na Básica</span>
+            <span class="badge badge-var">🟡 Atenção: Falta 3 ex. na Complementar</span>
           </div>
           <div style="display:flex; align-items:center; gap:0.75rem;">
-            <span class="badge badge-nao">Déficit: +6 ex.</span>
+            <span class="badge badge-nao">Déficit: +3 ex.</span>
             <i class="bi bi-chevron-down uc-chevron" style="transition:transform 0.2s ease;"></i>
           </div>
         </div>
@@ -5586,7 +5579,7 @@
           <div style="display:grid; grid-template-columns:1fr 1fr; gap:1.5rem; margin-bottom:1rem;">
             <div>
               <h4 style="color:var(--accent-blue); font-size:0.9rem; margin-bottom:0.6rem; text-transform:uppercase; letter-spacing:0.05em; font-weight:700;">
-                <i class="bi bi-book-half"></i> Bibliografia Básica (1/2 no acervo)
+                <i class="bi bi-book-half"></i> Bibliografia Básica (2/2 no acervo)
               </h4>
               <ul style="list-style:none; display:flex; flex-direction:column; gap:0.6rem;">
                 <li style="background:var(--bg-hover); border:1px solid var(--border-color); border-radius:6px; padding:0.6rem 0.8rem;">
@@ -5599,8 +5592,8 @@
                 <li style="background:var(--bg-hover); border:1px solid var(--border-color); border-radius:6px; padding:0.6rem 0.8rem;">
                   <div style="font-size:0.82rem; margin-bottom:0.3rem; color:var(--text-main);">SARAIVA, Sérgio; TULER, Marcelo. Fundamentos de topografia. Porto Alegre: Bookman, 2014.</div>
                   <div style="display:flex; justify-content:space-between; align-items:center; font-size:0.75rem;">
-                    <span class="badge badge-nao">Título Ausente no Acervo Físico (Demanda de Compra: 3 exemplar(es))</span>
-                    <strong style='color:#e11d48;'>+ 3 ex. a comprar</strong>
+                    <span class="badge badge-sim">Disponível no Acervo com 8 exemplar(es) físico(s)</span>
+                    <span style='color:#059669; font-weight:700;'>Meta atendida</span>
                   </div>
                 </li>
               </ul>
@@ -5758,10 +5751,10 @@
             <span class="badge badge-comp">Semestre 4º</span>
             <strong style="color:var(--text-heading); font-size:1.02rem;">ATIVIDADES DE EXTENSÃO</strong>
             <span style="font-size:0.8rem; color:var(--text-muted);">(60h)</span>
-            <span class="badge badge-var">🟡 Atenção: Falta 2 ex. na Complementar</span>
+            <span class="badge badge-var">🟡 Atenção: Falta 1 ex. na Complementar</span>
           </div>
           <div style="display:flex; align-items:center; gap:0.75rem;">
-            <span class="badge badge-nao">Déficit: +2 ex.</span>
+            <span class="badge badge-nao">Déficit: +1 ex.</span>
             <i class="bi bi-chevron-down uc-chevron" style="transition:transform 0.2s ease;"></i>
           </div>
         </div>
@@ -5790,7 +5783,7 @@
             </div>
             <div>
               <h4 style="color:var(--text-muted); font-size:0.9rem; margin-bottom:0.6rem; text-transform:uppercase; letter-spacing:0.05em; font-weight:700;">
-                <i class="bi bi-journal-text"></i> Bibliografia Complementar (3/5 no acervo)
+                <i class="bi bi-journal-text"></i> Bibliografia Complementar (4/5 no acervo)
               </h4>
               <ul style="list-style:none; display:flex; flex-direction:column; gap:0.6rem;">
                 <li style="background:var(--bg-hover); border:1px solid var(--border-color); border-radius:6px; padding:0.6rem 0.8rem;">
@@ -5810,8 +5803,8 @@
                 <li style="background:var(--bg-hover); border:1px solid var(--border-color); border-radius:6px; padding:0.6rem 0.8rem;">
                   <div style="font-size:0.82rem; margin-bottom:0.3rem; color:var(--text-main);">______. Educação &amp; atualidade brasileira, São Paulo: Cortez, 2001.</div>
                   <div style="display:flex; justify-content:space-between; align-items:center; font-size:0.75rem;">
-                    <span class="badge badge-nao">Título Ausente no Acervo Físico (Demanda de Compra: 1 exemplar(es))</span>
-                    <strong style='color:#d97706;'>+ 1 ex. a comprar</strong>
+                    <span class="badge badge-sim">Disponível no Acervo (2 ex.), porém diverge (PPC: ano 2001 vs. Acervo: 3ª ed. 2003)</span>
+                    <span style='color:#059669; font-weight:700;'>Meta atendida</span>
                   </div>
                 </li>
                 <li style="background:var(--bg-hover); border:1px solid var(--border-color); border-radius:6px; padding:0.6rem 0.8rem;">
@@ -5839,10 +5832,10 @@
             <span class="badge badge-comp">Semestre 4º</span>
             <strong style="color:var(--text-heading); font-size:1.02rem;">FERRAMENTAS DE GESTÃO AMBIENTAL</strong>
             <span style="font-size:0.8rem; color:var(--text-muted);">(60h)</span>
-            <span class="badge badge-nao">🔴 Crítica: Déficit de 3 ex. na Básica</span>
+            <span class="badge badge-nao">🔴 Crítica: Déficit de 1 ex. na Básica</span>
           </div>
           <div style="display:flex; align-items:center; gap:0.75rem;">
-            <span class="badge badge-nao">Déficit: +5 ex.</span>
+            <span class="badge badge-nao">Déficit: +3 ex.</span>
             <i class="bi bi-chevron-down uc-chevron" style="transition:transform 0.2s ease;"></i>
           </div>
         </div>
@@ -5850,7 +5843,7 @@
           <div style="display:grid; grid-template-columns:1fr 1fr; gap:1.5rem; margin-bottom:1rem;">
             <div>
               <h4 style="color:var(--accent-blue); font-size:0.9rem; margin-bottom:0.6rem; text-transform:uppercase; letter-spacing:0.05em; font-weight:700;">
-                <i class="bi bi-book-half"></i> Bibliografia Básica (1/2 no acervo)
+                <i class="bi bi-book-half"></i> Bibliografia Básica (2/2 no acervo)
               </h4>
               <ul style="list-style:none; display:flex; flex-direction:column; gap:0.6rem;">
                 <li style="background:var(--bg-hover); border:1px solid var(--border-color); border-radius:6px; padding:0.6rem 0.8rem;">
@@ -5863,8 +5856,8 @@
                 <li style="background:var(--bg-hover); border:1px solid var(--border-color); border-radius:6px; padding:0.6rem 0.8rem;">
                   <div style="font-size:0.82rem; margin-bottom:0.3rem; color:var(--text-main);">PIMENTA, Handson Cláudio Dias; GOUVINHAS, Reidson Pereira. Ferramentas de gestão ambiental: competitividade e sustentabilidade. Natal: Ed. do CEFET-RN, 2007. Disponível em: &lt;https://moodle.ifsc.edu.br/mod/resource/view.php?id=84470&gt;. Acesso em: 28 ago. 2018.</div>
                   <div style="display:flex; justify-content:space-between; align-items:center; font-size:0.75rem;">
-                    <span class="badge badge-nao">Título Ausente no Acervo Físico (Demanda de Compra: 3 exemplar(es))</span>
-                    <strong style='color:#e11d48;'>+ 3 ex. a comprar</strong>
+                    <span class="badge badge-sim">Disponível no Acervo (2 ex.), porém diverge (PPC: ano 2007 vs. Acervo: 2ª ed. 2011)</span>
+                    <strong style='color:#e11d48;'>+ 1 ex. a comprar</strong>
                   </div>
                 </li>
               </ul>
@@ -5980,10 +5973,10 @@
             <span class="badge badge-comp">Semestre 4º</span>
             <strong style="color:var(--text-heading); font-size:1.02rem;">PROJETO DE TRABALHO DE CONCLUSÃO DE CURSO</strong>
             <span style="font-size:0.8rem; color:var(--text-muted);">(60h)</span>
-            <span class="badge badge-nao">🔴 Crítica: Déficit de 6 ex. na Básica</span>
+            <span class="badge badge-nao">🔴 Crítica: Déficit de 3 ex. na Básica</span>
           </div>
           <div style="display:flex; align-items:center; gap:0.75rem;">
-            <span class="badge badge-nao">Déficit: +11 ex.</span>
+            <span class="badge badge-nao">Déficit: +8 ex.</span>
             <i class="bi bi-chevron-down uc-chevron" style="transition:transform 0.2s ease;"></i>
           </div>
         </div>
@@ -5991,7 +5984,7 @@
           <div style="display:grid; grid-template-columns:1fr 1fr; gap:1.5rem; margin-bottom:1rem;">
             <div>
               <h4 style="color:var(--accent-blue); font-size:0.9rem; margin-bottom:0.6rem; text-transform:uppercase; letter-spacing:0.05em; font-weight:700;">
-                <i class="bi bi-book-half"></i> Bibliografia Básica (1/3 no acervo)
+                <i class="bi bi-book-half"></i> Bibliografia Básica (2/3 no acervo)
               </h4>
               <ul style="list-style:none; display:flex; flex-direction:column; gap:0.6rem;">
                 <li style="background:var(--bg-hover); border:1px solid var(--border-color); border-radius:6px; padding:0.6rem 0.8rem;">
@@ -6004,8 +5997,8 @@
                 <li style="background:var(--bg-hover); border:1px solid var(--border-color); border-radius:6px; padding:0.6rem 0.8rem;">
                   <div style="font-size:0.82rem; margin-bottom:0.3rem; color:var(--text-main);">LAKATOS, Eva Maria; MARCONI, Marina de Andrade. Fundamentos de metodologia científica. 9. ed. São Paulo: Atlas, 2021.</div>
                   <div style="display:flex; justify-content:space-between; align-items:center; font-size:0.75rem;">
-                    <span class="badge badge-nao">Título Ausente no Acervo Físico (Demanda de Compra: 3 exemplar(es))</span>
-                    <strong style='color:#e11d48;'>+ 3 ex. a comprar</strong>
+                    <span class="badge badge-sim">Disponível no Acervo com 6 exemplar(es) físico(s)</span>
+                    <span style='color:#059669; font-weight:700;'>Meta atendida</span>
                   </div>
                 </li>
                 <li style="background:var(--bg-hover); border:1px solid var(--border-color); border-radius:6px; padding:0.6rem 0.8rem;">
@@ -6329,10 +6322,10 @@
             <span class="badge badge-comp">Semestre 1º</span>
             <strong style="color:var(--text-heading); font-size:1.02rem;">PLANEJAMENTO E GESTÃO DO TURISMO RESPONSÁVEL</strong>
             <span style="font-size:0.8rem; color:var(--text-muted);">(60h)</span>
-            <span class="badge badge-nao">🔴 Crítica: Déficit de 4 ex. na Básica</span>
+            <span class="badge badge-nao">🔴 Crítica: Déficit de 3 ex. na Básica</span>
           </div>
           <div style="display:flex; align-items:center; gap:0.75rem;">
-            <span class="badge badge-nao">Déficit: +4 ex.</span>
+            <span class="badge badge-nao">Déficit: +3 ex.</span>
             <i class="bi bi-chevron-down uc-chevron" style="transition:transform 0.2s ease;"></i>
           </div>
         </div>
@@ -6346,8 +6339,8 @@
                 <li style="background:var(--bg-hover); border:1px solid var(--border-color); border-radius:6px; padding:0.6rem 0.8rem;">
                   <div style="font-size:0.82rem; margin-bottom:0.3rem; color:var(--text-main);">DESENVOLVIMENTO sustentável do turismo: uma compilação de boas práticas. São Paulo: Roca, 2005. 175 p. ISBN 8572415734.</div>
                   <div style="display:flex; justify-content:space-between; align-items:center; font-size:0.75rem;">
-                    <span class="badge badge-sim">Disponível no Acervo com 1 exemplar(es) físico(s)</span>
-                    <strong style='color:#e11d48;'>+ 2 ex. a comprar</strong>
+                    <span class="badge badge-sim">Disponível no Acervo (2 ex.), porém diverge (PPC: ano 2005 vs. Acervo: ano 2007)</span>
+                    <strong style='color:#e11d48;'>+ 1 ex. a comprar</strong>
                   </div>
                 </li>
                 <li style="background:var(--bg-hover); border:1px solid var(--border-color); border-radius:6px; padding:0.6rem 0.8rem;">
@@ -6947,18 +6940,18 @@
               <td><strong style="color:var(--text-heading);">LINGUAGEM E COMUNICAÇÃO I</strong></td>
               <td><span class="badge badge-comp">COMPLEMENTAR</span></td>
               <td>LOUSADA, Eliane; ABREU-TARDELLI, Lília Santos. Resenha. São Paulo: Parábola, 2004.</td>
-              <td><span class="badge badge-nao">Título Ausente no Acervo Físico (Demanda de Compra: 1 exemplar(es))</span></td>
-              <td>0 ex.</td>
-              <td><span class='badge badge-nao'>+1 ex.</span></td>
+              <td><span class="badge badge-sim">Disponível no Acervo com 4 exemplar(es) físico(s)</span></td>
+              <td>4 ex.</td>
+              <td><span class='badge badge-sim'>OK</span></td>
             </tr>
             <tr>
               <td>1º</td>
               <td><strong style="color:var(--text-heading);">LINGUAGEM E COMUNICAÇÃO I</strong></td>
               <td><span class="badge badge-comp">COMPLEMENTAR</span></td>
               <td>______. Resumo. 7. ed. São Paulo: Parábola, 2004.</td>
-              <td><span class="badge badge-nao">Título Ausente no Acervo Físico (Demanda de Compra: 1 exemplar(es))</span></td>
-              <td>0 ex.</td>
-              <td><span class='badge badge-nao'>+1 ex.</span></td>
+              <td><span class="badge badge-sim">Disponível no Acervo com 4 exemplar(es) físico(s)</span></td>
+              <td>4 ex.</td>
+              <td><span class='badge badge-sim'>OK</span></td>
             </tr>
             <tr>
               <td>1º</td>
@@ -7001,9 +6994,9 @@
               <td><strong style="color:var(--text-heading);">METODOLOGIA DE PESQUISA</strong></td>
               <td><span class="badge badge-comp">COMPLEMENTAR</span></td>
               <td>LOUSADA, Eliane; ABREU-TARDELLI, Lília Santos (Org.). Trabalhos de pesquisa: diários de leitura para a revisão bibliográfica. São Paulo: Parábola Editorial, 2007. (Leitura e produção de textos técnicos e acadêmicos, 4).</td>
-              <td><span class="badge badge-nao">Título Ausente no Acervo Físico (Demanda de Compra: 1 exemplar(es))</span></td>
-              <td>0 ex.</td>
-              <td><span class='badge badge-nao'>+1 ex.</span></td>
+              <td><span class="badge badge-sim">Disponível no Acervo com 1 exemplar(es) físico(s)</span></td>
+              <td>1 ex.</td>
+              <td><span class='badge badge-sim'>OK</span></td>
             </tr>
             <tr>
               <td>1º</td>
@@ -7721,9 +7714,9 @@
               <td><strong style="color:var(--text-heading);">TOPOGRAFIA APLICADA AO GEORREFERENCIAMENTO</strong></td>
               <td><span class="badge badge-basica">BÁSICA</span></td>
               <td>SARAIVA, Sérgio; TULER, Marcelo. Fundamentos de topografia. Porto Alegre: Bookman, 2014.</td>
-              <td><span class="badge badge-nao">Título Ausente no Acervo Físico (Demanda de Compra: 3 exemplar(es))</span></td>
-              <td>0 ex.</td>
-              <td><span class='badge badge-nao'>+3 ex.</span></td>
+              <td><span class="badge badge-sim">Disponível no Acervo com 8 exemplar(es) físico(s)</span></td>
+              <td>8 ex.</td>
+              <td><span class='badge badge-sim'>OK</span></td>
             </tr>
             <tr>
               <td>3º</td>
@@ -7901,9 +7894,9 @@
               <td><strong style="color:var(--text-heading);">ATIVIDADES DE EXTENSÃO</strong></td>
               <td><span class="badge badge-comp">COMPLEMENTAR</span></td>
               <td>______. Educação &amp; atualidade brasileira, São Paulo: Cortez, 2001.</td>
-              <td><span class="badge badge-nao">Título Ausente no Acervo Físico (Demanda de Compra: 1 exemplar(es))</span></td>
-              <td>0 ex.</td>
-              <td><span class='badge badge-nao'>+1 ex.</span></td>
+              <td><span class="badge badge-sim">Disponível no Acervo (2 ex.), porém diverge (PPC: ano 2001 vs. Acervo: 3ª ed. 2003)</span></td>
+              <td>2 ex.</td>
+              <td><span class='badge badge-sim'>OK</span></td>
             </tr>
             <tr>
               <td>4º</td>
@@ -7937,9 +7930,9 @@
               <td><strong style="color:var(--text-heading);">FERRAMENTAS DE GESTÃO AMBIENTAL</strong></td>
               <td><span class="badge badge-basica">BÁSICA</span></td>
               <td>PIMENTA, Handson Cláudio Dias; GOUVINHAS, Reidson Pereira. Ferramentas de gestão ambiental: competitividade e sustentabilidade. Natal: Ed. do CEFET-RN, 2007. Disponível em: &lt;https://moodle.ifsc.edu.br/mod/resource/view.php?id=84470&gt;. Acesso em: 28 ago. 2018.</td>
-              <td><span class="badge badge-nao">Título Ausente no Acervo Físico (Demanda de Compra: 3 exemplar(es))</span></td>
-              <td>0 ex.</td>
-              <td><span class='badge badge-nao'>+3 ex.</span></td>
+              <td><span class="badge badge-sim">Disponível no Acervo (2 ex.), porém diverge (PPC: ano 2007 vs. Acervo: 2ª ed. 2011)</span></td>
+              <td>2 ex.</td>
+              <td><span class='badge badge-nao'>+1 ex.</span></td>
             </tr>
             <tr>
               <td>4º</td>
@@ -8036,9 +8029,9 @@
               <td><strong style="color:var(--text-heading);">PROJETO DE TRABALHO DE CONCLUSÃO DE CURSO</strong></td>
               <td><span class="badge badge-basica">BÁSICA</span></td>
               <td>LAKATOS, Eva Maria; MARCONI, Marina de Andrade. Fundamentos de metodologia científica. 9. ed. São Paulo: Atlas, 2021.</td>
-              <td><span class="badge badge-nao">Título Ausente no Acervo Físico (Demanda de Compra: 3 exemplar(es))</span></td>
-              <td>0 ex.</td>
-              <td><span class='badge badge-nao'>+3 ex.</span></td>
+              <td><span class="badge badge-sim">Disponível no Acervo com 6 exemplar(es) físico(s)</span></td>
+              <td>6 ex.</td>
+              <td><span class='badge badge-sim'>OK</span></td>
             </tr>
             <tr>
               <td>4º</td>
@@ -8270,9 +8263,9 @@
               <td><strong style="color:var(--text-heading);">PLANEJAMENTO E GESTÃO DO TURISMO RESPONSÁVEL</strong></td>
               <td><span class="badge badge-basica">BÁSICA</span></td>
               <td>DESENVOLVIMENTO sustentável do turismo: uma compilação de boas práticas. São Paulo: Roca, 2005. 175 p. ISBN 8572415734.</td>
-              <td><span class="badge badge-sim">Disponível no Acervo com 1 exemplar(es) físico(s)</span></td>
-              <td>1 ex.</td>
-              <td><span class='badge badge-nao'>+2 ex.</span></td>
+              <td><span class="badge badge-sim">Disponível no Acervo (2 ex.), porém diverge (PPC: ano 2005 vs. Acervo: ano 2007)</span></td>
+              <td>2 ex.</td>
+              <td><span class='badge badge-nao'>+1 ex.</span></td>
             </tr>
             <tr>
               <td>1º</td>

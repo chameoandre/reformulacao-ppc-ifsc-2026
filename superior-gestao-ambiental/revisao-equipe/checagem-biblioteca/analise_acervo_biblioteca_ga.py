@@ -518,10 +518,15 @@ def audit_bibliografia(all_refs, acervo_index, all_acervo):
                 author_match = False
                 if meta["is_authorless"] or c_meta["is_authorless"]:
                     author_match = True
-                elif p_autor and c_autor:
+                elif '(coord' in c_meta['autor'].lower() or '(org' in c_meta['autor'].lower() or '(ed' in c_meta['autor'].lower():
+                    if normalize_str(p_tit) == normalize_str(c_tit) or normalize_str(p_tit_curto) == normalize_str(c_tit_curto):
+                        author_match = True
+                elif p_autor:
                     if p_autor == c_autor or p_autor in c_autor or c_autor in p_autor:
                         author_match = True
-                    elif SequenceMatcher(None, p_autor, c_autor).ratio() >= 0.8:
+                    elif p_autor in cand["norm"] or (c_autor and c_autor in normalize_str(meta.get("autor", ""))):
+                        author_match = True
+                    elif c_autor and SequenceMatcher(None, p_autor, c_autor).ratio() >= 0.8:
                         author_match = True
                         
                 # Check title compatibility
