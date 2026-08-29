@@ -162,6 +162,8 @@ def extract_metadata(ref_text, prev_author=''):
     if len(titulo) < 3 and len(parts_t) > 1:
         titulo = parts_t[1].replace('_ED_', '. ed').replace('_DOT_', '.').strip()
         
+    # If title has comma before city: publisher (e.g. 'Educação & atualidade brasileira, São Paulo: Cortez')
+    titulo = re.split(r',\s*(?:São Paulo|Rio de Janeiro|Belo Horizonte|Brasília|Porto Alegre|Curitiba|Florianópolis|Campinas|[A-ZÁÉÍÓÚÂÊÔÃÕÇ][a-zÀ-ÿ]+)\s*:', titulo)[0].strip()
     titulo = re.sub(r'\s+', ' ', titulo).strip(' .,;')
 
     titulo_curto = titulo.split(':')[0].strip() if ':' in titulo else titulo
