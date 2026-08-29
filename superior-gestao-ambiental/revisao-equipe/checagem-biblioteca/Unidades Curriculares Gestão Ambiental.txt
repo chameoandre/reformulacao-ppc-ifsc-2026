@@ -1,0 +1,1982 @@
+﻿Unidade Curricular: 
+BIOLOGIA APLICADA
+	Semestre:
+1
+	CH Total*:
+40 h
+	CH Extensão:
+00 h
+	Competências do Egresso Correlatas: 1, 2, 3, 4, 5, 6 ,7, 8, 9 e 10.
+
+
+	CH Presencial:
+
+
+30 h
+	CH Síncrona Mediada*:
+
+
+00 h
+	CH EaD:
+10 h
+	Objetivos:
+* Compreender a diversidade dos seres vivos, reconhecendo suas categorias taxonômicas, relações evolutivas, características biológicas, estratégias adaptativas, interações com o ambiente e importância para o equilíbrio dos ecossistemas e a sustentabilidade das sociedades humanas. 
+* Aplicar os princípios da Ecologia e da Evolução como base de interpretação do funcionamento dos sistemas ecológicos em todos os seus níveis de complexidade, relacionando-os aos processos naturais e às transformações provocadas pelas atividades antrópicas.
+* Identificar espécies de relevância ambiental, reconhecendo seu papel ecológico, econômico e legal e analisando potenciais estratégias de conservação da biodiversidade.
+* Desenvolver a capacidade de interpretar evidências científicas e dados ambientais, utilizando conceitos biológicos para subsidiar a tomada de decisões responsáveis frente aos desafios tecnológicos e socioambientais contemporâneos.
+* Valorizar a diversidade biológica e cultural dos ecossistemas regionais, reconhecendo a contribuição dos saberes tradicionais para a relação com a natureza, o uso sustentável dos recursos naturais e a promoção da saúde individual e coletiva.
+	Conteúdos:
+* Níveis de organização biológica.
+* Classificação, ecologia e evolução dos seres vivos: vírus, bactérias, algas, protozoários, fungos, plantas e animais.
+* Espécies de interesse ambiental: ameaçadas, nativas, exóticas invasoras, endêmicas, migratórias, bioindicadoras, chave, guarda-chuva e bandeira.
+* Estratégias de conservação da biodiversidade.
+* Temas transversais em Biologia e Gestão Ambiental: mudanças climáticas, saúde pública, segurança alimentar, cultura oceânica, entre outros.
+	Estratégias de ensino e aprendizagem:
+O processo de ensino-aprendizagem será conduzido por meio de uma abordagem dialógica, contextualizada e investigativa, buscando o levantamento dos saberes prévios dos estudantes, a problematização de situações reais, a articulação com a área da Gestão Ambiental e o desenvolvimento do pensamento crítico e da comunicação científica.
+A metodologia de ensino será baseada em estratégias didáticas diversificadas, conforme os objetivos de aprendizagem e as especificidades de cada conteúdo, tais como: aulas expositivo-dialogadas utilizando quadro e projetor multimídia; atividades práticas em campo e laboratório; análise de experimentos e estudos de caso; leitura de artigos acadêmicos, livros técnicos e legislações ambientais; visualização de conteúdos audiovisuais de divulgação científica; uso de atlas digitais, softwares de animação e simulação, modelos didáticos tridimensionais e jogos educativos; debate de temas transversais; e participação em visitas técnicas e eventos científicos.
+A avaliação da aprendizagem se dará em uma perspectiva processual e formativa, observando-se a evolução dos conhecimentos construídos ao longo do período letivo. Os instrumentos avaliativos serão aplicados de forma individual ou coletiva, podendo ser: estudos dirigidos; provas teórico-práticas; relatórios de atividades experimentais; e projetos, seminários ou oficinas temáticas.
+O Sistema Integrado de Gestão de Atividades Acadêmicas (SIGAA) será empregado como ferramenta de apoio ao estudante, oferecendo recursos básicos como disponibilização do plano de ensino, divulgação do cronograma de conteúdos e atividades e acompanhamento da frequência e do desempenho acadêmico.
+
+
+A carga horária desenvolvida na modalidade de educação a distância será realizada por meio do Ambiente Virtual de Ensino-Aprendizagem (AVEA) Moodle, em articulação com as atividades presenciais. Para tanto, no início da disciplina, os estudantes participarão de uma oficina sobre AVEA, com orientações práticas sobre navegação, recursos e atividades do ambiente virtual. Serão propostas atividades assíncronas, entre estas poderão constar: fóruns de discussão, enquetes, leituras dirigidas, estudos de caso, questionários, atividades reflexivas, pesquisas orientadas e vídeo aulas, utilizando recursos como livros digitais, artigos científicos, legislações, documentos técnicos e materiais audiovisuais relacionados aos conteúdos da unidade curricular. O acompanhamento da aprendizagem será realizado pelo(a) docente responsável, por meio do monitoramento da participação dos estudantes no ambiente virtual, da mediação das discussões, da oferta de orientações e devolutivas sobre as atividades desenvolvidas, bem como do esclarecimento de dúvidas durante os encontros presenciais e no próprio AVEA. A avaliação das atividades desenvolvidas na modalidade EaD ocorrerá de forma processual, considerando a participação nas atividades propostas, a realização das tarefas no prazo estabelecido e a qualidade das produções apresentadas. 
+	Bibliografia Básica:
+BUENO, Cecília (revisão técnica). A economia da natureza. Tradução de Ana Cláudia de Macêdo Vieira et al. 8. ed. Rio de Janeiro: Guanabara Koogan, 2021. 596 p., il. color. ISBN 9788527737074. 
+REECE, Jane B. Biologia de Campbell. Revisão de Denise Cantarelli Machado, Gaby Renard, Paulo Luiz de Oliveira. 10. ed. Porto Alegre: Artmed, 2015. xlv, 1442, il. (algumas col.). ISBN 9788582712160.
+	Bibliografia Complementar: 
+CASTRO, Peter; HUBER, Michael E. Biologia marinha. 8. ed. Porto Alegre: Artmed, 2012. 461 p., il., color. Inclui bibliografia e índice. ISBN 9788580551020.
+DARWIN, Charles, 1809-1882. A origem das espécies e a seleção natural. Tradução de Soraya Freitas. São Paulo: Madras, 2011. 462 p. ISBN 9788537006573.
+PRIMACK, Richard B.; RODRIGUES, Efraim. Biologia da conservação. Londrina: Planta, 2001. 327 p., il., 23 cm. Bibliografia: p. 311-327. ISBN 8590200213. 
+SOUSA-SOUTO, Leandro. Ecologia descomplicada: um guia simplificado para estudantes e profissionais da área ambiental. Aracajú: O Autor, 2018. 166 p. ISBN 9788591080519.
+	(*) CH Total – Carga horária total da unidade curricular em horas. Somatório da carga horária teórica-prática e extensão.
+(*) CH EaD – Carga horária EaD, se houver. A CH EaD é definida em razão da CH Total.
+
+
+Unidade Curricular: 
+ ÉTICA AMBIENTAL
+	Semestre:
+1
+	CH Total*:
+40 h
+	CH Extensão:
+00 h
+	Competências do Egresso Correlatas: 1, 2, 3, 4, 5, 6 ,7, 8, 9 e 10.
+
+
+	CH Presencial:
+
+
+30 h
+	CH Síncrona Mediada*:
+
+
+00 h
+	CH EaD:
+10 h
+	Objetivos:
+
+
+* Compreender os fundamentos filosóficos da ética e sua importância para a vida em sociedade e para a atuação profissional na gestão ambiental.
+* Refletir criticamente sobre as diferentes concepções de natureza, meio ambiente e responsabilidade presentes na tradição filosófica e no pensamento contemporâneo.
+* Problematizar os limites do antropocentrismo e discutir perspectivas éticas voltadas ao reconhecimento do valor intrínseco da vida.
+* Analisar os desafios éticos decorrentes do desenvolvimento científico, tecnológico e das crises socioambientais contemporâneas.
+* Desenvolver uma compreensão da ética ambiental como fundamento para a tomada de decisões responsáveis na gestão ambiental.
+* Introduzir perspectivas contemporâneas da filosofia da vida e da filosofia vegetal, compreendendo a vida vegetal como horizonte para a ampliação da reflexão ética sobre as relações entre seres humanos e natureza.
+
+
+	Conteúdos:
+Fundamentos da ética
+* Ética, moral e responsabilidade.
+* Liberdade, alteridade e vida em comum.
+* Ética e formação da consciência moral.
+2. Filosofia, natureza e meio ambiente
+* Diferentes concepções filosóficas de natureza.
+* Antropocentrismo, biocentrismo e ecocentrismo.
+* Crise ambiental e mudança de paradigma.
+3. Ética da responsabilidade
+* Hans Jonas e o princípio responsabilidade.
+* Filosofia da vida e vulnerabilidade dos seres vivos.
+* Técnica, ciência e poder humano diante da crise ecológica.
+4. Perspectivas filosóficas contemporâneas
+* Nietzsche e a crítica ao antropocentrismo.
+* Vida, devir e natureza.
+* Perspectivismo vegetal e filosofia vegetal como ampliação do olhar ético sobre a vida.
+* Ética ambiental e cidadania planetária.
+5. Ética ambiental aplicada à gestão ambiental
+* Dilemas éticos na gestão dos recursos naturais.
+* Ética na tomada de decisões socioambientais.
+* Sustentabilidade, justiça ambiental e responsabilidade intergeracional.
+* Ética profissional na atuação do tecnólogo em Gestão Ambiental.
+	Estratégias de ensino e aprendizagem:
+A unidade curricular será desenvolvida por meio de aulas expositivo-dialogadas, leitura e discussão de textos filosóficos, estudos de caso, seminários, debates orientados, análise de situações-problema e atividades de reflexão crítica relacionadas aos desafios socioambientais contemporâneos.
+As atividades buscarão articular conceitos filosóficos às situações concretas da atuação profissional do tecnólogo em Gestão Ambiental, estimulando a argumentação ética, a construção coletiva do conhecimento e a tomada de decisões fundamentadas.
+A carga horária desenvolvida na modalidade de educação a distância será realizada por meio do Ambiente Virtual de Ensino-Aprendizagem (AVEA) Moodle, em articulação com as atividades presenciais. Para tanto, no início da disciplina, os estudantes participarão de uma oficina sobre AVEA, com orientações práticas sobre navegação, recursos e atividades do ambiente virtual. Serão propostas atividades assíncronas, entre estas poderão constar: fóruns de discussão, enquetes, leituras dirigidas, estudos de caso, questionários, atividades reflexivas, pesquisas orientadas e vídeo aulas, utilizando recursos como livros digitais, artigos científicos, legislações, documentos técnicos e materiais audiovisuais relacionados aos conteúdos da unidade curricular. O acompanhamento da aprendizagem será realizado pelo(a) docente responsável, por meio do monitoramento da participação dos estudantes no ambiente virtual, da mediação das discussões, da oferta de orientações e devolutivas sobre as atividades desenvolvidas, bem como do esclarecimento de dúvidas durante os encontros presenciais e no próprio AVEA. A avaliação das atividades desenvolvidas na modalidade EaD ocorrerá de forma processual, considerando a participação nas atividades propostas, a realização das tarefas no prazo estabelecido e a qualidade das produções apresentadas. 
+A avaliação ocorrerá de forma diagnóstica, processual e formativa, considerando a participação nas discussões, produções escritas, seminários e demais atividades desenvolvidas ao longo da unidade curricular.
+	Bibliografia Básica:
+DANOWSKI, Déborah (Org.). Os mil nomes de Gaia: do Antropoceno à Idade da Terra. Rio de Janeiro: Machado, 2022.
+JONAS, Hans. O princípio responsabilidade: ensaio de uma ética para a civilização tecnológica. Rio de Janeiro: Contraponto; PUC-Rio, 2006.
+JONAS, Hans. O princípio vida: fundamentos para uma biologia filosófica. Petrópolis: Vozes, 2004.
+JUNGES, José Roque. Ética ambiental. São Leopoldo: Unisinos, 2005.
+OLIVEIRA, Jelson. Nietzsche e a planta homem: sobre o perspectivismo vegetal. Pensando, v. 14, 2023.
+
+
+	Bibliografia Complementar:
+FALABRETTI, Ericson; OLIVEIRA, Jelson (Orgs.). Fenomenologia da vida. Caxias do Sul: EDUCS, 2019.
+FERRY, Luc. A nova ordem ecológica: a árvore, o animal e o homem. Rio de Janeiro: Difel, 2009.
+GUATTARI, Félix. As três ecologias. Campinas: Papirus, 2011.
+LOVELOCK, James. Gaia: alerta final. Rio de Janeiro: Intrínseca, 2010.
+OLIVEIRA, J. R.; MALTA, P. J. Hans Jonas e a filosofia da vida. Veritas (Porto Alegre), v. 66, p. 87-111, 2021.
+OLIVEIRA, Jelson. Nietzsche, um proto-ambientalista? Poiesis: Revista de Filosofia, v. 12, n. 2, p. 4-29, 2015.
+	(*) CH Total – Carga horária total da unidade curricular em horas. Somatório da carga horária teórica-prática e extensão.
+(*) CH EaD – Carga horária EaD, se houver. A CH EaD é definida em razão da CH Total.
+
+
+Unidade Curricular: 
+ GEOCIÊNCIAS AMBIENTAIS
+	Semestre:
+1
+	CH Total*:
+80 h
+	CH Extensão:
+20 h
+	Competências do Egresso Correlatas: 1, 2, 3, 4, 5, 6 ,7, 8, 9 e 10.
+
+
+	CH Presencial:
+
+
+60 h
+	CH Síncrona Mediada*:
+
+
+00 h
+	CH EaD:
+20 h
+	Objetivos:
+Analisar e reconhecer os processos de formação dos recursos naturais e suas relações ambientais no espaço/tempo, estabelecendo correlação com a paisagem e com as atividades antrópicas. 
+	Conteúdos:
+* O Planeta Terra e sua dinâmica; 
+* Mineralogia e Petrografia; 
+* Estratigrafia e Ambientes Geológicos; 
+* Geodiversidade; 
+* Climatologia Geográfica; 
+* Clima e tempo;
+* Clima e tempo; 
+* Variáveis climáticas; 
+* Conforto climático urbano; 
+* Utilização de instrumentos para interpretação meteorológica; 
+* Geomorfologia de Santa Catarina; 
+* O relevo, a estrutura e os processos endógenos e exógenos de formação; 
+* Geomorfologia fluvial, litorânea, formação de dunas e depósitos lagunares; 
+* Hidrogeografia; 
+* A Limnologia como uma ferramenta para Gestão Ambiental; 
+* Composição e gênese dos solos; 
+* Características morfológicas, mineralógicas, biológicas físicas e químicas do solo; 
+* Coleta de amostras e ensaios em laboratório; 
+* Biogeografia e a distribuição dos organismos; 
+* Ecologia da paisagem, estruturas e técnicas de campo no estudo da paisagem; 
+Atividades de extensão totalizando 20 horas: realização de visitas técnicas, viagens de estudos e/ou saídas de campo para analisar e reconhecer os processos de formação e transformação dos recursos naturais, estabelecendo correlações com a paisagem e com as atividades antrópicas. Poderão também ser desenvolvidas atividades de extensão envolvendo levantamento e interpretação de características ambientais locais, elaboração de materiais educativos sobre processos geológicos, geomorfológicos e ambientais, ações de educação ambiental junto a escolas e comunidades, oficinas e palestras sobre prevenção de riscos naturais, conservação do solo, recursos hídricos e ocupação do território, bem como atividades de divulgação científica e compartilhamento dos conhecimentos produzidos com a comunidade externa. As atividades deverão promover a articulação entre os conhecimentos desenvolvidos na unidade curricular e demandas ou questões ambientais identificadas no território, contribuindo para a formação acadêmica dos estudantes e para a interação transformadora entre o IFSC e a sociedade. 
+	Estratégias de ensino e aprendizagem:
+Entre as estratégias metodológicas que poderão ser aplicadas, tem-se: aula expositiva dialogada, estudos de casos, seminários, projetos de trabalho/aprendizagem (pedagogia de projetos), saídas de campo, aulas práticas em laboratório.
+A carga horária desenvolvida na modalidade de educação a distância será realizada por meio do Ambiente Virtual de Ensino-Aprendizagem (AVEA) Moodle, em articulação com as atividades presenciais. Para tanto, no início da disciplina, os estudantes participarão de uma oficina sobre AVEA, com orientações práticas sobre navegação, recursos e atividades do ambiente virtual. Serão propostas atividades assíncronas, entre estas poderão constar: fóruns de discussão, enquetes, leituras dirigidas, estudos de caso, questionários, atividades reflexivas, pesquisas orientadas e vídeo aulas, utilizando recursos como livros digitais, artigos científicos, legislações, documentos técnicos e materiais audiovisuais relacionados aos conteúdos da unidade curricular. O acompanhamento da aprendizagem será realizado pelo(a) docente responsável, por meio do monitoramento da participação dos estudantes no ambiente virtual, da mediação das discussões, da oferta de orientações e devolutivas sobre as atividades desenvolvidas, bem como do esclarecimento de dúvidas durante os encontros presenciais e no próprio AVEA. A avaliação das atividades desenvolvidas na modalidade EaD ocorrerá de forma processual, considerando a participação nas atividades propostas, a realização das tarefas no prazo estabelecido e a qualidade das produções apresentadas. 
+
+
+	Bibliografia Básica:
+BRADY, Nyle C. Elementos da natureza e propriedades dos solos. 3. ed. Porto Alegre: Bookman, 2013. CHRISTOFOLETTI, Antônio. Geomorfologia. 2. ed. São Paulo: Blucher, 1980. 
+	Bibliografia Complementar:
+ESTEVES, Francisco de Assis. Fundamentos de limnologia. 3.ed. Rio de Janeiro: Interciência, 2011. MENDONÇA, Francisco; DANNI-OLIVEIRA, Inês Moresco. Climatologia: noções básicas e climas do Brasil. São Paulo: Oficina de Textos, 2007. 
+POPP, José Henrique. Geologia geral. 6. ed. Rio de Janeiro: LTC, 2010. 
+GROTZINGER, John; JORDAN, Thomas H. Para entender a terra. 6. ed. Porto Alegre: Bookman, 2013. TROPPMAIR, Helmut. Biogeografia e meio ambiente. 9. ed. Rio de Janeiro: Technical Books, 2012. 
+	(*) CH Total – Carga horária total da unidade curricular em horas. Somatório da carga horária teórica-prática e extensão.
+(*) CH EaD – Carga horária EaD, se houver. A CH EaD é definida em razão da CH Total.
+
+
+Unidade Curricular: 
+HISTÓRIA AMBIENTAL
+	Semestre:
+1
+	CH Total*:
+40 h
+	CH Extensão:
+00 h
+	Competências do Egresso Correlatas: 1, 2, 3, 4, 5, 6 ,7, 8, 9 e 10.
+
+
+	CH Presencial:
+
+
+30 h
+	CH Síncrona Mediada*:
+
+
+00 h
+	CH EaD:
+10 h
+	Objetivos:
+Compreender a História Ambiental como campo de produção do conhecimento e desenvolver capacidade de analisar historicamente as relações entre sociedade e natureza, reconhecendo sua importância para a atuação profissional em Gestão Ambiental. 
+	Conteúdos:
+I - A História Ambiental como campo historiográfico: o que é História Ambiental?; contexto de surgimento (décadas de 1960 e 1970); História, Ecologia e Ciências Ambientais; correntes da História Ambiental; escalas temporal e espacial.
+II - Grandes temas da história ambiental: agricultura e domesticação; florestas; água; energia; industrialização; urbanização; paisagens; biodiversidade; mudanças climáticas; antropoceno.
+III - História Ambiental no Brasil: formação do meio rural no Brasil; colonização e transformações ambientais; Mata Atlântica; Amazônia; Cerrado; História ambiental urbana; História dos desastres.
+IV - História do Ambientalismo: conservacionismo; preservacionismo; desenvolvimento sustentável; conferências ambientais; ambientalismo internacional.
+V - Ambientalismo brasileiro: movimento ambientalista; Constituição de 1988; Política Nacional do Meio Ambiente; racismo e justiça ambiental.
+	Estratégias de ensino e aprendizagem:
+Estudos dirigidos; leitura, análise e debate de textos científicos; desenvolvimento de pesquisas orientadas e apresentação de seminários a partir de temas de interesse; questionários; resenha crítica de textos científicos; estudo de fontes históricas; videoaulas.
+
+
+A carga horária desenvolvida na modalidade de educação a distância será realizada por meio do Ambiente Virtual de Ensino-Aprendizagem (AVEA) Moodle, em articulação com as atividades presenciais. Para tanto, no início da disciplina, os estudantes participarão de uma oficina sobre AVEA, com orientações práticas sobre navegação, recursos e atividades do ambiente virtual. Serão propostas atividades assíncronas, entre estas poderão constar: fóruns de discussão, enquetes, leituras dirigidas, estudos de caso, questionários, atividades reflexivas, pesquisas orientadas e vídeo aulas, utilizando recursos como livros digitais, artigos científicos, legislações, documentos técnicos e materiais audiovisuais relacionados aos conteúdos da unidade curricular. O acompanhamento da aprendizagem será realizado pelo(a) docente responsável, por meio do monitoramento da participação dos estudantes no ambiente virtual, da mediação das discussões, da oferta de orientações e devolutivas sobre as atividades desenvolvidas, bem como do esclarecimento de dúvidas durante os encontros presenciais e no próprio AVEA. A avaliação das atividades desenvolvidas na modalidade EaD ocorrerá de forma processual, considerando a participação nas atividades propostas, a realização das tarefas no prazo estabelecido e a qualidade das produções apresentadas. 
+	Bibliografia Básica:
+DUARTE, Regina Horta. História & natureza. 2. ed. Belo Horizonte: Autêntica, 2013. 109 p., il. (História &- reflexões; 9). Bibliografia: p. 104-108. ISBN 9788575261590. 
+DEAN, Warren. A ferro e fogo: a história e a devastação da Mata Atlântica brasileira. Tradução de Cid Knipel Moreira Moreira. São Paulo: Companhia das Letras, 1996. 484 p. ISBN 9788571645905.
+WORSTER, Donald. Transformações da terra: para uma perspectiva agroecológica da história. Ambiente e
+Sociedade, v. 5, no 2, ago./dez. 2002 – v. 6, no 1, jan.-jul. 2003, p. 23-44.
+	Bibliografia Complementar:
+CARSON, Rachel. Primavera silenciosa. São Paulo: Gaia, 2010.
+CROSBY, Alfred W. Imperialismo ecológico: a expansão biológica da Europa, 900-1900. São Paulo: Companhia das Letras, 2011.
+LEOPOLD, Aldo. Pensar como uma montanha. Curitiba: Editora UFPR, 2014.
+LUTZENBERGER, José A. Fim do futuro? Manifesto ecológico brasileiro. Porto Alegre: Movimento, 1976.
+McNEILL, John R. Something New Under the Sun: An Environmental History of the Twentieth-Century World. New York/London: W. W. Norton, 2000.
+PÁDUA, José Augusto (org.). Ecologia e política no Brasil. Rio de Janeiro: Iuperj; Espaço e Tempo, 1987.
+SEDREZ, Lise Fernanda. História ambiental: possibilidades e desafios. In: CARDOSO, Ciro Flamarion; VAINFAS, Ronaldo (org.). Novos domínios da História. Rio de Janeiro: Elsevier, 2012.
+STOLL, Mark. Lucro: uma história ambiental. Lisboa: Edições 70, 2023.
+VEIGA, José E. Desenvolvimento sustentável: o desafio do século XXI. Rio de Janeiro: Garamond, 2006. 
+	(*) CH Total – Carga horária total da unidade curricular em horas. Somatório da carga horária teórica-prática e extensão.
+(*) CH EaD – Carga horária EaD, se houver. A CH EaD é definida em razão da CH Total.
+
+
+Unidade Curricular: 
+LINGUAGEM E COMUNICAÇÃO I
+	Semestre:
+1
+	CH Total*:
+40 h
+	CH Extensão:
+00 h
+	Competências do Egresso Correlatas: 1, 2, 3, 4, 5, 6 ,7, 8, 9 e 10.
+
+
+	CH Presencial:
+
+
+30 h
+	CH Síncrona Mediada*:
+
+
+00 h
+	CH EaD:
+10 h
+	Objetivos:
+Comunicar-se com desenvoltura, ética e profissionalismo em situações orais e escritas, percebendo a comunicação como elemento essencial para a atuação profissional. 
+
+
+	Conteúdos:
+
+
+* Processo de comunicação;
+* Formalidade x informalidade; 
+* Compreensão leitora;
+* Produção escrita: clareza, coerência, coesão, objetividade, polidez, adequação e correção; 
+* Gêneros textuais da área profissional: e-mail, currículo, ofício;
+* Gêneros textuais de cunho acadêmico: esquema, resumo, resenha e relatórios;
+* Utilização da norma culta da língua portuguesa 
+	Estratégias de ensino e aprendizagem:
+As aulas terão o estudante como sujeito ativo de sua aprendizagem, partindo de uma metodologia dialógica, na qual os conhecimentos abordados terão relação com as práticas realizadas durante o semestre e a área de atuação profissional. 
+
+
+A carga horária desenvolvida na modalidade de educação a distância será realizada por meio do Ambiente Virtual de Ensino-Aprendizagem (AVEA) Moodle, em articulação com as atividades presenciais. Para tanto, no início da disciplina, os estudantes participarão de uma oficina sobre AVEA, com orientações práticas sobre navegação, recursos e atividades do ambiente virtual. Serão propostas atividades assíncronas, entre estas poderão constar: fóruns de discussão, enquetes, leituras dirigidas, estudos de caso, questionários, atividades reflexivas, pesquisas orientadas e vídeo aulas, utilizando recursos como livros digitais, artigos científicos, legislações, documentos técnicos e materiais audiovisuais relacionados aos conteúdos da unidade curricular. O acompanhamento da aprendizagem será realizado pelo(a) docente responsável, por meio do monitoramento da participação dos estudantes no ambiente virtual, da mediação das discussões, da oferta de orientações e devolutivas sobre as atividades desenvolvidas, bem como do esclarecimento de dúvidas durante os encontros presenciais e no próprio AVEA. A avaliação das atividades desenvolvidas na modalidade EaD ocorrerá de forma processual, considerando a participação nas atividades propostas, a realização das tarefas no prazo estabelecido e a qualidade das produções apresentadas. 
+	Bibliografia Básica:
+BLIKSTEIN, Izidoro. Técnicas de comunicação escrita. 22. ed. São Paulo: Ática, 2010. (Princípios, 12). 
+GARCIA, Othon M. Comunicação em prosa moderna: aprenda a escrever aprendendo a pensar. 24. ed. Rio de Janeiro: FGV, 2004.
+	Bibliografia Complementar:
+KOCH, Ingedore Grunfeld Villaça. A coesão textual. 27. ed. São Paulo: Contexto, 2007. LOUSADA, Eliane; 
+
+
+ABREU-TARDELLI, Lília Santos. Resenha. São Paulo: Parábola, 2004. ______. Resumo. 7. ed. São Paulo: Parábola, 2004. 
+
+
+PEREIRA, Maurício Gomes. Artigos científicos: como redigir, publicar e avaliar. Rio de Janeiro: Guanabara Koogan, 2011. 
+	(*) CH Total – Carga horária total da unidade curricular em horas. Somatório da carga horária teórica-prática e extensão.
+(*) CH EaD – Carga horária EaD, se houver. A CH EaD é definida em razão da CH Total.
+
+
+Unidade Curricular: 
+METODOLOGIA DE PESQUISA
+	Semestre:
+1
+	CH Total*:
+40 h
+	CH Extensão:
+00 h
+	Competências do Egresso Correlatas: 1, 2, 3, 4, 5, 6 ,7, 8, 9 e 10.
+
+
+	CH Presencial:
+
+
+30 h
+	CH Síncrona Mediada*:
+
+
+00 h
+	CH EaD:
+10 h
+	Objetivos:
+Conhecer e aplicar os fundamentos e a metodologia de elaboração da pesquisa técnica e científica no âmbito da Gestão Ambiental. 
+	Conteúdos:
+* Metodologia técnica e científica; 
+* Delineamento experimental; 
+* Comunicação técnica e científica: canais formais e não formais;
+* Projetos. 
+	Estratégias de ensino e aprendizagem:
+Aula expositiva dialogada, atividades em laboratório de informática, trabalhos individuais/grupo, estudos de caso, palestras, pedagogia de projetos. 
+A carga horária desenvolvida na modalidade de educação a distância será realizada por meio do Ambiente Virtual de Ensino-Aprendizagem (AVEA) Moodle, em articulação com as atividades presenciais. Para tanto, no início da disciplina, os estudantes participarão de uma oficina sobre AVEA, com orientações práticas sobre navegação, recursos e atividades do ambiente virtual. Serão propostas atividades assíncronas, entre estas poderão constar: fóruns de discussão, enquetes, leituras dirigidas, estudos de caso, questionários, atividades reflexivas, pesquisas orientadas e vídeo aulas, utilizando recursos como livros digitais, artigos científicos, legislações, documentos técnicos e materiais audiovisuais relacionados aos conteúdos da unidade curricular. O acompanhamento da aprendizagem será realizado pelo(a) docente responsável, por meio do monitoramento da participação dos estudantes no ambiente virtual, da mediação das discussões, da oferta de orientações e devolutivas sobre as atividades desenvolvidas, bem como do esclarecimento de dúvidas durante os encontros presenciais e no próprio AVEA. A avaliação das atividades desenvolvidas na modalidade EaD ocorrerá de forma processual, considerando a participação nas atividades propostas, a realização das tarefas no prazo estabelecido e a qualidade das produções apresentadas. 
+
+
+	Bibliografia Básica:
+MARCONI, Marina de Andrade; LAKATOS, Eva Maria. Metodologia do trabalho científico: procedimentos básicos, pesquisa bibliográfica, projeto e relatório, publicações e trabalhos científicos. 7. ed. rev. e ampl. São Paulo: Atlas, 2007. 
+PEREIRA, Maurício Gomes. Artigos científicos: como redigir, publicar e avaliar. Rio de Janeiro: Guanabara Koogan, 2012. 
+
+
+	Bibliografia Complementar:
+
+
+DESCARTES, René; GILSON, Étienne. Discurso do método. 4. ed. São Paulo: WMF Martins Fontes, 2009. (Clássicos WMF). 
+LOUSADA, Eliane; ABREU-TARDELLI, Lília Santos (Org.). Trabalhos de pesquisa: diários de leitura para a revisão bibliográfica. São Paulo: Parábola Editorial, 2007. (Leitura e produção de textos técnicos e acadêmicos, 4). 
+MATTAR, João. Metodologia científica na era da informática. 3. ed. rev. e atual. São Paulo: Saraiva, 2008. 
+	(*) CH Total – Carga horária total da unidade curricular em horas. Somatório da carga horária teórica-prática e extensão.
+(*) CH EaD – Carga horária EaD, se houver. A CH EaD é definida em razão da CH Total.
+
+
+Unidade Curricular: 
+SEGURANÇA E SAÚDE OCUPACIONAL
+	Semestre:
+1
+	CH Total*:
+40 h
+	CH Extensão:
+00 h
+	Competências do Egresso Correlatas: 1, 2, 3, 4, 5, 6 ,7, 8, 9 e 10.
+
+
+	CH Presencial:
+
+
+30 h
+	CH Síncrona Mediada*:
+
+
+00 h
+	CH EaD:
+10 h
+	Objetivos:
+Antecipar, identificar, avaliar e controlar situações de risco e de emergência, proporcionando segurança e  saúde ao trabalhador.
+
+
+	Conteúdos:
+* Conceito de acidente no trabalho
+* Equipamentos de Proteção Individual (EPI) e Equipamentos de Proteção Coletiva (EPC)
+* Riscos ambientais, mapa de risco e análise de risco
+* Primeiros socorros.
+	Estratégias de ensino e aprendizagem:
+Diversas estratégias metodológicas poderão ser utilizadas, entre elas: aula expositiva dialogada, atividades em laboratórios, trabalhos individuais e em grupos, debates, estudos de casos, seminários, visitas técnicas, saídas de campo, palestras, leituras de artigos, metodologias ativas, entre outras.
+
+
+A carga horária desenvolvida na modalidade de educação a distância será realizada por meio do Ambiente Virtual de Ensino-Aprendizagem (AVEA) Moodle, em articulação com as atividades presenciais. Para tanto, no início da disciplina, os estudantes participarão de uma oficina sobre AVEA, com orientações práticas sobre navegação, recursos e atividades do ambiente virtual. Serão propostas atividades assíncronas, entre estas poderão constar: fóruns de discussão, enquetes, leituras dirigidas, estudos de caso, questionários, atividades reflexivas, pesquisas orientadas e vídeo aulas, utilizando recursos como livros digitais, artigos científicos, legislações, documentos técnicos e materiais audiovisuais relacionados aos conteúdos da unidade curricular. O acompanhamento da aprendizagem será realizado pelo(a) docente responsável, por meio do monitoramento da participação dos estudantes no ambiente virtual, da mediação das discussões, da oferta de orientações e devolutivas sobre as atividades desenvolvidas, bem como do esclarecimento de dúvidas durante os encontros presenciais e no próprio AVEA. A avaliação das atividades desenvolvidas na modalidade EaD ocorrerá de forma processual, considerando a participação nas atividades propostas, a realização das tarefas no prazo estabelecido e a qualidade das produções apresentadas. 
+
+
+	Bibliografia Básica:
+BARBOSA FILHO, Antonio Nunes. Segurança do trabalho e gestão ambiental. 4. ed. São Paulo: Atlas, 2011.
+
+
+CARDELLA, Benedito. Segurança no trabalho e prevenção de acidentes: uma abordagem holística: segurança integrada à missão organizacional com produtividade, qualidade, preservação ambiental e desenvolvimento de pessoas. São Paulo: Atlas, 2010
+
+
+	Bibliografia Complementar:
+
+
+BERGERON, J. David. Primeiros socorros. 2. ed. São Paulo: Atheneu, 2007. 
+BRASIL. Ministério do trabalho. Normas Regulamentadoras. Disponível em: <http://trabalho.gov.br/seguranca-e-saude-no-trabalho/normatizacao/normas-regulamentadoras>. Acesso em: 27 ago. 2018.
+
+
+GONÇALVES, Danielle Carvalho; GONÇALVES, Isabelle Carvalho; GONÇALVES, Edwar Abreu. Manual de segurança e saúde no trabalho. 6. ed. São Paulo: LTR, 2015. 
+	(*) CH Total – Carga horária total da unidade curricular em horas. Somatório da carga horária teórica-prática e extensão.
+(*) CH EaD – Carga horária EaD, se houver. A CH EaD é definida em razão da CH Total.
+
+
+Unidade Curricular: 
+EDUCAÇÃO AMBIENTAL
+	Semestre:
+2
+	CH Total*:
+40 h
+	CH Extensão:
+10 h
+	Competências do Egresso Correlatas: 1, 2, 3, 4, 5, 6 ,7, 8, 9 e 10.
+
+
+	CH Presencial:
+
+
+30 h
+	CH Síncrona Mediada*:
+
+
+00 h
+	CH EaD:
+10 h
+	Objetivos:
+Compreender o histórico e os fundamentos da educação ambiental.
+Planejar e desenvolver programas, projetos e ações de educação ambiental destinados a diferentes públicos e contextos de atuação. 
+	Conteúdos:
+* Histórico da Educação Ambiental;
+* As macrotendências da educação ambiental: conservacionista, pragmática e crítica;
+* Os principais documentos da educação ambiental: leis, normas, tratados;
+* Educação ambiental formal, não-formal e informal;
+* Principais temas em educação ambiental: cultura oceânica e educação climática; resíduos sólidos, poluição, perda de biodiversidade, racismo ambiental.
+* Programas, projetos e ações de educação ambiental.
+	Estratégias de ensino e aprendizagem:
+A metodologia de ensino será orientada pelos princípios da educação dialógica, valorizando os conhecimentos prévios e as experiências dos estudantes como ponto de partida para a construção coletiva do conhecimento. As estratégias pedagógicas serão desenvolvidas de forma contextualizada, respeitando as especificidades da turma e favorecendo a participação, a autonomia e a reflexão crítica sobre a realidade. 
+As estratégias pedagógicas incluirão rodas de conversa, seminários, dinâmicas em grupo, oficinas, estudos de caso e outras metodologias ativas que promovam a articulação entre teoria e prática. Como atividade integradora, será realizada uma oficina de elaboração de projetos de educação ambiental, visando aplicar os conhecimentos desenvolvidos ao longo da unidade curricular no planejamento de ações voltadas a diferentes públicos. 
+Os projetos elaborados serão voltados para questões locais, levantadas em diálogo com a comunidade externa, contemplando a carga horária de extensão da Unidade Curricular (10h).
+A carga horária desenvolvida na modalidade de educação a distância será realizada por meio do Ambiente Virtual de Ensino-Aprendizagem (AVEA) Moodle, em articulação com as atividades presenciais. Para tanto, no início da disciplina, os estudantes participarão de uma oficina sobre AVEA, com orientações práticas sobre navegação, recursos e atividades do ambiente virtual. Serão propostas atividades assíncronas, entre estas poderão constar: fóruns de discussão, enquetes, leituras dirigidas, estudos de caso, questionários, atividades reflexivas, pesquisas orientadas e vídeo aulas, utilizando recursos como livros digitais, artigos científicos, legislações, documentos técnicos e materiais audiovisuais relacionados aos conteúdos da unidade curricular. O acompanhamento da aprendizagem será realizado pelo(a) docente responsável, por meio do monitoramento da participação dos estudantes no ambiente virtual, da mediação das discussões, da oferta de orientações e devolutivas sobre as atividades desenvolvidas, bem como do esclarecimento de dúvidas durante os encontros presenciais e no próprio AVEA. A avaliação das atividades desenvolvidas na modalidade EaD ocorrerá de forma processual, considerando a participação nas atividades propostas, a realização das tarefas no prazo estabelecido e a qualidade das produções apresentadas. 
+A avaliação será contínua, processual e formativa, realizada por meio de diferentes instrumentos, como atividades escritas, apresentações, estudos de caso, atividades práticas, relatórios e participação nas atividades propostas, de forma individual ou em grupo, buscando integrar os conhecimentos teóricos à prática profissional em Gestão Ambiental. 
+	Bibliografia Básica:
+LOUREIRO, Carlos Frederico. Questão ambiental: questões de vida. São Paulo: Cortez, 2019.
+REIGOTA, Marcos. O que é educação ambiental. 2. ed. São Paulo: Brasiliense, 2009. 107 p. (Primeiros passos, 292). ISBN 9788511001228. 
+	Bibliografia Complementar:
+
+
+CARVALHO, Isabel Cristina de Moura. Educação ambiental: a formação do sujeito ecológico. 6. ed. São Paulo: Cortez, 2012. 255 p. (Docência em formação. Saberes Pedagógicos). ISBN 9788524919725. 
+
+
+COIMBRA, José de Ávila Aguiar, 1930- (coord.). Meio ambiente e consumismo. São Paulo: Senac São Paulo, 2008. 254 p. (Meio ambiente, 8). ISBN 9788573596755. 
+
+
+GUATTARI, Félix. As três ecologias. 21. ed. Campinas, SP: Papirus, 2012. 56 p. ISBN 8530801067. 
+
+
+GRÜN, Mauro. Ética e educação ambiental: a conexão necessária. 14. ed. São Paulo: Papirus, 2011. 126 p., 21 cm. (Magistério: formação e trabalho pedagógico). Bibliografia: p. 121-126. ISBN 8530804333. 
+	(*) CH Total – Carga horária total da unidade curricular em horas. Somatório da carga horária teórica-prática e extensão.
+(*) CH EaD – Carga horária EaD, se houver. A CH EaD é definida em razão da CH Total.
+
+
+Unidade Curricular: 
+FUNDAMENTOS DA ADMINISTRAÇÃO
+	Semestre:
+2
+	CH Total*:
+40 h
+	CH Extensão:
+00 h
+	Competências do Egresso Correlatas: 1, 2, 3, 4, 5, 6 ,7, 8, 9 e 10.
+
+
+	CH Presencial:
+
+
+30 h
+	CH Síncrona Mediada*:
+
+
+00 h
+	CH EaD:
+10 h
+	Objetivos:
+Compreender os fundamentos da Administração, sua evolução e os processos administrativos, analisando sua aplicação nas organizações e sua contribuição para a Gestão Ambiental, em uma perspectiva orientada pela sustentabilidade.
+	Conteúdos:
+1. Administração e as organizações:
+Conceitos fundamentais de Administração;
+O papel do administrador e sua interface com a Gestão Ambiental;
+Ambiente organizacional e desafios contemporâneos.
+
+
+2. Evolução do pensamento administrativo:
+Panorama histórico das principais escolas da administração;
+Transformações no papel das organizações frente aos desafios da sustentabilidade;
+Administração contemporânea e sustentabilidade .
+
+
+3. Processo administrativo e ferramentas básicas de gestão:
+Planejamento, organização, direção e controle;
+Ferramentas básicas de gestão: ciclo PDCA, 5W2H, fluxograma, indicadores de desempenho.
+
+
+4. Administração para a sustentabilidade:
+Sustentabilidade nas organizações;
+Introdução à responsabilidade socioambiental e governança organizacional;
+Modelos e abordagens da gestão sustentável (Triple Bottom Line, ESG - Environmental, Social and Governance).
+	Estratégias de ensino e aprendizagem:
+De acordo com os objetivos e conteúdos da unidade curricular, serão utilizadas estratégias metodológicas que promovam a participação ativa dos estudantes e a articulação entre teoria e prática. As atividades poderão incluir aulas expositivas dialogadas, estudos de caso, resolução de problemas, aplicações de ferramentas administrativas, seminários, oficinas e análises de organizações públicas, privadas e do terceiro setor, interações com organizações e profissionais da área. 
+O processo de avaliação será contínuo, processual e formativo, contemplando diferentes instrumentos, como produções escritas, apresentações orais, resolução de estudos de caso, atividades práticas, relatórios, registros reflexivos e participação nas atividades propostas. As avaliações poderão ser realizadas de forma individual ou em grupo, buscando articular conhecimentos teóricos às situações práticas do contexto profissional de um gestor ambiental. 
+         A carga horária desenvolvida na modalidade de educação a distância será realizada por meio do Ambiente Virtual de Ensino-Aprendizagem (AVEA) Moodle, em articulação com as atividades presenciais. Para tanto, no início da disciplina, os estudantes participarão de uma oficina sobre AVEA, com orientações práticas sobre navegação, recursos e atividades do ambiente virtual. Serão propostas atividades assíncronas, entre estas poderão constar: fóruns de discussão, enquetes, leituras dirigidas, estudos de caso, questionários, atividades reflexivas, pesquisas orientadas e vídeo aulas, utilizando recursos como livros digitais, artigos científicos, legislações, documentos técnicos e materiais audiovisuais relacionados aos conteúdos da unidade curricular. O acompanhamento da aprendizagem será realizado pelo(a) docente responsável, por meio do monitoramento da participação dos estudantes no ambiente virtual, da mediação das discussões, da oferta de orientações e devolutivas sobre as atividades desenvolvidas, bem como do esclarecimento de dúvidas durante os encontros presenciais e no próprio AVEA. A avaliação das atividades desenvolvidas na modalidade EaD ocorrerá de forma processual, considerando a participação nas atividades propostas, a realização das tarefas no prazo estabelecido e a qualidade das produções apresentadas. 
+	Bibliografia Básica:
+DIAS, Reinaldo; ZAVAGLIA, Tércia; CASSAR, Maurício. Introdução à administração: da competitividade à sustentabilidade. 3. ed. rev. Campinas, SP: Alínea, 2013. 
+DIAS, Reinaldo. Gestão ambiental: responsabilidade social e sustentabilidade. 3. ed. São Paulo: Atlas, 2017.
+LACOMBE, F. J. M.; HEILBORN, G. L. J. Administração: princípios e tendências. 3. ed. São Paulo: Saraiva, 2015.
+	Bibliografia Complementar:
+ALIGLERI, L.; ALIGLERI, L. A.; KRUGLIANSKAS, I. Gestão Socioambiental: responsabilidade e
+sustentabilidade dos negócios. São Paulo: Atlas, 2009.
+BARBIERI, J. C. Gestão ambiental empresarial: conceitos, modelos e instrumentos. 3. ed. atual. e ampl.
+DONAIRE, Denis; OLIVEIRA, Edenis Cesar de. Gestão ambiental na empresa: fundamentos e aplicações. 3. ed. São Paulo: Atlas, 2018. 
+MAXIMIANO, A. C. A. Introdução à administração. 8. ed. rev. e ampl. São Paulo: Atlas, 2008.
+	(*) CH Total – Carga horária total da unidade curricular em horas. Somatório da carga horária teórica-prática e extensão.
+(*) CH EaD – Carga horária EaD, se houver. A CH EaD é definida em razão da CH Total.
+
+
+Unidade Curricular: 
+GEOMÁTICA
+	Semestre:
+2
+	CH Total*:
+80 h
+	CH Extensão:
+00 h
+	Competências do Egresso Correlatas: 1, 2, 3, 4, 5, 6 ,7, 8, 9 e 10.
+	CH Presencial:
+
+
+60 h
+	CH Síncrona Mediada*:
+
+
+00 h
+	CH EaD:
+20 h
+	Objetivos:
+
+
+Utilizar processos técnicos e científicos na geração, aquisição, armazenamento, análise, disseminação e gerenciamento de informações espaciais relacionadas com o ambiente e recursos naturais atendendo às necessidades da sociedade e do processo produtivo. Identificar práticas exitosas e inovadoras na Geomática. 
+
+
+	Conteúdos:
+* Introdução à Cartografia;
+* Orientação;
+* Sistemas de coordenadas e escalas;
+* Formas da Terra e projeções cartográficas;
+* Classificação de cartas e precisão cartográfica;
+* Cartografia Temática;
+* Tecnologias GNSS (Global Navigation Satellite System) - Sistema de Navegação Global por Satélite;
+* Introdução à fotointerpretação;
+* Câmeras e processos fotográficos;
+* Estereoscopia;
+* Produção de mosaicos aerofotogrametrias e foto índices;
+* Metodologias de análise de dados por aerofotogramas;
+* Veículos aéreos não tripulado como plataforma de obtenção de dados;
+* Sistemas de Informações Geográficas (SIG);
+* Análise Espacial Aplicada;
+* Elaboração gráfica final e saída dos dados;
+* Elaboração de mapas temáticos;
+* Dispositivos móveis para coletas de dados georreferenciados;
+* Geotagging; 
+	Estratégias de ensino e aprendizagem:
+Entre as estratégias metodológicas que poderão ser aplicadas, tem-se: aula expositiva dialogada, estudos de casos, seminários, projetos de trabalho/aprendizagem (pedagogia de projetos), saídas de campo, aulas práticas em laboratório. 
+
+
+A carga horária desenvolvida na modalidade de educação a distância será realizada por meio do Ambiente Virtual de Ensino-Aprendizagem (AVEA) Moodle, em articulação com as atividades presenciais. Para tanto, no início da disciplina, os estudantes participarão de uma oficina sobre AVEA, com orientações práticas sobre navegação, recursos e atividades do ambiente virtual. Serão propostas atividades assíncronas, entre estas poderão constar: fóruns de discussão, enquetes, leituras dirigidas, estudos de caso, questionários, atividades reflexivas, pesquisas orientadas e vídeo aulas, utilizando recursos como livros digitais, artigos científicos, legislações, documentos técnicos e materiais audiovisuais relacionados aos conteúdos da unidade curricular. O acompanhamento da aprendizagem será realizado pelo(a) docente responsável, por meio do monitoramento da participação dos estudantes no ambiente virtual, da mediação das discussões, da oferta de orientações e devolutivas sobre as atividades desenvolvidas, bem como do esclarecimento de dúvidas durante os encontros presenciais e no próprio AVEA. A avaliação das atividades desenvolvidas na modalidade EaD ocorrerá de forma processual, considerando a participação nas atividades propostas, a realização das tarefas no prazo estabelecido e a qualidade das produções apresentadas. 
+
+
+	Bibliografia Básica:
+LOCH, Carlos. A interpretação de imagens aéreas: noções básicas e algumas aplicações nos campos profissionais. 5. ed. Florianópolis: Ed. da UFSC, 2008. 
+
+
+LONGLEY, Paul A. Sistemas e ciência da informação geográfica. 3. ed. Porto Alegre: Bookman, 2013. 
+
+
+	Bibliografia Complementar:
+CASSOL, R. et al. Comparação entre câmeras fotográficas digitais com GPS para aplicação em geotagging. In: XXV CONGRESSO BRASILEIRO DE CARTOGRAFIA, 2011, Curitiba. Anais... Curitiba, 2011. p. 412-419. 
+
+
+FITZ, Paulo Roberto. Cartografia básica. São Paulo: Oficina de Textos, 2008. ______. 
+
+
+Geoprocessamento sem complicação. São Paulo: Oficina de Textos, 2008. MENEZES, Paulo Márcio Leal de. Roteiro de cartografia. São Paulo: Oficina de Textos, 2013. ROBINSON, A. H. et al. Elements of cartography. 6. ed. New York: John Wiley & Sons, 1995. 
+	(*) CH Total – Carga horária total da unidade curricular em horas. Somatório da carga horária teórica-prática e extensão.
+(*) CH EaD – Carga horária EaD, se houver. A CH EaD é definida em razão da CH Total.
+
+
+Unidade Curricular: 
+ LINGUAGEM E COMUNICAÇÃO II
+	Semestre:
+2
+	CH Total*:
+40 h
+	CH Extensão:
+00 h
+	Competências do Egresso Correlatas: 1, 2, 3, 4, 5, 6 ,7, 8, 9 e 10.
+
+
+	CH Presencial:
+
+
+30 h
+	CH Síncrona Mediada*:
+
+
+00 h
+	CH EaD:
+10 h
+	Objetivos:
+Comunicar-se com desenvoltura, ética e profissionalismo em situações orais e escritas, percebendo a comunicação como elemento essencial para a atuação profissional.
+
+
+	Conteúdos:
+* Leitura compreensiva e produção escrita;
+* Gêneros textuais de cunho acadêmico: projeto e artigo científico;
+* Linguagem verbal e não verbal;
+* Variação linguística: regional, histórica e cultural; 
+* Preconceito linguístico;
+* Linguagem corporal;
+* Aspectos da oratória: segurança, preparação, entonação e ritmo de voz, dicção.
+	Estratégias de ensino e aprendizagem:
+As aulas terão o estudante como sujeito ativo de sua aprendizagem, partindo de uma metodologia dialógica, na qual os conhecimentos abordados terão relação com as práticas realizadas durante o semestre e a área de atuação profissional. 
+A carga horária desenvolvida na modalidade de educação a distância será realizada por meio do Ambiente Virtual de Ensino-Aprendizagem (AVEA) Moodle, em articulação com as atividades presenciais. Para tanto, no início da disciplina, os estudantes participarão de uma oficina sobre AVEA, com orientações práticas sobre navegação, recursos e atividades do ambiente virtual. Serão propostas atividades assíncronas, entre estas poderão constar: fóruns de discussão, enquetes, leituras dirigidas, estudos de caso, questionários, atividades reflexivas, pesquisas orientadas e vídeo aulas, utilizando recursos como livros digitais, artigos científicos, legislações, documentos técnicos e materiais audiovisuais relacionados aos conteúdos da unidade curricular. O acompanhamento da aprendizagem será realizado pelo(a) docente responsável, por meio do monitoramento da participação dos estudantes no ambiente virtual, da mediação das discussões, da oferta de orientações e devolutivas sobre as atividades desenvolvidas, bem como do esclarecimento de dúvidas durante os encontros presenciais e no próprio AVEA. A avaliação das atividades desenvolvidas na modalidade EaD ocorrerá de forma processual, considerando a participação nas atividades propostas, a realização das tarefas no prazo estabelecido e a qualidade das produções apresentadas. 
+
+
+	Bibliografia Básica:
+ARREDONDO, Lani. Aprenda a se comunicar com habilidade e clareza: 24 técnicas para tornar sua comunicação mais eficiente e seu dia-a-dia mais produtivo. Rio de Janeiro: Sextante, 2007. 
+PEASE, A.; PEASE, B. Desvendando os segredos da linguagem corporal. Rio de Janeiro: Sextante, 2005. 
+	Bibliografia Complementar:
+ALVES, Léo da Silva. A arte da oratória: técnicas de oratória moderna e comunicação eficiente. Brasília, DF: Brasília Jurídica, 2004. 
+
+
+GUGLIELMI, Anna. A linguagem secreta do corpo: a comunicação não verbal. 3. ed. Petrópolis, RJ: Vozes, 2011. 
+
+
+PEASE, A.; PEASE, B. A linguagem corporal no trabalho: como causar uma boa impressão e se destacar na carreira. Rio de Janeiro: Sextante, 2013. 
+
+
+POLITO, Reinaldo. Como falar corretamente e sem inibições. 111. ed. São Paulo: Saraiva, 2006. 
+
+
+WEIL, Pierre; TOMPAKOW, Roland. O corpo fala: a linguagem silenciosa da comunicação não verbal. 74. ed. Petrópolis, RJ: Vozes, 2015. 
+	(*) CH Total – Carga horária total da unidade curricular em horas. Somatório da carga horária teórica-prática e extensão.
+(*) CH EaD – Carga horária EaD, se houver. A CH EaD é definida em razão da CH Total.
+
+
+Unidade Curricular: 
+MICROBIOLOGIA E TOXICOLOGIA AMBIENTAL
+	Semestre:
+2
+	CH Total*:
+40 h
+	CH Extensão:
+00 h
+	Competências do Egresso Correlatas: 1, 2, 3, 4, 5, 6 ,7, 8, 9 e 10.
+
+
+	CH Presencial:
+
+
+30 h
+	CH Síncrona Mediada*:
+
+
+00 h
+	CH EaD:
+10 h
+	Objetivos:
+Geral:
+Promover a compreensão da atuação dos microrganismos e dos agentes tóxicos nos ecossistemas, capacitando o estudante a interpretar processos ambientais, avaliar impactos e compreender estratégias de monitoramento, prevenção e recuperação de ambientes degradados.
+Específicos:
+* Compreender a diversidade e o papel ecológico dos microrganismos.
+* Relacionar os microrganismos aos ciclos biogeoquímicos e à manutenção da qualidade ambiental.
+* Identificar indicadores microbiológicos utilizados no monitoramento ambiental. 
+* Compreender os princípios da biodegradação e da biorremediação. 
+* Conhecer os fundamentos da toxicologia ambiental. 
+* Identificar os principais contaminantes ambientais e seus efeitos.         
+* Compreender processos de bioacumulação, biomagnificação e ecotoxicidade.         
+* Relacionar processos microbiológicos e toxicológicos na         gestão ambiental.         
+	Conteúdos:
+Conceitos básicos de microbiologia ambiental. Diversidade e classificação de bactérias, arqueias, fungos, vírus e protozoários de importância ambiental. Ecologia microbiana. Microrganismos nos ciclos biogeoquímicos. Microbiologia da água, do solo e do ar. Indicadores microbiológicos de qualidade ambiental. Biodegradação da matéria orgânica. Biorremediação de áreas contaminadas. Fundamentos de toxicologia ambiental. Relação dose-resposta. Vias de exposição e efeitos dos contaminantes sobre organismos e ecossistemas. Principais contaminantes ambientais (metais pesados, agrotóxicos, hidrocarbonetos, poluentes orgânicos persistentes e contaminantes emergentes). Bioacumulação e biomagnificação. Ecotoxicologia. Avaliação de risco ambiental. Integração entre processos microbiológicos e toxicológicos no monitoramento, prevenção e recuperação de ambientes impactados.
+
+
+	Estratégias de ensino e aprendizagem:
+A UC será desenvolvida por meio de metodologias que favoreçam a participação ativa do estudante e a articulação entre os conceitos microbiológicos e toxicológicos aplicados à gestão ambiental, incluindo: aulas expositivo-dialogadas para introdução e sistematização dos conceitos fundamentais; estudos de caso envolvendo contaminação ambiental, surtos relacionados à água, acidentes com produtos químicos, áreas contaminadas e processos de recuperação ambiental; aprendizagem baseada em problemas, utilizando situações reais para estimular a análise crítica e a tomada de decisão; leitura, interpretação e discussão de artigos científicos, normas técnicas e legislação ambiental pertinente; seminários temáticos sobre contaminantes emergentes, biorremediação, ecotoxicologia, monitoramento ambiental e tecnologias sustentáveis; aulas práticas laboratoriais contemplando técnicas básicas de microbiologia ambiental e observação de microrganismos; desenvolvimento de trabalhos em grupo, promovendo a integração entre os conhecimentos científicos e a realidade profissional do gestor ambiental; discussão de notícias, relatórios técnicos e estudos ambientais relacionados à contaminação microbiológica e química de ecossistemas. As atividades buscarão integrar teoria e prática, estimulando o desenvolvimento da autonomia, da capacidade de análise crítica, da comunicação científica, do trabalho colaborativo e da resolução de problemas ambientais, competências essenciais para a atuação do Tecnólogo em Gestão Ambiental.
+A carga horária desenvolvida na modalidade de educação a distância será realizada por meio do Ambiente Virtual de Ensino-Aprendizagem (AVEA) Moodle, em articulação com as atividades presenciais. Para tanto, no início da disciplina, os estudantes participarão de uma oficina sobre AVEA, com orientações práticas sobre navegação, recursos e atividades do ambiente virtual. Serão propostas atividades assíncronas, entre estas poderão constar: fóruns de discussão, enquetes, leituras dirigidas, estudos de caso, questionários, atividades reflexivas, pesquisas orientadas e vídeo aulas, utilizando recursos como livros digitais, artigos científicos, legislações, documentos técnicos e materiais audiovisuais relacionados aos conteúdos da unidade curricular. O acompanhamento da aprendizagem será realizado pelo(a) docente responsável, por meio do monitoramento da participação dos estudantes no ambiente virtual, da mediação das discussões, da oferta de orientações e devolutivas sobre as atividades desenvolvidas, bem como do esclarecimento de dúvidas durante os encontros presenciais e no próprio AVEA. A avaliação das atividades desenvolvidas na modalidade EaD ocorrerá de forma processual, considerando a participação nas atividades propostas, a realização das tarefas no prazo estabelecido e a qualidade das produções apresentadas. 
+	Bibliografia Básica:
+ROCHA, Maria Carolina Vieira da. Microbiologia ambiental. Curitiba: InterSaberes, 2020. 255 p., il., color. ISBN 9788522702329. 
+
+
+SISINNO, Cristina Lúcia Silveira; OLIVEIRA-FILHO, Eduardo Cyrino. Princípios de toxicologia ambiental: conceito e aplicações. Rio de Janeiro: Interciência, 2013. 198 p., il. ISBN 9788571932630. 
+
+
+	Bibliografia Complementar:
+AZEVEDO, Fausto Antonio de; CHASIN, Alice A. M. (coord.). As bases toxicológicas da ecotoxicologia. São Carlos, SP; São Paulo: RiMa: Intertox, 2003. 322p., il. Inclui bibliografia. ISBN 8589843017 (Intertox) 858655264x (RiMa). 
+
+
+PELCZAR, Michael Joseph et al. Microbiologia: conceitos e aplicações, volume 2. Colaboração de Merna F. Pelczar. Revisão de Celso Vataru Nakamura. Tradução de Sueli Fumie Yamada. 2. ed. São Paulo: Pearson Education do Brasil, 2016. 517 p. ISBN 9788534604543.
+ 
+TORTORA, Gerard J.; FUNKE, Berdell R.; CASE, Christine L. Microbiologia. Tradução de Danielle Soares de Oliveira Daian, Luis Fernando Marques Dorvillé. 12. ed. Porto Alegre: Artmed, 2017. 935 p., il., color. ISBN 9788582713532. 
+	(*) CH Total – Carga horária total da unidade curricular em horas. Somatório da carga horária teórica-prática e extensão.
+(*) CH EaD – Carga horária EaD, se houver. A CH EaD é definida em razão da CH Total.
+
+
+Unidade Curricular: 
+QUÍMICA AMBIENTAL
+	Semestre:
+2
+	CH Total*:
+80 h
+	CH Extensão:
+00 h
+	Competências do Egresso Correlatas: 1, 2, 3, 4, 5, 6 ,7, 8, 9 e 10.
+
+
+	CH Presencial:
+
+
+60 h
+	CH Síncrona Mediada*:
+
+
+00 h
+	CH EaD:
+20 h
+	Objetivos:
+● Compreender os fundamentos da Química Ambiental e a sua importância para a Gestão Ambiental.
+● Avaliar os processos químicos envolvidos na dinâmica dos ambientes aquáticos, interpretando os principais parâmetros físico-químicos utilizados na determinação da qualidade da água. 
+● Compreender a composição química da atmosfera e os processos responsáveis pela formação e transformação de poluentes atmosféricos, relacionando-os a problemas ambientais como chuva ácida, destruição da camada de ozônio e intensificação do efeito estufa. 
+● Analisar as propriedades químicas do solo e sua influência na disponibilidade de nutrientes e no comportamento dos contaminantes, compreendendo os impactos ambientais dos metais pesados.  
+● Interpretar dados de análises físico-químicas da água, do ar e do solo, relacionando-os à avaliação da qualidade ambiental. 
+	Conteúdos:
+● Introdução à Química Ambiental: definição e histórico da Química Ambiental, compartimentos ambientais (atmosfera, hidrosfera e litosfera), poluição e contaminação, poluentes ambientais (classificação, fontes e comportamento no ambiente).
+● Principais tipos de reações químicas que ocorrem em soluções aquosas: solução aquosa, noções de  concentração de soluções, reações ácido/base, reações de oxidação/redução e reações de precipitação. 
+● Química da água: propriedades físico-químicas da substância H2O e suas implicações ambientais, processos químicos aquáticos, qualidade da água (pH, alcalinidade, condutividade, cor e turbidez, fósforo total, oxigênio dissolvido, DBO e DQO). Principais contaminantes em ambientes aquáticos. 
+● Química da atmosfera: estrutura e composição química da atmosfera, camada de ozônio (formação e destruição não catalítica do ozônio), efeito estufa natural, alterações químicas na atmosfera: chuva ácida, redução da camada de ozônio e aumento do efeito estufa.
+● Química do solo: composição e propriedades químicas do solo (acidez e capacidade de troca catiônica (CTC)), principais contaminantes do solo, poluição por metais pesados.
+	Estratégias de ensino e aprendizagem:
+
+
+As atividades presenciais da unidade curricular serão desenvolvidas por meio de aulas expositivas dialogadas, com utilização de recursos audiovisuais e discussão de situações problema/artigos relacionados à Química Ambiental. Os conteúdos serão contextualizados com questões ambientais contemporâneas, buscando integrar os fundamentos químicos às aplicações na gestão ambiental. Serão realizadas atividades práticas em laboratório para determinação e interpretação de parâmetros físico-químicos da água e do solo, bem como demonstrações experimentais das principais reações químicas em soluções aquosas (contemplando 20h da carga horária presencial). Os instrumentos avaliativos incluirão a participação nas aulas, trabalhos individuais e/ou em grupo; avaliações escritas, com ou sem consulta; resoluções de exercícios e apresentação de seminários.
+A carga horária EAD será desenvolvida por meio do Ambiente Virtual de Aprendizagem SIGAA, no qual serão disponibilizados os materiais didáticos e as atividades de aprendizagem. As estratégias de ensino adotadas na modalidade EAD incluirão videoaulas, análise de estudos de caso, leitura e discussão de artigos científicos, resolução de exercícios, participação em fóruns e realização de questionários on-line.
+O acompanhamento da aprendizagem ocorrerá de forma contínua pelo docente, por meio do monitoramento dos acessos e da participação dos estudantes no Ambiente Virtual de Aprendizagem, da mediação nos fóruns de discussão, do atendimento às dúvidas por meio das ferramentas de comunicação do SIGAA e do fornecimento de feedback sobre as atividades realizadas. A avaliação das atividades desenvolvidas na modalidade EAD irá considerar a participação, o cumprimento dos prazos e a qualidade das produções apresentadas.
+As atividades presenciais e a distância serão articuladas de forma a promover a aprendizagem significativa, a autonomia do estudante e o desenvolvimento de competências relacionadas à aplicação dos conhecimentos da Química Ambiental na gestão ambiental.  
+	Bibliografia Básica:
+BAIRD, Colin; CANN, Michael. Química ambiental. Tradução de Marco Tadeu Grassi. 4. ed. Porto Alegre: Bookman, 2011. 844 p., il. ISBN 9788577808489. 
+ROCHA, Júlio Cesar; ROSA, André Henrique; CARDOSO, Arnaldo Alves. Introdução à química ambiental. 2. ed. Porto Alegre: Bookman, 2009. 256 p., il., color, 25 cm. ISBN 9788577804696. 
+	Bibliografia Complementar:
+
+
+ATKINS, P. W.; JONES, Loretta. Princípios de química: questionando a vida moderna e o meio ambiente. Tradução de Ricardo Bicca de Alencastro. 5. ed. Porto Alegre: Bookman, 2012. 922 p., il. ISBN 9788540700383. 
+
+
+LENZI, Ervim; FAVERO, Luzia Otilia Bortotti; LUCHESE, Eduardo Bernardi. Introdução à química da água: ciência, vida e sobrevivência. Rio de Janeiro: LTC, 2009. 604 p., il. Inclui bibliografia. ISBN 9788521616795. 
+
+
+LENZI, Ervim; FAVERO, Luzia Otilia Bortotti. Introdução à química da atmosfera: ciência, vida e sobrevivência. 2. ed. Rio de Janeiro: LTC, 2019. 465 p., il. ISBN 9788521634843. 
+	(*) CH Total – Carga horária total da unidade curricular em horas. Somatório da carga horária teórica-prática e extensão.
+(*) CH EaD – Carga horária EaD, se houver. A CH EaD é definida em razão da CH Total.
+
+
+Unidade Curricular: 
+ECOLOGIA APLICADA
+	Semestre:
+3
+	CH Total*:
+40 h
+	CH Extensão:
+10 h
+	Competências do Egresso Correlatas: 1, 2, 3, 4, 5, 6 ,7, 8, 9 e 10.
+
+
+	CH Presencial:
+
+
+30 h
+	CH Síncrona Mediada*:
+
+
+00 h
+	CH EaD:
+10 h
+	Objetivos:
+Capacitar o discente a compreender e aplicar os princípios ecológicos na análise, planejamento, monitoramento e gestão de sistemas ambientais naturais e antropizados, formando um profissional apto a promover o uso sustentável dos recursos naturais e mitigar impactos ambientais.
+	Conteúdos:
+Evolução da ecologia como ciência aplicada. Estrutura e funcionamento dos ecossistemas (fluxo de energia e ciclos biogeoquímicos). Dinâmica populacional, nicho ecológico e capacidade de suporte. Impactos antrópicos: perda de habitat, poluição e mudanças climáticas. Conceito de pegada ecológica. Classificação dos serviços ecossistêmicos (provisão, regulação, suporte e culturais).  Metodologias de valoração econômica e ecológica da natureza.  Aplicação dos serviços ecossistêmicos no Licenciamento Ambiental e Avaliação de Impacto Ambiental. Pagamentos por Serviços Ambientais. Estratégias de conservação in situ e ex situ (Corredores Ecológicos e Áreas Protegidas). Espécies exóticas invasoras: impactos e controle. Fundamentos da Restauração Ecológica. Manejo Adaptativo: princípios, ciclos de aprendizado e aplicação na gestão de recursos naturais. Políticas e legislações ambientais nacionais e acordos internacionais. Ecologia Urbana e soluções baseadas na natureza (SbN). Integração da ecologia com os Objetivos de Desenvolvimento Sustentável (ODS).  
+	Estratégias de ensino e aprendizagem:
+Aulas expositivas dialogadas com apresentação dos conceitos fundamentais com constante articulação com a realidade local e global, promovendo debates e questionamentos.
+Estudo de casos (Problem-Based Learning - PBL) com análise de cenários reais de degradação ambiental, licenciamento e restauração, exigindo que os alunos proponham soluções com base na ecologia aplicada.
+Seminários temáticos com pesquisa e apresentação em grupo sobre temas atuais, fomentando a capacidade de argumentação e síntese.
+Atividades práticas de campo (virtual ou presencial) com diagnóstico rápido de áreas degradadas ou unidades de conservação, aplicação de protocolos de monitoramento ambiental e inventariação de serviços ecossistêmicos.
+Projetos Integradores com o desenvolvimento de um plano de ação simplificado de gestão ou restauração ecológica para uma área específica, articulando os conhecimentos de todas as unidades.
+
+
+Atividades de extensão totalizando 10 horas: realização de atividades de campo, visitas técnicas e/ou saídas de campo para observação, identificação e análise de ecossistemas, comunidades biológicas e suas interações com o ambiente. Poderão também ser desenvolvidas ações de extensão envolvendo levantamento e registro da biodiversidade local, atividades de educação ambiental junto a escolas e comunidades, oficinas e palestras sobre conservação da biodiversidade, espécies nativas e exóticas, impactos ambientais e conservação de ecossistemas, bem como ações de sensibilização e divulgação científica relacionadas à proteção dos recursos naturais. As atividades poderão incluir a elaboração e divulgação de materiais educativos, campanhas de conscientização e ações participativas voltadas à identificação e discussão de problemas ecológicos presentes no território. As atividades deverão articular os conhecimentos desenvolvidos na unidade curricular com questões ambientais e demandas da comunidade, promovendo a interação entre o IFSC e a sociedade e contribuindo para a formação dos estudantes. 
+
+
+A carga horária desenvolvida na modalidade de educação a distância será realizada por meio do Ambiente Virtual de Ensino-Aprendizagem (AVEA) Moodle, em articulação com as atividades presenciais. Para tanto, no início da disciplina, os estudantes participarão de uma oficina sobre AVEA, com orientações práticas sobre navegação, recursos e atividades do ambiente virtual. Serão propostas atividades assíncronas, entre estas poderão constar: fóruns de discussão, enquetes, leituras dirigidas, estudos de caso, questionários, atividades reflexivas, pesquisas orientadas e vídeo aulas, utilizando recursos como livros digitais, artigos científicos, legislações, documentos técnicos e materiais audiovisuais relacionados aos conteúdos da unidade curricular. O acompanhamento da aprendizagem será realizado pelo(a) docente responsável, por meio do monitoramento da participação dos estudantes no ambiente virtual, da mediação das discussões, da oferta de orientações e devolutivas sobre as atividades desenvolvidas, bem como do esclarecimento de dúvidas durante os encontros presenciais e no próprio AVEA. A avaliação das atividades desenvolvidas na modalidade EaD ocorrerá de forma processual, considerando a participação nas atividades propostas, a realização das tarefas no prazo estabelecido e a qualidade das produções apresentadas. 
+	Bibliografia Básica:
+BEGON, M.; TOWSEND, C.R.; HARPER, J.L. Ecologia: de indivíduos a ecossistemas. 4. ed. Porto Alegre: Artmed, 2007. 
+
+
+ODUM, E. P.; BARRETT, G. W. Fundamentos de ecologia. São Paulo: Cengage Learning, 2011. 
+	Bibliografia Complementar:
+GERLING, C. et al. (org.). Manual de ecossistemas marinhos e costeiros para educadores. Santos, SP: Ed. Comunicar, 2016. Acesso em: 23 ago. 2018. 
+
+
+BRASIL. Ministério da Agricultura, Pecuária e Abastecimento. Curso de recuperação de áreas degradadas. Acesso em: 23 ago. 2018. 
+
+
+MILLER, G. Tyler; SPOOLMAN, Scott. Ciência ambiental. 2. ed. São Paulo: Cengage Learning, 2015. 
+
+
+RICKLEFS, R.E. A economia da natureza. 6. ed. Rio de Janeiro: Guanabara Koogan, 2010. 
+
+
+RODRIGUES, Efraim. Ecologia da restauração. Londrina: Planta, 2013. 
+	(*) CH Total – Carga horária total da unidade curricular em horas. Somatório da carga horária teórica-prática e extensão.
+(*) CH EaD – Carga horária EaD, se houver. A CH EaD é definida em razão da CH Total.
+
+
+Unidade Curricular: 
+ESTATÍSTICA APLICADA
+	Semestre:
+3
+	CH Total*:
+40 h
+	CH Extensão:
+00 h
+	Competências do Egresso Correlatas: 1, 2, 3, 4, 5, 6 ,7, 8, 9 e 10.
+
+
+	CH Presencial:
+
+
+30 h
+	CH Síncrona Mediada*:
+
+
+00 h
+	CH EaD:
+10 h
+	Objetivos:
+Capacitar o discente a utilizar ferramentas estatísticas para planejar amostragens, analisar dados ambientais e interpretar resultados, garantindo a confiabilidade e a validação científica de laudos, relatórios de monitoramento e estudos de impacto ambiental. 
+	Conteúdos:
+Introdução à estatística ambiental e seu papel na gestão. Variáveis qualitativas e quantitativas no contexto ambiental. Métodos de tabulação, gráficos e medidas de tendência central (média, mediana, moda). Medidas de dispersão (amplitude, variância, desvio padrão, coeficiente de variação). • Fundamentos de amostragem: planejando o monitoramento ambiental. Conceitos fundamentais de probabilidade aplicados a riscos ambientais. Distribuições de probabilidade (Normal, Poisson, Log-normal para dados de poluição). Intervalos de confiança. Testes de hipóteses paramétricos e não paramétricos (Teste t, Mann-Whitney, Wilcoxon). Análise de Variância (ANOVA) para comparação de áreas impactadas vs. controle. Correlação e regressão linear simples e múltipla. Identificação de causalidade vs. correlação em dados ambientais. Análise de tendências e séries temporais (evolução da qualidade da água ou ar). Introdução à análise multivariada (Análise de Componentes Principais - PCA) para dados complexos de poluição. 
+	Estratégias de ensino e aprendizagem:
+Aulas teórico-práticas com apresentação dos conceitos fundamentais intercaladas com resolução de problemas baseados em dados reais (ex: monitoramento de efluentes).
+Uso de software estatístico, utilizando planilhas e software de código aberto para processamento e visualização de dados.
+Estudo de casos (Problem-Based Learning - PBL) com análise de relatórios de monitoramento reais para verificar conformidade com as legislações ambientais.
+Projetos Integradores com o desenvolvimento de um plano de amostragem estatística para uma área específica, definindo número de pontos de coleta, frequência e testes estatísticos adequados para um laudo ambiental.
+Análise de tendências com a utilização de séries históricas de dados climáticos ou de poluição para treinar os alunos na detecção de padrões e anomalias ambientais. 
+A carga horária desenvolvida na modalidade de educação a distância será realizada por meio do Ambiente Virtual de Ensino-Aprendizagem (AVEA) Moodle, em articulação com as atividades presenciais. Para tanto, no início da disciplina, os estudantes participarão de uma oficina sobre AVEA, com orientações práticas sobre navegação, recursos e atividades do ambiente virtual. Serão propostas atividades assíncronas, entre estas poderão constar: fóruns de discussão, enquetes, leituras dirigidas, estudos de caso, questionários, atividades reflexivas, pesquisas orientadas e vídeo aulas, utilizando recursos como livros digitais, artigos científicos, legislações, documentos técnicos e materiais audiovisuais relacionados aos conteúdos da unidade curricular. O acompanhamento da aprendizagem será realizado pelo(a) docente responsável, por meio do monitoramento da participação dos estudantes no ambiente virtual, da mediação das discussões, da oferta de orientações e devolutivas sobre as atividades desenvolvidas, bem como do esclarecimento de dúvidas durante os encontros presenciais e no próprio AVEA. A avaliação das atividades desenvolvidas na modalidade EaD ocorrerá de forma processual, considerando a participação nas atividades propostas, a realização das tarefas no prazo estabelecido e a qualidade das produções apresentadas. 
+	Bibliografia Básica:
+BARBETTA, Pedro Alberto. Estatística aplicada às ciências sociais. 8. ed. rev. Florianópolis: Ed. da UFSC, 2012. 
+
+
+MORETTIN, Pedro Alberto; BUSSAB, Wilton de Oliveira. Estatística básica. 8. ed. São Paulo: Saraiva, 2013.
+	Bibliografia Complementar:
+BUENO, Fabrício. Estatística para processos produtivos. Florianópolis: Visual Books, 2010. KIRSTEN, J. T.; 
+
+
+RABAHY, W. A. Estatística aplicada às ciências humanas e ao turismo. São Paulo: Saraiva, 2006.
+	(*) CH Total – Carga horária total da unidade curricular em horas. Somatório da carga horária teórica-prática e extensão.
+(*) CH EaD – Carga horária EaD, se houver. A CH EaD é definida em razão da CH Total.
+
+
+Unidade Curricular: 
+GESTÃO DE ÁREAS PROTEGIDAS
+	Semestre:
+3
+	CH Total*:
+40 h
+	CH Extensão:
+10 h
+	Competências do Egresso Correlatas: 1, 2, 3, 4, 5, 6 ,7, 8, 9 e 10.
+
+
+	CH Presencial:
+
+
+30 h
+	CH Síncrona Mediada*:
+
+
+00 h
+	CH EaD:
+10 h
+	Objetivos:
+* Compreender os conceitos, objetivos e funções das áreas protegidas na conservação da biodiversidade e na promoção do desenvolvimento sustentável. 
+* Conhecer os principais processos e instrumentos utilizados na gestão de áreas protegidas, compreendendo sua aplicação em diferentes categorias de conservação. 
+	Conteúdos:
+* Tipos de áreas protegidas
+* Regulamentações internacionais
+* O Sistema Nacional de Unidades de Conservação (SNUC) e seus desdobramentos
+* Tipos e categorias de Unidade de Conservação
+* Gestão participativa em Unidades de Conservação
+* Planos de manejo em Unidades de Conservação
+* Sobreposição de Unidades de Conservação e territórios dos povos e comunidades tradicionais
+* Conflitos socioambientais
+	Estratégias de ensino e aprendizagem:
+A metodologia de ensino será desenvolvida de forma participativa, dialógica e contextualizada, valorizando os conhecimentos e as vivências dos estudantes em seus territórios. As estratégias didático-pedagógicas buscarão promover a articulação entre os conteúdos abordados, a realidade socioambiental local e os diferentes campos de atuação da Gestão Ambiental, estimulando a reflexão crítica, a integração entre teoria e prática e a compreensão dos desafios relacionados à gestão de áreas protegidas. 
+Serão desenvolvidas atividades de pesquisa, seminários, visitas técnicas a Unidades de Conservação e diálogos com gestores, além da elaboração de projetos voltados à gestão de áreas protegidas, buscando aproximar os estudantes das realidades, dos desafios e das possibilidades de atuação profissional nesse campo. 
+A avaliação será processual e contínua, considerando o desenvolvimento dos estudantes ao longo da unidade curricular por meio de trabalhos individuais e coletivos, como pesquisas, relatórios, seminários e apresentações. Os projetos elaborados durante a unidade curricular buscarão responder a demandas identificadas na realidade das unidades de conservação, articulando ensino, pesquisa e extensão e contemplando as ações de extensão curricular (10h). 
+A carga horária desenvolvida na modalidade de educação a distância será realizada por meio do Ambiente Virtual de Ensino-Aprendizagem (AVEA) Moodle, em articulação com as atividades presenciais. Para tanto, no início da disciplina, os estudantes participarão de uma oficina sobre AVEA, com orientações práticas sobre navegação, recursos e atividades do ambiente virtual. Serão propostas atividades assíncronas, entre estas poderão constar: fóruns de discussão, enquetes, leituras dirigidas, estudos de caso, questionários, atividades reflexivas, pesquisas orientadas e vídeo aulas, utilizando recursos como livros digitais, artigos científicos, legislações, documentos técnicos e materiais audiovisuais relacionados aos conteúdos da unidade curricular. O acompanhamento da aprendizagem será realizado pelo(a) docente responsável, por meio do monitoramento da participação dos estudantes no ambiente virtual, da mediação das discussões, da oferta de orientações e devolutivas sobre as atividades desenvolvidas, bem como do esclarecimento de dúvidas durante os encontros presenciais e no próprio AVEA. A avaliação das atividades desenvolvidas na modalidade EaD ocorrerá de forma processual, considerando a participação nas atividades propostas, a realização das tarefas no prazo estabelecido e a qualidade das produções apresentadas. 
+	Bibliografia Básica:
+GUERRA, Antonio José Teixeira; COELHO, Maria Célia Nunes (org.). Unidades de conservação: abordagens e características geográficas. 2. ed. Rio de Janeiro: Bertrand Brasil, 2012. 296 p., il. Inclui bibliografia e índice. ISBN 9788528613711. 
+PRIMACK, Richard B.; RODRIGUES, Efraim. Biologia da conservação. Londrina: Planta, 2001. 327 p., il., 23 cm. Biibliografia: p. 311-327. ISBN 8590200213. 
+	Bibliografia Complementar:
+LOUREIRO, Carlos Frederico Bernardo; AZAZIEL, Marcus; FRANCA, Nahyda. Educação ambiental e conselho em unidades de conservação: aspectos teóricos e metodológicos. Rio de Janeiro: Ibase, 2007. 87 p. ISBN 9788589447164. 
+
+
+LUZ, Lêda (org.). Iniciativas de inclusão produtiva e gestão participativa de unidades de conservação dos ambientes marinhos e costeiros do Brasil. Brasília: Instituto Chico Mendes de Conservação da Biodiversidade, 2017. 116 p., il. ISBN 9788561842666. 
+
+
+RUSCHMANN, Doris van de Meene; PHILIPPI JUNIOR, Arlindo (ed.). Gestão ambiental e sustentabilidade no turismo. Barueri: Manole, 2010. 1027 p. (Ambiental, 9). ISBN 9788520424971. 
+	(*) CH Total – Carga horária total da unidade curricular em horas. Somatório da carga horária teórica-prática e extensão.
+(*) CH EaD – Carga horária EaD, se houver. A CH EaD é definida em razão da CH Total.
+
+
+Unidade Curricular: 
+GESTÃO DE RECURSOS HÍDRICOS
+	Semestre:
+3
+	CH Total*:
+40 h
+	CH Extensão:
+00 h
+	Competências do Egresso Correlatas: 1, 2, 3, 4, 5, 6 ,7, 8, 9 e 10.
+
+
+	CH Presencial:
+
+
+30 h
+	CH Síncrona Mediada*:
+
+
+00 h
+	CH EaD:
+10 h
+	Objetivos:
+Reconhecer o conjunto de ações governamentais destinadas a regular o uso, o controle e a proteção das águas, e a avaliar a conformidade da situação corrente com os princípios doutrinários estabelecidos pela Política de Águas.
+	Conteúdos:
+* Importância da água, o ciclo hidrológico, a distribuição da água no planeta, a desigualdade no acesso à água potável e saneamento;
+* Qualidade e quantidade da água
+* Usos da água;
+* Gestão da água (incluindo os conflitos de uso);
+* Segurança hídrica.
+
+
+	Estratégias de ensino e aprendizagem:
+Diversas estratégias metodológicas poderão ser utilizadas, entre elas: aula expositiva dialogada, atividades em laboratórios, trabalhos individuais e em grupos, debates, estudos de casos, seminários, visitas técnicas, saídas de campo, palestras, leituras de artigos, metodologias ativas, entre outras.
+
+
+A carga horária desenvolvida na modalidade de educação a distância será realizada por meio do Ambiente Virtual de Ensino-Aprendizagem (AVEA) Moodle, em articulação com as atividades presenciais. Para tanto, no início da disciplina, os estudantes participarão de uma oficina sobre AVEA, com orientações práticas sobre navegação, recursos e atividades do ambiente virtual. Serão propostas atividades assíncronas, entre estas poderão constar: fóruns de discussão, enquetes, leituras dirigidas, estudos de caso, questionários, atividades reflexivas, pesquisas orientadas e vídeo aulas, utilizando recursos como livros digitais, artigos científicos, legislações, documentos técnicos e materiais audiovisuais relacionados aos conteúdos da unidade curricular. O acompanhamento da aprendizagem será realizado pelo(a) docente responsável, por meio do monitoramento da participação dos estudantes no ambiente virtual, da mediação das discussões, da oferta de orientações e devolutivas sobre as atividades desenvolvidas, bem como do esclarecimento de dúvidas durante os encontros presenciais e no próprio AVEA. A avaliação das atividades desenvolvidas na modalidade EaD ocorrerá de forma processual, considerando a participação nas atividades propostas, a realização das tarefas no prazo estabelecido e a qualidade das produções apresentadas. 
+
+
+	Bibliografia Básica:
+AGÊNCIA NACIONAL DE ÁGUAS. Sistema Nacional de Informações sobre Recursos Hídricos: Conjuntura dos recursos hídricos no Brasil: Disponível em: https://www.snirh.gov.br/portal/snirh/centrais-de-conteudos/conjuntura-dos-recursos-hidricos Acesso em: 15 jul. 2026.
+AGÊNCIA NACIONAL DE ENERGIA ELÉTRICA. Introdução ao Gerenciamento de Recursos Hídricos. 2. ed. Brasília: ANEEL, 2001. 
+BRAGA, Benedito (Org.). Águas doces no Brasil: capital ecológico, uso e conservação. 4. ed., rev. e atual. São Paulo: Escrituras, 2015.
+
+
+	Bibliografia Complementar:
+BANCO MUNDIAL. Estratégias de gerenciamento de recursos hídricos no Brasil: áreas de cooperação com o Banco Mundial. Brasília, 2003.
+______. Sistema de suporte à decisão para a outorga de direitos de uso da água no Brasil. Brasília, 2003.
+
+
+BRASIL. Ministério do Meio Ambiente, Secretaria de Recursos Hídricos. Plano Nacional de Recursos Hídricos. Panorama e estado dos recursos hídricos do Brasil. Volume 1. Brasília: MMA, 2006.
+______. Plano Nacional de Recursos Hídricos. Síntese executiva: português. Brasília: MMA, 2006.
+
+
+CECH, T. V. Recursos hídricos: história, desenvolvimento, política e gestão. 3. ed. Rio de Janeiro: LTC, 2013.
+	(*) CH Total – Carga horária total da unidade curricular em horas. Somatório da carga horária teórica-prática e extensão.
+(*) CH EaD – Carga horária EaD, se houver. A CH EaD é definida em razão da CH Total.
+
+
+
+
+Unidade Curricular: 
+GESTÃO DE RESÍDUOS SÓLIDOS
+	Semestre:
+3
+	CH Total*:
+80 h
+	CH Extensão:
+00 h
+	Competências do Egresso Correlatas: 1, 2, 3, 4, 5, 6 ,7, 8, 9 e 10.
+
+
+	CH Presencial:
+
+
+60 h
+	CH Síncrona Mediada*:
+
+
+00 h
+	CH EaD:
+20 h
+	Objetivos:
+Proporcionar conhecimentos na área de gestão, valorização e tratamento de resíduos sólidos.
+	Conteúdos:
+* Generalidades, definições e conceitos sobre os resíduos sólidos e seus tipos; 
+* Caracterização dos resíduos;
+* Panorama dos resíduos;
+* Classificação de resíduos;
+* Coleta, segregação, transporte, tratamento e destino final de Resíduos Sólidos Urbanos;
+* Política Nacional de Resíduos Sólidos e os Planos de Resíduos.
+	Estratégias de ensino e aprendizagem:
+Diversas estratégias metodológicas poderão ser utilizadas, entre elas: aula expositiva dialogada, atividades em laboratórios, trabalhos individuais e em grupos, debates, estudos de casos, seminários, visitas técnicas, saídas de campo, palestras, leituras de artigos, metodologias ativas, entre outras.
+
+
+A carga horária desenvolvida na modalidade de educação a distância será realizada por meio do Ambiente Virtual de Ensino-Aprendizagem (AVEA) Moodle, em articulação com as atividades presenciais. Para tanto, no início da disciplina, os estudantes participarão de uma oficina sobre AVEA, com orientações práticas sobre navegação, recursos e atividades do ambiente virtual. Serão propostas atividades assíncronas, entre estas poderão constar: fóruns de discussão, enquetes, leituras dirigidas, estudos de caso, questionários, atividades reflexivas, pesquisas orientadas e vídeo aulas, utilizando recursos como livros digitais, artigos científicos, legislações, documentos técnicos e materiais audiovisuais relacionados aos conteúdos da unidade curricular. O acompanhamento da aprendizagem será realizado pelo(a) docente responsável, por meio do monitoramento da participação dos estudantes no ambiente virtual, da mediação das discussões, da oferta de orientações e devolutivas sobre as atividades desenvolvidas, bem como do esclarecimento de dúvidas durante os encontros presenciais e no próprio AVEA. A avaliação das atividades desenvolvidas na modalidade EaD ocorrerá de forma processual, considerando a participação nas atividades propostas, a realização das tarefas no prazo estabelecido e a qualidade das produções apresentadas. 
+
+
+	Bibliografia Básica:
+JARDIM, Arnaldo; YOSHIDA, Consuelo Yatsuda Moromizato; MACHADO FILHO, José Valverde. Política nacional, gestão e gerenciamento de resíduos sólidos. São Paulo: Manole, 2012.
+ 
+MASSUKADO, Luciana Miyoko. Compostagem: nada se cria, nada se perde; tudo se transforma. Brasília, DF: Editora IFB, 2016.
+
+
+	Bibliografia Complementar:
+BOOURSCHEID, Antonio; SOUZA, Rhonan Lima de. Resíduos de construção e demolição como material alternativo. Florianópolis: Publicação do IFSC, 2010.
+ 
+MANO, Eloisa Biasotto; PACHECO, Élen B. A. V.; BONELLI, Cláudia M. C. Meio ambiente, poluição e reciclagem. 2. ed. São Paulo: Blucher, 2010. 
+
+
+WALDMAN, Maurício. Lixo: cenários e desafios : abordagens básicas para entender os resíduos sólidos. São Paulo: Cortez, 2010.
+	(*) CH Total – Carga horária total da unidade curricular em horas. Somatório da carga horária teórica-prática e extensão.
+(*) CH EaD – Carga horária EaD, se houver. A CH EaD é definida em razão da CH Total.
+
+
+Unidade Curricular: 
+PATRIMÔNIO CULTURAL NA GESTÃO AMBIENTAL
+	Semestre:
+3
+	CH Total*:
+40 h
+	CH Extensão:
+10 h
+	Competências do Egresso Correlatas: 1, 2, 3, 4, 5, 6 ,7, 8, 9 e 10.
+
+
+	CH Presencial:
+
+
+30 h
+	CH Síncrona Mediada*:
+
+
+00 h
+	CH EaD:
+10 h
+	Objetivos:
+
+
+Compreender e considerar o patrimônio cultural enquanto dimensão do desenvolvimento sustentável na Gestão Ambiental.
+
+
+Objetivos Específicos:
+
+
+* Reconhecer a importância do patrimônio cultural na promoção do desenvolvimento sustentável. 
+* Conhecer a legislação protetiva do patrimônio cultural.  
+* Garantir os pressupostos da proteção do patrimônio cultural na gestão ambiental.  
+* Desenvolver as atividades extensionistas relativas ao Patrimônio Cultural e Desenvolvimento Sustentável.
+	Conteúdos:
+
+
+Introdução. Conceitos de Patrimônio Cultural. Paisagem Cultural. Cultura e Meio Ambiente. Legislação de proteção do patrimônio brasileiro. Patrimônio arqueológico e licenciamento ambiental. Desenvolvimento sustentável. Conferência da ONU de 1972, Relatório Brundtland e Conferência Rio-92: os debates sobre o conceito de sustentabilidade. Agenda 21. História das políticas de desenvolvimento no litoral sul de Santa Catarina. Investigação e reconhecimento do patrimônio cultural pelo viés da prática de ação extensionista em áreas de grande pertinência social. Investigação e reconhecimento do patrimônio cultural pelo viés da prática de ação extensionista em áreas de grande pertinência social, articulado com as UCs do semestre letivo, totalizando 10 horas de ações de extensão.
+	Estratégias de ensino e aprendizagem:
+​​A metodologia de ensino-aprendizagem será baseada em estratégias didáticas diversificadas, tais como: aulas expositivas dialogadas; saídas de campo; visitas técnicas; trabalhos em grupo (na forma de seminários, estudos de caso, rodas de conversa, dentre outros); leitura de artigos científicos; visualização de filmes e documentários.
+
+
+Prática extensionista com projeto de extensão elaborado com outras Unidades Curriculares garantindo a carga horária prevista para a curricularização da extensão (10h).
+
+
+A carga horária desenvolvida na modalidade de educação a distância será realizada por meio do Ambiente Virtual de Ensino-Aprendizagem (AVEA) Moodle, em articulação com as atividades presenciais. Para tanto, no início da disciplina, os estudantes participarão de uma oficina sobre AVEA, com orientações práticas sobre navegação, recursos e atividades do ambiente virtual. Serão propostas atividades assíncronas, entre estas poderão constar: fóruns de discussão, enquetes, leituras dirigidas, estudos de caso, questionários, atividades reflexivas, pesquisas orientadas e vídeo aulas, utilizando recursos como livros digitais, artigos científicos, legislações, documentos técnicos e materiais audiovisuais relacionados aos conteúdos da unidade curricular. O acompanhamento da aprendizagem será realizado pelo(a) docente responsável, por meio do monitoramento da participação dos estudantes no ambiente virtual, da mediação das discussões, da oferta de orientações e devolutivas sobre as atividades desenvolvidas, bem como do esclarecimento de dúvidas durante os encontros presenciais e no próprio AVEA. A avaliação das atividades desenvolvidas na modalidade EaD ocorrerá de forma processual, considerando a participação nas atividades propostas, a realização das tarefas no prazo estabelecido e a qualidade das produções apresentadas.
+	Bibliografia Básica:
+BASTOS, Rossano Lopes; SOUZA, Marise Campos de (Org.). Patrimônio Cultural arqueológico: Diálogos, Reflexões e práticas. São Paulo: IPHAN/SP, 2011. 
+BASTOS, R. L.; SOUZA, Marise Campos de. Normas e gerenciamento do patrimônio arqueológico. 3. ed. São Paulo: Imprensa oficial/IPHAN, 2010. 
+FUNARI, Pedro Paulo, PELIGRINI, Sandra de Cássia Araújo. Patrimônio histórico e cultural. Rio de Janeiro: Jorge Zahar, 2006. 
+LARAIA, Roque de Barros. Cultura: um conceito antropológico. Rio de Janeiro: Zahar, 1986. 
+	Bibliografia Complementar:
+CAMPOS, Jussef Daibert Salomão de. (org.). Patrimônio cultural plural. Belo Hori- zonte: Arraes, 2015. 
+PIMENTA, Margareth de Castro Afeche; FIGUEIREDO, Lauro César. (orgs.). Lugares: patrimônio, memória e paisagens. Florianópolis: Editora da UFSC, 2014. 
+ RIBEIRO, Rafael Winter. Paisagem cultural e patrimônio. Rio de Janeiro: IPHAN/COPEDOC, 2007.
+	(*) CH Total – Carga horária total da unidade curricular em horas. Somatório da carga horária teórica-prática e extensão.
+(*) CH EaD – Carga horária EaD, se houver. A CH EaD é definida em razão da CH Total.
+
+
+Unidade Curricular: 
+TOPOGRAFIA APLICADA AO GEORREFERENCIAMENTO
+	Semestre:
+3
+	CH Total*:
+40 h
+	CH Extensão:
+10 h
+	Competências do Egresso Correlatas: 1, 2, 3, 4, 5, 6 ,7, 8, 9 e 10.
+
+
+	CH Presencial:
+
+
+30 h
+	CH Síncrona Mediada*:
+
+
+00 h
+	CH EaD:
+10 h
+	Objetivos:
+Conhecer os fundamentos da topografia e georreferenciamento, tanto a planimetria quanto a altimetria, aplicando-os na Gestão Ambiental.
+	Conteúdos:
+* Topografia e georreferenciamento;
+* Normas para o uso de equipamentos;
+* Conceitos e utilização dos Sistemas de Referência;
+* Definições e objetivos das Projeções Cartográficas;
+* Métodos e Medidas de Posicionamento Geodésico;
+* Planimetria;
+* Altimetria;
+* Equipamentos topográficos;
+* Desenho Topográfico; 
+* Introdução e conceitos da Topografia aplicada ao Georreferenciamento;
+* Normas técnicas aplicadas ao Georreferenciamento;
+* Coleta de dados e levantamento de campo: por técnicas convencionais e por GPS/GLONASS/GALILEO (Sistemas de posicionamento global);
+* Elaboração de trabalhos técnicos; 
+* Relatório técnico 
+* Atividades de extensão totalizando 10 horas: visita técnica, viagem de estudos, saída de campo, oficina, apresentação, seminário, conferência, congresso, debate, ciclo de estudos, encontro, mesa redonda e/ou mostra sobre topografia e georreferenciamento. 
+	Estratégias de ensino e aprendizagem:
+As aulas de topografia e georreferenciamento terão como metodologia de abordagem, atividades que envolvam o estudantes em práticas a campo em grupos. Os conhecimentos abordados em sala de aula terão relação com as práticas que serão realizadas durante o semestre. Também serão adotadas estratégias metodológicas como, visitas técnicas, saídas de campo, projetos de trabalho /aprendizagem. Poderão ser realizados também os seminários, para apresentação de trabalhos em grupos, referentes às práticas a campo. Será realizada uma avaliação em sala de aula, para verificar o aprendizado na unidade curricular. A avaliação também será de forma contínua e progressiva, buscando compreender as facilidades e dificuldades de assimilação dos conteúdos por parte dos alunos. 
+A carga horária desenvolvida na modalidade de educação a distância será realizada por meio do Ambiente Virtual de Ensino-Aprendizagem (AVEA) Moodle, em articulação com as atividades presenciais. Para tanto, no início da disciplina, os estudantes participarão de uma oficina sobre AVEA, com orientações práticas sobre navegação, recursos e atividades do ambiente virtual. Serão propostas atividades assíncronas, entre estas poderão constar: fóruns de discussão, enquetes, leituras dirigidas, estudos de caso, questionários, atividades reflexivas, pesquisas orientadas e vídeo aulas, utilizando recursos como livros digitais, artigos científicos, legislações, documentos técnicos e materiais audiovisuais relacionados aos conteúdos da unidade curricular. O acompanhamento da aprendizagem será realizado pelo(a) docente responsável, por meio do monitoramento da participação dos estudantes no ambiente virtual, da mediação das discussões, da oferta de orientações e devolutivas sobre as atividades desenvolvidas, bem como do esclarecimento de dúvidas durante os encontros presenciais e no próprio AVEA. A avaliação das atividades desenvolvidas na modalidade EaD ocorrerá de forma processual, considerando a participação nas atividades propostas, a realização das tarefas no prazo estabelecido e a qualidade das produções apresentadas. 
+
+
+	Bibliografia Básica:
+FITZ, Paulo Roberto. Geoprocessamento sem complicação. São Paulo: Oficina de Textos, 2008. 
+SARAIVA, Sérgio; TULER, Marcelo. Fundamentos de topografia. Porto Alegre: Bookman, 2014. 
+	Bibliografia Complementar:
+
+
+BRASIL. Ministério do Desenvolvimento Agrário. Instituto Nacional de Colonização e Reforma Agrária. Norma técnica para georreferenciamento de imóveis rurais. Disponível em: https://moodle.ifsc.edu.br/mod/resource/view.php?id=84466 . Acesso em: 28 ago. 2018. 
+
+
+LONGLEY, Paul A. Sistemas e ciência da informação geográfica. Porto Alegre: Bookman, 2009.
+
+
+MENEZES, Paulo Márcio Leal de. Roteiro de cartografia. São Paulo: Oficina de Textos, 2013. 
+
+
+SILVA, A. G. O.; AZEVEDO, V. W. B. & SEIXAS, A. Métodos de levantamentos planimétricos para o georreferenciamento de imóveis rurais. In.: Anais I Simpósio de Geotecnologias no Pantanal, Campo Grande, 11-15, EMBRAPA Informática Agropecuária. 2006. Disponível em: http://mtc-m17.sid.inpe.br/col/sid.inpe.br/mtc-m17@80/2006/12.12.13.39/doc/p111.pdf. Acesso em: 28 ago. 2018. 
+
+
+VEIGA, L. A.K.; ZANETTI, M. A. Z.; FAGGION, P. L. Fundamentos de topografia. Curitiba: UFPR, 2007. Disponível em: https://moodle.ifsc.edu.br/mod/resource/view.php?id=84468 . Acesso em: 28 ago. 2018 
+	(*) CH Total – Carga horária total da unidade curricular em horas. Somatório da carga horária teórica-prática e extensão.
+(*) CH EaD – Carga horária EaD, se houver. A CH EaD é definida em razão da CH Total.
+Unidade Curricular: 
+AGROECOLOGIA APLICADA
+	Semestre:
+4
+	CH Total*:
+40 h
+	CH Extensão:
+00 h
+	Competências do Egresso Correlatas: 1, 2, 3, 4, 5, 6 ,7, 8, 9 e 10.
+
+
+	CH Presencial:
+
+
+30 h
+	CH Síncrona Mediada*:
+
+
+00 h
+	CH EaD:
+10 h
+	Objetivos: 
+Objetivo Geral
+* Proporcionar ao estudante a compreensão crítica dos princípios agroecológicos e dos processos de formação, manejo, degradação e recuperação do solo.
+* Capacitá-lo a diagnosticar problemas socioambientais em agroecossistemas e propor soluções sustentáveis, alinhadas ao contexto brasileiro e às tendências internacionais de sustentabilidade.
+* Compreender os princípios científicos da Agroecologia e sua aplicação na Gestão Ambiental, reconhecendo as agroecossistemas como sistemas ecológicos complexos e desenvolvendo competências para diagnosticar, planejar e propor estratégias de conservação dos recursos naturais, manejo sustentável do solo e recuperação de áreas degradadas, considerando aspectos ambientais, sociais, econômicos e legais.
+Objetivos Específicos
+* Compreender a Agroecologia em suas dimensões ecológica, técnica, socioeconômica, cultural e política. 
+* Analisar políticas públicas brasileiras de apoio à agroecologia e à agricultura familiar (PNAPO, PNATER, PAA, PNAE). 
+* Discutir tendências mundiais: agricultura regenerativa, agroecologia urbana, agenda climática (Plano ABC+) e Objetivos de Desenvolvimento Sustentável (ODS). 
+* Reconhecer os principais tipos de solo, sua gênese, classificação (SiBCS) e funções ecossistêmicas. 
+* Identificar processos e indicadores de degradação do solo e seus impactos ambientais e na saúde humana (agrotóxicos). 
+* Aplicar práticas de conservação e manejo sustentável do solo em diferentes contextos produtivos (SAFs, ILPF). 
+* Planejar ações de recuperação de áreas degradadas com base em técnicas agroecológicas e biorremediação.
+* Valorizar a agrobiodiversidade
+
+
+	Conteúdos: 
+
+
+1. Introdução à Agroecologia
+* Histórico da Agroecologia; 
+* Agroecologia como ciência, prática e movimento social; 
+* Princípios ecológicos aplicados aos agroecossistemas; 
+* Agroecologia e desenvolvimento sustentável; 
+* Agroecologia e Objetivos do Desenvolvimento Sustentável (ODS).
+2. Agroecossistemas
+* Estrutura e funcionamento dos agroecossistemas; 
+* Fluxo de energia; 
+* Biodiversidade funcional; 
+* Serviços ecossistêmicos; 
+* Resiliência ambiental. 
+3. Solo como Recurso Ambiental
+* Formação dos solos; 
+* Pedogênese; 
+* Sistema Brasileiro de Classificação de Solos (SiBCS); 
+* Propriedades físicas; 
+* Propriedades químicas; 
+* Propriedades biológicas. 
+4. Biologia do Solo
+* Biodiversidade edáfica; 
+* Microrganismos do solo; 
+* Fungos micorrízicos; 
+* Rizobactérias; 
+* Fauna edáfica; 
+* Saúde do solo; 
+* Indicadores biológicos de qualidade do solo; 
+* Matéria orgânica e atividade biológica. 
+5. Conservação do Solo e da Água
+* Erosão hídrica e eólica; 
+* Compactação; 
+* Conservação da água; 
+* Cobertura permanente do solo; 
+* Plantio direto; 
+* Adubação verde; 
+* Terraceamento; 
+* Sistemas agroflorestais; 
+* Integração lavoura-pecuária-floresta. 
+6. Agricultura Regenerativa
+* Conceitos; 
+* Princípios; 
+* Sequestro de carbono; 
+* Conservação da biodiversidade; 
+* Bioinsumos; 
+* Compostagem; 
+* Biofertilizantes; 
+* Agricultura de baixo carbono.
+7.Recuperação Ambiental
+* Diagnóstico ambiental; 
+* Recuperação de áreas degradadas; 
+* Revegetação; 
+* Biorremediação; 
+* Fitorremediação.
+8. Gestão Ambiental e Agroecossistemas 
+* Planejamento ambiental rural; 
+* Cadastro Ambiental Rural (CAR); 
+* Código Florestal; 
+* APP; 
+* Reserva Legal; 
+* Certificação orgânica; 
+* Sistemas Participativos de Garantia (SPG); 
+* Estudos de caso.
+	Estratégias de ensino e aprendizagem:
+A disciplina adotará uma abordagem teórico-prática e participativa:
+•        Aulas expositivo-dialogadas com apoio de recursos audiovisuais.
+•        Estudos de caso e análise de políticas públicas e documentos técnicos.
+•        Rodas de conversa e seminários sobre temas atuais.
+•       Aulas práticas de campo e laboratório (coleta e análise expedita de solo, reconhecimento de práticas conservacionistas).
+•        Visitas técnicas a propriedades ou experiências agroecológicas.
+A carga horária desenvolvida na modalidade de educação a distância será realizada por meio do Ambiente Virtual de Ensino-Aprendizagem (AVEA) Moodle, em articulação com as atividades presenciais. Para tanto, no início da disciplina, os estudantes participarão de uma oficina sobre AVEA, com orientações práticas sobre navegação, recursos e atividades do ambiente virtual. Serão propostas atividades assíncronas, entre estas poderão constar: fóruns de discussão, enquetes, leituras dirigidas, estudos de caso, questionários, atividades reflexivas, pesquisas orientadas e vídeo aulas, utilizando recursos como livros digitais, artigos científicos, legislações, documentos técnicos e materiais audiovisuais relacionados aos conteúdos da unidade curricular. O acompanhamento da aprendizagem será realizado pelo(a) docente responsável, por meio do monitoramento da participação dos estudantes no ambiente virtual, da mediação das discussões, da oferta de orientações e devolutivas sobre as atividades desenvolvidas, bem como do esclarecimento de dúvidas durante os encontros presenciais e no próprio AVEA. A avaliação das atividades desenvolvidas na modalidade EaD ocorrerá de forma processual, considerando a participação nas atividades propostas, a realização das tarefas no prazo estabelecido e a qualidade das produções apresentadas.
+	Bibliografia Básica: 
+ALTIERI, Miguel A. Agroecologia: bases científicas para uma agricultura sustentável. 3. ed. São Paulo: Expressão Popular, 2012.
+CAPORAL, F. R.; COSTABEBER, J. A. Agroecologia: alguns conceitos e princípios. Brasília: MDA/SAF/DATER-IICA, 2004.
+ LEPSCH, I. F. 19 Lições de Pedologia. 2. ed. São Paulo: Oficina de Textos, 2016.
+BERTONI, J.; LOMBARDI NETO, F. Conservação do solo. 9. ed. São Paulo: Ícone, 2017.
+
+
+	Bibliografia Complementar:
+GLIESSMAN, S. R. Agroecologia: processos ecológicos em agricultura sustentável. 4. ed. Porto Alegre: Ed. UFRGS, 2015.
+EMBRAPA. Sistema Brasileiro de Classificação de Solos. 5. ed. Brasília: Embrapa, 2018.
+BRASIL. Ministério do Desenvolvimento Agrário e Agricultura Familiar. Plano Nacional de Agroecologia e Produção Orgânica (PLANAPO). Brasília, 2023/2024.
+BRASIL. Ministério da Agricultura, Pecuária e Abastecimento. Plano Setorial de Mitigação e Adaptação às Mudanças Climáticas para a Consolidação de uma Economia de Baixa Emissão de Carbono na Agricultura (Plano ABC+). Brasília, 2021.
+SACHS, I. Caminhos para o desenvolvimento sustentável. 4. ed. Rio de Janeiro: Garamond, 2009.
+EMBRAPA. Solos e agroecologia. Coleção Transição Agroecológica, Vol. 4. Brasília, DF: Embrapa, 2018.
+Sistema Brasileiro de Classificação de Solos. 5. ed. Brasília: Embrapa, 2018.
+Elementos da Natureza e Propriedades dos Solos. 3. ed. Porto Alegre: Bookman, 2013.
+Conservação do Solo. 10. ed. São Paulo: Ícone, 2017.
+19 Lições de Pedologia. 2. ed. São Paulo: Oficina de Textos, 2016.
+Empresa Brasileira de Pesquisa Agropecuária. Solos e Agroecologia. Coleção Transição Agroecológica. Brasília: Embrapa, 2018.
+Caminhos para o Desenvolvimento Sustentável. 4. ed. Rio de Janeiro: Garamond, 2009.
+	
+
+(*) CH Total – Carga horária total da unidade curricular em horas. Somatório da carga horária teórica-prática e extensão.
+(*) CH EaD – Carga horária EaD, se houver. A CH EaD é definida em razão da CH Total.
+
+
+Unidade Curricular: 
+ATIVIDADES DE EXTENSÃO
+	Semestre:
+4
+	CH Total*:
+80 h
+	CH Extensão:
+80 h
+	Competências do Egresso Correlatas: 1, 2, 3, 4, 5, 6 ,7, 8, 9 e 10.
+
+
+	CH Presencial:
+
+
+60 h
+	CH Síncrona Mediada*:
+
+
+00 h
+	CH EaD:
+20 h
+	Objetivos:
+* Conhecer o histórico, conceitos e marco legal da extensão;
+* Aplicar as habilidades adquiridas para atender demandas de grande pertinência social; 
+	Conteúdos:
+
+
+* Histórico e conceitos de extensão;
+* Indissociabilidade ensino, pesquisa e extensão na prática;
+* Marco legal da extensão;
+* Exemplos de atividades de extensão;
+* O impacto da extensão na formação do aluno (vídeo depoimentos);
+* Fomentos para a extensão e empreendedorismo (editais internos e externos e cronograma); 
+* A extensão no IFSC (registro, fluxo, editais, relatórios, eventos e outros aspectos);
+* Eventos de Extensão (CBEU, SEURS, SEPEX, SEPEI);
+* Elaboração e desenvolvimento de projeto de extensão na gestão ambiental com orientação de professor(a) a definir conforme temática escolhida;
+* Desenvolvimento de atividades de extensão, no câmpus, a partir do reconhecimento da Agenda Ambiental na Administração Pública (A3P), da contratação pública sustentável (Decreto 7.746/12) e dos Planos de Gestão de Logística Sustentável (IN 10/2012). 
+	Estratégias de ensino e aprendizagem:
+Entre as estratégias para as atividades de extensão terão saídas de campo, visitas técnicas, projetos de trabalho/aprendizagem, relatórios, oficinas, entre outras.
+
+
+A carga horária desenvolvida na modalidade de educação a distância será realizada por meio do Ambiente Virtual de Ensino-Aprendizagem (AVEA) Moodle, em articulação com as atividades presenciais. Para tanto, no início da disciplina, os estudantes participarão de uma oficina sobre AVEA, com orientações práticas sobre navegação, recursos e atividades do ambiente virtual. Serão propostas atividades assíncronas, entre estas poderão constar: fóruns de discussão, enquetes, leituras dirigidas, estudos de caso, questionários, atividades reflexivas, pesquisas orientadas e vídeo aulas, utilizando recursos como livros digitais, artigos científicos, legislações, documentos técnicos e materiais audiovisuais relacionados aos conteúdos da unidade curricular. O acompanhamento da aprendizagem será realizado pelo(a) docente responsável, por meio do monitoramento da participação dos estudantes no ambiente virtual, da mediação das discussões, da oferta de orientações e devolutivas sobre as atividades desenvolvidas, bem como do esclarecimento de dúvidas durante os encontros presenciais e no próprio AVEA. A avaliação das atividades desenvolvidas na modalidade EaD ocorrerá de forma processual, considerando a participação nas atividades propostas, a realização das tarefas no prazo estabelecido e a qualidade das produções apresentadas. 
+	Bibliografia Básica:
+FREIRE, Paulo. Extensão ou comunicação? 5. ed. Rio de Janeiro: Paz e Terra, 1980. 
+TAVARES, Christiane Andrade Regis; FREITAS, Katia Siqueira de. Extensão universitária: o patinho feio da academia? Jundiaí, SP: Paco, 2016. 
+	Bibliografia Complementar:
+
+
+BOTOMÉ, Silvio Paulo. Pesquisa alienada e ensino alienante: o equívoco da extensão universitária. Petrópolis: Vozes, 1996. 
+
+
+FREIRE, Paulo. Conscientização. São Paulo: Cortez, 1979. 
+
+
+______. Educação & atualidade brasileira, São Paulo: Cortez, 2001.
+
+
+______. Pedagogia da autonomia. 31. ed. São Paulo: Paz e Terra, 2005. 
+
+
+SANTOS, Boaventura de Sousa (Org.). Conhecimento prudente para uma vida decente. São Paulo: Cortez, 2004. 
+	(*) CH Total – Carga horária total da unidade curricular em horas. Somatório da carga horária teórica-prática e extensão.
+(*) CH EaD – Carga horária EaD, se houver. A CH EaD é definida em razão da CH Total.
+
+
+Unidade Curricular: 
+ FERRAMENTAS DE GESTÃO AMBIENTAL
+	Semestre:
+4
+	CH Total*:
+40 h
+	CH Extensão:
+00 h
+	Competências do Egresso Correlatas: 1, 2, 3, 4, 5, 6 ,7, 8, 9 e 10.
+
+
+	CH Presencial:
+
+
+30 h
+	CH Síncrona Mediada*:
+
+
+00 h
+	CH EaD:
+10 h
+	Objetivos:
+Compreender as principais ferramentas de gestão ambiental.
+	Conteúdos:
+* Produção mais Limpa (P+L);
+* Ecodesign;
+* Avaliação de Desempenho Ambiental (ADA);
+* Sistema de Gestão Ambiental (SGA);
+* Auditoria e certificação ambiental;
+	Estratégias de ensino e aprendizagem:
+Diversas estratégias metodológicas poderão ser utilizadas, entre elas: aula expositiva dialogada, atividades em laboratórios, trabalhos individuais e em grupos, debates, estudos de casos, seminários, visitas técnicas, saídas de campo, palestras, leituras de artigos, metodologias ativas, entre outras.
+
+
+A carga horária desenvolvida na modalidade de educação a distância será realizada por meio do Ambiente Virtual de Ensino-Aprendizagem (AVEA) Moodle, em articulação com as atividades presenciais. Para tanto, no início da disciplina, os estudantes participarão de uma oficina sobre AVEA, com orientações práticas sobre navegação, recursos e atividades do ambiente virtual. Serão propostas atividades assíncronas, entre estas poderão constar: fóruns de discussão, enquetes, leituras dirigidas, estudos de caso, questionários, atividades reflexivas, pesquisas orientadas e vídeo aulas, utilizando recursos como livros digitais, artigos científicos, legislações, documentos técnicos e materiais audiovisuais relacionados aos conteúdos da unidade curricular. O acompanhamento da aprendizagem será realizado pelo(a) docente responsável, por meio do monitoramento da participação dos estudantes no ambiente virtual, da mediação das discussões, da oferta de orientações e devolutivas sobre as atividades desenvolvidas, bem como do esclarecimento de dúvidas durante os encontros presenciais e no próprio AVEA. A avaliação das atividades desenvolvidas na modalidade EaD ocorrerá de forma processual, considerando a participação nas atividades propostas, a realização das tarefas no prazo estabelecido e a qualidade das produções apresentadas. 
+	Bibliografia Básica:
+ASSUMPÇÃO, Luiz Fernando Joly. Sistema de gestão ambiental: manual prático para implementação de SGA e certificação ISO 14.001/2004. 4. ed. rev. e atual. Curitiba: Juruá, 2014. 
+PIMENTA, Handson Cláudio Dias; GOUVINHAS, Reidson Pereira. Ferramentas de gestão ambiental: competitividade e sustentabilidade. Natal: Ed. do CEFET-RN, 2007. Disponível em: <https://moodle.ifsc.edu.br/mod/resource/view.php?id=84470>. Acesso em: 28 ago. 2018.
+
+
+	Bibliografia Complementar:
+BARBIERI, José Carlos. Gestão ambiental empresarial: conceitos, modelos e instrumentos. 3. ed. atual. e ampl. São Paulo: Saraiva, 2011.
+
+
+CAMPOS, L. M. S.; MELO, D. A. Indicadores de desempenho dos Sistemas de Gestão Ambiental (SGA): uma pesquisa teórica. Produção, v. 18, n. 3, p. 540-555, 2008 Disponível em: <https://moodle.ifsc.edu.br/mod/resource/view.php?id=84488>. Acesso em: 28 ago. 2018.
+
+
+MARTINS, M. de F. et al. O ecodesign como ferramenta de gestão ambiental aplicada ao setor da construção civil: o caso de um condomínio horizontal com proposta sustentável em Campina Grande - PB. Revista Ciências Administrativas, Fortaleza, v. 17, n. 3, p. 883-914, set./dez. 2011. Disponível em: <https://moodle.ifsc.edu.br/mod/resource/view.php?id=84500>. Acesso em: 28 ago. 2018.
+
+
+SÁNCHEZ, Luis Enrique. Avaliação de impacto ambiental: conceitos e métodos. 2. ed. atual. ampl. São Paulo: Oficina de Textos, 2013. 
+	(*) CH Total – Carga horária total da unidade curricular em horas. Somatório da carga horária teórica-prática e extensão.
+(*) CH EaD – Carga horária EaD, se houver. A CH EaD é definida em razão da CH Total.
+
+
+Unidade Curricular: 
+ LEGISLAÇÃO AMBIENTAL
+	Semestre:
+4
+	CH Total*:
+40 h
+	CH Extensão:
+00 h
+	Competências do Egresso Correlatas: 1, 2, 3, 4, 5, 6 ,7, 8, 9 e 10.
+
+
+	CH Presencial:
+
+
+30 h
+	CH Síncrona Mediada*:
+
+
+00 h
+	CH EaD:
+10 h
+	Objetivos:
+* Compreender os fundamentos, a estrutura e os principais instrumentos da legislação ambiental brasileira, reconhecendo sua organização e abrangência nas diferentes esferas de governo.
+* Analisar a aplicação da legislação ambiental nos processos de gestão ambiental, identificando sua importância para o planejamento, o licenciamento, a fiscalização, a conservação dos recursos naturais e a tomada de decisões no exercício profissional do gestor ambiental.
+	Conteúdos:
+* Meio ambiente na Constituição Federal
+* A Política Nacional de Meio Ambiente
+* Legislação ambiental aplicada à gestão ambiental territorial
+* Normas e regras da política ambiental
+	Estratégias de ensino e aprendizagem:
+    A metodologia de ensino será desenvolvida de forma participativa, dialógica e contextualizada, valorizando os conhecimentos prévios e as vivências dos estudantes em seus territórios. As estratégias didático-pedagógicas buscarão articular os conteúdos da legislação ambiental com situações reais enfrentadas na atuação profissional do gestor ambiental, promovendo a integração entre teoria e prática e o desenvolvimento da capacidade de análise crítica e de tomada de decisão.
+    Serão desenvolvidas atividades de pesquisa, estudos de caso, análise de legislações, jurisprudências e documentos técnicos, seminários, debates, simulações de processos administrativos e visitas técnicas ou diálogos com profissionais que atuam em órgãos ambientais e instituições relacionadas à gestão ambiental.
+    A avaliação será processual e contínua, considerando o desenvolvimento dos estudantes ao longo da unidade curricular por meio de atividades individuais e coletivas, tais como pesquisas, estudos de caso, análises de legislação e jurisprudência, elaboração de pareceres técnicos, relatórios, seminários, apresentações e participação nas discussões propostas. Sempre que possível, as atividades avaliativas serão orientadas por situações concretas da gestão ambiental, articulando ensino, pesquisa e extensão e favorecendo a aplicação crítica da legislação ambiental na resolução de problemas e na tomada de decisões no contexto profissional. 
+A carga horária desenvolvida na modalidade de educação a distância será realizada por meio do Ambiente Virtual de Ensino-Aprendizagem (AVEA) Moodle, em articulação com as atividades presenciais. Para tanto, no início da disciplina, os estudantes participarão de uma oficina sobre AVEA, com orientações práticas sobre navegação, recursos e atividades do ambiente virtual. Serão propostas atividades assíncronas, entre estas poderão constar: fóruns de discussão, enquetes, leituras dirigidas, estudos de caso, questionários, atividades reflexivas, pesquisas orientadas e vídeo aulas, utilizando recursos como livros digitais, artigos científicos, legislações, documentos técnicos e materiais audiovisuais relacionados aos conteúdos da unidade curricular. O acompanhamento da aprendizagem será realizado pelo(a) docente responsável, por meio do monitoramento da participação dos estudantes no ambiente virtual, da mediação das discussões, da oferta de orientações e devolutivas sobre as atividades desenvolvidas, bem como do esclarecimento de dúvidas durante os encontros presenciais e no próprio AVEA. A avaliação das atividades desenvolvidas na modalidade EaD ocorrerá de forma processual, considerando a participação nas atividades propostas, a realização das tarefas no prazo estabelecido e a qualidade das produções apresentadas. 
+	Bibliografia Básica:
+MACHADO, Paulo Affonso Leme. Direito ambiental brasileiro. 26. ed., rev.,ampl. e atual. São Paulo: Malheiros, 2018. 1430 p.. ISBN 9788539204014. 
+TRENNEPOHL, Curt; TRENNEPOHL, Natascha; Terence. Legislação Ambiental Comentada. 2º ed. Ed. Revista dos Tribunais, 2024. 536p. ISBN ‎ 6526029841.
+	Bibliografia Complementar:
+
+
+DIAS, Reinaldo. Gestão ambiental: responsabilidade social e sustentabilidade. 3. ed. São Paulo: Atlas, 2017. 234 p.  ISBN 9788597010336. 
+
+
+FREITAS, Mariana Almeida Passos de. Zona costeira e meio ambiente: aspectos jurídicos. 5. reimp. Curitiba: Juruá, 2005. 231 p., il. ISBN 8536209720. 
+
+
+GRANZIERA, Maria Luiza Machado. Direito de águas: disciplina jurídica das águas doces. 3. ed. rev. e atual. São Paulo: Atlas, 2006. 252 p. ISBN 8522444560. 
+	(*) CH Total – Carga horária total da unidade curricular em horas. Somatório da carga horária teórica-prática e extensão.
+(*) CH EaD – Carga horária EaD, se houver. A CH EaD é definida em razão da CH Total.
+
+
+Unidade Curricular: 
+PROJETO DE TRABALHO DE CONCLUSÃO DE CURSO
+	Semestre:
+4
+	CH Total*:
+40 h
+	CH Extensão:
+00 h
+	Competências do Egresso Correlatas: 1, 2, 3, 4, 5, 6 ,7, 8, 9 e 10.
+
+
+	CH Presencial:
+
+
+30 h
+	CH Síncrona Mediada*:
+
+
+00 h
+	CH EaD:
+10 h
+	Objetivos:
+Desenvolver e estruturar o projeto de Trabalho de Conclusão de Curso, definindo tema, problema de pesquisa, objetivos, justificativa, fundamentação teórica, metodologia, cronograma e referências, de acordo com as normas acadêmicas e científicas. 
+
+
+	Conteúdos:
+Definição do tema e delimitação do problema de pesquisa. Formulação de hipóteses ou questões norteadoras. Objetivos geral e específicos. Justificativa. Revisão bibliográfica e fundamentação teórica. Procedimentos metodológicos. Técnicas de coleta e análise de dados. Cronograma. Referências e normas de apresentação do projeto de pesquisa. Ética em pesquisa. Estrutura e apresentação do projeto de TCC. 
+	Estratégias de ensino e aprendizagem:
+Aulas expositivas dialogadas; análise e discussão de projetos e trabalhos científicos; oficinas de elaboração das diferentes etapas do projeto; pesquisa bibliográfica; atividades individuais de desenvolvimento do projeto; orientação e acompanhamento sistemático pelo docente; apresentação e discussão dos projetos. 
+
+
+A carga horária desenvolvida na modalidade de educação a distância será realizada por meio do Ambiente Virtual de Ensino-Aprendizagem (AVEA) Moodle, em articulação com as atividades presenciais. Para tanto, no início da disciplina, os estudantes participarão de uma oficina sobre AVEA, com orientações práticas sobre navegação, recursos e atividades do ambiente virtual. Serão propostas atividades assíncronas, entre estas poderão constar: fóruns de discussão, enquetes, leituras dirigidas, estudos de caso, questionários, atividades reflexivas, pesquisas orientadas e vídeo aulas, utilizando recursos como livros digitais, artigos científicos, legislações, documentos técnicos e materiais audiovisuais relacionados aos conteúdos da unidade curricular. O acompanhamento da aprendizagem será realizado pelo(a) docente responsável, por meio do monitoramento da participação dos estudantes no ambiente virtual, da mediação das discussões, da oferta de orientações e devolutivas sobre as atividades desenvolvidas, bem como do esclarecimento de dúvidas durante os encontros presenciais e no próprio AVEA. A avaliação das atividades desenvolvidas na modalidade EaD ocorrerá de forma processual, considerando a participação nas atividades propostas, a realização das tarefas no prazo estabelecido e a qualidade das produções apresentadas. 
+
+
+	Bibliografia Básica:
+GIL, Antonio Carlos. Como elaborar projetos de pesquisa. São Paulo: Atlas, 2017.
+LAKATOS, Eva Maria; MARCONI, Marina de Andrade. Fundamentos de metodologia científica. 9. ed. São Paulo: Atlas, 2021.
+SEVERINO, Antônio Joaquim. Metodologia do trabalho científico. São Paulo: Cortez, 2017.
+
+
+	Bibliografia Complementar:
+CRESWELL, John W. Projeto de pesquisa: métodos qualitativo, quantitativo e misto. Porto Alegre: Artmed, 2010.
+GIL, Antonio Carlos. Métodos e técnicas de pesquisa social. São Paulo: Atlas, 2019.
+MARCONI, Marina de Andrade; LAKATOS, Eva Maria. Técnicas de pesquisa. São Paulo: Atlas, 2017.
+YIN, Robert K. Estudo de caso: planejamento e métodos. Porto Alegre: Bookman, 2015.
+PRODANOV, Cleber Cristiano; FREITAS, Ernani Cesar de. Metodologia do trabalho científico: métodos e técnicas da pesquisa e do trabalho acadêmico. Novo Hamburgo: Feevale, 2013.
+	(*) CH Total – Carga horária total da unidade curricular em horas. Somatório da carga horária teórica-prática e extensão.
+(*) CH EaD – Carga horária EaD, se houver. A CH EaD é definida em razão da CH Total.
+
+
+Unidade Curricular: 
+TRATAMENTO DE ÁGUAS E EFLUENTES
+	Semestre:
+4
+	CH Total*:
+80 h
+	CH Extensão:
+00 h
+	Competências do Egresso Correlatas: 1, 2, 3, 4, 5, 6 ,7, 8, 9 e 10.
+
+
+	CH Presencial:
+
+
+60 h
+	CH Síncrona Mediada*:
+
+
+00 h
+	CH EaD:
+20 h
+	Objetivos:
+Compreender os métodos de tratamento de águas e efluentes urbanos e industriais.
+	Conteúdos:
+* Generalidades, definições e conceitos sobre águas e efluentes;
+* Qualidade das águas;
+* Poluição e contaminação das águas;
+* Sistema de abastecimento de água;
+* Tecnologias de tratamento de água;
+* Condições e padrões de lançamento de efluentes;
+* Sistemas de esgotamento sanitário;
+* Tratamento individual, alternativo e coletivo de esgoto sanitário;
+* Tratamento de efluentes industriais
+	Estratégias de ensino e aprendizagem:
+Diversas estratégias metodológicas poderão ser utilizadas, entre elas: aula expositiva dialogada, atividades em laboratórios, trabalhos individuais e em grupos, debates, estudos de casos, seminários, visitas técnicas, saídas de campo, palestras, leituras de artigos, metodologias ativas, entre outras.
+
+
+A carga horária desenvolvida na modalidade de educação a distância será realizada por meio do Ambiente Virtual de Ensino-Aprendizagem (AVEA) Moodle, em articulação com as atividades presenciais. Para tanto, no início da disciplina, os estudantes participarão de uma oficina sobre AVEA, com orientações práticas sobre navegação, recursos e atividades do ambiente virtual. Serão propostas atividades assíncronas, entre estas poderão constar: fóruns de discussão, enquetes, leituras dirigidas, estudos de caso, questionários, atividades reflexivas, pesquisas orientadas e vídeo aulas, utilizando recursos como livros digitais, artigos científicos, legislações, documentos técnicos e materiais audiovisuais relacionados aos conteúdos da unidade curricular. O acompanhamento da aprendizagem será realizado pelo(a) docente responsável, por meio do monitoramento da participação dos estudantes no ambiente virtual, da mediação das discussões, da oferta de orientações e devolutivas sobre as atividades desenvolvidas, bem como do esclarecimento de dúvidas durante os encontros presenciais e no próprio AVEA. A avaliação das atividades desenvolvidas na modalidade EaD ocorrerá de forma processual, considerando a participação nas atividades propostas, a realização das tarefas no prazo estabelecido e a qualidade das produções apresentadas. 
+
+
+	Bibliografia Básica:
+LIBÂNIO, Marcelo. Fundamentos de qualidade e tratamento de água. 3. ed. Campinas, SP: Átomo, 2010.
+
+
+NUVOLARI, Ariovaldo. Esgoto sanitário: coleta, transporte, tratamento e reúso agrícola. 2. ed. São Paulo: Blucher, 2011.
+
+
+	Bibliografia Complementar:
+SPERLING, Marcos Von. Introdução à qualidade das águas e ao tratamento de esgotos: princípios do tratamento biológico de águas residuárias. 3. ed. Belo Horizonte: Ed. da UFMG, 2005.
+
+
+SPERLING, Marcos Von. Princípios básicos do tratamento de esgotos. Belo Horizonte: Ed. UFMG, 1996. v. 2. (Princípios do tratamento biológico de águas residuais, 2).
+	(*) CH Total – Carga horária total da unidade curricular em horas. Somatório da carga horária teórica-prática e extensão.
+(*) CH EaD – Carga horária EaD, se houver. A CH EaD é definida em razão da CH Total.
+
+
+
+
+Unidade Curricular: 
+AVALIAÇÃO DE IMPACTOS AMBIENTAIS
+	Semestre:
+5
+	CH Total*:
+40 h
+	CH Extensão:
+00 h
+	Competências do Egresso Correlatas: 1, 2, 3, 4, 5, 6 ,7, 8, 9 e 10.
+
+
+	CH Presencial:
+
+
+30 h
+	CH Síncrona Mediada*:
+
+
+00 h
+	CH EaD:
+10 h
+	Objetivos:
+Desenvolver o senso crítico e a capacidade de antecipação, prevenção e análise de impactos ambientais, e propor as respectivas medidas de controle e mitigação.
+	Conteúdos:
+* Histórico, conceitos, definições, legislação sobre avaliação de impactos ambientais;;
+* Métodos de avaliação de impactos ambientais
+* Estudo de Impacto Ambiental (EIA);
+* Relatório de Impacto Ambiental (RIMA);
+* Perícia Ambiental;
+	Estratégias de ensino e aprendizagem:
+Diversas estratégias metodológicas poderão ser utilizadas, entre elas: aula expositiva dialogada, atividades em laboratórios, trabalhos individuais e em grupos, debates, estudos de casos, seminários, visitas técnicas, saídas de campo, palestras, leituras de artigos, metodologias ativas, entre outras.
+
+
+A carga horária desenvolvida na modalidade de educação a distância será realizada por meio do Ambiente Virtual de Ensino-Aprendizagem (AVEA) Moodle, em articulação com as atividades presenciais. Para tanto, no início da disciplina, os estudantes participarão de uma oficina sobre AVEA, com orientações práticas sobre navegação, recursos e atividades do ambiente virtual. Serão propostas atividades assíncronas, entre estas poderão constar: fóruns de discussão, enquetes, leituras dirigidas, estudos de caso, questionários, atividades reflexivas, pesquisas orientadas e vídeo aulas, utilizando recursos como livros digitais, artigos científicos, legislações, documentos técnicos e materiais audiovisuais relacionados aos conteúdos da unidade curricular. O acompanhamento da aprendizagem será realizado pelo(a) docente responsável, por meio do monitoramento da participação dos estudantes no ambiente virtual, da mediação das discussões, da oferta de orientações e devolutivas sobre as atividades desenvolvidas, bem como do esclarecimento de dúvidas durante os encontros presenciais e no próprio AVEA. A avaliação das atividades desenvolvidas na modalidade EaD ocorrerá de forma processual, considerando a participação nas atividades propostas, a realização das tarefas no prazo estabelecido e a qualidade das produções apresentadas. 
+
+
+	Bibliografia Básica:
+ALMEIDA, F. S.; GARRIDO, F de S. R. G; ALMEIDA, A. A. Avaliação de impactos ambientais: uma introdução ao tema com ênfase na atuação do gestor ambiental. Diversidade e Gestão, Rio de Janeiro, v. 1, p. 70-87, jul. 2017. Disponível em: <https://moodle.ifsc.edu.br/mod/resource/view.php?id=84539>. Acesso em: 28 ago. 2018.
+
+
+SÁNCHEZ, Luis Enrique. Avaliação de impacto ambiental: conceitos e métodos. 2. ed. atual. ampl. São Paulo: Oficina de Textos, 2013.
+
+
+	Bibliografia Complementar:
+CREMONEZ, F. E. et al. Avaliação de impacto ambiental: metodologias aplicadas no Brasil. Revista Monografias Ambientais, Santa Maria, RS, v. 13, n. 5, p. 3821–3830, dez. 2014. Disponível em:  <https://moodle.ifsc.edu.br/mod/resource/view.php?id=84540>. Acesso em: 28 ago. 2018.
+
+
+OLIVEIRA, F. F. G. de; MEDEIROS, W. D. de A. Bases teórico-conceitual de métodos para avaliação de impactos ambientais em EIA/RIMA. Mercator, Fortaleza, v. 6, n. 11, p. 79-92, nov. 2008.  Disponível em: <https://moodle.ifsc.edu.br/mod/resource/view.php?id=84550>. Acesso em: 28 ago. 2018.
+	(*) CH Total – Carga horária total da unidade curricular em horas. Somatório da carga horária teórica-prática e extensão.
+(*) CH EaD – Carga horária EaD, se houver. A CH EaD é definida em razão da CH Total.
+
+
+Unidade Curricular: 
+EMPREENDEDORISMO
+	Semestre:
+5
+	CH Total*:
+40 h
+	CH Extensão:
+10 h
+	Competências do Egresso Correlatas: 1, 2, 3, 4, 5, 6 ,7, 8, 9 e 10.
+
+
+	CH Presencial:
+
+
+30 h
+	CH Síncrona Mediada*:
+
+
+00 h
+	CH EaD:
+10 h
+	Objetivos:
+* Compreender os fundamentos do empreendedorismo e sua contribuição para o desenvolvimento sustentável, identificando oportunidades de criação de valor em contextos relacionados à Gestão Ambiental.
+* Analisar fatores, condições e processos envolvidos na criação e no desenvolvimento de empreendimentos, projetos e soluções inovadoras voltadas aos desafios ambientais.
+* Planejar modelos de negócios ou projetos empreendedores considerando a inovação, a sustentabilidade e a viabilidade técnica, econômica e socioambiental.
+	Conteúdos:
+1. Fundamentos do empreendedorismo:
+Conceitos e evolução do empreendedorismo;
+Competências e comportamento empreendedor;
+O processo empreendedor;
+Criatividade, inovação e identificação de oportunidades.
+
+
+2. Empreendedorismo como estratégia para o desenvolvimento sustentável:
+Empreendedorismo ambiental;
+Negócios sustentáveis;
+Negócios de impacto socioambiental;
+Economia solidária e empreendimentos coletivos.
+
+
+3. Desenvolvimento de empreendimentos:
+Modelagem de negócios;
+Comunicação de ideias empreendedoras;
+Análise de viabilidade técnica, econômica e socioambiental.
+	Estratégias de ensino e aprendizagem:
+As estratégias de ensino e aprendizagem serão fundamentadas em metodologias ativas, com enfoque teórico-prático, com ênfase na resolução de problemas e atividades colaborativas. As atividades buscarão integrar os conhecimentos da Gestão Ambiental e do empreendedorismo por meio da identificação de oportunidades, concepção, modelagem, análise de viabilidade e comunicação de ideias empreendedoras voltadas à solução de desafios socioambientais, considerando as demandas do território e os princípios da sustentabilidade.
+A avaliação será diagnóstica, processual e formativa, considerando os objetivos previstos na unidade curricular. Serão utilizados instrumentos diversificados, individuais e coletivos, tais como estudos de caso, resolução de problemas, pesquisas, desenvolvimento de modelos de negócios ou projetos, análises de viabilidade, apresentações, pitches, portfólios, relatórios, autoavaliação, avaliação por pares e avaliações escritas.
+
+
+A unidade curricular terá atividades de extensão (10 horas), que serão trabalhadas por meio de atividades práticas de identificação e análise de demandas socioambientais do território, visando à proposição de soluções empreendedoras sustentáveis. Serão desenvolvidos diagnósticos junto à comunidade, elaboração e apresentação de propostas de negócios ou projetos de impacto socioambiental, oficinas, entrevistas com empreendedores e organizações locais e ações de sensibilização. A metodologia será baseada na aprendizagem por projetos e na interação dialógica com a comunidade, articulando os conteúdos da unidade curricular às demandas e potencialidades do território e promovendo a aplicação prática dos conhecimentos relacionados ao empreendedorismo, à inovação, aos negócios sustentáveis e à economia solidária. 
+
+
+A carga horária desenvolvida na modalidade de educação a distância será realizada por meio do Ambiente Virtual de Ensino-Aprendizagem (AVEA) Moodle, em articulação com as atividades presenciais. Para tanto, no início da disciplina, os estudantes participarão de uma oficina sobre AVEA, com orientações práticas sobre navegação, recursos e atividades do ambiente virtual. Serão propostas atividades assíncronas, entre estas poderão constar: fóruns de discussão, enquetes, leituras dirigidas, estudos de caso, questionários, atividades reflexivas, pesquisas orientadas e vídeo aulas, utilizando recursos como livros digitais, artigos científicos, legislações, documentos técnicos e materiais audiovisuais relacionados aos conteúdos da unidade curricular. O acompanhamento da aprendizagem será realizado pelo(a) docente responsável, por meio do monitoramento da participação dos estudantes no ambiente virtual, da mediação das discussões, da oferta de orientações e devolutivas sobre as atividades desenvolvidas, bem como do esclarecimento de dúvidas durante os encontros presenciais e no próprio AVEA. A avaliação das atividades desenvolvidas na modalidade EaD ocorrerá de forma processual, considerando a participação nas atividades propostas, a realização das tarefas no prazo estabelecido e a qualidade das produções apresentadas. 
+
+
+	Bibliografia Básica:
+BESSANT, John; TIDD, Joe; COSTA, Francisco Araújo da. Inovação e empreendedorismo. 3. ed. Porto Alegre: Bookman, 2019.
+
+
+DORNELAS, José Carlos Assis. Empreendedorismo: transformando idéias em negócios. 3. ed. rev. e atual. Rio de Janeiro: Elsevier, 2008.
+
+
+HISRICH, Robert D.; PETERS, Michael P.; SHEPHERD, Dean A. Empreendedorismo. Tradução de Francisco Araujo da Costa. 9. ed. Porto Alegre: AMGH, 2014. 
+
+
+OLIVEIRA, Edson Marques. Empreendedorismo social: da teoria à prática, do sonho à realidade. Rio de Janeiro: Qualitymark, 2008. 
+OSTERWALDER, Alexander; PIGNEUR, Yves. Business model generation = inovação em modelos de negócios : um manual para visionários, inovadores e revolucionários. Rio de Janeiro: Alta Books, 2011. 
+	Bibliografia Complementar:
+BERNARDI, Luiz Antonio. Manual de empreendedorismo e gestão: fundamentos, estratégias e dinâmicas. 2. ed. São Paulo: Atlas, 2012. 
+
+
+DORNELAS, José Carlos Assis. Empreendedorismo corporativo: como ser empreendedor, inovar e se diferenciar na sua empresa. 2. ed. Rio de Janeiro: Elsevier, 2008. 
+
+
+OLIVEIRA, Djalma de Pinho Rebouças de. Empreendedorismo: vocação, capacitação e atuação direcionadas para o plano de negócios. São Paulo: Editora Atlas, 2014. 
+	(*) CH Total – Carga horária total da unidade curricular em horas. Somatório da carga horária teórica-prática e extensão.
+(*) CH EaD – Carga horária EaD, se houver. A CH EaD é definida em razão da CH Total.
+
+
+Unidade Curricular: 
+ LICENCIAMENTO AMBIENTAL
+	Semestre:
+5
+	CH Total*:
+40 h
+	CH Extensão:
+00 h
+	Competências do Egresso Correlatas: 1, 2, 3, 4, 5, 6 ,7, 8, 9 e 10.
+
+
+	CH Presencial:
+
+
+30 h
+	CH Síncrona Mediada*:
+
+
+00 h
+	CH EaD:
+10 h
+	Objetivos:
+Compreender o licenciamento ambiental para atuar na coordenação das equipes multidisciplinares envolvidas no processo.
+	Conteúdos:
+* Licenciamento ambiental nas esferas municipal, estadual e federal;
+* Legislação aplicável: etapas, tipos de licenças, atividades sujeitas ao licenciamento;
+* Estudos e relatórios ambientais necessários ao processo de licenciamento.
+	Estratégias de ensino e aprendizagem:
+Diversas estratégias metodológicas poderão ser utilizadas, entre elas: aula expositiva dialogada, atividades em laboratórios, trabalhos individuais e em grupos, debates, estudos de casos, seminários, visitas técnicas, saídas de campo, palestras, leituras de artigos, metodologias ativas, entre outras.
+
+
+A carga horária desenvolvida na modalidade de educação a distância será realizada por meio do Ambiente Virtual de Ensino-Aprendizagem (AVEA) Moodle, em articulação com as atividades presenciais. Para tanto, no início da disciplina, os estudantes participarão de uma oficina sobre AVEA, com orientações práticas sobre navegação, recursos e atividades do ambiente virtual. Serão propostas atividades assíncronas, entre estas poderão constar: fóruns de discussão, enquetes, leituras dirigidas, estudos de caso, questionários, atividades reflexivas, pesquisas orientadas e vídeo aulas, utilizando recursos como livros digitais, artigos científicos, legislações, documentos técnicos e materiais audiovisuais relacionados aos conteúdos da unidade curricular. O acompanhamento da aprendizagem será realizado pelo(a) docente responsável, por meio do monitoramento da participação dos estudantes no ambiente virtual, da mediação das discussões, da oferta de orientações e devolutivas sobre as atividades desenvolvidas, bem como do esclarecimento de dúvidas durante os encontros presenciais e no próprio AVEA. A avaliação das atividades desenvolvidas na modalidade EaD ocorrerá de forma processual, considerando a participação nas atividades propostas, a realização das tarefas no prazo estabelecido e a qualidade das produções apresentadas. 
+	Bibliografia Básica:
+BRASIL. Lei nº 15.190, de 8 de agosto de 2025. Dispõe sobre o licenciamento ambiental; regulamenta o inciso IV do § 1º do art. 225 da Constituição Federal; altera as Leis nºs 9.605, de 12 de fevereiro de 1998 (Lei dos Crimes Ambientais), 9.985, de 18 de julho de 2000, e 6.938, de 31 de agosto de 1981; revoga dispositivos das Leis nºs 7.661, de 16 de maio de 1988, e 11.428, de 22 de dezembro de 2006; e dá outras providências. Disponível em: https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2025/lei/l15190.htm. Acesso em: 15 jul. 2026.
+
+
+CONSELHO NACIONAL DO MEIO AMBIENTE. Resolução CONAMA nº 237, de 19 de dezembro de 1997. Dispõe sobre a revisão e complementação dos procedimentos e critérios utilizados para o licenciamento ambiental. Disponível em: https://conama.mma.gov.br/?option=com_sisconama&task=arquivo.download&id=237. Acesso em: 15 jul. 2026.
+
+
+CONSELHO ESTADUAL DO MEIO AMBIENTE (CONSEMA). Resolução CONSEMA nº 250, de 08 de agosto de 2024. Aprova, nos termos do inciso XIII, do art. 12, da Lei nº 14.675, de 13 de abril de 2009, a listagem das atividades sujeitas ao licenciamento ambiental, define os estudos ambientais necessários e estabelece outras providências. Disponível em: https://www.semae.sc.gov.br/download/resolucao-consema-no-250/ . Acesso em: 15 jul. 2026.
+
+
+	Bibliografia Complementar:
+BRASIL. Tribunal de Contas da União. Cartilha de licenciamento ambiental. Brasília, DF, 2004. Disponível em: <https://moodle.ifsc.edu.br/mod/resource/view.php?id=84576>. Acesso em: 28 ago. 2018.
+CONSELHO NACIONAL DO MEIO AMBIENTE. Legislação ambiental federal. Disponível em <http://www2.mma.gov.br/port/conama/legi.cfm>. Acesso em: 28 ago. 2018.
+
+
+______. Resoluções do CONAMA. Brasília, DF: MMA, 2012. Disponível em: <https://moodle.ifsc.edu.br/mod/resource/view.php?id=84571>. Acesso em: 28 ago. 2018.
+	(*) CH Total – Carga horária total da unidade curricular em horas. Somatório da carga horária teórica-prática e extensão.
+(*) CH EaD – Carga horária EaD, se houver. A CH EaD é definida em razão da CH Total.
+
+
+Unidade Curricular: 
+PLANEJAMENTO E GESTÃO DO TURISMO RESPONSÁVEL
+
+
+	Semestre:
+1
+	CH Total*:
+40 h
+	CH Extensão:
+00 h
+	Competências do Egresso Correlatas: 1, 2, 3, 4, 5, 6 ,7, 8, 9 e 10.
+
+
+	CH Presencial:
+
+
+30 h
+	CH Síncrona Mediada*:
+
+
+00 h
+	CH EaD:
+10 h
+	Objetivos: Capacitar o estudante a estimular o desenvolvimento e gerenciamento de      atividades turísticas sob a ótica da sustentabilidade, focando na prevenção socioambiental e da consequente mitigação de impactos negativos decorrentes do fluxo desequilibrado de visitantes. 
+
+
+	Conteúdos: 
+Fundamentos do turismo responsável; Noções sobre o planejamento do turismo sustentável; Turismo de Base comunitária (TBC); Gestão de fluxos e capacidade de carga em destinos turísticos.
+
+
+	Estratégias de ensino e aprendizagem:
+* Atividades Presenciais (30h): As atividades envolverão a mobilização de conhecimentos prévios dos estudantes, aulas expositivas dialogadas para fundamentação teórica, estudos de caso e estudos do meio, buscando que o estudante estabeleça as relações entre os diversos eixos da gestão ambiental aplicados especificamente ao setor de turismo, garantindo o protagonismo estudantil e a interdisciplinaridade prevista no PPC. 
+
+
+* Atividades em EaD (10h): A carga horária desenvolvida na modalidade de educação a distância será realizada por meio do Ambiente Virtual de Ensino-Aprendizagem (AVEA) Moodle, em articulação com as atividades presenciais. Para tanto, no início da disciplina, os estudantes participarão de uma oficina sobre AVEA, com orientações práticas sobre navegação, recursos e atividades do ambiente virtual. Serão propostas atividades assíncronas, entre estas poderão constar: fóruns de discussão, enquetes, leituras dirigidas, estudos de caso, questionários, atividades reflexivas, pesquisas orientadas e vídeo aulas, utilizando recursos como livros digitais, artigos científicos, legislações, documentos técnicos e materiais audiovisuais relacionados aos conteúdos da unidade curricular. O acompanhamento da aprendizagem será realizado pelo(a) docente responsável, por meio do monitoramento da participação dos estudantes no ambiente virtual, da mediação das discussões, da oferta de orientações e devolutivas sobre as atividades desenvolvidas, bem como do esclarecimento de dúvidas durante os encontros presenciais e no próprio AVEA. A avaliação das atividades desenvolvidas na modalidade EaD ocorrerá de forma processual, considerando a participação nas atividades propostas, a realização das tarefas no prazo estabelecido e a qualidade das produções apresentadas. 
+ 
+	Bibliografia Básica:
+DESENVOLVIMENTO sustentável do turismo: uma compilação de boas práticas. São Paulo: Roca, 2005. 175 p. ISBN 8572415734.
+RUSCHMANN, Doris van de Meene; PHILIPPI JUNIOR, Arlindo (ed.). Gestão ambiental e sustentabilidade no turismo. Barueri: Manole, 2010. 1027 p. (Ambiental, 9). ISBN 9788520424971.
+PIMENTEL, Thiago Duarte; EMMENDOERFER, Magnus Luiz; TOMAZZONI, Edegar Luis (org.). Gestão pública do turismo Brasil: teorias, metodologias e aplicações. Caxias do Sul, RS: EdUCS, 2014. 528 p., il., 23 cm. Inclui bibliografias. ISBN 9788570617354.
+	Bibliografia Complementar:
+IGNARRA, Luiz Renato. Fundamentos do turismo. 3. ed. rev. e ampl. São Paulo; Rio de Janeiro: Cengage Learning: Ed. SENAC Rio, 2013. 226 p., il. ISBN 9788522115396.
+SAMPAIO, Carlos Alberto Cioce. Desenvolvimento sustentável e turismo: implicações de um novo estilo de desenvolvimento humano na atividade turística. Florianópolis: Bernúncia, 2004. 129 p., il. (Meio ambiente & desenvolvimento sustentável, 2). ISBN 8571141568.
+SANTANA, Agustín. Antropologia do turismo: analogias, encontros e relações. Tradução de Eleonora Frenkel Barretto. São Paulo: Aleph, 2009. 230 p., il. (Turismo). Bibliografia: p. 213-230. ISBN 9788576570790.
+	
+
+(*) CH Total – Carga horária total da unidade curricular em horas. Somatório da carga horária teórica-prática e extensão.
+(*) CH EaD – Carga horária EaD, se houver. A CH EaD é definida em razão da CH Total.
+
+
+Unidade Curricular: 
+ ESPANHOL APLICADO
+	Semestre:
+5
+(optativa)
+	CH Total*:
+40 h
+	CH Extensão:
+00 h
+	Competências do Egresso Correlatas: 1, 2, 3, 4, 5, 6 ,7, 8, 9 e 10.
+
+
+	CH Presencial:
+
+
+00 h
+	CH Síncrona Mediada*:
+
+
+00 h
+	CH EaD:
+40 h
+	Objetivos:
+Desenvolver habilidades:
+● Ler, compreender e interpretar textos orais e escritos; 
+● Identificar e dominar o uso de estruturas gramaticais e lexicais básicas da língua no contexto profissional. 
+Desenvolver Atitudes: 
+● Cordialidade, flexibilidade e respeito com os colegas e professores; 
+● Assiduidade e pontualidade; 
+● Cooperação e participação das atividades individuais e coletivas e tarefas propostas com organização, autonomia e iniciativa; 
+● Respeito à diversidade linguística, religiosa, étnica e sexual no ambiente escolar e profissional; 
+● Respeito ao meio ambiente; 
+● Postura profissional. 
+	Conteúdos:
+* Conhecimentos sobre a importância do espanhol no contexto da gestão ambiental
+* Leitura e interpretação de textos diversos em Língua Espanhola voltados à área profissional;
+* Estruturas gramaticais essenciais para a coesão e coerência textual;
+* Léxico, sintaxe, expressões idiomáticas do espanhol e suas estruturas funcionais;
+* Estratégias de leitura e compreensão textual. 
+	Estratégias de ensino e aprendizagem:
+Leitura e análise de textos diversos relacionados à área;
+
+
+Realização de tarefas e exercícios via Ambiente Virtual de Ensino e Aprendizagem. 
+
+
+A carga horária desenvolvida na modalidade de educação a distância será realizada por meio do Ambiente Virtual de Ensino-Aprendizagem (AVEA) Moodle. Para tanto, no início da disciplina, os estudantes participarão de uma oficina sobre AVEA, com orientações práticas sobre navegação, recursos e atividades do ambiente virtual. Serão propostas atividades assíncronas, entre estas poderão constar: fóruns de discussão, enquetes, leituras dirigidas, estudos de caso, questionários, atividades reflexivas, pesquisas orientadas e vídeo aulas, utilizando recursos como livros digitais, artigos científicos, legislações, documentos técnicos e materiais audiovisuais relacionados aos conteúdos da unidade curricular. O acompanhamento da aprendizagem será realizado pelo(a) docente responsável, por meio do monitoramento da participação dos estudantes no ambiente virtual, da mediação das discussões, da oferta de orientações e devolutivas sobre as atividades desenvolvidas, bem como do esclarecimento de dúvidas no próprio AVEA. A avaliação das atividades desenvolvidas na modalidade EaD ocorrerá de forma processual, considerando a participação nas atividades propostas, a realização das tarefas no prazo estabelecido e a qualidade das produções apresentadas. 
+
+
+	Bibliografia Básica:
+BALLESTERO-ALVAREZ, María Esmeralda; SOTO BALBÁS, Marcial. Minidicionário: espanhol-português, português-espanhol. São Paulo: FTD, 2007. 
+PROST, Gisèle; NORIEGA FERNÁNDEZ, Alfredo. Al día: curso de español para los negocios. 5. ed. Madrid: SGEL, 2012. 
+	Bibliografia Complementar:
+FANJUL, Adrián (org.). Gramática y práctica de español para brasileños. 2. ed. São Paulo: Moderna, 2011. GONZÁLEZ H. A. Conjugar: verbos de España y de América. Madrid: Edelsa Grupo Didascalia, 2011. PROST, Gisèle; NORIEGA FERNÁNDEZ, Alfredo. Al día: curso intermedio de español para los negocios. 3. ed. Madrid: SGEL, 2011. 
+	(*) CH Total – Carga horária total da unidade curricular em horas. Somatório da carga horária teórica-prática e extensão.
+(*) CH EaD – Carga horária EaD, se houver. A CH EaD é definida em razão da CH Total.
+
+
+Unidade Curricular: 
+INGLÊS APLICADO
+	Semestre:
+5
+(optativa)
+	CH Total*:
+40 h
+	CH Extensão:
+00 h
+	Competências do Egresso Correlatas: 1, 2, 3, 4, 5, 6 ,7, 8, 9 e 10.
+
+
+	CH Presencial:
+
+
+00 h
+	CH Síncrona Mediada*:
+
+
+00 h
+	CH EaD:
+40 h
+	Objetivos:
+* Entender a função social da língua inglesa como possibilidade de ampliar o espectro de conhecimentos gerais e específicos relacionados às atividades do gestor ambiental, utilizando-a  como um meio de contato com profissionais e experiências internacionais na área; 
+* Ampliar o vocabulário, sobretudo o da área específica; 
+* Expandir a eficiência na leitura; 
+* Desenvolver a compreensão oral e escrita; 
+* Desenvolver um processo de leitura interpretativa, contextualizada e crítica; 
+* Produzir de forma escrita e oral estruturas de gêneros textuais relacionados às atividades do eixo tecnológico Ambiente e Saúde; 
+* Reconhecer estruturas textuais de textos técnicos e suas relações retóricas; 
+* Entender estruturas gramaticais intermediárias; 
+	Conteúdos:
+* Estratégias de leitura (layout, skimming, scanning, utilização de informação não linear, convenções gráficas), gêneros do discurso, padrões de textualidade, referenciação, cognatos e falsos cognatos, formação de palavras; 
+* Compreensão de textos em geral e de textos técnicos; 
+* Prática de leitura e escrita; 
+* Vocabulário específico da área de Gestão Ambiental; 
+* Estruturas gramaticais intermediárias. 
+	Estratégias de ensino e aprendizagem:
+* Aulas expositivas dialogadas com aplicação de trabalhos, exercícios e pesquisas em laboratório e na biblioteca, desenvolvimento de seminários; 
+* Avaliações diagnósticas, qualitativas e quantitativas durante o semestre; 
+* Estudos dirigidos, trabalhos em grupo e resoluções de exercícios; 
+* Problematização dos conteúdos da unidade curricular com discussões e construção coletiva das possíveis soluções.
+A carga horária desenvolvida na modalidade de educação a distância será realizada por meio do Ambiente Virtual de Ensino-Aprendizagem (AVEA) Moodle. Para tanto, no início da disciplina, os estudantes participarão de uma oficina sobre AVEA, com orientações práticas sobre navegação, recursos e atividades do ambiente virtual. Serão propostas atividades assíncronas, entre estas poderão constar: fóruns de discussão, enquetes, leituras dirigidas, estudos de caso, questionários, atividades reflexivas, pesquisas orientadas e vídeo aulas, utilizando recursos como livros digitais, artigos científicos, legislações, documentos técnicos e materiais audiovisuais relacionados aos conteúdos da unidade curricular. O acompanhamento da aprendizagem será realizado pelo(a) docente responsável, por meio do monitoramento da participação dos estudantes no ambiente virtual, da mediação das discussões, da oferta de orientações e devolutivas sobre as atividades desenvolvidas, bem como do esclarecimento de dúvidas no próprio AVEA. A avaliação das atividades desenvolvidas na modalidade EaD ocorrerá de forma processual, considerando a participação nas atividades propostas, a realização das tarefas no prazo estabelecido e a qualidade das produções apresentadas.
+	Bibliografia Básica:
+MUNHOZ, Rosângela. Inglês instrumental: estratégias de leitura: módulo I. 3. ed. reform. e rev. São Paulo: Heccus, 2018. 115 p., il. ISBN 9788567281087.
+ 
+MICHAELIS. Moderno dicionário inglês-português, português-inglês. São Paulo: Companhia Melhoramentos, 2009. 
+
+
+TORRES, Nelson. Gramática prática da língua inglesa: o inglês descomplicado. 10. ed. São Paulo: Saraiva, 2007. 
+	Bibliografia Complementar:
+LATHAM-KOENIG, Christina. English File: Beginner Student's Book. Oxford: Oxford University Press, 2018. 135 p, il., color. ISBN 9780194029803. 
+
+
+LATHAM-KOENIG, Christina. English File: Intermediate Student's Book. Oxford: Oxford University Press, 2018. 167 p, il., color. ISBN 9780194035910. 
+
+
+LIMA, Denilso de. Gramática de uso da língua inglesa: a gramática do inglês na ponta da língua. Rio de Janeiro: Alta Books, 2018. 201 p. Inclui referencias bibliograficas. ISBN 9788550802923. 
+	(*) CH Total – Carga horária total da unidade curricular em horas. Somatório da carga horária teórica-prática e extensão.
+(*) CH EaD – Carga horária EaD, se houver. A CH EaD é definida em razão da CH Total.
+
+
+Unidade Curricular: 
+ LIBRAS
+	Semestre:
+5
+(optativa)
+	CH Total*:
+40 h
+	CH Extensão:
+00 h
+	Competências do Egresso Correlatas: 1, 2, 3, 4, 5, 6 ,7, 8, 9 e 10.
+
+
+	CH Presencial:
+
+
+00 h
+	CH Síncrona Mediada*:
+
+
+00 h
+	CH EaD:
+40 h
+	Objetivos:
+Em Libras, a partir de situações de interação pertinentes a área do curso, entender e utilizar expressões familiares do dia a dia, bem como frases básicas direcionadas a satisfazer necessidades concretas. Apresentar-se em Libras e responder perguntas sobre detalhes de sua vida pessoal como, por exemplo: onde vive, pessoas que conhece ou coisas que possui. Interagir de maneira simples com nativos desde que estes falem pausadamente, de maneira clara e que estejam dispostos a ajudar. Conhecer aspectos da cultura e da identidade do povo surdo. Atingir a fluência ao Nível A1 do quadro europeu de referência de línguas.
+
+
+	Conteúdos:
+Línguas de Sinais no mundo; alfabeto manual; configurações das mãos; Sistema pronominal; números, horas, meses do ano, estação do ano; estado civil, família e graus de parentesco; verbos com e sem concordância; marcação de gênero; marcações não manuais emocionais e gramaticais. Cores e características de produtos. Verbos relacionados à rotina. Perguntas que exigem uma explicação (perguntas QU) e perguntas com respostas sim e não (perguntas SN). Negação. Libras aplicada à área do curso. Aspectos culturais e históricos do povo surdo.
+	Estratégias de ensino e aprendizagem:
+Este componente curricular disponibilizará materiais de estudo em livro digital interativo e videoaulas no Ambiente Virtual de Aprendizagem (AVA) do IFSC, o Moodle. Neste ambiente, serão orientadas atividades de aprendizagem como os fóruns, chats, tarefas, textos coletivos, questionários, exercícios interativos de compreensão e produção da Libras, leituras complementares, narrativas em Libras, entre outras. Os encontros síncronos por webconferência são gravados e disponibilizados aos alunos no Moodle.
+As interações em Libras, tanto conversas, como as atividades devem ser filmadas e postadas no AVA tanto pelo professor quanto pelos alunos. O professor fará a mediação pedagógica e a tutoria das atividades deste componente curricular. A avaliação final será presencial no Câmpus e corresponderá a 50% da nota. As demais avaliações sobre compreensão e produção da Libras e sobre cultura, história e movimentos sociais surdos, corresponderá a 50% e será em atividades assíncronas no Moodle.
+O Moodle passa por avaliações periódicas devidamente documentadas, que resultam em ações de melhoria contínua e a possibilidade de uso de novas ferramentas pedagógicas.
+O acesso dos alunos ao conteúdo no Moodle poderá ser nos laboratórios de informática do Campus, ou em outro local de preferência do aluno.
+	Bibliografia Básica:
+QUADROS, Ronice Müller de; KARNOPP, Lodenir Becker. Língua de sinais brasileira: estudos linguísticos. Porto Alegre: Artmed, 2004. 221 p., il. (se tiver na biblioteca) 
+Ou
+SILVA, Ronice Müller de Quadros, Rodrigo Nogueira Machado, Jair Barbosa da. Introdução ao estudo da Libras. São Paulo: Editora Contexto, 2025. E-book. p.capa. ISBN 9786555416367. Disponível em: https://app.minhabiblioteca.com.br/reader/books/9786555416367/. Acesso em: 23 jun. 2026.
+WILCOX, Sherman; WILCOX, Phyllis Perrin. Aprenda a ver. Rio de Janeiro: Arara Azul, 2005, 190 p. E-book. Disponível em: https://libras.uff.br/aprender-a-ver-3/. Acesso em: 23 jun. 2026.
+
+
+	Bibliografia Complementar:
+MORAIS, Carlos E. L.; PLINSKI, Rejane R. K.; MARTINS, Gabriel P. T. C.; et al. Libras. 2. ed. Porto Alegre: SAGAH, 2018. E-book. Disponível em: https://app.minhabiblioteca.com.br/#/books/9788595027305/. Acesso em: 23 jun. 2026.
+QUADROS, Ronice Muller de; PIZZIO, Aline Lemos; REZENDE, Patrícia Luiza Ferreira. Língua brasileira de sinais I. Florianópolis: UFSC, 2009. Disponível em: http://www.libras.ufsc.br/colecaoLetrasLibras/eixoFormacaoEspecifica/linguaBrasileiraDeSinaisI/assets/459/Texto_base.pdf. Acesso em: 23 jun. 2026.
+VILHALVA, Shirley. Despertar do silêncio. Rio de Janeiro: Arara Azul, 2004. E-book. Disponível em:https://libras.uff.br/despertar-do-silencio-3/. Acesso em: 23 jun. 2026.
+	(*) CH Total – Carga horária total da unidade curricular em horas. Somatório da carga horária teórica-prática e extensão.
+(*) CH EaD – Carga horária EaD, se houver. A CH EaD é definida em razão da CH Total.
+Instituto Federal de Santa Catarina – Reitoria
+Rua: 14 de julho, 150  |  Coqueiros  |   Florianópolis /SC  |  CEP: 88.075-010
+Fone: (48) 3877-9000   |   www.ifsc.edu.br  |  CNPJ 11.402.887/0001-60
