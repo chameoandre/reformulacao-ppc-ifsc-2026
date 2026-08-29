@@ -62,7 +62,7 @@ def is_title_match(t_ppc, t_cand):
     
     return (jaccard >= 0.60 and overlap >= 0.75) or ratio >= 0.75
 
-def extract_metadata(ref_text):
+def extract_metadata(ref_text, prev_author=''):
     cleaned = ref_text.replace("**", "").replace("*", "").strip()
     cleaned = re.sub(r'^\d+[\.\)]\s*', '', cleaned)
     
@@ -93,32 +93,76 @@ def extract_metadata(ref_text):
     ed_match = re.search(r'(\d+)\.\s*ed\b', cleaned, re.IGNORECASE)
     edicao = ed_match.group(1) if ed_match else ""
     
-    # Robust ABNT Author & Title extraction
+    # Repetition author ______
     t = cleaned
-    t = re.sub(r'\.\s*(\([A-Za-z\s\.]+\))', r' \1', t)
-    t = re.sub(r'\(([A-Za-z\s\.]+)\)', lambda m: '(' + m.group(1).replace('.', '_DOT_') + ')', t)
-    t = re.sub(r'\bet\s+al\.', r'et al_DOT_', t)
-    t = re.sub(r'\b(BRASIL|EMBRAPA|IBGE|MMA|MEC|UNESCO|WHO|ONU|CONAMA|BANCO MUNDIAL|MINISTÉRIO|SECRETARIA|INSTITUTO)\.', r'\1_DOT_', t)
-    t = re.sub(r'([A-Z])\.\s*(?=[A-Z]\.|\s*;\s*|\s*,\s*|\s*\(|\s*et\s+al|\s*\[)', r'\1_DOT_ ', t)
-    
-    if '.' in t:
-        parts = t.split('.', 1)
-        autor_part = parts[0].replace('_DOT_', '.').strip(' .,;')
-        resto = parts[1].replace('_DOT_', '.').strip()
-        
-        resto_work = resto
-        resto_work = re.sub(r'(\d+)\.\s*ed\b', r'\1_ED_', resto_work, flags=re.IGNORECASE)
-        resto_work = re.sub(r'\bv\.\s*(\d+)', r'v_DOT_\1', resto_work)
-        resto_work = re.sub(r'\bn\.\s*(\d+)', r'n_DOT_\1', resto_work)
-        resto_work = re.sub(r'\bp\.\s*(\d+)', r'p_DOT_\1', resto_work)
-        
-        r_parts = resto_work.split('. ')
-        titulo = r_parts[0].replace('_ED_', '. ed').replace('_DOT_', '.').strip(' .,;')
-        if len(titulo) < 3 and len(r_parts) > 1:
-            titulo = r_parts[1].replace('_ED_', '. ed').replace('_DOT_', '.').strip(' .,;')
+    if t.startswith('______') or t.startswith('____.'):
+        t = re.sub(r'^_+[\.\s]*', '', t).strip()
+        autor_part = prev_author if prev_author else 'MESMO AUTOR'
+        resto = t
     else:
-        autor_part = "AUTOR DESCONHECIDO"
-        titulo = cleaned.strip(' .,;')
+        # Step 1: Protect (Org.), (Orgs.), (Coord.), (Ed.), (Eds.)
+        t = re.sub(r'\(([A-Za-z\s\.]+)\)', lambda m: '(' + m.group(1).replace('.', '_DOT_') + ')', t)
+        t = re.sub(r'\.\s*\(', '_DOT_ (', t)
+        
+        # Step 2: Institutional Authors at the start (e.g. EMBRAPA., IBGE., BRASIL., BANCO MUNDIAL., UNESCO., etc.)
+        m_inst = re.match(r'^(BRASIL|EMBRAPA|IBGE|BANCO MUNDIAL|UNESCO|WHO|ONU|CONAMA|AGÊNCIA NACIONAL DE ÁGUAS|MINISTÉRIO [^.]+?|SECRETARIA [^.]+?|INSTITUTO [^.]+?)\.\s+(.+)$', t, re.IGNORECASE)
+        if m_inst:
+            autor_part = m_inst.group(1).strip()
+            resto = m_inst.group(2).strip()
+        else:
+            # Step 3: Protect author dots before author-separating ';' or '&'
+            while True:
+                new_t = re.sub(r'\.(?=[^.]*(?:;\s*[A-ZÁÉÍÓÚÂÊÔÃÕÇ\s\-]{2,}\s*,|&\s*[A-ZÁÉÍÓÚÂÊÔÃÕÇ\s\-]{2,}\s*,|;\s*et\s+al|&\s*et\s+al))', '_DOT_', t)
+                if new_t == t:
+                    break
+                t = new_t
+                
+            # Step 4: Protect 'et al.' -> keep the final dot as boundary
+            t = re.sub(r'\bet\s+al\.', r'et al.', t)
+            
+            # Step 5: Protect author initials like 'J. David.' right after surname
+            t = re.sub(r'([A-ZÁÉÍÓÚÂÊÔÃÕÇ]{2,},\s+[A-Z])\.\s+([A-Z][a-z]+)\.', r'\1_DOT_ \2.', t)
+            
+            # Step 6: Protect consecutive initials and particles
+            for _ in range(8):
+                t = re.sub(r'([A-Z])\.\s*(?=(?:de|da|do|dos|das|e|&)\b)', r'\1_DOT_ ', t)
+                t = re.sub(r'\b(de|da|do|dos|das)\s+([A-Z])\.\s*(?=[A-Z](?:\.|\_DOT\_)|\b(?:de|da|do|dos|das)\b)', r'\1 \2_DOT_ ', t)
+                t = re.sub(r'([A-Z])\.\s*(?=[A-Z](?:\.|\_DOT\_))', r'\1_DOT_ ', t)
+                t = re.sub(r'([A-Z])\.\s*(?=\([A-Za-z\s\.]+\))', r'\1_DOT_ ', t)
+                t = re.sub(r'([A-Z])\.\s*(?=et\s+al)', r'\1_DOT_ ', t)
+                
+            if '.' in t:
+                parts = t.split('.', 1)
+                autor_part = parts[0].replace('_DOT_', '.').strip()
+                resto = parts[1].replace('_DOT_', '.').strip()
+            else:
+                autor_part = "AUTOR DESCONHECIDO"
+                resto = t.replace('_DOT_', '.').strip()
+
+    autor_part = re.sub(r'\s+', ' ', autor_part).strip(' .,;')
+    
+    # Extract Title from resto
+    resto_clean = resto
+    resto_clean = re.sub(r'(\d+)\.\s*ed\b', r'\1_ED_', resto_clean, flags=re.IGNORECASE)
+    resto_clean = re.sub(r'\bv\.\s*(\d+)', r'v_DOT_\1', resto_clean)
+    resto_clean = re.sub(r'\bn\.\s*(\d+)', r'n_DOT_\1', resto_clean)
+    resto_clean = re.sub(r'\bp\.\s*(\d+)', r'p_DOT_\1', resto_clean)
+    resto_clean = re.sub(r'\b(In|in)\.:', r'In_DOT_:', resto_clean)
+    resto_clean = re.sub(r'\bDisponível em:', r'_DISP_', resto_clean)
+    
+    parts_t = resto_clean.split('. ')
+    titulo = parts_t[0].replace('_ED_', '. ed').replace('_DOT_', '.').replace('_DISP_', 'Disponível em:').strip()
+    
+    # If title starts with '(org.)' or '(orgs.)', move it to author
+    m_org_tit = re.match(r'^\s*\((\s*(?:org|orgs|coord|coords|ed|eds)\.?\s*)\)\.?\s*(.+)$', titulo, re.IGNORECASE)
+    if m_org_tit:
+        autor_part = f'{autor_part} ({m_org_tit.group(1).strip()})'
+        titulo = m_org_tit.group(2).strip()
+        
+    if len(titulo) < 3 and len(parts_t) > 1:
+        titulo = parts_t[1].replace('_ED_', '. ed').replace('_DOT_', '.').strip()
+        
+    titulo = re.sub(r'\s+', ' ', titulo).strip(' .,;')
 
     titulo_curto = titulo.split(':')[0].strip() if ':' in titulo else titulo
     autor_sobrenome = autor_part.split(',')[0].strip() if ',' in autor_part else autor_part.split()[0] if autor_part.split() else ""
@@ -223,7 +267,13 @@ def load_and_index_acervo():
     return AcervoIndex(acervo_items), acervo_items
 
 def merge_reference_lines(raw_text):
-    lines = [l.strip() for l in raw_text.split('\n') if l.strip()]
+    # 1. Split concatenated refs on same line
+    t = raw_text
+    t = re.sub(r'(\b\d{4}\.)\s+([A-ZÁÉÍÓÚÂÊÔÃÕÇ]{2,},\s+)', r'\1\n\2', t)
+    t = re.sub(r'(\b\d{4}\.)\s+(______[\.\s])', r'\1\n\2', t)
+    t = re.sub(r'(\b______\.\s+[^\n]+?\b\d{4}\.)\s+([A-ZÁÉÍÓÚÂÊÔÃÕÇ]{2,},\s+|______)', r'\1\n\2', t)
+
+    lines = [l.strip() for l in t.split('\n') if l.strip()]
     merged = []
     for l in lines:
         if l.startswith('(*)') or 'CH Total' in l or 'CH EaD' in l:
@@ -232,14 +282,17 @@ def merge_reference_lines(raw_text):
             merged.append(l)
         else:
             is_new_ref = False
-            if re.match(r'^[A-ZÁÉÍÓÚÂÊÔÃÕÇ]{2,}(?:\s+[A-ZÁÉÍÓÚÂÊÔÃÕÇ]{2,})*,\s+[A-Za-zÀ-ÿ]', l):
-                is_new_ref = True
-            elif re.match(r'^(BRASIL|EMBRAPA|IBGE|MMA|MEC|UNESCO|WHO|ONU|CONAMA|BANCO MUNDIAL|INSTITUTO|MINISTÉRIO|SECRETARIA|FNDE)\b', l, re.IGNORECASE):
-                is_new_ref = True
-            elif re.match(r'^\d+[\.\)]\s*[A-ZÁÉÍÓÚÂÊÔÃÕÇ]{2,}', l):
-                is_new_ref = True
-            elif l.startswith('LIVRO didático') or l.startswith('Material didático'):
-                is_new_ref = True
+            if not (merged[-1].rstrip().endswith(';') or merged[-1].rstrip().endswith('&')):
+                if re.match(r'^[A-ZÁÉÍÓÚÂÊÔÃÕÇ]{2,}(?:\s+[A-ZÁÉÍÓÚÂÊÔÃÕÇ]{2,})*,\s+[A-Za-zÀ-ÿ]', l):
+                    is_new_ref = True
+                elif re.match(r'^(BRASIL|EMBRAPA|IBGE|MMA|MEC|UNESCO|WHO|ONU|CONAMA|BANCO MUNDIAL|INSTITUTO|MINISTÉRIO|SECRETARIA|FNDE|AGÊNCIA)\b', l, re.IGNORECASE):
+                    is_new_ref = True
+                elif re.match(r'^\d+[\.\)]\s*[A-ZÁÉÍÓÚÂÊÔÃÕÇ]{2,}', l):
+                    is_new_ref = True
+                elif l.startswith('LIVRO didático') or l.startswith('Material didático'):
+                    is_new_ref = True
+                elif l.startswith('______') or l.startswith('____.'):
+                    is_new_ref = True
                 
             if is_new_ref:
                 merged.append(l)
@@ -360,8 +413,10 @@ def parse_txt_ementas():
         }
         ucs_info.append(uc_data)
 
+        prev_author_bb = ""
         for b in bb_list:
-            meta = extract_metadata(b)
+            meta = extract_metadata(b, prev_author=prev_author_bb)
+            prev_author_bb = meta['autor']
             all_refs.append({
                 'uc_id': idx,
                 'uc': uc_nome,
@@ -371,8 +426,10 @@ def parse_txt_ementas():
                 'meta': meta
             })
 
+        prev_author_bc = ""
         for c in bc_list:
-            meta = extract_metadata(c)
+            meta = extract_metadata(c, prev_author=prev_author_bc)
+            prev_author_bc = meta['autor']
             all_refs.append({
                 'uc_id': idx,
                 'uc': uc_nome,
