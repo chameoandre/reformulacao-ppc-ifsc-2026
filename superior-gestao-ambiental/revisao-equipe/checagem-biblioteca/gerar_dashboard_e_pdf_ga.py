@@ -29,38 +29,11 @@ def load_data():
     df_all = pd.read_excel(EXCEL_PATH, sheet_name='Diagnóstico Consolidado')
     df_sophia = pd.read_excel(EXCEL_PATH, sheet_name='Catálogo Sophia Garopaba')
     
-    # Parse TXT for UC structure
-    with open(TXT_PATH, "r", encoding="utf-8") as f:
-        text = f.read()
-    raw_ucs = [u.strip() for u in text.split('Unidade Curricular:') if u.strip()]
+    # Import ucs_info directly from analise_acervo_biblioteca_ga for 100% accurate UC names and metadata
+    from analise_acervo_biblioteca_ga import parse_txt_ementas
+    ucs_info, _ = parse_txt_ementas()
     
-    ucs_meta = []
-    for idx, block in enumerate(raw_ucs, 1):
-        lines = [l.strip() for l in block.split('\n') if l.strip()]
-        if not lines: continue
-        uc_nome = lines[0]
-        if uc_nome in ['﻿', '']: 
-            if len(lines) > 1: uc_nome = lines[1]
-            else: continue
-            
-        sem = re.search(r'Semestre:\s*([^\n]+)', block)
-        sem_val = sem.group(1).strip() if sem else '?'
-        
-        ch = re.search(r'CH Total\*?:\s*([^\n]+)', block)
-        ch_val = ch.group(1).strip() if ch else '40 h'
-        
-        ch_ead = re.search(r'CH EaD\*?:\s*([^\n]+)', block)
-        ch_ead_val = ch_ead.group(1).strip() if ch_ead else '00 h'
-        
-        ucs_meta.append({
-            'id': idx,
-            'uc_nome': uc_nome,
-            'semestre': sem_val,
-            'ch_total': ch_val,
-            'ch_ead': ch_ead_val
-        })
-        
-    return df_all, df_sophia, ucs_meta
+    return df_all, df_sophia, ucs_info
 
 def escape_html(text):
     if not isinstance(text, str):
@@ -821,7 +794,7 @@ def build_dashboard_html(df_all, df_sophia, ucs_meta):
         <div style="border-bottom:2px solid var(--border-color); padding-bottom:1.5rem; margin-bottom:1.5rem; display:flex; justify-content:space-between; align-items:flex-start; flex-wrap:wrap; gap:1rem;">
           <div>
             <span class="badge badge-sim" style="font-size:0.8rem; margin-bottom:0.5rem;"><i class="bi bi-file-earmark-text-fill"></i> Memorando Técnico Oficial</span>
-            <h2 style="font-family:'Outfit', sans-serif; font-size:1.45rem; color:#ffffff; margin-top:0.3rem;">Sumário Executivo: Auditoria Normativa de Acervo & Quantitativos de Exemplares</h2>
+            <h2 style="font-family:'Outfit', sans-serif; font-size:1.45rem; color:var(--text-heading); margin-top:0.3rem;">Sumário Executivo: Auditoria Normativa de Acervo & Quantitativos de Exemplares</h2>
             <div style="margin-top:0.8rem; font-size:0.88rem; color:var(--text-muted); line-height:1.7;">
               <strong>Para:</strong> David (Bibliotecário-Documentalista — IFSC Câmpus Garopaba)<br>
               <strong>De:</strong> Comissão de Reformulação do PPC CST em Gestão Ambiental<br>
@@ -842,22 +815,22 @@ def build_dashboard_html(df_all, df_sophia, ucs_meta):
           </div>
         </div>
 
-        <div style="font-size:0.92rem; line-height:1.8; color:#cbd5e1;">
+        <div style="font-size:0.92rem; line-height:1.8; color:var(--text-main);">
           <p style="margin-bottom:1rem;">
             Prezado David,
           </p>
           <p style="margin-bottom:1rem;">
-            Apresentamos o relatório consolidado da <strong>auditoria bibliográfica automatizada</strong> realizada entre as <strong>213 referências bibliográficas</strong> das <strong>33 Unidades Curriculares</strong> do novo PPC do <strong>Curso Superior de Tecnologia em Gestão Ambiental</strong> e o acervo físico registrado no Sistema Sophia da Biblioteca do Câmpus Garopaba (3.003 títulos e 4.962 exemplares).
+            Apresentamos o relatório consolidado da <strong>auditoria bibliográfica automatizada</strong> realizada entre as <strong>189 referências bibliográficas</strong> das <strong>33 Unidades Curriculares</strong> do novo PPC do <strong>Curso Superior de Tecnologia em Gestão Ambiental</strong> e o acervo físico registrado no Sistema Sophia da Biblioteca do Câmpus Garopaba (3.003 títulos e 4.962 exemplares).
           </p>
           <p style="margin-bottom:1rem;">
             Para fins de planejamento de compras institucionais e conformidade regulatória, aplicamos a <strong>Regra Normativa do IFSC</strong>:
           </p>
-          <ul style="margin-left:1.5rem; margin-bottom:1.5rem; color:#e2e8f0;">
+          <ul style="margin-left:1.5rem; margin-bottom:1.5rem; color:var(--text-main);">
             <li><strong>Bibliografia Básica (mín. 2 títulos):</strong> Disponibilização de ao menos <strong>3 exemplares físicos</strong> de cada título no acervo do câmpus.</li>
             <li><strong>Bibliografia Complementar (mín. 3 títulos):</strong> Disponibilização de ao menos <strong>1 exemplar físico</strong> de cada título no acervo do câmpus.</li>
           </ul>
 
-          <h3 style="color:#ffffff; font-family:'Outfit', sans-serif; font-size:1.15rem; margin:1.5rem 0 0.8rem 0; border-bottom:1px solid var(--border-color); padding-bottom:0.4rem;">
+          <h3 style="color:var(--text-heading); font-family:'Outfit', sans-serif; font-size:1.15rem; margin:1.5rem 0 0.8rem 0; border-bottom:1px solid var(--border-color); padding-bottom:0.4rem;">
             1. Síntese do Diagnóstico e Demanda de Compras
           </h3>
           
@@ -878,7 +851,7 @@ def build_dashboard_html(df_all, df_sophia, ucs_meta):
               <tr>
                 <td><strong>Total de Obras Mapeadas</strong></td>
                 <td>{total_refs} títulos</td>
-                <td>85 na Básica e 128 na Complementar</td>
+                <td>Obras auditadas na matriz do PPC</td>
               </tr>
               <tr>
                 <td><strong>Títulos com Acervo Físico Confirmado</strong></td>
@@ -895,19 +868,19 @@ def build_dashboard_html(df_all, df_sophia, ucs_meta):
                 <td><span class="badge badge-var">{total_var} títulos</span></td>
                 <td>Acervo possui edição anterior/posterior à citada no PPC</td>
               </tr>
-              <tr style="background:rgba(244,63,94,0.1);">
-                <td><strong><a href="#secao-compras-basica" onclick="scrollToSection('secao-compras-basica'); return false;" style="color:#fb7185; text-decoration:underline;">DEMANDA DE COMPRAS: Bibliografia BÁSICA</a></strong></td>
-                <td><strong style="color:#fb7185; font-size:1.1rem;">+{total_deficit_basica} exemplares físicos</strong></td>
+              <tr style="background:rgba(244,63,94,0.06);">
+                <td><strong><a href="#secao-compras-basica" onclick="scrollToSection('secao-compras-basica'); return false;" style="color:#e11d48; text-decoration:underline; font-weight:700;">DEMANDA DE COMPRAS: Bibliografia BÁSICA</a></strong></td>
+                <td><strong style="color:#e11d48; font-size:1.1rem;">+{total_deficit_basica} exemplares físicos</strong></td>
                 <td>Meta: &ge; 3 exemplares por título básico (Clique para ver listagem)</td>
               </tr>
-              <tr style="background:rgba(245,158,11,0.1);">
-                <td><strong><a href="#secao-compras-comp" onclick="scrollToSection('secao-compras-comp'); return false;" style="color:#fbbf24; text-decoration:underline;">DEMANDA DE COMPRAS: Bibliografia COMPLEMENTAR</a></strong></td>
-                <td><strong style="color:#fbbf24; font-size:1.1rem;">+{total_deficit_comp} exemplares físicos</strong></td>
+              <tr style="background:rgba(245,158,11,0.06);">
+                <td><strong><a href="#secao-compras-comp" onclick="scrollToSection('secao-compras-comp'); return false;" style="color:#d97706; text-decoration:underline; font-weight:700;">DEMANDA DE COMPRAS: Bibliografia COMPLEMENTAR</a></strong></td>
+                <td><strong style="color:#d97706; font-size:1.1rem;">+{total_deficit_comp} exemplares físicos</strong></td>
                 <td>Meta: &ge; 1 exemplar por título complementar (Clique para ver listagem)</td>
               </tr>
-              <tr style="background:rgba(16,185,129,0.15);">
+              <tr style="background:rgba(5,150,105,0.08);">
                 <td><strong>DEMANDA TOTAL CONSOLIDADA DE AQUISIÇÃO</strong></td>
-                <td><strong style="color:#34d399; font-size:1.2rem;">+{total_deficit_geral} EXEMPLARES</strong></td>
+                <td><strong style="color:#059669; font-size:1.2rem;">+{total_deficit_geral} EXEMPLARES</strong></td>
                 <td>Total de cópias físicas para regularização normativa 100%</td>
               </tr>
             </tbody>
@@ -951,11 +924,11 @@ def build_dashboard_html(df_all, df_sophia, ucs_meta):
         m = g['meta']
         html_content += f"""            <tr class="diag-row" data-status="{g['status_code']}" data-sem="{m['semestre']}">
               <td style="font-weight:700; color:var(--text-muted);">{m['semestre']}º</td>
-              <td><strong style="color:#ffffff;">{escape_html(m['uc_nome'])}</strong></td>
+              <td><strong style="color:var(--text-heading);">{escape_html(m['uc_nome'])}</strong></td>
               <td>{escape_html(m['ch_total'])}</td>
               <td><span class="badge {g['badge_class']}">{g['status_label']}</span></td>
-              <td>{g['b_sim']}/{g['b_tot']} obras {f"<strong style='color:#fb7185;'>(+{g['b_def']} ex.)</strong>" if g['b_def'] > 0 else "<span style='color:#34d399;'>OK</span>"}</td>
-              <td>{g['c_sim']}/{g['c_tot']} obras {f"<strong style='color:#fbbf24;'>(+{g['c_def']} ex.)</strong>" if g['c_def'] > 0 else "<span style='color:#34d399;'>OK</span>"}</td>
+              <td>{g['b_sim']}/{g['b_tot']} obras {f"<strong style='color:#e11d48;'>(+{g['b_def']} ex.)</strong>" if g['b_def'] > 0 else "<span style='color:#059669; font-weight:700;'>OK</span>"}</td>
+              <td>{g['c_sim']}/{g['c_tot']} obras {f"<strong style='color:#d97706;'>(+{g['c_def']} ex.)</strong>" if g['c_def'] > 0 else "<span style='color:#059669; font-weight:700;'>OK</span>"}</td>
               <td>{f"<span class='badge badge-nao'>+{g['tot_def']} ex.</span>" if g['tot_def'] > 0 else "<span class='badge badge-sim'>0 ex.</span>"}</td>
               <td><button class="btn-action btn-outline" style="padding:2px 8px; font-size:0.75rem;" onclick="openUcAccordion({m['id']})"><i class="bi bi-eye"></i> Detalhes</button></td>
             </tr>
@@ -968,7 +941,7 @@ def build_dashboard_html(df_all, df_sophia, ucs_meta):
       <!-- SEÇÃO COMPRAS BÁSICA -->
       <div id="secao-compras-basica" style="margin-top:2.5rem; margin-bottom:2rem;">
         <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:1rem; border-bottom:2px solid var(--accent-rose); padding-bottom:0.6rem;">
-          <h2 style="font-family:'Outfit', sans-serif; font-size:1.3rem; color:#ffffff;">
+          <h2 style="font-family:'Outfit', sans-serif; font-size:1.3rem; color:var(--text-heading);">
             <i class="bi bi-cart-plus-fill" style="color:var(--accent-rose);"></i> Lista Prioritária de Compras: Bibliografia BÁSICA (+{total_deficit_basica} Exemplares)
           </h2>
           <span class="badge badge-nao" style="font-size:0.85rem;">Meta: &ge; 3 exemplares físicos por título</span>
@@ -992,7 +965,7 @@ def build_dashboard_html(df_all, df_sophia, ucs_meta):
     for _, r in df_b_def.iterrows():
         html_content += f"""              <tr>
                 <td>{r['Semestre']}º</td>
-                <td><strong>{escape_html(r['UC'])}</strong></td>
+                <td><strong style="color:var(--text-heading);">{escape_html(r['UC'])}</strong></td>
                 <td>{escape_html(r['Titulo_PPC'])}</td>
                 <td>{escape_html(r['Autor_PPC'])}</td>
                 <td>{r['Exemplares_Acervo']} ex. ({escape_html(r['Status_Legivel'])})</td>
@@ -1008,7 +981,7 @@ def build_dashboard_html(df_all, df_sophia, ucs_meta):
       <!-- SEÇÃO COMPRAS COMPLEMENTAR -->
       <div id="secao-compras-comp" style="margin-top:2.5rem; margin-bottom:2rem;">
         <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:1rem; border-bottom:2px solid var(--accent-amber); padding-bottom:0.6rem;">
-          <h2 style="font-family:'Outfit', sans-serif; font-size:1.3rem; color:#ffffff;">
+          <h2 style="font-family:'Outfit', sans-serif; font-size:1.3rem; color:var(--text-heading);">
             <i class="bi bi-journal-plus" style="color:var(--accent-amber);"></i> Lista de Compras: Bibliografia COMPLEMENTAR (+{total_deficit_comp} Exemplares)
           </h2>
           <span class="badge badge-var" style="font-size:0.85rem;">Meta: &ge; 1 exemplar físico por título</span>
@@ -1032,7 +1005,7 @@ def build_dashboard_html(df_all, df_sophia, ucs_meta):
     for _, r in df_c_def.iterrows():
         html_content += f"""              <tr>
                 <td>{r['Semestre']}º</td>
-                <td><strong>{escape_html(r['UC'])}</strong></td>
+                <td><strong style="color:var(--text-heading);">{escape_html(r['UC'])}</strong></td>
                 <td>{escape_html(r['Titulo_PPC'])}</td>
                 <td>{escape_html(r['Autor_PPC'])}</td>
                 <td>{r['Exemplares_Acervo']} ex. ({escape_html(r['Status_Legivel'])})</td>
@@ -1048,7 +1021,7 @@ def build_dashboard_html(df_all, df_sophia, ucs_meta):
       <!-- SEÇÃO VARIAÇÕES DE EDIÇÃO -->
       <div id="secao-variacoes-edicao" style="margin-top:2.5rem; margin-bottom:2rem;">
         <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:1rem; border-bottom:2px solid var(--accent-blue); padding-bottom:0.6rem;">
-          <h2 style="font-family:'Outfit', sans-serif; font-size:1.3rem; color:#ffffff;">
+          <h2 style="font-family:'Outfit', sans-serif; font-size:1.3rem; color:var(--text-heading);">
             <i class="bi bi-arrow-repeat" style="color:var(--accent-blue);"></i> Obras com Variação de Edição / Ano no Acervo ({total_var} Obras)
           </h2>
           <span class="badge badge-sim" style="font-size:0.85rem;">Disponíveis no Sophia &rarr; Atualizar texto do PPC</span>
@@ -1072,10 +1045,10 @@ def build_dashboard_html(df_all, df_sophia, ucs_meta):
     for _, r in df_var_items.iterrows():
         html_content += f"""              <tr>
                 <td>{r['Semestre']}º</td>
-                <td><strong>{escape_html(r['UC'])}</strong></td>
+                <td><strong style="color:var(--text-heading);">{escape_html(r['UC'])}</strong></td>
                 <td><span class="badge {'badge-basica' if r['Tipo'] == 'BÁSICA' else 'badge-comp'}">{r['Tipo']}</span></td>
                 <td>{escape_html(r['Referencia_PPC'])}</td>
-                <td><span style="color:#38bdf8;">{escape_html(r['Status_Legivel'])}</span></td>
+                <td><span style="color:var(--accent-blue); font-weight:600;">{escape_html(r['Status_Legivel'])}</span></td>
                 <td><span class="badge badge-sim">{r['Exemplares_Acervo']} ex.</span></td>
               </tr>
 """
@@ -1107,7 +1080,7 @@ def build_dashboard_html(df_all, df_sophia, ucs_meta):
     for _, r in df_all[df_all['Existe_Biblioteca'] == 'NÃO'].iterrows():
         html_content += f"""            <tr>
               <td>{r['Semestre']}º</td>
-              <td><strong>{escape_html(r['UC'])}</strong></td>
+              <td><strong style="color:var(--text-heading);">{escape_html(r['UC'])}</strong></td>
               <td><span class="badge {'badge-basica' if r['Tipo'] == 'BÁSICA' else 'badge-comp'}">{r['Tipo']}</span></td>
               <td>{escape_html(r['Titulo_PPC'])}</td>
               <td>{escape_html(r['Autor_PPC'])}</td>
@@ -1196,8 +1169,8 @@ def build_dashboard_html(df_all, df_sophia, ucs_meta):
         html_content += f"""      <div class="uc-card" id="uc-card-{m['id']}">
         <div class="uc-header" onclick="toggleAccordion({m['id']})">
           <div class="uc-title-area">
-            <span class="badge badge-outline" style="background:#1e293b; color:#cbd5e1;">Semestre {m['semestre']}º</span>
-            <strong style="color:#ffffff; font-size:1.02rem;">{escape_html(m['uc_nome'])}</strong>
+            <span class="badge badge-comp">Semestre {m['semestre']}º</span>
+            <strong style="color:var(--text-heading); font-size:1.02rem;">{escape_html(m['uc_nome'])}</strong>
             <span style="font-size:0.8rem; color:var(--text-muted);">({escape_html(m['ch_total'])})</span>
             <span class="badge {g['badge_class']}">{g['status_label']}</span>
           </div>
@@ -1209,18 +1182,18 @@ def build_dashboard_html(df_all, df_sophia, ucs_meta):
         <div class="uc-body">
           <div style="display:grid; grid-template-columns:1fr 1fr; gap:1.5rem; margin-bottom:1rem;">
             <div>
-              <h4 style="color:#38bdf8; font-size:0.9rem; margin-bottom:0.6rem; text-transform:uppercase; letter-spacing:0.05em;">
+              <h4 style="color:var(--accent-blue); font-size:0.9rem; margin-bottom:0.6rem; text-transform:uppercase; letter-spacing:0.05em; font-weight:700;">
                 <i class="bi bi-book-half"></i> Bibliografia Básica ({g['b_sim']}/{g['b_tot']} no acervo)
               </h4>
               <ul style="list-style:none; display:flex; flex-direction:column; gap:0.6rem;">
 """
         for item in g['items']:
             if item['Tipo'] == 'BÁSICA':
-                html_content += f"""                <li style="background:rgba(15,23,42,0.8); border:1px solid var(--border-color); border-radius:6px; padding:0.6rem 0.8rem;">
-                  <div style="font-size:0.82rem; margin-bottom:0.3rem;">{escape_html(item['Referencia_PPC'])}</div>
+                html_content += f"""                <li style="background:var(--bg-hover); border:1px solid var(--border-color); border-radius:6px; padding:0.6rem 0.8rem;">
+                  <div style="font-size:0.82rem; margin-bottom:0.3rem; color:var(--text-main);">{escape_html(item['Referencia_PPC'])}</div>
                   <div style="display:flex; justify-content:space-between; align-items:center; font-size:0.75rem;">
                     <span class="badge {'badge-sim' if item['Existe_Biblioteca'] == 'SIM' else 'badge-nao'}">{item['Status_Legivel']}</span>
-                    {f"<strong style='color:#fb7185;'>+ {item['Deficit_Exemplares']} ex. a comprar</strong>" if item['Deficit_Exemplares'] > 0 else "<span style='color:#34d399;'>Meta atendida</span>"}
+                    {f"<strong style='color:#e11d48;'>+ {item['Deficit_Exemplares']} ex. a comprar</strong>" if item['Deficit_Exemplares'] > 0 else "<span style='color:#059669; font-weight:700;'>Meta atendida</span>"}
                   </div>
                 </li>
 """
@@ -1228,18 +1201,18 @@ def build_dashboard_html(df_all, df_sophia, ucs_meta):
         html_content += f"""              </ul>
             </div>
             <div>
-              <h4 style="color:#94a3b8; font-size:0.9rem; margin-bottom:0.6rem; text-transform:uppercase; letter-spacing:0.05em;">
+              <h4 style="color:var(--text-muted); font-size:0.9rem; margin-bottom:0.6rem; text-transform:uppercase; letter-spacing:0.05em; font-weight:700;">
                 <i class="bi bi-journal-text"></i> Bibliografia Complementar ({g['c_sim']}/{g['c_tot']} no acervo)
               </h4>
               <ul style="list-style:none; display:flex; flex-direction:column; gap:0.6rem;">
 """
         for item in g['items']:
             if item['Tipo'] == 'COMPLEMENTAR':
-                html_content += f"""                <li style="background:rgba(15,23,42,0.8); border:1px solid var(--border-color); border-radius:6px; padding:0.6rem 0.8rem;">
-                  <div style="font-size:0.82rem; margin-bottom:0.3rem;">{escape_html(item['Referencia_PPC'])}</div>
+                html_content += f"""                <li style="background:var(--bg-hover); border:1px solid var(--border-color); border-radius:6px; padding:0.6rem 0.8rem;">
+                  <div style="font-size:0.82rem; margin-bottom:0.3rem; color:var(--text-main);">{escape_html(item['Referencia_PPC'])}</div>
                   <div style="display:flex; justify-content:space-between; align-items:center; font-size:0.75rem;">
                     <span class="badge {'badge-sim' if item['Existe_Biblioteca'] == 'SIM' else 'badge-nao'}">{item['Status_Legivel']}</span>
-                    {f"<strong style='color:#fbbf24;'>+ {item['Deficit_Exemplares']} ex. a comprar</strong>" if item['Deficit_Exemplares'] > 0 else "<span style='color:#34d399;'>Meta atendida</span>"}
+                    {f"<strong style='color:#d97706;'>+ {item['Deficit_Exemplares']} ex. a comprar</strong>" if item['Deficit_Exemplares'] > 0 else "<span style='color:#059669; font-weight:700;'>Meta atendida</span>"}
                   </div>
                 </li>
 """
@@ -1253,7 +1226,7 @@ def build_dashboard_html(df_all, df_sophia, ucs_meta):
 
     html_content += f"""    </div>
 
-    <!-- TAB: TODAS AS 213 OBRAS -->
+    <!-- TAB: TODAS AS OBRAS -->
     <div id="tab-todas" class="tab-pane">
       <div class="table-container">
         <table class="data-table" id="table-todas">
@@ -1274,7 +1247,7 @@ def build_dashboard_html(df_all, df_sophia, ucs_meta):
     for _, r in df_all.iterrows():
         html_content += f"""            <tr>
               <td>{r['Semestre']}º</td>
-              <td><strong>{escape_html(r['UC'])}</strong></td>
+              <td><strong style="color:var(--text-heading);">{escape_html(r['UC'])}</strong></td>
               <td><span class="badge {'badge-basica' if r['Tipo'] == 'BÁSICA' else 'badge-comp'}">{r['Tipo']}</span></td>
               <td>{escape_html(r['Referencia_PPC'])}</td>
               <td><span class="badge {'badge-sim' if r['Existe_Biblioteca'] == 'SIM' else 'badge-nao'}">{escape_html(r['Status_Legivel'])}</span></td>
@@ -1291,7 +1264,7 @@ def build_dashboard_html(df_all, df_sophia, ucs_meta):
     <!-- TAB: CATÁLOGO SOPHIA -->
     <div id="tab-catalogo" class="tab-pane">
       <div style="background:var(--bg-card); border:1px solid var(--border-color); border-radius:var(--radius-lg); padding:1.5rem; margin-bottom:1.5rem;">
-        <h3 style="color:#ffffff; font-family:'Outfit', sans-serif; font-size:1.2rem; margin-bottom:0.5rem;">
+        <h3 style="color:var(--text-heading); font-family:'Outfit', sans-serif; font-size:1.2rem; margin-bottom:0.5rem;">
           <i class="bi bi-bookshelf"></i> Inventário Geral do Sistema Sophia (IFSC Câmpus Garopaba)
         </h3>
         <p style="color:var(--text-muted); font-size:0.88rem; margin-bottom:1rem;">
