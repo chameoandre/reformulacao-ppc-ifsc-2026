@@ -74,6 +74,7 @@ def escape_html(text):
 def escape_tex(text):
     if not isinstance(text, str):
         text = str(text) if text is not None and not pd.isna(text) else ""
+    text = text.replace('–', '--').replace('—', '---')
     text = re.sub(r'_{2,}', '---', text)
     text = text.replace('\\', '')
     rep = {

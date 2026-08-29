@@ -112,14 +112,45 @@ def clean_val(t):
     if not t: return ''
     return t.replace('**', '').replace('*', '').strip()
 
+def merge_reference_lines(raw_text):
+    lines = [l.strip() for l in raw_text.split('\n') if l.strip()]
+    merged = []
+    for l in lines:
+        if l.startswith('(*)') or 'CH Total' in l or 'CH EaD' in l:
+            continue
+        if not merged:
+            merged.append(l)
+        else:
+            is_new_ref = False
+            if re.match(r'^[A-ZÁÉÍÓÚÂÊÔÃÕÇ]{2,}(?:\s+[A-ZÁÉÍÓÚÂÊÔÃÕÇ]{2,})*,\s+[A-Za-zÀ-ÿ]', l):
+                is_new_ref = True
+            elif re.match(r'^(BRASIL|EMBRAPA|IBGE|MMA|MEC|UNESCO|WHO|ONU|CONAMA|BANCO MUNDIAL|INSTITUTO|MINISTÉRIO|SECRETARIA|FNDE)\b', l, re.IGNORECASE):
+                is_new_ref = True
+            elif re.match(r'^\d+[\.\)]\s*[A-ZÁÉÍÓÚÂÊÔÃÕÇ]{2,}', l):
+                is_new_ref = True
+            elif l.startswith('LIVRO didático') or l.startswith('Material didático'):
+                is_new_ref = True
+                
+            if is_new_ref:
+                merged.append(l)
+            else:
+                merged[-1] = merged[-1] + ' ' + l
+                
+    return [r.strip() for r in merged if len(r.strip()) > 10]
+
 def parse_txt_ementas():
     with open(TXT_PATH, "r", encoding="utf-8") as f:
         text = f.read()
 
-    raw_ucs = [u.strip() for u in text.split('Unidade Curricular:') if u.strip()]
+    raw_blocks = text.split('------------------------------------------------------------')
+    if len(raw_blocks) < 10:
+        raw_blocks = re.split(r'\n(?=[A-ZÁÉÍÓÚÂÊÔÃÕÇ\s\-\/\(\)]{3,60}\n\s*Semestre\s*:)', text)
+        if len(raw_blocks) < 10:
+            raw_blocks = [u.strip() for u in text.split('Unidade Curricular:') if u.strip()]
+
     ucs_info = []
 
-    for idx, block in enumerate(raw_ucs, 1):
+    for idx, block in enumerate(raw_blocks, 1):
         lines = [l.strip() for l in block.split('\n') if l.strip()]
         if not lines: continue
         uc_nome = lines[0]
@@ -179,19 +210,13 @@ def parse_txt_ementas():
                 bb_part = bb_part.split('Bibliografia Complementar:')[0]
             else:
                 bb_part = bb_part.split('(*)')[0]
-            for l in bb_part.split('\n'):
-                l_str = l.strip()
-                if l_str and not l_str.startswith('(*)') and len(l_str) > 10:
-                    bb_list.append(l_str)
+            bb_list = merge_reference_lines(bb_part)
                     
         # BC
         bc_list = []
         if 'Bibliografia Complementar:' in block:
             bc_part = block.split('Bibliografia Complementar:')[1].split('(*)')[0]
-            for l in bc_part.split('\n'):
-                l_str = l.strip()
-                if l_str and not l_str.startswith('(*)') and len(l_str) > 10:
-                    bc_list.append(l_str)
+            bc_list = merge_reference_lines(bc_part)
 
         ucs_info.append({
             'id': idx,

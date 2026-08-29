@@ -64,6 +64,7 @@ def is_title_match(t_ppc, t_cand):
 
 def extract_metadata(ref_text):
     cleaned = ref_text.replace("**", "").replace("*", "").strip()
+    cleaned = re.sub(r'^\d+[\.\)]\s*', '', cleaned)
     
     # Generic PNLD/FNDE check
     if any(k in cleaned for k in ["LIVRO didático fornecido", "Material didático fornecido", "Fundo Nacional de Desenvolvimento"]):
@@ -92,18 +93,32 @@ def extract_metadata(ref_text):
     ed_match = re.search(r'(\d+)\.\s*ed\b', cleaned, re.IGNORECASE)
     edicao = ed_match.group(1) if ed_match else ""
     
-    # Author & Title extraction
-    parts = [p.strip() for p in cleaned.split('.') if p.strip()]
-    if len(parts) >= 2:
-        autor_part = parts[0]
-        if ',' in autor_part:
-            titulo = parts[1].strip()
-        else:
-            autor_part = parts[0] + '. ' + parts[1]
-            titulo = parts[2].strip() if len(parts) > 2 else parts[1].strip()
+    # Robust ABNT Author & Title extraction
+    t = cleaned
+    t = re.sub(r'\.\s*(\([A-Za-z\s\.]+\))', r' \1', t)
+    t = re.sub(r'\(([A-Za-z\s\.]+)\)', lambda m: '(' + m.group(1).replace('.', '_DOT_') + ')', t)
+    t = re.sub(r'\bet\s+al\.', r'et al_DOT_', t)
+    t = re.sub(r'\b(BRASIL|EMBRAPA|IBGE|MMA|MEC|UNESCO|WHO|ONU|CONAMA|BANCO MUNDIAL|MINISTÉRIO|SECRETARIA|INSTITUTO)\.', r'\1_DOT_', t)
+    t = re.sub(r'([A-Z])\.\s*(?=[A-Z]\.|\s*;\s*|\s*,\s*|\s*\(|\s*et\s+al|\s*\[)', r'\1_DOT_ ', t)
+    
+    if '.' in t:
+        parts = t.split('.', 1)
+        autor_part = parts[0].replace('_DOT_', '.').strip(' .,;')
+        resto = parts[1].replace('_DOT_', '.').strip()
+        
+        resto_work = resto
+        resto_work = re.sub(r'(\d+)\.\s*ed\b', r'\1_ED_', resto_work, flags=re.IGNORECASE)
+        resto_work = re.sub(r'\bv\.\s*(\d+)', r'v_DOT_\1', resto_work)
+        resto_work = re.sub(r'\bn\.\s*(\d+)', r'n_DOT_\1', resto_work)
+        resto_work = re.sub(r'\bp\.\s*(\d+)', r'p_DOT_\1', resto_work)
+        
+        r_parts = resto_work.split('. ')
+        titulo = r_parts[0].replace('_ED_', '. ed').replace('_DOT_', '.').strip(' .,;')
+        if len(titulo) < 3 and len(r_parts) > 1:
+            titulo = r_parts[1].replace('_ED_', '. ed').replace('_DOT_', '.').strip(' .,;')
     else:
         autor_part = "AUTOR DESCONHECIDO"
-        titulo = cleaned
+        titulo = cleaned.strip(' .,;')
 
     titulo_curto = titulo.split(':')[0].strip() if ':' in titulo else titulo
     autor_sobrenome = autor_part.split(',')[0].strip() if ',' in autor_part else autor_part.split()[0] if autor_part.split() else ""
@@ -207,38 +222,81 @@ def load_and_index_acervo():
     print(f"Total de registros carregados do Sophia: {len(acervo_items)} títulos | Total de exemplares físicos: {sum(r['exemplares'] for r in acervo_items)}")
     return AcervoIndex(acervo_items), acervo_items
 
+def merge_reference_lines(raw_text):
+    lines = [l.strip() for l in raw_text.split('\n') if l.strip()]
+    merged = []
+    for l in lines:
+        if l.startswith('(*)') or 'CH Total' in l or 'CH EaD' in l:
+            continue
+        if not merged:
+            merged.append(l)
+        else:
+            is_new_ref = False
+            if re.match(r'^[A-ZÁÉÍÓÚÂÊÔÃÕÇ]{2,}(?:\s+[A-ZÁÉÍÓÚÂÊÔÃÕÇ]{2,})*,\s+[A-Za-zÀ-ÿ]', l):
+                is_new_ref = True
+            elif re.match(r'^(BRASIL|EMBRAPA|IBGE|MMA|MEC|UNESCO|WHO|ONU|CONAMA|BANCO MUNDIAL|INSTITUTO|MINISTÉRIO|SECRETARIA|FNDE)\b', l, re.IGNORECASE):
+                is_new_ref = True
+            elif re.match(r'^\d+[\.\)]\s*[A-ZÁÉÍÓÚÂÊÔÃÕÇ]{2,}', l):
+                is_new_ref = True
+            elif l.startswith('LIVRO didático') or l.startswith('Material didático'):
+                is_new_ref = True
+                
+            if is_new_ref:
+                merged.append(l)
+            else:
+                merged[-1] = merged[-1] + ' ' + l
+                
+    return [r.strip() for r in merged if len(r.strip()) > 10]
+
 def parse_txt_ementas():
     with open(TXT_PATH, "r", encoding="utf-8") as f:
         text = f.read()
 
-    raw_ucs = [u.strip() for u in text.split('Unidade Curricular:') if u.strip()]
-    
-    all_refs = []
+    raw_blocks = text.split('------------------------------------------------------------')
+    if len(raw_blocks) < 10:
+        raw_blocks = re.split(r'\n(?=[A-ZÁÉÍÓÚÂÊÔÃÕÇ\s\-\/\(\)]{3,60}\n\s*Semestre\s*:)', text)
+        if len(raw_blocks) < 10:
+            raw_blocks = [u.strip() for u in text.split('Unidade Curricular:') if u.strip()]
+
     ucs_info = []
-
-    for idx, block in enumerate(raw_ucs, 1):
-        lines = [l.strip() for l in block.split('\n') if l.strip()]
-        if not lines: continue
-        uc_nome = lines[0]
-        if uc_nome in ['﻿', '']: 
-            if len(lines) > 1: uc_nome = lines[1]
-            else: continue
-            
-        sem = re.search(r'Semestre:\s*([^\n]+)', block)
-        sem_val = sem.group(1).strip() if sem else '?'
+    all_refs = []
+    
+    idx = 0
+    for block in raw_blocks:
+        if 'Semestre:' not in block:
+            continue
+        idx += 1
         
-        ch = re.search(r'CH Total\*?:\s*([^\n]+)', block)
-        ch_val = ch.group(1).strip() if ch else '?'
+        # UC Name
+        b_lines = [l.strip() for l in block.strip().split('\n') if l.strip()]
+        uc_nome = "UC DESCONHECIDA"
+        for i, l in enumerate(b_lines):
+            if 'Semestre:' in l:
+                if i > 0:
+                    uc_nome = b_lines[i-1]
+                break
+                
+        # Clean uc_nome
+        uc_nome = re.sub(r'^\d+[\.\-\s]+', '', uc_nome).strip()
+        uc_nome = uc_nome.replace('UC:', '').replace('Unidade Curricular:', '').strip()
         
-        ch_ead = re.search(r'CH EaD\*?:\s*([^\n]+)', block)
-        ch_ead_val = ch_ead.group(1).strip() if ch_ead else '00 h'
+        # Semestre
+        sem_match = re.search(r'Semestre\s*:\s*(\d+)', block)
+        sem_val = int(sem_match.group(1)) if sem_match else 1
         
-        ch_ext = re.search(r'CH Extens[aã]o:\s*([^\n]+)', block)
-        ch_ext_val = ch_ext.group(1).strip() if ch_ext else '00 h'
-
-        ch_pres = re.search(r'CH Presencial:\s*([^\n]+)', block)
-        ch_pres_val = ch_pres.group(1).strip() if ch_pres else ''
-
+        # Cargas Horárias
+        ch_match = re.search(r'CH Total\s*\(\*\)\s*:\s*(\d+)', block)
+        ch_val = ch_match.group(1) + "h" if ch_match else "60h"
+        
+        ch_ead_match = re.search(r'CH EaD\s*\(\*\)\s*:\s*(\d+)', block)
+        ch_ead_val = ch_ead_match.group(1) + "h" if ch_ead_match else "0h"
+        
+        ch_ext_match = re.search(r'CH Extensão\s*:\s*(\d+)', block)
+        ch_ext_val = ch_ext_match.group(1) + "h" if ch_ext_match else "0h"
+        
+        ch_pres_match = re.search(r'CH Presencial\s*:\s*(\d+)', block)
+        ch_pres_val = ch_pres_match.group(1) + "h" if ch_pres_match else ch_val
+        
         # Objectives
         obj_items = []
         if 'Objetivos:' in block:
@@ -276,19 +334,13 @@ def parse_txt_ementas():
                 bb_part = bb_part.split('Bibliografia Complementar:')[0]
             else:
                 bb_part = bb_part.split('(*)')[0]
-            for l in bb_part.split('\n'):
-                l_str = l.strip()
-                if l_str and not l_str.startswith('(*)') and len(l_str) > 10:
-                    bb_list.append(l_str)
+            bb_list = merge_reference_lines(bb_part)
                     
         # BC
         bc_list = []
         if 'Bibliografia Complementar:' in block:
             bc_part = block.split('Bibliografia Complementar:')[1].split('(*)')[0]
-            for l in bc_part.split('\n'):
-                l_str = l.strip()
-                if l_str and not l_str.startswith('(*)') and len(l_str) > 10:
-                    bc_list.append(l_str)
+            bc_list = merge_reference_lines(bc_part)
 
         uc_data = {
             'id': idx,

@@ -17,13 +17,13 @@
 | Indicador Normativo | Quantitativo | Diagnóstico / Observação |
 | :--- | :---: | :--- |
 | **Unidades Curriculares Auditadas** | **33 UCs** | 100% da matriz curricular do CST Gestão Ambiental |
-| **Total de Obras Referenciadas** | **213 títulos** | 85 na Básica e 128 na Complementar |
-| **Títulos com Acervo Confirmado (Sophia)** | **111 (52.1%)** | Obras localizadas no inventário físico de Garopaba |
-| **Títulos Ausentes no Acervo** | **102 (47.9%)** | Demanda direta para processo de aquisição |
-| **Variações de Edição / Ano** | **19 títulos** | Obra disponível; recomenda-se atualizar citação no PPC |
-| **DEMANDA DE COMPRAS: Bibliografia BÁSICA** | **+140 exemplares** | Meta: $\ge$ 3 exemplares por título básico |
-| **DEMANDA DE COMPRAS: Bibliografia COMPLEMENTAR** | **+68 exemplares** | Meta: $\ge$ 1 exemplar por título complementar |
-| **DEMANDA TOTAL CONSOLIDADA DE AQUISIÇÃO** | **+208 EXEMPLARES** | Total físico para atingir 100% de conformidade normativa |
+| **Total de Obras Referenciadas** | **189 títulos** | 85 na Básica e 128 na Complementar |
+| **Títulos com Acervo Confirmado (Sophia)** | **123 (65.1%)** | Obras localizadas no inventário físico de Garopaba |
+| **Títulos Ausentes no Acervo** | **66 (34.9%)** | Demanda direta para processo de aquisição |
+| **Variações de Edição / Ano** | **20 títulos** | Obra disponível; recomenda-se atualizar citação no PPC |
+| **DEMANDA DE COMPRAS: Bibliografia BÁSICA** | **+106 exemplares** | Meta: $\ge$ 3 exemplares por título básico |
+| **DEMANDA DE COMPRAS: Bibliografia COMPLEMENTAR** | **+44 exemplares** | Meta: $\ge$ 1 exemplar por título complementar |
+| **DEMANDA TOTAL CONSOLIDADA DE AQUISIÇÃO** | **+150 EXEMPLARES** | Total físico para atingir 100% de conformidade normativa |
 
 ---
 
