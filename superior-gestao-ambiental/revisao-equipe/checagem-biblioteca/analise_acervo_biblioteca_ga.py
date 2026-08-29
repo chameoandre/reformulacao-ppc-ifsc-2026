@@ -544,7 +544,9 @@ def audit_bibliografia(all_refs, acervo_index, all_acervo):
             
             if is_ed_diff or is_ano_diff:
                 status = "EXISTE_EDICAO_DIFERENTE"
-                status_leg = f"Disponível no Acervo ({ex_count} ex.), porém edição/ano diverge (PPC: {p_ed}ª ed. {p_ano} vs. Acervo: {c_meta['edicao']}ª ed. {c_meta['ano']})"
+                ppc_desc = f"{p_ed}ª ed. {p_ano}" if p_ed and p_ano else (f"{p_ed}ª ed." if p_ed else (f"ano {p_ano}" if p_ano else "edição citada"))
+                acervo_desc = f"{c_meta['edicao']}ª ed. {c_meta['ano']}" if c_meta['edicao'] and c_meta['ano'] else (f"{c_meta['edicao']}ª ed." if c_meta['edicao'] else (f"ano {c_meta['ano']}" if c_meta['ano'] else "edição no acervo"))
+                status_leg = f"Disponível no Acervo ({ex_count} ex.), porém diverge (PPC: {ppc_desc} vs. Acervo: {acervo_desc})"
             else:
                 status = "EXISTE_CONFIRMADO"
                 status_leg = f"Disponível no Acervo com {ex_count} exemplar(es) físico(s)"

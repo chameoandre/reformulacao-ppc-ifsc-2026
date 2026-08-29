@@ -65,6 +65,28 @@ def escape_tex(text):
         text = text.replace(k, v)
     return text
 
+def format_ano_cell(val):
+    if pd.isna(val) or val is None or str(val).strip() in ['', 'nan', 'NaN', 'None', '.']:
+        return '<span style="color:var(--text-muted);">—</span>'
+    try:
+        f = float(val)
+        return str(int(f))
+    except:
+        s = str(val).strip().rstrip('.')
+        m = re.search(r'\b(19\d\d|20[0-2]\d)\b', s)
+        return m.group(1) if m else (s if s else '—')
+
+def format_edicao_cell(val):
+    if pd.isna(val) or val is None or str(val).strip() in ['', 'nan', 'NaN', 'None', '.']:
+        return '<span style="color:var(--text-muted);">—</span>'
+    try:
+        f = float(val)
+        return f"{int(f)}ª ed."
+    except:
+        s = str(val).strip().rstrip('.')
+        if not s: return '<span style="color:var(--text-muted);">—</span>'
+        return f"{s}ª ed." if s.isdigit() else s
+
 def build_dashboard_html(df_all, df_sophia, ucs_meta):
     total_refs = len(df_all)
     total_sim = len(df_all[df_all['Existe_Biblioteca'] == 'SIM'])
@@ -1285,11 +1307,13 @@ def build_dashboard_html(df_all, df_sophia, ucs_meta):
 """
 
     for _, r in df_sophia.head(100).iterrows():
+        ano_str = format_ano_cell(r.get('Ano', ''))
+        ed_str = format_edicao_cell(r.get('Edicao', ''))
         html_content += f"""              <tr>
                 <td><strong>{escape_html(r.get('Titulo', ''))}</strong></td>
                 <td>{escape_html(r.get('Autor', ''))}</td>
-                <td>{escape_html(r.get('Ano', ''))}</td>
-                <td>{escape_html(r.get('Edicao', ''))}</td>
+                <td>{ano_str}</td>
+                <td>{ed_str}</td>
                 <td><span class="badge badge-sim">{r.get('Exemplares', 1)} ex.</span></td>
               </tr>
 """
