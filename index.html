@@ -15,6 +15,29 @@
 
   <style>
     :root {
+      /* TEMA CLARO INSTITUCIONAL (PADRÃO) */
+      --ifsc-green: #059669;
+      --ifsc-dark-green: #047857;
+      --bg-dark: #F8FAFC;
+      --bg-card: #FFFFFF;
+      --bg-card-hover: #F1F5F9;
+      --border-color: #E2E8F0;
+      --text-main: #0F172A;
+      --text-muted: #64748B;
+      --text-heading: #0F172A;
+      --accent-blue: #0284C7;
+      --accent-emerald: #059669;
+      --accent-amber: #D97706;
+      --accent-purple: #7C3AED;
+      --accent-rose: #E11D48;
+      --card-shadow: 0 1px 3px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.04);
+      --card-shadow-hover: 0 10px 25px -5px rgba(0, 0, 0, 0.08), 0 8px 10px -6px rgba(0, 0, 0, 0.04);
+      --header-bg: #FFFFFF;
+      --radius-lg: 16px;
+      --radius-md: 10px;
+    }
+
+    [data-theme="dark"] {
       --ifsc-green: #10b981;
       --ifsc-dark-green: #059669;
       --bg-dark: #090d16;
@@ -23,13 +46,15 @@
       --border-color: rgba(255, 255, 255, 0.12);
       --text-main: #f8fafc;
       --text-muted: #94a3b8;
+      --text-heading: #FFFFFF;
       --accent-blue: #38bdf8;
       --accent-emerald: #10b981;
       --accent-amber: #f59e0b;
       --accent-purple: #a855f7;
       --accent-rose: #f43f5e;
-      --radius-lg: 16px;
-      --radius-md: 10px;
+      --card-shadow: none;
+      --card-shadow-hover: 0 8px 24px rgba(0, 0, 0, 0.3);
+      --header-bg: linear-gradient(135deg, #064e3b 0%, #090d16 100%);
     }
 
     * {
@@ -46,6 +71,7 @@
       display: flex;
       flex-direction: column;
       line-height: 1.6;
+      transition: background-color 0.2s ease, color 0.2s ease;
     }
 
     .font-outfit { font-family: 'Outfit', sans-serif; }
@@ -53,10 +79,11 @@
 
     /* HEADER */
     header.app-header {
-      background: linear-gradient(135deg, #064e3b 0%, #090d16 100%);
-      border-bottom: 2px solid var(--border-color);
-      padding: 2rem 1.5rem;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+      background: var(--header-bg);
+      border-bottom: 1px solid var(--border-color);
+      padding: 1.5rem 1.5rem;
+      box-shadow: var(--card-shadow);
+      transition: background 0.2s ease, border-color 0.2s ease;
     }
 
     .header-container {
@@ -79,66 +106,69 @@
       background: #ffffff;
       padding: 6px 12px;
       border-radius: 10px;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+      border: 1px solid #E2E8F0;
       display: flex;
       align-items: center;
       justify-content: center;
     }
 
     .brand-logo-bg img {
-      height: 46px;
+      height: 44px;
       object-fit: contain;
     }
 
     .brand-titles h1 {
       font-family: 'Outfit', sans-serif;
-      font-size: 1.8rem;
+      font-size: 1.6rem;
       font-weight: 700;
-      color: #ffffff;
+      color: var(--text-heading);
       line-height: 1.2;
     }
 
     .brand-titles p {
-      font-size: 0.9rem;
+      font-size: 0.88rem;
       color: var(--text-muted);
       margin-top: 0.2rem;
     }
 
     .header-badges {
       display: flex;
-      gap: 0.8rem;
+      gap: 0.6rem;
       flex-wrap: wrap;
+      align-items: center;
     }
 
     .badge-pill {
-      background: rgba(255, 255, 255, 0.08);
+      background: var(--bg-card);
       border: 1px solid var(--border-color);
       color: var(--text-main);
-      padding: 0.45rem 0.9rem;
+      padding: 0.4rem 0.85rem;
       border-radius: 50px;
-      font-size: 0.85rem;
+      font-size: 0.82rem;
       font-weight: 600;
       display: inline-flex;
       align-items: center;
       gap: 0.4rem;
+      box-shadow: 0 1px 2px rgba(0,0,0,0.03);
     }
 
     .badge-pill-green {
-      background: rgba(16, 185, 129, 0.15);
-      border-color: rgba(16, 185, 129, 0.3);
-      color: var(--accent-emerald);
+      background: #ECFDF5;
+      border-color: #A7F3D0;
+      color: #047857;
     }
 
     .badge-pill-blue {
-      background: rgba(56, 189, 248, 0.15);
-      border-color: rgba(56, 189, 248, 0.3);
-      color: var(--accent-blue);
+      background: #F0F9FF;
+      border-color: #BAE6FD;
+      color: #0369A1;
     }
 
     .badge-pill-purple {
-      background: rgba(168, 85, 247, 0.15);
-      border-color: rgba(168, 85, 247, 0.3);
-      color: var(--accent-purple);
+      background: #F5F3FF;
+      border-color: #DDD6FE;
+      color: #6D28D9;
     }
 
     /* MAIN CONTAINER */
@@ -216,7 +246,7 @@
       font-family: 'Outfit', sans-serif;
       font-size: 1.8rem;
       font-weight: 800;
-      color: #ffffff;
+      color: var(--text-heading);
       line-height: 1.1;
       margin-bottom: 0.3rem;
     }
@@ -230,39 +260,40 @@
     .dashboard-tabs {
       display: flex !important;
       flex-wrap: wrap !important;
-      gap: 0.8rem;
+      gap: 0.6rem;
       border-bottom: 1px solid var(--border-color);
       margin-bottom: 1.8rem;
       padding-bottom: 0.8rem;
     }
 
     .tab-btn {
-      background: rgba(255, 255, 255, 0.05);
+      background: var(--bg-card);
       border: 1px solid var(--border-color);
       color: var(--text-muted);
-      padding: 0.7rem 1.4rem;
+      padding: 0.65rem 1.2rem;
       border-radius: var(--radius-md);
       font-family: 'Outfit', sans-serif;
       font-weight: 600;
-      font-size: 0.95rem;
+      font-size: 0.9rem;
       cursor: pointer;
       display: inline-flex;
       align-items: center;
       gap: 0.5rem;
-      transition: all 0.2s ease;
+      transition: all 0.15s ease;
       white-space: nowrap;
+      box-shadow: var(--card-shadow);
     }
 
     .tab-btn:hover {
-      background: rgba(255, 255, 255, 0.1);
-      color: #ffffff;
+      background: var(--bg-card-hover);
+      color: var(--text-main);
     }
 
     .tab-btn.active {
       background: var(--ifsc-dark-green);
       border-color: var(--accent-emerald);
       color: #ffffff;
-      box-shadow: 0 4px 15px rgba(16, 185, 129, 0.3);
+      box-shadow: 0 4px 12px rgba(5, 150, 105, 0.3);
     }
 
     .tab-pane {
@@ -286,7 +317,7 @@
       border-radius: var(--radius-lg);
       padding: 1.8rem;
       margin-bottom: 1.5rem;
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+      box-shadow: var(--card-shadow);
     }
 
     .panel-header {
@@ -296,15 +327,15 @@
       flex-wrap: wrap;
       gap: 1rem;
       margin-bottom: 1.5rem;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      border-bottom: 1px solid var(--border-color);
       padding-bottom: 1rem;
     }
 
     .panel-title {
       font-family: 'Outfit', sans-serif;
-      font-size: 1.3rem;
+      font-size: 1.25rem;
       font-weight: 700;
-      color: #ffffff;
+      color: var(--text-heading);
       display: flex;
       align-items: center;
       gap: 0.6rem;
@@ -315,34 +346,37 @@
     }
 
     .btn-action {
-      background: rgba(255, 255, 255, 0.08);
+      background: var(--bg-card);
       border: 1px solid var(--border-color);
-      color: #ffffff;
-      padding: 0.6rem 1.2rem;
+      color: var(--text-main);
+      padding: 0.55rem 1.1rem;
       border-radius: var(--radius-md);
-      font-size: 0.88rem;
+      font-size: 0.85rem;
       font-weight: 600;
       text-decoration: none;
       display: inline-flex;
       align-items: center;
       gap: 0.5rem;
-      transition: all 0.2s ease;
+      transition: all 0.15s ease;
       cursor: pointer;
+      box-shadow: 0 1px 2px rgba(0,0,0,0.03);
     }
 
     .btn-action:hover {
-      background: rgba(255, 255, 255, 0.15);
-      border-color: rgba(255, 255, 255, 0.3);
+      background: var(--bg-card-hover);
+      border-color: var(--text-muted);
     }
 
     .btn-emerald {
       background: var(--ifsc-dark-green);
       border-color: var(--accent-emerald);
+      color: #ffffff;
+      box-shadow: 0 2px 8px rgba(5, 150, 105, 0.25);
     }
 
     .btn-emerald:hover {
       background: #047857;
-      box-shadow: 0 4px 15px rgba(16, 185, 129, 0.4);
+      box-shadow: 0 4px 14px rgba(5, 150, 105, 0.4);
     }
 
     /* GRID LAYOUTS */
@@ -367,13 +401,18 @@
     }
 
     .custom-table th {
-      background: rgba(16, 185, 129, 0.15);
-      color: #ffffff;
+      background: #F8FAFC;
+      color: #475569;
       text-align: left;
       padding: 0.9rem 1rem;
       font-family: 'Outfit', sans-serif;
       font-weight: 700;
       border: 1px solid var(--border-color);
+    }
+
+    [data-theme="dark"] .custom-table th {
+      background: #131b2e;
+      color: #94a3b8;
     }
 
     .custom-table td {
@@ -383,11 +422,11 @@
     }
 
     .custom-table tr:nth-child(even) {
-      background: rgba(255, 255, 255, 0.02);
+      background: var(--bg-card-hover);
     }
 
     .custom-table tr:hover {
-      background: rgba(255, 255, 255, 0.05);
+      background: var(--bg-card-hover);
     }
 
     .status-badge {
@@ -403,15 +442,15 @@
     }
 
     .status-done {
-      background: rgba(16, 185, 129, 0.15);
-      border: 1px solid rgba(16, 185, 129, 0.3);
-      color: var(--accent-emerald);
+      background: #ECFDF5;
+      border: 1px solid #A7F3D0;
+      color: #047857;
     }
 
     .status-review {
-      background: rgba(56, 189, 248, 0.15);
-      border: 1px solid rgba(56, 189, 248, 0.3);
-      color: var(--accent-blue);
+      background: #F0F9FF;
+      border: 1px solid #BAE6FD;
+      color: #0369A1;
     }
 
     /* TIMELINE & STEPS */
@@ -419,10 +458,11 @@
       display: flex;
       gap: 1rem;
       padding: 1.1rem;
-      background: rgba(255, 255, 255, 0.03);
+      background: var(--bg-card);
       border: 1px solid var(--border-color);
       border-radius: 12px;
       margin-bottom: 1rem;
+      box-shadow: var(--card-shadow);
     }
 
     .step-icon {
@@ -435,7 +475,7 @@
     .step-content h4 {
       font-size: 1rem;
       font-family: 'Outfit', sans-serif;
-      color: #ffffff;
+      color: var(--text-heading);
       margin-bottom: 0.3rem;
     }
 
@@ -446,7 +486,7 @@
 
     /* FOOTER */
     footer.app-footer {
-      background: #060911;
+      background: var(--bg-card);
       border-top: 1px solid var(--border-color);
       padding: 1.5rem;
       text-align: center;
@@ -472,12 +512,17 @@
         </div>
       </div>
       <div class="header-badges">
+        <button class="badge-pill" id="themeToggleBtn" onclick="toggleTheme()" style="cursor:pointer;" title="Alternar entre tema Claro e Escuro">
+          <i class="bi bi-moon-stars-fill" id="themeIcon"></i> <span id="themeText">Tema Escuro</span>
+        </button>
         <a href="tecnico-administracao/revisao-equipe/checagem-biblioteca/dashboard_biblioteca.html" target="_blank" class="badge-pill badge-pill-green" style="text-decoration:none; cursor:pointer;">
-          <i class="bi bi-window-fullscreen"></i> Painel da Biblioteca
+          <i class="bi bi-window-fullscreen"></i> Painel Biblioteca ADM
+        </a>
+        <a href="superior-gestao-ambiental/revisao-equipe/checagem-biblioteca/dashboard_biblioteca_ga.html" target="_blank" class="badge-pill badge-pill-blue" style="text-decoration:none; cursor:pointer;">
+          <i class="bi bi-window-fullscreen"></i> Painel Biblioteca GA
         </a>
         <span class="badge-pill badge-pill-green"><i class="bi bi-patch-check-fill"></i> Res. CONSUP 142/2025</span>
-        <span class="badge-pill badge-pill-blue"><i class="bi bi-palette-fill"></i> Revisão em Azul Ativa</span>
-        <span class="badge-pill badge-pill-purple" style="cursor:pointer;" onclick="showTab('tab-biblioteca')"><i class="bi bi-book-half"></i> Sophia (78,2% Básica)</span>
+        <span class="badge-pill badge-pill-purple" style="cursor:pointer;" onclick="showTab('tab-biblioteca')"><i class="bi bi-book-half"></i> Auditorias Sophia</span>
       </div>
     </div>
   </header>
@@ -1097,6 +1142,33 @@ evisao}[1]{#1}
       const activeBtn = Array.from(document.querySelectorAll('.tab-btn')).find(btn => btn.getAttribute('onclick').includes(tabId));
       if (activeBtn) activeBtn.classList.add('active');
     }
+
+    function toggleTheme() {
+      const currentTheme = document.documentElement.getAttribute('data-theme') || 'light';
+      const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+      document.documentElement.setAttribute('data-theme', newTheme);
+      localStorage.setItem('portal_theme', newTheme);
+      updateThemeButton(newTheme);
+    }
+
+    function updateThemeButton(theme) {
+      const icon = document.getElementById('themeIcon');
+      const text = document.getElementById('themeText');
+      if (theme === 'dark') {
+        if (icon) icon.className = 'bi bi-sun-fill';
+        if (text) text.innerText = 'Tema Claro';
+      } else {
+        if (icon) icon.className = 'bi bi-moon-stars-fill';
+        if (text) text.innerText = 'Tema Escuro';
+      }
+    }
+
+    // Initialize Theme from localStorage or default to light
+    (function() {
+      const saved = localStorage.getItem('portal_theme') || 'light';
+      document.documentElement.setAttribute('data-theme', saved);
+      updateThemeButton(saved);
+    })();
   </script>
 
 </body>
