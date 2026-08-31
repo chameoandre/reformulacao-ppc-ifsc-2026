@@ -671,8 +671,8 @@ def build_dashboard_html(df_all, df_sophia, ucs_meta):
         <button class="btn-action btn-emerald" onclick="switchTab('tab-sumario')">
           <i class="bi bi-envelope-paper-fill"></i> Sumário Executivo (David)
         </button>
-        <a href="Ementario_Completo_PPC_Gestao_Ambiental_Revisao_Biblioteca.docx" download class="btn-action btn-blue">
-          <i class="bi bi-file-earmark-word-fill"></i> Baixar Ementário (.docx)
+        <a href="https://docs.google.com/document/d/1yuE7YjfqQAJ1F-uXVEnMPtJGaCPDgdCV/edit?usp=sharing&ouid=103449863491083063065&rtpof=true&sd=true" target="_blank" class="btn-action btn-blue">
+          <i class="bi bi-file-earmark-word-fill"></i> Abrir Ementário no Google Docs
         </a>
         <a href="relatorio_auditoria_biblioteca_ga.pdf" target="_blank" class="btn-action btn-outline">
           <i class="bi bi-file-earmark-pdf-fill" style="color:#fb7185;"></i> Relatório PDF
@@ -825,8 +825,11 @@ def build_dashboard_html(df_all, df_sophia, ucs_meta):
             </div>
           </div>
           <div style="display:flex; gap:0.6rem; flex-wrap:wrap;">
-            <a href="Ementario_Completo_PPC_Gestao_Ambiental_Revisao_Biblioteca.docx" download class="btn-action btn-blue">
-              <i class="bi bi-file-earmark-word-fill"></i> Baixar Ementário (.docx)
+            <a href="https://docs.google.com/document/d/1yuE7YjfqQAJ1F-uXVEnMPtJGaCPDgdCV/edit?usp=sharing&ouid=103449863491083063065&rtpof=true&sd=true" target="_blank" class="btn-action btn-blue">
+              <i class="bi bi-file-earmark-word-fill"></i> Abrir no Google Docs
+            </a>
+            <a href="Ementario_Completo_PPC_Gestao_Ambiental_Revisao_Biblioteca.docx" download class="btn-action btn-outline">
+              <i class="bi bi-download"></i> Baixar (.docx)
             </a>
             <button class="btn-action btn-outline" onclick="window.print()">
               <i class="bi bi-printer-fill"></i> Imprimir / PDF
@@ -842,7 +845,7 @@ def build_dashboard_html(df_all, df_sophia, ucs_meta):
             Prezado David,
           </p>
           <p style="margin-bottom:1rem;">
-            Apresentamos o relatório consolidado da <strong>auditoria bibliográfica automatizada</strong> realizada entre as <strong>189 referências bibliográficas</strong> das <strong>33 Unidades Curriculares</strong> do novo PPC do <strong>Curso Superior de Tecnologia em Gestão Ambiental</strong> e o acervo físico registrado no Sistema Sophia da Biblioteca do Câmpus Garopaba (3.003 títulos e 4.962 exemplares).
+            Apresentamos o relatório consolidado da <strong>auditoria bibliográfica automatizada</strong> realizada entre as <strong>{total_refs} referências bibliográficas</strong> das <strong>33 Unidades Curriculares</strong> do novo PPC do <strong>Curso Superior de Tecnologia em Gestão Ambiental</strong> e o acervo físico registrado no Sistema Sophia da Biblioteca do Câmpus Garopaba (3.003 títulos e 4.962 exemplares).
           </p>
           <p style="margin-bottom:1rem;">
             Para fins de planejamento de compras institucionais e conformidade regulatória, aplicamos a <strong>Regra Normativa do IFSC</strong>:
@@ -1580,10 +1583,11 @@ def build_markdown_summary(df_all, ucs_meta):
 ---
 
 ### 3. Artefatos Oficiais Gerados:
-1. **Painel Interativo:** `dashboard_biblioteca_ga.html`
+1. **Painel Interativo:** `dashboard_biblioteca_ga.html` / `index.html`
 2. **Relatório em PDF:** `relatorio_auditoria_biblioteca_ga.pdf`
 3. **Planilha Consolidada:** `Analise_Bibliografica_PPC_vs_Acervo_Sophia_GA.xlsx`
-4. **Ementário Word Completo:** `Ementario_Completo_PPC_Gestao_Ambiental_Revisao_Biblioteca.docx`
+4. **Ementário Word (.docx):** `Ementario_Completo_PPC_Gestao_Ambiental_Revisao_Biblioteca.docx`
+5. **Edição Colaborativa Online:** [Ementário no Google Docs](https://docs.google.com/document/d/1yuE7YjfqQAJ1F-uXVEnMPtJGaCPDgdCV/edit?usp=sharing&ouid=103449863491083063065&rtpof=true&sd=true)
 """
     return md
 
