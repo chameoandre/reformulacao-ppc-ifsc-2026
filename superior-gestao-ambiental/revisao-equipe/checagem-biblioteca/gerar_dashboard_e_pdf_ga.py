@@ -695,7 +695,7 @@ def build_dashboard_html(df_all, df_sophia, ucs_meta):
       <div style="display:flex; align-items:center; gap:0.9rem;">
         <i class="bi bi-shield-check text-emerald" style="font-size:1.8rem;"></i>
         <div>
-          <strong style="color:#ffffff; font-size:0.95rem; font-family:'Outfit', sans-serif;">Critérios Oficiais de Quantitativos Mínimos da Biblioteca (IFSC):</strong>
+          <strong style="color:var(--text-heading); font-size:0.95rem; font-family:'Outfit', sans-serif;">Critérios Oficiais de Quantitativos Mínimos da Biblioteca (IFSC):</strong>
           <p style="font-size:0.82rem; color:var(--text-muted); margin-top:2px; line-height:1.7;">
             • <a href="#secao-compras-basica" onclick="scrollToSection('secao-compras-basica'); return false;" style="color:#34d399; font-weight:700; text-decoration:underline; cursor:pointer;">Bibliografia Básica: Mínimo 2 títulos &rarr; ao menos 3 exemplares físicos no acervo (Clique para ver as +{total_deficit_basica} cópias a comprar)</a>.<br>
             • <a href="#secao-compras-comp" onclick="scrollToSection('secao-compras-comp'); return false;" style="color:#fbbf24; font-weight:700; text-decoration:underline; cursor:pointer;">Bibliografia Complementar: Mínimo 3 títulos &rarr; ao menos 1 exemplar físico no acervo (Clique para ver as +{total_deficit_comp} cópias a comprar)</a>.
