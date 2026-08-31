@@ -108,6 +108,66 @@ def add_internal_hyperlink(paragraph, anchor_name, text, color=HEX_BLUE, bold=Tr
     hyperlink.append(new_run)
     p.append(hyperlink)
 
+try:
+    import analise_acervo_biblioteca_ga as ga
+except ImportError:
+    ga = None
+
+def get_bold_title_runs(ref_raw):
+    raw = ref_raw.strip()
+    if any(k in raw for k in ["LIVRO didático", "Material didático", "Fundo Nacional"]):
+        return [(raw, False)]
+        
+    meta = ga.extract_metadata(raw) if ga else {}
+    titulo = meta.get("titulo", "").strip()
+    titulo_curto = meta.get("titulo_curto", "").strip()
+    
+    candidates = [titulo, titulo_curto]
+    for cand in candidates:
+        if not cand: continue
+        idx = raw.find(cand)
+        if idx != -1:
+            prefix = raw[:idx]
+            title_text = raw[idx:idx+len(cand)]
+            suffix = raw[idx+len(cand):]
+            runs = []
+            if prefix: runs.append((prefix, False))
+            if title_text: runs.append((title_text, True))
+            if suffix: runs.append((suffix, False))
+            return runs
+            
+        pattern = re.escape(cand)
+        m = re.search(pattern, raw, re.IGNORECASE)
+        if m:
+            prefix = raw[:m.start()]
+            title_text = raw[m.start():m.end()]
+            suffix = raw[m.end():]
+            runs = []
+            if prefix: runs.append((prefix, False))
+            if title_text: runs.append((title_text, True))
+            if suffix: runs.append((suffix, False))
+            return runs
+            
+    m = re.match(r'^([A-ZÁÉÍÓÚÂÊÔÃÕÇ\s\.,;&\(\)\-]+?\.\s+)(.+?)(?=\.\s+(?:[A-Z][a-z]+|\d+\.\s*ed|[A-ZÁÉÍÓÚÂÊÔÃÕÇ\s]+:|$))(.*)$', raw)
+    if m:
+        return [(m.group(1), False), (m.group(2), True), (m.group(3), False)]
+        
+    return [(raw, False)]
+
+def add_abnt_reference_paragraph(cell, ref_text):
+    p = cell.add_paragraph()
+    p.paragraph_format.space_after = Pt(4)
+    raw = ref_text.strip()
+    if not raw:
+        return p
+    runs_data = get_bold_title_runs(raw)
+    for text_part, is_bold in runs_data:
+        r = p.add_run(text_part)
+        r.font.size = Pt(9)
+        if is_bold:
+            r.font.bold = True
+    return p
+
 def clean_val(t):
     if not t: return ''
     return t.replace('**', '').replace('*', '').strip()
@@ -510,9 +570,7 @@ def generate_ga_docx():
         
         for bb_item in uc["bb"]:
             if bb_item.strip():
-                p_b = c_bb.add_paragraph()
-                p_b.paragraph_format.space_after = Pt(4)
-                p_b.add_run(bb_item.strip()).font.size = Pt(9)
+                add_abnt_reference_paragraph(c_bb, bb_item)
 
         # Row 6: Bibliografia Complementar
         c_bc = tbl_uc.cell(6, 0)
@@ -526,9 +584,7 @@ def generate_ga_docx():
         
         for bc_item in uc["bc"]:
             if bc_item.strip():
-                p_c = c_bc.add_paragraph()
-                p_c.paragraph_format.space_after = Pt(4)
-                p_c.add_run(bc_item.strip()).font.size = Pt(9)
+                add_abnt_reference_paragraph(c_bc, bc_item)
                 
         # Row 7: Navegação de Retorno ao Sumário
         c_r7 = tbl_uc.cell(7, 0)
