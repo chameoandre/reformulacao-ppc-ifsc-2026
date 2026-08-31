@@ -115,7 +115,7 @@ def clean_val(t):
 def merge_reference_lines(raw_text):
     # 1. Split concatenated refs on same line
     t = raw_text
-    t = re.sub(r'(\b\d{4}\.)\s+([A-ZÁÉÍÓÚÂÊÔÃÕÇ]{2,},\s+)', r'\1\n\2', t)
+    t = re.sub(r'(\b\d{4}\.)\s+([A-ZÁÉÍÓÚÂÊÔÃÕÇ]{2,}(?:\s+[A-Z]\.|\s+[A-ZÁÉÍÓÚÂÊÔÃÕÇ]+)*[,\s]\s*)', r'\1\n\2', t)
     t = re.sub(r'(\b\d{4}\.)\s+(______[\.\s])', r'\1\n\2', t)
     t = re.sub(r'(\b______\.\s+[^\n]+?\b\d{4}\.)\s+([A-ZÁÉÍÓÚÂÊÔÃÕÇ]{2,},\s+|______)', r'\1\n\2', t)
 
@@ -130,6 +130,8 @@ def merge_reference_lines(raw_text):
             is_new_ref = False
             if not (merged[-1].rstrip().endswith(';') or merged[-1].rstrip().endswith('&')):
                 if re.match(r'^[A-ZÁÉÍÓÚÂÊÔÃÕÇ]{2,}(?:\s+[A-ZÁÉÍÓÚÂÊÔÃÕÇ]{2,})*,\s+[A-Za-zÀ-ÿ]', l):
+                    is_new_ref = True
+                elif re.match(r'^[A-ZÁÉÍÓÚÂÊÔÃÕÇ]{2,}\s+[A-Z]\.\s*(?:[A-Z]\.)?\s+[A-Za-zÀ-ÿ]', l):
                     is_new_ref = True
                 elif re.match(r'^(BRASIL|EMBRAPA|IBGE|MMA|MEC|UNESCO|WHO|ONU|CONAMA|BANCO MUNDIAL|INSTITUTO|MINISTÉRIO|SECRETARIA|FNDE|AGÊNCIA)\b', l, re.IGNORECASE):
                     is_new_ref = True

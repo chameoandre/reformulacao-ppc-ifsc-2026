@@ -287,10 +287,11 @@ A carga horária desenvolvida na modalidade de educação a distância será rea
 BLIKSTEIN, Izidoro. Técnicas de comunicação escrita. 22. ed. São Paulo: Ática, 2010. (Princípios, 12). 
 GARCIA, Othon M. Comunicação em prosa moderna: aprenda a escrever aprendendo a pensar. 24. ed. Rio de Janeiro: FGV, 2004.
 	Bibliografia Complementar:
-KOCH, Ingedore Grunfeld Villaça. A coesão textual. 27. ed. São Paulo: Contexto, 2007. LOUSADA, Eliane; 
+KOCH, Ingedore Grunfeld Villaça. A coesão textual. 27. ed. São Paulo: Contexto, 2007.
+LOUSADA, Eliane; ABREU-TARDELLI, Lília Santos. Resenha. São Paulo: Parábola, 2004.
 
 
-ABREU-TARDELLI, Lília Santos. Resenha. São Paulo: Parábola, 2004. ______. Resumo. 7. ed. São Paulo: Parábola, 2004. 
+LOUSADA, Eliane; ABREU-TARDELLI, Lília Santos. Resumo. 7. ed. São Paulo: Parábola, 2004. 
 
 
 PEREIRA, Maurício Gomes. Artigos científicos: como redigir, publicar e avaliar. Rio de Janeiro: Guanabara Koogan, 2011. 
@@ -513,8 +514,7 @@ DIAS, Reinaldo; ZAVAGLIA, Tércia; CASSAR, Maurício. Introdução à administra
 DIAS, Reinaldo. Gestão ambiental: responsabilidade social e sustentabilidade. 3. ed. São Paulo: Atlas, 2017.
 LACOMBE, F. J. M.; HEILBORN, G. L. J. Administração: princípios e tendências. 3. ed. São Paulo: Saraiva, 2015.
 	Bibliografia Complementar:
-ALIGLERI, L.; ALIGLERI, L. A.; KRUGLIANSKAS, I. Gestão Socioambiental: responsabilidade e
-sustentabilidade dos negócios. São Paulo: Atlas, 2009.
+ALIGLERI, L.; ALIGLERI, L. A.; KRUGLIANSKAS, I. Gestão Socioambiental: responsabilidade e sustentabilidade dos negócios. São Paulo: Atlas, 2009.
 BARBIERI, J. C. Gestão ambiental empresarial: conceitos, modelos e instrumentos. 3. ed. atual. e ampl.
 DONAIRE, Denis; OLIVEIRA, Edenis Cesar de. Gestão ambiental na empresa: fundamentos e aplicações. 3. ed. São Paulo: Atlas, 2018. 
 MAXIMIANO, A. C. A. Introdução à administração. 8. ed. rev. e ampl. São Paulo: Atlas, 2008.
@@ -585,10 +585,16 @@ LONGLEY, Paul A. Sistemas e ciência da informação geográfica. 3. ed. Porto A
 CASSOL, R. et al. Comparação entre câmeras fotográficas digitais com GPS para aplicação em geotagging. In: XXV CONGRESSO BRASILEIRO DE CARTOGRAFIA, 2011, Curitiba. Anais... Curitiba, 2011. p. 412-419. 
 
 
-FITZ, Paulo Roberto. Cartografia básica. São Paulo: Oficina de Textos, 2008. ______. 
+FITZ, Paulo Roberto. Cartografia básica. São Paulo: Oficina de Textos, 2008. 
 
 
-Geoprocessamento sem complicação. São Paulo: Oficina de Textos, 2008. MENEZES, Paulo Márcio Leal de. Roteiro de cartografia. São Paulo: Oficina de Textos, 2013. ROBINSON, A. H. et al. Elements of cartography. 6. ed. New York: John Wiley & Sons, 1995. 
+Geoprocessamento sem complicação. São Paulo: Oficina de Textos, 2008. 
+
+
+MENEZES, Paulo Márcio Leal de. Roteiro de cartografia. São Paulo: Oficina de Textos, 2013. 
+
+
+ROBINSON, A. H. et al. Elements of cartography. 6. ed. New York: John Wiley & Sons, 1995. 
 	(*) CH Total – Carga horária total da unidade curricular em horas. Somatório da carga horária teórica-prática e extensão.
 (*) CH EaD – Carga horária EaD, se houver. A CH EaD é definida em razão da CH Total.
 
@@ -865,10 +871,10 @@ BARBETTA, Pedro Alberto. Estatística aplicada às ciências sociais. 8. ed. rev
 
 MORETTIN, Pedro Alberto; BUSSAB, Wilton de Oliveira. Estatística básica. 8. ed. São Paulo: Saraiva, 2013.
 	Bibliografia Complementar:
-BUENO, Fabrício. Estatística para processos produtivos. Florianópolis: Visual Books, 2010. KIRSTEN, J. T.; 
+BUENO, Fabrício. Estatística para processos produtivos. Florianópolis: Visual Books, 2010. 
 
 
-RABAHY, W. A. Estatística aplicada às ciências humanas e ao turismo. São Paulo: Saraiva, 2006.
+KIRSTEN, J. T.; RABAHY, W. A. Estatística aplicada às ciências humanas e ao turismo. São Paulo: Saraiva, 2006.
 	(*) CH Total – Carga horária total da unidade curricular em horas. Somatório da carga horária teórica-prática e extensão.
 (*) CH EaD – Carga horária EaD, se houver. A CH EaD é definida em razão da CH Total.
 
@@ -966,17 +972,25 @@ A carga horária desenvolvida na modalidade de educação a distância será rea
 
 	Bibliografia Básica:
 AGÊNCIA NACIONAL DE ÁGUAS. Sistema Nacional de Informações sobre Recursos Hídricos: Conjuntura dos recursos hídricos no Brasil: Disponível em: https://www.snirh.gov.br/portal/snirh/centrais-de-conteudos/conjuntura-dos-recursos-hidricos Acesso em: 15 jul. 2026.
+
+
 AGÊNCIA NACIONAL DE ENERGIA ELÉTRICA. Introdução ao Gerenciamento de Recursos Hídricos. 2. ed. Brasília: ANEEL, 2001. 
+
+
 BRAGA, Benedito (Org.). Águas doces no Brasil: capital ecológico, uso e conservação. 4. ed., rev. e atual. São Paulo: Escrituras, 2015.
 
 
 	Bibliografia Complementar:
 BANCO MUNDIAL. Estratégias de gerenciamento de recursos hídricos no Brasil: áreas de cooperação com o Banco Mundial. Brasília, 2003.
-______. Sistema de suporte à decisão para a outorga de direitos de uso da água no Brasil. Brasília, 2003.
+
+
+BANCO MUNDIAL. Sistema de suporte à decisão para a outorga de direitos de uso da água no Brasil. Brasília, 2003.
 
 
 BRASIL. Ministério do Meio Ambiente, Secretaria de Recursos Hídricos. Plano Nacional de Recursos Hídricos. Panorama e estado dos recursos hídricos do Brasil. Volume 1. Brasília: MMA, 2006.
-______. Plano Nacional de Recursos Hídricos. Síntese executiva: português. Brasília: MMA, 2006.
+
+
+BRASIL. Plano Nacional de Recursos Hídricos. Síntese executiva: português. Brasília: MMA, 2006.
 
 
 CECH, T. V. Recursos hídricos: história, desenvolvimento, política e gestão. 3. ed. Rio de Janeiro: LTC, 2013.
@@ -1283,16 +1297,38 @@ BERTONI, J.; LOMBARDI NETO, F. Conservação do solo. 9. ed. São Paulo: Ícone,
 
 	Bibliografia Complementar:
 GLIESSMAN, S. R. Agroecologia: processos ecológicos em agricultura sustentável. 4. ed. Porto Alegre: Ed. UFRGS, 2015.
+
+
 EMBRAPA. Sistema Brasileiro de Classificação de Solos. 5. ed. Brasília: Embrapa, 2018.
+
+
 BRASIL. Ministério do Desenvolvimento Agrário e Agricultura Familiar. Plano Nacional de Agroecologia e Produção Orgânica (PLANAPO). Brasília, 2023/2024.
+
+
 BRASIL. Ministério da Agricultura, Pecuária e Abastecimento. Plano Setorial de Mitigação e Adaptação às Mudanças Climáticas para a Consolidação de uma Economia de Baixa Emissão de Carbono na Agricultura (Plano ABC+). Brasília, 2021.
+
+
 SACHS, I. Caminhos para o desenvolvimento sustentável. 4. ed. Rio de Janeiro: Garamond, 2009.
+
+
 EMBRAPA. Solos e agroecologia. Coleção Transição Agroecológica, Vol. 4. Brasília, DF: Embrapa, 2018.
+
+
 Sistema Brasileiro de Classificação de Solos. 5. ed. Brasília: Embrapa, 2018.
+
+
 Elementos da Natureza e Propriedades dos Solos. 3. ed. Porto Alegre: Bookman, 2013.
+
+
 Conservação do Solo. 10. ed. São Paulo: Ícone, 2017.
+
+
 19 Lições de Pedologia. 2. ed. São Paulo: Oficina de Textos, 2016.
+
+
 Empresa Brasileira de Pesquisa Agropecuária. Solos e Agroecologia. Coleção Transição Agroecológica. Brasília: Embrapa, 2018.
+
+
 Caminhos para o Desenvolvimento Sustentável. 4. ed. Rio de Janeiro: Garamond, 2009.
 	
 
@@ -1864,7 +1900,10 @@ A carga horária desenvolvida na modalidade de educação a distância será rea
 BALLESTERO-ALVAREZ, María Esmeralda; SOTO BALBÁS, Marcial. Minidicionário: espanhol-português, português-espanhol. São Paulo: FTD, 2007. 
 PROST, Gisèle; NORIEGA FERNÁNDEZ, Alfredo. Al día: curso de español para los negocios. 5. ed. Madrid: SGEL, 2012. 
 	Bibliografia Complementar:
-FANJUL, Adrián (org.). Gramática y práctica de español para brasileños. 2. ed. São Paulo: Moderna, 2011. GONZÁLEZ H. A. Conjugar: verbos de España y de América. Madrid: Edelsa Grupo Didascalia, 2011. PROST, Gisèle; NORIEGA FERNÁNDEZ, Alfredo. Al día: curso intermedio de español para los negocios. 3. ed. Madrid: SGEL, 2011. 
+FANJUL, Adrián (org.). Gramática y práctica de español para brasileños. 2. ed. São Paulo: Moderna, 2011. GONZÁLEZ H. A. Conjugar: verbos de España y de América. Madrid: Edelsa Grupo Didascalia, 2011. 
+
+
+PROST, Gisèle; NORIEGA FERNÁNDEZ, Alfredo. Al día: curso intermedio de español para los negocios. 3. ed. Madrid: SGEL, 2011. 
 	(*) CH Total – Carga horária total da unidade curricular em horas. Somatório da carga horária teórica-prática e extensão.
 (*) CH EaD – Carga horária EaD, se houver. A CH EaD é definida em razão da CH Total.
 
