@@ -148,7 +148,7 @@ def merge_reference_lines(raw_text):
     return [r.strip() for r in merged if len(r.strip()) > 10]
 
 def parse_txt_ementas():
-    with open(TXT_PATH, "r", encoding="utf-8") as f:
+    with open(TXT_PATH, "r", encoding="utf-8-sig") as f:
         text = f.read()
 
     raw_blocks = text.split('------------------------------------------------------------')
@@ -158,29 +158,41 @@ def parse_txt_ementas():
             raw_blocks = [u.strip() for u in text.split('Unidade Curricular:') if u.strip()]
 
     ucs_info = []
+    idx = 0
+    for block in raw_blocks:
+        if 'Semestre:' not in block:
+            continue
+        idx += 1
+        
+        # UC Name
+        b_lines = [l.strip() for l in block.strip().split('\n') if l.strip()]
+        uc_nome = "UC DESCONHECIDA"
+        for i, l in enumerate(b_lines):
+            if 'Semestre:' in l:
+                if i > 0:
+                    uc_nome = b_lines[i-1]
+                break
+                
+        # Clean uc_nome
+        uc_nome = re.sub(r'^\d+[\.\-\s]+', '', uc_nome).strip()
+        uc_nome = uc_nome.replace('UC:', '').replace('Unidade Curricular:', '').strip()
+        
+        # Semestre
+        sem_match = re.search(r'Semestre\s*:\s*(\d+)', block)
+        sem_val = sem_match.group(1) if sem_match else "1"
+        
+        # Cargas Horárias
+        ch_match = re.search(r'CH Total\*?:\s*([^\n]+)', block)
+        ch_val = ch_match.group(1).strip() if ch_match else "40 h"
+        
+        ch_ead_match = re.search(r'CH EaD\*?:\s*([^\n]+)', block)
+        ch_ead_val = ch_ead_match.group(1).strip() if ch_ead_match else "00 h"
+        
+        ch_ext_match = re.search(r'CH Extens[aã]o:\s*([^\n]+)', block)
+        ch_ext_val = ch_ext_match.group(1).strip() if ch_ext_match else "00 h"
 
-    for idx, block in enumerate(raw_blocks, 1):
-        lines = [l.strip() for l in block.split('\n') if l.strip()]
-        if not lines: continue
-        uc_nome = lines[0]
-        if uc_nome in ['﻿', '']: 
-            if len(lines) > 1: uc_nome = lines[1]
-            else: continue
-            
-        sem = re.search(r'Semestre:\s*([^\n]+)', block)
-        sem_val = sem.group(1).strip() if sem else '?'
-        
-        ch = re.search(r'CH Total\*?:\s*([^\n]+)', block)
-        ch_val = ch.group(1).strip() if ch else '40 h'
-        
-        ch_ead = re.search(r'CH EaD\*?:\s*([^\n]+)', block)
-        ch_ead_val = ch_ead.group(1).strip() if ch_ead else '00 h'
-        
-        ch_ext = re.search(r'CH Extens[aã]o:\s*([^\n]+)', block)
-        ch_ext_val = ch_ext.group(1).strip() if ch_ext else '00 h'
-
-        ch_pres = re.search(r'CH Presencial:\s*([^\n]+)', block)
-        ch_pres_val = ch_pres.group(1).strip() if ch_pres else ''
+        ch_pres_match = re.search(r'CH Presencial:\s*([^\n]+)', block)
+        ch_pres_val = ch_pres_match.group(1).strip() if ch_pres_match else ""
 
         # Objectives
         obj_items = []
