@@ -30,7 +30,8 @@
 ### 3. Artefatos Oficiais Gerados:
 1. **Painel Interativo:** `dashboard_biblioteca_ga.html` / `index.html`
 2. **Relatório NDE (.docx):** `Relatorio_Adequacao_Bibliografias_NDE_CST_Gestao_Ambiental.docx`
-3. **Relatório de Auditoria em PDF:** `relatorio_auditoria_biblioteca_ga.pdf`
-4. **Planilha Consolidada:** `Analise_Bibliografica_PPC_vs_Acervo_Sophia_GA.xlsx`
-5. **Ementário Word (.docx):** `Ementario_Completo_PPC_Gestao_Ambiental_Revisao_Biblioteca.docx`
-6. **Edição Colaborativa Online:** [Ementário no Google Docs](https://docs.google.com/document/d/1yuE7YjfqQAJ1F-uXVEnMPtJGaCPDgdCV/edit?usp=sharing&ouid=103449863491083063065&rtpof=true&sd=true)
+3. **Relatório NDE no Google Docs:** [Abrir Relatório NDE no Google Docs](https://docs.google.com/document/d/1fhD4WRk3DJqC3qFGg-HYGU_vnv4p_EMP/edit?usp=sharing&ouid=103449863491083063065&rtpof=true&sd=true)
+4. **Relatório de Auditoria em PDF:** `relatorio_auditoria_biblioteca_ga.pdf`
+5. **Planilha Consolidada:** `Analise_Bibliografica_PPC_vs_Acervo_Sophia_GA.xlsx`
+6. **Ementário Word (.docx):** `Ementario_Completo_PPC_Gestao_Ambiental_Revisao_Biblioteca.docx`
+7. **Ementário no Google Docs:** [Abrir Ementário no Google Docs](https://docs.google.com/document/d/1yuE7YjfqQAJ1F-uXVEnMPtJGaCPDgdCV/edit?usp=sharing&ouid=103449863491083063065&rtpof=true&sd=true)
