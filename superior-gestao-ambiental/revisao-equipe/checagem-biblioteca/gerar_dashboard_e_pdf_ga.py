@@ -13,8 +13,7 @@ import json
 import subprocess
 import pandas as pd
 
-BASE_DIR = "/Users/chameoandre/Google-Drive-chameoandre/INSTITUTO-FEDERAL-SANTA-CATARINA/CURSOS/TECNICO/informatica-integrado/reformulacao-ppc-informatica-administracao-integrado/superior-gestao-ambiental"
-CHECK_DIR = os.path.join(BASE_DIR, "revisao-equipe", "checagem-biblioteca")
+CHECK_DIR = os.path.dirname(os.path.abspath(__file__))
 EXCEL_PATH = os.path.join(CHECK_DIR, "Analise_Bibliografica_PPC_vs_Acervo_Sophia_GA.xlsx")
 TXT_PATH = os.path.join(CHECK_DIR, "Unidades Curriculares Gestão Ambiental.txt")
 DOCX_PATH = os.path.join(CHECK_DIR, "Ementario_Completo_PPC_Gestao_Ambiental_Revisao_Biblioteca.docx")
@@ -674,6 +673,9 @@ def build_dashboard_html(df_all, df_sophia, ucs_meta):
         <a href="https://docs.google.com/document/d/1yuE7YjfqQAJ1F-uXVEnMPtJGaCPDgdCV/edit?usp=sharing&ouid=103449863491083063065&rtpof=true&sd=true" target="_blank" class="btn-action btn-blue">
           <i class="bi bi-file-earmark-word-fill"></i> Abrir Ementário no Google Docs
         </a>
+        <a href="Relatorio_Adequacao_Bibliografias_NDE_CST_Gestao_Ambiental.docx" download class="btn-action btn-outline">
+          <i class="bi bi-file-earmark-check-fill" style="color:#38bdf8;"></i> Relatório NDE (.docx)
+        </a>
         <a href="relatorio_auditoria_biblioteca_ga.pdf" target="_blank" class="btn-action btn-outline">
           <i class="bi bi-file-earmark-pdf-fill" style="color:#fb7185;"></i> Relatório PDF
         </a>
@@ -828,8 +830,11 @@ def build_dashboard_html(df_all, df_sophia, ucs_meta):
             <a href="https://docs.google.com/document/d/1yuE7YjfqQAJ1F-uXVEnMPtJGaCPDgdCV/edit?usp=sharing&ouid=103449863491083063065&rtpof=true&sd=true" target="_blank" class="btn-action btn-blue">
               <i class="bi bi-file-earmark-word-fill"></i> Abrir no Google Docs
             </a>
+            <a href="Relatorio_Adequacao_Bibliografias_NDE_CST_Gestao_Ambiental.docx" download class="btn-action btn-outline">
+              <i class="bi bi-file-earmark-check-fill" style="color:#38bdf8;"></i> Relatório NDE (.docx)
+            </a>
             <a href="Ementario_Completo_PPC_Gestao_Ambiental_Revisao_Biblioteca.docx" download class="btn-action btn-outline">
-              <i class="bi bi-download"></i> Baixar (.docx)
+              <i class="bi bi-download"></i> Baixar Ementário (.docx)
             </a>
             <button class="btn-action btn-outline" onclick="window.print()">
               <i class="bi bi-printer-fill"></i> Imprimir / PDF
@@ -912,6 +917,9 @@ def build_dashboard_html(df_all, df_sophia, ucs_meta):
           </table>
 
           <div style="display:flex; gap:1rem; flex-wrap:wrap; margin-top:2rem;">
+            <a href="Relatorio_Adequacao_Bibliografias_NDE_CST_Gestao_Ambiental.docx" download class="btn-action btn-blue">
+              <i class="bi bi-file-earmark-check-fill"></i> Baixar Relatório NDE (.docx)
+            </a>
             <a href="Ementario_Completo_PPC_Gestao_Ambiental_Revisao_Biblioteca.docx" download class="btn-action btn-blue">
               <i class="bi bi-file-earmark-word-fill"></i> Baixar Ementário (.docx)
             </a>
@@ -1584,10 +1592,11 @@ def build_markdown_summary(df_all, ucs_meta):
 
 ### 3. Artefatos Oficiais Gerados:
 1. **Painel Interativo:** `dashboard_biblioteca_ga.html` / `index.html`
-2. **Relatório em PDF:** `relatorio_auditoria_biblioteca_ga.pdf`
-3. **Planilha Consolidada:** `Analise_Bibliografica_PPC_vs_Acervo_Sophia_GA.xlsx`
-4. **Ementário Word (.docx):** `Ementario_Completo_PPC_Gestao_Ambiental_Revisao_Biblioteca.docx`
-5. **Edição Colaborativa Online:** [Ementário no Google Docs](https://docs.google.com/document/d/1yuE7YjfqQAJ1F-uXVEnMPtJGaCPDgdCV/edit?usp=sharing&ouid=103449863491083063065&rtpof=true&sd=true)
+2. **Relatório NDE (.docx):** `Relatorio_Adequacao_Bibliografias_NDE_CST_Gestao_Ambiental.docx`
+3. **Relatório de Auditoria em PDF:** `relatorio_auditoria_biblioteca_ga.pdf`
+4. **Planilha Consolidada:** `Analise_Bibliografica_PPC_vs_Acervo_Sophia_GA.xlsx`
+5. **Ementário Word (.docx):** `Ementario_Completo_PPC_Gestao_Ambiental_Revisao_Biblioteca.docx`
+6. **Edição Colaborativa Online:** [Ementário no Google Docs](https://docs.google.com/document/d/1yuE7YjfqQAJ1F-uXVEnMPtJGaCPDgdCV/edit?usp=sharing&ouid=103449863491083063065&rtpof=true&sd=true)
 """
     return md
 
@@ -1595,7 +1604,14 @@ def main():
     print("Iniciando geração completa do Dashboard e Relatórios de Gestão Ambiental...")
     df_all, df_sophia, ucs_meta = load_data()
 
-    # 1. HTML Dashboard
+    # 1. Relatório NDE em DOCX
+    try:
+        from gerar_relatorio_nde_ga import generate_relatorio_nde
+        generate_relatorio_nde()
+    except Exception as e:
+        print(f"Aviso ao gerar relatório NDE: {e}")
+
+    # 2. HTML Dashboard
     html_code = build_dashboard_html(df_all, df_sophia, ucs_meta)
     with open(HTML_OUTPUT_PATH, "w", encoding="utf-8") as f:
         f.write(html_code)
@@ -1603,7 +1619,7 @@ def main():
         f.write(html_code)
     print(f"Dashboard HTML gerado em:\n{HTML_OUTPUT_PATH}")
 
-    # 2. LaTeX Report
+    # 3. LaTeX Report
     tex_code = build_latex_report(df_all, df_sophia, ucs_meta)
     with open(TEX_OUTPUT_PATH, "w", encoding="utf-8") as f:
         f.write(tex_code)
@@ -1616,7 +1632,7 @@ def main():
     except Exception as e:
         print(f"Aviso na compilação do LaTeX via Tectonic: {e}")
 
-    # 3. Markdown Summaries
+    # 4. Markdown Summaries
     md_summary = build_markdown_summary(df_all, ucs_meta)
     with open(MD_SUMARIO_PATH, "w", encoding="utf-8") as f:
         f.write(md_summary)
