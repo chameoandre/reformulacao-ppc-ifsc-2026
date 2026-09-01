@@ -673,7 +673,7 @@ def build_dashboard_html(df_all, df_sophia, ucs_meta):
         <a href="https://docs.google.com/document/d/1yuE7YjfqQAJ1F-uXVEnMPtJGaCPDgdCV/edit?usp=sharing&ouid=103449863491083063065&rtpof=true&sd=true" target="_blank" class="btn-action btn-blue">
           <i class="bi bi-file-earmark-word-fill"></i> Abrir Ementário no Google Docs
         </a>
-        <a href="https://docs.google.com/document/d/1fhD4WRk3DJqC3qFGg-HYGU_vnv4p_EMP/edit?usp=sharing&ouid=103449863491083063065&rtpof=true&sd=true" target="_blank" class="btn-action btn-blue">
+        <a href="https://docs.google.com/document/d/1G823Gyg60Zr-nqxF1W5gKCWfvk1dmP5e/edit?usp=sharing&ouid=103449863491083063065&rtpof=true&sd=true" target="_blank" class="btn-action btn-blue">
           <i class="bi bi-file-earmark-check-fill"></i> Abrir Relatório NDE no Google Docs
         </a>
         <a href="relatorio_auditoria_biblioteca_ga.pdf" target="_blank" class="btn-action btn-outline">
@@ -830,7 +830,7 @@ def build_dashboard_html(df_all, df_sophia, ucs_meta):
             <a href="https://docs.google.com/document/d/1yuE7YjfqQAJ1F-uXVEnMPtJGaCPDgdCV/edit?usp=sharing&ouid=103449863491083063065&rtpof=true&sd=true" target="_blank" class="btn-action btn-blue">
               <i class="bi bi-file-earmark-word-fill"></i> Abrir Ementário no Google Docs
             </a>
-            <a href="https://docs.google.com/document/d/1fhD4WRk3DJqC3qFGg-HYGU_vnv4p_EMP/edit?usp=sharing&ouid=103449863491083063065&rtpof=true&sd=true" target="_blank" class="btn-action btn-blue">
+            <a href="https://docs.google.com/document/d/1G823Gyg60Zr-nqxF1W5gKCWfvk1dmP5e/edit?usp=sharing&ouid=103449863491083063065&rtpof=true&sd=true" target="_blank" class="btn-action btn-blue">
               <i class="bi bi-file-earmark-check-fill"></i> Abrir Relatório NDE no Google Docs
             </a>
             <a href="Relatorio_Adequacao_Bibliografias_NDE_CST_Gestao_Ambiental.docx" download class="btn-action btn-outline">
@@ -920,7 +920,7 @@ def build_dashboard_html(df_all, df_sophia, ucs_meta):
           </table>
 
           <div style="display:flex; gap:1rem; flex-wrap:wrap; margin-top:2rem;">
-            <a href="https://docs.google.com/document/d/1fhD4WRk3DJqC3qFGg-HYGU_vnv4p_EMP/edit?usp=sharing&ouid=103449863491083063065&rtpof=true&sd=true" target="_blank" class="btn-action btn-blue">
+            <a href="https://docs.google.com/document/d/1G823Gyg60Zr-nqxF1W5gKCWfvk1dmP5e/edit?usp=sharing&ouid=103449863491083063065&rtpof=true&sd=true" target="_blank" class="btn-action btn-blue">
               <i class="bi bi-file-earmark-check-fill"></i> Abrir Relatório NDE no Google Docs
             </a>
             <a href="Relatorio_Adequacao_Bibliografias_NDE_CST_Gestao_Ambiental.docx" download class="btn-action btn-outline">
@@ -1599,7 +1599,7 @@ def build_markdown_summary(df_all, ucs_meta):
 ### 3. Artefatos Oficiais Gerados:
 1. **Painel Interativo:** `dashboard_biblioteca_ga.html` / `index.html`
 2. **Relatório NDE (.docx):** `Relatorio_Adequacao_Bibliografias_NDE_CST_Gestao_Ambiental.docx`
-3. **Relatório NDE no Google Docs:** [Abrir Relatório NDE no Google Docs](https://docs.google.com/document/d/1fhD4WRk3DJqC3qFGg-HYGU_vnv4p_EMP/edit?usp=sharing&ouid=103449863491083063065&rtpof=true&sd=true)
+3. **Relatório NDE no Google Docs:** [Abrir Relatório NDE no Google Docs](https://docs.google.com/document/d/1G823Gyg60Zr-nqxF1W5gKCWfvk1dmP5e/edit?usp=sharing&ouid=103449863491083063065&rtpof=true&sd=true)
 4. **Relatório de Auditoria em PDF:** `relatorio_auditoria_biblioteca_ga.pdf`
 5. **Planilha Consolidada:** `Analise_Bibliografica_PPC_vs_Acervo_Sophia_GA.xlsx`
 6. **Ementário Word (.docx):** `Ementario_Completo_PPC_Gestao_Ambiental_Revisao_Biblioteca.docx`
