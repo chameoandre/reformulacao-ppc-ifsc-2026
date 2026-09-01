@@ -5,11 +5,12 @@
 Gerador do Relatório Oficial de Adequação e Validação de Bibliografias para o NDE
 Curso Superior de Tecnologia em Gestão Ambiental (PPC 2026) - IFSC Câmpus Garopaba.
 
-Baseado fielmente no modelo:
+Baseado fielmente no modelo institucional:
 'modelos-de-documento/Relatório de Adequação de Bibliografias.docx'
 
 Gera documento Word (.docx) padronizado para as 33 Unidades Curriculares, com cruzamento
 automático dos quantitativos do acervo físico (Sophia) e biblioteca virtual.
+100% Otimizado e compatível com Google Docs, Microsoft Word e LibreOffice (bordas e cores preservadas).
 """
 
 import os
@@ -53,13 +54,19 @@ def normalize_str(text):
     text = re.sub(r"[^a-z0-9\s]", " ", text)
     return re.sub(r"\s+", " ", text).strip()
 
-def set_cell_background(cell, hex_color):
+def set_cell_background(cell, hex_color="D9D9D9"):
+    """Define o preenchimento da célula compatível com o Google Docs e MS Word"""
     tcPr = cell._tc.get_or_add_tcPr()
-    shd = parse_xml(f'<w:shd {nsdecls("w")} w:fill="{hex_color}"/>')
+    for s in tcPr.findall(qn('w:shd')):
+        tcPr.remove(s)
+    shd = parse_xml(f'<w:shd {nsdecls("w")} w:val="clear" w:color="auto" w:fill="{hex_color}"/>')
     tcPr.append(shd)
 
 def set_cell_margins(cell, top=80, bottom=80, left=100, right=100):
+    """Define margens internas da célula"""
     tcPr = cell._tc.get_or_add_tcPr()
+    for m in tcPr.findall(qn('w:tcMar')):
+        tcPr.remove(m)
     tcMar = OxmlElement('w:tcMar')
     for m, val in [('top', top), ('bottom', bottom), ('left', left), ('right', right)]:
         node = OxmlElement(f'w:{m}')
@@ -68,8 +75,42 @@ def set_cell_margins(cell, top=80, bottom=80, left=100, right=100):
         tcMar.append(node)
     tcPr.append(tcMar)
 
-def set_table_borders(table, color="000000", sz="2", val="single"):
+def set_cell_borders(cell, color="000000", sz="6", val="single"):
+    """
+    Garante que cada célula possua bordas explícitas (<w:tcBorders>),
+    evitando que o Google Docs remova ou ignore as linhas da tabela.
+    """
+    tcPr = cell._tc.get_or_add_tcPr()
+    for b in tcPr.findall(qn('w:tcBorders')):
+        tcPr.remove(b)
+    tcBorders = parse_xml(
+        f'<w:tcBorders {nsdecls("w")}>\n'
+        f'  <w:top w:val="{val}" w:sz="{sz}" w:space="0" w:color="{color}"/>\n'
+        f'  <w:bottom w:val="{val}" w:sz="{sz}" w:space="0" w:color="{color}"/>\n'
+        f'  <w:left w:val="{val}" w:sz="{sz}" w:space="0" w:color="{color}"/>\n'
+        f'  <w:right w:val="{val}" w:sz="{sz}" w:space="0" w:color="{color}"/>\n'
+        f'</w:tcBorders>'
+    )
+    tcPr.append(tcBorders)
+
+def set_table_borders(table, color="000000", sz="6", val="single"):
+    """Configura o estilo TableGrid e as bordas gerais da tabela"""
     tblPr = table._tbl.tblPr
+    
+    # tblStyle TableGrid
+    style_el = tblPr.find(qn('w:tblStyle'))
+    if style_el is None:
+        style_el = parse_xml(f'<w:tblStyle {nsdecls("w")} w:val="TableGrid"/>')
+        tblPr.insert(0, style_el)
+    else:
+        style_el.set(qn('w:val'), 'TableGrid')
+        
+    # tblLayout fixed
+    layout_el = tblPr.find(qn('w:tblLayout'))
+    if layout_el is None:
+        layout_el = parse_xml(f'<w:tblLayout {nsdecls("w")} w:type="fixed"/>')
+        tblPr.append(layout_el)
+
     borders = parse_xml(
         f'<w:tblBorders {nsdecls("w")}>\n'
         f'  <w:top w:val="{val}" w:sz="{sz}" w:space="0" w:color="{color}"/>\n'
@@ -80,6 +121,8 @@ def set_table_borders(table, color="000000", sz="2", val="single"):
         f'  <w:insideV w:val="{val}" w:sz="{sz}" w:space="0" w:color="{color}"/>\n'
         f'</w:tblBorders>'
     )
+    for b in tblPr.findall(qn('w:tblBorders')):
+        tblPr.remove(b)
     tblPr.append(borders)
 
 try:
@@ -129,7 +172,7 @@ def get_bold_title_runs(ref_raw):
     return [(raw, False)]
 
 def add_abnt_reference_paragraph(cell, ref_num, ref_text):
-    p = cell.add_paragraph()
+    p = cell.paragraphs[0] if cell.paragraphs else cell.add_paragraph()
     p.paragraph_format.space_after = Pt(2)
     p.paragraph_format.space_before = Pt(2)
     p.paragraph_format.line_spacing = 1.05
@@ -171,7 +214,6 @@ def determine_availability_and_type(row_data, ref_text):
             exemplares = 0
             
     status = str(row_data.get('Status', ''))
-    existe = str(row_data.get('Existe_Biblioteca', '')).upper()
     
     ref_lower = ref_text.lower()
     is_digital_ref = any(k in ref_lower for k in [
@@ -189,13 +231,12 @@ def determine_availability_and_type(row_data, ref_text):
         qtd_str = "Virtual / Digital"
         tipo_str = "V"
     else:
-        # Livro físico não localizado no acervo de Garopaba (necessidade de aquisição)
         qtd_str = "0 (A adquirir)"
         tipo_str = "F"
         
     return qtd_str, tipo_str
 
-def build_uc_nde_table(doc, uc, df_uc, ref_counter_start=1):
+def build_uc_nde_table(doc, uc, df_uc):
     """
     Constrói a tabela padronizada do NDE para uma UC específica.
     """
@@ -209,19 +250,14 @@ def build_uc_nde_table(doc, uc, df_uc, ref_counter_start=1):
     r_dt.font.size = Pt(10)
     
     # 4 colunas base
-    # Larguras totais: 482.35 pt (Col 0+1=346.2 pt, Col 2=72.05 pt, Col 3=64.1 pt)
     table = doc.add_table(rows=0, cols=4)
     table.alignment = WD_TABLE_ALIGNMENT.CENTER
     table.autofit = False
-    set_table_borders(table, color=HEX_BORDER, sz="2", val="single")
+    set_table_borders(table, color=HEX_BORDER, sz="6", val="single")
     
     # ROW 0: Cabeçalho Principal (span 4)
     row0 = table.add_row()
-    c0 = row0.cells[0]
-    c1 = row0.cells[1]
-    c2 = row0.cells[2]
-    c3 = row0.cells[3]
-    c0.merge(c1).merge(c2).merge(c3)
+    c0 = row0.cells[0].merge(row0.cells[1]).merge(row0.cells[2]).merge(row0.cells[3])
     set_cell_background(c0, HEX_GRAY_HEADER)
     set_cell_margins(c0, top=100, bottom=100, left=120, right=120)
     p0 = c0.paragraphs[0]
@@ -346,7 +382,6 @@ def build_uc_nde_table(doc, uc, df_uc, ref_counter_start=1):
         set_cell_margins(c_qtd, top=60, bottom=60, left=40, right=40)
         set_cell_margins(c_fv, top=60, bottom=60, left=40, right=40)
         
-        # Obter dados de auditoria
         row_data = df_bb.iloc[i].to_dict() if i < len(df_bb) else {}
         qtd_str, tipo_str = determine_availability_and_type(row_data, bb_ref)
         
@@ -359,7 +394,7 @@ def build_uc_nde_table(doc, uc, df_uc, ref_counter_start=1):
         r_q.font.name = 'Arial'
         r_q.font.size = Pt(9.5)
         if "0" in qtd_str:
-            r_q.font.color.rgb = RGBColor(185, 28, 28) # Alerta vermelho sutil para aquisição
+            r_q.font.color.rgb = RGBColor(185, 28, 28)
             r_q.font.bold = True
         
         p_f = c_fv.paragraphs[0]
@@ -516,22 +551,23 @@ def build_uc_nde_table(doc, uc, df_uc, ref_counter_start=1):
         p_mv = c_mv.paragraphs[0]
         p_mv.paragraph_format.space_after = Pt(0)
 
-    # Definir larguras de colunas da tabela
-    # Col 0: 241.15 pt (~3.35 in)
-    # Col 1: 105.05 pt (~1.46 in)
-    # Col 2: 72.05 pt (~1.00 in)
-    # Col 3: 64.1 pt (~0.89 in)
+    # Definir larguras de colunas da tabela e aplicar bordas em TODAS as células
     col_widths = [Inches(3.35), Inches(1.46), Inches(1.00), Inches(0.89)]
     for row in table.rows:
-        for j, w in enumerate(col_widths):
-            if j < len(row.cells):
+        # Previne quebra de linha no meio da página no Google Docs
+        trPr = row._tr.get_or_add_trPr()
+        trPr.append(parse_xml(f'<w:cantSplit {nsdecls("w")}/>'))
+        
+        for j, cell in enumerate(row.cells):
+            set_cell_borders(cell, color=HEX_BORDER, sz="6", val="single")
+            if j < len(col_widths):
                 try:
-                    row.cells[j].width = w
+                    cell.width = col_widths[j]
                 except:
                     pass
 
 def generate_relatorio_nde():
-    print(f"--- Iniciando Geração do Relatório NDE Gestão Ambiental ---")
+    print(f"--- Iniciando Geração do Relatório NDE Gestão Ambiental (Google Docs Ready) ---")
     print(f"Destino: {OUTPUT_DOCX_PATH}")
     
     ucs_info, df_all = load_all_data()
@@ -590,10 +626,7 @@ def generate_relatorio_nde():
     # Adicionar fichas de cada UC
     for idx, uc in enumerate(ucs_info):
         print(f"[{idx+1}/33] Gerando Ficha NDE para: {uc['uc_nome']}")
-        
-        # Quebra de página antes de cada UC (exceto se for a primeira e couber na capa)
         doc.add_page_break()
-        
         df_uc = df_all[df_all['UC'].apply(lambda x: normalize_str(x) == normalize_str(uc['uc_nome']))]
         build_uc_nde_table(doc, uc, df_uc)
         
