@@ -537,8 +537,8 @@
           <span class="kpi-title">Carga Horária Total</span>
           <i class="bi bi-clock-history kpi-icon"></i>
         </div>
-        <div class="kpi-value">3.080 h</div>
-        <div class="kpi-desc">2.280h FG + 640h FT + 160h NP (Oficinas I e II)</div>
+        <div class="kpi-value">3.120 h</div>
+        <div class="kpi-desc">2.280h FG (73,08%) + 680h FT (21,79%) + 160h NP (5,13%)</div>
       </div>
 
       <div class="kpi-card kpi-blue">
@@ -564,7 +564,7 @@
           <span class="kpi-title">Itens de Auditoria</span>
           <i class="bi bi-check2-circle kpi-icon"></i>
         </div>
-        <div class="kpi-value">28 Itens</div>
+        <div class="kpi-value">37 Itens</div>
         <div class="kpi-desc">Histórico e Devolutivas consolidados na Base de Conhecimento</div>
       </div>
     </div>
@@ -572,8 +572,8 @@
     <!-- TABS DE NAVEGAÇÃO -->
     <div class="dashboard-tabs">
       <button class="tab-btn active" onclick="showTab('tab-adm')"><i class="bi bi-briefcase-fill"></i> Técnico em Administração</button>
-      <button class="tab-btn" onclick="showTab('tab-matriz')"><i class="bi bi-table"></i> Matriz Curricular (3.080h)</button>
-      <button class="tab-btn" onclick="showTab('tab-checklist')"><i class="bi bi-list-check"></i> Checklist & Auditoria (28 Itens)</button>
+      <button class="tab-btn" onclick="showTab('tab-matriz')"><i class="bi bi-table"></i> Matriz Curricular (3.120h)</button>
+      <button class="tab-btn" onclick="showTab('tab-checklist')"><i class="bi bi-list-check"></i> Checklist & Auditoria (37 Itens)</button>
       <button class="tab-btn" onclick="showTab('tab-revisao')"><i class="bi bi-eye-fill"></i> Sistema de Revisão em Azul</button>
       <button class="tab-btn" onclick="showTab('tab-biblioteca')"><i class="bi bi-book-half"></i> Auditoria de Biblioteca (Sophia)</button>
       <button class="tab-btn" onclick="showTab('tab-base')"><i class="bi bi-folder-fill"></i> Base de Conhecimento</button>
@@ -598,6 +598,39 @@
           O Projeto Pedagógico do Curso Técnico em Administração Integrado ao Ensino Médio encontra-se <strong>totalmente compilado no padrão TeX institucional</strong>, atendendo a todos os requisitos normativos da <strong>Resolução CONSUP/IFSC nº 142/2025</strong> e às diretrizes pedagógicas da equipe docente.
         </p>
 
+        <!-- NOVO PAINEL DE DESTAQUE: RESUMO DAS PRINCIPAIS CORREÇÕES APLICADAS -->
+        <div style="background: rgba(5, 150, 105, 0.08); border: 1px solid var(--accent-emerald); border-radius: 12px; padding: 1.2rem; margin-bottom: 1.5rem;">
+          <h3 style="color: var(--accent-emerald); font-size: 1.1rem; margin-bottom: 0.8rem; font-family: 'Outfit', sans-serif; display: flex; align-items: center; gap: 0.5rem;">
+            <i class="bi bi-stars"></i> Resumo das Principais Correções e Ajustes Aplicados no Documento:
+          </h3>
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 0.8rem; font-size: 0.88rem;">
+            <div style="background: var(--bg-card); padding: 0.8rem; border-radius: 8px; border: 1px solid var(--border-color);">
+              <strong style="color: var(--accent-emerald);"><i class="bi bi-clock-fill me-1"></i> Carga Horária Harmonizada em 3.120h:</strong>
+              <p style="color: var(--text-muted); margin-top: 0.2rem;">Correção de todas as menções de 3.080h para 3.120h nos Dados Gerais (Item 7), certificação e somatórios.</p>
+            </div>
+            <div style="background: var(--bg-card); padding: 0.8rem; border-radius: 8px; border: 1px solid var(--border-color);">
+              <strong style="color: var(--accent-blue);"><i class="bi bi-table me-1"></i> Unificação do Quadro Síntese:</strong>
+              <p style="color: var(--text-muted); margin-top: 0.2rem;">Remoção da tabela preliminar duplicada, mantendo o Quadro Síntese oficial consolidado após os 3 anos.</p>
+            </div>
+            <div style="background: var(--bg-card); padding: 0.8rem; border-radius: 8px; border: 1px solid var(--border-color);">
+              <strong style="color: var(--accent-purple);"><i class="bi bi-people-fill me-1"></i> Nominata e Coordenação Atualizadas:</strong>
+              <p style="color: var(--text-muted); margin-top: 0.2rem;">Listagem dos 13 membros nominais da comissão com Profa. Fabiana (Coordenadora) e Prof. André (Articulador).</p>
+            </div>
+            <div style="background: var(--bg-card); padding: 0.8rem; border-radius: 8px; border: 1px solid var(--border-color);">
+              <strong style="color: var(--accent-amber);"><i class="bi bi-sliders me-1"></i> Dados da Oferta (Formulário CEPE):</strong>
+              <p style="color: var(--text-muted); margin-top: 0.2rem;">Turno Integral c/ contraturno, integralização máxima de 12 semestres, matrícula seriada, exame de classificação e 2027/1.</p>
+            </div>
+            <div style="background: var(--bg-card); padding: 0.8rem; border-radius: 8px; border: 1px solid var(--border-color);">
+              <strong style="color: var(--accent-emerald);"><i class="bi bi-journal-check me-1"></i> Requisito de Acesso & Legislação:</strong>
+              <p style="color: var(--text-muted); margin-top: 0.2rem;">Padronização para "Ensino Fundamental Completo" e inserção da ampla legislação educacional e interna em 5 subtítulos.</p>
+            </div>
+            <div style="background: var(--bg-card); padding: 0.8rem; border-radius: 8px; border: 1px solid var(--border-color);">
+              <strong style="color: var(--accent-blue);"><i class="bi bi-palette-fill me-1"></i> Destaque Visual em Azul:</strong>
+              <p style="color: var(--text-muted); margin-top: 0.2rem;">100% dos trechos revisados destacados em azul no PDF via macro <code>\revisao{...}</code> para conferência pelos pares.</p>
+            </div>
+          </div>
+        </div>
+
         <div class="grid-2">
           <!-- O que já foi realizado -->
           <div>
@@ -608,8 +641,8 @@
             <div class="step-item">
               <div class="step-icon"><i class="bi bi-calculator-fill"></i></div>
               <div class="step-content">
-                <h4>Carga Horária Sincronizada (3.080h)</h4>
-                <p>Carga horária total exatamente espelhada à planilha de matriz: <strong>2.280h Formação Geral (74,03%)</strong>, <strong>640h Formação Técnica (20,78%)</strong> e <strong>160h Núcleo Politécnico (5,19%)</strong>.</p>
+                <h4>Carga Horária Sincronizada (3.120h)</h4>
+                <p>Carga horária total exatamente espelhada à planilha de matriz: <strong>2.280h Formação Geral (73,08%)</strong>, <strong>680h Formação Técnica (21,79%)</strong> e <strong>160h Núcleo Politécnico (5,13%)</strong>.</p>
               </div>
             </div>
 
@@ -648,7 +681,7 @@
               <div>
                 <div style="display: flex; justify-content: space-between; margin-bottom: 0.3rem;">
                   <strong style="color: var(--accent-emerald); font-size: 0.95rem;">• Formação Geral (BNCC + Diversificada):</strong>
-                  <span class="font-code" style="color: #ffffff; font-weight: 700;">2.280 h (74,03%)</span>
+                  <span class="font-code" style="color: #ffffff; font-weight: 700;">2.280 h (73,08%)</span>
                 </div>
                 <p style="color: var(--text-muted); font-size: 0.85rem;">880h no 1º Ano, 800h no 2º Ano e 600h no 3º Ano, cobrindo as 4 áreas da BNCC com Inglês e Espanhol obrigatórios.</p>
               </div>
@@ -656,7 +689,7 @@
               <div style="border-top: 1px dashed var(--border-color); padding-top: 0.8rem;">
                 <div style="display: flex; justify-content: space-between; margin-bottom: 0.3rem;">
                   <strong style="color: var(--accent-blue); font-size: 0.95rem;">• Formação Técnica Específica (Administração):</strong>
-                  <span class="font-code" style="color: #ffffff; font-weight: 700;">640 h (20,78%)</span>
+                  <span class="font-code" style="color: #ffffff; font-weight: 700;">680 h (21,79%)</span>
                 </div>
                 <p style="color: var(--text-muted); font-size: 0.85rem;">240h no 1º Ano, 240h no 2º Ano e 200h no 3º Ano, alinhadas à 4ª edição do CNCT/MEC para Gestão e Negócios.</p>
               </div>
@@ -664,14 +697,14 @@
               <div style="border-top: 1px dashed var(--border-color); padding-top: 0.8rem;">
                 <div style="display: flex; justify-content: space-between; margin-bottom: 0.3rem;">
                   <strong style="color: var(--accent-purple); font-size: 0.95rem;">• Núcleo Politécnico Comum (Oficinas):</strong>
-                  <span class="font-code" style="color: #ffffff; font-weight: 700;">160 h (5,19%)</span>
+                  <span class="font-code" style="color: #ffffff; font-weight: 700;">160 h (5,13%)</span>
                 </div>
                 <p style="color: var(--text-muted); font-size: 0.85rem;">80h na Oficina de Integração I (2º Ano) e 80h na Oficina de Integração II (3º Ano) em Ciclos Temáticos.</p>
               </div>
 
               <div style="border-top: 2px solid var(--accent-emerald); padding-top: 0.8rem; display: flex; justify-content: space-between; align-items: center;">
                 <strong style="color: #ffffff; font-size: 1.05rem;">Carga Horária Total do Curso:</strong>
-                <span class="font-code" style="color: var(--accent-emerald); font-size: 1.2rem; font-weight: 800;">3.080 h (100,0%)</span>
+                <span class="font-code" style="color: var(--accent-emerald); font-size: 1.2rem; font-weight: 800;">3.120 h (100,0%)</span>
               </div>
             </div>
           </div>
@@ -685,7 +718,7 @@
         <div class="panel-header">
           <div class="panel-title">
             <i class="bi bi-table"></i>
-            Matriz Curricular Detalhada por Anos Letivos (3.080 h)
+            Matriz Curricular Detalhada por Anos Letivos (3.120 h)
           </div>
           <span class="badge-pill badge-pill-green"><i class="bi bi-check2-all"></i> Matriz Consolidada</span>
         </div>
@@ -750,7 +783,7 @@
         <div class="panel-header">
           <div class="panel-title">
             <i class="bi bi-list-check"></i>
-            Tabela de Controle e Histórico de Correções do PPC (28 Itens)
+            Tabela de Controle e Histórico de Correções do PPC (37 Itens)
           </div>
           <a href="base-de-conhecimento/tabela_de_correcoes_ppc.md" target="_blank" class="btn-action btn-outline">
             <i class="bi bi-file-earmark-markdown"></i> Ver Tabela Markdown Completa
@@ -775,6 +808,78 @@
             </thead>
             <tbody>
               <tr>
+                <td style="text-align: center; font-weight: 700; color: var(--accent-emerald);">37</td>
+                <td><strong>Subitem 18 (Matriz Curricular)</strong><br><small style="color: var(--text-muted);">pp. 8, 11</small></td>
+                <td>Jacqueline Bastos / Comissão</td>
+                <td>Duplicação de quadros de síntese e harmonização integral em 3.120h.</td>
+                <td>Quadro preliminar duplicado removido. Mantido o Quadro Síntese oficial consolidado pós-matriz com 3.120h totais (2.280h FG + 680h FT + 160h NP), em conformidade com o modelo CEPE.</td>
+                <td style="text-align: center;"><span class="status-badge status-done">Concluído</span></td>
+              </tr>
+              <tr>
+                <td style="text-align: center; font-weight: 700; color: var(--accent-emerald);">36</td>
+                <td><strong>Subitem 4 e 5 (Coordenação e Equipe)</strong><br><small style="color: var(--text-muted);">p. 4</small></td>
+                <td>Jacqueline Bastos</td>
+                <td>Atualização da coordenação e nominata com 13 membros nominais.</td>
+                <td>Coordenadora atualizada para Profa. Fabiana de Agapito Kangerski e listagem nominal dos 13 integrantes da comissão com Prof. André Luiz (Articulador), em azul.</td>
+                <td style="text-align: center;"><span class="status-badge status-done">Concluído</span></td>
+              </tr>
+              <tr>
+                <td style="text-align: center; font-weight: 700; color: var(--accent-emerald);">35</td>
+                <td><strong>Subitem 8 (Dados da Oferta)</strong><br><small style="color: var(--text-muted);">p. 6</small></td>
+                <td>Jacqueline Bastos</td>
+                <td>Adequação dos campos de oferta aos padrões institucionais do CEPE.</td>
+                <td>Ajustados na Tabela 8: Turno Integral c/ contraturno, Integralização máx. 12 semestres (6 anos), Matrícula Seriada, Exame de Classificação e Oferta em 2027/1.</td>
+                <td style="text-align: center;"><span class="status-badge status-done">Concluído</span></td>
+              </tr>
+              <tr>
+                <td style="text-align: center; font-weight: 700; color: var(--accent-emerald);">34</td>
+                <td><strong>Subitem 9 (Requisito de Acesso)</strong><br><small style="color: var(--text-muted);">p. 6</small></td>
+                <td>Jacqueline Bastos</td>
+                <td>Padronização da redação do requisito de acesso.</td>
+                <td>Substituição do texto longo pela redação oficial institucional "Ensino Fundamental Completo", destacada em azul.</td>
+                <td style="text-align: center;"><span class="status-badge status-done">Concluído</span></td>
+              </tr>
+              <tr>
+                <td style="text-align: center; font-weight: 700; color: var(--accent-emerald);">33</td>
+                <td><strong>Subitem 10 (Legislação)</strong><br><small style="color: var(--text-muted);">p. 6</small></td>
+                <td>Jacqueline Bastos / Biblioteca</td>
+                <td>Compilação ampla da legislação educacional e categorização por subtítulos.</td>
+                <td>Inseridas e organizadas as legislações profissional, educacional, inclusiva, diretrizes nacionais (PNAE/DCNEM) e normas internas do IFSC em 5 subtítulos.</td>
+                <td style="text-align: center;"><span class="status-badge status-done">Concluído</span></td>
+              </tr>
+              <tr>
+                <td style="text-align: center; font-weight: 700; color: var(--accent-emerald);">32</td>
+                <td><strong>Subitem 13 (Objetivos do Curso)</strong><br><small style="color: var(--text-muted);">p. 9</small></td>
+                <td>Jacqueline Bastos / Comissão</td>
+                <td>Consolidação dos objetivos geral e específicos da reformulação.</td>
+                <td>Sincronizado o Objetivo Geral e os 7 Objetivos Específicos com a Res. CONSUP 142/2025 e o perfil de formação integrada em Administração, destacados em azul.</td>
+                <td style="text-align: center;"><span class="status-badge status-done">Concluído</span></td>
+              </tr>
+              <tr>
+                <td style="text-align: center; font-weight: 700; color: var(--accent-emerald);">31</td>
+                <td><strong>Subitem 6 (Aprovação no Câmpus)</strong><br><small style="color: var(--text-muted);">p. 2</small></td>
+                <td>André Moraes</td>
+                <td>Indicação do status de tramitação da minuta.</td>
+                <td>Registrada formalmente a minuta finalizada pela Comissão em fase de apreciação pelo Colegiado do Câmpus Garopaba.</td>
+                <td style="text-align: center;"><span class="status-badge status-done">Concluído</span></td>
+              </tr>
+              <tr>
+                <td style="text-align: center; font-weight: 700; color: var(--accent-emerald);">30</td>
+                <td><strong>Subitem 7 (Dados Gerais do Curso)</strong><br><small style="color: var(--text-muted);">p. 5</small></td>
+                <td>Jacqueline Bastos</td>
+                <td>Harmonização da Carga Horária Total e Presencial em 3.120h.</td>
+                <td>Campos 7.6 (CH Total) e 7.6.1 (CH Presencial) corrigidos para 3.120 horas na Tabela 7 e no item 22 (Certificação), em azul.</td>
+                <td style="text-align: center;"><span class="status-badge status-done">Concluído</span></td>
+              </tr>
+              <tr>
+                <td style="text-align: center; font-weight: 700; color: var(--accent-emerald);">29</td>
+                <td><strong>Subitem 18 (Texto de Abertura)</strong><br><small style="color: var(--text-muted);">p. 8</small></td>
+                <td>Jacqueline Bastos</td>
+                <td>Inserção de texto de contextualização na abertura da Matriz Curricular.</td>
+                <td>Incluída caracterização do percurso formativo de 3 anos (6 semestres), explicitando a articulação entre Formação Geral, Técnica e as Oficinas de Integração I e II, em azul.</td>
+                <td style="text-align: center;"><span class="status-badge status-done">Concluído</span></td>
+              </tr>
+              <tr>
                 <td style="text-align: center; font-weight: 700;">28</td>
                 <td><strong>Subitem 27 (Biblioteca)</strong><br><small style="color: var(--text-muted);">p. 105</small></td>
                 <td>David Milhomens</td>
@@ -787,7 +892,7 @@
                 <td><strong>Subitem 18 & Ementa 45</strong><br><small style="color: var(--text-muted);">pp. 8, 11, 102</small></td>
                 <td>Jacqueline Bastos</td>
                 <td>CH errada da OI II (160h) e recálculo das somas da matriz curricular.</td>
-                <td>CH da OI II ajustada para 80h e matriz harmonizada com a planilha oficial em 3.080h totais (2.280h FG + 640h FT + 160h NP).</td>
+                <td>CH da OI II ajustada para 80h e matriz harmonizada com a planilha oficial em 3.120h totais (2.280h FG + 680h FT + 160h NP).</td>
                 <td style="text-align: center;"><span class="status-badge status-done">Concluído</span></td>
               </tr>
               <tr>
