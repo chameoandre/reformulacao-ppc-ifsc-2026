@@ -198,13 +198,33 @@
       justify-content: space-between;
       position: relative;
       overflow: hidden;
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-      transition: transform 0.2s ease, border-color 0.2s ease;
+      box-shadow: var(--card-shadow);
+      transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+      cursor: pointer;
+      user-select: none;
     }
 
     .kpi-card:hover {
-      transform: translateY(-2px);
-      border-color: rgba(255, 255, 255, 0.25);
+      transform: translateY(-4px);
+      box-shadow: var(--card-shadow-hover);
+      border-color: var(--accent-blue);
+    }
+
+    .clickable-card {
+      cursor: pointer;
+      transition: all 0.2s ease;
+      user-select: none;
+    }
+
+    .clickable-card:hover {
+      transform: translateY(-3px);
+      box-shadow: var(--card-shadow-hover);
+      border-color: var(--accent-emerald) !important;
+    }
+
+    .step-item.clickable-card:hover {
+      background: var(--bg-card-hover);
+      border-color: var(--accent-blue) !important;
     }
 
     .kpi-card::before {
@@ -532,25 +552,25 @@
 
     <!-- KPI GRID -->
     <div class="kpi-grid">
-      <div class="kpi-card kpi-green">
+      <div class="kpi-card kpi-green" onclick="showTab('tab-matriz')" title="Clique para ver a Matriz Curricular Detalhada (3.120h)">
         <div class="kpi-header">
           <span class="kpi-title">Carga Horária Total</span>
           <i class="bi bi-clock-history kpi-icon"></i>
         </div>
         <div class="kpi-value">3.120 h</div>
-        <div class="kpi-desc">2.280h FG (73,08%) + 680h FT (21,79%) + 160h NP (5,13%)</div>
+        <div class="kpi-desc">2.280h FG (73,08%) + 680h FT (21,79%) + 160h NP (5,13%) <i class="bi bi-arrow-right-short"></i></div>
       </div>
 
-      <div class="kpi-card kpi-blue">
+      <div class="kpi-card kpi-blue" onclick="showTab('tab-matriz')" title="Clique para visualizar o detalhamento das 45 UCs por ano letivo">
         <div class="kpi-header">
           <span class="kpi-title">Unidades Curriculares</span>
           <i class="bi bi-grid-3x3-gap-fill kpi-icon"></i>
         </div>
         <div class="kpi-value">45 UCs</div>
-        <div class="kpi-desc">100% estruturadas em xltabular com fidelidade literal</div>
+        <div class="kpi-desc">100% estruturadas em xltabular com fidelidade literal <i class="bi bi-arrow-right-short"></i></div>
       </div>
 
-      <div class="kpi-card kpi-purple" style="cursor: pointer;" onclick="showTab('tab-biblioteca')" title="Clique para abrir a aba da Biblioteca">
+      <div class="kpi-card kpi-purple" onclick="showTab('tab-biblioteca')" title="Clique para abrir a auditoria completa da Biblioteca (Sophia Web / FBN)">
         <div class="kpi-header">
           <span class="kpi-title">Acervo Bibliográfico</span>
           <i class="bi bi-journal-bookmark-fill kpi-icon"></i>
@@ -559,13 +579,13 @@
         <div class="kpi-desc">73,0% disponíveis no acervo • 78,2% Básica <i class="bi bi-arrow-right-short"></i></div>
       </div>
 
-      <div class="kpi-card kpi-amber">
+      <div class="kpi-card kpi-amber" onclick="showTab('tab-checklist')" title="Clique para ver a Tabela de Checklist e Histórico das 37 Correções">
         <div class="kpi-header">
           <span class="kpi-title">Itens de Auditoria</span>
           <i class="bi bi-check2-circle kpi-icon"></i>
         </div>
         <div class="kpi-value">37 Itens</div>
-        <div class="kpi-desc">Histórico e Devolutivas consolidados na Base de Conhecimento</div>
+        <div class="kpi-desc">Histórico e Devolutivas consolidados na Base de Conhecimento <i class="bi bi-arrow-right-short"></i></div>
       </div>
     </div>
 
@@ -604,28 +624,46 @@
             <i class="bi bi-stars"></i> Resumo das Principais Correções e Ajustes Aplicados no Documento:
           </h3>
           <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 0.8rem; font-size: 0.88rem;">
-            <div style="background: var(--bg-card); padding: 0.8rem; border-radius: 8px; border: 1px solid var(--border-color);">
-              <strong style="color: var(--accent-emerald);"><i class="bi bi-clock-fill me-1"></i> Carga Horária Harmonizada em 3.120h:</strong>
+            <div class="clickable-card" onclick="showTab('tab-matriz')" title="Clique para visualizar a Matriz Curricular (3.120h)" style="background: var(--bg-card); padding: 0.8rem; border-radius: 8px; border: 1px solid var(--border-color);">
+              <strong style="color: var(--accent-emerald); display: flex; justify-content: space-between; align-items: center;">
+                <span><i class="bi bi-clock-fill me-1"></i> Carga Horária Harmonizada em 3.120h:</span>
+                <i class="bi bi-arrow-right-short"></i>
+              </strong>
               <p style="color: var(--text-muted); margin-top: 0.2rem;">Correção de todas as menções de 3.080h para 3.120h nos Dados Gerais (Item 7), certificação e somatórios.</p>
             </div>
-            <div style="background: var(--bg-card); padding: 0.8rem; border-radius: 8px; border: 1px solid var(--border-color);">
-              <strong style="color: var(--accent-blue);"><i class="bi bi-table me-1"></i> Unificação do Quadro Síntese:</strong>
+            <div class="clickable-card" onclick="showTab('tab-matriz')" title="Clique para visualizar o Quadro Síntese na Matriz" style="background: var(--bg-card); padding: 0.8rem; border-radius: 8px; border: 1px solid var(--border-color);">
+              <strong style="color: var(--accent-blue); display: flex; justify-content: space-between; align-items: center;">
+                <span><i class="bi bi-table me-1"></i> Unificação do Quadro Síntese:</span>
+                <i class="bi bi-arrow-right-short"></i>
+              </strong>
               <p style="color: var(--text-muted); margin-top: 0.2rem;">Remoção da tabela preliminar duplicada, mantendo o Quadro Síntese oficial consolidado após os 3 anos.</p>
             </div>
-            <div style="background: var(--bg-card); padding: 0.8rem; border-radius: 8px; border: 1px solid var(--border-color);">
-              <strong style="color: var(--accent-purple);"><i class="bi bi-people-fill me-1"></i> Nominata e Coordenação Atualizadas:</strong>
+            <div class="clickable-card" onclick="showTab('tab-checklist')" title="Clique para ver o item 36 na Tabela de Correções" style="background: var(--bg-card); padding: 0.8rem; border-radius: 8px; border: 1px solid var(--border-color);">
+              <strong style="color: var(--accent-purple); display: flex; justify-content: space-between; align-items: center;">
+                <span><i class="bi bi-people-fill me-1"></i> Nominata e Coordenação Atualizadas:</span>
+                <i class="bi bi-arrow-right-short"></i>
+              </strong>
               <p style="color: var(--text-muted); margin-top: 0.2rem;">Listagem dos 13 membros nominais da comissão com Profa. Fabiana (Coordenadora) e Prof. André (Articulador).</p>
             </div>
-            <div style="background: var(--bg-card); padding: 0.8rem; border-radius: 8px; border: 1px solid var(--border-color);">
-              <strong style="color: var(--accent-amber);"><i class="bi bi-sliders me-1"></i> Dados da Oferta (Formulário CEPE):</strong>
+            <div class="clickable-card" onclick="showTab('tab-checklist')" title="Clique para ver o item 35 na Tabela de Correções" style="background: var(--bg-card); padding: 0.8rem; border-radius: 8px; border: 1px solid var(--border-color);">
+              <strong style="color: var(--accent-amber); display: flex; justify-content: space-between; align-items: center;">
+                <span><i class="bi bi-sliders me-1"></i> Dados da Oferta (Formulário CEPE):</span>
+                <i class="bi bi-arrow-right-short"></i>
+              </strong>
               <p style="color: var(--text-muted); margin-top: 0.2rem;">Turno Integral c/ contraturno, integralização máxima de 12 semestres, matrícula seriada, exame de classificação e 2027/1.</p>
             </div>
-            <div style="background: var(--bg-card); padding: 0.8rem; border-radius: 8px; border: 1px solid var(--border-color);">
-              <strong style="color: var(--accent-emerald);"><i class="bi bi-journal-check me-1"></i> Requisito de Acesso & Legislação:</strong>
+            <div class="clickable-card" onclick="showTab('tab-checklist')" title="Clique para ver os itens 33 e 34 na Tabela de Correções" style="background: var(--bg-card); padding: 0.8rem; border-radius: 8px; border: 1px solid var(--border-color);">
+              <strong style="color: var(--accent-emerald); display: flex; justify-content: space-between; align-items: center;">
+                <span><i class="bi bi-journal-check me-1"></i> Requisito de Acesso & Legislação:</span>
+                <i class="bi bi-arrow-right-short"></i>
+              </strong>
               <p style="color: var(--text-muted); margin-top: 0.2rem;">Padronização para "Ensino Fundamental Completo" e inserção da ampla legislação educacional e interna em 5 subtítulos.</p>
             </div>
-            <div style="background: var(--bg-card); padding: 0.8rem; border-radius: 8px; border: 1px solid var(--border-color);">
-              <strong style="color: var(--accent-blue);"><i class="bi bi-palette-fill me-1"></i> Destaque Visual em Azul:</strong>
+            <div class="clickable-card" onclick="showTab('tab-revisao')" title="Clique para ver o Mecanismo de Revisão em Azul" style="background: var(--bg-card); padding: 0.8rem; border-radius: 8px; border: 1px solid var(--border-color);">
+              <strong style="color: var(--accent-blue); display: flex; justify-content: space-between; align-items: center;">
+                <span><i class="bi bi-palette-fill me-1"></i> Destaque Visual em Azul:</span>
+                <i class="bi bi-arrow-right-short"></i>
+              </strong>
               <p style="color: var(--text-muted); margin-top: 0.2rem;">100% dos trechos revisados destacados em azul no PDF via macro <code>\revisao{...}</code> para conferência pelos pares.</p>
             </div>
           </div>
@@ -638,34 +676,46 @@
               <i class="bi bi-check-all me-1"></i> Avanços Consolidados:
             </h3>
 
-            <div class="step-item">
+            <div class="step-item clickable-card" onclick="showTab('tab-matriz')" title="Clique para abrir a Matriz Curricular">
               <div class="step-icon"><i class="bi bi-calculator-fill"></i></div>
               <div class="step-content">
-                <h4>Carga Horária Sincronizada (3.120h)</h4>
+                <h4 style="display: flex; justify-content: space-between; align-items: center;">
+                  <span>Carga Horária Sincronizada (3.120h)</span>
+                  <i class="bi bi-arrow-right-short" style="color: var(--text-muted);"></i>
+                </h4>
                 <p>Carga horária total exatamente espelhada à planilha de matriz: <strong>2.280h Formação Geral (73,08%)</strong>, <strong>680h Formação Técnica (21,79%)</strong> e <strong>160h Núcleo Politécnico (5,13%)</strong>.</p>
               </div>
             </div>
 
-            <div class="step-item">
+            <div class="step-item clickable-card" onclick="showTab('tab-matriz')" title="Clique para ver as 45 tabelas da Matriz">
               <div class="step-icon"><i class="bi bi-book-half"></i></div>
               <div class="step-content">
-                <h4>Ementário 100% Concluído (45 Tabelas)</h4>
+                <h4 style="display: flex; justify-content: space-between; align-items: center;">
+                  <span>Ementário 100% Concluído (45 Tabelas)</span>
+                  <i class="bi bi-arrow-right-short" style="color: var(--text-muted);"></i>
+                </h4>
                 <p>Substituição integral das UCs críticas (Marketing I/II, Empreendedorismo I/II, Gestão Financeira com 80h) e Oficinas de Integração I e II (80h cada).</p>
               </div>
             </div>
 
-            <div class="step-item">
+            <div class="step-item clickable-card" onclick="showTab('tab-biblioteca')" title="Clique para abrir o painel de Biblioteca">
               <div class="step-icon"><i class="bi bi-award-fill"></i></div>
               <div class="step-content">
-                <h4>Padronização Sophia Web / FBN (284 Obras)</h4>
+                <h4 style="display: flex; justify-content: space-between; align-items: center;">
+                  <span>Padronização Sophia Web / FBN (284 Obras)</span>
+                  <i class="bi bi-arrow-right-short" style="color: var(--text-muted);"></i>
+                </h4>
                 <p>Nomes de autores 100% por extenso conforme a autoridade da Fundação Biblioteca Nacional e correções de quebras de tags NBR 6023.</p>
               </div>
             </div>
 
-            <div class="step-item">
+            <div class="step-item clickable-card" onclick="showTab('tab-revisao')" title="Clique para ver os fundamentos e o mecanismo de revisão">
               <div class="step-icon"><i class="bi bi-shield-check"></i></div>
               <div class="step-content">
-                <h4>Fundamentação Institucional Completa</h4>
+                <h4 style="display: flex; justify-content: space-between; align-items: center;">
+                  <span>Fundamentação Institucional Completa</span>
+                  <i class="bi bi-arrow-right-short" style="color: var(--text-muted);"></i>
+                </h4>
                 <p>Inclusão formal de Justificativa Regional (IBGE), Pedagogia Histórico-Crítica (Saviani), EaD de até 10% (RDP), PEDi, NAE/AEE e avaliação formativa.</p>
               </div>
             </div>
@@ -1215,7 +1265,7 @@ evisao}[1]{#1}
 
           <a href="base-de-conhecimento/tabela_de_correcoes_ppc.md" target="_blank" style="text-decoration: none;" class="panel-card">
             <div style="color: var(--accent-rose); font-size: 1.5rem; margin-bottom: 0.5rem;"><i class="bi bi-table"></i></div>
-            <h4 style="color: #ffffff; font-family: 'Outfit', sans-serif; font-size: 1.05rem; margin-bottom: 0.3rem;">Tabela de Correções (27 Itens)</h4>
+            <h4 style="color: #ffffff; font-family: 'Outfit', sans-serif; font-size: 1.05rem; margin-bottom: 0.3rem;">Tabela de Correções (37 Itens)</h4>
             <p style="color: var(--text-muted); font-size: 0.82rem;">Histórico consolidado com todas as auditorias e devolutivas para a comissão.</p>
           </a>
 
@@ -1237,15 +1287,22 @@ evisao}[1]{#1}
   </footer>
 
   <script>
-    function showTab(tabId) {
+    function showTab(tabId, shouldScroll = true) {
       document.querySelectorAll('.tab-pane').forEach(el => el.classList.remove('active'));
       document.querySelectorAll('.tab-btn').forEach(el => el.classList.remove('active'));
 
       const targetPane = document.getElementById(tabId);
       if (targetPane) targetPane.classList.add('active');
 
-      const activeBtn = Array.from(document.querySelectorAll('.tab-btn')).find(btn => btn.getAttribute('onclick').includes(tabId));
+      const activeBtn = Array.from(document.querySelectorAll('.tab-btn')).find(btn => btn.getAttribute('onclick') && btn.getAttribute('onclick').includes(tabId));
       if (activeBtn) activeBtn.classList.add('active');
+
+      if (shouldScroll) {
+        const tabsContainer = document.querySelector('.dashboard-tabs');
+        if (tabsContainer) {
+          tabsContainer.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      }
     }
 
     function toggleTheme() {
