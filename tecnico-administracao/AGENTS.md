@@ -32,7 +32,7 @@ All course assets must remain strictly organized in the following subdirectories
 
 ## 3. Curriculum Directives (Resolução CONSUP/IFSC nº 142/2025)
 
-1. **Formação Geral (BNCC + Diversificada):** Minimum **2.100 hours** (clock-hours).
+1. **Formação Geral Integrada:** Minimum **2.100 hours** (clock-hours).
 2. **Formação Técnica Profissional (Administração):** **1.000 hours** (conforme Catálogo Nacional CNCT).
 3. **Núcleo Politécnico Comum (Projetos & Oficinas de Integração):** Minimum **120 hours**.
 4. **Carga Horária Total Mínima:** **3.100 horas-relógio**.
