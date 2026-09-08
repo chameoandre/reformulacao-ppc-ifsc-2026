@@ -579,12 +579,12 @@
         <div class="kpi-desc">73,0% disponíveis no acervo • 78,2% Básica <i class="bi bi-arrow-right-short"></i></div>
       </div>
 
-      <div class="kpi-card kpi-amber" onclick="showTab('tab-checklist')" title="Clique para ver a Tabela de Checklist e Histórico das 47 Correções">
+      <div class="kpi-card kpi-amber" onclick="showTab('tab-checklist')" title="Clique para ver a Tabela de Checklist e Histórico das 48 Correções">
         <div class="kpi-header">
           <span class="kpi-title">Itens de Auditoria</span>
           <i class="bi bi-check2-circle kpi-icon"></i>
         </div>
-        <div class="kpi-value">47 Itens</div>
+        <div class="kpi-value">48 Itens</div>
         <div class="kpi-desc">Histórico e Devolutivas consolidados na Base de Conhecimento <i class="bi bi-arrow-right-short"></i></div>
       </div>
     </div>
@@ -593,7 +593,7 @@
     <div class="dashboard-tabs">
       <button class="tab-btn active" onclick="showTab('tab-adm')"><i class="bi bi-briefcase-fill"></i> Técnico em Administração</button>
       <button class="tab-btn" onclick="showTab('tab-matriz')"><i class="bi bi-table"></i> Matriz Curricular (3.120h)</button>
-      <button class="tab-btn" onclick="showTab('tab-checklist')"><i class="bi bi-list-check"></i> Checklist & Auditoria (47 Itens)</button>
+      <button class="tab-btn" onclick="showTab('tab-checklist')"><i class="bi bi-list-check"></i> Checklist & Auditoria (48 Itens)</button>
       <button class="tab-btn" onclick="showTab('tab-revisao')"><i class="bi bi-eye-fill"></i> Sistema de Revisão em Azul</button>
       <button class="tab-btn" onclick="showTab('tab-biblioteca')"><i class="bi bi-book-half"></i> Auditoria de Biblioteca (Sophia)</button>
       <button class="tab-btn" onclick="showTab('tab-base')"><i class="bi bi-folder-fill"></i> Base de Conhecimento</button>
@@ -854,7 +854,7 @@
         <div class="panel-header">
           <div class="panel-title">
             <i class="bi bi-list-check"></i>
-            Tabela de Controle e Histórico de Correções do PPC (47 Itens)
+            Tabela de Controle e Histórico de Correções do PPC (48 Itens)
           </div>
           <a href="base-de-conhecimento/tabela_de_correcoes_ppc.md" target="_blank" class="btn-action btn-outline">
             <i class="bi bi-file-earmark-markdown"></i> Ver Tabela Markdown Completa
@@ -929,7 +929,16 @@
             <i class="bi bi-clock-history"></i> Linha do Tempo: Últimas Modificações com Registro de Data e Hora
           </h3>
           <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 0.8rem;">
-                        <div style="background: var(--bg-card); border-left: 4px solid var(--accent-blue); border-radius: 6px; padding: 0.75rem 1rem; border: 1px solid var(--border-color); border-left-width: 4px;">
+                        <div style="background: var(--bg-card); border-left: 4px solid var(--accent-purple); border-radius: 6px; padding: 0.75rem 1rem; border: 1px solid var(--border-color); border-left-width: 4px;">
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.3rem;">
+                <span style="font-weight: 700; color: var(--accent-purple); font-size: 0.85rem;"><i class="bi bi-shield-lock-fill me-1"></i> Item 48 • Marca d'Água Release 1 & Carimbo Temporal</span>
+                <span class="font-code" style="color: var(--text-muted); font-size: 0.78rem;"><i class="bi bi-calendar-event me-1"></i>08/09/2026 09:05</span>
+              </div>
+              <p style="color: var(--text-main); font-size: 0.82rem; margin: 0;">Inclusão de marca d'água diagonal semitransparente ("RELEASE 1 -- FECHAMENTO 08/09/2026 -- 09:00") e carimbo de rodapé em todas as páginas internas (2 a 121), com controle por macro booleana.</p>
+              <div style="margin-top: 0.4rem; font-size: 0.75rem; color: var(--text-muted);">Commit <code>4d69c34</code> • Tectonic compilado (PDF 1.006,7 KiB)</div>
+            </div>
+
+            <div style="background: var(--bg-card); border-left: 4px solid var(--accent-blue); border-radius: 6px; padding: 0.75rem 1rem; border: 1px solid var(--border-color); border-left-width: 4px;">
               <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.3rem;">
                 <span style="font-weight: 700; color: var(--accent-blue); font-size: 0.85rem;"><i class="bi bi-link-45deg me-1"></i> Item 47 • Legislações com URLs Oficiais & Coleção 360º</span>
                 <span class="font-code" style="color: var(--text-muted); font-size: 0.78rem;"><i class="bi bi-calendar-event me-1"></i>08/09/2026 08:55</span>
@@ -1017,6 +1026,18 @@
               </tr>
             </thead>
             <tbody>
+              <tr>
+                <td style="text-align: center; font-weight: 700; color: var(--accent-emerald);">48</td>
+                <td style="text-align: center; font-size: 0.82rem; color: var(--text-muted); white-space: nowrap;">
+                  <i class="bi bi-clock-history me-1"></i>08/09/2026<br>
+                  <span style="color: var(--accent-purple); font-weight: 600;">09:05</span>
+                </td>
+                <td><strong>Marca d'Água Release 1 & Carimbo Temporal</strong><br><small style="color: var(--text-muted);">Preâmbulo & Cabeçalho Geral • pp. 1-121</small></td>
+                <td>Comissão / Coordenação do Curso</td>
+                <td>Necessidade de inclusão de marca d'água oficial indicando o Release 1 de fechamento do documento, acompanhado de carimbo com registro de data e hora para governança institucional e rastreabilidade estrita das edições futuras.</td>
+                <td><span style="color: #6ee7b7; font-size: 0.88rem; font-weight: 500;">✓ Concluído</span>: Implementado mecanismo modular no preâmbulo de main_ppc_administracao.tex com chave booleana (\watermarkreleasetrue), marca d'água diagonal semitransparente ("RELEASE 1 -- FECHAMENTO 08/09/2026 -- 09:00") e carimbo institucional no rodapé esquerdo em todas as 120 páginas internas (2 a 121), preservando a capa institucional limpa. Compilado via tectonic (PDF 1.006,7 KiB).</td>
+                <td style="text-align: center;"><span class="badge badge-success">Concluído</span></td>
+              </tr>
               <tr>
                 <td style="text-align: center; font-weight: 700; color: var(--accent-emerald);">47</td>
                 <td style="text-align: center; font-size: 0.82rem; color: var(--text-muted); white-space: nowrap;">
@@ -1613,7 +1634,7 @@ evisao}[1]{#1}
 
           <a href="base-de-conhecimento/tabela_de_correcoes_ppc.md" target="_blank" style="text-decoration: none;" class="panel-card">
             <div style="color: var(--accent-rose); font-size: 1.5rem; margin-bottom: 0.5rem;"><i class="bi bi-table"></i></div>
-            <h4 style="color: #ffffff; font-family: 'Outfit', sans-serif; font-size: 1.05rem; margin-bottom: 0.3rem;">Tabela de Correções (47 Itens)</h4>
+            <h4 style="color: #ffffff; font-family: 'Outfit', sans-serif; font-size: 1.05rem; margin-bottom: 0.3rem;">Tabela de Correções (48 Itens)</h4>
             <p style="color: var(--text-muted); font-size: 0.82rem;">Histórico consolidado com todas as auditorias e devolutivas para a comissão.</p>
           </a>
 
