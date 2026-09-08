@@ -62,3 +62,17 @@ All course assets must remain strictly organized in the following subdirectories
    - **Livros Impressos:** Pelo menos 3 exemplares físicos na Biblioteca do Câmpus por título básico (ou conforme necessidade da coordenação) e 1 exemplar por título complementar.
    - **Acervo Virtual IFSC (Minha Biblioteca/Pearson):** A biblioteca precisa disponibilizar ao menos 2 exemplares físicos do título básico e 1 exemplar físico do título complementar.
 
+---
+
+## 6. Governança de Arquivos DOCX e Bloqueio Editorial Permanente
+
+1. **Bloqueio Permanente e Intocabilidade de Arquivos DOCX:**
+   - O arquivo `Ementario_Completo_PPC_Tecnico_Administracao_Revisao_Biblioteca.docx` (e quaisquer outros arquivos `.docx` no repositório) está **PERMANENTEMENTE BLOQUEADO PARA EDIÇÕES**.
+   - Esses arquivos representam artefatos colaborativos sob custódia direta da Biblioteca (David Milhomens) e do corpo docente.
+   - **Regra de Bloqueio Estrito:** A IA está terminantemente proibida de editar, modificar, sobrescrever ou regenerar arquivos `.docx`, mantendo-os permanentemente bloqueados para edições **sem questionar se pode alterar**. O assistente jamais deverá sugerir, propor ou tentar modificar o `.docx`.
+   - Toda e qualquer conferência do trabalho da biblioteca deve ser feita por leitura/auditoria direta (online no Google Docs ou leitura do `.docx` de referência), transpondo eventuais ajustes exclusivamente para o código-fonte LaTeX.
+
+2. **Fonte Única da Verdade do PPC:**
+   - A fonte oficial do PPC para compilação via `tectonic` e submissão ao DEPE reside exclusivamente nos arquivos LaTeX (`main_ppc_administracao.tex` e `ementario_adm.tex`).
+
+
