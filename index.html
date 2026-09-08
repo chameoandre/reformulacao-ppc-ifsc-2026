@@ -579,12 +579,12 @@
         <div class="kpi-desc">73,0% disponíveis no acervo • 78,2% Básica <i class="bi bi-arrow-right-short"></i></div>
       </div>
 
-      <div class="kpi-card kpi-amber" onclick="showTab('tab-checklist')" title="Clique para ver a Tabela de Checklist e Histórico das 42 Correções">
+      <div class="kpi-card kpi-amber" onclick="showTab('tab-checklist')" title="Clique para ver a Tabela de Checklist e Histórico das 43 Correções">
         <div class="kpi-header">
           <span class="kpi-title">Itens de Auditoria</span>
           <i class="bi bi-check2-circle kpi-icon"></i>
         </div>
-        <div class="kpi-value">42 Itens</div>
+        <div class="kpi-value">43 Itens</div>
         <div class="kpi-desc">Histórico e Devolutivas consolidados na Base de Conhecimento <i class="bi bi-arrow-right-short"></i></div>
       </div>
     </div>
@@ -593,7 +593,7 @@
     <div class="dashboard-tabs">
       <button class="tab-btn active" onclick="showTab('tab-adm')"><i class="bi bi-briefcase-fill"></i> Técnico em Administração</button>
       <button class="tab-btn" onclick="showTab('tab-matriz')"><i class="bi bi-table"></i> Matriz Curricular (3.120h)</button>
-      <button class="tab-btn" onclick="showTab('tab-checklist')"><i class="bi bi-list-check"></i> Checklist & Auditoria (42 Itens)</button>
+      <button class="tab-btn" onclick="showTab('tab-checklist')"><i class="bi bi-list-check"></i> Checklist & Auditoria (43 Itens)</button>
       <button class="tab-btn" onclick="showTab('tab-revisao')"><i class="bi bi-eye-fill"></i> Sistema de Revisão em Azul</button>
       <button class="tab-btn" onclick="showTab('tab-biblioteca')"><i class="bi bi-book-half"></i> Auditoria de Biblioteca (Sophia)</button>
       <button class="tab-btn" onclick="showTab('tab-base')"><i class="bi bi-folder-fill"></i> Base de Conhecimento</button>
@@ -854,7 +854,7 @@
         <div class="panel-header">
           <div class="panel-title">
             <i class="bi bi-list-check"></i>
-            Tabela de Controle e Histórico de Correções do PPC (42 Itens)
+            Tabela de Controle e Histórico de Correções do PPC (43 Itens)
           </div>
           <a href="base-de-conhecimento/tabela_de_correcoes_ppc.md" target="_blank" class="btn-action btn-outline">
             <i class="bi bi-file-earmark-markdown"></i> Ver Tabela Markdown Completa
@@ -865,21 +865,140 @@
           Histórico consolidado com todos os apontamentos da equipe docente, pareceres da Biblioteca e da DEPE, com a coluna oficial de <strong>Devolutiva da Correção</strong>.
         </p>
 
+        
+        <!-- PAINEL DE GOVERNANÇA: STATUS DE BLOQUEIO EDITORIAL DAS SEÇÕES -->
+        <div style="background: rgba(30, 41, 59, 0.7); border: 1px solid rgba(56, 189, 248, 0.4); border-radius: 12px; padding: 1.2rem; margin-bottom: 1.5rem;">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.8rem; flex-wrap: wrap; gap: 0.5rem;">
+            <h3 style="color: var(--accent-blue); font-size: 1.1rem; margin: 0; font-family: 'Outfit', sans-serif; display: flex; align-items: center; gap: 0.5rem;">
+              <i class="bi bi-shield-lock-fill"></i> Governança Editorial: Status de Bloqueio Progressivo das Seções
+            </h3>
+            <span class="badge badge-success" style="font-size: 0.82rem; padding: 0.35rem 0.75rem;">
+              <i class="bi bi-lock-fill me-1"></i> 100% das Seções Bloqueadas
+            </span>
+          </div>
+          <p style="color: var(--text-muted); font-size: 0.88rem; margin-bottom: 1rem;">
+            Para prevenir regressões involuntárias na reta final de submissão ao DEPE, todas as seções revisadas e validadas encontram-se <strong>congeladas para edição</strong>. Caso seja necessária qualquer alteração, o usuário deverá solicitar explicitamente o desbloqueio da seção correspondente.
+          </p>
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 0.6rem; font-size: 0.82rem;">
+            <div style="background: var(--bg-card); padding: 0.6rem 0.8rem; border-radius: 6px; border: 1px solid rgba(16, 185, 129, 0.3); display: flex; justify-content: space-between; align-items: center;">
+              <span><strong>Seção I:</strong> Instituição</span>
+              <span style="color: #6ee7b7; font-weight: 600;"><i class="bi bi-lock-fill"></i> BLOQUEADO</span>
+            </div>
+            <div style="background: var(--bg-card); padding: 0.6rem 0.8rem; border-radius: 6px; border: 1px solid rgba(16, 185, 129, 0.3); display: flex; justify-content: space-between; align-items: center;">
+              <span><strong>Seção II:</strong> Câmpus Proponente</span>
+              <span style="color: #6ee7b7; font-weight: 600;"><i class="bi bi-lock-fill"></i> BLOQUEADO</span>
+            </div>
+            <div style="background: var(--bg-card); padding: 0.6rem 0.8rem; border-radius: 6px; border: 1px solid rgba(16, 185, 129, 0.3); display: flex; justify-content: space-between; align-items: center;">
+              <span><strong>Seção III:</strong> Responsáveis PPC</span>
+              <span style="color: #6ee7b7; font-weight: 600;"><i class="bi bi-lock-fill"></i> BLOQUEADO</span>
+            </div>
+            <div style="background: var(--bg-card); padding: 0.6rem 0.8rem; border-radius: 6px; border: 1px solid rgba(16, 185, 129, 0.3); display: flex; justify-content: space-between; align-items: center;">
+              <span><strong>Seção IV:</strong> Dados do Curso</span>
+              <span style="color: #6ee7b7; font-weight: 600;"><i class="bi bi-lock-fill"></i> BLOQUEADO</span>
+            </div>
+            <div style="background: var(--bg-card); padding: 0.6rem 0.8rem; border-radius: 6px; border: 1px solid rgba(16, 185, 129, 0.5); display: flex; justify-content: space-between; align-items: center; background: rgba(5, 150, 105, 0.1);">
+              <span><strong>Seção V:</strong> Matriz & Ementário</span>
+              <span style="color: #6ee7b7; font-weight: 700;"><i class="bi bi-lock-fill"></i> BLOQUEADO</span>
+            </div>
+            <div style="background: var(--bg-card); padding: 0.6rem 0.8rem; border-radius: 6px; border: 1px solid rgba(16, 185, 129, 0.3); display: flex; justify-content: space-between; align-items: center;">
+              <span><strong>Seção VI:</strong> Avaliação (RDP)</span>
+              <span style="color: #6ee7b7; font-weight: 600;"><i class="bi bi-lock-fill"></i> BLOQUEADO</span>
+            </div>
+            <div style="background: var(--bg-card); padding: 0.6rem 0.8rem; border-radius: 6px; border: 1px solid rgba(16, 185, 129, 0.3); display: flex; justify-content: space-between; align-items: center;">
+              <span><strong>Seção VII:</strong> Infraestrutura</span>
+              <span style="color: #6ee7b7; font-weight: 600;"><i class="bi bi-lock-fill"></i> BLOQUEADO</span>
+            </div>
+            <div style="background: var(--bg-card); padding: 0.6rem 0.8rem; border-radius: 6px; border: 1px solid rgba(16, 185, 129, 0.3); display: flex; justify-content: space-between; align-items: center;">
+              <span><strong>Seção VIII:</strong> Docentes & TAEs</span>
+              <span style="color: #6ee7b7; font-weight: 600;"><i class="bi bi-lock-fill"></i> BLOQUEADO</span>
+            </div>
+            <div style="background: var(--bg-card); padding: 0.6rem 0.8rem; border-radius: 6px; border: 1px solid rgba(16, 185, 129, 0.3); display: flex; justify-content: space-between; align-items: center;">
+              <span><strong>Seção IX:</strong> Referências NBR</span>
+              <span style="color: #6ee7b7; font-weight: 600;"><i class="bi bi-lock-fill"></i> BLOQUEADO</span>
+            </div>
+            <div style="background: var(--bg-card); padding: 0.6rem 0.8rem; border-radius: 6px; border: 1px solid rgba(16, 185, 129, 0.3); display: flex; justify-content: space-between; align-items: center;">
+              <span><strong>Seção X:</strong> Anexos</span>
+              <span style="color: #6ee7b7; font-weight: 600;"><i class="bi bi-lock-fill"></i> BLOQUEADO</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- LINHA DO TEMPO: HISTÓRICO DE MODIFICAÇÕES RECENTES COM DATA/HORA -->
+        <div style="background: rgba(15, 23, 42, 0.6); border: 1px solid var(--border-color); border-radius: 12px; padding: 1.2rem; margin-bottom: 1.5rem;">
+          <h3 style="color: var(--accent-amber); font-size: 1.05rem; margin-bottom: 0.9rem; font-family: 'Outfit', sans-serif; display: flex; align-items: center; gap: 0.5rem;">
+            <i class="bi bi-clock-history"></i> Linha do Tempo: Últimas Modificações com Registro de Data e Hora
+          </h3>
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 0.8rem;">
+            <div style="background: var(--bg-card); border-left: 4px solid var(--accent-emerald); border-radius: 6px; padding: 0.75rem 1rem; border: 1px solid var(--border-color); border-left-width: 4px;">
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.3rem;">
+                <span style="font-weight: 700; color: var(--accent-emerald); font-size: 0.85rem;"><i class="bi bi-check2-circle me-1"></i> Item 43 • Ementário Online</span>
+                <span class="font-code" style="color: var(--text-muted); font-size: 0.78rem;"><i class="bi bi-calendar-event me-1"></i>08/09/2026 06:44</span>
+              </div>
+              <p style="color: var(--text-main); font-size: 0.82rem; margin: 0;">Sincronização com o ementário online e ajuste estrito às normas SIBI/IFSC (2 Básicas / >=3 Comp.) em LPL 1, Espanhol 1, Física 1, Sociologia 1, LPL 2 e LPL 3.</p>
+              <div style="margin-top: 0.4rem; font-size: 0.75rem; color: var(--text-muted);">Commit <code>f20a556</code> • Tectonic compilado (PDF 999.1 KiB)</div>
+            </div>
+
+            <div style="background: var(--bg-card); border-left: 4px solid var(--accent-blue); border-radius: 6px; padding: 0.75rem 1rem; border: 1px solid var(--border-color); border-left-width: 4px;">
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.3rem;">
+                <span style="font-weight: 700; color: var(--accent-blue); font-size: 0.85rem;"><i class="bi bi-person-badge-fill me-1"></i> Item 42 • Quadro de Servidores</span>
+                <span class="font-code" style="color: var(--text-muted); font-size: 0.78rem;"><i class="bi bi-calendar-event me-1"></i>04/09/2026 06:40</span>
+              </div>
+              <p style="color: var(--text-main); font-size: 0.82rem; margin: 0;">Inclusão de Aline Inácio Decker como Pedagoga (TAE), saneamento da Tabela de Docentes de História (34 DE reais) e comissão elaboradora.</p>
+              <div style="margin-top: 0.4rem; font-size: 0.75rem; color: var(--text-muted);">Commit <code>06437b5</code> • Tabela de TAEs em ordem alfabética</div>
+            </div>
+
+            <div style="background: var(--bg-card); border-left: 4px solid var(--accent-purple); border-radius: 6px; padding: 0.75rem 1rem; border: 1px solid var(--border-color); border-left-width: 4px;">
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.3rem;">
+                <span style="font-weight: 700; color: var(--accent-purple); font-size: 0.85rem;"><i class="bi bi-book-half me-1"></i> Item 41 • Referências NBR 6023</span>
+                <span class="font-code" style="color: var(--text-muted); font-size: 0.78rem;"><i class="bi bi-calendar-event me-1"></i>04/09/2026 06:32</span>
+              </div>
+              <p style="color: var(--text-main); font-size: 0.82rem; margin: 0;">Remoção de bullets e recuo (itemize) na Seção 29; aplicação de espaço simples, alinhamento à esquerda e separação de 1 linha em branco.</p>
+              <div style="margin-top: 0.4rem; font-size: 0.75rem; color: var(--text-muted);">Commit <code>ad99abe</code> • Espelha modelo CEPE Lazer (p. 113)</div>
+            </div>
+
+            <div style="background: var(--bg-card); border-left: 4px solid var(--accent-amber); border-radius: 6px; padding: 0.75rem 1rem; border: 1px solid var(--border-color); border-left-width: 4px;">
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.3rem;">
+                <span style="font-weight: 700; color: var(--accent-amber); font-size: 0.85rem;"><i class="bi bi-mortarboard-fill me-1"></i> Item 40 • Harmonização CEPE</span>
+                <span class="font-code" style="color: var(--text-muted); font-size: 0.78rem;"><i class="bi bi-calendar-event me-1"></i>03/09/2026 23:11</span>
+              </div>
+              <p style="color: var(--text-main); font-size: 0.82rem; margin: 0;">Harmonização textual integral solicitada por Jacqueline Bastos: EaD, Atendimento Discente (PEDi/NAE), Avaliação (RDP) e tabelas funcionais.</p>
+              <div style="margin-top: 0.4rem; font-size: 0.75rem; color: var(--text-muted);">Commit <code>5ed1827</code> • Saneamento institucional pleno</div>
+            </div>
+          </div>
+        </div>
+
         <div style="overflow-x: auto;">
           <table class="custom-table">
             <thead>
               <tr>
-                <th style="width: 50px; text-align: center;">N</th>
-                <th>Seção / Item</th>
-                <th>Revisor</th>
+                <th style="width: 45px; text-align: center;">N</th>
+                <th style="width: 120px; text-align: center;">Data / Hora</th>
+                <th style="width: 180px;">Seção / Item</th>
+                <th style="width: 160px;">Revisor</th>
                 <th>Descrição do Problema</th>
                 <th>Devolutiva da Correção Implementada</th>
-                <th style="width: 100px; text-align: center;">Status</th>
+                <th style="width: 95px; text-align: center;">Status</th>
               </tr>
             </thead>
             <tbody>
               <tr>
+                <td style="text-align: center; font-weight: 700; color: var(--accent-emerald);">43</td>
+                <td style="text-align: center; font-size: 0.82rem; color: var(--text-muted); white-space: nowrap;">
+                  <i class="bi bi-clock-history me-1"></i>08/09/2026<br>
+                  <span style="color: var(--accent-emerald); font-weight: 600;">06:44</span>
+                </td>
+                <td><strong>Sincronização Ementário Online</strong><br><small style="color: var(--text-muted);">pp. 19, 21, 23, 31, 46, 70</small></td>
+                <td>Comissão / Biblioteca (Google Docs)</td>
+                <td>Ajustes finos de quantitativos e edições identificados na checagem do ementário online: LPL 1 (Bagno na Complementar: 2 Básicas / 3 Comp.), Espanhol 1 (Fanjul 3ª ed. 2014 e saneamento de duplicidade de Conjugar), Física 1 (Hewitt 13ª ed. 2023), Sociologia 1 (Oliveira & Costa 4ª ed. 2016), LPL 2 (Machado de Assis Ática 1996 na Complementar: 2 Básicas / 4 Comp.) e LPL 3 (Rita Chaves na Complementar e Galindo 2023/2025).</td>
+                <td><span style="color: #6ee7b7; font-size: 0.88rem; font-weight: 500;">✓ Concluído</span>: 100% incorporado em ementario_adm.tex, cumprindo rigorosamente as diretrizes SIBI/IFSC (exatamente 2 na Básica e >= 3 na Complementar) e compilado sem erros via tectonic (PDF 999 KiB).</td>
+                <td style="text-align: center;"><span class="badge badge-success">Concluído</span></td>
+              </tr>
+              <tr>
                 <td style="text-align: center; font-weight: 700; color: var(--accent-emerald);">42</td>
+                <td style="text-align: center; font-size: 0.82rem; color: var(--text-muted); white-space: nowrap;">
+                  <i class="bi bi-clock-history me-1"></i>04/09/2026<br>
+                  <span style="color: var(--accent-blue); font-weight: 600;">06:40</span>
+                </td>
                 <td><strong>Quadro de Pessoal (Servidores)</strong><br><small style="color: var(--text-muted);">pp. 4, 114–119</small></td>
                 <td>André Luiz Silva de Moraes / Comissão</td>
                 <td>Atualização funcional do quadro de TAEs: substituição de Silvia Maria da Silva por Aline Inácio Decker no cargo de Pedagoga, saneamento da Tabela de Docentes (remoção de Aline Decker de História, fixando os 34 docentes DE reais) e harmonização no Subitem 5 como "Aline Inácio Decker (Pedagoga)".</td>
@@ -888,6 +1007,10 @@
               </tr>
               <tr>
                 <td style="text-align: center; font-weight: 700; color: var(--accent-emerald);">41</td>
+                <td style="text-align: center; font-size: 0.82rem; color: var(--text-muted); white-space: nowrap;">
+                  <i class="bi bi-clock-history me-1"></i>04/09/2026<br>
+                  <span style="color: var(--accent-blue); font-weight: 600;">06:32</span>
+                </td>
                 <td><strong>Adequação NBR 6023 (Seção 29)</strong><br><small style="color: var(--text-muted);">pp. 119–120</small></td>
                 <td>Comissão / Normas ABNT NBR 6023</td>
                 <td>Apresentação das referências gerais do curso: remoção do ambiente itemize (eliminação de bullets e recuo à esquerda) e aplicação estrita das regras da ABNT NBR 6023:2018 (espaço simples, margem esquerda plena e separação de 1 linha em branco simples entre obras).</td>
@@ -896,6 +1019,10 @@
               </tr>
               <tr>
                 <td style="text-align: center; font-weight: 700; color: var(--accent-emerald);">40</td>
+                <td style="text-align: center; font-size: 0.82rem; color: var(--text-muted); white-space: nowrap;">
+                  <i class="bi bi-clock-history me-1"></i>03/09/2026<br>
+                  <span style="color: var(--accent-blue); font-weight: 600;">23:11</span>
+                </td>
                 <td><strong>Harmonização CEPE / Lazer</strong><br><small style="color: var(--text-muted);">Itens 5, 17, 18, 21–26 e 28</small></td>
                 <td>Jacqueline Narciso Bastos (TAE)</td>
                 <td>Inclusão na nominata da portaria (14 membros), parênteses da matriz/síntese removidos, EaD "Não se aplica", remoção de "horas-relógio", texto integral oficial do PPC Lazer/CEPE para acompanhamento discente, RDP no aproveitamento, avaliação da aprendizagem, expansão da infraestrutura e tabelas completas de pessoal (35 docentes DE e 17 TAEs).</td>
@@ -904,6 +1031,10 @@
               </tr>
               <tr>
                 <td style="text-align: center; font-weight: 700; color: var(--accent-emerald);">39</td>
+                <td style="text-align: center; font-size: 0.82rem; color: var(--text-muted); white-space: nowrap;">
+                  <i class="bi bi-clock-history me-1"></i>03/09/2026<br>
+                  <span style="color: var(--accent-blue); font-weight: 600;">16:29</span>
+                </td>
                 <td><strong>Ementário das UCs (Adequação Geral)</strong><br><small style="color: var(--text-muted);">pp. 18–104</small></td>
                 <td>David Milhomens (Biblioteca) / Comissão</td>
                 <td>Harmonização das referências de todas as 45 UCs com os apontamentos do documento online e acervo físico Sophia.</td>
@@ -912,6 +1043,10 @@
               </tr>
               <tr>
                 <td style="text-align: center; font-weight: 700; color: var(--accent-emerald);">38</td>
+                <td style="text-align: center; font-size: 0.82rem; color: var(--text-muted); white-space: nowrap;">
+                  <i class="bi bi-clock-history me-1"></i>03/09/2026<br>
+                  <span style="color: var(--accent-blue); font-weight: 600;">16:16</span>
+                </td>
                 <td><strong>Tabela Ementa 21 (Língua Portuguesa 2)</strong><br><small style="color: var(--text-muted);">p. 62</small></td>
                 <td>Profa. Sandra / David Milhomens</td>
                 <td>Falta de 2 obras complementares para atingir o mínimo regulamentar e edição com dados incompletos de Memórias Póstumas de Brás Cubas.</td>
@@ -920,6 +1055,10 @@
               </tr>
               <tr>
                 <td style="text-align: center; font-weight: 700; color: var(--accent-emerald);">37</td>
+                <td style="text-align: center; font-size: 0.82rem; color: var(--text-muted); white-space: nowrap;">
+                  <i class="bi bi-clock-history me-1"></i>02/09/2026<br>
+                  <span style="color: var(--accent-blue); font-weight: 600;">06:05</span>
+                </td>
                 <td><strong>Subitem 18 (Matriz Curricular)</strong><br><small style="color: var(--text-muted);">pp. 8, 11</small></td>
                 <td>Jacqueline Bastos / Comissão</td>
                 <td>Duplicação de quadros de síntese e harmonização integral em 3.120h.</td>
@@ -928,6 +1067,10 @@
               </tr>
               <tr>
                 <td style="text-align: center; font-weight: 700; color: var(--accent-emerald);">36</td>
+                <td style="text-align: center; font-size: 0.82rem; color: var(--text-muted); white-space: nowrap;">
+                  <i class="bi bi-clock-history me-1"></i>02/09/2026<br>
+                  <span style="color: var(--accent-blue); font-weight: 600;">06:07</span>
+                </td>
                 <td><strong>Subitem 4 e 5 (Coordenação e Equipe)</strong><br><small style="color: var(--text-muted);">p. 4</small></td>
                 <td>Jacqueline Bastos</td>
                 <td>Atualização da coordenação e nominata com 13 membros nominais.</td>
@@ -936,6 +1079,10 @@
               </tr>
               <tr>
                 <td style="text-align: center; font-weight: 700; color: var(--accent-emerald);">35</td>
+                <td style="text-align: center; font-size: 0.82rem; color: var(--text-muted); white-space: nowrap;">
+                  <i class="bi bi-clock-history me-1"></i>01/09/2026<br>
+                  <span style="color: var(--accent-blue); font-weight: 600;">10:35</span>
+                </td>
                 <td><strong>Subitem 8 (Dados da Oferta)</strong><br><small style="color: var(--text-muted);">p. 6</small></td>
                 <td>Jacqueline Bastos</td>
                 <td>Adequação dos campos de oferta aos padrões institucionais do CEPE.</td>
@@ -944,6 +1091,10 @@
               </tr>
               <tr>
                 <td style="text-align: center; font-weight: 700; color: var(--accent-emerald);">34</td>
+                <td style="text-align: center; font-size: 0.82rem; color: var(--text-muted); white-space: nowrap;">
+                  <i class="bi bi-clock-history me-1"></i>01/09/2026<br>
+                  <span style="color: var(--accent-blue); font-weight: 600;">10:35</span>
+                </td>
                 <td><strong>Subitem 9 (Requisito de Acesso)</strong><br><small style="color: var(--text-muted);">p. 6</small></td>
                 <td>Jacqueline Bastos</td>
                 <td>Padronização da redação do requisito de acesso.</td>
@@ -952,6 +1103,10 @@
               </tr>
               <tr>
                 <td style="text-align: center; font-weight: 700; color: var(--accent-emerald);">33</td>
+                <td style="text-align: center; font-size: 0.82rem; color: var(--text-muted); white-space: nowrap;">
+                  <i class="bi bi-clock-history me-1"></i>01/09/2026<br>
+                  <span style="color: var(--accent-blue); font-weight: 600;">10:35</span>
+                </td>
                 <td><strong>Subitem 10 (Legislação)</strong><br><small style="color: var(--text-muted);">p. 6</small></td>
                 <td>Jacqueline Bastos / Biblioteca</td>
                 <td>Compilação ampla da legislação educacional e categorização por subtítulos.</td>
@@ -960,6 +1115,10 @@
               </tr>
               <tr>
                 <td style="text-align: center; font-weight: 700; color: var(--accent-emerald);">32</td>
+                <td style="text-align: center; font-size: 0.82rem; color: var(--text-muted); white-space: nowrap;">
+                  <i class="bi bi-clock-history me-1"></i>01/09/2026<br>
+                  <span style="color: var(--accent-blue); font-weight: 600;">10:35</span>
+                </td>
                 <td><strong>Subitem 13 (Objetivos do Curso)</strong><br><small style="color: var(--text-muted);">p. 9</small></td>
                 <td>Jacqueline Bastos / Comissão</td>
                 <td>Consolidação dos objetivos geral e específicos da reformulação.</td>
@@ -968,6 +1127,10 @@
               </tr>
               <tr>
                 <td style="text-align: center; font-weight: 700; color: var(--accent-emerald);">31</td>
+                <td style="text-align: center; font-size: 0.82rem; color: var(--text-muted); white-space: nowrap;">
+                  <i class="bi bi-clock-history me-1"></i>01/09/2026<br>
+                  <span style="color: var(--accent-blue); font-weight: 600;">10:35</span>
+                </td>
                 <td><strong>Subitem 6 (Aprovação no Câmpus)</strong><br><small style="color: var(--text-muted);">p. 2</small></td>
                 <td>André Moraes</td>
                 <td>Indicação do status de tramitação da minuta.</td>
@@ -976,6 +1139,10 @@
               </tr>
               <tr>
                 <td style="text-align: center; font-weight: 700; color: var(--accent-emerald);">30</td>
+                <td style="text-align: center; font-size: 0.82rem; color: var(--text-muted); white-space: nowrap;">
+                  <i class="bi bi-clock-history me-1"></i>01/09/2026<br>
+                  <span style="color: var(--accent-blue); font-weight: 600;">10:35</span>
+                </td>
                 <td><strong>Subitem 7 (Dados Gerais do Curso)</strong><br><small style="color: var(--text-muted);">p. 5</small></td>
                 <td>Jacqueline Bastos</td>
                 <td>Harmonização da Carga Horária Total e Presencial em 3.120h.</td>
@@ -984,6 +1151,10 @@
               </tr>
               <tr>
                 <td style="text-align: center; font-weight: 700; color: var(--accent-emerald);">29</td>
+                <td style="text-align: center; font-size: 0.82rem; color: var(--text-muted); white-space: nowrap;">
+                  <i class="bi bi-clock-history me-1"></i>01/09/2026<br>
+                  <span style="color: var(--accent-blue); font-weight: 600;">10:35</span>
+                </td>
                 <td><strong>Subitem 18 (Texto de Abertura)</strong><br><small style="color: var(--text-muted);">p. 8</small></td>
                 <td>Jacqueline Bastos</td>
                 <td>Inserção de texto de contextualização na abertura da Matriz Curricular.</td>
@@ -992,6 +1163,10 @@
               </tr>
               <tr>
                 <td style="text-align: center; font-weight: 700;">28</td>
+                <td style="text-align: center; font-size: 0.82rem; color: var(--text-muted); white-space: nowrap;">
+                  <i class="bi bi-clock-history me-1"></i>30/08/2026<br>
+                  <span style="color: var(--accent-blue); font-weight: 600;">18:20</span>
+                </td>
                 <td><strong>Subitem 27 (Biblioteca)</strong><br><small style="color: var(--text-muted);">p. 105</small></td>
                 <td>David Milhomens</td>
                 <td>Validação da aderência dos títulos das bibliografias e caracterização técnica oficial da biblioteca.</td>
@@ -1000,6 +1175,10 @@
               </tr>
               <tr>
                 <td style="text-align: center; font-weight: 700;">27</td>
+                <td style="text-align: center; font-size: 0.82rem; color: var(--text-muted); white-space: nowrap;">
+                  <i class="bi bi-clock-history me-1"></i>30/08/2026<br>
+                  <span style="color: var(--accent-blue); font-weight: 600;">17:45</span>
+                </td>
                 <td><strong>Subitem 18 & Ementa 45</strong><br><small style="color: var(--text-muted);">pp. 8, 11, 102</small></td>
                 <td>Jacqueline Bastos</td>
                 <td>CH errada da OI II (160h) e recálculo das somas da matriz curricular.</td>
@@ -1008,6 +1187,10 @@
               </tr>
               <tr>
                 <td style="text-align: center; font-weight: 700;">26</td>
+                <td style="text-align: center; font-size: 0.82rem; color: var(--text-muted); white-space: nowrap;">
+                  <i class="bi bi-clock-history me-1"></i>30/08/2026<br>
+                  <span style="color: var(--accent-blue); font-weight: 600;">14:10</span>
+                </td>
                 <td><strong>Base de Conhecimento</strong><br><small style="color: var(--text-muted);">Geral</small></td>
                 <td>Comissão PPC</td>
                 <td>Documentação de engenharia pedagógica, macro de revisão e diretrizes da Res. 142/2025.</td>
@@ -1016,6 +1199,10 @@
               </tr>
               <tr>
                 <td style="text-align: center; font-weight: 700;">25</td>
+                <td style="text-align: center; font-size: 0.82rem; color: var(--text-muted); white-space: nowrap;">
+                  <i class="bi bi-clock-history me-1"></i>29/08/2026<br>
+                  <span style="color: var(--accent-blue); font-weight: 600;">19:30</span>
+                </td>
                 <td><strong>Seções Iniciais (Subitens 10-17)</strong><br><small style="color: var(--text-muted);">pp. 6–10, 106</small></td>
                 <td>Equipe Revisão</td>
                 <td>Textos conceituais e justificativas regionais não destacados em azul para a comissão.</td>
@@ -1024,6 +1211,10 @@
               </tr>
               <tr>
                 <td style="text-align: center; font-weight: 700;">24</td>
+                <td style="text-align: center; font-size: 0.82rem; color: var(--text-muted); white-space: nowrap;">
+                  <i class="bi bi-clock-history me-1"></i>29/08/2026<br>
+                  <span style="color: var(--accent-blue); font-weight: 600;">11:15</span>
+                </td>
                 <td><strong>Ementário (Bibliografias)</strong><br><small style="color: var(--text-muted);">pp. 12–104</small></td>
                 <td>Biblioteca / André Moraes</td>
                 <td>Presença de autores com prenomes abreviados por iniciais e quebras pontuais de tags.</td>
@@ -1032,6 +1223,10 @@
               </tr>
               <tr>
                 <td style="text-align: center; font-weight: 700;">23</td>
+                <td style="text-align: center; font-size: 0.82rem; color: var(--text-muted); white-space: nowrap;">
+                  <i class="bi bi-clock-history me-1"></i>28/08/2026<br>
+                  <span style="color: var(--accent-blue); font-weight: 600;">16:40</span>
+                </td>
                 <td><strong>Subitens 23, 24 e 25</strong><br><small style="color: var(--text-muted);">pp. 104–105</small></td>
                 <td>Jacqueline Bastos</td>
                 <td>Textos institucionais resumidos e constatação de que o subitem 25.1 não existe no formulário novo do CEPE.</td>
@@ -1040,6 +1235,10 @@
               </tr>
               <tr>
                 <td style="text-align: center; font-weight: 700;">22</td>
+                <td style="text-align: center; font-size: 0.82rem; color: var(--text-muted); white-space: nowrap;">
+                  <i class="bi bi-clock-history me-1"></i>28/08/2026<br>
+                  <span style="color: var(--accent-blue); font-weight: 600;">14:20</span>
+                </td>
                 <td><strong>Subitem 21 (Atividade em EaD)</strong><br><small style="color: var(--text-muted);">p. 104</small></td>
                 <td>Jacqueline Bastos</td>
                 <td>Dúvida sobre a inclusão da previsão regulamentar de até 10% em EaD no Moodle.</td>
@@ -1048,6 +1247,10 @@
               </tr>
               <tr>
                 <td style="text-align: center; font-weight: 700;">21</td>
+                <td style="text-align: center; font-size: 0.82rem; color: var(--text-muted); white-space: nowrap;">
+                  <i class="bi bi-clock-history me-1"></i>28/08/2026<br>
+                  <span style="color: var(--accent-blue); font-weight: 600;">11:30</span>
+                </td>
                 <td><strong>Subitem 17 (Metodologia)</strong><br><small style="color: var(--text-muted);">p. 8</small></td>
                 <td>Jacqueline Bastos</td>
                 <td>Dúvida sobre origem do texto pedagógico (Pedagogia Histórico-Crítica e Ciclos).</td>
@@ -1326,7 +1529,7 @@ evisao}[1]{#1}
 
           <a href="base-de-conhecimento/tabela_de_correcoes_ppc.md" target="_blank" style="text-decoration: none;" class="panel-card">
             <div style="color: var(--accent-rose); font-size: 1.5rem; margin-bottom: 0.5rem;"><i class="bi bi-table"></i></div>
-            <h4 style="color: #ffffff; font-family: 'Outfit', sans-serif; font-size: 1.05rem; margin-bottom: 0.3rem;">Tabela de Correções (42 Itens)</h4>
+            <h4 style="color: #ffffff; font-family: 'Outfit', sans-serif; font-size: 1.05rem; margin-bottom: 0.3rem;">Tabela de Correções (43 Itens)</h4>
             <p style="color: var(--text-muted); font-size: 0.82rem;">Histórico consolidado com todas as auditorias e devolutivas para a comissão.</p>
           </a>
 
