@@ -104,7 +104,7 @@ A seguir, apresentam-se as alterações macro e pontuais realizadas em cada seç
   * Descrição minuciosa dos recursos da Biblioteca do Câmpus Garopaba, contemplando computadores para pesquisa, salas de estudo individual e em grupo, acessibilidade para pessoas com deficiência e integração com os catálogos digitais da Rede IFSC.
 
 #### SEÇÃO VIII — CORPO DOCENTE E PESSOAL TÉCNICO-ADMINISTRATIVO
-* **Alteração:** Atualização quantitativa e qualitativa do corpo docente efetivo alocado ao curso (35 professores, todos com Regime de Dedicação Exclusiva, sendo a grande maioria mestres e doutores) e 17 servidores técnico-administrativos, atestando a plena capacidade instalada para a sustentação pedagógica do PPC.
+* **Alteração:** Atualização quantitativa e qualitativa do corpo docente efetivo alocado ao curso (37 professores, todos com Regime de Dedicação Exclusiva, sendo a grande maioria mestres e doutores) e 17 servidores técnico-administrativos, atestando a plena capacidade instalada para a sustentação pedagógica do PPC.
 
 #### SEÇÃO IX — MECANISMOS DE APOIO AO DISCENTE
 * **Alteração:** Consolidação das políticas institucionais de permanência e êxito:
