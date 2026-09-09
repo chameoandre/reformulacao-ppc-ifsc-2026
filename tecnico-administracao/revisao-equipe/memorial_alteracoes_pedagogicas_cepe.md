@@ -113,7 +113,7 @@ A seguir, apresentam-se as alterações macro e pontuais realizadas em cada seç
   * Assistência Estudantil através do Programa de Atendimento ao Estudante em Vulnerabilidade Social (PAE).
 
 #### SEÇÃO X — REFERÊNCIAS
-* **Alteração:** Padronização rigorosa das fontes doutrinárias (Saviani, Cury, Frigotto) e normativas governamentais, com URLs ativas e canônicas.
+* **Alteração:** Padronização rigorosa das fontes doutrinárias (Saviani, Silva) e normativas governamentais, com URLs ativas e canônicas, integralmente alinhadas à ABNT NBR 6023:2025 (Terceira Edição).
 
 #### SEÇÃO XI — ANEXOS
 * **Alteração:** Formalização dos Anexos I (Portaria DG nº 186/2026 de designação da Comissão) e II (Ata do Colegiado do Câmpus), com nota técnica esclarecendo que a integralidade dos documentos com assinaturas eletrônicas oficiais compõe o processo eletrônico autuado no SIPAC/IFSC.
