@@ -611,8 +611,11 @@
             Status Atual: PPC Técnico em Administração Integrado (PPC 2026)
           </div>
           <div style="display: flex; gap: 0.8rem; flex-wrap: wrap;">
-            <a href="tecnico-administracao/documento-ppc-principal/main_ppc_administracao.pdf" target="_blank" class="btn-action btn-emerald">
-              <i class="bi bi-file-earmark-pdf-fill"></i> Abrir Documento PDF Oficial Compilado
+            <a href="tecnico-administracao/documento-ppc-principal/main_ppc_administracao_com_destaques.pdf" target="_blank" class="btn-action btn-emerald" title="Abrir Minuta oficial com todas as alterações destacadas em azul para conferência">
+              <i class="bi bi-file-earmark-pdf-fill"></i> Minuta com Destaques (Revisão em Azul)
+            </a>
+            <a href="tecnico-administracao/documento-ppc-principal/main_ppc_administracao_sem_destaques.pdf" target="_blank" class="btn-action btn-purple" style="background: linear-gradient(135deg, #7c3aed 0%, #6d28d9 100%); color: #ffffff; font-weight: 700; border: none; box-shadow: 0 4px 14px rgba(124, 58, 237, 0.35);" title="Abrir Versão Final sem marcações coloridas (texto padrão em preto com marca d'água de encaminhamento)">
+              <i class="bi bi-file-earmark-check-fill"></i> Versão sem Destaques (Texto Limpo)
             </a>
             <a href="https://docs.google.com/document/d/1Uhp0xV6fu1qdkUmqluHH16SEdf5qw7Px/edit?usp=sharing&ouid=103449863491083063065&rtpof=true&sd=true" target="_blank" class="btn-action btn-blue" style="background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%); color: #ffffff; font-weight: 700; border: none; box-shadow: 0 4px 14px rgba(2,132,199,0.35);" title="Acessar o Formulário Oficial de Alteração do PPC compartilhado no Google Docs">
               <i class="bi bi-pencil-square"></i> Form. de Alteração do PPC (Google Docs)
@@ -940,11 +943,11 @@
           <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 0.8rem;">
             <div style="background: rgba(16, 185, 129, 0.08); border-left: 4px solid var(--accent-emerald); border-radius: 6px; padding: 0.75rem 1rem; border: 1px solid var(--accent-emerald); border-left-width: 4px;">
               <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.3rem;">
-                <span style="font-weight: 700; color: var(--accent-emerald); font-size: 0.85rem;"><i class="bi bi-patch-check-fill me-1"></i> Release Final • Versão Final Homologada CEPE & Fechamento Integral</span>
+                <span style="font-weight: 700; color: var(--accent-emerald); font-size: 0.85rem;"><i class="bi bi-patch-check-fill me-1"></i> Versão Final • Encaminhamento ao Colegiado do Câmpus e CEPE</span>
                 <span class="font-code" style="color: var(--text-muted); font-size: 0.78rem;"><i class="bi bi-calendar-event me-1"></i>10/09/2026 15:50</span>
               </div>
-              <p style="color: var(--text-main); font-size: 0.82rem; margin: 0;">Geração do Release Final com marca d'água oficial ("RELEASE FINAL -- CONFORMIDADE CEPE 10/09/2026 -- 15:50"). Harmonização de 100% das ementas (Artes, Biologia e Química Anos 1, 2 e 3) com o ementário online e padronização integral dos critérios de avaliação e metodologia em todas as 45 UCs.</p>
-              <div style="margin-top: 0.4rem; font-size: 0.75rem; color: var(--text-muted);">Release Final Oficial • Tectonic compilado (PDF 1.018,1 KiB, 122 páginas)</div>
+              <p style="color: var(--text-main); font-size: 0.82rem; margin: 0;">Consolidação da Minuta Final para encaminhamento ao Colegiado do Câmpus e posteriormente ao CEPE. Disponibilização de duas versões idênticas via botões do painel: (1) com destaques coloridos de alterações em azul para conferência dos revisores e (2) versão sem destaques (texto padrão em preto), contendo apenas a marca d'água oficial de encaminhamento.</p>
+              <div style="margin-top: 0.4rem; font-size: 0.75rem; color: var(--text-muted);">Versão Final Oficial • Tectonic compilado (com e sem destaques, 122 páginas)</div>
             </div>
 
             <div style="background: var(--bg-card); border-left: 4px solid var(--accent-emerald); border-radius: 6px; padding: 0.75rem 1rem; border: 1px solid var(--border-color); border-left-width: 4px;">
@@ -1068,10 +1071,10 @@
                   <i class="bi bi-clock-history me-1"></i>10/09/2026<br>
                   <span style="color: var(--accent-emerald); font-weight: 600;">15:50</span>
                 </td>
-                <td><strong>Geração do Release Final — Conformidade CEPE</strong><br><small style="color: var(--text-muted);">Preâmbulo & Governança Geral • pp. 1-122</small></td>
+                <td><strong>Minuta Final — Encaminhamento ao Colegiado do Câmpus e CEPE</strong><br><small style="color: var(--text-muted);">Preâmbulo & Governança Geral • pp. 1-122</small></td>
                 <td>Comissão do PPC / Coordenação</td>
-                <td>Atualização e emissão da versão final homologada do PPC com marca d'água oficial ("RELEASE FINAL -- CONFORMIDADE CEPE 10/09/2026 -- 15:50") após saneamento pedagógico integral das 45 UCs e incorporação das revisões docentes.</td>
-                <td><span style="color: #6ee7b7; font-size: 0.88rem; font-weight: 500;">✓ Concluído</span>: Atualização das macros <code>\releasename</code> e <code>\releasedate</code> no preâmbulo de <code>main_ppc_administracao.tex</code> para "RELEASE FINAL -- CONFORMIDADE CEPE" e data "10/09/2026 -- 15:50", estendendo a marca d'água diagonal e o carimbo de rodapé em todas as páginas internas (pp. 2–122). Compilado via <code>tectonic</code> com sucesso (PDF 1.018,1 KiB, 122 páginas).</td>
+                <td>Consolidação da versão final do PPC para envio e apreciação pelo Colegiado do Câmpus Garopaba e posterior homologação pelo CEPE, disponibilizando duas versões compiladas idênticas: com destaques coloridos de alterações em azul e sem destaques (texto limpo com marca d'água de encaminhamento).</td>
+                <td><span style="color: #6ee7b7; font-size: 0.88rem; font-weight: 500;">✓ Concluído</span>: Configuração das macros <code>\releasename</code> ("VERSÃO FINAL -- ENCAMINHAMENTO COLEGIADO E CEPE") e <code>\releasedate</code> ("10/09/2026 -- 15:50"). Geração de dois arquivos PDF via <code>tectonic</code>: (1) <code>main_ppc_administracao_com_destaques.pdf</code> (com marcações em azul para conferência) e (2) <code>main_ppc_administracao_sem_destaques.pdf</code> (texto em preto, contendo apenas a marca d'água oficial). Adicionados botões específicos para acesso direto a ambos os arquivos no dashboard.</td>
                 <td style="text-align: center;"><span class="badge badge-success">Concluído</span></td>
               </tr>
               <tr>

@@ -20,7 +20,7 @@
 \newif\ifwatermarkrelease
 \watermarkreleasetrue  % Altere para \watermarkreleasefalse para desativar a marca d'água de release
 
-\newcommand{\releasename}{RELEASE FINAL -- CONFORMIDADE CEPE}
+\newcommand{\releasename}{VERSÃO FINAL -- ENCAMINHAMENTO COLEGIADO E CEPE}
 \newcommand{\releasedate}{10/09/2026 -- 15:50}
 
 \ifwatermarkrelease
@@ -30,7 +30,7 @@
             \includegraphics[width=\paperwidth,height=2.8cm]{../../modelos/latex-shared/identidade_visual/image1.png}
         };
         \node[rotate=45, scale=1, text=gray!60, opacity=0.25, font=\sffamily\bfseries] at (current page.center) {
-            \fontsize{34}{40}\selectfont \releasename\quad\releasedate
+            \fontsize{26}{32}\selectfont \releasename\quad\releasedate
         };
     \end{tikzpicture}
   }
