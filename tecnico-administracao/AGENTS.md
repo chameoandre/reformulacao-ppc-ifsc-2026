@@ -75,4 +75,9 @@ All course assets must remain strictly organized in the following subdirectories
 2. **Fonte Única da Verdade do PPC:**
    - A fonte oficial do PPC para compilação via `tectonic` e submissão ao DEPE reside exclusivamente nos arquivos LaTeX (`main_ppc_administracao.tex` e `ementario_adm.tex`).
 
+3. **Intocabilidade Textual dos Blocos Pedagógicos (Zero-Paraphrase Rule):**
+   - **Soberania Docente:** Os campos **Ementa**, **Objetivos**, **Conteúdo Programático**, **Metodologia** e **Avaliação** de todas as 45 UCs são blocos autorais protegidos e invioláveis (*verbatim*).
+   - **Veto a Modificações Textuais:** É terminantemente vedado à IA resumir, sintetizar, parafrasear, omitir ou alterar a redação de qualquer trecho pedagógico aprovado pelos docentes.
+   - **Fronteira Operacional:** A IA atua única e exclusivamente na tipografia/diagramação LaTeX (tabelas, quebras de página, compilação via `tectonic`), conformidade bibliográfica ABNT NBR 6023 e consistência aritmética das cargas horárias. Toda transposição textual deve ser 100% literal.
+
 
