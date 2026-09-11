@@ -582,12 +582,12 @@
         <div class="kpi-desc">73,0% disponíveis no acervo • 78,2% Básica <i class="bi bi-arrow-right-short"></i></div>
       </div>
 
-      <div class="kpi-card kpi-amber" onclick="showTab('tab-checklist')" title="Clique para ver a Tabela de Checklist e Histórico das 59 Correções">
+      <div class="kpi-card kpi-amber" onclick="showTab('tab-checklist')" title="Clique para ver a Tabela de Checklist e Histórico das 63 Correções">
         <div class="kpi-header">
           <span class="kpi-title">Itens de Auditoria</span>
           <i class="bi bi-check2-circle kpi-icon"></i>
         </div>
-        <div class="kpi-value">59 Itens</div>
+        <div class="kpi-value">63 Itens</div>
         <div class="kpi-desc">Histórico e Devolutivas consolidados na Base de Conhecimento <i class="bi bi-arrow-right-short"></i></div>
       </div>
     </div>
@@ -596,7 +596,7 @@
     <div class="dashboard-tabs">
       <button class="tab-btn active" onclick="showTab('tab-adm')"><i class="bi bi-briefcase-fill"></i> Técnico em Administração</button>
       <button class="tab-btn" onclick="showTab('tab-matriz')"><i class="bi bi-table"></i> Matriz Curricular (3.120h)</button>
-      <button class="tab-btn" onclick="showTab('tab-checklist')"><i class="bi bi-list-check"></i> Checklist & Auditoria (59 Itens)</button>
+      <button class="tab-btn" onclick="showTab('tab-checklist')"><i class="bi bi-list-check"></i> Checklist & Auditoria (63 Itens)</button>
       <button class="tab-btn" onclick="showTab('tab-revisao')"><i class="bi bi-eye-fill"></i> Sistema de Revisão em Azul</button>
       <button class="tab-btn" onclick="showTab('tab-biblioteca')"><i class="bi bi-book-half"></i> Auditoria de Biblioteca (Sophia)</button>
       <button class="tab-btn" onclick="showTab('tab-base')"><i class="bi bi-folder-fill"></i> Base de Conhecimento</button>
@@ -904,7 +904,7 @@
         <div class="panel-header">
           <div class="panel-title">
             <i class="bi bi-list-check"></i>
-            Tabela de Controle e Histórico de Correções do PPC (52 Itens)
+            Tabela de Controle e Histórico de Correções do PPC (63 Itens)
           </div>
           <a href="base-de-conhecimento/tabela_de_correcoes_ppc.md" target="_blank" class="btn-action btn-outline">
             <i class="bi bi-file-earmark-markdown"></i> Ver Tabela Markdown Completa
@@ -1103,6 +1103,54 @@
               </tr>
             </thead>
             <tbody>
+              <tr>
+                <td style="text-align: center; font-weight: 700; color: var(--accent-emerald);">63</td>
+                <td style="text-align: center; font-size: 0.82rem; color: var(--text-muted); white-space: nowrap;">
+                  <i class="bi bi-clock-history me-1"></i>11/09/2026<br>
+                  <span style="color: var(--accent-emerald); font-weight: 600;">20:30</span>
+                </td>
+                <td><strong>Saneamento de Estouro de Página e Colisão com Rodapé em Oficina de Integração I e II</strong><br><small style="color: var(--text-muted);">Seção VI (Ementário das UCs — UCs 33 e 45) • pp. 90, 117</small></td>
+                <td>Comissão do PPC / Auditoria</td>
+                <td>Após a restauração integral da metodologia e avaliação autoral de Oficina de Integração I (UC 33) e II (UC 45), o bloco de texto unificado dentro de uma única célula de tabela (<code>xltabular</code>) ultrapassava a altura da mancha gráfica útil (<code>\textheight</code> ~22,5 cm), provocando estouro de página vertical na p. 90 (Oficina I, avançando 155 pt abaixo do rodapé) e na p. 117 (Oficina II, avançando 360 pt abaixo do rodapé), colidindo com as notas e limites físicos do documento.</td>
+                <td><span style="color: #6ee7b7; font-size: 0.88rem; font-weight: 500;">✓ Concluído</span>: Divisão estrutural da célula em duas linhas de tabela (<code>\\ \hline</code>): (1) Primeira linha contendo introdução conceitual, ciclos temáticos e 7 etapas de Silva (2016/2017) calibradas (10pt/12.5pt); (2) Segunda linha acomodando estratégias ativas, ambientes (LINEDS), comunicação discente e Avaliação completa; (3) Preservação literal de 100% das palavras autorais (Zero-Paraphrase). Compilado via <code>tectonic</code> com 100% de êxito em ambas as versões.</td>
+                <td style="text-align: center;"><span class="badge badge-success">Concluído</span></td>
+              </tr>
+              <tr>
+                <td style="text-align: center; font-weight: 700; color: var(--accent-emerald);">62</td>
+                <td style="text-align: center; font-size: 0.82rem; color: var(--text-muted); white-space: nowrap;">
+                  <i class="bi bi-clock-history me-1"></i>11/09/2026<br>
+                  <span style="color: var(--accent-emerald); font-weight: 600;">19:15</span>
+                </td>
+                <td><strong>Saneamento de Duplicidade de Obra na Bibliografia Complementar de Matemática — Ano 3</strong><br><small style="color: var(--text-muted);">Seção VI (Ementário das UCs — UC 37) • p. 88</small></td>
+                <td>Biblioteca (David Milhomens) / Comissão</td>
+                <td>A Bibliografia Complementar de Matemática — Ano 3 continha duas entradas repetidas da mesma obra da SBM (<i>A Matemática do ensino médio</i> de Elon Lages Lima), reduzindo o acervo real a apenas 2 títulos distintos e gerando inconformidade com a norma do SiBI/IFSC (mínimo de 3 títulos complementares).</td>
+                <td><span style="color: #6ee7b7; font-size: 0.88rem; font-weight: 500;">✓ Concluído</span>: Eliminação da repetição com: (1) Inclusão de Gelson Iezzi (<i>Conecte matemática: volume único</i>, Saraiva, 2015), presente no Sophia com 3 exemplares físicos no Câmpus Garopaba; (2) Especificação do volume temático do 3º ano da SBM (<i>A matemática do ensino médio: volume 3</i>, 2016); (3) Preservação de Paiva (2013), consolidando a lista em rigorosa ordem alfabética (Iezzi, Lima e Paiva). Compilado via <code>tectonic</code> com 100% de sucesso nas versões com e sem destaques.</td>
+                <td style="text-align: center;"><span class="badge badge-success">Concluído</span></td>
+              </tr>
+              <tr>
+                <td style="text-align: center; font-weight: 700; color: var(--accent-emerald);">61</td>
+                <td style="text-align: center; font-size: 0.82rem; color: var(--text-muted); white-space: nowrap;">
+                  <i class="bi bi-clock-history me-1"></i>11/09/2026<br>
+                  <span style="color: var(--accent-emerald); font-weight: 600;">18:40</span>
+                </td>
+                <td><strong>Atualização Normativa e Saneamento das Referências Institucionais (Revisão da Biblioteca — David Milhomens)</strong><br><small style="color: var(--text-muted);">Seção IX (Subitem 29 — REFERÊNCIAS) • pp. 120–121</small></td>
+                <td>Biblioteca (David Milhomens)</td>
+                <td>Inconsistências críticas identificadas na auditoria da biblioteca: Resolução CONSUP 142/2025 com data incorreta ("16 de dezembro de 2025") e link genérico; Resolução CNE/CP 2/2024 com ementa trocada; CNCT com ano 2024 e sem link direto da 4ª edição; Resolução CNE/CP 1/2021 com link antigo; ausência das obras institucionais de Adriano Larentes da Silva (2016) e E. Silva (2016) sobre Ciclos Temáticos; e ano de Saviani divergente do acervo Sophia (2019).</td>
+                <td><span style="color: #6ee7b7; font-size: 0.88rem; font-weight: 500;">✓ Concluído</span>: Substituição integral com 100% de conformidade às correções do David: (1) Res. CONSUP 142 para 17 de março de 2025 com link direto SIGRH; (2) Res. CNE/CP 2/2024 corrigida com a ementa real de incorporação aos catálogos (CNCT/CST); (3) CNCT 4ª ed. (2025) com link direto em PDF; (4) Res. CNE/CP 1/2021 com link oficial; (5) Inclusão de Adriano Larentes da Silva (2016) com link oficial do IFSC; (6) Inclusão de E. Silva (2016); (7) Saviani ajustado para 2019 (Sophia); (8) Preservação das legislações federais e Saviani em Galvão (2020), tudo em ordem alfabética ABNT NBR 6023. Compilado via <code>tectonic</code>.</td>
+                <td style="text-align: center;"><span class="badge badge-success">Concluído</span></td>
+              </tr>
+              <tr>
+                <td style="text-align: center; font-weight: 700; color: var(--accent-emerald);">60</td>
+                <td style="text-align: center; font-size: 0.82rem; color: var(--text-muted); white-space: nowrap;">
+                  <i class="bi bi-clock-history me-1"></i>11/09/2026<br>
+                  <span style="color: var(--accent-emerald); font-weight: 600;">14:30</span>
+                </td>
+                <td><strong>Ordenação Alfabética Estrita das Bibliografias (Básica e Complementar) e Inclusão de Dicionários Demandados pela Biblioteca</strong><br><small style="color: var(--text-muted);">Seção VI (Ementário das UCs — 45 UCs) • pp. 20–105</small></td>
+                <td>Biblioteca (David Milhomens) / Comissão</td>
+                <td>(1) Auditoria em todas as 45 UCs identificou 21 disciplinas com desalinhamento de ordem alfabética nas bibliografias básica e/ou complementar (entradas do FNDE no topo, autores fora de ordem A–Z); (2) Apontamentos do Bibliotecário David Matos Milhomens no Google Docs solicitando a inclusão de 2 dicionários na Bibliografia Básica para aquisição futura no plano de compras (Inglês 1 e Inglês 2).</td>
+                <td><span style="color: #6ee7b7; font-size: 0.88rem; font-weight: 500;">✓ Concluído</span>: (1) Inclusão do <i>Dicionário Oxford Escolar</i> (2018) na básica da UC 03 e do <i>Collins Dicionário Prático</i> (John Whitlam, 2018) na básica da UC 20, marcados com <code>\revisao{...}</code>; (2) Reordenação alfabética estrita e automatizada de 100% das referências básicas e complementares em todas as 45 UCs; (3) Preservação integral do dimensionamento e quebras de página. Compilado via <code>tectonic</code> com 100% de sucesso nas versões com e sem destaques.</td>
+                <td style="text-align: center;"><span class="badge badge-success">Concluído</span></td>
+              </tr>
               <tr>
                 <td style="text-align: center; font-weight: 700; color: var(--accent-emerald);">59</td>
                 <td style="text-align: center; font-size: 0.82rem; color: var(--text-muted); white-space: nowrap;">
