@@ -1,25 +1,34 @@
 \documentclass{../../modelos/latex-shared/ifsc-ppc}
 \usepackage{indentfirst}
 
+% Sumário: partes no formato do formulário do CEPE ("I – DADOS...", "VIII – CORPO..."), sem o numeral colar no título (retorno DIREN, item 12)
+\usepackage{titletoc}
+\titlecontents{section}[0pt]{\addvspace{1em}\bfseries\color{ifscgreen}}{\thecontentslabel\ --\ }{}{\hfill\contentspage}
+
 % -------------------------------------------------------------
 % CONTROLE DE DESTACAMENTO DE ALTERAÇÕES (REVISÃO EM AZUL)
 % -------------------------------------------------------------
 \newif\ifhighlightchanges
 \highlightchangestrue  % Altere para \highlightchangesfalse para gerar o documento final em preto
 
+% \revisao{...}     = alterações das rodadas anteriores (até a versão enviada ao CEPE em 11/09/2026): sempre em preto
+% \revisaocepe{...} = alterações feitas após o retorno do CEPE (13/10/2026): em azul na versão com destaques
+\newcommand{\revisao}[1]{#1}
+\newcommand{\revisacor}{}
 \ifhighlightchanges
-  \newcommand{\revisao}[1]{\textcolor{blue}{#1}}
-  \newcommand{\revisacor}{\color{blue}}
+  \newcommand{\revisaocepe}[1]{\textcolor{blue}{#1}}
 \else
-  \newcommand{\revisao}[1]{#1}
-  \newcommand{\revisacor}{}
+  \newcommand{\revisaocepe}[1]{#1}
 \fi
+
+% Subdivisões internas que não constam no formulário padrão do CEPE: aparecem no texto, mas não no sumário (retorno DIREN, item 12)
+\newcommand{\semsumario}[1]{\addtocontents{toc}{\protect\setcounter{tocdepth}{2}}#1\addtocontents{toc}{\protect\setcounter{tocdepth}{4}}}
 
 % -------------------------------------------------------------
 % CONTROLE DE MARCA D'ÁGUA / CONTROLE DE VERSÃO (RELEASE)
 % -------------------------------------------------------------
 \newif\ifwatermarkrelease
-\watermarkreleasetrue  % Altere para \watermarkreleasefalse para desativar a marca d'água de release
+\watermarkreleasefalse  % (retorno DIREN, item 12: rodapé só com o número da página, como no formulário do CEPE) Altere para \watermarkreleasefalse para desativar a marca d'água de release
 
 \newcommand{\releasename}{VERSÃO FINAL -- ENCAMINHAMENTO COLEGIADO E CEPE}
 \newcommand{\releasedate}{11/09/2026 -- 20:36}
@@ -49,14 +58,39 @@
 
 
 
+% Capa no formato do formulário do CEPE, com o campo "Local, data" (retorno DIREN, item 12)
+\renewcommand{\capaPPC}[2]{
+    \thispagestyle{empty}
+    \makeifscbackground
+    \begin{center}
+        \vspace*{1cm}
+        \begin{tcolorbox}[standard jigsaw, colframe=ifscgreen, opacityback=0, boxrule=0pt, width=1.0\textwidth, center]
+            \centering \itshape \bfseries \color{ifscgreen} \Large INSTITUTO FEDERAL DE SANTA CATARINA \\ \large CÂMPUS GAROPABA
+        \end{tcolorbox}
+        \vfill
+        {\fontsize{48}{54}\selectfont \itshape \bfseries \color{ifscgreen} #1} \\
+        \vfill
+        {\large \bfseries \color{ifscgreen} \revisaocepe{#2}}
+        \vspace*{6.2cm}
+    \end{center}
+    \newpage
+}
+
 \begin{document}
 
 % --- Capa ---
-\capaPPC{Técnico em Administração Integrado ao Ensino Médio}{2026}
+\capaPPC{Técnico em Administração Integrado ao Ensino Médio}{Garopaba, novembro de 2026.}
 
 % --- Sumário ---
 \tableofcontents
 \newpage
+
+% Título de abertura do formulário do CEPE (retorno DIREN, item 12)
+\begin{center}
+{\Large\bfseries\revisaocepe{PROJETO PEDAGÓGICO DE CURSO}}\\[8pt]
+{\large\bfseries\revisaocepe{TÉCNICO EM ADMINISTRAÇÃO INTEGRADO AO ENSINO MÉDIO}}
+\end{center}
+\vspace{0.8\baselineskip}
 
 % =========================================================
 \section{DADOS DA INSTITUIÇÃO}
@@ -112,9 +146,27 @@ E-mail: depe.gpb@ifsc.edu.br
 \subsection{Aprovação no Câmpus:}
 \revisao{Minuta em fase de apreciação final pelo Colegiado do Câmpus Garopaba.}
 
+% --- Marcador do formulário padrão do CEPE (retorno DIREN, item 12) ---
+\clearpage
+\begin{center}
+{\fontsize{18pt}{22pt}\selectfont\revisaocepe{PARTE 2 -- PPC}}
+\end{center}
+\vspace{0.5\baselineskip}
+
 % =========================================================
 \section{DADOS DO CURSO}
 \subsection{Dados do Curso:}
+% Subitens do formulário no sumário, como no modelo do CEPE
+\addcontentsline{toc}{subsubsection}{\protect\numberline{7.1}\protect\revisaocepe{Nome do Curso:}}
+\addcontentsline{toc}{subsubsection}{\protect\numberline{7.2}\protect\revisaocepe{Eixo Tecnológico:}}
+\addcontentsline{toc}{subsubsection}{\protect\numberline{7.3}\protect\revisaocepe{Forma de oferta}}
+\addcontentsline{toc}{subsubsection}{\protect\numberline{7.4}\protect\revisaocepe{Modalidade:}}
+\addcontentsline{toc}{subsubsection}{\protect\numberline{7.5}\protect\revisaocepe{Diplomação do Egresso:}}
+\addcontentsline{toc}{subsubsection}{\protect\numberline{7.6}\protect\revisaocepe{CH Total:}}
+\addcontentsline{toc}{paragraph}{\protect\numberline{7.6.1}\protect\revisaocepe{CH Aulas presenciais}}
+\addcontentsline{toc}{paragraph}{\protect\numberline{7.6.2}\protect\revisaocepe{CH Aulas EaD:}}
+\addcontentsline{toc}{paragraph}{\protect\numberline{7.6.3}\protect\revisaocepe{CH Estágio}}
+\addcontentsline{toc}{paragraph}{\protect\numberline{7.6.4}\protect\revisaocepe{Demais CH previstas}}
 
 % --- QUADRO 1: DADOS DO CURSO ---
 \renewcommand{\tablename}{Quadro}
@@ -143,6 +195,17 @@ E-mail: depe.gpb@ifsc.edu.br
 \vspace{0.3cm}
 
 \subsection{Dados da Oferta:}
+% Subitens do formulário no sumário, como no modelo do CEPE
+\addcontentsline{toc}{subsubsection}{\protect\numberline{8.1}\protect\revisaocepe{Local da Oferta:}}
+\addcontentsline{toc}{subsubsection}{\protect\numberline{8.2}\protect\revisaocepe{Vagas por Turma:}}
+\addcontentsline{toc}{subsubsection}{\protect\numberline{8.3}\protect\revisaocepe{Vagas totais Anuais:}}
+\addcontentsline{toc}{subsubsection}{\protect\numberline{8.4}\protect\revisaocepe{Periodicidade de ingresso no curso}}
+\addcontentsline{toc}{subsubsection}{\protect\numberline{8.5}\protect\revisaocepe{Turno:}}
+\addcontentsline{toc}{subsubsection}{\protect\numberline{8.6}\protect\revisaocepe{Integralização (Mínimo):}}
+\addcontentsline{toc}{subsubsection}{\protect\numberline{8.7}\protect\revisaocepe{Integralização (Máximo):}}
+\addcontentsline{toc}{subsubsection}{\protect\numberline{8.8}\protect\revisaocepe{Regime de matrícula:}}
+\addcontentsline{toc}{subsubsection}{\protect\numberline{8.9}\protect\revisaocepe{Forma de Ingresso:}}
+\addcontentsline{toc}{subsubsection}{\protect\numberline{8.10}\protect\revisaocepe{Previsão de início da Oferta}}
 
 % --- QUADRO 2: DADOS DA OFERTA ---
 \begin{table}[H]
@@ -172,26 +235,28 @@ E-mail: depe.gpb@ifsc.edu.br
 
 \subsection{Legislação (profissional e educacional) aplicada ao curso:}
 
-\subsubsection{Legislação da Profissão:}
+\semsumario{\subsubsection{Legislação da Profissão:}}
 \begin{itemize}
     \item \revisao{Classificação Brasileira de Ocupações (CBO): 3513-05 -- Técnico em Administração;}
     \item \revisao{Lei nº 4.769, de 9 de setembro de 1965 (Dispõe sobre o exercício da profissão de Administrador e regulamentações do CFA/CRA).}
 \end{itemize}
 
-\subsubsection{Legislação Educacional:}
+\semsumario{\subsubsection{Legislação Educacional:}}
 \revisao{Este projeto de curso está em sintonia com a legislação educacional vigente e com as diretrizes pedagógicas institucionais, buscando a superação da aparente dicotomia entre a formação geral e a preparação para o trabalho:}
 \begin{itemize}
     \item \revisao{Lei nº 9.394, de 20 de dezembro de 1996 (Estabelece as Diretrizes e Bases da Educação Nacional -- LDB);}
     \item \revisao{Lei nº 11.892, de 29 de dezembro de 2008 (Institui a Rede Federal de Educação Profissional, Científica e Tecnológica e cria os Institutos Federais).}
 \end{itemize}
 
-\subsubsection{Educação Inclusiva:}
+\semsumario{\subsubsection{Educação Inclusiva:}}
 \begin{itemize}
     \item \revisao{Decreto nº 5.296, de 2 de dezembro de 2004 (Regulamenta as Leis nº 10.048/2000 e 10.098/2000 sobre promoção da acessibilidade das pessoas com deficiência ou com mobilidade reduzida);}
-    \item \revisao{Decreto nº 7.611, de 17 de novembro de 2011 (Dispõe sobre a Educação Especial e o Atendimento Educacional Especializado -- AEE).}
+    \item \revisao{Decreto nº 7.611, de 17 de novembro de 2011 (Dispõe sobre a Educação Especial e o Atendimento Educacional Especializado -- AEE);}
+    \item \revisaocepe{Lei nº 10.436, de 24 de abril de 2002 (Dispõe sobre a Língua Brasileira de Sinais -- Libras);}
+    \item \revisaocepe{Decreto nº 5.626, de 22 de dezembro de 2005 (Regulamenta a Lei nº 10.436/2002 e dispõe sobre a formação de docentes e a oferta de Libras).}
 \end{itemize}
 
-\subsubsection{Outras Diretrizes Gerais da Educação Nacional:}
+\semsumario{\subsubsection{Outras Diretrizes Gerais da Educação Nacional:}}
 \begin{itemize}
     \item \revisao{Decreto nº 5.154, de 23 de julho de 2004 (Regulamenta a articulação da Educação Profissional Técnica com o Ensino Médio);}
     \item \revisao{Decreto nº 5.622, de 19 de dezembro de 2005 (Regulamenta o Art. 80 da LDB para a Educação a Distância);}
@@ -214,7 +279,7 @@ E-mail: depe.gpb@ifsc.edu.br
     \item \revisao{Lei nº 10.741, de 1º de outubro de 2003 (Estatuto da Pessoa Idosa).}
 \end{itemize}
 
-\subsubsection{Legislação Interna do IFSC:}
+\semsumario{\subsubsection{Legislação Interna do IFSC:}}
 \begin{itemize}
     \item \revisao{Resolução nº 54/2010/CS (Regimento Geral do IFSC);}
     \item \revisao{Resolução nº 028/2009/CS (Estatuto do IFSC);}
@@ -229,7 +294,7 @@ E-mail: depe.gpb@ifsc.edu.br
     \item \revisao{Resolução CEPE/IFSC nº 72, de 22 de outubro de 2020 (Diretrizes para oferta de componentes na modalidade a distância).}
 \end{itemize}
 
-\subsubsection{Proteção de Dados, Segurança e Cidadania Digital:}
+\semsumario{\subsubsection{Proteção de Dados, Segurança e Cidadania Digital:}}
 \begin{itemize}
     \item \revisao{Lei nº 13.709, de 14 de agosto de 2018 (Lei Geral de Proteção de Dados Pessoais -- LGPD);}
     \item \revisao{Lei nº 14.811, de 12 de janeiro de 2024 (Medidas de proteção à criança e ao adolescente contra a violência nos estabelecimentos educacionais ou similares);}
@@ -297,10 +362,10 @@ Pescaria Brava & 10.190 & -- \\ \hline
 Concluintes do ensino fundamental provenientes de qualquer escola do município e região.
 
 \subsection{Objetivo do curso:}
-\subsubsection{Objetivo Geral:}
+\semsumario{\subsubsection{Objetivo Geral:}}
 \revisao{De maneira geral, o curso objetiva promover a formação integral dos estudantes, articulando os conhecimentos da formação geral à formação profissional técnica em Administração, preparando-os para a atuação no mundo do trabalho e para a continuidade dos estudos, bem como para o exercício da cidadania, o desenvolvimento da consciência crítica e da autonomia, formando pessoas capazes de compreender as necessidades das comunidades, visando o bem-estar e a qualidade de vida do coletivo e seus indivíduos, a preservação do meio ambiente e a construção de uma sociedade mais ética, justa e igualitária.}
 
-\subsubsection{Objetivos Específicos:}
+\semsumario{\subsubsection{Objetivos Específicos:}}
 \revisao{De modo específico, o curso intenciona:}
 \begin{itemize}
     \item \revisao{Possibilitar a compreensão do mundo e suas transformações históricas, geográficas, científicas, tecnológicas, sociais, culturais, políticas e econômicas, e o estabelecimento de relações com conhecimentos do cotidiano dos educandos;}
@@ -354,6 +419,8 @@ A organização do trabalho pedagógico do Curso Técnico em Administração Int
 
 \revisao{Os professores responsáveis pelas Oficinas de Integração, bem como de outros componentes curriculares integradores, deverão definir horário periódico de planejamento para organização dos ciclos, metodologias e atividades a serem desenvolvidos em cada oficina. Na execução das oficinas, os professores deverão orientar as atividades propostas priorizando o protagonismo dos estudantes no processo.}
 
+\revisaocepe{Para fins de contabilização da carga horária, as 160 horas do Núcleo Politécnico são distribuídas em 120 horas para a Formação Técnica e 40 horas para a Formação Geral, o que corresponde, em cada Oficina de Integração (80 horas), a 60 horas da Formação Técnica e 20 horas da Formação Geral. Essa distribuição, admitida pelo art. 7º da Resolução CONSUP/IFSC nº 142/2025, que estabelece a divisão paritária como preferencial, tem como finalidade exclusiva o cumprimento da carga horária mínima da formação profissional. Do ponto de vista pedagógico, as Oficinas de Integração mantêm a atuação paritária entre a Formação Geral e a Formação Técnica, com planejamento, condução e avaliação compartilhados entre os docentes das duas formações.}
+
 \revisao{A metodologia de ensino de cada componente curricular deverá levar em consideração a realidade do estudante e a construção do pensamento crítico e emancipatório, tendo a prática social como ponto de partida e ponto de chegada para o processo ensino-aprendizagem:
 \begin{quote}
 \small
@@ -373,12 +440,27 @@ A organização do trabalho pedagógico do Curso Técnico em Administração Int
 \subsection{Matriz curricular:}
 \revisao{A matriz curricular do Curso Técnico em Administração Integrado ao Ensino Médio, estruturada com duração regular de 3 (três) anos organizados em regime anual (seis semestres letivos), apresenta carga horária total de 3.120 horas de formação presencial. O percurso formativo articula de forma integrada a Formação Geral, a Formação Técnica e Profissional da área de Gestão e Negócios e o Núcleo Politécnico Comum (desenvolvido por meio das Oficinas de Integração I e II no segundo e terceiro anos), garantindo a indissociabilidade entre teoria e prática e promovendo a formação humana integral.}
 
+\revisaocepe{Para fins de atendimento às cargas horárias mínimas, as 160 horas do Núcleo Politécnico são contabilizadas em 120 horas para a Formação Técnica e 40 horas para a Formação Geral, conforme o art. 7º da Resolução CONSUP/IFSC nº 142/2025. Dessa forma, a Formação Técnica Profissional totaliza 800 horas (680 horas em unidades curriculares técnicas e 120 horas do Núcleo Politécnico), atendendo à carga horária mínima de 800 horas estabelecida no Catálogo Nacional de Cursos Técnicos (CNCT) para o Técnico em Administração, e a Formação Geral totaliza 2.320 horas (2.280 horas em unidades curriculares e 40 horas do Núcleo Politécnico), acima do mínimo de 2.100 horas. Essa distribuição tem finalidade exclusiva de contabilização da carga horária; pedagogicamente, as Oficinas de Integração mantêm a atuação paritária entre as duas formações, conforme descrito na metodologia do curso. A contabilização está detalhada no Quadro~\ref{qua:ch-minimos}.}
+
 \input{ementario_adm.tex}
 
 \subsection{Estágio curricular supervisionado:}
 O Estágio Curricular no Curso Técnico em Administração Integrado ao Ensino Médio é \textbf{não obrigatório}, em consonância com a Resolução CNE/CP nº 1/2021 e o Regulamento Didático-Pedagógico (RDP) do IFSC. O estudante poderá realizar estágio não obrigatório como atividade de prática profissional complementar, devendo haver celebração do Termo de Compromisso de Estágio (TCE) e supervisão docente.
 
 \subsection{Atividade em EaD:}
+\revisao{Não se aplica.}
+
+% Subitens 21.1 a 21.4 do formulário padrão do CEPE (retorno DIREN, item 12)
+\subsubsection{\revisaocepe{Equipe multidisciplinar: concepção, produção e disseminação de tecnologias, metodologias e os recursos educacionais para a educação a distância.}}
+\revisao{Não se aplica.}
+
+\subsubsection{\revisaocepe{Atividades de tutoria:}}
+\revisao{Não se aplica.}
+
+\subsubsection{\revisaocepe{Material Didático Institucional:}}
+\revisao{Não se aplica.}
+
+\subsubsection{\revisaocepe{Mecanismos de interação entre docentes, tutores e estudantes:}}
 \revisao{Não se aplica.}
 
 \subsection{Certificações intermediárias:}
@@ -463,7 +545,7 @@ O Estágio Curricular no Curso Técnico em Administração Integrado ao Ensino M
 \subsection{Corpo docente e técnico do curso:}
 \revisao{O quadro de pessoal do IFSC Câmpus Garopaba envolvido no desenvolvimento do curso é composto por servidores qualificados e concursados, conforme discriminado a seguir:}
 
-\subsubsection{Docentes:}
+\semsumario{\subsubsection{Docentes:}}
 \begin{xltabular}{\linewidth}{|X|p{4cm}|c|}
 \caption{Quadro Docente do Câmpus Garopaba} \label{tab:docentes} \\
 \hline
@@ -519,7 +601,9 @@ THIAGO LIPINSKI PAES & INFORMÁTICA & DE* \\ \hline
 THIAGO WALTRIK & INFORMÁTICA & DE* \\ \hline
 \end{xltabular}
 
-\subsubsection{Técnico-Administrativos em Educação:}
+\revisaocepe{Na hipótese de oferta das unidades curriculares Libras I e Libras II, em substituição a Espanhol -- Ano 1 e Espanhol -- Ano 2 (ver nota das matrizes curriculares do 1º e do 2º ano), o Câmpus providenciará docente com habilitação em Língua Brasileira de Sinais, por meio de contratação ou remanejamento, conforme o Decreto nº 5.626/2005. O desenvolvimento dessas unidades curriculares contará com o apoio do Núcleo de Acessibilidade Educacional (NAE) e da docente de Educação Especial do Câmpus, que também acompanharão os estudantes surdos no Atendimento Educacional Especializado.}
+
+\semsumario{\subsubsection{Técnico-Administrativos em Educação:}}
 \begin{xltabular}{\linewidth}{|X|X|}
 \caption{Quadro Técnico-Administrativo em Educação} \label{tab:taes} \\
 \hline
@@ -551,8 +635,8 @@ SARITA WISBECK & TÉCNICA DE LABORATÓRIO / ÁREA QUÍMICA \\ \hline
 \end{xltabular}
 
 % =========================================================
-\section{REFERÊNCIAS}
-\subsection{Referências:}
+% Item 29 dentro da parte VIII, conforme o formulário padrão do CEPE
+\subsection{\revisaocepe{Referências:}}
 
 {\raggedright
 \linespread{1.0}\selectfont
@@ -575,22 +659,22 @@ BRASIL. \textbf{Lei nº 13.005, de 25 de junho de 2014}. Aprova o Plano Nacional
 
 \revisao{IBGE. \textbf{Cidades e Estados do Brasil}. Rio de Janeiro: IBGE, 2025. Disponível em: \url{https://cidades.ibge.gov.br/}. Acesso em: 9 set. 2026.}
 
-\revisao{INSTITUTO FEDERAL DE EDUCAÇÃO, CIÊNCIA E TECNOLOGIA DE SANTA CATARINA. \textbf{Resolução CONSUP nº 20, de 25 de junho de 2018}. Aprova o Regulamento Didático-Pedagógico do IFSC e dá outras providências. Florianópolis, SC: IFSC, 2018. Disponível em: \url{https://www.ifsc.edu.br/documents/30725/0/resolucao20_2018_rdp1\%2B\%282\%29.pdf/61471b68-60c4-4e4a-856a-15536ba90f54}. Acesso em: 10 set. 2026.}
+\revisaocepe{INSTITUTO FEDERAL DE SANTA CATARINA (IFSC). Conselho Superior. \textbf{Resolução CONSUP/IFSC nº 20, de 25 de junho de 2018}. Aprova o Regulamento Didático-Pedagógico do IFSC e dá outras providências. Florianópolis, SC: IFSC, 2018. Disponível em: \url{https://www.ifsc.edu.br/documents/30725/0/resolucao20_2018_rdp1\%2B\%282\%29.pdf/61471b68-60c4-4e4a-856a-15536ba90f54}. Acesso em: 10 set. 2026.}
 
-\revisao{INSTITUTO FEDERAL DE SANTA CATARINA (IFSC). Conselho Superior. \textbf{Resolução CONSUP/IFSC nº 142, de 17 de março de 2025}. Aprova as Diretrizes Curriculares Institucionais para os Cursos Técnicos Integrados ao Ensino Médio do IFSC. Florianópolis: IFSC, 2025. Disponível em: \url{https://sigrh.ifsc.edu.br/sigrh/downloadArquivo?idArquivo=4017454&key=83b4b05377ec4635455cbe3e0ee4ec67}. Acesso em: 9 set. 2026.}
+\revisaocepe{INSTITUTO FEDERAL DE SANTA CATARINA (IFSC). Conselho Superior. \textbf{Resolução CONSUP/IFSC nº 142, de 27 de março de 2025}. Aprova as Diretrizes Curriculares Institucionais para os Cursos Técnicos Integrados ao Ensino Médio do IFSC. Florianópolis: IFSC, 2025. Disponível em: \url{https://sigrh.ifsc.edu.br/sigrh/downloadArquivo?idArquivo=4017454&key=83b4b05377ec4635455cbe3e0ee4ec67}. Acesso em: 9 set. 2026.}
 
 \revisao{SAVIANI, Dermeval. Infância e pedagogia histórico-crítica. In: GALVÃO, Ana Carolina (org.). \textbf{Infância e pedagogia histórico-crítica}. Campinas: Autores Associados, 2020. p. 247-280.}
 
 \revisao{SAVIANI, Dermeval. \textbf{Pedagogia histórico-crítica, quadragésimo ano}: novas aproximações. Campinas: Autores Associados, 2019.}
 
-\revisao{SILVA, Adriano Larentes da (org.) \textit{et al.} \textbf{O currículo integrado no cotidiano da sala de aula}. Florianópolis: Publicação do IFSC, 2016. Disponível em: \url{https://www.ifsc.edu.br/documents/30701/523474/o_curriculo_integrado.pdf/6151bc15-d409-b17b-1efd-3f21e89314e3}. Acesso em: 10 set. 2026.}
+\revisaocepe{SILVA, Adriano Larentes da \textit{et al.} (org.). \textbf{O currículo integrado no cotidiano da sala de aula}. Florianópolis: Publicação do IFSC, 2016. Disponível em: \url{https://www.ifsc.edu.br/documents/30701/523474/o_curriculo_integrado.pdf/6151bc15-d409-b17b-1efd-3f21e89314e3}. Acesso em: 10 set. 2026.}
 
-\revisao{SILVA, E. \textbf{Metodologia de Ciclos Temáticos e Oficinas de Integração na Educação Profissional Técnica}. Florianópolis: IFSC, 2016.}
+\revisaocepe{SILVA, E. \textbf{Metodologia de ciclos temáticos e oficinas de integração na educação profissional técnica}. Florianópolis: IFSC, 2016.}
 \par}
 
 % =========================================================
-\section{ANEXOS}
-\subsection{Documentos Complementares e Registros de Tramitação:}
+% Item 30 dentro da parte VIII, conforme o formulário padrão do CEPE
+\subsection{\revisaocepe{Anexos:}}
 
 \begin{itemize}
     \item \revisao{\textbf{Anexo I -- Portaria de Designação da Comissão de Reformulação do PPC:} Portaria DG nº 186 de 21 de agosto de 2026 (alterando a Portaria DG nº 156 de 22 de julho de 2026), designando a comissão responsável pela revisão e reformulação dos PPCs dos Cursos Técnicos Integrados do Câmpus Garopaba;}

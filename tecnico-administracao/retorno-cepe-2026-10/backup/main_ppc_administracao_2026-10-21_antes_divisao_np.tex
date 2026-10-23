@@ -1,0 +1,605 @@
+\documentclass{../../modelos/latex-shared/ifsc-ppc}
+\usepackage{indentfirst}
+
+% -------------------------------------------------------------
+% CONTROLE DE DESTACAMENTO DE ALTERAÇÕES (REVISÃO EM AZUL)
+% -------------------------------------------------------------
+\newif\ifhighlightchanges
+\highlightchangestrue  % Altere para \highlightchangesfalse para gerar o documento final em preto
+
+\ifhighlightchanges
+  \newcommand{\revisao}[1]{\textcolor{blue}{#1}}
+  \newcommand{\revisacor}{\color{blue}}
+\else
+  \newcommand{\revisao}[1]{#1}
+  \newcommand{\revisacor}{}
+\fi
+
+% -------------------------------------------------------------
+% CONTROLE DE MARCA D'ÁGUA / CONTROLE DE VERSÃO (RELEASE)
+% -------------------------------------------------------------
+\newif\ifwatermarkrelease
+\watermarkreleasetrue  % Altere para \watermarkreleasefalse para desativar a marca d'água de release
+
+\newcommand{\releasename}{VERSÃO FINAL -- ENCAMINHAMENTO COLEGIADO E CEPE}
+\newcommand{\releasedate}{11/09/2026 -- 20:36}
+
+\ifwatermarkrelease
+  \fancyhead[C]{
+    \begin{tikzpicture}[remember picture,overlay]
+        \node[anchor=north, inner sep=0pt] at (current page.north) {
+            \includegraphics[width=\paperwidth,height=2.8cm]{../../modelos/latex-shared/identidade_visual/image1.png}
+        };
+        \node[rotate=45, scale=1, text=gray!60, opacity=0.25, font=\sffamily\bfseries] at (current page.center) {
+            \fontsize{26}{32}\selectfont \releasename\quad\releasedate
+        };
+    \end{tikzpicture}
+  }
+  \fancyfoot[L]{\fontsize{7.5}{9}\selectfont\color{gray!80} \textsf{\textbf{\releasename} $\bullet$ Fechamento: \releasedate}}
+\else
+  \fancyhead[C]{
+    \begin{tikzpicture}[remember picture,overlay]
+        \node[anchor=north, inner sep=0pt] at (current page.north) {
+            \includegraphics[width=\paperwidth,height=2.8cm]{../../modelos/latex-shared/identidade_visual/image1.png}
+        };
+    \end{tikzpicture}
+  }
+  \fancyfoot[L]{}
+\fi
+
+
+
+\begin{document}
+
+% --- Capa ---
+\capaPPC{Técnico em Administração Integrado ao Ensino Médio}{2026}
+
+% --- Sumário ---
+\tableofcontents
+\newpage
+
+% =========================================================
+\section{DADOS DA INSTITUIÇÃO}
+Instituto Federal de Santa Catarina -- IFSC. \\
+Instituído pela Lei nº 11.892, de 29 de dezembro de 2008. \\
+Reitoria: Rua 14 de Julho, 150 -- Coqueiros -- Florianópolis -- Santa Catarina -- Brasil -- CEP 88.075-010 \\
+Fone: +55 (48) 3877-9000 -- CNPJ: 11.402.887/0001-60.
+
+% =========================================================
+\section{DADOS DO CÂMPUS PROPONENTE}
+\subsection{Câmpus:}
+Garopaba
+
+\subsection{Endereço e Telefone do Câmpus:}
+Rua Maria Aparecida Barbosa, 153, Campo D'Una, Garopaba - CEP 88495-000 \\
+Telefone: (48) 3254-7336
+
+% =========================================================
+\section{DADOS DOS RESPONSÁVEIS PELO PPC}
+\subsection{Chefia DEPE/ Departamento:}
+Prof. João Eduardo Navachi da Silveira (Chefe do Departamento de Ensino, Pesquisa e Extensão -- DEPE) \\
+E-mail: depe.gpb@ifsc.edu.br
+
+\subsection{Coordenador do curso/proponente:}
+\revisao{Prof. José Rodrigo Barth Adams}
+
+\subsection{Equipe elaboradora do projeto de curso:}
+\revisao{Comissão de Revisão dos PPCs dos Cursos Técnicos Integrados ao Ensino Médio do Câmpus Garopaba (Portaria DG nº 186 de 21 de agosto de 2026, alterando a Portaria DG nº 156 de 22 de julho de 2026):}
+\begin{itemize}
+    \item \revisao{Ana Paula Freitas;}
+    \item \revisao{André Luiz Silva de Moraes (Articulador da Comissão);}
+    \item \revisao{Alberto Felipe Friderichs Barros;}
+    \item \revisao{Adriana Murara Silva;}
+    \item \revisao{Aline Inácio Decker;}
+    \item \revisao{Carmine Inês Acker;}
+    \item \revisao{Cristiane Oliveira da Silva;}
+    \item \revisao{David Matos Milhomens;}
+    \item \revisao{Diego Marlon de Castro;}
+    \item \revisao{Fabiana de Agapito Kangerski;}
+    \item \revisao{Felix Lozano Medina;}
+    \item \revisao{Jacqueline Narciso Bastos;}
+    \item \revisao{Jean Marcel de Almeida Espinoza;}
+    \item \revisao{João Eduardo Navachi da Silveira;}
+    \item \revisao{Luiz Antonio Schalata Pacheco;}
+    \item \revisao{Maria Rosa da Silva Costa;}
+    \item \revisao{Monique Neves Garcia;}
+    \item \revisao{Nauber Gavski da Silva;}
+    \item \revisao{Rafael Pinto Garcia;}
+    \item \revisao{Sabrina Moro Villela Pacheco;}
+    \item \revisao{Schirlei Russi von Dentz.}
+\end{itemize}
+
+\subsection{Aprovação no Câmpus:}
+\revisao{Minuta em fase de apreciação final pelo Colegiado do Câmpus Garopaba.}
+
+% =========================================================
+\section{DADOS DO CURSO}
+\subsection{Dados do Curso:}
+
+% --- QUADRO 1: DADOS DO CURSO ---
+\renewcommand{\tablename}{Quadro}
+\begin{table}[H]
+\centering
+\small
+\caption{Dados Gerais do Curso Técnico em Administração}
+\label{qua:dados-curso}
+\vspace{0.2cm}
+\begin{tabularx}{\linewidth}{|p{4.4cm}|X|p{3.8cm}|X|}
+\hline
+\rowcolor{cinzaTabela}
+\multicolumn{4}{|l|}{\textcolor{ifscgreen}{\textbf{\large 7. Dados do Curso:}}} \\ \hline
+\textcolor{ifscgreen}{\textbf{\textit{7.1. Nome do Curso:}}} & \multicolumn{3}{p{\dimexpr\linewidth-4.4cm-4\tabcolsep-3\arrayrulewidth\relax}|}{Curso Técnico em Administração.} \\ \hline
+\textcolor{ifscgreen}{\textbf{\textit{7.2. Eixo Tecnológico:}}} & \multicolumn{3}{p{\dimexpr\linewidth-4.4cm-4\tabcolsep-3\arrayrulewidth\relax}|}{Gestão e negócios.} \\ \hline
+\textcolor{ifscgreen}{\textbf{\textit{7.3 Forma de oferta}}} & \multicolumn{3}{p{\dimexpr\linewidth-4.4cm-4\tabcolsep-3\arrayrulewidth\relax}|}{Técnico Integrado ao Ensino Médio.\footnote{Conforme Lei nº 9.394, de 20 de dezembro de 1996, art. 36-C, alínea c e art. 46 do RDP.}} \\ \hline
+\textcolor{ifscgreen}{\textbf{\textit{7.4. Modalidade:}}} & \multicolumn{3}{p{\dimexpr\linewidth-4.4cm-4\tabcolsep-3\arrayrulewidth\relax}|}{Presencial.} \\ \hline
+\textcolor{ifscgreen}{\textbf{\textit{7.5. Diplomação do Egresso:}}} & \multicolumn{3}{p{\dimexpr\linewidth-4.4cm-4\tabcolsep-3\arrayrulewidth\relax}|}{Técnico em Administração.} \\ \hline
+\textcolor{ifscgreen}{\textbf{\textit{7.6. CH Total:}}} & \multicolumn{3}{p{\dimexpr\linewidth-4.4cm-4\tabcolsep-3\arrayrulewidth\relax}|}{\revisao{3.120 horas}} \\ \hline
+\textcolor{ifscgreen}{\textbf{7.6.1 CH Aulas presenciais}} & \revisao{3.120 horas} & \textcolor{ifscgreen}{\textbf{7.6.2. CH Aulas EaD:}} & 0 h \\ \hline
+\textcolor{ifscgreen}{\textbf{7.6.3 CH Estágio}} & \multicolumn{3}{p{\dimexpr\linewidth-4.4cm-4\tabcolsep-3\arrayrulewidth\relax}|}{0 horas (não obrigatório).} \\ \hline
+\textcolor{ifscgreen}{\textbf{7.6.4. Demais CH previstas}} & \multicolumn{3}{p{\dimexpr\linewidth-4.4cm-4\tabcolsep-3\arrayrulewidth\relax}|}{Não se aplica.} \\ \hline
+\end{tabularx}
+\end{table}
+
+\vspace{0.3cm}
+
+\subsection{Dados da Oferta:}
+
+% --- QUADRO 2: DADOS DA OFERTA ---
+\begin{table}[H]
+\centering
+\small
+\caption{Dados da Oferta do Curso Técnico em Administração}
+\label{qua:dados-oferta}
+\vspace{0.2cm}
+\begin{tabularx}{\linewidth}{|p{4.4cm}|X|p{3.8cm}|X|}
+\hline
+\rowcolor{cinzaTabela}
+\multicolumn{4}{|l|}{\textcolor{ifscgreen}{\textbf{\large 8. Dados da Oferta:}}} \\ \hline
+\textcolor{ifscgreen}{\textbf{\textit{8.1. Local da Oferta:}}} & \multicolumn{3}{p{\dimexpr\linewidth-4.4cm-4\tabcolsep-3\arrayrulewidth\relax}|}{IFSC Câmpus Garopaba. Rua Maria Aparecida Barbosa, 153 -- Campo D'Una, Garopaba - SC, CEP 88495-000, (48) 3254-7336.} \\ \hline
+\textcolor{ifscgreen}{\textbf{\textit{8.2. Vagas por Turma:}}} & \multicolumn{3}{p{\dimexpr\linewidth-4.4cm-4\tabcolsep-3\arrayrulewidth\relax}|}{40 vagas por turma.} \\ \hline
+\textcolor{ifscgreen}{\textbf{\textit{8.3. Vagas totais Anuais:}}} & \multicolumn{3}{p{\dimexpr\linewidth-4.4cm-4\tabcolsep-3\arrayrulewidth\relax}|}{40 vagas anuais.} \\ \hline
+\textcolor{ifscgreen}{\textbf{\textit{8.4. Periodicidade de ingresso no curso}}} & \multicolumn{3}{p{\dimexpr\linewidth-4.4cm-4\tabcolsep-3\arrayrulewidth\relax}|}{Anual.} \\ \hline
+\textcolor{ifscgreen}{\textbf{\textit{8.5. Turno:}}} & \multicolumn{3}{p{\dimexpr\linewidth-4.4cm-4\tabcolsep-3\arrayrulewidth\relax}|}{\revisao{Integral -- com atividade em mais de dois dias no contraturno (manhã e tarde).}} \\ \hline
+\textcolor{ifscgreen}{\textbf{\textit{8.6. Integralização (Mínimo):}}} & 06 semestres (3 anos) & \textcolor{ifscgreen}{\textbf{\textit{8.7 Integralização (Máximo):}}} & \revisao{12 semestres (6 anos)} \\ \hline
+\textcolor{ifscgreen}{\textbf{\textit{8.8. Regime de matrícula:}}} & \multicolumn{3}{p{\dimexpr\linewidth-4.4cm-4\tabcolsep-3\arrayrulewidth\relax}|}{\revisao{Matrícula seriada.}} \\ \hline
+\textcolor{ifscgreen}{\textbf{\textit{8.9. Forma de Ingresso:}}} & \multicolumn{3}{p{\dimexpr\linewidth-4.4cm-4\tabcolsep-3\arrayrulewidth\relax}|}{\revisao{Exame de Classificação.}} \\ \hline
+\textcolor{ifscgreen}{\textbf{\textit{8.10. Previsão de início da Oferta}}} & \multicolumn{3}{p{\dimexpr\linewidth-4.4cm-4\tabcolsep-3\arrayrulewidth\relax}|}{\revisao{2027/1}} \\ \hline
+\end{tabularx}
+\end{table}
+
+\subsection{Requisito de Acesso:}
+\revisao{Ensino Fundamental Completo.}
+
+\subsection{Legislação (profissional e educacional) aplicada ao curso:}
+
+\subsubsection{Legislação da Profissão:}
+\begin{itemize}
+    \item \revisao{Classificação Brasileira de Ocupações (CBO): 3513-05 -- Técnico em Administração;}
+    \item \revisao{Lei nº 4.769, de 9 de setembro de 1965 (Dispõe sobre o exercício da profissão de Administrador e regulamentações do CFA/CRA).}
+\end{itemize}
+
+\subsubsection{Legislação Educacional:}
+\revisao{Este projeto de curso está em sintonia com a legislação educacional vigente e com as diretrizes pedagógicas institucionais, buscando a superação da aparente dicotomia entre a formação geral e a preparação para o trabalho:}
+\begin{itemize}
+    \item \revisao{Lei nº 9.394, de 20 de dezembro de 1996 (Estabelece as Diretrizes e Bases da Educação Nacional -- LDB);}
+    \item \revisao{Lei nº 11.892, de 29 de dezembro de 2008 (Institui a Rede Federal de Educação Profissional, Científica e Tecnológica e cria os Institutos Federais).}
+\end{itemize}
+
+\subsubsection{Educação Inclusiva:}
+\begin{itemize}
+    \item \revisao{Decreto nº 5.296, de 2 de dezembro de 2004 (Regulamenta as Leis nº 10.048/2000 e 10.098/2000 sobre promoção da acessibilidade das pessoas com deficiência ou com mobilidade reduzida);}
+    \item \revisao{Decreto nº 7.611, de 17 de novembro de 2011 (Dispõe sobre a Educação Especial e o Atendimento Educacional Especializado -- AEE).}
+\end{itemize}
+
+\subsubsection{Outras Diretrizes Gerais da Educação Nacional:}
+\begin{itemize}
+    \item \revisao{Decreto nº 5.154, de 23 de julho de 2004 (Regulamenta a articulação da Educação Profissional Técnica com o Ensino Médio);}
+    \item \revisao{Decreto nº 5.622, de 19 de dezembro de 2005 (Regulamenta o Art. 80 da LDB para a Educação a Distância);}
+    \item \revisao{Resolução CNE/CP nº 1, de 5 de janeiro de 2021 (Define as Diretrizes Curriculares Nacionais Gerais para a Educação Profissional e Tecnológica);}
+    \item \revisao{Resolução CNE/CEB nº 2, de 13 de novembro de 2024 (Institui as Diretrizes Curriculares Nacionais para o Ensino Médio -- DCNEM);}
+    \item \revisao{Parecer CNE/CP nº 17, de 10 de novembro de 2020 (Diretrizes Curriculares Nacionais para a Educação Profissional e Tecnológica);}
+    \item \revisao{Lei nº 10.639, de 9 de janeiro de 2003, e Lei nº 11.645, de 10 de março de 2008 (Obrigatoriedade da temática História e Cultura Afro-Brasileira e Indígena no currículo);}
+    \item \revisao{Resolução CNE/CP nº 1, de 17 de junho de 2004, e Resolução CNE/CP nº 2, de 4 de abril de 2024 (Diretrizes Curriculares Nacionais para a Educação das Relações Étnico-Raciais);}
+    \item \revisao{Lei nº 9.795, de 27 de abril de 1999, Decreto nº 4.281/2002 e Resolução CNE/CP nº 2, de 15 de junho de 2012 (Política Nacional e Diretrizes Curriculares para a Educação Ambiental);}
+    \item \revisao{Decreto nº 7.037, de 21 de dezembro de 2009, e Resolução CNE/CP nº 1, de 30 de maio de 2012 (Programa Nacional e Diretrizes Curriculares para a Educação em Direitos Humanos);}
+    \item \revisao{Resolução CNE/CEB nº 2, de 15 de dezembro de 2020 (Aprova a 4ª edição do Catálogo Nacional de Cursos Técnicos -- CNCT);}
+    \item \revisao{Lei nº 11.788, de 25 de setembro de 2008 (Dispõe sobre o estágio de estudantes);}
+    \item \revisao{Lei nº 11.684, de 2 de junho de 2008 (Filosofia e Sociologia no Ensino Médio);}
+    \item \revisao{Lei nº 11.161, de 5 de agosto de 2005 (Ensino da Língua Espanhola);}
+    \item \revisao{Lei nº 12.287, de 9 de junho de 2010 (Ensino da Arte);}
+    \item \revisao{Lei nº 10.793, de 1º de dezembro de 2003 (Educação Física na Educação Básica);}
+    \item \revisao{Resolução CD/FNDE nº 38, de 16 de julho de 2009, Lei nº 13.666/2018 e Nota Técnica nº 2810740/2022/COSAN/CGPAE/DIRAE (Educação Alimentar e Nutricional e Alimentação Escolar -- PNAE);}
+    \item \revisao{Lei nº 13.005, de 25 de junho de 2014 (Aprova o Plano Nacional de Educação -- PNE);}
+    \item \revisao{Lei nº 9.503, de 23 de setembro de 1997, art. 76 (Institui o Código de Trânsito Brasileiro e estabelece a educação para o trânsito no currículo escolar);}
+    \item \revisao{Lei nº 10.741, de 1º de outubro de 2003 (Estatuto da Pessoa Idosa).}
+\end{itemize}
+
+\subsubsection{Legislação Interna do IFSC:}
+\begin{itemize}
+    \item \revisao{Resolução nº 54/2010/CS (Regimento Geral do IFSC);}
+    \item \revisao{Resolução nº 028/2009/CS (Estatuto do IFSC);}
+    \item \revisao{Resolução CONSUP/IFSC nº 7, de 04 de março de 2020 (Plano de Desenvolvimento Institucional -- PDI 2020-2024);}
+    \item \revisao{Resolução CONSUP/IFSC nº 20, de 25 de junho de 2018 (Regulamento Didático-Pedagógico do IFSC -- RDP);}
+    \item \revisao{Resolução CONSUP/IFSC nº 142/2025 (Diretrizes para organização dos Cursos Técnicos Integrados ao Ensino Médio no IFSC);}
+    \item \revisao{Resolução CONSUP/IFSC nº 23, de 21 de agosto de 2018 (Plano Estratégico de Permanência e Êxito dos Estudantes do IFSC);}
+    \item \revisao{Resolução CONSUP/IFSC nº 98, de 22 de julho de 2024 (Aprova a nova Política de Permanência e Êxito -- PEPEE);}
+    \item \revisao{Resolução CONSUP/IFSC nº 01, de 03 de março de 2023 (Política de Prevenção e Combate ao Assédio Moral, Sexual e Demais Violências no IFSC);}
+    \item \revisao{Resolução CONSUP/IFSC nº 58, de 11 de dezembro de 2023 (Política de Internacionalização do IFSC);}
+    \item \revisao{Resolução CEPE/IFSC nº 74, de 8 de dezembro de 2016 (Regulamentação de Estágio no âmbito do IFSC);}
+    \item \revisao{Resolução CEPE/IFSC nº 72, de 22 de outubro de 2020 (Diretrizes para oferta de componentes na modalidade a distância).}
+\end{itemize}
+
+\subsubsection{Proteção de Dados, Segurança e Cidadania Digital:}
+\begin{itemize}
+    \item \revisao{Lei nº 13.709, de 14 de agosto de 2018 (Lei Geral de Proteção de Dados Pessoais -- LGPD);}
+    \item \revisao{Lei nº 14.811, de 12 de janeiro de 2024 (Medidas de proteção à criança e ao adolescente contra a violência nos estabelecimentos educacionais ou similares);}
+    \item \revisao{Lei nº 15.100, de 13 de janeiro de 2025 (Utilização de aparelhos eletrônicos portáteis pessoais por estudantes nos estabelecimentos de ensino da educação básica);}
+    \item \revisao{Lei nº 15.211, de 17 de setembro de 2025 (Estatuto Digital da Criança e do Adolescente).}
+\end{itemize}
+
+\subsection{Justificativa da Oferta do Curso no Câmpus:}
+A oferta do Curso Técnico Integrado em Administração no IFSC Câmpus Garopaba teve início em 2018, a partir da transição da modalidade concomitante para a modalidade integrada ao ensino médio no ano de 2016. Tal experiência contribui para a consolidação do seu corpo docente e infraestrutura adequada. Além disso, a oferta de curso segue prevista no Plano de Oferta de Cursos e Vagas (POCV), o que reforça o alinhamento ao planejamento institucional e às demandas regionais por formação profissional.
+
+\revisao{Considerando uma análise contextual, a região de atuação do Instituto Federal de Santa Catarina Câmpus Garopaba abrange, além do município-sede, os municípios de Imbituba, Imaruí, Laguna e Pescaria Brava, totalizando um território com população estimada em 113.162 habitantes (Tabela \ref{tab:dados-regiao-garopaba}), conforme dados do censo de 2020 (IBGE, 2026). O Índice de Desenvolvimento Humano (IDH) da região apresenta variações significativas, oscilando entre 0,667 no município de Imaruí e 0,765 em Imbituba, evidenciando desigualdades socioeconômicas entre os municípios que compõem a área de abrangência do Câmpus.}
+
+% --- TABELA 1: DADOS DA REGIÃO DE ABRANGÊNCIA (PADRÃO ABNT/IBGE: ABERTA NAS LATERAIS) ---
+\renewcommand{\tablename}{Tabela}
+\setcounter{table}{0} % Assegura a numeração oficial como Tabela 1
+\begin{table}[H]
+\centering
+\small
+\caption{Dados da região de abrangência do IFSC Câmpus Garopaba}
+\label{tab:dados-regiao-garopaba}
+\vspace{0.2cm}
+\begin{tabularx}{\linewidth}{Xcc}
+\hline
+\rowcolor{ifscgreen!20}
+\textbf{Município} & \textbf{População} & \textbf{IDH} \\ \hline
+Garopaba & 29.959 & 0,753 \\
+Imaruí & 11.881 & 0,667 \\
+Imbituba & 52.579 & 0,765 \\
+Laguna & -- & 0,752 \\
+Paulo Lopes & 9.063 & 0,716 \\
+Pescaria Brava & 10.190 & -- \\ \hline
+\rowcolor{cinzaTabela}
+\textbf{Total} & \textbf{113.162} & \textbf{--} \\ \hline
+\end{tabularx}
+\vspace{0.1cm}
+\begin{flushleft}
+\footnotesize \textit{Fonte: Dados do IBGE (2026).}
+\end{flushleft}
+\end{table}
+\renewcommand{\tablename}{Quadro}
+\setcounter{table}{2} % Dá sequência aos Quadros (Quadro 1 e 2 anteriores)
+
+\revisao{Na matriz econômica desses municípios, conforme dados do Produto Interno Bruto do Município (PIBM) (IBGE, 2024), a economia regional é concentrada no setor de serviços, acompanhada por atividades industriais específicas e por setores tradicionais ligados à pesca e à agropecuária.}
+
+\revisao{O município de Imbituba é impulsionado principalmente pelo setor de serviços, que representa aproximadamente 68,9\% do valor adicionado municipal. A cidade possui infraestrutura logística e portuária, além de forte atuação nos segmentos de comércio, turismo e transporte. Em Garopaba, há um perfil econômico semelhante, com dependência do setor terciário, especialmente das atividades ligadas ao turismo, hospedagem, gastronomia, comércio e serviços sazonais. O município tem sua dinâmica econômica intensificada durante os períodos de alta temporada turística, o que amplia a geração de emprego e renda no comércio e nos serviços. Embora possua atividades pesqueiras tradicionais e pequenas produções agrícolas, estas possuem menor participação na composição do PIB municipal.}
+
+\revisao{A matriz econômica de Laguna é predominantemente composta pelo setor de serviços, responsável por aproximadamente 55,7\% do valor adicionado municipal, seguida pela administração pública (22,5\%), agropecuária (12,7\%) e indústria (9,1\%) (IBGE, 2024). O município destaca-se pelas atividades ligadas ao comércio, turismo, pesca artesanal e agricultura familiar.}
+
+\revisao{No município de Imaruí, distinguindo-se dos demais, o setor agropecuário tem participação relevante na economia (36,6\%), com destaque para atividades da agricultura familiar e da pesca para a economia local. O setor de serviços representa cerca de 29,3\% da economia do município, seguido pela administração pública (20,8\%) e pela indústria (13,3\%) (IBGE, 2024).}
+
+\revisao{Em Pescaria Brava, emancipado em 2013, tem uma economia baseada principalmente nos serviços e no setor público. O setor de serviços representa cerca de 38,3\% da economia local, enquanto a indústria corresponde a aproximadamente 9,2\% e a agropecuária a 4,7\% (IBGE, 2024).}
+
+\revisao{De forma geral, a análise regional demonstra que:
+\begin{itemize}
+    \item O setor de serviços constitui a principal base econômica dos municípios;
+    \item O turismo possui forte influência econômica em Garopaba, Imbituba e Laguna;
+    \item A pesca artesanal mantém relevância sociocultural e econômica em toda a região litorânea;
+    \item Os municípios de Imaruí e Pescaria Brava apresentam maior dependência das atividades primárias e da administração pública;
+    \item Existe demanda crescente por qualificação profissional voltada aos setores de comércio, turismo, logística, serviços e economia do mar.
+\end{itemize}}
+
+\revisao{A formação técnica em Administração caracteriza-se pela versatilidade das possibilidades de atuação profissional, preparando os estudantes para atuar em organizações públicas, privadas e do terceiro setor, contribuindo para o desenvolvimento de seus processos de gestão. Dessa forma, na região de atuação do Câmpus, essa formação técnica, além de representar para a população mais uma oportunidade de acesso ao ensino médio articulado à educação profissional, contribui para o fortalecimento das organizações locais, por meio da formação de profissionais qualificados para atuar em seus diferentes processos de gestão, favorecendo, consequentemente, o desenvolvimento econômico e social da região.}
+
+\subsection{Público-alvo:}
+Concluintes do ensino fundamental provenientes de qualquer escola do município e região.
+
+\subsection{Objetivo do curso:}
+\subsubsection{Objetivo Geral:}
+\revisao{De maneira geral, o curso objetiva promover a formação integral dos estudantes, articulando os conhecimentos da formação geral à formação profissional técnica em Administração, preparando-os para a atuação no mundo do trabalho e para a continuidade dos estudos, bem como para o exercício da cidadania, o desenvolvimento da consciência crítica e da autonomia, formando pessoas capazes de compreender as necessidades das comunidades, visando o bem-estar e a qualidade de vida do coletivo e seus indivíduos, a preservação do meio ambiente e a construção de uma sociedade mais ética, justa e igualitária.}
+
+\subsubsection{Objetivos Específicos:}
+\revisao{De modo específico, o curso intenciona:}
+\begin{itemize}
+    \item \revisao{Possibilitar a compreensão do mundo e suas transformações históricas, geográficas, científicas, tecnológicas, sociais, culturais, políticas e econômicas, e o estabelecimento de relações com conhecimentos do cotidiano dos educandos;}
+    \item \revisao{Desenvolver conhecimentos e competências profissionais relacionados à Administração, possibilitando a atuação nos diferentes processos de gestão das organizações e contribuindo para o desenvolvimento econômico e social da região;}
+    \item \revisao{Fomentar a capacitação de profissionais como mecanismo de desenvolvimento das organizações da região nos diversos segmentos de atuação;}
+    \item \revisao{Qualificar e habilitar profissionais em Técnicos em Administração para acompanhar a evolução do conhecimento tecnológico e aplicar novos métodos e processos na prestação de bens e serviços dos diversos segmentos econômicos;}
+    \item \revisao{Incentivar a busca de soluções aos desafios e aos problemas da prática profissional, com cidadania e respeito aos princípios éticos e da sustentabilidade;}
+    \item \revisao{Refletir e incentivar as atitudes éticas e humanizadas no trabalho e no convívio social, compreendendo os processos de socialização e interdependência dos indivíduos, valorizando o coletivo, o exercício da cidadania, o respeito às singularidades e diversidades dos sujeitos e o fortalecimento da autonomia intelectual e do pensamento crítico;}
+    \item \revisao{Integrar os conhecimentos da formação geral com a formação técnica, trabalhando a interdisciplinaridade e contribuindo para o processo de desenvolvimento dos educandos e da sociedade.}
+\end{itemize}
+
+\subsection{Perfil profissional do egresso:}
+Conforme o Catálogo Nacional de Cursos Técnicos \revisao{(Brasil, 2024)}, o Técnico em Administração é um profissional habilitado para:
+\begin{itemize}
+    \item Executar operações administrativas de planejamento, pesquisas, análise e assessoria no que tange à gestão de pessoal, de materiais e produção, de serviços, gestão financeira, orçamentária e mercadológica;
+    \item Utilizar sistemas de informação e aplicar conceitos e modelos de gestão em funções administrativas, sejam operacionais, de coordenação, de chefia intermediária ou de direção superior, sob orientação;
+    \item Elaborar orçamentos, fluxos de caixa e demais demonstrativos financeiros;
+    \item Elaborar e expedir relatórios e documentos diversos;
+    \item Auxiliar na elaboração de pareceres e laudos para tomada de decisões.
+\end{itemize}
+
+\subsection{Outras características gerais do egresso:}
+Considera-se que o Técnico em Administração, além da execução de atividades previstas no Catálogo Nacional de Cursos Técnicos, seja capaz de:
+\begin{enumerate}
+    \item Ter a capacidade de inserir-se nas relações sociais e no mundo do trabalho, respeitando o meio ambiente, a diversidade de opiniões, de culturas, de gênero e de etnias, com responsabilidade, cooperação, ética, autonomia e proatividade, considerando o bem-estar coletivo;
+    \item Aplicar os conhecimentos científico-tecnológicos para explicar e analisar criticamente o funcionamento do mundo e dos processos históricos, sociais e econômicos, planejando, executando e avaliando ações de intervenção na realidade;
+    \item Ler, articular e interpretar símbolos e códigos em diferentes linguagens e representações, bem como conhecer as formas contemporâneas de linguagem, integrando os conhecimentos das várias ciências e outros campos do saber;
+    \item Auxiliar na tomada de decisões cotidianas organizacionais referentes aos processos de gestão de pessoal, financeiro, administrativo, de produção e mercadológico de modo responsável, ético e com pensamento crítico e voltado à sustentabilidade;
+    \item Estabelecer relações interpessoais e profissionais pautadas na ética, no respeito, na inclusão e na valorização da diversidade nos diferentes contextos de atuação;
+    \item Utilizar, com autonomia, tecnologias digitais de informação nas práticas profissionais, aplicando-as de forma responsável e dentro de padrões de integridade e segurança;
+    \item Organizar e controlar documentos e finanças, arquivos físicos e digitais e rotinas administrativas com atenção, precisão e sigilo, observando normas de proteção de dados e boas práticas de gestão documental e financeira;
+    \item Atuar em equipes multidisciplinares de forma proativa, colaborativa e respeitosa, respeitando a diversidade de profissionais, experiências e trajetórias de vida presentes no ambiente organizacional;
+    \item Compreender as características e a diversidade existente no mundo do trabalho, adaptando suas competências às demandas locais e contribuindo para o desenvolvimento socioeconômico da região.
+\end{enumerate}
+
+\subsection{Áreas/campo de atuação do egresso:}
+Conforme o Catálogo Nacional de Cursos Técnicos, o Técnico em Administração poderá atuar em organizações dos setores industrial, comercial e de prestação de serviços, bem como em organizações do terceiro setor.
+
+% =========================================================
+\section{ESTRUTURA CURRICULAR DO CURSO}
+\subsection{Metodologia de desenvolvimento pedagógico do curso:}
+A organização do trabalho pedagógico do Curso Técnico em Administração Integrado ao Ensino Médio fundamenta-se nos princípios e nas diretrizes institucionais estabelecidos no Plano de Desenvolvimento Institucional (PDI) do IFSC, tendo como referência a Pedagogia Histórico-Crítica e a concepção de formação humana integral. Nessa perspectiva, compreende-se o estudante como sujeito histórico e social e o conhecimento como construção humana produzida nas relações sociais, culturais, científicas e produtivas. O processo educativo busca, assim, possibilitar a apropriação crítica dos conhecimentos historicamente produzidos e a compreensão da realidade em suas múltiplas dimensões, articulando formação geral e formação profissional.
+
+\revisao{O desenvolvimento pedagógico do curso será orientado pela integração curricular e pela interdisciplinaridade, buscando superar a fragmentação dos conhecimentos e favorecer a articulação entre os componentes curriculares da formação geral e da formação técnica e profissional. Para tanto, serão estimuladas práticas pedagógicas que possibilitem estabelecer relações entre os conhecimentos científicos, tecnológicos, históricos, sociais e culturais e as situações concretas vivenciadas pelos estudantes e presentes no mundo do trabalho e na sociedade.}
+
+\revisao{As práticas educativas buscarão partir da problematização da realidade e dos conhecimentos prévios dos estudantes, promovendo processos de investigação, análise, reflexão, sistematização e aplicação dos conhecimentos. Serão utilizadas estratégias diversificadas de ensino e aprendizagem, de acordo com os objetivos e as especificidades dos componentes curriculares, tais como aulas dialogadas, estudos de caso, resolução de problemas, pesquisas, atividades experimentais, oficinas, visitas técnicas, atividades de campo, práticas em laboratório, projetos, seminários, produção de materiais e outras propostas que favoreçam a participação ativa dos estudantes e a articulação entre teoria e prática.}
+
+\revisao{As unidades curriculares Oficinas de Integração (OI) I e II, previstas para ocorrerem no segundo e terceiro anos, constituem-se componentes curriculares de natureza interdisciplinar destinados à articulação entre os conhecimentos da formação geral e a formação técnica desenvolvidos nas unidades curriculares do semestre e aqueles construídos ao longo do curso. As OI serão organizadas em ciclos temáticos, entendidos como unidades de organização curricular que articulam diferentes componentes curriculares em torno de um mesmo foco investigativo, desenvolvido durante um período determinado. Os ciclos temáticos serão definidos coletivamente pela equipe docente, considerando os objetivos de aprendizagem das unidades curriculares estudadas, os desafios contemporâneos da Administração e as demandas das organizações, da comunidade e do território. Cada ciclo promoverá a integração entre componentes curriculares da formação técnica e da formação geral, favorecendo a compreensão dos fenômenos sob múltiplas perspectivas e a articulação entre teoria e prática.}
+
+\revisao{Os ciclos temáticos serão organizados em etapas, tendo como referência Silva (2016), estruturando-se em: problematização, instrumentalização, experimentação, orientação, sistematização, consolidação e socialização, conforme descrito nas respectivas unidades curriculares. As atividades serão desenvolvidas por meio de estratégias múltiplas, considerando aulas expositivas-dialogadas, análise documental, metodologias ativas (incluindo aprendizagem baseada em problemas, estudos de caso, investigação científica, oficinas, projetos, seminários, visitas técnicas, pesquisas de campo, rodas de conversa e laboratórios de aprendizagem). O componente contará com atuação integrada de docentes da formação profissional e da formação geral, fortalecendo a interdisciplinaridade e a indissociabilidade entre ensino, pesquisa e extensão.}
+
+\revisao{Os professores responsáveis pelas Oficinas de Integração, bem como de outros componentes curriculares integradores, deverão definir horário periódico de planejamento para organização dos ciclos, metodologias e atividades a serem desenvolvidos em cada oficina. Na execução das oficinas, os professores deverão orientar as atividades propostas priorizando o protagonismo dos estudantes no processo.}
+
+\revisao{A metodologia de ensino de cada componente curricular deverá levar em consideração a realidade do estudante e a construção do pensamento crítico e emancipatório, tendo a prática social como ponto de partida e ponto de chegada para o processo ensino-aprendizagem:
+\begin{quote}
+\small
+\textit{``[...] o método da pedagogia histórico-crítica indica que o ponto de partida, a prática social, é comum ao professor e aos alunos, mas há uma diferença essencial do ponto de vista pedagógico: o professor tem, ou deveria ter, uma compreensão sintética da prática social, ao passo que a compreensão dos alunos é sincrética. Por isso cabe ao professor prover os meios para que os alunos, no ponto de chegada, ascendam ao nível do professor, atingindo uma compreensão também sintética da realidade social em que vivem''} (Saviani, 2020, p. 278).
+\end{quote}}
+
+\revisao{Os esforços pedagógicos empreendidos no curso terão como horizonte a formação humana integral dos estudantes, e neste sentido, a omnilateralidade é requisito, tendo em vista que todas as dimensões constituintes do ser humano devem ser atendidas através dos processos pedagógicos produzidos pelo currículo e assim ocorra o desenvolvimento intelectual, psicossocial, corporal, afetivo, estético, cultural e lúdico.}
+
+\revisao{Assim, a formação proposta pelo curso transcende a sala de aula e os conhecimentos do currículo, incentivando e promovendo a participação em atividades formativas nas suas vertentes culturais, artísticas e esportivas.}
+
+\revisao{As saídas de campo e as visitas técnicas são importantes ferramentas para a compreensão da realidade concreta em movimento, promovendo o diagnóstico, análise e intervenção na comunidade.}
+
+\revisao{A pesquisa como princípio pedagógico e o desenvolvimento da ciência no âmbito do curso servem como fundamento questionador e crítico perante o conhecimento e a realidade, de modo a potencializar o vínculo educação-sociedade com práticas que contemplem as demandas sociais, políticas, culturais, ambientais, econômicas, científicas e tecnológicas.}
+
+\revisao{Quanto à avaliação da execução do respectivo Projeto Pedagógico do Curso, ela ocorrerá seguindo as normativas institucionais nas quais há a previsão de avaliações periódicas realizadas nas reuniões de curso e reuniões de Conselho de Classe por meio do envolvimento da coordenação de curso, professores, coordenadoria pedagógica e estudantes.}
+
+\subsection{Matriz curricular:}
+\revisao{A matriz curricular do Curso Técnico em Administração Integrado ao Ensino Médio, estruturada com duração regular de 3 (três) anos organizados em regime anual (seis semestres letivos), apresenta carga horária total de 3.120 horas de formação presencial. O percurso formativo articula de forma integrada a Formação Geral, a Formação Técnica e Profissional da área de Gestão e Negócios e o Núcleo Politécnico Comum (desenvolvido por meio das Oficinas de Integração I e II no segundo e terceiro anos), garantindo a indissociabilidade entre teoria e prática e promovendo a formação humana integral.}
+
+\revisao{Para fins de atendimento às cargas horárias mínimas, as 160 horas do Núcleo Politécnico são contabilizadas em 120 horas para a Formação Técnica e 40 horas para a Formação Geral, conforme o art. 7º da Resolução CONSUP/IFSC nº 142/2025. Dessa forma, a Formação Técnica Profissional totaliza 800 horas (680 horas em unidades curriculares técnicas e 120 horas do Núcleo Politécnico), atendendo à carga horária mínima de 800 horas estabelecida no Catálogo Nacional de Cursos Técnicos (CNCT) para o Técnico em Administração, e a Formação Geral totaliza 2.320 horas (2.280 horas em unidades curriculares e 40 horas do Núcleo Politécnico), acima do mínimo de 2.100 horas. A contabilização está detalhada no Quadro~\ref{qua:ch-minimos}.}
+
+\input{ementario_adm.tex}
+
+\subsection{Estágio curricular supervisionado:}
+O Estágio Curricular no Curso Técnico em Administração Integrado ao Ensino Médio é \textbf{não obrigatório}, em consonância com a Resolução CNE/CP nº 1/2021 e o Regulamento Didático-Pedagógico (RDP) do IFSC. O estudante poderá realizar estágio não obrigatório como atividade de prática profissional complementar, devendo haver celebração do Termo de Compromisso de Estágio (TCE) e supervisão docente.
+
+\subsection{Atividade em EaD:}
+\revisao{Não se aplica.}
+
+\subsection{Certificações intermediárias:}
+\revisao{Não há previsão de certificação profissional intermediária ao longo do curso. A diplomação técnica integral ocorre mediante a conclusão com aprovação de todas as Unidades Curriculares e cumprimento da carga horária mínima de 3.120 horas.}
+
+\subsection{Atendimento e acompanhamento ao discente:}
+\revisao{No intuito de contribuir com a permanência e êxito, um acompanhamento sistemático e especializado ao estudante já matriculado estará disponível por meio da equipe multidisciplinar da Coordenadoria Pedagógica, da qual fazem parte: psicólogo, pedagoga, assistente social, assistentes de alunos e técnicos em assuntos educacionais. Essa equipe tem como função assessorar em questões pedagógicas, psicológicas e sociais percebidas e apontadas pela coordenação do curso.}
+
+\revisao{A coordenação do curso tem também a função de acompanhar a vida acadêmica dos discentes, frequência e desempenho escolar, ação primordial para o bom andamento do curso.}
+
+\revisao{Aos estudantes com dificuldade de acompanhamento e desenvolvimento regular de componentes curriculares, conforme indica o Art. 18 do RDP do IFSC, poderão ser oferecidos Planos de Estudo Diferenciado -- PEDi, cujos planejamentos serão supervisionados pela coordenadoria pedagógica do câmpus. O PEDi será elaborado pelo coordenador do curso e coordenadoria pedagógica, permitindo que menos componentes curriculares sejam realizados a cada semestre e de acordo com uma das recomendações da Nota Técnica CEPE/IFSC nº 01/2016, na qual consta que ``o docente responsável pelo componente curricular, em conjunto com a Coordenação de Curso e Coordenação Pedagógica, deverá utilizar das estratégias de atendimento individualizado de estudos, e poderá utilizar, julgada a conveniência e disponibilidade da carga horária, horas adicionais como nivelamento, sem constituição de turma, em atividades de apoio ao ensino prevista na resolução vigente, e que estabelece limites de cargas horárias para as Atividades de ocupação docente''. O estudante em PEDi poderá ter seu curso concluído em prazo tão amplo quanto seja necessário para garantir seu melhor aproveitamento e integralização do curso, porém, o PEDi não pode ser desenvolvido para discentes que frequentam cursos em processo de extinção.}
+
+\revisao{Visando a apoiar o desenvolvimento e a aprendizagem dos estudantes, há a oportunidade de participação em projetos de pesquisa, extensão e monitoria, bem como, o auxílio do PAEVS (Programa de Atendimento ao Estudante em Vulnerabilidade Social), tão importante para a sua permanência na instituição.}
+
+\revisao{O Câmpus Garopaba possui, de forma permanente, o Núcleo de Acessibilidade Educacional (NAE) que identifica e acompanha estudantes com deficiência e tem o objetivo de promover ações e apoiar os processos de ensino-aprendizagem desses estudantes, visando à construção de uma perspectiva inclusiva na comunidade acadêmica e contribuir na implementação de ações de acessibilidade metodológica e instrumental, bem como de políticas de permanência e conclusão com êxito dos estudos, orientando também docentes e demais servidores. Para isso, conta com uma coordenação, psicopedagogos (contratados), uma professora de Educação Especial e uma comissão composta por servidores técnicos administrativos e docentes.}
+
+\revisao{Os discentes público-alvo da Educação Especial poderão acessar o Atendimento Educacional Especializado (AEE), que terá por objetivo identificar, elaborar e organizar recursos pedagógicos acessíveis e recursos de Tecnologia Assistiva que contribuam com a minimização das barreiras físicas, atitudinais, educacionais, comunicacionais e outras que possam interferir na plena participação nas atividades educacionais e sociais.}
+
+\subsection{Critérios de aproveitamento de conhecimentos e experiências anteriores:}
+\revisao{Os critérios de aproveitamento de conhecimentos e experiências anteriores serão aplicados conforme o Regulamento Didático Pedagógico vigente.}
+
+% =========================================================
+\section{AVALIAÇÃO}
+\subsection{Avaliação do processo de ensino e aprendizagem:}
+\revisao{A avaliação da aprendizagem primará pelo caráter diagnóstico, processual e formativo e, de acordo com o PPI (Projeto Pedagógico Institucional) do IFSC, por ser um processo, pode indicar avanços e dificuldades na ação educativa. A avaliação não deve ser um instrumento de classificação, seleção e exclusão social, mas de construção coletiva dos sujeitos e de uma escola de qualidade.}
+
+\revisao{Partindo dessa concepção, as avaliações da aprendizagem referentes a cada componente curricular desse curso serão organizadas pelo professor responsável considerando os conhecimentos, as competências e habilidades propostas em cada um deles e seguindo as orientações dispostas no Regulamento Didático-Pedagógico (RDP) em vigor.}
+
+\revisao{Conforme o art. 96 do RDP, nos cursos técnicos de nível médio a avaliação da aprendizagem terá como parâmetros os princípios do PPI e o perfil profissional do egresso definido neste Projeto Pedagógico de Curso, sendo que a avaliação dos aspectos qualitativos compreende o diagnóstico, a orientação e a reorientação do processo de ensino e aprendizagem visando à construção dos conhecimentos.}
+
+\revisao{Ao longo do período letivo, em cada componente curricular, o professor deverá realizar, no mínimo, duas (02) avaliações por semestre, e fornecer ao aluno informações que permitam visualizar seus avanços e dificuldades. Todas as avaliações serão registradas no diário de classe, analisadas com os alunos e devolvidas aos mesmos, no prazo máximo de 15 (quinze) dias letivos após sua aplicação.}
+
+\revisao{Considerando que os instrumentos de avaliação de aprendizagem devam estimular à pesquisa, reflexão, iniciativa, criatividade, laboralidade e cidadania, poderão ser:}
+\begin{enumerate}[label=\alph*)]
+    \item \revisao{observação diária do aluno, considerando também suas atitudes;}
+    \item \revisao{trabalhos de pesquisa individual ou coletiva;}
+    \item \revisao{testes e provas escritos, com ou sem consulta;}
+    \item \revisao{resoluções de exercícios;}
+    \item \revisao{planejamento e elaboração de projetos;}
+    \item \revisao{relatórios referentes aos trabalhos e visitas técnicas;}
+    \item \revisao{realização de eventos ou atividades abertas à comunidade;}
+    \item \revisao{autoavaliação descritiva e avaliação pelos colegas da classe;}
+    \item \revisao{entrevistas;}
+    \item \revisao{realização de trabalhos práticos;}
+    \item \revisao{demais instrumentos que a prática pedagógica indicar.}
+\end{enumerate}
+
+\revisao{Os art. 97, 98 e 99 do RDP, respectivamente, indicam que o aluno terá direito de prestar atividades de avaliação não realizadas por motivo de doença ou por falecimento de familiares, convocação do judiciário e do serviço militar, de recuperar estudos visando a promoção da aprendizagem, bem como solicitar a revisão de atividade de avaliação, quando discordar da correção realizada pelo professor.}
+
+\revisao{A recuperação de estudos, a que todos os alunos têm direito, compreenderá a realização de novas atividades pedagógicas no decorrer do período letivo, que possam promover a aprendizagem. Em atendimento ao RDP (Art. 98), as novas atividades ocorrerão, preferencialmente, no horário regular de aula, podendo ser criadas estratégias alternativas que atendam necessidades específicas, tais como atividades sistemáticas em horário de atendimento paralelo e estudos dirigidos. Ao final dos estudos de recuperação, o aluno será submetido à nova avaliação cujo resultado será registrado pelo professor, prevalecendo o maior valor entre o obtido na avaliação realizada antes da recuperação e o obtido na avaliação após a recuperação.}
+
+% =========================================================
+\section{INFRAESTRUTURA E ACESSIBILIDADE}
+\subsection{Instalações e Equipamentos:}
+\revisao{O Câmpus Garopaba dispõe de infraestrutura física e tecnológica plenamente adequada ao desenvolvimento das atividades teóricas e práticas do Curso Técnico em Administração Integrado ao Ensino Médio, compreendendo salas de aula climatizadas com recursos multimídia e os seguintes ambientes específicos:}
+\begin{itemize}
+    \item \revisao{\textbf{Laboratórios de Informática:} O Câmpus possui 04 (quatro) laboratórios de informática equipados com computadores conectados à internet de alta velocidade e softwares de gestão, produtividade de escritório e ferramentas digitais, dando suporte permanente às atividades curriculares a partir de agendamento prévio dos docentes;}
+    \item \revisao{\textbf{Laboratórios Didáticos e Espaços Multiuso:} O Câmpus conta com laboratórios didáticos e espaços formativos para o desenvolvimento das atividades pedagógicas, incluindo:}
+    \begin{enumerate}
+        \item \revisao{Sala Multidisciplinar (sala B102): dotada de mesas de trabalho coletivo, recursos e materiais pedagógicos destinados a dinâmicas integradoras e estudos práticos;}
+        \item \revisao{Sala de Artes e Expressão (sala B106): equipada com espaço e recursos destinados a práticas e atividades artísticas;}
+        \item \revisao{Laboratório de Cultura Corporal e Educação Física (sala A207): com materiais esportivos e recreativos;}
+        \item \revisao{Centro Multiuso: amplo espaço destinado a atividades práticas integradas, seminários, oficinas e eventos institucionais;}
+        \item \revisao{Espaço Desportivo Adaptado: área para prática pedagógica esportiva ao ar livre, constando no Plano Quinquenal de Infraestrutura do PDI/IFSC a previsão de construção de quadra poliesportiva coberta;}
+        \item \revisao{Laboratórios de Ciências da Natureza: laboratórios de Química e Bioquímica, Citologia e Histologia, Biociências, Meio Ambiente e Geomática, atendendo às necessidades formativas dos componentes da Formação Geral;}
+        \item \revisao{Laboratório de Inovação, Empreendedorismo e Desenvolvimento Sustentável (LINEDS) (Sala B101).}
+    \end{enumerate}
+    \item \revisao{\textbf{Biblioteca com acervo físico e virtual:} Detalhada no subitem 27 a seguir.}
+\end{itemize}
+
+\subsection{Biblioteca:}
+\revisao{Vinculada ao Sistema de Bibliotecas Integradas do IFSC (SiBI/IFSC), formalizado pela Resolução nº 025/2018/CEPE, de 15 de março de 2018, a biblioteca do Câmpus Garopaba dispõe de ampla infraestrutura física, totalizando 233,52 m², dividida nas seguintes salas temáticas: sala para pesquisa virtual e acesso à internet com 11 (onze) computadores; sala de estudo individual; e sala de processamento técnico. No hall de entrada, conta com balcão de atendimento e empréstimo e mesas para estudo em grupo. Seu quadro funcional é composto atualmente por 1 (um) Bibliotecário-Documentalista e 2 (duas) Auxiliares de Biblioteca.}
+
+\revisao{A Sala de Pesquisa Virtual possui 11 mesas, cadeiras e computadores conectados à internet com programas instalados para uso dos estudantes e da comunidade externa, dando suporte permanente às atividades de Ensino, Pesquisa e Extensão. O espaço do acervo conta com 6 mesas redondas, 2 retangulares e um total de 32 assentos para estudos em grupo. A Sala de Estudos Individuais dispõe de 2 mesas e 15 cadeiras. A biblioteca conta com cobertura de rede Wi-Fi institucional, iluminação adequada e climatização completa no salão principal, no espaço do acervo físico e na sala de processamento técnico.}
+
+\revisao{A formação e desenvolvimento do acervo visa contemplar materiais e bibliografias que deem suporte rigoroso às atividades curriculares do curso. Para o Curso Técnico em Administração, a biblioteca dispõe de aproximadamente 90\% dos títulos indicados nas bibliografias básica e complementar das unidades curriculares em seu acervo físico, estando as demais obras em processo de aquisição e plenamente acessíveis via acervos digitais (Minha Biblioteca/Pearson e bases conveniadas). O acesso aos espaços e materiais é livre para todos os estudantes, com atendimento de segunda a sexta-feira, em regime de no mínimo 12 horas diárias.}
+
+\revisao{O gerenciamento do acervo e os serviços de consulta, reserva e empréstimo são realizados por meio do software Sophia Biblioteca (\url{https://biblioteca.ifsc.edu.br/}), permitindo o empréstimo domiciliar de até 10 exemplares com renovação quinzenal. O acesso à biblioteca virtual (Minha Biblioteca) ocorre mediante cadastro institucional em até 48 horas. Informações complementares sobre os serviços do SiBI/IFSC encontram-se disponíveis no portal do câmpus (\url{https://www.ifsc.edu.br/web/campus-garopaba/bibliotecas}).}
+
+% =========================================================
+\section{CORPO DOCENTE E TUTORIAL}
+\subsection{Corpo docente e técnico do curso:}
+\revisao{O quadro de pessoal do IFSC Câmpus Garopaba envolvido no desenvolvimento do curso é composto por servidores qualificados e concursados, conforme discriminado a seguir:}
+
+\subsubsection{Docentes:}
+\begin{xltabular}{\linewidth}{|X|p{4cm}|c|}
+\caption{Quadro Docente do Câmpus Garopaba} \label{tab:docentes} \\
+\hline
+\rowcolor{ifscgreen!20}
+\textbf{Nome} & \textbf{Área de Atuação} & \textbf{Regime*} \\ \hline
+\endfirsthead
+\hline
+\rowcolor{ifscgreen!20}
+\textbf{Nome} & \textbf{Área de Atuação} & \textbf{Regime*} \\ \hline
+\endhead
+\hline
+\multicolumn{3}{|r|}{\footnotesize (continua na próxima página)} \\ \hline
+\endfoot
+\hline
+\multicolumn{3}{|l|}{\footnotesize *DE -- Dedicação Exclusiva} \\ \hline
+\endlastfoot
+\revisao{ADALBERTO TEODOSIO TABALIPA} & \revisao{SOCIOLOGIA} & \revisao{DE*} \\ \hline
+ADRIANA MURARA SILVA & HOTELARIA & DE* \\ \hline
+ALBERTO FELIPE FRIDERICHS BARROS & INFORMÁTICA & DE* \\ \hline
+ANDRÉ LUIZ SILVA DE MORAES & INFORMÁTICA & DE* \\ \hline
+ANTÔNIO MIGUEL ZARTH & INFORMÁTICA & DE* \\ \hline
+CARMINE INÊS ACKER & QUÍMICA & DE* \\ \hline
+CLÁUDIA TELES DA SILVA & EDUCAÇÃO ESPECIAL & DE* \\ \hline
+CRISTIANE OLIVEIRA DA SILVA & BIOLOGIA & DE* \\ \hline
+DIEGO MARLON DE CASTRO & MATEMÁTICA & DE* \\ \hline
+EDUARDO BATISTA VON BOROWSKI & EDUCAÇÃO FÍSICA & DE* \\ \hline
+ELISA SERENA GANDOLFO MARTINS & MEIO AMBIENTE & DE* \\ \hline
+FABIANA BESEN SANTOS & ADMINISTRAÇÃO & DE* \\ \hline
+FABIANA DE AGAPITO KANGERSKI & ADMINISTRAÇÃO & DE* \\ \hline
+FELIX LOZANO MEDINA & LÍNGUA ESPANHOLA & DE* \\ \hline
+\revisao{FERNANDO SOARES DE JESUS} & \revisao{GEOGRAFIA} & \revisao{DE*} \\ \hline
+JEAN MARCEL DE ALMEIDA ESPINOZA & FÍSICA & DE* \\ \hline
+JOÃO EDUARDO NAVACHI DA SILVEIRA & FILOSOFIA & DE* \\ \hline
+JOÃO HENRIQUE QUOOS & GEOGRAFIA & DE* \\ \hline
+JOSÉ RODRIGO BARTH ADAMS & SOCIOLOGIA & DE* \\ \hline
+LUANA DE GUSMÃO SILVEIRA & LÍNGUA PORTUGUESA & DE* \\ \hline
+LUIZ ANTONIO SCHALATA PACHECO & INFORMÁTICA & DE* \\ \hline
+MARIA ROSA DA SILVA COSTA & LÍNGUA INGLESA & DE* \\ \hline
+MARIANA REIS LEAL FERNANDES & ARTE/DANÇA & DE* \\ \hline
+MICHELINE SARTORI & TURISMO & DE* \\ \hline
+MICHELSCH JOÃO DA SILVA & MATEMÁTICA & DE* \\ \hline
+NAUBER GAVSKI DA SILVA & HISTÓRIA & DE* \\ \hline
+PAULA MAYARA ZUANAZZI & EDUCAÇÃO FÍSICA & DE* \\ \hline
+RENATA WALESKA DE SOUSA PIMENTA & HISTÓRIA & DE* \\ \hline
+RENATO DA SILVA ROSA RODRIGUES & FÍSICA & DE* \\ \hline
+\revisao{RODOLFO DENK NETO} & \revisao{FILOSOFIA} & \revisao{DE*} \\ \hline
+SABRINA MORO VILLELA PACHECO & QUÍMICA & DE* \\ \hline
+SANDRA BEATRIZ KOELLING & LÍNGUA PORTUGUESA & DE* \\ \hline
+SIBELI PAULON FERRONATO & ADMINISTRAÇÃO & DE* \\ \hline
+TELMA PIRES PACHECO AMORIM & LÍNGUA INGLESA & DE* \\ \hline
+THAIANA PEREIRA DOS ANJOS REIS & INFORMÁTICA & DE* \\ \hline
+THIAGO LIPINSKI PAES & INFORMÁTICA & DE* \\ \hline
+THIAGO WALTRIK & INFORMÁTICA & DE* \\ \hline
+\end{xltabular}
+
+\subsubsection{Técnico-Administrativos em Educação:}
+\begin{xltabular}{\linewidth}{|X|X|}
+\caption{Quadro Técnico-Administrativo em Educação} \label{tab:taes} \\
+\hline
+\rowcolor{ifscgreen!20}
+\textbf{Nome} & \textbf{Cargo / Função} \\ \hline
+\endfirsthead
+\hline
+\rowcolor{ifscgreen!20}
+\textbf{Nome} & \textbf{Cargo / Função} \\ \hline
+\endhead
+\revisao{ALINE INÁCIO DECKER} & \revisao{PEDAGOGA} \\ \hline
+ANA PAULA FREITAS & AUXILIAR DE BIBLIOTECA \\ \hline
+BRUNO TOMAZELE ROVANI & TÉCNICO DE LABORATÓRIO / ÁREA BIOLOGIA \\ \hline
+CARLOS GUILHERME CRISTELLI SOARES & PSICÓLOGO \\ \hline
+CAROLINA CORREA & ASSISTENTE DE ALUNO \\ \hline
+DAVID MATOS MILHOMENS & BIBLIOTECÁRIO-DOCUMENTALISTA \\ \hline
+IZABELA RAQUEL & ASSISTENTE EM ADMINISTRAÇÃO \\ \hline
+JACQUELINE NARCISO BASTOS & TÉCNICA EM ASSUNTOS EDUCACIONAIS \\ \hline
+JOSIANE VIEIRA CAMPOS & ASSISTENTE EM ADMINISTRAÇÃO \\ \hline
+LEONARDO ANTONIO RADAIK & ASSISTENTE DE ALUNO \\ \hline
+LUCIANE CRISTINA STEIN & ASSISTENTE DE ALUNO \\ \hline
+MANUELA FORNARI BITENCOURT & ASSISTENTE EM ADMINISTRAÇÃO \\ \hline
+MARILÚCIA TAMANINI SCHAUFFERT & ASSISTENTE SOCIAL \\ \hline
+MAURO LORENÇATTO & TÉCNICO EM ASSUNTOS EDUCACIONAIS \\ \hline
+\revisao{MONIQUE NEVES GARCIA} & \revisao{AUXILIAR DE BIBLIOTECA} \\ \hline
+PRISCILLA DE OLIVEIRA & ASSISTENTE DE ALUNO \\ \hline
+RAFAEL PINTO GARCIA & TÉCNICO DE LABORATÓRIO / ÁREA INFORMÁTICA \\ \hline
+SARITA WISBECK & TÉCNICA DE LABORATÓRIO / ÁREA QUÍMICA \\ \hline
+\end{xltabular}
+
+% =========================================================
+\section{REFERÊNCIAS}
+\subsection{Referências:}
+
+{\raggedright
+\linespread{1.0}\selectfont
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{\baselineskip}
+
+BRASIL. \textbf{Lei nº 9.394, de 20 de dezembro de 1996}. Estabelece as diretrizes e bases da educação nacional. Brasília, DF: Presidência da República, 1996. Disponível em: \url{http://www.planalto.gov.br/ccivil_03/leis/l9394.htm}. Acesso em: 9 set. 2026.
+
+BRASIL. \textbf{Lei nº 9.503, de 23 de setembro de 1997}. Institui o Código de Trânsito Brasileiro. Brasília, DF: Presidência da República, 1997. Disponível em: \url{http://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm}. Acesso em: 10 set. 2026.
+
+BRASIL. \textbf{Lei nº 11.892, de 29 de dezembro de 2008}. Institui a Rede Federal de Educação Profissional, Científica e Tecnológica, cria os Institutos Federais de Educação, Ciência e Tecnologia, e dá outras providências. Brasília, DF: Presidência da República, 2008. Disponível em: \url{http://www.planalto.gov.br/ccivil_03/_ato2007-2010/2008/lei/l11892.htm}. Acesso em: 9 set. 2026.
+
+BRASIL. \textbf{Lei nº 13.005, de 25 de junho de 2014}. Aprova o Plano Nacional de Educação - PNE e dá outras providências. Brasília, DF: Presidência da República, 2014. Disponível em: \url{http://www.planalto.gov.br/ccivil_03/_ato2011-2014/2014/lei/l13005.htm}. Acesso em: 10 set. 2026.
+
+\revisao{BRASIL. Ministério da Educação. Conselho Nacional de Educação. \textbf{Resolução CNE/CP nº 1, de 5 de janeiro de 2021}. Define as Diretrizes Curriculares Nacionais Gerais para a Educação Profissional e Tecnológica. Brasília, DF: MEC, CNE, 2021. Disponível em: \url{https://www.gov.br/mec/pt-br/cne/pdf/resolucoes-do-cne/cp/2021/rcp001_21.pdf}. Acesso em: 9 set. 2026.}
+
+\revisao{BRASIL. Ministério da Educação. Conselho Nacional de Educação. \textbf{Resolução CNE/CP nº 2, de 4 de abril de 2024}. Dispõe sobre a incorporação aos Catálogos Nacionais de Cursos Técnicos (CNCT) e de Cursos Superiores de Tecnologia (CST), de Áreas Tecnológicas aos respectivos Eixos Tecnológicos. Brasília, DF: MEC, CNE, 2024. Disponível em: \url{https://www.gov.br/mec/pt-br/cne/pdf/resolucoes-do-cne/cp/2024/rcp002_24.pdf}. Acesso em: 9 set. 2026.}
+
+\revisao{BRASIL. Ministério da Educação. Secretaria de Educação Profissional e Tecnológica. \textbf{Catálogo Nacional de Cursos Técnicos}: CNCT. 4. ed. Brasília, DF: MEC, SETEC, 2025. Disponível em: \url{https://cnct.mec.gov.br/cnct-api/catalogopdf}. Acesso em: 9 set. 2026.}
+
+\revisao{IBGE. \textbf{Cidades e Estados do Brasil}. Rio de Janeiro: IBGE, 2025. Disponível em: \url{https://cidades.ibge.gov.br/}. Acesso em: 9 set. 2026.}
+
+\revisao{INSTITUTO FEDERAL DE SANTA CATARINA (IFSC). Conselho Superior. \textbf{Resolução CONSUP/IFSC nº 20, de 25 de junho de 2018}. Aprova o Regulamento Didático-Pedagógico do IFSC e dá outras providências. Florianópolis, SC: IFSC, 2018. Disponível em: \url{https://www.ifsc.edu.br/documents/30725/0/resolucao20_2018_rdp1\%2B\%282\%29.pdf/61471b68-60c4-4e4a-856a-15536ba90f54}. Acesso em: 10 set. 2026.}
+
+\revisao{INSTITUTO FEDERAL DE SANTA CATARINA (IFSC). Conselho Superior. \textbf{Resolução CONSUP/IFSC nº 142, de 27 de março de 2025}. Aprova as Diretrizes Curriculares Institucionais para os Cursos Técnicos Integrados ao Ensino Médio do IFSC. Florianópolis: IFSC, 2025. Disponível em: \url{https://sigrh.ifsc.edu.br/sigrh/downloadArquivo?idArquivo=4017454&key=83b4b05377ec4635455cbe3e0ee4ec67}. Acesso em: 9 set. 2026.}
+
+\revisao{SAVIANI, Dermeval. Infância e pedagogia histórico-crítica. In: GALVÃO, Ana Carolina (org.). \textbf{Infância e pedagogia histórico-crítica}. Campinas: Autores Associados, 2020. p. 247-280.}
+
+\revisao{SAVIANI, Dermeval. \textbf{Pedagogia histórico-crítica, quadragésimo ano}: novas aproximações. Campinas: Autores Associados, 2019.}
+
+\revisao{SILVA, Adriano Larentes da \textit{et al.} (org.). \textbf{O currículo integrado no cotidiano da sala de aula}. Florianópolis: Publicação do IFSC, 2016. Disponível em: \url{https://www.ifsc.edu.br/documents/30701/523474/o_curriculo_integrado.pdf/6151bc15-d409-b17b-1efd-3f21e89314e3}. Acesso em: 10 set. 2026.}
+
+\revisao{SILVA, E. \textbf{Metodologia de ciclos temáticos e oficinas de integração na educação profissional técnica}. Florianópolis: IFSC, 2016.}
+\par}
+
+% =========================================================
+\section{ANEXOS}
+\subsection{Documentos Complementares e Registros de Tramitação:}
+
+\begin{itemize}
+    \item \revisao{\textbf{Anexo I -- Portaria de Designação da Comissão de Reformulação do PPC:} Portaria DG nº 186 de 21 de agosto de 2026 (alterando a Portaria DG nº 156 de 22 de julho de 2026), designando a comissão responsável pela revisão e reformulação dos PPCs dos Cursos Técnicos Integrados do Câmpus Garopaba;}
+    \item \revisao{\textbf{Anexo II -- Ata de Aprovação pelo Colegiado do Câmpus Garopaba:} Registro formal de apreciação e aprovação do projeto pedagógico pelo Colegiado do Câmpus Garopaba, a ser apensado aos autos após a respectiva deliberação colegiada.}
+\end{itemize}
+
+\vspace{0.5cm}
+\noindent\revisao{\small\textit{Nota: Os documentos comprobatórios originais, devidamente assinados eletronicamente, integram os autos do processo administrativo correspondente no Sistema Integrado de Patrimônio, Administração e Contratos (SIPAC) do IFSC.}}
+
+\end{document}

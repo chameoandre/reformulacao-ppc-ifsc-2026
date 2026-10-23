@@ -33,9 +33,9 @@ All course assets must remain strictly organized in the following subdirectories
 ## 3. Curriculum Directives (Resolução CONSUP/IFSC nº 142/2025)
 
 1. **Formação Geral Integrada:** Minimum **2.100 hours** (clock-hours).
-2. **Formação Técnica Profissional (Administração):** **1.000 hours** (conforme Catálogo Nacional CNCT).
+2. **Formação Técnica Profissional (Administração):** Minimum **800 hours** (CH mínima do CNCT para o Técnico em Administração). O PPC deve declarar explicitamente o atendimento a esse mínimo, somando a CH das UCs técnicas e a parcela do Núcleo Politécnico atribuída à Formação Técnica (retorno DIREN/CEPE, out/2026).
 3. **Núcleo Politécnico Comum (Projetos & Oficinas de Integração):** Minimum **120 hours**.
-4. **Carga Horária Total Mínima:** **3.100 horas-relógio**.
+4. **Carga Horária Total Mínima:** **3.000 horas-relógio** (RDP art. 185, §2º: 3.000 h para habilitações de 800 h no CNCT); máximo de +10% (3.300 h).
 5. **Duração do Curso:** 3 anos (6 semestres) com ingresso anual de 40 vagas no Câmpus Garopaba.
 
 ---
@@ -81,3 +81,14 @@ All course assets must remain strictly organized in the following subdirectories
    - **Fronteira Operacional:** A IA atua única e exclusivamente na tipografia/diagramação LaTeX (tabelas, quebras de página, compilação via `tectonic`), conformidade bibliográfica ABNT NBR 6023 e consistência aritmética das cargas horárias. Toda transposição textual deve ser 100% literal.
 
 
+
+---
+
+## 6. Destaque de Alterações (Retorno do CEPE, out/2026)
+
+1. **Dois comandos de destaque** (definidos no preâmbulo de `main_ppc_administracao.tex`):
+   - `\revisao{...}`: alterações das rodadas anteriores, até a versão enviada ao CEPE em 11/09/2026. **Sempre em preto.**
+   - `\revisaocepe{...}`: alterações feitas **após o retorno do CEPE (13/10/2026)**. Em azul quando `\highlightchangestrue`.
+2. **Toda nova alteração** no PPC deve ser marcada com `\revisaocepe{...}`, nunca com `\revisao{...}`.
+3. A versão **com destaques** é gerada com `\highlightchangestrue`; a versão **sem destaques** (entrega final) com `\highlightchangesfalse`.
+4. Referência para comparar o que mudou após o CEPE: commit `549a1b9` (versão de 11/09/2026) e as cópias em `retorno-cepe-2026-10/backup/`.
