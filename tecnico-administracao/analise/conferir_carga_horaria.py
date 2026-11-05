@@ -2,7 +2,7 @@ import re,sys
 D=sys.argv[1]
 E=open(D+'/ementario_adm.tex',encoding='utf-8').read()
 M=open(D+'/main_ppc_administracao.tex',encoding='utf-8').read()
-clean=lambda t: re.sub(r'\\revisao\{|\\textbf\{|\}','',t).strip()
+clean=lambda t: re.sub(r'\\revisao(cepe)?\{|\\textbf\{|\}','',t).strip()
 h=lambda t:int(clean(t).replace('.','').replace(' h','').strip())
 # --- matriz
 mat={}; probs=[]
