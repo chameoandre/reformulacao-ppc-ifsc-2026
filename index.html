@@ -582,12 +582,12 @@
         <div class="kpi-desc">73,0% disponíveis no acervo • 78,2% Básica <i class="bi bi-arrow-right-short"></i></div>
       </div>
 
-      <div class="kpi-card kpi-amber" onclick="showTab('tab-checklist')" title="Clique para ver a Tabela de Checklist e Histórico das 66 Correções">
+      <div class="kpi-card kpi-amber" onclick="showTab('tab-checklist')" title="Clique para ver a Tabela de Checklist e Histórico das 68 Correções">
         <div class="kpi-header">
           <span class="kpi-title">Itens de Auditoria</span>
           <i class="bi bi-check2-circle kpi-icon"></i>
         </div>
-        <div class="kpi-value">66 Itens</div>
+        <div class="kpi-value">68 Itens</div>
         <div class="kpi-desc">Histórico e Devolutivas consolidados na Base de Conhecimento <i class="bi bi-arrow-right-short"></i></div>
       </div>
     </div>
@@ -596,7 +596,7 @@
     <div class="dashboard-tabs">
       <button class="tab-btn active" onclick="showTab('tab-adm')"><i class="bi bi-briefcase-fill"></i> Técnico em Administração</button>
       <button class="tab-btn" onclick="showTab('tab-matriz')"><i class="bi bi-table"></i> Matriz Curricular (3.120h)</button>
-      <button class="tab-btn" onclick="showTab('tab-checklist')"><i class="bi bi-list-check"></i> Checklist & Auditoria (66 Itens)</button>
+      <button class="tab-btn" onclick="showTab('tab-checklist')"><i class="bi bi-list-check"></i> Checklist & Auditoria (68 Itens)</button>
       <button class="tab-btn" onclick="showTab('tab-revisao')"><i class="bi bi-eye-fill"></i> Sistema de Revisão em Azul</button>
       <button class="tab-btn" onclick="showTab('tab-biblioteca')"><i class="bi bi-book-half"></i> Auditoria de Biblioteca (Sophia)</button>
       <button class="tab-btn" onclick="showTab('tab-base')"><i class="bi bi-folder-fill"></i> Base de Conhecimento</button>
@@ -629,6 +629,23 @@
         <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 1.5rem;">
           O Projeto Pedagógico do Curso Técnico em Administração Integrado ao Ensino Médio encontra-se <strong>totalmente compilado no padrão TeX institucional</strong>, atendendo a todos os requisitos normativos da <strong>Resolução CONSUP/IFSC nº 142/2025</strong> e às diretrizes pedagógicas da equipe docente.
         </p>
+
+        <!-- BANNER DE DESTAQUE: COMPLEMENTAÇÕES DA COORDENAÇÃO (05/11/2026) -->
+        <div style="background: linear-gradient(135deg, rgba(5, 150, 105, 0.12) 0%, rgba(2, 132, 199, 0.08) 100%); border: 1.5px solid var(--accent-emerald); border-radius: 12px; padding: 1.2rem 1.4rem; margin-bottom: 1.5rem; box-shadow: 0 4px 16px rgba(5, 150, 105, 0.1);">
+          <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.8rem; margin-bottom: 0.6rem;">
+            <div style="display: flex; align-items: center; gap: 0.6rem;">
+              <span class="badge" style="background: var(--accent-emerald); color: #ffffff; font-weight: 700; font-size: 0.82rem; padding: 0.35rem 0.75rem; border-radius: 20px;">ATUALIZAÇÃO COORDENAÇÃO • 05/11/2026</span>
+              <span style="font-weight: 700; color: var(--text-heading); font-size: 1.02rem;">Complementações da Coordenação: Demanda Regional, Semestres do 2º Ano e 36 Vagas</span>
+            </div>
+            <span style="color: var(--text-muted); font-size: 0.82rem;"><i class="bi bi-check2-all text-emerald me-1"></i>Aprovado e Recompilado (134 páginas)</span>
+          </div>
+          <p style="color: var(--text-muted); font-size: 0.9rem; line-height: 1.5; margin: 0;">
+            Ajustes e complementações solicitados pela coordenação do curso: 
+            <strong>(1) Demanda Regional Comprovada (Seção 11):</strong> inclusão dos dados oficiais do Exame de Classificação 2027/1 (Edital nº 05/DEING/2027/1), com 149 candidatos inscritos para 36 vagas (relação de 4,14 c/v, a maior concorrência entre todos os integrados do Câmpus); 
+            <strong>(2) Reorganização Semestral do 2º Ano:</strong> <em>Empreendedorismo I</em> e <em>Responsabilidade Socioambiental</em> alocadas no 3º semestre; <em>Gestão de Marketing II</em> e <em>Matemática para Administração</em> no 4º semestre (preservando o equilíbrio exato de 560 h / 560 h / 1.120 h); 
+            <strong>(3) Quadro 8 e Quadro 7:</strong> fixação formal de 36 vagas por turma / 36 anuais no Quadro 8 e explicitação no Quadro 7 do acréscimo legal de até 10% da CH mínima exigida (art. 10 da Res. 142/2025).
+          </p>
+        </div>
 
         <!-- BANNER DE DESTAQUE: RETORNO DO CEPE / DIREN & CONFORMIDADE NORMATIVA -->
         <div style="background: linear-gradient(135deg, rgba(2, 132, 199, 0.12) 0%, rgba(124, 58, 237, 0.08) 100%); border: 1.5px solid var(--accent-blue); border-radius: 12px; padding: 1.2rem 1.4rem; margin-bottom: 1.5rem; box-shadow: 0 4px 16px rgba(2, 132, 199, 0.1);">
@@ -667,6 +684,22 @@
             <i class="bi bi-stars"></i> Resumo das Principais Correções e Ajustes Aplicados no Documento:
           </h3>
           <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 0.8rem; font-size: 0.88rem;">
+            <!-- CARD ITEM 68 (COMPLEMENTAÇÃO COORDENAÇÃO) -->
+            <div class="clickable-card" onclick="showTab('tab-checklist')" title="Clique para ver o item 68 na Tabela de Correções" style="background: var(--bg-card); padding: 0.8rem; border-radius: 8px; border: 1.5px solid var(--accent-emerald); box-shadow: 0 4px 12px rgba(5, 150, 105, 0.12);">
+              <strong style="color: var(--accent-emerald); display: flex; justify-content: space-between; align-items: center;">
+                <span><i class="bi bi-calendar2-range-fill me-1"></i> Semestres do 2º Ano & 36 Vagas (Item 68):</span>
+                <i class="bi bi-arrow-right-short"></i>
+              </strong>
+              <p style="color: var(--text-muted); margin-top: 0.2rem;">Emp. I e Resp. Socioambiental no 3º sem; Mkt II e Mat. Adm no 4º sem (560h/560h). Fixação de 36 vagas por turma/anuais (Quadro 8) e nota de 10% no Quadro 7.</p>
+            </div>
+            <!-- CARD ITEM 67 (COMPLEMENTAÇÃO COORDENAÇÃO) -->
+            <div class="clickable-card" onclick="showTab('tab-checklist')" title="Clique para ver o item 67 na Tabela de Correções" style="background: var(--bg-card); padding: 0.8rem; border-radius: 8px; border: 1.5px solid var(--accent-blue); box-shadow: 0 4px 12px rgba(2, 132, 199, 0.12);">
+              <strong style="color: var(--accent-blue); display: flex; justify-content: space-between; align-items: center;">
+                <span><i class="bi bi-graph-up-arrow me-1"></i> Demanda 2027/1 na Justificativa (Item 67):</span>
+                <i class="bi bi-arrow-right-short"></i>
+              </strong>
+              <p style="color: var(--text-muted); margin-top: 0.2rem;">Dados do Edital 05/DEING/2027/1 na Seção 11: 149 inscritos para 36 vagas (4,14 c/v, recorde do Câmpus) e inserção da referência bibliográfica correspondente.</p>
+            </div>
             <!-- CARD ITEM 64 (RETORNO CEPE) -->
             <div class="clickable-card" onclick="showTab('tab-checklist')" title="Clique para ver o item 64 na Tabela de Correções" style="background: var(--bg-card); padding: 0.8rem; border-radius: 8px; border: 1.5px solid var(--accent-blue); box-shadow: 0 4px 12px rgba(2, 132, 199, 0.12);">
               <strong style="color: var(--accent-blue); display: flex; justify-content: space-between; align-items: center;">
@@ -741,7 +774,7 @@
                 <span><i class="bi bi-sliders me-1"></i> Dados da Oferta (Formulário CEPE):</span>
                 <i class="bi bi-arrow-right-short"></i>
               </strong>
-              <p style="color: var(--text-muted); margin-top: 0.2rem;">Turno Integral c/ contraturno, integralização máxima de 12 semestres, matrícula seriada, exame de classificação e 2027/1.</p>
+              <p style="color: var(--text-muted); margin-top: 0.2rem;">36 vagas por turma e 36 vagas anuais, turno integral c/ contraturno, integralização de até 12 semestres, matrícula seriada e exame de classificação.</p>
             </div>
             <div class="clickable-card" onclick="showTab('tab-checklist')" title="Clique para ver os itens 33 e 34 na Tabela de Correções" style="background: var(--bg-card); padding: 0.8rem; border-radius: 8px; border: 1px solid var(--border-color);">
               <strong style="color: var(--accent-emerald); display: flex; justify-content: space-between; align-items: center;">
@@ -915,9 +948,10 @@
               <li>• 10 UCs Formação Geral: <strong>800 h</strong></li>
               <li style="color: var(--accent-amber); font-size: 0.8rem;">* Espanhol ou Libras II (80h) se estudante surdo (Res. 142/2025)</li>
               <li>• 5 UCs Formação Técnica: <strong>240 h</strong></li>
-              <li style="color: var(--text-muted); font-size: 0.8rem;">(Mat. Adm, Mkt II, Gestão Operações, Emp. I, Sustentab.)</li>
-              <li>• 1 UC Núcleo Politécnico: <strong>80 h</strong> (Oficina I)</li>
-              <li style="border-top: 1px dashed var(--border-color); padding-top: 0.5rem; font-weight: 700; color: var(--accent-blue);">Subtotal: 1.120 h</li>
+              <li style="color: var(--text-muted); font-size: 0.8rem;"><strong>3º Sem:</strong> Emp. I (40h), Resp. Socioambiental (40h), Gestão Operações (40h)</li>
+              <li style="color: var(--text-muted); font-size: 0.8rem;"><strong>4º Sem:</strong> Mkt II (40h), Mat. Adm (40h), Gestão Operações (40h)</li>
+              <li>• 1 UC Núcleo Politécnico: <strong>80 h</strong> (Oficina I — 40h/semestre)</li>
+              <li style="border-top: 1px dashed var(--border-color); padding-top: 0.5rem; font-weight: 700; color: var(--accent-blue);">Subtotal: 1.120 h (560h / 560h)</li>
             </ul>
           </div>
 
@@ -1077,6 +1111,15 @@
             <i class="bi bi-clock-history"></i> Linha do Tempo: Últimas Modificações com Registro de Data e Hora
           </h3>
           <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 0.8rem;">
+            <div style="background: rgba(5, 150, 105, 0.08); border-left: 4px solid var(--accent-emerald); border-radius: 6px; padding: 0.75rem 1rem; border: 1px solid var(--accent-emerald); border-left-width: 4px;">
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.3rem;">
+                <span style="font-weight: 700; color: var(--accent-emerald); font-size: 0.85rem;"><i class="bi bi-patch-check-fill me-1"></i> Complementações da Coordenação • Demanda 2027/1, Semestres do 2º Ano & 36 Vagas</span>
+                <span class="font-code" style="color: var(--text-muted); font-size: 0.78rem;"><i class="bi bi-calendar-event me-1"></i>05/11/2026 11:20</span>
+              </div>
+              <p style="color: var(--text-main); font-size: 0.82rem; margin: 0;">Reorganização dos semestres das UCs técnicas do 2º ano (Emp. I e Resp. Socioambiental no 3º sem; Mkt II e Mat. Adm no 4º sem), dados oficiais do Processo Seletivo 2027/1 na Justificativa (149 candidatos para 36 vagas, relação de 4,14 c/v), fixação formal de 36 vagas por turma e anuais no Quadro 8 e explicitação no Quadro 7 do acréscimo legal de até 10% (art. 10 da Res. 142/2025).</p>
+              <div style="margin-top: 0.4rem; font-size: 0.75rem; color: var(--text-muted);">Versão Oficial Atualizada • Tectonic compilado (com e sem destaques, 134 páginas)</div>
+            </div>
+
             <div style="background: rgba(2, 132, 199, 0.08); border-left: 4px solid var(--accent-blue); border-radius: 6px; padding: 0.75rem 1rem; border: 1px solid var(--accent-blue); border-left-width: 4px;">
               <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.3rem;">
                 <span style="font-weight: 700; color: var(--accent-blue); font-size: 0.85rem;"><i class="bi bi-patch-check-fill me-1"></i> Retorno CEPE/DIREN • Contabilização 800h FT & Libras I/II</span>
@@ -1210,6 +1253,30 @@
               </tr>
             </thead>
             <tbody>
+              <tr>
+                <td style="text-align: center; font-weight: 700; color: var(--accent-emerald);">68</td>
+                <td style="text-align: center; font-size: 0.82rem; color: var(--text-muted); white-space: nowrap;">
+                  <i class="bi bi-clock-history me-1"></i>05/11/2026<br>
+                  <span style="color: var(--accent-emerald); font-weight: 600;">11:20</span>
+                </td>
+                <td><strong>Reorganização Semestral do 2º Ano, Ajuste do Quantitativo de Vagas e Atualização do Quadro 7</strong><br><small style="color: var(--text-muted);">Seção IV (Quadro 8 — Dados da Oferta), Seção V (Quadros 4 e 7) • pp. 8, 13, 16</small></td>
+                <td>Coordenação do Curso / Comissão</td>
+                <td>(1) Ajuste na distribuição semestral do 2º ano para melhor equilíbrio pedagógico; (2) Inconsistência no quantitativo de vagas da oferta (anteriormente constava 40 vagas); (3) Necessidade de explicitar no Quadro 7 o acréscimo legal de até 10% da CH mínima exigida.</td>
+                <td><span style="color: #6ee7b7; font-size: 0.88rem; font-weight: 500;">✓ Concluído</span>: (1) Remanejamento semestral no 2º ano: Empreendedorismo I e Responsabilidade Socioambiental no 3º semestre (40 h cada); Gestão de Marketing II e Matemática para Administração no 4º semestre (40 h cada), mantendo Gestão de Operações e Oficina I em ambos os semestres e o total equilibrado de 560 h / 560 h / 1.120 h; (2) Atualização formal no Quadro 8 para 36 vagas por turma e 36 vagas anuais; (3) Inclusão da menção ao limite de até 10% previsto no art. 10 da Resolução CONSUP/IFSC nº 142/2025 no Quadro 7. Compilado via <code>tectonic</code>.</td>
+                <td style="text-align: center;"><span class="badge badge-success">Concluído</span></td>
+              </tr>
+              <tr>
+                <td style="text-align: center; font-weight: 700; color: var(--accent-emerald);">67</td>
+                <td style="text-align: center; font-size: 0.82rem; color: var(--text-muted); white-space: nowrap;">
+                  <i class="bi bi-clock-history me-1"></i>05/11/2026<br>
+                  <span style="color: var(--accent-emerald); font-weight: 600;">11:00</span>
+                </td>
+                <td><strong>Complementação da Justificativa Regional — Dados de Procura e Demanda do Processo Seletivo 2027</strong><br><small style="color: var(--text-muted);">Seção IV (Subitem 11 — Justificativa) e Seção IX (Referências) • pp. 9, 122</small></td>
+                <td>Coordenação do Curso / DEING</td>
+                <td>Necessidade de robustecer a justificativa de continuidade da oferta frente às outras opções técnicas da região, comprovando a demanda social e institucional do curso.</td>
+                <td><span style="color: #6ee7b7; font-size: 0.88rem; font-weight: 500;">✓ Concluído</span>: Inserção de texto fundamentado na Seção 11 com os dados oficiais do Processo Seletivo para ingresso em 2027 (Edital nº 05/DEING/2027/1): registro de 149 candidatos inscritos para 36 vagas (relação de 4,14 candidatos/vaga — a maior relação candidato/vaga entre todos os cursos técnicos integrados do Câmpus Garopaba). Inclusão formal da referência ABNT de IFSC (2026) na Seção 29. Compilado via <code>tectonic</code>.</td>
+                <td style="text-align: center;"><span class="badge badge-success">Concluído</span></td>
+              </tr>
               <tr>
                 <td style="text-align: center; font-weight: 700; color: var(--accent-emerald);">66</td>
                 <td style="text-align: center; font-size: 0.82rem; color: var(--text-muted); white-space: nowrap;">
