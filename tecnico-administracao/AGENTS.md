@@ -36,7 +36,7 @@ All course assets must remain strictly organized in the following subdirectories
 2. **Formação Técnica Profissional (Administração):** Minimum **800 hours** (CH mínima do CNCT para o Técnico em Administração). O PPC deve declarar explicitamente o atendimento a esse mínimo, somando a CH das UCs técnicas e a parcela do Núcleo Politécnico atribuída à Formação Técnica (retorno DIREN/CEPE, out/2026).
 3. **Núcleo Politécnico Comum (Projetos & Oficinas de Integração):** Minimum **120 hours**.
 4. **Carga Horária Total Mínima:** **3.000 horas-relógio** (RDP art. 185, §2º: 3.000 h para habilitações de 800 h no CNCT); máximo de +10% (3.300 h).
-5. **Duração do Curso:** 3 anos (6 semestres) com ingresso anual de 40 vagas no Câmpus Garopaba.
+5. **Duração do Curso:** 3 anos (6 semestres) com ingresso anual de 36 vagas no Câmpus Garopaba (corrigido em 05/11/2026; antes constava 40).
 
 ---
 
